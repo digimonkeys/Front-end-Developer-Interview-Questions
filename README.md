@@ -40,7 +40,7 @@ Working on project based on boilerplate that used old version of webpack. When I
 * Which version control systems are you familiar with?
 * Can you describe your workflow when you create a web page?
 * If you have 5 different stylesheets, how would you best integrate them into the site?  
-When creating my own styles, I tend to ue postcss or even bundle them with webpack into one file. Given 5 stylesheets to integrate I'd probably use YUI Compressor.
+When creating my own styles, I tend to use postcss or even bundle them with webpack into one file. Given 5 stylesheets to integrate I'd probably use YUI Compressor.
 
 * Can you describe the difference between progressive enhancement and graceful degradation?
 * How would you optimize a website's assets/resources?
