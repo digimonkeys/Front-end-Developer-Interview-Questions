@@ -200,7 +200,7 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
 Yes, private members are made by the constructor. Ordinary vars and parameters of the constructor becomes the private members.
 Private methods cannot be called by public methods.
 
-Private members![Croford on private members](http://javascript.crockford.com/private.html)
+Private members![Crockford on private members](http://javascript.crockford.com/private.html)
 
 * Difference between document load event and document DOMContentLoaded event?
 * What is the difference between `==` and `===`?
