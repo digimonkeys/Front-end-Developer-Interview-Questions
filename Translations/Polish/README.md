@@ -440,7 +440,14 @@ $(".foo div#bar:eq(0)")
   https://css-tricks.com/css-image-replacement/
 * Haczyki właściwości CSS, warunkowe dołączanie plików .css lub... coś innego?
 * Jak serwujesz strony dla przeglądarek z ograniczonym wsparciem funkcji?
+  - oddzielne style CSS, które ładują się gdy dana przeglądarka jest używana
+  - oddzielny layout
+  - polyfills (Pollyfil jest kodem, który wykrywa czy są braki w oczekiwanym API i manualnie implementuje je)
+  
   * Jakie techniki stosujesz?
+      - Graceful Degradation
+      
+  https://www.sitepoint.com/progressive-enhancement-graceful-degradation-basics/
 * Jakie istnieją sposoby wizualnego ukrycia treści (uczynienia ich dostępnymi tylko dla czytników ekranu)?
   - visibility: hidden
   - width: 0; height: 0;

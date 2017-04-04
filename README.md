@@ -232,7 +232,14 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
   - use cross-browsers CSS prefixes (-moz-, -webkit-, etc)
   - resetting or normalizing CSS
 * How do you serve your pages for feature-constrained browsers?
+  - separate stylesheets that loads when that specific browser is being used
+  - create a completely separate layout
+  - polyfills (A polyfill is code that detects if a certain "expected" API is missing and manually implements it.)
+
   * What techniques/processes do you use?
+      Graceful Degradation
+
+  https://www.sitepoint.com/progressive-enhancement-graceful-degradation-basics/
 * What are the different ways to visually hide content (and make it available only for screen readers)?
   - visibility: hidden
   - width: 0; height: 0;
