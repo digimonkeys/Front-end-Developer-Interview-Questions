@@ -101,7 +101,8 @@ Można to zrobić za pomocą CSS3 wykorzystując unordered list i input type = r
 Pełny tutorial: http://joshnh.com/weblog/making-a-pure-css-featured-image-slider/  
 
 * Jakich narzędzi używasz do sprawdzenia wydajności swojego kodu?
-  * Profiler, JSPerf, Dromaeo
+  * Profiler, JSPerf, Dromaeo  
+Chrome Profiler and Timeline, JSPerf, Dromaeo  
 * Gdybyś mógł opanować jedną technologię w tym roku, jaka byłaby to technologia?
 * Wyjaśnij znaczenie standardów sieciowych i ich twórców.
 * Czym jest FOUC? Jak unikasz FOUC?
