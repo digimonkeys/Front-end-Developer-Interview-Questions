@@ -127,6 +127,11 @@ function Person(){} var person = Person() var person = new Person()
 * Dlaczego mówimy wyrażenie trójkowe, co dokładnie oznacza słowo "trójkowy"?
 * Czym jest `arity` funkcji?
 * Co oznacza `"use strict";`? Jakie są zalety i wady takiego rozwiązania?
+* Jaka jest roznica miedzy funkcja a obiektem?
+ 
+ Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
+Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
+
 
 ### Przykłady kodu JS:
 
