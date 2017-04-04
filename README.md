@@ -65,7 +65,9 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
 * Name 3 ways to decrease page load (perceived or actual load time).
 * If you jumped on a project and they used tabs and you used spaces, what would you do?
 * Describe how you would create a simple slideshow page.
-* If you could master one technology this year, what would it be?
+* If you could master one technology this year, what would it be?  
+I'd love to learn how to create fusion bomb. ...or just pick something trendy, React Native, React Redux, ES7.  
+
 * Explain the importance of standards and standards bodies.
 * What is Flash of Unstyled Content? How do you avoid FOUC?
 * Explain what ARIA and screenreaders are, and how to make a website accessible.

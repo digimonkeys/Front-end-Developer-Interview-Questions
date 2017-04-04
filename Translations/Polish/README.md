@@ -79,7 +79,9 @@ Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich prz
   * Dodatkowe punkty, jeśli nie używasz JS.
 * Jakich narzędzi używasz do sprawdzenia wydajności swojego kodu?
   * Profiler, JSPerf, Dromaeo
-* Gdybyś mógł opanować jedną technologię w tym roku, jaka byłaby to technologia?
+* Gdybyś mógł opanować jedną technologię w tym roku, jaka byłaby to technologia?  
+Technologia budowy bomb termowodorowych. Ew. można odpowiedzieć czymś co jest aktualnie w modzie, np React Native, React Redux, ES7.  
+
 * Wyjaśnij znaczenie standardów sieciowych i ich twórców.
 * Czym jest FOUC? Jak unikasz FOUC?
 
