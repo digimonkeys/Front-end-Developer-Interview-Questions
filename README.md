@@ -37,7 +37,9 @@ Working on project based on boilerplate that used old version of webpack. When I
 
 * What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?
 * Talk about your preferred development environment.
-* Which version control systems are you familiar with?
+* Which version control systems are you familiar with?  
+git, I worked on github and gitlab. I tried using git guis but I prefer to work in command line.  
+
 * Can you describe your workflow when you create a web page?
 * If you have 5 different stylesheets, how would you best integrate them into the site?
 * Can you describe the difference between progressive enhancement and graceful degradation?
