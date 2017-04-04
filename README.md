@@ -26,7 +26,7 @@ This file contains a number of front-end interview questions that can be used wh
 
 * What did you learn yesterday/this week?  
  React Higher Order Components  
- Sequelize ORM dla NodeJs  
+ Sequelize ORM for NodeJS  
 
 * What excites or interests you about coding?
 * What is a recent technical challenge you experienced and how did you solve it?
