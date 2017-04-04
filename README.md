@@ -90,6 +90,52 @@ Working on project based on boilerplate that used old version of webpack. When I
 * What are the various clearing techniques and which is appropriate for what context?
 * Explain CSS sprites, and how you would implement them on a page or site.
 * What are your favourite image replacement techniques and which do you use when?
+  CSS image replacement is a technique of replacing a text element (usually a header tag) with an image. You may want to use a <h1> tag and text for this for the accessibility and SEO benefits.
+
+  #1: Display none span in header
+  <h1 id="logo">
+    <span>CSS-Tricks</span>
+  </h1>
+
+  h1#logo {
+    width: 250px;
+    height: 25px;
+    background-image: url(logo.gif);
+  }
+  h1#logo span {
+    display: none;
+  }
+
+  #2: Text-indent out of sight
+  <h1 id="logo">
+    CSS-Tricks
+  </h1>
+
+  h1#logo {
+    width: 300px;
+    height: 75px;
+    background: url(test.png);
+    text-indent: -9999px;
+  }
+
+  #3: Invisible Text
+  <h3 class="leon">
+    <span>CSS-Tricks</span>
+  </h3>
+
+  h3.leon {
+    width: 300px;
+    height: 75px;
+    background: url(test.png);
+  }
+  h3.leon span {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  https://css-tricks.com/css-image-replacement/
 * How would you approach fixing browser-specific styling issues?
 * How do you serve your pages for feature-constrained browsers?
   * What techniques/processes do you use?
