@@ -215,6 +215,7 @@ $(".foo div#bar:eq(0)")
 * Wyjaśnij technikę "CSS sprites" oraz sposób jej wdrożenia na stronie.
 * Jakie są Twoje ulubione techniki zastępowania obrazów i kiedy je stosujesz?
   Zastępowanie obrazów CSS jest techniką zastępowania tekstowego elementu (zazwyczaj tagu nagłówkowego) obrazem. Można użyć do tego <h1> i tekstu dla benefitów płynących z dostępności oraz SEO.
+  Używam zastępowania obrazów (w zależności od potrzeby), kiedy chcę by moja strona była bardziej dostępna dla urządzeń takich jak czytniki itp. Zazwyczaj używam do tego celu ukrywania tagu span poprzed 'display: none'.
 
   #1: Ukrywanie tagu span poprzez 'display: none'
   <h1 id="logo">
