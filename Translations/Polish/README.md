@@ -127,6 +127,11 @@ function Person(){} var person = Person() var person = new Person()
 * Dlaczego mówimy wyrażenie trójkowe, co dokładnie oznacza słowo "trójkowy"?
 * Czym jest `arity` funkcji?
 * Co oznacza `"use strict";`? Jakie są zalety i wady takiego rozwiązania?
+* Jaka jest roznica miedzy funkcja a obiektem?
+ 
+ Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
+Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
+
 * Czym jest dziedziczenie?
  
  Dziedziczenie jest mechanizmem współdzielenia funkcjonalności między klasami (w rozumieniu klasycznym) lub obiektami (w dziedziczeniu prototypowym - jak w js). Klasa dziedzicząca (zwana klasą pochodną) otrzymuje dostęp do udostępnionych zachowń oraz atrybutów od klasy, z której następuje dziedziczenie (zwanej klasą bazową).
@@ -198,8 +203,19 @@ $(".foo div#bar:eq(0)")
 * Jaka jest różnica między klasami oraz idendyfikatorami w CSS?
   Idendyfikatory są unikalne, każdy element może posiadać tylko jeden identyfikator, dodatkowo przeglądarka może używać identyfikatorów do nawigacji (scrollując do elementu z danym ID). Klasy nie są unikalne oraz elementy mogą posiadać więcej niż jedną klasę, nie mają większego znaczenia dla samej przeglądarki.
 
+* Opisz czym jest z-index oraz jak tworzony jest układ warstw.
+  Właściwość z-index kontroluje pionowe nakładania się elementów, które nachodzą na siebie. Bez wartości z-index, elementy układają się w kolejności w jakiej pojawiają się w DOM (najniżej położony element w DOM pojawia się na samej górze). Zagnieżdżanie jest również ważne, jeśli element B jest nad elementem A, dziecko elementu A nigdy nie będzie wyżej niż element B.
+
+  https://css-tricks.com/almanac/properties/z/z-index/
+* Jaka jest różnica między resetowaniem, a normalizowaniem styli CSS? Którą wybrałbyś i dlaczego?
+  Reset CSS służy usunięciu wszystkich styli CSS nadanych przez przeglądarki, więc trzeba je ostylować na nowo. Normalizowanie styli ustawia takie same style elementów dla każdej przeglądarki oraz naprawia część błędów, więc konieczne jest tylko stylowanie elementów, które różnią się wyglądem od pożądanego efektu. Użyłbym normalizowania, ponieważ każda zmiana będzie miała taki sam efekt w każdej przeglądarce.
+
+  http://stackoverflow.com/questions/6887336/what-is-the-difference-between-normalize-css-and-reset-css
 * Opisz, czym jest plik "reset" dla CSS i dlaczego jest użyteczny.
 * Opisz jak działa właściwość `float`.
+  Float'y mogą by używane do opakowywania tekstu wokół obrazka/elementu lub to tworzenia całych layoutów. Pływające elementy pozostają częścią flow strony, w odróżnieniu od elementów o ustalonym położeniu, które są usuwane z flow strony i nie uczestniczą w dostosowywaniu zawartości np. do zmieniającej się szerokości okna.
+
+  https://css-tricks.com/all-about-floats/
 * Jakie znasz techniki kasowania (clearing) i kiedy wskazane jest ich stosowanie?
 * Wyjaśnij technikę "CSS sprites" oraz sposób jej wdrożenia na stronie.
 * Jakie są Twoje ulubione techniki zastępowania obrazów i kiedy je stosujesz?
