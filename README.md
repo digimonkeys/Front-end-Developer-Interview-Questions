@@ -84,7 +84,9 @@ Working on project based on boilerplate that used old version of webpack. When I
 * What are the various clearing techniques and which is appropriate for what context?
   - Empty Div Method:
     <div style="clear:both;"></div>
+    I do not use this method, because you have additional, unnecessary div with hardcored style. You can use this method when you create a layout (often in footer)
   - Overflow Method: setting auto or hidden overflow property on parent will expand it to contain the floats.
+    If you add overflow: hidden to the containing element, it will automatically adjust its height and take the floated children into account.
   - The Easy Clearing Method: uses the parent's :after to add the clear: both property
     .clearfix:after {
       content: ".";
@@ -93,6 +95,7 @@ Working on project based on boilerplate that used old version of webpack. When I
       height: 0;
       clear: both;
     }
+    I often use this, but it generates content to the page that has nothing to do there in the first place.
 
   https://css-tricks.com/all-about-floats/
 * Explain CSS sprites, and how you would implement them on a page or site.

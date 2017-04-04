@@ -200,7 +200,9 @@ $(".foo div#bar:eq(0)")
 * Jakie są różne metody czyszczenia i które są odpowiednie dla jakich kontekstów?
   - Metoda pustego Div'a:
     <div style="clear:both;"></div>
+    Nie używam tej metody, ponieważ w kodzie pozostaje pusty, niepotrzebny div z zahardcorowanym stylem. Tej metody można używać przy tworzeniu layoutów strony (często w stopce)
   - Metoda Overflow: ustawienie wartości 'auto' lub 'hidden' właściwości overflow na elemencie-rodzicu
+    Jeśli dodasz overflow: hidden do elementu, który posiada pływające dzieci, automatycznie dopasuje wysokość biorąc pod uwagę dzieci
   - Metoda łatwego czyszczenia: używa selektora elementu-rodzica :after, by dodać 'clear: both'
     .clearfix:after {
       content: ".";
@@ -209,6 +211,7 @@ $(".foo div#bar:eq(0)")
       height: 0;
       clear: both;
     }
+    Często używam tego podejścia, jednak generuje to niepotrzebną zawartość, która nie ma zastosowania.
 
   https://css-tricks.com/all-about-floats/
 * Opisz, czym jest plik "reset" dla CSS i dlaczego jest użyteczny.
