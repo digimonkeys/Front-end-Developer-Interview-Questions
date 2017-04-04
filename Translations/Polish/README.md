@@ -243,6 +243,13 @@ $(".foo div#bar:eq(0)")
 
   Chrome Dev-Tools Profiler
 
+* Jakie są niektóre ze sposób na poprawienie wydajności przewijania strony?
+
+  * Rozmiar grafik powinien być dostosowany do rozmiaru ich kontenera, powinny być zoptymalizowane aby nie zabierać za dużo transferu.
+  * Unikanie używania dużej ilości box-shadow i innych styli wymagających dużej ilości skomplikowanego rysowania przez przeglądarke.
+  * Unikanie metod/właściwości JavaScript które powodują reflow/repaint strony przez przeglądarkę, takich jak offset elementów, wielkość kontenerów etc.
+  * Używanie debounce w eventach przewijania.
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
