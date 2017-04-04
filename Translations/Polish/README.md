@@ -237,6 +237,12 @@ $(".foo div#bar:eq(0)")
 
   Minusem jest to, że testy także potrzebują refaktoryzacji oraz jest to znacznie więcej kodu do konserwacji.
 
+### Pytania z wydajności:
+
+* Jakich narzędzi użyłbyś do testowania błędu związanego z wydajnością twojego kodu?
+
+  Chrome Dev-Tools Profiler
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
