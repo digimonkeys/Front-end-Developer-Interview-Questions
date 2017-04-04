@@ -52,9 +52,12 @@ Utrzymanie kodu - stosuję ogólne dobre praktyki, takie jak proste i czytelne n
 
 Technologie - ostatnio preferuję React i redux w połączeniu z webpackiem, ale używałem również angulara 1 z gulpem itd itp
 
-* Jakie jest Twoje preferowane środowisko programistyczne? (system operacyjny, edytor, przeglądarki, narzędzia itd.)
-* Z jakimi systemami kontroli wersji pracowałeś / jesteś zapoznany?
-Z gitem, pracowałem na githubie i gitlabie. Próbowałem używać interfejsów graficznych gita, ale jednak wolę pracować w command line.
+* Jakie jest Twoje preferowane środowisko programistyczne? (system operacyjny, edytor, przeglądarki, narzędzia itd.)  
+Używam sublime 3 z jego dodatkowymi pluginami i świetnymi funcjonalnościami pomagającymi w edycji tekstu. Preferuję pracę na chromie i jego dev toolsach, ale używam też firebuga. Mam pewną wiedzę na temat linuksa, ale obecnie pracuję na win10. Korzystam też z gulpa, webpacka, managerów okien linterów itp.  
+
+* Z jakimi systemami kontroli wersji pracowałeś / jesteś zapoznany?  
+Z gitem, pracowałem na githubie i gitlabie. Próbowałem używać interfejsów graficznych gita, ale jednak wolę pracować w command line.  
+
 * Opisz kolejne zadania podczas tworzenia strony internetowej?
 * Opisz różnicę między stopniowym ulepszaniem (progressive enhancement) i wdzięczną degradacją (graceful degradation)?
   * Dodatkowe punkty za opisanie wykrywania obsługi cech (feature detection)  
