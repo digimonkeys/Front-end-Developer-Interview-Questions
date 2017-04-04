@@ -50,7 +50,9 @@ Maintainability - I use general best practises, eg. take care of simple function
 Technology - Lately I prefer to use React with Redux and webpack, but I'm also familiar with Angular and gulp etc (...)  
 
 * Talk about your preferred development environment.
-* Which version control systems are you familiar with?
+* Which version control systems are you familiar with?  
+git, I worked on github and gitlab. I tried using git guis but I prefer to work in command line.  
+
 * Can you describe your workflow when you create a web page?
 * If you have 5 different stylesheets, how would you best integrate them into the site?
 * Can you describe the difference between progressive enhancement and graceful degradation?
