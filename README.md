@@ -179,6 +179,11 @@ Function prototype is Object, and it's prototype is Function();
 #### Testing Questions:
 
 * What are some advantages/disadvantages to testing your code?
+
+  Testing your code (unit testing) assures that the code is working as it should, allows you to refactor it and check whether nothing has been broken.
+
+  Tests also require refactorization and need to be maintained, which may be considered as a disadvantage.
+
 * What tools would you use to test your code's functionality?
 * What is the difference between a unit test and a functional/integration test?
 * What is the purpose of a code style linting tool?
