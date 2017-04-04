@@ -317,6 +317,14 @@ $(".foo div#bar:eq(0)")
 
   Eliminacja prostych błędów już podczas pisania kodu. Zapewnia jednakowe, konsekwentne formatowanie kodu dla wszystkich członków zespołu.
 
+### Pytania z wydajności:
+
+* Jakich narzędzi użyłbyś do testowania błędu związanego z wydajnością twojego kodu?
+
+  Chrome Dev-Tools Profiler - pozwala sprawdzić ile czasu wykonuje się jaka funkcji i w ten sposób określić które funkcje zabierają najwięcej procesora.
+
+  [więcej info](https://developers.google.com/web/tools/chrome-devtools/rendering-tools/js-execution)
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?

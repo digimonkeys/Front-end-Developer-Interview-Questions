@@ -275,6 +275,11 @@ Event flow![Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
 #### Performance Questions:
 
 * What tools would you use to find a performance bug in your code?
+
+  Chrome Dev-Tools Profiler - it allows to check function execution time and pin-point the ones that use the most CPU.
+
+  [more info](https://developers.google.com/web/tools/chrome-devtools/rendering-tools/js-execution)
+
 * What are some ways you may improve your website's scrolling performance?
 * Explain the difference between layout, painting and compositing.
 
