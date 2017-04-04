@@ -253,6 +253,22 @@ $(".foo div#bar:eq(0)")
 
   [źródło](https://travishorn.com/why-it-is-better-to-serve-site-assets-from-multiple-domains-972a2bf69d71)
 
+* Co to są metody HTTP? Wymień wszystkie które znasz i krótko je opisz.
+
+  Metody HTTP wskazują jaką akcję klient chce wykonać na wskazanym zasobie.
+
+  * GET - pobiera zasób bez jego modyfikacji.
+  * HEAD - takie samo jak GET, ale nie pobiera danych zasobu. Może być przydatne gdy potrzebne są jedynie nagłówki.
+  * POST - dodaje nowy zasób.
+  * PUT - aktualizuje zasób.
+  * DELETE - usuwa zasób.
+  * TRACE - zwraca dane otrzymane w zapytaniu bez ich modyfikacji.
+  * OPTIONS - zwraca metody obsługiwane przez serwer dla danego zasobu.
+  * CONNECT - konwertuje połączenie w tunel TCP/IP.
+  * PATCH - nakłada częściowe modyfikacje na zasób.
+
+  [źródło](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
