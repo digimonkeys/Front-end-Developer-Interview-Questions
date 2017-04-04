@@ -38,6 +38,20 @@ Tworzenie rzeczy. Od dziecka uwielbiałem tworzyć coś nowego i rozwiązywac ł
 * Jakie wyzwanie technologiczne stanęło przed toba ostatnio i jak je rozwiązałeś?  
 Pracowałem nad projektem wykorzystującym boilerplate bundlujący się przez starą wersję webpacka. Kiedy chciałem dodać do niego kilka niezbędnych rozszerzeń, wszystko okazało się niekompatybilne i rozsypało w drzazgi. Musiałem napisac cały skrypt webpacka od nowa.  
 
+* Jak planujesz budowę UI, utrzymanie bezpieczeństwa, wysoką wydajność, SEO, łatwość w utrzymaniu kodu i jakie wykorzystujesz technologie kiedy zaczynasz budować aplikację webową lub stronę internetową?
+
+UI - zazwyczaj zaczynam od narysowania interfejsu na kartce papieru, która póxniej służy mi jako generalny wyznacznik tego, co chcę osiągnąć na koniec pracy. Zawsze przykładam wagę do czytelności i prostoty interfejsu dla użytkowników.  
+
+Bezpieczeństwo - ponieważ po stronie klienta z kodem może stać się wszystko, trzymam wszystkie wrażliwe dane po stronie serwera.    
+
+Wydajność - skupiam się na pisaniu przejrzystego, zrozumiałego kodu, a gdy któraś funkcjonalność okazuje się zbyt wolna pracuje nad poprawieniem jej wydajności. Czasem jeśli jakaś funkcja wydaje mi się 'ciężka' dla aplikacji i moge ją rozwiązać na kilka sposobów, od razu wykonuje pomiar czasów jej wykonania przy różnych rozwiązaniach.  
+
+SEO - nie zajmuję się optymalizacją SEO (nie bywało to moim zadaniem)  
+
+Utrzymanie kodu - stosuję ogólne dobre praktyki, takie jak proste i czytelne nazywanie funkcji i zmiennych, dzielenie kodu na małe, proste moduły. Zawsze kładę wielki nacisk na przystosowanie mojego kodu do zwyczajów panujących w zatrudniającej mnie firmie.  
+
+Technologie - ostatnio preferuję React i redux w połączeniu z webpackiem, ale używałem również angulara 1 z gulpem itd itp  
+
 * Jakie jest Twoje preferowane środowisko programistyczne? (system operacyjny, edytor, przeglądarki, narzędzia itd.)
 * Opisz kolejne zadania podczas tworzenia strony internetowej?
 * Opisz różnicę między stopniowym ulepszaniem (progressive enhancement) i wdzięczną degradacją (graceful degradation)?

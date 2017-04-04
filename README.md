@@ -35,7 +35,22 @@ Creating stuff. Since childhood I loved processes of creation and also problem s
 
 Working on project based on boilerplate that used old version of webpack. When I tried to add some new indispensable features to it, everything occured to be incompatible and broke. I had to create whole webpack script from scratch.  
 
-* What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?
+* What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?  
+
+UI - I usually start with drawing sketch, simply with pencil on paper - later I treat it as general guide to what I want to accomplish. I always put accent on readability and simplicity for users.  
+
+Security - On frontend everything might happen, so I store fragile data on backend.  
+
+Performance - I focus on writing clear, understandable code - when some functionality seems to be slow, then I try to boost its performance. Sometimes, when particular task seems to be heavy and I can solve it in different ways, I register and compare times of execution for different solutions in the first place.  
+
+SEO - I usually dont take care of SEO in projects (it is not my task).  
+
+Maintainability - I use general best practises, eg. take care of simple functions and variables names, split code into small, simple modules. I always put big stress on adapting to my hiring company practises.  
+
+Technology - Lately I prefer to use React with Redux and webpack, but I'm also familiar with Angular and gulp etc (...)  
+
+
+
 * Talk about your preferred development environment.
 * Which version control systems are you familiar with?
 * Can you describe your workflow when you create a web page?
