@@ -134,10 +134,11 @@ Working on project based on boilerplate that used old version of webpack. When I
       There is no assurance that the response to the requests will return to us in the order in which requests are sent.
       It is possible to make asynchronous requests using 3 techniques:
       1. Using the XMLHttpRequest / ActiveObcjectX object (older versions of IE) - the most common way.
-      2. Pływające ramki.
+      2. Floating frames.      
       3. Cookies.
 
-      AJAX nie ogranicza się tylko do XML, obsługuję rownież JSON czy czysty tekst.
+      AJAX is not limited to XML, I also support JSON or pure text.
+
 * What are the advantages and disadvantages of using Ajax?
 * Explain how JSONP works (and how it's not really Ajax).
 * Have you ever used JavaScript templating?

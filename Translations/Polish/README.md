@@ -113,11 +113,11 @@ function Person(){} var person = Person() var person = new Person()
       Nie ma pewności, że odpowiedzi na żądania wrócą do nas w kolejności wysyłania żądań.
       Aby wykonać żądanie asynchronicznie możliwe jest wykorzystanie 3 technik:
       1. Wykorzystanie obiektu XMLHttpRequest / ActiveObcjectX (starsze wersje IE) - najpopularniejszy sposob.
-      2. Floating frames.
+      2. Pływające ramki.
       3. Ciasteczka.
 
-      AJAX is not limited to XML, I also support JSON or pure text.
-
+      AJAX nie ogranicza się tylko do XML, obsługuję rownież JSON czy czysty tekst.
+      
 * Wyjaśnij działanie JSONP (i dlaczego nie jest właściwie AJAX).
 * Czy kiedykolwiek używałeś szablonów w JavaScript?
   * Jeśli tak, jakie to były biblioteki? (Mustache.js, Handlebars itd.)
