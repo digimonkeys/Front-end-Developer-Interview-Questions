@@ -241,6 +241,20 @@ Function hoisting![Function hoisting](https://developer.mozilla.org/en-US/docs/W
 * Dlaczego mówimy wyrażenie trójkowe, co dokładnie oznacza słowo "trójkowy"?
 * Czym jest `arity` funkcji?
 * Co oznacza `"use strict";`? Jakie są zalety i wady takiego rozwiązania?
+
+  "use strict" włącza bardziej restrykcyjną wersje JavaScriptu.
+  Kod jest inaczej odczytywany przez silnik w niektórych przypadkach.
+
+  Zalety:
+    - Eliminuje niektóre ciche błędy, a zamiast nich wyrzuca błąd.
+    - Naprawia niektóre pomyłki, które sprawiają, że JavaScriptowe silniki mają trudność z optymalizacją kodu (wersja kodu w strict mode może być szybsza niż normalna).
+    - Rezerwuje składnię, która prawdopodobnie będzie użyta w przyszłych wersjach ECMAScript.
+
+  Wady:
+    - Przeglądarki, które nie wspierają strict mode'u będą wykonywać kod zgodnie z normalnymi standardami.
+  
+  Odniesienie: [Strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+
 * Jaka jest roznica miedzy funkcja a obiektem?
 Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
 Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
