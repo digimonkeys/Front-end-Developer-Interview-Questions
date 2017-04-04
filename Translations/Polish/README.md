@@ -135,7 +135,13 @@ Do typów prostych należą:
 - undefined
 - Symbol (od ES6)
 
-Typem złożonym jest Object.
+Typem złożonym jest Object jak np:
+- Array
+- Date
+- Function
+- Map, WeakMap
+- Set, WeakSet
+
 Typy proste przekazywane są przez wartość, natomiast typy złożone przez referencję.
  
 Javascript Types![Javascript Data Types](https://developer.mozilla.org/pl/docs/Web/JavaScript/Data_structures)
