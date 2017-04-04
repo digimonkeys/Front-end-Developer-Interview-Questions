@@ -40,6 +40,9 @@ Pracowałem nad projektem wykorzystującym boilerplate bundlujący się przez st
 
 * Jakie jest Twoje preferowane środowisko programistyczne? (system operacyjny, edytor, przeglądarki, narzędzia itd.)
 * Opisz kolejne zadania podczas tworzenia strony internetowej?
+* Jak zintegrujesz 5 istniejących stylesheetów ze stroną?  
+Tworząc swoje arkusze stylów raczej nie dopuszczam do tego typu problemów, poniewaz nawet jesli trzymam css w wielu plikach używam webapcka do łączenia ich w jeden. Jeśli jednak miałbym takie zadanie prawdopodobnie użyłbym narzędzia takiego jak YUI Compressor.
+
 * Opisz różnicę między stopniowym ulepszaniem (progressive enhancement) i wdzięczną degradacją (graceful degradation)?
   * Dodatkowe punkty za opisanie wykrywania obsługi cech (feature detection)
 * Wyjaśnij, co kryje się za terminem "semantyczny HTML".
