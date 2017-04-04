@@ -106,6 +106,9 @@ git, I worked on github and gitlab. I tried using git guis but I prefer to work 
 * Explain CSS sprites, and how you would implement them on a page or site.
 * What are your favourite image replacement techniques and which do you use when?
 * How would you approach fixing browser-specific styling issues?
+  - use separate stylesheets that loads when that specific browser is being used. 
+  - use cross-browsers CSS prefixes (-moz-, -webkit-, etc)
+  - resetting or normalizing CSS
 * How do you serve your pages for feature-constrained browsers?
   * What techniques/processes do you use?
 * What are the different ways to visually hide content (and make it available only for screen readers)?
