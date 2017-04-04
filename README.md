@@ -49,8 +49,6 @@ Maintainability - I use general best practises, eg. take care of simple function
 
 Technology - Lately I prefer to use React with Redux and webpack, but I'm also familiar with Angular and gulp etc (...)  
 
-
-
 * Talk about your preferred development environment.
 * Which version control systems are you familiar with?
 * Can you describe your workflow when you create a web page?
