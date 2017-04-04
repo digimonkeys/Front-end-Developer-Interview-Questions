@@ -109,7 +109,17 @@ Use media queries and serve CSS optimized for lower resolution devices. One can 
 https://en.wikipedia.org/wiki/Flash_of_unstyled_content  
 http://www.techrepublic.com/blog/web-designer/how-to-prevent-flash-of-unstyled-content-on-your-websites/  
 
-* Explain what ARIA and screenreaders are, and how to make a website accessible.
+* Explain what ARIA and screenreaders are, and how to make a website accessible.  
+ARIA defines ways to make Web content and Web applications (especially those developed with Ajax and JavaScript) more accessible to people with disabilities.
+A screen reader is a software application which, rather than presenting web content visually, converts text into 'synthesised speech' allowing user to alternatively listen to content.
+The steps to follow to make your Web apps accessible are as follows:
+
+Use native HTML tags wherever possible
+Make interactive elements keyboard accessible
+Provide extra markup for AT (accessibility technology) 
+https://www.w3.org/WAI/intro/aria
+http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-applications-accessible/
+
 * Explain some of the pros and cons for CSS animations versus JavaScript animations.
 * What does CORS stand for and what issue does it address?
 

@@ -117,6 +117,14 @@ Aby uniknąć FOUC należy serwować użytkownikowi jak najbardziej zoptymalizow
 Używanie media queries i serwowanie CSS zoptymalizowanego dla urządzeń o mniejszej rozdzielczości. Można też ukryć całą stronę do czasu załadowania wszystkich styli.  
 https://en.wikipedia.org/wiki/Flash_of_unstyled_content  
 http://www.techrepublic.com/blog/web-designer/how-to-prevent-flash-of-unstyled-content-on-your-websites/  
+* Co to jest ARIA, screenreader i jak stworzyć stronę z ułatwieniami dostępu?
+ARIA to zestaw wytycznych opracowanych przez WAI(Web Accessibility Initiative) aby umożliwić korzystanie z aplikacji ludziom z dysfunkcjami(np. niewidomi), którzy posługują się technologiami wspierającymi.
+
+Screenreadery to programy służące do odczytywania treści i dostępnych akcji, które podejmuje się na komputerze.
+
+3 kroki tworzenia aplikacji z ułatwieniami dostępu: używaj natywnych tagów HTML kiedy tylko się da; elementy interaktywne twórz z możliwością obsługi przez klawiaturę; zapewnij dodatkowe znaczniki specjalnie dla AT (accessibility technology). 
+https://www.w3.org/WAI/intro/aria
+http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-applications-accessible/
 
 ### Pytania HTML:
 
