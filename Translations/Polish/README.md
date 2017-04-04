@@ -53,10 +53,14 @@ Utrzymanie kodu - stosuję ogólne dobre praktyki, takie jak proste i czytelne n
 Technologie - ostatnio preferuję React i redux w połączeniu z webpackiem, ale używałem również angulara 1 z gulpem itd itp
 
 * Jakie jest Twoje preferowane środowisko programistyczne? (system operacyjny, edytor, przeglądarki, narzędzia itd.)
+* Z jakimi systemami kontroli wersji pracowałeś / jesteś zapoznany?  
+Z gitem, pracowałem na githubie i gitlabie. Próbowałem używać interfejsów graficznych gita, ale jednak wolę pracować w command line.  
 * Opisz kolejne zadania podczas tworzenia strony internetowej?
 * Opisz różnicę między stopniowym ulepszaniem (progressive enhancement) i wdzięczną degradacją (graceful degradation)?
   * Dodatkowe punkty za opisanie wykrywania obsługi cech (feature detection)
-* Wyjaśnij, co kryje się za terminem "semantyczny HTML".
+* Wyjaśnij, co kryje się za terminem "semantyczny HTML".  
+Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich przeznaczeniem i znaczeniem semantycznym, a nie tylko do prezentowania danych. Znaczniki nadają sens i w różnym kontekście mogną oznaczać do innego. Np <i> i <em> <b> i <strong>, section, aside, nav. Jest to ważne dla robotów indeksujących google, dla czytników przeznaczonych dla osób niepełnosprawnych etc.  
+
 * Jak optymalizowałbyś zasoby strony internetowej?
   * Myśląc o wielu rozwiązaniach, które zawierają:
     * Łączenie plików
@@ -123,13 +127,36 @@ function Person(){} var person = Person() var person = new Person()
 * Kiedy optymalizujesz swój kod?
 * Wyjaśnij działanie dziedziczenia w JavaScript?
 * Kiedy użyłbyś `document.write()`?
-  * Wiele generowanych reklam używa `document.write()` choć nie jest to mile widziane
+    Document.write() jest zawsze dostępny, jest dobrym wyborem dla dostawcow skryptow zewnetrznych aby mogli dodać oni swoj kod.
+    Wiele generowanych reklam używa `document.write()` choć nie jest to mile widziane.
+
 * Jakie są różnice między wykrywaniem obsługi funkcji, wnioskowaniem obsługi funkcji i używaniem ciągu UA?
 * Omów AJAX jak najbardziej szczegółowo.
+* Podaj wady i zalety żywania technologii AJAX
+  Zalety:
+    - Ciągłe i niewidoczne dla użytkownika uaktualnianie danych
+    - Brak konieczności odświeżania całej strony
+
+  Wady:
+    - Nie działa, gdy wyłączona jest obsługa JavaScript w przeglądarce
+    - Strona nie jest odświeżana a więc nie można cofnąć lub powtórzyć kroków za pomocą przycisków w przeglądarce
+    - Opóźnienia, gdy serwer jest mocno obciążony
+    - Dane są ładowane dynamicznie a więc nie są częścią strony WWW. Wyszukiwarki internetowe nie indeksują treści ładowanych dynamicznie
+
 * Wyjaśnij działanie JSONP (i dlaczego nie jest właściwie AJAX).
 * Czy kiedykolwiek używałeś szablonów w JavaScript?
   * Jeśli tak, jakie to były biblioteki? (Mustache.js, Handlebars itd.)
 * Wyjaśnij pojęcie "hoisting".
+* Zasieg zmiennych w jsie?
+ 
+ W JS, do wersji ES6 występowały tylko dwa rodzaje zasięgu zmiennych, tj. globalny (global scope) i zasięg lokalny - w obrębie funkcji (function scope).
+ Od ES6 i pojawienia się zmiennych deklarowanych jako let i const pojawił się także zasięg blokowy (tj. wewnątrz { }).
+ 
+var![var](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
+let![let](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Statements/let)
+const![const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
+Other scopes![other scopes](http://stackoverflow.com/a/500459)
+
 * Opisz bąbelkowanie zdarzeń.
 * Jak jest różnica między "atrybutem" i "właściwością"?
 * Czemu rozszerzanie obiektów wbudowanych w JavaScript jest złym pomysłem?
@@ -139,6 +166,13 @@ function Person(){} var person = Person() var person = new Person()
 * Wyjaśnij ewentualny sposób pobrania parametrów z adresu URL w oknie przeglądarki.
 * Wyjaśnij politykę `same-origin` w odniesieniu do JavaScript.
 * Opisz wzorce dziedziczenia w JavaScript.
+* Czy funkcje sa hoistowane?
+ 
+W JS funcje można deklarować na dwa sposoby: poprzez function definition oraz function expression.
+Function definition są hoistowane, natomiast function expressions nie.
+
+Function hoisting![Function hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+
 * Napisz działający kod:
 ```javascript
 [1,2,3,4,5].duplicate(); // [1,2,3,4,5,1,2,3,4,5]
@@ -148,7 +182,6 @@ function Person(){} var person = Person() var person = new Person()
 * Czym jest `arity` funkcji?
 * Co oznacza `"use strict";`? Jakie są zalety i wady takiego rozwiązania?
 * Jaka jest roznica miedzy funkcja a obiektem?
-
 Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
 Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
 
@@ -240,6 +273,11 @@ $(".foo div#bar:eq(0)")
   Float'y mogą by używane do opakowywania tekstu wokół obrazka/elementu lub to tworzenia całych layoutów. Pływające elementy pozostają częścią flow strony, w odróżnieniu od elementów o ustalonym położeniu, które są usuwane z flow strony i nie uczestniczą w dostosowywaniu zawartości np. do zmieniającej się szerokości okna.
 
   https://css-tricks.com/all-about-floats/
+* Jak podejdziesz do rozwiązywania problemów dotyczących stylizacji konkretnych przeglądarek?
+  - użycie osobnych stylów CSS, które ładowałyby się tylko wtedy gdy dana przeglądarka jest używana
+  - używając przedrostków CSS dotyczących poszczególnych przeglądarek (-moz-, -webkit-, itd)
+  - resetując lub normalizując CSS
+  
 * Jakie znasz techniki kasowania (clearing) i kiedy wskazane jest ich stosowanie?
 * Wyjaśnij technikę "CSS sprites" oraz sposób jej wdrożenia na stronie.
 * Jakie są Twoje ulubione techniki zastępowania obrazów i kiedy je stosujesz?
@@ -247,6 +285,10 @@ $(".foo div#bar:eq(0)")
 * Jak serwujesz strony dla przeglądarek z ograniczonym wsparciem funkcji?
   * Jakie techniki stosujesz?
 * Jakie istnieją sposoby wizualnego ukrycia treści (uczynienia ich dostępnymi tylko dla czytników ekranu)?
+  - visibility: hidden
+  - width: 0; height: 0;
+  - text-indent: -1000px
+  - absolute position - poza ekranem
 * Czy kiedykolwiek używałeś systemów siatek, a jeśli tak, to jakie preferujesz?
 * Czy używałeś 'media queries' lub tworzyłeś konkretne układy i arkusze dla urządzeń mobilnych?
 * Czy miałeś styczność ze stylizacją SVG?
@@ -257,6 +299,36 @@ $(".foo div#bar:eq(0)")
 * Jak tworzysz i wdrażasz projekt używający niestandardowych czcionek?
   * Czcionki sieciowe (serwisy czcionek jak: Google Webfonts, Typekit itd.)
 * Wyjaśnij jak przeglądarka określa elementy pasujące do selektora CSS?
+
+### Pytania z testowania:
+
+* Jakie są niektóre z plusów/minusów testowania pisanego kodu?
+
+  Testowanie kodu (testy jednostkowe) zapewniają, że kod działa tak jak powinien, pozwala prowadzić refaktoryzację kodu i sprawdzać, czy nic nie zostało zepsute.
+
+  Minusem jest to, że testy także potrzebują refaktoryzacji oraz jest to znacznie więcej kodu do konserwacji.
+
+* Jakich narzędzi użyłbyś do testowania swojego kodu?
+
+  * Jasmine - framework TDD
+  * Karma - runner testów
+  * Selenium driver - testowanie End-to-End
+
+* Jaka jest różnica pomiędzy testami jednostkowymi a testami funkcjonalnymi/integracyjnymi?
+
+  Testy jednostkowe sprawdzają czy poszczególne części kodu (funkcje) działają poprawnie. Natomiast testy funkcjonalne/integracyjne sprawdzają działanie części systemu, lub systemu jako całości, jak komponenty systemu funkcjonują miedzy sobą etc.
+
+* Jakie zadanie ma tzw. code style linter?
+
+  Eliminacja prostych błędów już podczas pisania kodu. Zapewnia jednakowe, konsekwentne formatowanie kodu dla wszystkich członków zespołu.
+
+### Pytania z wydajności:
+
+* Jakich narzędzi użyłbyś do testowania błędu związanego z wydajnością twojego kodu?
+
+  Chrome Dev-Tools Profiler - pozwala sprawdzić ile czasu wykonuje się jaka funkcji i w ten sposób określić które funkcje zabierają najwięcej procesora.
+
+  [więcej info](https://developers.google.com/web/tools/chrome-devtools/rendering-tools/js-execution)
 
 ### Pytania dodatkowe (zabawne):
 
