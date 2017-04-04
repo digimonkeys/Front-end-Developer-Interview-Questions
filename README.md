@@ -137,6 +137,9 @@ Technology - Lately I prefer to use React with Redux and webpack, but I'm also f
     Then, with event.target, we can see where the event occurred and execute it on the corresponding element.
     This allows us to handle events occurring on multiple items with one handler.
 
+    http://www.crimsteam.site90.net/crimsteam/dom/dom_zdarzenia_delegacja.html
+    https://davidwalsh.name/event-delegate
+
 * Explain how `this` works in JavaScript
 * Explain how prototypal inheritance works
 * What do you think of AMD vs CommonJS?
