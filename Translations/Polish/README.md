@@ -219,6 +219,7 @@ $(".foo div#bar:eq(0)")
   * Jakie techniki stosujesz?
 * Jakie istnieją sposoby wizualnego ukrycia treści (uczynienia ich dostępnymi tylko dla czytników ekranu)?
 * Czy kiedykolwiek używałeś systemów siatek, a jeśli tak, to jakie preferujesz?
+  Używałem Boostrap oraz Angular Material. Dodatkowo słyszałem o Skeleton i Foundation.
 * Czy używałeś 'media queries' lub tworzyłeś konkretne układy i arkusze dla urządzeń mobilnych?
 * Czy miałeś styczność ze stylizacją SVG?
 * Jak optymalizujesz swoje strony do druku?
