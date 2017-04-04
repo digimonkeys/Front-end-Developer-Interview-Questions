@@ -133,6 +133,22 @@ Standars are super important because apps being written in the same language are
 
   https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context
 * What are the various clearing techniques and which is appropriate for what context?
+  - Empty Div Method:
+    <div style="clear:both;"></div>
+    I do not use this method, because you have additional, unnecessary div with hardcored style. You can use this method when you create a layout (often in footer)
+  - Overflow Method: setting auto or hidden overflow property on parent will expand it to contain the floats.
+    If you add overflow: hidden to the containing element, it will automatically adjust its height and take the floated children into account.
+  - The Easy Clearing Method: uses the parent's :after to add the clear: both property
+    .clearfix:after {
+      content: ".";
+      visibility: hidden;
+      display: block;
+      height: 0;
+      clear: both;
+    }
+    I often use this, but it generates content to the page that has nothing to do there in the first place.
+
+  https://css-tricks.com/all-about-floats/
 * Explain CSS sprites, and how you would implement them on a page or site.
 * What are your favourite image replacement techniques and which do you use when?
 * How would you approach fixing browser-specific styling issues?
