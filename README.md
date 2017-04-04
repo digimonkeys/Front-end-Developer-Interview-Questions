@@ -89,6 +89,9 @@ Working on project based on boilerplate that used old version of webpack. When I
 * Describe BFC(Block Formatting Context) and how it works.
 * What are the various clearing techniques and which is appropriate for what context?
 * Explain CSS sprites, and how you would implement them on a page or site.
+  It is the way to reduce HTTP requests by combining images together into one big image. I would use sprite generator, combining all images into one big, usually separated by a pixel. In the css, put the background image on a sprite class that I use for all my image elements. To specify a specific image or icon, I'll set another class with the background positions and sizes of the image.
+
+  https://css-tricks.com/css-sprites/
 * What are your favourite image replacement techniques and which do you use when?
 * How would you approach fixing browser-specific styling issues?
 * How do you serve your pages for feature-constrained browsers?

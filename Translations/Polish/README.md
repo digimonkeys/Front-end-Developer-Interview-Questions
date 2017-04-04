@@ -211,8 +211,11 @@ $(".foo div#bar:eq(0)")
   Float'y mogą by używane do opakowywania tekstu wokół obrazka/elementu lub to tworzenia całych layoutów. Pływające elementy pozostają częścią flow strony, w odróżnieniu od elementów o ustalonym położeniu, które są usuwane z flow strony i nie uczestniczą w dostosowywaniu zawartości np. do zmieniającej się szerokości okna.
 
   https://css-tricks.com/all-about-floats/
-* Jakie znasz techniki kasowania (clearing) i kiedy wskazane jest ich stosowanie?
 * Wyjaśnij technikę "CSS sprites" oraz sposób jej wdrożenia na stronie.
+  Jest to sposób na zmniejszenie zapytań HTTP, łącząc obrazy w jeden duży. Użyłbym do tego generatora sprite'ów, łącząc wszystkie obrazy w jeden duży, zazwyczaj odseparowane od siebie o piksel. W CSS, umieściłbym obraz tła w klasie sprite, który używałbym do każdego elementu z obrazkiem. Aby określi konkretny obraz lub ikonę, utworzyłbym inną klasę z pozycją obrazu tła i jego wymiarami.
+
+  https://css-tricks.com/css-sprites/
+* Jakie znasz techniki kasowania (clearing) i kiedy wskazane jest ich stosowanie?
 * Jakie są Twoje ulubione techniki zastępowania obrazów i kiedy je stosujesz?
 * Haczyki właściwości CSS, warunkowe dołączanie plików .css lub... coś innego?
 * Jak serwujesz strony dla przeglądarek z ograniczonym wsparciem funkcji?
