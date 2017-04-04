@@ -62,7 +62,10 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
 * How would you optimize a website's assets/resources?
 * How many resources will a browser download from a given domain at a time?
   * What are the exceptions?
-* Name 3 ways to decrease page load (perceived or actual load time).
+* Name 3 ways to decrease page load (perceived or actual load time).  
+1. Optimalize images - decrease their amount, use miniatures, svg, css-sprites, preloaders 2.Cache content 3. Remove FOUC (flash of unstyled content)
+
+
 * If you jumped on a project and they used tabs and you used spaces, what would you do?
 * Describe how you would create a simple slideshow page.
 * If you could master one technology this year, what would it be?

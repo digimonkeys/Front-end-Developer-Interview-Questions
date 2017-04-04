@@ -70,7 +70,9 @@ Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich prz
     * itd.
 * Dlaczego serwowanie zasobów strony przez wiele domen jest lepsze?
   * Ile zasobów pobiera przeglądarka z danej domeny w jednej chwili?
-* Podaj 3 sposoby na zmniejszenie czasu ładowania strony. (postrzeganego lub rzeczywistego czasu ładowania)
+* Podaj 3 sposoby na zmniejszenie czasu ładowania strony. (postrzeganego lub rzeczywistego czasu ładowania)  
+1. Optymalizacja zdjęć - ograniczenie ilości, używanie miniatur, css sprites, svg, preloaderów obrazków 2. Cachowanie contentu 3. Zapobieganie FOUC (wyświetlanie strony w dziwnej dla usera formie, zanim załaduje się css)
+
 * Jeśli dołączasz do projektu, w którym używa się tabulacji, a ty używasz spacji, co wtedy zrobisz?
   * Sugerowanie użycia narzędzi w stylu EditorConfig (http://editorconfig.org)
   * Zgodnie z konwencjami (pozostań konsekwentny)
