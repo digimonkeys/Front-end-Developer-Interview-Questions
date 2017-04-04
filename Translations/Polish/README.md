@@ -262,6 +262,18 @@ var foo = 10 + '20';
 
   `1020` (string)
 
+* Jaki jest wynik poniższych dwóch wywołań `alert`?
+```javascript
+var foo = "Hello";
+(function() {
+  var bar = " World";
+  alert(foo + bar);
+})();
+alert(foo + bar);
+```
+
+  Drugie wywołanie skutkuje błędem, ponieważ zmienna `bar` jest zdefiniowana w innym block-scope.
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
