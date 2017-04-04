@@ -396,6 +396,12 @@ Callback is a function that is passed to the other function as an argument. Func
 Callback![Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming))
 
 * Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
+
+The `load` event is fired when a resource and its dependent resources have finished loading.
+It can be used to check when a page is ready to use (fully-loaded page).
+One of disadvantages is that the `load` event waits for everything to be ready - even stylesheets and images.
+The most recommended alternative is `DOMContentLoaded` event which is fired when the initial HTML document has been completely loaded and parsed.
+
 * Explain what a single page app is and how to make one SEO-friendly.
 * What is the extent of your experience with Promises and/or their polyfills?
 * What are the pros and cons of using Promises instead of callbacks?
