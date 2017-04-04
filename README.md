@@ -171,9 +171,34 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
 * What's the difference between `.call` and `.apply`?
 * Explain `Function.prototype.bind`.
 * When would you use `document.write()`?
+  Document.write() is always available, it is a good choice for third party vendors to use it to add their scripts.
+  Many generated ads use `document.write ()` although it is not welcome.
+
 * What's the difference between feature detection, feature inference, and using the UA string?
 * Explain Ajax in as much detail as possible.
+  AJAX (Asynchronous JavaScript and XML).
+  Web application development technology in which the user interacts with the server in two ways:
+    Synchronous - pausing, the operation of the whole page.
+    Asynchronous - requires callback function, without freezing the application state.
+      There is no assurance that the response to the requests will return to us in the order in which requests are sent.
+      It is possible to make asynchronous requests using 3 techniques:
+      1. Using the XMLHttpRequest / ActiveObcjectX object (older versions of IE) - the most common way
+      2. Floating frames
+      3. Cookies
+
+      AJAX is not limited to XML, It also support JSON or pure text.
+
 * What are the advantages and disadvantages of using Ajax?
+  Advantages:
+    - Continuous and invisible for user updating of data
+    - No need to refresh the entire page
+
+  Disadvantages:
+    - Does not work when JavaScript is disabled in browser
+    - The page is not refreshed, so you can not undo or repeat steps with the browser buttons
+    - Delays when the server is heavily loaded
+    - Data is loaded dynamically and therefore is not part of the web page. Web search engines do not index dynamically loaded content.
+
 * Explain how JSONP works (and how it's not really Ajax).
 * Have you ever used JavaScript templating?
   * If so, what libraries have you used?
@@ -246,12 +271,27 @@ Event flow![Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
   Tests also require refactorization and need to be maintained, which may be considered as a disadvantage.
 
 * What tools would you use to test your code's functionality?
+
+  * Jasmine - TDD framework
+  * Karma - tests runner
+  * Selenium driver - End-to-End testing
+
 * What is the difference between a unit test and a functional/integration test?
+
+  Unit tests check whether the individual pieces of code (functions) work as expected on their own. Functional/integration tests check whether bigger parts of application, or even the application as a whole, work and interact with each other properly.
+
 * What is the purpose of a code style linting tool?
+
+  Avoids introducing simple bugs at the stage of writing the code. It assures that code formatting is more consistent between members of the team.
 
 #### Performance Questions:
 
 * What tools would you use to find a performance bug in your code?
+
+  Chrome Dev-Tools Profiler - it allows to check function execution time and pin-point the ones that use the most CPU.
+
+  [more info](https://developers.google.com/web/tools/chrome-devtools/rendering-tools/js-execution)
+
 * What are some ways you may improve your website's scrolling performance?
 * Explain the difference between layout, painting and compositing.
 

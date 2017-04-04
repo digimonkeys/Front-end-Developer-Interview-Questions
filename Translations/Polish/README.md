@@ -133,9 +133,22 @@ function Person(){} var person = Person() var person = new Person()
 * Kiedy optymalizujesz swój kod?
 * Wyjaśnij działanie dziedziczenia w JavaScript?
 * Kiedy użyłbyś `document.write()`?
-  * Wiele generowanych reklam używa `document.write()` choć nie jest to mile widziane
+    Document.write() jest zawsze dostępny, jest dobrym wyborem dla dostawcow skryptow zewnetrznych aby mogli dodać oni swoj kod.
+    Wiele generowanych reklam używa `document.write()` choć nie jest to mile widziane.
+
 * Jakie są różnice między wykrywaniem obsługi funkcji, wnioskowaniem obsługi funkcji i używaniem ciągu UA?
 * Omów AJAX jak najbardziej szczegółowo.
+* Podaj wady i zalety żywania technologii AJAX
+  Zalety:
+    - Ciągłe i niewidoczne dla użytkownika uaktualnianie danych
+    - Brak konieczności odświeżania całej strony
+
+  Wady:
+    - Nie działa, gdy wyłączona jest obsługa JavaScript w przeglądarce
+    - Strona nie jest odświeżana a więc nie można cofnąć lub powtórzyć kroków za pomocą przycisków w przeglądarce
+    - Opóźnienia, gdy serwer jest mocno obciążony
+    - Dane są ładowane dynamicznie a więc nie są częścią strony WWW. Wyszukiwarki internetowe nie indeksują treści ładowanych dynamicznie
+
 * Wyjaśnij działanie JSONP (i dlaczego nie jest właściwie AJAX).
 * Czy kiedykolwiek używałeś szablonów w JavaScript?
   * Jeśli tak, jakie to były biblioteki? (Mustache.js, Handlebars itd.)
@@ -175,7 +188,6 @@ Function hoisting![Function hoisting](https://developer.mozilla.org/en-US/docs/W
 * Czym jest `arity` funkcji?
 * Co oznacza `"use strict";`? Jakie są zalety i wady takiego rozwiązania?
 * Jaka jest roznica miedzy funkcja a obiektem?
-
 Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
 Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
 
@@ -301,6 +313,28 @@ $(".foo div#bar:eq(0)")
   Testowanie kodu (testy jednostkowe) zapewniają, że kod działa tak jak powinien, pozwala prowadzić refaktoryzację kodu i sprawdzać, czy nic nie zostało zepsute.
 
   Minusem jest to, że testy także potrzebują refaktoryzacji oraz jest to znacznie więcej kodu do konserwacji.
+
+* Jakich narzędzi użyłbyś do testowania swojego kodu?
+
+  * Jasmine - framework TDD
+  * Karma - runner testów
+  * Selenium driver - testowanie End-to-End
+
+* Jaka jest różnica pomiędzy testami jednostkowymi a testami funkcjonalnymi/integracyjnymi?
+
+  Testy jednostkowe sprawdzają czy poszczególne części kodu (funkcje) działają poprawnie. Natomiast testy funkcjonalne/integracyjne sprawdzają działanie części systemu, lub systemu jako całości, jak komponenty systemu funkcjonują miedzy sobą etc.
+
+* Jakie zadanie ma tzw. code style linter?
+
+  Eliminacja prostych błędów już podczas pisania kodu. Zapewnia jednakowe, konsekwentne formatowanie kodu dla wszystkich członków zespołu.
+
+### Pytania z wydajności:
+
+* Jakich narzędzi użyłbyś do testowania błędu związanego z wydajnością twojego kodu?
+
+  Chrome Dev-Tools Profiler - pozwala sprawdzić ile czasu wykonuje się jaka funkcji i w ten sposób określić które funkcje zabierają najwięcej procesora.
+
+  [więcej info](https://developers.google.com/web/tools/chrome-devtools/rendering-tools/js-execution)
 
 ### Pytania dodatkowe (zabawne):
 
