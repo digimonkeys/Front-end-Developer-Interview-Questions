@@ -103,7 +103,9 @@ Pełny tutorial: http://joshnh.com/weblog/making-a-pure-css-featured-image-slide
 * Jakich narzędzi używasz do sprawdzenia wydajności swojego kodu?
   * Profiler, JSPerf, Dromaeo
 * Gdybyś mógł opanować jedną technologię w tym roku, jaka byłaby to technologia?
-* Wyjaśnij znaczenie standardów sieciowych i ich twórców.
+* Wyjaśnij znaczenie standardów sieciowych i ich twórców.  
+Standardy są bardzo istotne ponieważ aplikacje pisane w danym języku są kompilowane przez różne przeglądarki. Pozwala to uniknąć sytuacji, w której kod działa w połowie przeglądarek, lub działa tylko w tej ulubionej kodera. Gdy opracowany jest standard przeglądarki wiedzą czego się spodziewać i każdy piszący w zgodzie ze standardem może zakładać, że wszystko będzie działać. Twórcami standardów są w3c, iso, ansi, unicode consortium, ietf oraz ecma.  
+
 * Czym jest FOUC? Jak unikasz FOUC?
 
 ### Pytania HTML:
@@ -126,9 +128,24 @@ Pełny tutorial: http://joshnh.com/weblog/making-a-pure-css-featured-image-slide
 * Jak radzisz sobie z testowaniem swojego kodu JavaScript?
 * AMD kontra CommonJS?
 * Czym jest tablica mieszająca (hashtable)?
-* Co oznaczają komunikaty `undefined` i `undeclared` dla zmiennych?
+* Co oznaczają komunikaty `null`, `undefined` i `undeclared` dla zmiennych?
+  - Undeclared jest to zmienna, która nie została stworzona za pomocą var/let/const, a więc została stworzona na obiekcie globalnym window/global.
+  - Undefined jest to zmienna, która została zadeklarowana, ale nie została do niej przypisana żadna wartość
+  - Null jest to typ, który ma przypisaną tylko jedną wartość null, zmienna została zadeklrowana i przypisny do niej obiekt typu Null
+  - Undefined jest typem, null jest obiektem
+  * Jak byś sprawdził te stany zmiennych?
+    - typeof undefined === 'undefined'
+    - typeof null === 'object';
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+  
 * Czym są domknięcia, jak i po co są używane?
-  * Ulubiony wzorzec używany do ich tworzenia? argyle (Dotyczy tylko IIFE)
+    Closure - domknięcie - pozwala na dostęp do wewnętrznego scope funkcji, nawet po jej wykonaniu.
+    Osiąga się to poprzez zwrócenie funkcji po wywołaniu funkcji nadrzędnej.
+    Pozwala to na symulowanie zmiennych publicznych i prywatnych.
+  * Ulubiony wzorzec używany do ich tworzenia?
+    - Module pattern
+  http://blog.nebula.us/13-javascript-closures-czyli-zrozumiec-i-wykorzystac-domkniecia
+
 * Jakie znasz typowe użycie funkcji anonimowych?
 * Wyjaśnij pojęcie "Moduł JavaScript" i kiedy jest warte stosowania.
   * Dodatkowe punkty za wzmiankę na temat czystości przestrzeni nazw.

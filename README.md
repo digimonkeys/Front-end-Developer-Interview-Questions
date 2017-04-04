@@ -88,7 +88,9 @@ We can do it only with CSS3 using ul element and input type = radio. The most im
 Full tutorial: http://joshnh.com/weblog/making-a-pure-css-featured-image-slider/  
 
 * If you could master one technology this year, what would it be?
-* Explain the importance of standards and standards bodies.
+* Explain the importance of standards and standards bodies.  
+Standars are super important because apps being written in the same language are compiled by different browsers. Thanks to standards we avoid creating code that would work in half of browsers or only in one of them. Standard creators are: w3c, iso, ansi, unicode consortium, ietf and ecma  
+
 * What is Flash of Unstyled Content? How do you avoid FOUC?
 * Explain what ARIA and screenreaders are, and how to make a website accessible.
 * Explain some of the pros and cons for CSS animations versus JavaScript animations.
@@ -175,8 +177,23 @@ Full tutorial: http://joshnh.com/weblog/making-a-pure-css-featured-image-slider/
 * Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
   * What needs to be changed to properly make it an IIFE?
 * What's the difference between a variable that is: `null`, `undefined` or undeclared?
+  - Undeclared is a variable that was not created with var / let / const and was created on a global window / global object.
+  - Undefined is a variable that has been declared but has no value assigned to it.
+  - Null is a type that has only one null value assigned, the variable has been declared, and the Null object assigned to it.
+  - Undefined is a type, null is an object
   * How would you go about checking for any of these states?
+    - typeof undefined === 'undefined'
+    - typeof null === 'object'
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+
 * What is a closure, and how/why would you use one?
+    Closure - allows you to access the internal scope of the function, even after it has been completed.
+    This is achieved by returning the function after calling the master function.
+    This allows you to simulate public and private variables.
+    * Favorite pattern used to create them?
+    - Module pattern
+    http://blog.nebula.us/13-javascript-closures-czyli-zrozumiec-i-wykorzystac-domkniecia
+
 * What's a typical use case for anonymous functions?
 * How do you organize your code? (module pattern, classical inheritance?)
   Eg. Module pattern, IIFE, Atomic design.
