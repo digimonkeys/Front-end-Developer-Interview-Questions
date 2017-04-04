@@ -88,7 +88,12 @@ We can do it only with CSS3 using ul element and input type = radio. The most im
 Full tutorial: http://joshnh.com/weblog/making-a-pure-css-featured-image-slider/  
 
 * What tools do you use to check your code performance?  
-Chrome Profiler and Timeline, JSPerf, Dromaeo  
+Chrome Timeline - record and analyze all the activity in your application as it runs, accessible in devTools  
+JSPerf - jsPerf aims to provide an easy way to create and share test cases, comparing the performance of different JavaScript snippets by running benchmarks.  
+ Dromaeo - Mozilla JavaScript performance test suite currently considered to be a "work in progress."  
+https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool  
+https://jsperf.com/  
+https://wiki.mozilla.org/Dromaeo   
 
 * If you could master one technology this year, what would it be?
 * Explain the importance of standards and standards bodies.  
