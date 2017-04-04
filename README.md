@@ -121,6 +121,7 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
   - absolute position off the screen
 * Have you ever used a grid system, and if so, what do you prefer?
 * Have you used or implemented media queries or mobile specific layouts/CSS?
+  Yes, I used media queries after I created a project using Bootstrap grid to learn how Bootstrap and responsive pages works. I used mobile-first method to have a fully-responsive, readable page on any device without unnecessary content.
 * Are you familiar with styling SVG?
 * How do you optimize your webpages for print?
 * What are some of the "gotchas" for writing efficient CSS?
