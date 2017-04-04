@@ -35,14 +35,34 @@ Creating stuff. Since childhood I loved processes of creation and also problem s
 
 Working on project based on boilerplate that used old version of webpack. When I tried to add some new indispensable features to it, everything occured to be incompatible and broke. I had to create whole webpack script from scratch.  
 
-* What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?
+* What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?  
+
+UI - I usually start with drawing sketch, simply with pencil on paper - later I treat it as general guide to what I want to accomplish. I always put accent on readability and simplicity for users.  
+
+Security - On frontend everything might happen, so I store fragile data on backend.  
+
+Performance - I focus on writing clear, understandable code - when some functionality seems to be slow, then I try to boost its performance. Sometimes, when particular task seems to be heavy and I can solve it in different ways, I register and compare times of execution for different solutions in the first place.  
+
+SEO - I usually dont take care of SEO in projects (it is not my task).  
+
+Maintainability - I use general best practises, eg. take care of simple functions and variables names, split code into small, simple modules. I always put big stress on adapting to my hiring company practises.  
+
+Technology - Lately I prefer to use React with Redux and webpack, but I'm also familiar with Angular and gulp etc (...)  
+
 * Talk about your preferred development environment.
+
 * Which version control systems are you familiar with?
+git, I worked on github and gitlab. I tried using git guis but I prefer to work in command line.  
+
 * Can you describe your workflow when you create a web page?  
 I start with gathering client requirements. Ten I create environment - bundling scripts from webpack, gulp etc. Next comes site skeleton, semantics, filling with content and fixes, styling, animations and adding interactivity.  
 
+
 * If you have 5 different stylesheets, how would you best integrate them into the site?
-* Can you describe the difference between progressive enhancement and graceful degradation?
+* Can you describe the difference between progressive enhancement and graceful degradation?  
+* What is semantic html?  
+Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, of the information in webpages and web applications rather than merely to define its presentation or look. Semantic HTML is processed by traditional web browsers as well as by many other user agents. CSS is used to suggest its presentation to human users.    
+
 * How would you optimize a website's assets/resources?
 * How many resources will a browser download from a given domain at a time?
   * What are the exceptions?
@@ -86,16 +106,23 @@ I start with gathering client requirements. Ten I create environment - bundling 
   https://css-tricks.com/all-about-floats/
 * Describe z-index and how stacking context is formed.
   The z-index property controls the vertical stacking order of elements that overlap. Without any z-index value, elements stack in the order that they appear in the DOM (the lowest one down at the same hierarchy level appears on top). Nesting is important too, if an element B sits on top of element A, a child element of element A can never be higher than element B.
-  
+
   https://css-tricks.com/almanac/properties/z/z-index/
 * Describe BFC(Block Formatting Context) and how it works.
 * What are the various clearing techniques and which is appropriate for what context?
 * Explain CSS sprites, and how you would implement them on a page or site.
 * What are your favourite image replacement techniques and which do you use when?
 * How would you approach fixing browser-specific styling issues?
+  - use separate stylesheets that loads when that specific browser is being used. 
+  - use cross-browsers CSS prefixes (-moz-, -webkit-, etc)
+  - resetting or normalizing CSS
 * How do you serve your pages for feature-constrained browsers?
   * What techniques/processes do you use?
 * What are the different ways to visually hide content (and make it available only for screen readers)?
+  - visibility: hidden
+  - width: 0; height: 0;
+  - text-indent: -1000px
+  - absolute position off the screen
 * Have you ever used a grid system, and if so, what do you prefer?
 * Have you used or implemented media queries or mobile specific layouts/CSS?
 * Are you familiar with styling SVG?
@@ -136,9 +163,34 @@ I start with gathering client requirements. Ten I create environment - bundling 
 * What's the difference between `.call` and `.apply`?
 * Explain `Function.prototype.bind`.
 * When would you use `document.write()`?
+  Document.write() is always available, it is a good choice for third party vendors to use it to add their scripts.
+  Many generated ads use `document.write ()` although it is not welcome.
+
 * What's the difference between feature detection, feature inference, and using the UA string?
 * Explain Ajax in as much detail as possible.
+  AJAX (Asynchronous JavaScript and XML).
+  Web application development technology in which the user interacts with the server in two ways:
+    Synchronous - pausing, the operation of the whole page.
+    Asynchronous - requires callback function, without freezing the application state.
+      There is no assurance that the response to the requests will return to us in the order in which requests are sent.
+      It is possible to make asynchronous requests using 3 techniques:
+      1. Using the XMLHttpRequest / ActiveObcjectX object (older versions of IE) - the most common way
+      2. Floating frames
+      3. Cookies
+
+      AJAX is not limited to XML, It also support JSON or pure text.
+
 * What are the advantages and disadvantages of using Ajax?
+  Advantages:
+    - Continuous and invisible for user updating of data
+    - No need to refresh the entire page
+
+  Disadvantages:
+    - Does not work when JavaScript is disabled in browser
+    - The page is not refreshed, so you can not undo or repeat steps with the browser buttons
+    - Delays when the server is heavily loaded
+    - Data is loaded dynamically and therefore is not part of the web page. Web search engines do not index dynamically loaded content.
+
 * Explain how JSONP works (and how it's not really Ajax).
 * Have you ever used JavaScript templating?
   * If so, what libraries have you used?
@@ -161,6 +213,16 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * Explain what a single page app is and how to make one SEO-friendly.
 * What is the extent of your experience with Promises and/or their polyfills?
 * What are the pros and cons of using Promises instead of callbacks?
+* Variables scope in JS?
+ 
+In JavaScript, til version ES6, there were only two versions of variables scope - global scope, and local - function scope.
+In ES6 there is one more - block scope for variables defined with let and const (scope in {}).
+
+var![var](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
+let![let](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Statements/let)
+const![const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
+Other scopes![other scopes](http://stackoverflow.com/a/500459)
+
 * What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
 * What tools and techniques do you use debugging JavaScript code?
 * What language constructions do you use for iterating over object properties and array items?
@@ -169,6 +231,11 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
   * What are the pros and cons of immutability?
   * How can you achieve immutability in your own code?
 * Explain the difference between synchronous and asynchronous functions.
+* Are functions hoisted in js?
+
+There are two ways of declaring a function in JS: function definition and function expression.
+Function definitions are hoisted, function expressions arent.
+
 * What is event loop?
   * What is the difference between call stack and task queue?
 * Explain the differences on the usage of `foo` between `function foo() {}` and `var foo = function() {}`
@@ -177,17 +244,46 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 Function is a specific type of object in JavaScript, that has all the properties of normal object. Only difference is that function can be called / invoked. It's possible, because functions has internal [[Call]] method.
 Function prototype is Object, and it's prototype is Function();
 
+* What is event life cycle (event flow) ?
+ 
+Event life cycle (event flow) describes flow of an event through DOM tree. With every user interaction (or builtin event) browser creates event object and sends it (propagets it) through DOM tree. There are three phases of event life cycle:
+ 
+ - capturing faze - in this faze event is sent from top of the DOM to the element, that action was taken on.
+ - on the object faze - happens when event reach element which user made an action
+ - bubbling faze - in this faze event is sent from the element that action was taken on, to the top element of the DOM tree.
+
+Event flow![Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
 
 #### Testing Questions:
 
 * What are some advantages/disadvantages to testing your code?
+
+  Testing your code (unit testing) assures that the code is working as it should, allows you to refactor it and check whether nothing has been broken.
+
+  Tests also require refactorization and need to be maintained, which may be considered as a disadvantage.
+
 * What tools would you use to test your code's functionality?
+
+  * Jasmine - TDD framework
+  * Karma - tests runner
+  * Selenium driver - End-to-End testing
+
 * What is the difference between a unit test and a functional/integration test?
+
+  Unit tests check whether the individual pieces of code (functions) work as expected on their own. Functional/integration tests check whether bigger parts of application, or even the application as a whole, work and interact with each other properly.
+
 * What is the purpose of a code style linting tool?
+
+  Avoids introducing simple bugs at the stage of writing the code. It assures that code formatting is more consistent between members of the team.
 
 #### Performance Questions:
 
 * What tools would you use to find a performance bug in your code?
+
+  Chrome Dev-Tools Profiler - it allows to check function execution time and pin-point the ones that use the most CPU.
+
+  [more info](https://developers.google.com/web/tools/chrome-devtools/rendering-tools/js-execution)
+
 * What are some ways you may improve your website's scrolling performance?
 * Explain the difference between layout, painting and compositing.
 
