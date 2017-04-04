@@ -91,8 +91,16 @@ Full tutorial: http://joshnh.com/weblog/making-a-pure-css-featured-image-slider/
 Chrome Profiler and Timeline, JSPerf, Dromaeo  
 
 * If you could master one technology this year, what would it be?
-* Explain the importance of standards and standards bodies.
-* What is Flash of Unstyled Content? How do you avoid FOUC?
+* Explain the importance of standards and standards bodies.  
+Standars are super important because apps being written in the same language are compiled by different browsers. Thanks to standards we avoid creating code that would work in half of browsers or only in one of them. Standard creators are: w3c, iso, ansi, unicode consortium, ietf and ecma  
+
+* What is Flash of Unstyled Content? How do you avoid FOUC?  
+Flash of unstyled content is displaying unstyled content for user for a while when loading page. Appears when CSS is slow to load or when JS causes multiple page rendering.
+To avoid FOUC, you should provide the user with the most optimized CSS (minimized, in one file), and use as little rerendering browser javascript as possible. Use Critical CSS (ie throw the most important inline css rules in the head tag).
+Use media queries and serve CSS optimized for lower resolution devices. One can also hide whole page until all styles are loaded.  
+https://en.wikipedia.org/wiki/Flash_of_unstyled_content  
+http://www.techrepublic.com/blog/web-designer/how-to-prevent-flash-of-unstyled-content-on-your-websites/  
+
 * Explain what ARIA and screenreaders are, and how to make a website accessible.
 * Explain some of the pros and cons for CSS animations versus JavaScript animations.
 * What does CORS stand for and what issue does it address?
@@ -134,10 +142,26 @@ Chrome Profiler and Timeline, JSPerf, Dromaeo
 
   https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context
 * What are the various clearing techniques and which is appropriate for what context?
+  - Empty Div Method:
+    <div style="clear:both;"></div>
+    I do not use this method, because you have additional, unnecessary div with hardcored style. You can use this method when you create a layout (often in footer)
+  - Overflow Method: setting auto or hidden overflow property on parent will expand it to contain the floats.
+    If you add overflow: hidden to the containing element, it will automatically adjust its height and take the floated children into account.
+  - The Easy Clearing Method: uses the parent's :after to add the clear: both property
+    .clearfix:after {
+      content: ".";
+      visibility: hidden;
+      display: block;
+      height: 0;
+      clear: both;
+    }
+    I often use this, but it generates content to the page that has nothing to do there in the first place.
+
+  https://css-tricks.com/all-about-floats/
 * Explain CSS sprites, and how you would implement them on a page or site.
 * What are your favourite image replacement techniques and which do you use when?
 * How would you approach fixing browser-specific styling issues?
-  - use separate stylesheets that loads when that specific browser is being used. 
+  - use separate stylesheets that loads when that specific browser is being used.
   - use cross-browsers CSS prefixes (-moz-, -webkit-, etc)
   - resetting or normalizing CSS
 * How do you serve your pages for feature-constrained browsers?
@@ -178,11 +202,34 @@ Chrome Profiler and Timeline, JSPerf, Dromaeo
 * Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
   * What needs to be changed to properly make it an IIFE?
 * What's the difference between a variable that is: `null`, `undefined` or undeclared?
+  - Undeclared is a variable that was not created with var / let / const and was created on a global window / global object.
+  - Undefined is a variable that has been declared but has no value assigned to it.
+  - Null is a type that has only one null value assigned, the variable has been declared, and the Null object assigned to it.
+  - Undefined is a type, null is an object
   * How would you go about checking for any of these states?
+    - typeof undefined === 'undefined'
+    - typeof null === 'object'
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+
 * What is a closure, and how/why would you use one?
+    Closure - allows you to access the internal scope of the function, even after it has been completed.
+    This is achieved by returning the function after calling the master function.
+    This allows you to simulate public and private variables.
+    * Favorite pattern used to create them?
+    - Module pattern
+    http://blog.nebula.us/13-javascript-closures-czyli-zrozumiec-i-wykorzystac-domkniecia
+
 * What's a typical use case for anonymous functions?
 * How do you organize your code? (module pattern, classical inheritance?)
+  Eg. Module pattern, IIFE, Atomic design.
+
 * What's the difference between host objects and native objects?
+    Host objects are objects provided by the host environment. They may be different between environments, examples:
+    - window, document, location
+    Native objects are the ones described and fully defined in the ECMAScript specification, examples:
+    - Date, Math, parseInt.
+    http://stackoverflow.com/questions/7614317/what-is-the-difference-between-native-objects-and-host-objects
+    
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
 * What's the difference between `.call` and `.apply`?
 * Explain `Function.prototype.bind`.
@@ -238,7 +285,7 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * What is the extent of your experience with Promises and/or their polyfills?
 * What are the pros and cons of using Promises instead of callbacks?
 * Variables scope in JS?
- 
+
 In JavaScript, til version ES6, there were only two versions of variables scope - global scope, and local - function scope.
 In ES6 there is one more - block scope for variables defined with let and const (scope in {}).
 
@@ -269,9 +316,9 @@ Function is a specific type of object in JavaScript, that has all the properties
 Function prototype is Object, and it's prototype is Function();
 
 * What is event life cycle (event flow) ?
- 
+
 Event life cycle (event flow) describes flow of an event through DOM tree. With every user interaction (or builtin event) browser creates event object and sends it (propagets it) through DOM tree. There are three phases of event life cycle:
- 
+
  - capturing faze - in this faze event is sent from top of the DOM to the element, that action was taken on.
  - on the object faze - happens when event reach element which user made an action
  - bubbling faze - in this faze event is sent from the element that action was taken on, to the top element of the DOM tree.
