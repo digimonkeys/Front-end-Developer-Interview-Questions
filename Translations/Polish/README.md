@@ -239,6 +239,10 @@ Function hoisting![Function hoisting](https://developer.mozilla.org/en-US/docs/W
 ```
 * Opisz strategię zapamiętywania (unikanie powtarzalnych obliczeń) w JavaScript.
 * Dlaczego mówimy wyrażenie trójkowe, co dokładnie oznacza słowo "trójkowy"?
+
+Mówimy wyrażenie trójkowe, ponieważ przyjmuje trzy operandy (operand - argument).
+Jako ciekawostke można dodać, że jest to jedyny operator w JavaScripcie, który przyjmuje trzy operandy.
+
 * Czym jest `arity` funkcji?
 * Co oznacza `"use strict";`? Jakie są zalety i wady takiego rozwiązania?
 * Jaka jest roznica miedzy funkcja a obiektem?
