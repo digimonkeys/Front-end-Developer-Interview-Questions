@@ -199,6 +199,12 @@ Standars are super important because apps being written in the same language are
   Eg. Module pattern, IIFE, Atomic design.
 
 * What's the difference between host objects and native objects?
+    Host objects are objects provided by the host environment. They may be different between environments, examples:
+    - window, document, location
+    Native objects are the ones described and fully defined in the ECMAScript specification, examples:
+    - Date, Math, parseInt.
+    http://stackoverflow.com/questions/7614317/what-is-the-difference-between-native-objects-and-host-objects
+    
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
 * What's the difference between `.call` and `.apply`?
 * Explain `Function.prototype.bind`.
