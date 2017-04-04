@@ -192,6 +192,11 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
   * What are the pros and cons of immutability?
   * How can you achieve immutability in your own code?
 * Explain the difference between synchronous and asynchronous functions.
+* Are functions hoisted in js?
+
+There are two ways of declaring a function in JS: function definition and function expression.
+Function definitions are hoisted, function expressions arent.
+
 * What is event loop?
   * What is the difference between call stack and task queue?
 * Explain the differences on the usage of `foo` between `function foo() {}` and `var foo = function() {}`

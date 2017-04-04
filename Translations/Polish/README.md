@@ -137,6 +137,13 @@ function Person(){} var person = Person() var person = new Person()
 * Wyjaśnij ewentualny sposób pobrania parametrów z adresu URL w oknie przeglądarki.
 * Wyjaśnij politykę `same-origin` w odniesieniu do JavaScript.
 * Opisz wzorce dziedziczenia w JavaScript.
+* Czy funkcje sa hoistowane?
+ 
+W JS funcje można deklarować na dwa sposoby: poprzez function definition oraz function expression.
+Function definition są hoistowane, natomiast function expressions nie.
+
+Function hoisting![Function hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+
 * Napisz działający kod:
 ```javascript
 [1,2,3,4,5].duplicate(); // [1,2,3,4,5,1,2,3,4,5]
