@@ -193,6 +193,13 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
 * Explain "hoisting".
 * Describe event bubbling.
 * What's the difference between an "attribute" and a "property"?
+
+* What does second parameter in Object.create do?
+
+It specify property descriptors to be added to the newly-created object, with the corresponding property names. These properties correspond to the second argument of Object.defineProperties().
+
+Object.create![Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
+
 * Why is extending built-in JavaScript objects not a good idea?
 * Difference between document load event and document DOMContentLoaded event?
 * What is the difference between `==` and `===`?
