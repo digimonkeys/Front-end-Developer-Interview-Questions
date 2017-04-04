@@ -27,7 +27,10 @@ Większość pytań zaczerpnięto z wątku [oksoclap](http://oksoclap.com/) stwo
 
 ### Pytania ogólne:
 
-* Czego nauczyłeś się wczoraj/w tym tygodniu?
+* Czego nauczyłeś się wczoraj/w tym tygodniu?  
+ React Higher Order Components  
+ Sequelize ORM dla NodeJS  
+
 * Co pobudza lub interesuje cię w programowaniu?
 * Jakie jest Twoje preferowane środowisko programistyczne? (system operacyjny, edytor, przeglądarki, narzędzia itd.)
 * Opisz kolejne zadania podczas tworzenia strony internetowej?
