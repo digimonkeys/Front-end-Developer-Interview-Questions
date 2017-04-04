@@ -134,9 +134,9 @@ Working on project based on boilerplate that used old version of webpack. When I
 * What's the difference between `.call` and `.apply`?
 * Explain `Function.prototype.bind`.
 * When would you use `document.write()`?
-  Document.write() is always available, it is a good choice for third party vendors to use it to add their scripts
-  (such as ads or Google Analytics).
-  
+  Document.write() is always available, it is a good choice for third party vendors to use it to add their scripts.
+  Many generated ads use `document.write ()` although it is not welcome.
+
 * What's the difference between feature detection, feature inference, and using the UA string?
 * Explain Ajax in as much detail as possible.
 * What are the advantages and disadvantages of using Ajax?

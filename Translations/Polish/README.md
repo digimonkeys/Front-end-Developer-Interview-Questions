@@ -27,16 +27,16 @@ Większość pytań zaczerpnięto z wątku [oksoclap](http://oksoclap.com/) stwo
 
 ### Pytania ogólne:
 
-* Czego nauczyłeś się wczoraj/w tym tygodniu?  
- React Higher Order Components  
- Sequelize ORM dla NodeJS  
+* Czego nauczyłeś się wczoraj/w tym tygodniu?
+ React Higher Order Components
+ Sequelize ORM dla NodeJS
 
-* Co pobudza lub interesuje cię w programowaniu?  
+* Co pobudza lub interesuje cię w programowaniu?
 
-Tworzenie rzeczy. Od dziecka uwielbiałem tworzyć coś nowego i rozwiązywac łamigłówki. Uwielbiam stale się rozwijać, uczyć się nowych rzeczy i codziennie stawiać czoła nowym wyzwaniom.  
+Tworzenie rzeczy. Od dziecka uwielbiałem tworzyć coś nowego i rozwiązywac łamigłówki. Uwielbiam stale się rozwijać, uczyć się nowych rzeczy i codziennie stawiać czoła nowym wyzwaniom.
 
-* Jakie wyzwanie technologiczne stanęło przed toba ostatnio i jak je rozwiązałeś?  
-Pracowałem nad projektem wykorzystującym boilerplate bundlujący się przez starą wersję webpacka. Kiedy chciałem dodać do niego kilka niezbędnych rozszerzeń, wszystko okazało się niekompatybilne i rozsypało w drzazgi. Musiałem napisac cały skrypt webpacka od nowa.  
+* Jakie wyzwanie technologiczne stanęło przed toba ostatnio i jak je rozwiązałeś?
+Pracowałem nad projektem wykorzystującym boilerplate bundlujący się przez starą wersję webpacka. Kiedy chciałem dodać do niego kilka niezbędnych rozszerzeń, wszystko okazało się niekompatybilne i rozsypało w drzazgi. Musiałem napisac cały skrypt webpacka od nowa.
 
 * Jakie jest Twoje preferowane środowisko programistyczne? (system operacyjny, edytor, przeglądarki, narzędzia itd.)
 * Opisz kolejne zadania podczas tworzenia strony internetowej?
@@ -103,8 +103,9 @@ function Person(){} var person = Person() var person = new Person()
 * Kiedy optymalizujesz swój kod?
 * Wyjaśnij działanie dziedziczenia w JavaScript?
 * Kiedy użyłbyś `document.write()`?
+    Document.write() jest zawsze dostępny, jest dobrym wyborem dla dostawcow skryptow zewnetrznych aby mogli dodać oni swoj kod.
     Wiele generowanych reklam używa `document.write()` choć nie jest to mile widziane.
-    
+
 * Jakie są różnice między wykrywaniem obsługi funkcji, wnioskowaniem obsługi funkcji i używaniem ciągu UA?
 * Omów AJAX jak najbardziej szczegółowo.
 * Wyjaśnij działanie JSONP (i dlaczego nie jest właściwie AJAX).
