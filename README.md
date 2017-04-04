@@ -93,9 +93,10 @@ Working on project based on boilerplate that used old version of webpack. When I
 * How would you approach fixing browser-specific styling issues?
 * How do you serve your pages for feature-constrained browsers?
   - separate stylesheets that loads when that specific browser is being used
+  - create a completely separate layout
+  - polyfills (A polyfill is code that detects if a certain "expected" API is missing and manually implements it.)
 
   * What techniques/processes do you use?
-      Progressive Enhancement
       Graceful Degradation
 
   https://www.sitepoint.com/progressive-enhancement-graceful-degradation-basics/

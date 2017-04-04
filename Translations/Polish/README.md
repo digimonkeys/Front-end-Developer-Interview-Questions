@@ -216,10 +216,11 @@ $(".foo div#bar:eq(0)")
 * Jakie są Twoje ulubione techniki zastępowania obrazów i kiedy je stosujesz?
 * Haczyki właściwości CSS, warunkowe dołączanie plików .css lub... coś innego?
 * Jak serwujesz strony dla przeglądarek z ograniczonym wsparciem funkcji?
-  - odzielne style CSS, które ładują się gdy dana przeglądarka jest używana
+  - oddzielne style CSS, które ładują się gdy dana przeglądarka jest używana
+  - oddzielny layout
+  - polyfills (Pollyfil jest kodem, który wykrywa czy są braki w oczekiwanym API i manualnie implementuje je)
   
   * Jakie techniki stosujesz?
-      - Progressive Enhancement
       - Graceful Degradation
       
   https://www.sitepoint.com/progressive-enhancement-graceful-degradation-basics/
