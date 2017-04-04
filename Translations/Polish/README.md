@@ -291,6 +291,12 @@ Mówimy wyrażenie trójkowe, ponieważ przyjmuje trzy operandy (operand - argum
 Jako ciekawostke można dodać, że jest to jedyny operator w JavaScripcie, który przyjmuje trzy operandy.
 Odniesienie: [Conditional (ternary) Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
+* Napisz pętlę for, która przeiteruje do `100` i wyświetli **"fizz"**, gdy liczba jest podzielna przez `3`, **"buzz"**, gdy liczba jest podzielna przez `5` oraz **"fizzbuzz"**, gdy liczba jest podzielna przez `3` i `5`
+
+```javascript
+  for(let i = 1; i <= 100; i += 1) console.log((i % 3 === 0 ? 'fizz' : '') + (i % 5 === 0 ? 'buzz' : '') || i);
+```
+
 * Czym jest `arity` funkcji?
 * Co oznacza `"use strict";`? Jakie są zalety i wady takiego rozwiązania?
 * Jaka jest roznica miedzy funkcja a obiektem?
