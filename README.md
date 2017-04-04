@@ -94,6 +94,10 @@ Working on project based on boilerplate that used old version of webpack. When I
 * How do you serve your pages for feature-constrained browsers?
   * What techniques/processes do you use?
 * What are the different ways to visually hide content (and make it available only for screen readers)?
+  - visibility: hidden
+  - width: 0; height: 0;
+  - text-indent: -1000px
+  - absolute position off the screen
 * Have you ever used a grid system, and if so, what do you prefer?
 * Have you used or implemented media queries or mobile specific layouts/CSS?
 * Are you familiar with styling SVG?

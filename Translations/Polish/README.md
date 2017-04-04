@@ -218,6 +218,10 @@ $(".foo div#bar:eq(0)")
 * Jak serwujesz strony dla przeglądarek z ograniczonym wsparciem funkcji?
   * Jakie techniki stosujesz?
 * Jakie istnieją sposoby wizualnego ukrycia treści (uczynienia ich dostępnymi tylko dla czytników ekranu)?
+  - visibility: hidden
+  - width: 0; height: 0;
+  - text-indent: -1000px
+  - absolute position - poza ekranem
 * Czy kiedykolwiek używałeś systemów siatek, a jeśli tak, to jakie preferujesz?
 * Czy używałeś 'media queries' lub tworzyłeś konkretne układy i arkusze dla urządzeń mobilnych?
 * Czy miałeś styczność ze stylizacją SVG?
