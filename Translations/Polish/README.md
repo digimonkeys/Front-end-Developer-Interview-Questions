@@ -365,6 +365,53 @@ $(".foo div#bar:eq(0)")
 * Jakie znasz techniki kasowania (clearing) i kiedy wskazane jest ich stosowanie?
 * Wyjaśnij technikę "CSS sprites" oraz sposób jej wdrożenia na stronie.
 * Jakie są Twoje ulubione techniki zastępowania obrazów i kiedy je stosujesz?
+  Zastępowanie obrazów CSS jest techniką zastępowania tekstowego elementu (zazwyczaj tagu nagłówkowego) obrazem. Można użyć do tego <h1> i tekstu dla benefitów płynących z dostępności oraz SEO.
+  Używam zastępowania obrazów (w zależności od potrzeby), kiedy chcę by moja strona była bardziej dostępna dla urządzeń takich jak czytniki itp. Zazwyczaj używam do tego celu ukrywania tagu span poprzed 'display: none'.
+
+  #1: Ukrywanie tagu span poprzez 'display: none'
+  <h1 id="logo">
+    <span>CSS-Tricks</span>
+  </h1>
+
+  h1#logo {
+    width: 250px;
+    height: 25px;
+    background-image: url(logo.gif);
+  }
+  h1#logo span {
+    display: none;
+  }
+
+  #2: Text-indent poza zasięgiem wzroku(ekranu)
+  <h1 id="logo">
+    CSS-Tricks
+  </h1>
+
+  h1#logo {
+    width: 300px;
+    height: 75px;
+    background: url(test.png);
+    text-indent: -9999px;
+  }
+
+  #3: Niewidzialny tekst
+  <h3 class="leon">
+    <span>CSS-Tricks</span>
+  </h3>
+
+  h3.leon {
+    width: 300px;
+    height: 75px;
+    background: url(test.png);
+  }
+  h3.leon span {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  https://css-tricks.com/css-image-replacement/
 * Haczyki właściwości CSS, warunkowe dołączanie plików .css lub... coś innego?
 * Jak serwujesz strony dla przeglądarek z ograniczonym wsparciem funkcji?
   * Jakie techniki stosujesz?
