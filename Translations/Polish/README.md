@@ -58,7 +58,9 @@ Z gitem, pracowałem na githubie i gitlabie. Próbowałem używać interfejsów 
 * Opisz kolejne zadania podczas tworzenia strony internetowej?
 * Opisz różnicę między stopniowym ulepszaniem (progressive enhancement) i wdzięczną degradacją (graceful degradation)?
   * Dodatkowe punkty za opisanie wykrywania obsługi cech (feature detection)
-* Wyjaśnij, co kryje się za terminem "semantyczny HTML".
+* Wyjaśnij, co kryje się za terminem "semantyczny HTML".  
+Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich przeznaczeniem i znaczeniem semantycznym, a nie tylko do prezentowania danych. Znaczniki nadają sens i w różnym kontekście mogną oznaczać do innego. Np <i> i <em> <b> i <strong>, section, aside, nav. Jest to ważne dla robotów indeksujących google, dla czytników przeznaczonych dla osób niepełnosprawnych etc.  
+
 * Jak optymalizowałbyś zasoby strony internetowej?
   * Myśląc o wielu rozwiązaniach, które zawierają:
     * Łączenie plików
