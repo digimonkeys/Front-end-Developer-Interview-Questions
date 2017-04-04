@@ -262,6 +262,15 @@ var foo = 10 + '20';
 
   `1020` (string)
 
+* Jaka jest wartość `foo.length`?
+```javascript
+var foo = [];
+foo.push(1);
+foo.push(2);
+```
+
+  `2`
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
