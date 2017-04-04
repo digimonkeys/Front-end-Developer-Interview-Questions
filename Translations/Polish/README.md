@@ -134,7 +134,7 @@ Pełny tutorial: http://joshnh.com/weblog/making-a-pure-css-featured-image-slide
   * Dodatkowe punkty za wzmiankę na temat czystości przestrzeni nazw.
   * Co jeśli Twój kod nie używa przestrzeni nazw?
 * Jak organizujesz swój kod? (moduły, klasyczne dziedziczenie?)
-  Np. Używam module pattern, IFFE, Atomic design
+  Np. Używam module pattern, IIFE, Atomic design
 
 * Jaka jest różnicza między obiektami typu `host` i `native`?
 * Różnica między:
