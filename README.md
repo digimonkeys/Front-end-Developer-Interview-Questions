@@ -240,6 +240,9 @@ Event flow![Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
   * Selenium driver - End-to-End testing
 
 * What is the difference between a unit test and a functional/integration test?
+
+  Unit tests check whether the individual pieces of code (functions) work as expected on their own. Functional/integration tests check whether bigger parts of application, or even the application as a whole, work and interact with each other properly.
+
 * What is the purpose of a code style linting tool?
 
 #### Performance Questions:
