@@ -121,7 +121,9 @@ function Person(){} var person = Person() var person = new Person()
 * Kiedy optymalizujesz swój kod?
 * Wyjaśnij działanie dziedziczenia w JavaScript?
 * Kiedy użyłbyś `document.write()`?
-  * Wiele generowanych reklam używa `document.write()` choć nie jest to mile widziane
+    Document.write() jest zawsze dostępny, jest dobrym wyborem dla dostawcow skryptow zewnetrznych aby mogli dodać oni swoj kod.
+    Wiele generowanych reklam używa `document.write()` choć nie jest to mile widziane.
+
 * Jakie są różnice między wykrywaniem obsługi funkcji, wnioskowaniem obsługi funkcji i używaniem ciągu UA?
 * Omów AJAX jak najbardziej szczegółowo.
 * Podaj wady i zalety żywania technologii AJAX
@@ -174,8 +176,8 @@ Function hoisting![Function hoisting](https://developer.mozilla.org/en-US/docs/W
 * Czym jest `arity` funkcji?
 * Co oznacza `"use strict";`? Jakie są zalety i wady takiego rozwiązania?
 * Jaka jest roznica miedzy funkcja a obiektem?
- 
-Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
+ Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
+
 Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
 
 * Czym jest event life cycle (event flow)?
