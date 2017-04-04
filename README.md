@@ -197,6 +197,10 @@ Function prototype is Object, and it's prototype is Function();
 * What are some ways you may improve your website's scrolling performance?
 * Explain the difference between layout, painting and compositing.
 
+  * layout - in this phase the browser checks how much space each of the page elements need.
+  * painting - filling in pixels, drawing elements: text, graphics etc.
+  * compositing - showing of elements on the page in the correct order - rendering of the page.
+
 #### Network Questions:
 
 * Traditionally, why has it been better to serve site assets from multiple domains?
