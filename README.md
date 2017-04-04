@@ -31,7 +31,10 @@ This file contains a number of front-end interview questions that can be used wh
 
 Creating stuff. Since childhood I loved processes of creation and also problem solving. I like constant development of my skills and knowledge, learning new things and facing new challenges every day.  
 
-* What is a recent technical challenge you experienced and how did you solve it?
+* What is a recent technical challenge you experienced and how did you solve it?  
+
+Working on project based on boilerplate that used old version of webpack. When I tried to add some new indispensable features to it, everything occured to be incompatible and broke. I had to create whole webpack script from scratch.  
+
 * What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?
 * Talk about your preferred development environment.
 * Which version control systems are you familiar with?
