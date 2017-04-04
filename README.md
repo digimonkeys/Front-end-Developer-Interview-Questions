@@ -177,7 +177,16 @@ http://www.techrepublic.com/blog/web-designer/how-to-prevent-flash-of-unstyled-c
 * How do you optimize your webpages for print?
 * What are some of the "gotchas" for writing efficient CSS?
 * What are the advantages/disadvantages of using CSS preprocessors?
+  Advantages
+    - better organization from nesting selectors
+    - ability to define variables and mixins
+    - have mathematical functions
+    - joining multiple files
+    - in some cases, cleaner syntaxes
+  Disadvantages
+    - mainly for designers - not comfortable on the command line or programming concepts
   * Describe what you like and dislike about the CSS preprocessors you have used.
+    I used SASS and I really like nesting, variables and mathematical functions which help a lot in styling. There were no things I did not like, maybe my knowledge about SASS is not enough deep.
 * How would you implement a web design comp that uses non-standard fonts?
 * Explain how a browser determines what elements match a CSS selector.
 * Describe pseudo-elements and discuss what they are used for.

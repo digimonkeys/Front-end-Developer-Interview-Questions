@@ -360,8 +360,17 @@ $(".foo div#bar:eq(0)")
 * Czy miałeś styczność ze stylizacją SVG?
 * Jak optymalizujesz swoje strony do druku?
 * Jakie stosujesz "sztuczki" przy pisaniu efektywnych CSS?
-* Czy używasz narzędzi do przetwarzania CSS? (SASS, Compass, Stylus, LESS)
-  * Jeśli tak, opisz cechy, które lubisz i nie lubisz w używanych narzędziach.
+* Jakie są zalety/wady używania preprocessorów CSS? (SASS, Compass, Stylus, LESS)
+  Zalety
+    - lepsza organizacja wynikająca z zagnieżdżania selektorów
+    - zdolność do definiowania zmiennych i mixinów
+    - matematyczne funkcje
+    - łączenie plików
+    - w paru przypadkach czystsza składnia
+  Wady
+    - głównie dla projektantów - mniejszy komfort wynikający z używania wiersza poleceń lub konceptów programistycznych
+  * Opisz co podoba ci (lub nie) w używanych wcześniej przez ciebie preprocessorów.
+    Używałem SASS'a i naprawdę podoba mi się zagnieżdżanie, zmienne i matematyczne funkcje, które pomagają bardzo w stylowaniu. Nie bylo rzeczy, których nie lubiłem, możliwe że moja wiedza o SASS'ie jest zbyt mała.
 * Jak tworzysz i wdrażasz projekt używający niestandardowych czcionek?
   * Czcionki sieciowe (serwisy czcionek jak: Google Webfonts, Typekit itd.)
 * Wyjaśnij jak przeglądarka określa elementy pasujące do selektora CSS?
