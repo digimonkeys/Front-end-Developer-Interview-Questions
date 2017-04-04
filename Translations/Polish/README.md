@@ -127,6 +127,15 @@ function Person(){} var person = Person() var person = new Person()
 * Dlaczego mówimy wyrażenie trójkowe, co dokładnie oznacza słowo "trójkowy"?
 * Czym jest `arity` funkcji?
 * Co oznacza `"use strict";`? Jakie są zalety i wady takiego rozwiązania?
+* Czym jest event life cycle (event flow)?
+ 
+ Event lifecycle (event flow) opisuje cykl życia eventu w drzewie DOM. Przy każdym zdarzeniu, przeglądarka tworzy event i rozsyła go po drzewie DOM. Propagacja / rozsyłanie eventu odbywa się w trzech fazach:
+ 
+ - capturing faze - w tej fazie event przesyłany jest od najwyżeszego rodzica w drzewie DOM, aż do elementu, na którym nastąpiło zdarzenie.
+ - on the object faze - występuje na elemencie, na którym nastąpiło zdarzenie
+ - bubbling faze - w tej fazie event przesyłany jest od elementu na którym nastąpiło zdarzenie, aż do najwyżeszego rodzica w drzewie dom
+ 
+ Event flow![Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
 
 ### Przykłady kodu JS:
 
