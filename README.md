@@ -79,6 +79,9 @@ Working on project based on boilerplate that used old version of webpack. When I
 
   http://stackoverflow.com/questions/6887336/what-is-the-difference-between-normalize-css-and-reset-css
 * Describe Floats and how they work.
+  Floats can be used to text wrapping around images/elements or to create entire web layouts. Floated elements remain a part of the flow of the web page, unlike elements with fixed position, which are removed from flow of the page and do not participate in adjusting content e.g. to the varying width of the window.
+
+  https://css-tricks.com/all-about-floats/
 * Describe z-index and how stacking context is formed.
 * Describe BFC(Block Formatting Context) and how it works.
 * What are the various clearing techniques and which is appropriate for what context?

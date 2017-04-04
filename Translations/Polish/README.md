@@ -198,6 +198,9 @@ $(".foo div#bar:eq(0)")
   http://stackoverflow.com/questions/6887336/what-is-the-difference-between-normalize-css-and-reset-css
 * Opisz, czym jest plik "reset" dla CSS i dlaczego jest użyteczny.
 * Opisz jak działa właściwość `float`.
+  Float'y mogą by używane do opakowywania tekstu wokół obrazka/elementu lub to tworzenia całych layoutów. Pływające elementy pozostają częścią flow strony, w odróżnieniu od elementów o ustalonym położeniu, które są usuwane z flow strony i nie uczestniczą w dostosowywaniu zawartości np. do zmieniającej się szerokości okna.
+
+  https://css-tricks.com/all-about-floats/
 * Jakie znasz techniki kasowania (clearing) i kiedy wskazane jest ich stosowanie?
 * Wyjaśnij technikę "CSS sprites" oraz sposób jej wdrożenia na stronie.
 * Jakie są Twoje ulubione techniki zastępowania obrazów i kiedy je stosujesz?
