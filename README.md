@@ -174,6 +174,16 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
       AJAX is not limited to XML, It also support JSON or pure text.
 
 * What are the advantages and disadvantages of using Ajax?
+  Advantages:
+    - Continuous and invisible for user updating of data
+    - No need to refresh the entire page
+
+  Disadvantages:
+    - Does not work when JavaScript is disabled in browser
+    - The page is not refreshed, so you can not undo or repeat steps with the browser buttons
+    - Delays when the server is heavily loaded
+    - Data is loaded dynamically and therefore is not part of the web page. Web search engines do not index dynamically loaded content.
+
 * Explain how JSONP works (and how it's not really Ajax).
 * Have you ever used JavaScript templating?
   * If so, what libraries have you used?

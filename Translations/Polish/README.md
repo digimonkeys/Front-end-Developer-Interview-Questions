@@ -27,16 +27,16 @@ Większość pytań zaczerpnięto z wątku [oksoclap](http://oksoclap.com/) stwo
 
 ### Pytania ogólne:
 
-* Czego nauczyłeś się wczoraj/w tym tygodniu?  
- React Higher Order Components  
- Sequelize ORM dla NodeJS  
+* Czego nauczyłeś się wczoraj/w tym tygodniu?
+ React Higher Order Components
+ Sequelize ORM dla NodeJS
 
-* Co pobudza lub interesuje cię w programowaniu?  
+* Co pobudza lub interesuje cię w programowaniu?
 
-Tworzenie rzeczy. Od dziecka uwielbiałem tworzyć coś nowego i rozwiązywac łamigłówki. Uwielbiam stale się rozwijać, uczyć się nowych rzeczy i codziennie stawiać czoła nowym wyzwaniom.  
+Tworzenie rzeczy. Od dziecka uwielbiałem tworzyć coś nowego i rozwiązywac łamigłówki. Uwielbiam stale się rozwijać, uczyć się nowych rzeczy i codziennie stawiać czoła nowym wyzwaniom.
 
-* Jakie wyzwanie technologiczne stanęło przed toba ostatnio i jak je rozwiązałeś?  
-Pracowałem nad projektem wykorzystującym boilerplate bundlujący się przez starą wersję webpacka. Kiedy chciałem dodać do niego kilka niezbędnych rozszerzeń, wszystko okazało się niekompatybilne i rozsypało w drzazgi. Musiałem napisac cały skrypt webpacka od nowa.  
+* Jakie wyzwanie technologiczne stanęło przed toba ostatnio i jak je rozwiązałeś?
+Pracowałem nad projektem wykorzystującym boilerplate bundlujący się przez starą wersję webpacka. Kiedy chciałem dodać do niego kilka niezbędnych rozszerzeń, wszystko okazało się niekompatybilne i rozsypało w drzazgi. Musiałem napisac cały skrypt webpacka od nowa.
 
 * Jak planujesz budowę UI, utrzymanie bezpieczeństwa, wysoką wydajność, SEO, łatwość w utrzymaniu kodu i jakie wykorzystujesz technologie kiedy zaczynasz budować aplikację webową lub stronę internetową?
 
@@ -124,18 +124,17 @@ function Person(){} var person = Person() var person = new Person()
   * Wiele generowanych reklam używa `document.write()` choć nie jest to mile widziane
 * Jakie są różnice między wykrywaniem obsługi funkcji, wnioskowaniem obsługi funkcji i używaniem ciągu UA?
 * Omów AJAX jak najbardziej szczegółowo.
-  AJAX (ang. Asynchronous JavaScript and XML, asynchroniczny JavaScript i XML).
-  Technologia tworzenia aplikacji internetowych, w której interakcja użytkownika z serwerem może odbywać się na dwa sposoby:
-    Synchroniczne - wstrzymując, działanie całej strony.
-    Asynchronicznie - wymaga przekazania funkcji obsługi (callback), nie zamrażając stanu aplikacji.
-      Nie ma pewności, że odpowiedzi na żądania wrócą do nas w kolejności wysyłania żądań.
-      Aby wykonać żądanie asynchronicznie możliwe jest wykorzystanie 3 technik:
-      1. Wykorzystanie obiektu XMLHttpRequest / ActiveObcjectX (starsze wersje IE) - najpopularniejszy sposob.
-      2. Pływające ramki.
-      3. Ciasteczka.
+* Podaj wady i zalety żywania technologii AJAX
+  Zalety:
+    - Ciągłe i niewidoczne dla użytkownika uaktualnianie danych
+    - Brak konieczności odświeżania całej strony
 
-      AJAX nie ogranicza się tylko do XML, obsługuję rownież JSON czy czysty tekst.
-      
+  Wady:
+    - Nie działa, gdy wyłączona jest obsługa JavaScript w przeglądarce
+    - Strona nie jest odświeżana a więc nie można cofnąć lub powtórzyć kroków za pomocą przycisków w przeglądarce
+    - Opóźnienia, gdy serwer jest mocno obciążony
+    - Dane są ładowane dynamicznie a więc nie są częścią strony WWW. Wyszukiwarki internetowe nie indeksują treści ładowanych dynamicznie
+
 * Wyjaśnij działanie JSONP (i dlaczego nie jest właściwie AJAX).
 * Czy kiedykolwiek używałeś szablonów w JavaScript?
   * Jeśli tak, jakie to były biblioteki? (Mustache.js, Handlebars itd.)
