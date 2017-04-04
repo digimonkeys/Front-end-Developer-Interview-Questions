@@ -315,6 +315,10 @@ $(".foo div#bar:eq(0)")
 * Czy kiedykolwiek używałeś systemów siatek, a jeśli tak, to jakie preferujesz?
 * Czy używałeś 'media queries' lub tworzyłeś konkretne układy i arkusze dla urządzeń mobilnych?
 * Czy miałeś styczność ze stylizacją SVG?
+  Małą. Zmieniałem kolor paru SVG.
+  Generalnie SVG jest niezależne rozdzielczościowo (skalowalne bez utraty jakości), nie dodaje żadnych dodatkowych i niepotrzebnych zapytań HTTP i jest bardzo proste do skryptowania. Za jego pomocą można stworzyć mapy dróg, grafy, kompleksowe elementy UI, loga i proste gry.
+
+  https://code.tutsplus.com/articles/why-arent-you-using-svg--net-25414
 * Jak optymalizujesz swoje strony do druku?
 * Jakie stosujesz "sztuczki" przy pisaniu efektywnych CSS?
 * Czy używasz narzędzi do przetwarzania CSS? (SASS, Compass, Stylus, LESS)

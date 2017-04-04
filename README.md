@@ -149,6 +149,10 @@ Standars are super important because apps being written in the same language are
 * Have you ever used a grid system, and if so, what do you prefer?
 * Have you used or implemented media queries or mobile specific layouts/CSS?
 * Are you familiar with styling SVG?
+  A bit. I colored some SVG's.
+  Generally SVG is resolution independent (scalable, without losing quality), does not add any additional, unneccesary HTTP requests and is very easy to script. You can use SVG to make road maps, graphs, complex UI elements, logos and simple games.
+
+  https://code.tutsplus.com/articles/why-arent-you-using-svg--net-25414
 * How do you optimize your webpages for print?
 * What are some of the "gotchas" for writing efficient CSS?
 * What are the advantages/disadvantages of using CSS preprocessors?
