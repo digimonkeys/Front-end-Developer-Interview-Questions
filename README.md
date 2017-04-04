@@ -208,6 +208,11 @@ Function prototype is Object, and it's prototype is Function();
   [source](https://travishorn.com/why-it-is-better-to-serve-site-assets-from-multiple-domains-972a2bf69d71)
 
 * Do your best to describe the process from the time you type in a website's URL to it finishing loading on your screen.
+
+  1. Get the servers IP address based on the URL from the DNS.
+  2. Send an HTTP request to the server.
+  3. Parse the response and render the page.
+
 * What are the differences between Long-Polling, Websockets and Server-Sent Events?
 * Explain the following request and response headers:
   * Diff. between Expires, Date, Age and If-Modified-...
