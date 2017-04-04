@@ -75,7 +75,13 @@ Working on project based on boilerplate that used old version of webpack. When I
 * What is the difference between classes and IDs in CSS?
   IDs are unique, each element can have only one ID and ID's may be used by browser to scroll the page to show that element. Classes are not unique, each element can have multiple classes. Classes have not special meaning for browsers. Element can have both id and classes.
 * What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
+  Resetting remove all CSS styles set by browsers. Normalizing set the same element's styles for every browser and fix some common bugs. I would use normalizing, because I'm sure that every element will look the same in every browser.
+
+  http://stackoverflow.com/questions/6887336/what-is-the-difference-between-normalize-css-and-reset-css
 * Describe Floats and how they work.
+  Floats can be used to text wrapping around images/elements or to create entire web layouts. Floated elements remain a part of the flow of the web page, unlike elements with fixed position, which are removed from flow of the page and do not participate in adjusting content e.g. to the varying width of the window.
+
+  https://css-tricks.com/all-about-floats/
 * Describe z-index and how stacking context is formed.
   The z-index property controls the vertical stacking order of elements that overlap. Without any z-index value, elements stack in the order that they appear in the DOM (the lowest one down at the same hierarchy level appears on top). Nesting is important too, if an element B sits on top of element A, a child element of element A can never be higher than element B.
   
@@ -164,6 +170,11 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * What is event loop?
   * What is the difference between call stack and task queue?
 * Explain the differences on the usage of `foo` between `function foo() {}` and `var foo = function() {}`
+* Whats the difference between function and an object?
+
+Function is a specific type of object in JavaScript, that has all the properties of normal object. Only difference is that function can be called / invoked. It's possible, because functions has internal [[Call]] method.
+Function prototype is Object, and it's prototype is Function();
+
 
 #### Testing Questions:
 
