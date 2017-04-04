@@ -27,7 +27,10 @@ Większość pytań zaczerpnięto z wątku [oksoclap](http://oksoclap.com/) stwo
 
 ### Pytania ogólne:
 
-* Czego nauczyłeś się wczoraj/w tym tygodniu?
+* Czego nauczyłeś się wczoraj/w tym tygodniu?  
+ React Higher Order Components  
+ Sequelize ORM dla NodeJS  
+
 * Co pobudza lub interesuje cię w programowaniu?  
 
 Tworzenie rzeczy. Od dziecka uwielbiałem tworzyć coś nowego i rozwiązywac łamigłówki. Uwielbiam stale się rozwijać, uczyć się nowych rzeczy i codziennie stawiać czoła nowym wyzwaniom.  

@@ -24,7 +24,9 @@ This file contains a number of front-end interview questions that can be used wh
 
 #### General Questions:
 
-* What did you learn yesterday/this week?
+* What did you learn yesterday/this week?  
+ React Higher Order Components  
+ Sequelize ORM for NodeJS  
 * What excites or interests you about coding?  
 
 Creating stuff. Since childhood I loved processes of creation and also problem solving. I like constant development of my skills and knowledge, learning new things and facing new challenges every day.  
