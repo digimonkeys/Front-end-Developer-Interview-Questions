@@ -161,6 +161,18 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
 * When would you use `document.write()`?
 * What's the difference between feature detection, feature inference, and using the UA string?
 * Explain Ajax in as much detail as possible.
+  AJAX (Asynchronous JavaScript and XML).
+  Web application development technology in which the user interacts with the server in two ways:
+    Synchronous - pausing, the operation of the whole page.
+    Asynchronous - requires callback function, without freezing the application state.
+      There is no assurance that the response to the requests will return to us in the order in which requests are sent.
+      It is possible to make asynchronous requests using 3 techniques:
+      1. Using the XMLHttpRequest / ActiveObcjectX object (older versions of IE) - the most common way
+      2. Floating frames
+      3. Cookies
+
+      AJAX is not limited to XML, It also support JSON or pure text.
+
 * What are the advantages and disadvantages of using Ajax?
 * Explain how JSONP works (and how it's not really Ajax).
 * Have you ever used JavaScript templating?
