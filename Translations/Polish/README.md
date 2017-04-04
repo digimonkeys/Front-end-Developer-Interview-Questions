@@ -104,6 +104,14 @@ Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich prz
 * AMD kontra CommonJS?
 * Czym jest tablica mieszająca (hashtable)?
 * Co oznaczają komunikaty `undefined` i `undeclared` dla zmiennych?
+* Czym jest promise?
+
+Promise (natywnie dodany w ES6) jest obiektem używanym w operacjach asynchronicznych. Jest to obiekt, który reprezentuje wartość, która może być dostępna teraz, w przyszłości, lub nie być dostępna wcale.
+
+Promise ma trzy stany: pending (rozpoczęte), fullfiled (zakończone pozytywnie), rejected (zakończone niepowodzeniem - błędem). Gdy Promise osiągnie stan fullfiled lub rejected uruchamiane są handlery poprzez .then (.catch jest aliasem do .then(undefined, function()))
+
+Promise![Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+
 * Czym są domknięcia, jak i po co są używane?
   * Ulubiony wzorzec używany do ich tworzenia? argyle (Dotyczy tylko IIFE)
 * Jakie znasz typowe użycie funkcji anonimowych?
