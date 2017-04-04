@@ -287,6 +287,9 @@ $(".foo div#bar:eq(0)")
 * Czy kiedykolwiek używałeś systemów siatek, a jeśli tak, to jakie preferujesz?
 * Czy używałeś 'media queries' lub tworzyłeś konkretne układy i arkusze dla urządzeń mobilnych?
   Tak, używałem 'media queries' po stworzeniu projektu z użyciem siatki Boostrapa, by nauczyć się jak działają strony responsywne. Kierowałem się zasadą mobile-first, by uzyskać stronę w pełni responsywną i czytelną na każdym urządzeniu bez dodatkowej, niepotrzebnej zawartości.
+  'media queries' pozwalają na kierowanie styli CSS bazując na - na przykład - wielkości ekranu, orientacji urządzenia lub gęstości wyświetlacza. Pozwala to na wyświetlanie strony na różne sposoby na różnych urządzeniach.
+
+  http://cssmediaqueries.com/
 * Czy miałeś styczność ze stylizacją SVG?
 * Jak optymalizujesz swoje strony do druku?
 * Jakie stosujesz "sztuczki" przy pisaniu efektywnych CSS?
