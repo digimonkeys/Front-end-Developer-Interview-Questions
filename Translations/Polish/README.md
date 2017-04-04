@@ -94,6 +94,8 @@ Technologie - ostatnio preferuję React i redux w połączeniu z webpackiem, ale
 ### Pytania JS:
 
 * Wyjaśnij delegację zdarzeń.
+    Delegacja zdarzeń / eventów polega na przypięciu obsługi zdarzenia (event handler) do elementu nadrzędnego, zamiast do elementu który chcemy obsłużyć. Po kliknięciu na element wewnętrzny, event bubbles up (bąbluje do góry) dochodząc do elementu z przypisanym handlerem. Następnie za pomocą event.target możemy sprawdzić gdzie zdarzył się event i wykonać go na odpowiednim elemencie.
+    Dzięki temu możemy obsłużyć zdarzenia występujące na wielu elementach, za pomocą jednego handlera.
 * Wyjaśnij jak działa `this` w JavaScripcie.
 * Wyjaśnij jak działa dziedziczenie prototypowe.
 * Jak radzisz sobie z testowaniem swojego kodu JavaScript?
@@ -142,18 +144,18 @@ function Person(){} var person = Person() var person = new Person()
 * Czym jest `arity` funkcji?
 * Co oznacza `"use strict";`? Jakie są zalety i wady takiego rozwiązania?
 * Jaka jest roznica miedzy funkcja a obiektem?
- 
+
 Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
 Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
 
 * Czym jest event life cycle (event flow)?
- 
+
 Event lifecycle (event flow) opisuje cykl życia eventu w drzewie DOM. Przy każdym zdarzeniu, przeglądarka tworzy event i rozsyła go po drzewie DOM. Propagacja / rozsyłanie eventu odbywa się w trzech fazach:
- 
+
 - capturing faze - w tej fazie event przesyłany jest od najwyżeszego rodzica w drzewie DOM, aż do elementu, na którym nastąpiło zdarzenie.
 - on the object faze - występuje na elemencie, na którym nastąpiło zdarzenie
 - bubbling faze - w tej fazie event przesyłany jest od elementu na którym nastąpiło zdarzenie, aż do najwyżeszego rodzica w drzewie dom
- 
+
 Event flow![Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
 
 ### Przykłady kodu JS:
