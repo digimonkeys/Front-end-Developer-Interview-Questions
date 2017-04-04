@@ -123,6 +123,23 @@ function Person(){} var person = Person() var person = new Person()
 * Jakie są różnice między wykrywaniem obsługi funkcji, wnioskowaniem obsługi funkcji i używaniem ciągu UA?
 * Omów AJAX jak najbardziej szczegółowo.
 * Wyjaśnij działanie JSONP (i dlaczego nie jest właściwie AJAX).
+* Typy zmiennych w jsie?
+ 
+W JS rozróżniamy dwa typy danych: typy proste i typy złożone.
+
+Do typów prostych należą:
+- String
+- Number
+- Boolean
+- null
+- undefined
+- Symbol (od ES6)
+
+Typem złożonym jest Object.
+Typy proste przekazywane są przez wartość, natomiast typy złożone przez referencję.
+ 
+Javascript Types![Javascript Data Types](https://developer.mozilla.org/pl/docs/Web/JavaScript/Data_structures)
+
 * Czy kiedykolwiek używałeś szablonów w JavaScript?
   * Jeśli tak, jakie to były biblioteki? (Mustache.js, Handlebars itd.)
 * Wyjaśnij pojęcie "hoisting".

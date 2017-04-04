@@ -176,6 +176,23 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * What are the pros and cons of using Promises instead of callbacks?
 * What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
 * What tools and techniques do you use debugging JavaScript code?
+* Types in Javascript
+
+JS types can be split in two categories - primitives and objects
+
+Primitives are:
+- String
+- Number
+- Boolean
+- null
+- undefined
+- Symbol (from ES6)
+
+Not primitive type is Object type.
+Primitive types are passed by value, objects are passed by reference.
+
+Javascript Types![Javascript Data Types](https://developer.mozilla.org/pl/docs/Web/JavaScript/Data_structures)
+
 * What language constructions do you use for iterating over object properties and array items?
 * Explain the difference between mutable and immutable objects.
   * What is an example of an immutable object in JavaScript?
