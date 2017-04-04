@@ -161,6 +161,13 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * What is event loop?
   * What is the difference between call stack and task queue?
 * Explain the differences on the usage of `foo` between `function foo() {}` and `var foo = function() {}`
+* Whats the difference between inheritance in JS and the classical inheritance?
+
+Classical inheritance inherits the behavior, without any state, from the parent class. It inherits the behavior at the moment the object is instantiated.
+
+Prototypal inheritance inherits behavior and state from the parent object. It inherits the behavior and state at the moment the object is called. When the parent object changes at run-time, the state and behavior of the child objects are affected.
+
+Classical vs Prototypal![Stackoverflow - classical vs prototypal](http://softwareengineering.stackexchange.com/a/99438)
 
 #### Testing Questions:
 
