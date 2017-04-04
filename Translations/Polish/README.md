@@ -262,6 +262,13 @@ var foo = 10 + '20';
 
   `1020` (string)
 
+* Jaka jest wartość `window.foo`?
+```javascript
+( window.foo || ( window.foo = "bar" ) );
+```
+
+  Jeśli `window.foo` było wcześniej zdefiniowane to jego wartość się nie zmienia, jeśli nie było to jego wartość to `bar`.
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?

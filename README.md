@@ -243,6 +243,8 @@ add(2)(5); // 7
 ( window.foo || ( window.foo = "bar" ) );
 ```
 
+  If `window.foo` was already set then it retains the previous value, if not then the value is `bar`.
+
 *Question: What is the outcome of the two alerts below?*
 ```javascript
 var foo = "Hello";
