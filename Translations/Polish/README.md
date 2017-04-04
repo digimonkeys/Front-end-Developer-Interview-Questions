@@ -31,7 +31,10 @@ Większość pytań zaczerpnięto z wątku [oksoclap](http://oksoclap.com/) stwo
  React Higher Order Components  
  Sequelize ORM dla NodeJS  
 
-* Co pobudza lub interesuje cię w programowaniu?
+* Co pobudza lub interesuje cię w programowaniu?  
+
+Tworzenie rzeczy. Od dziecka uwielbiałem tworzyć coś nowego i rozwiązywac łamigłówki. Uwielbiam stale się rozwijać, uczyć się nowych rzeczy i codziennie stawiać czoła nowym wyzwaniom.  
+
 * Jakie jest Twoje preferowane środowisko programistyczne? (system operacyjny, edytor, przeglądarki, narzędzia itd.)
 * Opisz kolejne zadania podczas tworzenia strony internetowej?
 * Opisz różnicę między stopniowym ulepszaniem (progressive enhancement) i wdzięczną degradacją (graceful degradation)?
