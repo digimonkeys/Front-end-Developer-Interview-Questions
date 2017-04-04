@@ -151,7 +151,13 @@ Standardy są bardzo istotne ponieważ aplikacje pisane w danym języku są komp
   * Dodatkowe punkty za wzmiankę na temat czystości przestrzeni nazw.
   * Co jeśli Twój kod nie używa przestrzeni nazw?
 * Jak organizujesz swój kod? (moduły, klasyczne dziedziczenie?)
-* Jaka jest różnicza między obiektami typu `host` i `native`?
+* Jaka jest różnica między obiektami typu `host` i `native`?
+  Host objects są to obiekty dostarczane przez środowisko hosta. Mogą się one różnić pomędzy środowiskami, przykłady:
+  - window, document, location
+  Native objects są to obiecty opisane i w pełni zdefiniowane w specyfikacji ECMAScript, przykłady:
+  - Date, Math, parseInt.
+  http://stackoverflow.com/questions/7614317/what-is-the-difference-between-native-objects-and-host-objects
+
 * Różnica między:
 ```javascript
 function Person(){} var person = Person() var person = new Person()
