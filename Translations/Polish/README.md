@@ -371,6 +371,8 @@ $(".foo div#bar:eq(0)")
     - głównie dla projektantów - mniejszy komfort wynikający z używania wiersza poleceń lub konceptów programistycznych
   * Opisz co podoba ci (lub nie) w używanych wcześniej przez ciebie preprocessorów.
     Używałem SASS'a i naprawdę podoba mi się zagnieżdżanie, zmienne i matematyczne funkcje, które pomagają bardzo w stylowaniu. Nie bylo rzeczy, których nie lubiłem, możliwe że moja wiedza o SASS'ie jest zbyt mała.
+
+  http://nosleepforsheep.com/using-a-css-preprocessor/
 * Jak tworzysz i wdrażasz projekt używający niestandardowych czcionek?
   * Czcionki sieciowe (serwisy czcionek jak: Google Webfonts, Typekit itd.)
 * Wyjaśnij jak przeglądarka określa elementy pasujące do selektora CSS?
