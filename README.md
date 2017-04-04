@@ -82,6 +82,19 @@ Working on project based on boilerplate that used old version of webpack. When I
 * Describe z-index and how stacking context is formed.
 * Describe BFC(Block Formatting Context) and how it works.
 * What are the various clearing techniques and which is appropriate for what context?
+  - Empty Div Method:
+    <div style="clear:both;"></div>
+  - Overflow Method: setting auto or hidden overflow property on parent will expand it to contain the floats.
+  - The Easy Clearing Method: uses the parent's :after to add the clear: both property
+    .clearfix:after {
+      content: ".";
+      visibility: hidden;
+      display: block;
+      height: 0;
+      clear: both;
+    }
+
+  https://css-tricks.com/all-about-floats/
 * Explain CSS sprites, and how you would implement them on a page or site.
 * What are your favourite image replacement techniques and which do you use when?
 * How would you approach fixing browser-specific styling issues?
