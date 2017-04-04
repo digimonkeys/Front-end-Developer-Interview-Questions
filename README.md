@@ -64,9 +64,33 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
   * What are the exceptions?
 * Name 3 ways to decrease page load (perceived or actual load time).
 * If you jumped on a project and they used tabs and you used spaces, what would you do?
-* Describe how you would create a simple slideshow page.
+I will adapt (just change settings in my editor).
+* Describe how you would create a simple slideshow page. Bonus points if without JS.  
+We can do it only with CSS3 using ul element and input type = radio. The most important parts of code:  
+
+```
+<li>
+    <input type="radio" id="slide1" name="slide" checked>
+    <label for="slide1"></label>
+    <img>
+</li>
+.your-ul-class img {
+    opacity: 0;
+    visibility: hidden;
+}
+.ul-class li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+```
+
+Full tutorial: http://joshnh.com/weblog/making-a-pure-css-featured-image-slider/  
+
 * If you could master one technology this year, what would it be?
-* Explain the importance of standards and standards bodies.
+* Explain the importance of standards and standards bodies.  
+Standars are super important because apps being written in the same language are compiled by different browsers. Thanks to standards we avoid creating code that would work in half of browsers or only in one of them. Standard creators are: w3c, iso, ansi, unicode consortium, ietf and ecma  
+
 * What is Flash of Unstyled Content? How do you avoid FOUC?
 * Explain what ARIA and screenreaders are, and how to make a website accessible.
 * Explain some of the pros and cons for CSS animations versus JavaScript animations.
@@ -105,6 +129,9 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
 
   https://css-tricks.com/almanac/properties/z/z-index/
 * Describe BFC(Block Formatting Context) and how it works.
+  A block formatting context is a part of a visual CSS rendering of a Web page. It is the region in which the layout of block boxes occurs and in which floats interact with each other. In a BFC, each box’s left outer edge touches the left edge of the containing block (for right-to-left formatting, right edges touch). The rules for positioning and clearing of floats in apply only to things within the same block formatting context. BFC is also causing margin collapsing.
+
+  https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context
 * What are the various clearing techniques and which is appropriate for what context?
 * Explain CSS sprites, and how you would implement them on a page or site.
 * What are your favourite image replacement techniques and which do you use when?
@@ -150,7 +177,15 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
 * Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
   * What needs to be changed to properly make it an IIFE?
 * What's the difference between a variable that is: `null`, `undefined` or undeclared?
+  - Undeclared is a variable that was not created with var / let / const and was created on a global window / global object.
+  - Undefined is a variable that has been declared but has no value assigned to it.
+  - Null is a type that has only one null value assigned, the variable has been declared, and the Null object assigned to it.
+  - Undefined is a type, null is an object
   * How would you go about checking for any of these states?
+    - typeof undefined === 'undefined'
+    - typeof null === 'object'
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+
 * What is a closure, and how/why would you use one?
     Closure - allows you to access the internal scope of the function, even after it has been completed.
     This is achieved by returning the function after calling the master function.
@@ -166,9 +201,34 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
 * What's the difference between `.call` and `.apply`?
 * Explain `Function.prototype.bind`.
 * When would you use `document.write()`?
+  Document.write() is always available, it is a good choice for third party vendors to use it to add their scripts.
+  Many generated ads use `document.write ()` although it is not welcome.
+
 * What's the difference between feature detection, feature inference, and using the UA string?
 * Explain Ajax in as much detail as possible.
+  AJAX (Asynchronous JavaScript and XML).
+  Web application development technology in which the user interacts with the server in two ways:
+    Synchronous - pausing, the operation of the whole page.
+    Asynchronous - requires callback function, without freezing the application state.
+      There is no assurance that the response to the requests will return to us in the order in which requests are sent.
+      It is possible to make asynchronous requests using 3 techniques:
+      1. Using the XMLHttpRequest / ActiveObcjectX object (older versions of IE) - the most common way
+      2. Floating frames
+      3. Cookies
+
+      AJAX is not limited to XML, It also support JSON or pure text.
+
 * What are the advantages and disadvantages of using Ajax?
+  Advantages:
+    - Continuous and invisible for user updating of data
+    - No need to refresh the entire page
+
+  Disadvantages:
+    - Does not work when JavaScript is disabled in browser
+    - The page is not refreshed, so you can not undo or repeat steps with the browser buttons
+    - Delays when the server is heavily loaded
+    - Data is loaded dynamically and therefore is not part of the web page. Web search engines do not index dynamically loaded content.
+
 * Explain how JSONP works (and how it's not really Ajax).
 * Have you ever used JavaScript templating?
   * If so, what libraries have you used?
@@ -241,12 +301,27 @@ Event flow![Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
   Tests also require refactorization and need to be maintained, which may be considered as a disadvantage.
 
 * What tools would you use to test your code's functionality?
+
+  * Jasmine - TDD framework
+  * Karma - tests runner
+  * Selenium driver - End-to-End testing
+
 * What is the difference between a unit test and a functional/integration test?
+
+  Unit tests check whether the individual pieces of code (functions) work as expected on their own. Functional/integration tests check whether bigger parts of application, or even the application as a whole, work and interact with each other properly.
+
 * What is the purpose of a code style linting tool?
+
+  Avoids introducing simple bugs at the stage of writing the code. It assures that code formatting is more consistent between members of the team.
 
 #### Performance Questions:
 
 * What tools would you use to find a performance bug in your code?
+
+  Chrome Dev-Tools Profiler - it allows to check function execution time and pin-point the ones that use the most CPU.
+
+  [more info](https://developers.google.com/web/tools/chrome-devtools/rendering-tools/js-execution)
+
 * What are some ways you may improve your website's scrolling performance?
 * Explain the difference between layout, painting and compositing.
 
