@@ -49,7 +49,8 @@ Maintainability - I use general best practises, eg. take care of simple function
 
 Technology - Lately I prefer to use React with Redux and webpack, but I'm also familiar with Angular and gulp etc (...)  
 
-* Talk about your preferred development environment.
+* Talk about your preferred development environment.  
+I prefer easily configurable Sublime 3 with its additional scripts and briliant editorial functions. My browser of choice is chrome with its dev tools, but I also use firebug. I have some knowledge about linux, but currently I use windows 10. I also use tools like gulp, webpack, window managers, linters etc.  
 * Which version control systems are you familiar with?
 * Can you describe your workflow when you create a web page?
 * If you have 5 different stylesheets, how would you best integrate them into the site?
