@@ -39,7 +39,7 @@ Working on project based on boilerplate that used old version of webpack. When I
 * Talk about your preferred development environment.
 * Which version control systems are you familiar with?
 * Can you describe your workflow when you create a web page?  
-I start with gathering client requirements. Ten I create environment - bundling scripts from webpack, gulp etc. Next comes site skeleton, semantics, filling with content and fixes, styling, animations and addin interactivity.  
+I start with gathering client requirements. Ten I create environment - bundling scripts from webpack, gulp etc. Next comes site skeleton, semantics, filling with content and fixes, styling, animations and adding interactivity.  
 
 * If you have 5 different stylesheets, how would you best integrate them into the site?
 * Can you describe the difference between progressive enhancement and graceful degradation?
