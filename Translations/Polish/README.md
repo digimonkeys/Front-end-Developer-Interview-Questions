@@ -74,9 +74,32 @@ Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich prz
 * Jeśli dołączasz do projektu, w którym używa się tabulacji, a ty używasz spacji, co wtedy zrobisz?
   * Sugerowanie użycia narzędzi w stylu EditorConfig (http://editorconfig.org)
   * Zgodnie z konwencjami (pozostań konsekwentny)
-  * `issue :retab! command`
+  * `issue :retab! command`   
+  Dostosuję się. Wystarczy przecież zmienić ustawienia edytora.  
+  
 * Napisz prosty pokaz slajdów
-  * Dodatkowe punkty, jeśli nie używasz JS.
+  * Dodatkowe punkty, jeśli nie używasz JS.  
+Można to zrobić za pomocą CSS3 wykorzystując unordered list i input type = radio. Najistotniejsze elementy kodu:
+
+```
+<li>
+    <input type="radio" id="slide1" name="slide" checked>
+    <label for="slide1"></label>
+    <img>
+</li>
+.your-ul-class img {
+    opacity: 0;
+    visibility: hidden;
+}
+.ul-class li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+```
+
+Pełny tutorial: http://joshnh.com/weblog/making-a-pure-css-featured-image-slider/  
+
 * Jakich narzędzi używasz do sprawdzenia wydajności swojego kodu?
   * Profiler, JSPerf, Dromaeo
 * Gdybyś mógł opanować jedną technologię w tym roku, jaka byłaby to technologia?
@@ -123,9 +146,22 @@ function Person(){} var person = Person() var person = new Person()
 * Kiedy optymalizujesz swój kod?
 * Wyjaśnij działanie dziedziczenia w JavaScript?
 * Kiedy użyłbyś `document.write()`?
-  * Wiele generowanych reklam używa `document.write()` choć nie jest to mile widziane
+    Document.write() jest zawsze dostępny, jest dobrym wyborem dla dostawcow skryptow zewnetrznych aby mogli dodać oni swoj kod.
+    Wiele generowanych reklam używa `document.write()` choć nie jest to mile widziane.
+
 * Jakie są różnice między wykrywaniem obsługi funkcji, wnioskowaniem obsługi funkcji i używaniem ciągu UA?
 * Omów AJAX jak najbardziej szczegółowo.
+* Podaj wady i zalety żywania technologii AJAX
+  Zalety:
+    - Ciągłe i niewidoczne dla użytkownika uaktualnianie danych
+    - Brak konieczności odświeżania całej strony
+
+  Wady:
+    - Nie działa, gdy wyłączona jest obsługa JavaScript w przeglądarce
+    - Strona nie jest odświeżana a więc nie można cofnąć lub powtórzyć kroków za pomocą przycisków w przeglądarce
+    - Opóźnienia, gdy serwer jest mocno obciążony
+    - Dane są ładowane dynamicznie a więc nie są częścią strony WWW. Wyszukiwarki internetowe nie indeksują treści ładowanych dynamicznie
+
 * Wyjaśnij działanie JSONP (i dlaczego nie jest właściwie AJAX).
 * Czy kiedykolwiek używałeś szablonów w JavaScript?
   * Jeśli tak, jakie to były biblioteki? (Mustache.js, Handlebars itd.)
@@ -165,7 +201,6 @@ Function hoisting![Function hoisting](https://developer.mozilla.org/en-US/docs/W
 * Czym jest `arity` funkcji?
 * Co oznacza `"use strict";`? Jakie są zalety i wady takiego rozwiązania?
 * Jaka jest roznica miedzy funkcja a obiektem?
-
 Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
 Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
 
@@ -243,7 +278,10 @@ $(".foo div#bar:eq(0)")
 
 * Jaka jest różnica między klasami oraz idendyfikatorami w CSS?
   Idendyfikatory są unikalne, każdy element może posiadać tylko jeden identyfikator, dodatkowo przeglądarka może używać identyfikatorów do nawigacji (scrollując do elementu z danym ID). Klasy nie są unikalne oraz elementy mogą posiadać więcej niż jedną klasę, nie mają większego znaczenia dla samej przeglądarki.
+* Opisz BFC(Block Formatting Context) i powiedz jak działa.
+  Blokowe formatowanie kontekstu jest częścią wizualnego renderingu CSS strony. Jest to miejsce, w którym występuje układ elementów blokowych i, w którym float'y komunikują się między sobą. W BFC każde 'pudełko' dotyka lewą zewnętrzną krawędzią kontenera (dla formatowania od-prawej-do-lewej dotyka prawej krawędzi). Zasady dla pozycjonowania i czyszczenia float'ów działają w tym samym blokowym formatowaniu kontekstu. Dodatkowo BFC powoduje nakładanie się marginesów (margin collapsing).
 
+  https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context
 * Opisz czym jest z-index oraz jak tworzony jest układ warstw.
   Właściwość z-index kontroluje pionowe nakładania się elementów, które nachodzą na siebie. Bez wartości z-index, elementy układają się w kolejności w jakiej pojawiają się w DOM (najniżej położony element w DOM pojawia się na samej górze). Zagnieżdżanie jest również ważne, jeśli element B jest nad elementem A, dziecko elementu A nigdy nie będzie wyżej niż element B.
 
@@ -291,6 +329,28 @@ $(".foo div#bar:eq(0)")
   Testowanie kodu (testy jednostkowe) zapewniają, że kod działa tak jak powinien, pozwala prowadzić refaktoryzację kodu i sprawdzać, czy nic nie zostało zepsute.
 
   Minusem jest to, że testy także potrzebują refaktoryzacji oraz jest to znacznie więcej kodu do konserwacji.
+
+* Jakich narzędzi użyłbyś do testowania swojego kodu?
+
+  * Jasmine - framework TDD
+  * Karma - runner testów
+  * Selenium driver - testowanie End-to-End
+
+* Jaka jest różnica pomiędzy testami jednostkowymi a testami funkcjonalnymi/integracyjnymi?
+
+  Testy jednostkowe sprawdzają czy poszczególne części kodu (funkcje) działają poprawnie. Natomiast testy funkcjonalne/integracyjne sprawdzają działanie części systemu, lub systemu jako całości, jak komponenty systemu funkcjonują miedzy sobą etc.
+
+* Jakie zadanie ma tzw. code style linter?
+
+  Eliminacja prostych błędów już podczas pisania kodu. Zapewnia jednakowe, konsekwentne formatowanie kodu dla wszystkich członków zespołu.
+
+### Pytania z wydajności:
+
+* Jakich narzędzi użyłbyś do testowania błędu związanego z wydajnością twojego kodu?
+
+  Chrome Dev-Tools Profiler - pozwala sprawdzić ile czasu wykonuje się jaka funkcji i w ten sposób określić które funkcje zabierają najwięcej procesora.
+
+  [więcej info](https://developers.google.com/web/tools/chrome-devtools/rendering-tools/js-execution)
 
 ### Pytania dodatkowe (zabawne):
 
