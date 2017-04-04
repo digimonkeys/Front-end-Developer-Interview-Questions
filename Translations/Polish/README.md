@@ -362,6 +362,10 @@ $(".foo div#bar:eq(0)")
 * Czy miałeś styczność ze stylizacją SVG?
 * Jak optymalizujesz swoje strony do druku?
 * Jakie stosujesz "sztuczki" przy pisaniu efektywnych CSS?
+  - unikam selektorów, które łapią duże ilości elementów (tagi i uniwersalne selektory)
+  - preferuję klasy i identyfikatory zamiast selektorów tagów
+  - unikam redundancji selektorów
+  - staram się grupować i ponownie wykorzystywać wspólne wartości
 * Czy używasz narzędzi do przetwarzania CSS? (SASS, Compass, Stylus, LESS)
   * Jeśli tak, opisz cechy, które lubisz i nie lubisz w używanych narzędziach.
 * Jak tworzysz i wdrażasz projekt używający niestandardowych czcionek?

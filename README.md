@@ -173,6 +173,10 @@ http://www.techrepublic.com/blog/web-designer/how-to-prevent-flash-of-unstyled-c
 * Are you familiar with styling SVG?
 * How do you optimize your webpages for print?
 * What are some of the "gotchas" for writing efficient CSS?
+  - avoid key selectors that match large numbers of elements (tag and universal selectors)
+  - prefer class and ID selectors over tag selectors
+  - avoid redundant selectors
+  - try group and reuse common properties
 * What are the advantages/disadvantages of using CSS preprocessors?
   * Describe what you like and dislike about the CSS preprocessors you have used.
 * How would you implement a web design comp that uses non-standard fonts?
