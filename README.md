@@ -99,7 +99,7 @@ git, I worked on github and gitlab. I tried using git guis but I prefer to work 
   https://css-tricks.com/all-about-floats/
 * Describe z-index and how stacking context is formed.
   The z-index property controls the vertical stacking order of elements that overlap. Without any z-index value, elements stack in the order that they appear in the DOM (the lowest one down at the same hierarchy level appears on top). Nesting is important too, if an element B sits on top of element A, a child element of element A can never be higher than element B.
-  
+
   https://css-tricks.com/almanac/properties/z/z-index/
 * Describe BFC(Block Formatting Context) and how it works.
 * What are the various clearing techniques and which is appropriate for what context?
@@ -135,6 +135,16 @@ git, I worked on github and gitlab. I tried using git guis but I prefer to work 
 
 * Explain event delegation
 * Explain how `this` works in JavaScript
+    This points to an object depending on the context,
+    In what function was used in which we defined it.
+    Context, ie the way and place of the call.
+
+    function ab() { this } - window (because window.ab)
+    var obj = { fun: ab }; obj.fun(); - obj
+    var obj = { fun: function() { ab(); }} - window
+    ab.call(obj) - obj
+    const a = ab.bind(obj) - obj
+
 * Explain how prototypal inheritance works
 * What do you think of AMD vs CommonJS?
 * Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
@@ -191,9 +201,9 @@ Function is a specific type of object in JavaScript, that has all the properties
 Function prototype is Object, and it's prototype is Function();
 
 * What is event life cycle (event flow) ?
- 
+
 Event life cycle (event flow) describes flow of an event through DOM tree. With every user interaction (or builtin event) browser creates event object and sends it (propagets it) through DOM tree. There are three phases of event life cycle:
- 
+
  - capturing faze - in this faze event is sent from top of the DOM to the element, that action was taken on.
  - on the object faze - happens when event reach element which user made an action
  - bubbling faze - in this faze event is sent from the element that action was taken on, to the top element of the DOM tree.
