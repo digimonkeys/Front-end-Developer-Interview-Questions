@@ -84,7 +84,7 @@ Working on project based on boilerplate that used old version of webpack. When I
   https://css-tricks.com/all-about-floats/
 * Describe z-index and how stacking context is formed.
   The z-index property controls the vertical stacking order of elements that overlap. Without any z-index value, elements stack in the order that they appear in the DOM (the lowest one down at the same hierarchy level appears on top). Nesting is important too, if an element B sits on top of element A, a child element of element A can never be higher than element B.
-  
+
   https://css-tricks.com/almanac/properties/z/z-index/
 * Describe BFC(Block Formatting Context) and how it works.
 * What are the various clearing techniques and which is appropriate for what context?
@@ -134,6 +134,9 @@ Working on project based on boilerplate that used old version of webpack. When I
 * What's the difference between `.call` and `.apply`?
 * Explain `Function.prototype.bind`.
 * When would you use `document.write()`?
+  Document.write() is always available, it is a good choice for third party vendors to use it to add their scripts
+  (such as ads or Google Analytics).
+  
 * What's the difference between feature detection, feature inference, and using the UA string?
 * Explain Ajax in as much detail as possible.
 * What are the advantages and disadvantages of using Ajax?

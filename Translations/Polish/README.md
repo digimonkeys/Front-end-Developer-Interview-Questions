@@ -103,7 +103,8 @@ function Person(){} var person = Person() var person = new Person()
 * Kiedy optymalizujesz swój kod?
 * Wyjaśnij działanie dziedziczenia w JavaScript?
 * Kiedy użyłbyś `document.write()`?
-  * Wiele generowanych reklam używa `document.write()` choć nie jest to mile widziane
+    Wiele generowanych reklam używa `document.write()` choć nie jest to mile widziane.
+    
 * Jakie są różnice między wykrywaniem obsługi funkcji, wnioskowaniem obsługi funkcji i używaniem ciągu UA?
 * Omów AJAX jak najbardziej szczegółowo.
 * Wyjaśnij działanie JSONP (i dlaczego nie jest właściwie AJAX).
@@ -128,7 +129,7 @@ function Person(){} var person = Person() var person = new Person()
 * Czym jest `arity` funkcji?
 * Co oznacza `"use strict";`? Jakie są zalety i wady takiego rozwiązania?
 * Jaka jest roznica miedzy funkcja a obiektem?
- 
+
  Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
 Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
 
