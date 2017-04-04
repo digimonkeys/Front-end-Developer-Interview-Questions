@@ -262,6 +262,21 @@ var foo = 10 + '20';
 
   `1020` (string)
 
+* Jaki jest wynik poniższych wywołań?
+```javascript
+console.log('one');
+setTimeout(function() {
+  console.log('two');
+}, 0);
+console.log('three');
+```
+
+  ```
+  one
+  three
+  two
+  ```
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
