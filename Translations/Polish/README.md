@@ -106,9 +106,9 @@ Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich prz
 * Co oznaczają komunikaty `undefined` i `undeclared` dla zmiennych?
 * Czym są domknięcia, jak i po co są używane?
     Closure - domknięcie - pozwala na dostęp do wewnętrznego scope funkcji, nawet po jej wykonaniu.
-    Osiąga się to poprzez zwrócenie funkcji po wywołaniu fukncji nadrzędnej.
+    Osiąga się to poprzez zwrócenie funkcji po wywołaniu funkcji nadrzędnej.
     Pozwala to na symulowanie zmiennych publicznych i prywatnych.
-  * Ulubiony wzorzec używany do ich tworzenia? argyle (Dotyczy tylko IIFE)
+  * Ulubiony wzorzec używany do ich tworzenia?
     - Module pattern
   http://blog.nebula.us/13-javascript-closures-czyli-zrozumiec-i-wykorzystac-domkniecia
 

@@ -155,7 +155,7 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
     Closure - allows you to access the internal scope of the function, even after it has been completed.
     This is achieved by returning the function after calling the master function.
     This allows you to simulate public and private variables.
-    * Favorite pattern used to create them? argyle (IIFE - only)
+    * Favorite pattern used to create them?
     - Module pattern
     http://blog.nebula.us/13-javascript-closures-czyli-zrozumiec-i-wykorzystac-domkniecia
 
