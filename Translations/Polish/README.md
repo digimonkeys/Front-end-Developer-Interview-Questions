@@ -241,7 +241,9 @@ $(".foo div#bar:eq(0)")
 
 * Jakich narzędzi użyłbyś do testowania błędu związanego z wydajnością twojego kodu?
 
-  Chrome Dev-Tools Profiler
+  Chrome Dev-Tools Profiler - pozwala sprawdzić ile czasu wykonuje się jaka funkcji i w ten sposób określić które funkcje zabierają najwięcej procesora.
+
+  [więcer info](https://developers.google.com/web/tools/chrome-devtools/rendering-tools/js-execution)
 
 ### Pytania dodatkowe (zabawne):
 
