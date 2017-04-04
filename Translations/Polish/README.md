@@ -103,7 +103,9 @@ Pełny tutorial: http://joshnh.com/weblog/making-a-pure-css-featured-image-slide
 * Jakich narzędzi używasz do sprawdzenia wydajności swojego kodu?
   * Profiler, JSPerf, Dromaeo
 * Gdybyś mógł opanować jedną technologię w tym roku, jaka byłaby to technologia?
-* Wyjaśnij znaczenie standardów sieciowych i ich twórców.
+* Wyjaśnij znaczenie standardów sieciowych i ich twórców.  
+Standardy są bardzo istotne ponieważ aplikacje pisane w danym języku są kompilowane przez różne przeglądarki. Pozwala to uniknąć sytuacji, w której kod działa w połowie przeglądarek, lub działa tylko w tej ulubionej kodera. Gdy opracowany jest standard przeglądarki wiedzą czego się spodziewać i każdy piszący w zgodzie ze standardem może zakładać, że wszystko będzie działać. Twórcami standardów są w3c, iso, ansi, unicode consortium, ietf oraz ecma.  
+
 * Czym jest FOUC? Jak unikasz FOUC?  
 Flash of unstyled content jest to wyświetlenie użytkownikowi nieostylowanej strony (jej zawartości) podczas ładowania strony. Pojawia się gdy CSS jest wolno ładowany lub gdy JS powoduje wielokrotne renderowanie strony.
 Aby uniknąć FOUC należy serwować użytkownikowi jak najbardziej zoptymalizowany CSS (zminifikowany, w jednym pliku), oraz używać jak najmniej javascriptu powodującego fazę render przeglądarki. Używanie Critical CSS (czyli wrzucanie najważniejszych reguł css inline w znaczniku head).
