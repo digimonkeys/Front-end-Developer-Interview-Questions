@@ -126,6 +126,16 @@ function Person(){} var person = Person() var person = new Person()
 * Czy kiedykolwiek używałeś szablonów w JavaScript?
   * Jeśli tak, jakie to były biblioteki? (Mustache.js, Handlebars itd.)
 * Wyjaśnij pojęcie "hoisting".
+* Zasieg zmiennych w jsie?
+ 
+ W JS, do wersji ES6 występowały tylko dwa rodzaje zasięgu zmiennych, tj. globalny (global scope) i zasięg lokalny - w obrębie funkcji (function scope).
+ Od ES6 i pojawienia się zmiennych deklarowanych jako let i const pojawił się także zasięg blokowy (tj. wewnątrz { }).
+ 
+var![var](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
+let![let](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Statements/let)
+const![const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
+Other scopes![other scopes](http://stackoverflow.com/a/500459)
+
 * Opisz bąbelkowanie zdarzeń.
 * Jak jest różnica między "atrybutem" i "właściwością"?
 * Czemu rozszerzanie obiektów wbudowanych w JavaScript jest złym pomysłem?

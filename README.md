@@ -174,6 +174,16 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * Explain what a single page app is and how to make one SEO-friendly.
 * What is the extent of your experience with Promises and/or their polyfills?
 * What are the pros and cons of using Promises instead of callbacks?
+* Variables scope in JS?
+ 
+In JavaScript, til version ES6, there were only two versions of variables scope - global scope, and local - function scope.
+In ES6 there is one more - block scope for variables defined with let and const (scope in {}).
+
+var![var](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
+let![let](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Statements/let)
+const![const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
+Other scopes![other scopes](http://stackoverflow.com/a/500459)
+
 * What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
 * What tools and techniques do you use debugging JavaScript code?
 * What language constructions do you use for iterating over object properties and array items?
