@@ -262,6 +262,13 @@ var foo = 10 + '20';
 
   `1020` (string)
 
+* Co zwraca poniższe zapytanie?
+```javascript
+"i'm a lasagna hog".split("").reverse().join("");
+```
+
+  `goh angasal a m'i`
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?

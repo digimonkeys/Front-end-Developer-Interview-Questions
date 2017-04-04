@@ -238,6 +238,8 @@ add(2)(5); // 7
 "i'm a lasagna hog".split("").reverse().join("");
 ```
 
+  `goh angasal a m'i`
+
 *Question: What is the value of `window.foo`?*
 ```javascript
 ( window.foo || ( window.foo = "bar" ) );
