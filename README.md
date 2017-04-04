@@ -58,7 +58,9 @@ Technology - Lately I prefer to use React with Redux and webpack, but I'm also f
 * Why serving resources from many domains is better?  
 You can use a lightweight web server that doesn't have to load all the modules/extensions that your dynamic content web server has to load on every single request.
 Adding an extra subdomain means you increase the number of parallel downloads that the browser can perform.
-If set up properly (e.g. your site is hosted on www.example.com instead of example.com), you can also take advantage of a cookieless subdomain, reducing traffic and roundtrip times.  
+If set up properly (e.g. your site is hosted on www.example.com instead of example.com), you can also take advantage of a cookieless subdomain, reducing traffic and roundtrip times. 
+http://webmasters.stackexchange.com/a/26757
+http://webmasters.stackexchange.com/a/25091  
 
 * How many resources will a browser download from a given domain at a time?
   * What are the exceptions?
