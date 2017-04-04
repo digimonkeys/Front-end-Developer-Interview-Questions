@@ -215,6 +215,13 @@ Callback![Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming
 * Wyjaśnij działanie JSONP (i dlaczego nie jest właściwie AJAX).
 * Czy kiedykolwiek używałeś szablonów w JavaScript?
   * Jeśli tak, jakie to były biblioteki? (Mustache.js, Handlebars itd.)
+
+* Co robi drugi parametr object.create?
+
+Drugi parametr Object.create pozwala na dodanie właściwości do nowo powstałego obiektu. Format w jakim podajemy te właściwości jest taki sam jak w drugim argumencie Object.defineProperties().
+
+Object.create![Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
+
 * Wyjaśnij pojęcie "hoisting".
 * Zasieg zmiennych w jsie?
 
