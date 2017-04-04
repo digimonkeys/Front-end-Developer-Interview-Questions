@@ -74,11 +74,11 @@ Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich prz
 * Jeśli dołączasz do projektu, w którym używa się tabulacji, a ty używasz spacji, co wtedy zrobisz?
   * Sugerowanie użycia narzędzi w stylu EditorConfig (http://editorconfig.org)
   * Zgodnie z konwencjami (pozostań konsekwentny)
-  * `issue :retab! command`   
-  Dostosuję się. Wystarczy przecież zmienić ustawienia edytora.  
-  
+  * `issue :retab! command`
+  Dostosuję się. Wystarczy przecież zmienić ustawienia edytora.
+
 * Napisz prosty pokaz slajdów
-  * Dodatkowe punkty, jeśli nie używasz JS.  
+  * Dodatkowe punkty, jeśli nie używasz JS.
 Można to zrobić za pomocą CSS3 wykorzystując unordered list i input type = radio. Najistotniejsze elementy kodu:
 
 ```
@@ -98,7 +98,7 @@ Można to zrobić za pomocą CSS3 wykorzystując unordered list i input type = r
 }
 ```
 
-Pełny tutorial: http://joshnh.com/weblog/making-a-pure-css-featured-image-slider/  
+Pełny tutorial: http://joshnh.com/weblog/making-a-pure-css-featured-image-slider/
 
 * Jakich narzędzi używasz do sprawdzenia wydajności swojego kodu?
   * Profiler, JSPerf, Dromaeo
@@ -151,6 +151,8 @@ Standardy są bardzo istotne ponieważ aplikacje pisane w danym języku są komp
   * Dodatkowe punkty za wzmiankę na temat czystości przestrzeni nazw.
   * Co jeśli Twój kod nie używa przestrzeni nazw?
 * Jak organizujesz swój kod? (moduły, klasyczne dziedziczenie?)
+  Np. Używam module pattern, IIFE, Atomic design
+
 * Jaka jest różnica między obiektami typu `host` i `native`?
   Host objects są to obiekty dostarczane przez środowisko hosta. Mogą się one różnić pomędzy środowiskami, przykłady:
   - window, document, location
@@ -222,7 +224,6 @@ Function hoisting![Function hoisting](https://developer.mozilla.org/en-US/docs/W
 * Czym jest `arity` funkcji?
 * Co oznacza `"use strict";`? Jakie są zalety i wady takiego rozwiązania?
 * Jaka jest roznica miedzy funkcja a obiektem?
-
 Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
 Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
 

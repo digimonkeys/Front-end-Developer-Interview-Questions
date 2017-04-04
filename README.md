@@ -196,6 +196,8 @@ Standars are super important because apps being written in the same language are
 
 * What's a typical use case for anonymous functions?
 * How do you organize your code? (module pattern, classical inheritance?)
+  Eg. Module pattern, IIFE, Atomic design.
+
 * What's the difference between host objects and native objects?
     Host objects are objects provided by the host environment. They may be different between environments, examples:
     - window, document, location
