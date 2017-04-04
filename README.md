@@ -64,7 +64,29 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
   * What are the exceptions?
 * Name 3 ways to decrease page load (perceived or actual load time).
 * If you jumped on a project and they used tabs and you used spaces, what would you do?
-* Describe how you would create a simple slideshow page.
+I will adapt (just change settings in my editor).
+* Describe how you would create a simple slideshow page. Bonus points if without JS.  
+We can do it only with CSS3 using ul element and input type = radio. The most important parts of code:  
+
+```
+<li>
+    <input type="radio" id="slide1" name="slide" checked>
+    <label for="slide1"></label>
+    <img>
+</li>
+.your-ul-class img {
+    opacity: 0;
+    visibility: hidden;
+}
+.ul-class li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+```
+
+Full tutorial: http://joshnh.com/weblog/making-a-pure-css-featured-image-slider/  
+
 * If you could master one technology this year, what would it be?  
 I'd love to learn how to create fusion bomb. ...or just pick something trendy, React Native, React Redux, ES7.  
 
@@ -107,11 +129,14 @@ I'd love to learn how to create fusion bomb. ...or just pick something trendy, R
 
   https://css-tricks.com/almanac/properties/z/z-index/
 * Describe BFC(Block Formatting Context) and how it works.
+  A block formatting context is a part of a visual CSS rendering of a Web page. It is the region in which the layout of block boxes occurs and in which floats interact with each other. In a BFC, each box’s left outer edge touches the left edge of the containing block (for right-to-left formatting, right edges touch). The rules for positioning and clearing of floats in apply only to things within the same block formatting context. BFC is also causing margin collapsing.
+
+  https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context
 * What are the various clearing techniques and which is appropriate for what context?
 * Explain CSS sprites, and how you would implement them on a page or site.
 * What are your favourite image replacement techniques and which do you use when?
 * How would you approach fixing browser-specific styling issues?
-  - use separate stylesheets that loads when that specific browser is being used. 
+  - use separate stylesheets that loads when that specific browser is being used.
   - use cross-browsers CSS prefixes (-moz-, -webkit-, etc)
   - resetting or normalizing CSS
 * How do you serve your pages for feature-constrained browsers?
@@ -152,11 +177,32 @@ I'd love to learn how to create fusion bomb. ...or just pick something trendy, R
 * Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
   * What needs to be changed to properly make it an IIFE?
 * What's the difference between a variable that is: `null`, `undefined` or undeclared?
+  - Undeclared is a variable that was not created with var / let / const and was created on a global window / global object.
+  - Undefined is a variable that has been declared but has no value assigned to it.
+  - Null is a type that has only one null value assigned, the variable has been declared, and the Null object assigned to it.
+  - Undefined is a type, null is an object
   * How would you go about checking for any of these states?
+    - typeof undefined === 'undefined'
+    - typeof null === 'object'
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+
 * What is a closure, and how/why would you use one?
+    Closure - allows you to access the internal scope of the function, even after it has been completed.
+    This is achieved by returning the function after calling the master function.
+    This allows you to simulate public and private variables.
+    * Favorite pattern used to create them?
+    - Module pattern
+    http://blog.nebula.us/13-javascript-closures-czyli-zrozumiec-i-wykorzystac-domkniecia
+
 * What's a typical use case for anonymous functions?
 * How do you organize your code? (module pattern, classical inheritance?)
 * What's the difference between host objects and native objects?
+    Host objects are objects provided by the host environment. They may be different between environments, examples:
+    - window, document, location
+    Native objects are the ones described and fully defined in the ECMAScript specification, examples:
+    - Date, Math, parseInt.
+    http://stackoverflow.com/questions/7614317/what-is-the-difference-between-native-objects-and-host-objects
+    
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
 * What's the difference between `.call` and `.apply`?
 * Explain `Function.prototype.bind`.
@@ -212,7 +258,7 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * What is the extent of your experience with Promises and/or their polyfills?
 * What are the pros and cons of using Promises instead of callbacks?
 * Variables scope in JS?
- 
+
 In JavaScript, til version ES6, there were only two versions of variables scope - global scope, and local - function scope.
 In ES6 there is one more - block scope for variables defined with let and const (scope in {}).
 
@@ -243,9 +289,9 @@ Function is a specific type of object in JavaScript, that has all the properties
 Function prototype is Object, and it's prototype is Function();
 
 * What is event life cycle (event flow) ?
- 
+
 Event life cycle (event flow) describes flow of an event through DOM tree. With every user interaction (or builtin event) browser creates event object and sends it (propagets it) through DOM tree. There are three phases of event life cycle:
- 
+
  - capturing faze - in this faze event is sent from top of the DOM to the element, that action was taken on.
  - on the object faze - happens when event reach element which user made an action
  - bubbling faze - in this faze event is sent from the element that action was taken on, to the top element of the DOM tree.

@@ -40,26 +40,26 @@ Pracowałem nad projektem wykorzystującym boilerplate bundlujący się przez st
 
 * Jak planujesz budowę UI, utrzymanie bezpieczeństwa, wysoką wydajność, SEO, łatwość w utrzymaniu kodu i jakie wykorzystujesz technologie kiedy zaczynasz budować aplikację webową lub stronę internetową?
 
-UI - zazwyczaj zaczynam od narysowania interfejsu na kartce papieru, która później służy mi jako generalny wyznacznik tego, co chcę osiągnąć na koniec pracy. Zawsze przykładam wagę do czytelności i prostoty interfejsu dla użytkowników.  
+UI - zazwyczaj zaczynam od narysowania interfejsu na kartce papieru, która później służy mi jako generalny wyznacznik tego, co chcę osiągnąć na koniec pracy. Zawsze przykładam wagę do czytelności i prostoty interfejsu dla użytkowników.
 
-Bezpieczeństwo - ponieważ po stronie klienta z kodem może stać się wszystko, trzymam wszystkie wrażliwe dane po stronie serwera.    
+Bezpieczeństwo - ponieważ po stronie klienta z kodem może stać się wszystko, trzymam wszystkie wrażliwe dane po stronie serwera.
 
-Wydajność - skupiam się na pisaniu przejrzystego, zrozumiałego kodu, a gdy któraś funkcjonalność okazuje się zbyt wolna pracuje nad poprawieniem jej wydajności. Czasem jeśli jakiś problem wydaje mi się 'ciężki' dla aplikacji i moge go rozwiązać na kilka sposobów, od razu wykonuje pomiar czasów wykonania przy różnych rozwiązaniach.  
+Wydajność - skupiam się na pisaniu przejrzystego, zrozumiałego kodu, a gdy któraś funkcjonalność okazuje się zbyt wolna pracuje nad poprawieniem jej wydajności. Czasem jeśli jakiś problem wydaje mi się 'ciężki' dla aplikacji i moge go rozwiązać na kilka sposobów, od razu wykonuje pomiar czasów wykonania przy różnych rozwiązaniach.
 
-SEO - nie zajmuję się optymalizacją SEO (nie bywało to moim zadaniem)  
+SEO - nie zajmuję się optymalizacją SEO (nie bywało to moim zadaniem)
 
-Utrzymanie kodu - stosuję ogólne dobre praktyki, takie jak proste i czytelne nazywanie funkcji i zmiennych, dzielenie kodu na małe, proste moduły. Zawsze kładę wielki nacisk na przystosowanie mojego kodu do zwyczajów panujących w zatrudniającej mnie firmie.  
+Utrzymanie kodu - stosuję ogólne dobre praktyki, takie jak proste i czytelne nazywanie funkcji i zmiennych, dzielenie kodu na małe, proste moduły. Zawsze kładę wielki nacisk na przystosowanie mojego kodu do zwyczajów panujących w zatrudniającej mnie firmie.
 
-Technologie - ostatnio preferuję React i redux w połączeniu z webpackiem, ale używałem również angulara 1 z gulpem itd itp  
+Technologie - ostatnio preferuję React i redux w połączeniu z webpackiem, ale używałem również angulara 1 z gulpem itd itp
 
 * Jakie jest Twoje preferowane środowisko programistyczne? (system operacyjny, edytor, przeglądarki, narzędzia itd.)
-* Z jakimi systemami kontroli wersji pracowałeś / jesteś zapoznany?  
-Z gitem, pracowałem na githubie i gitlabie. Próbowałem używać interfejsów graficznych gita, ale jednak wolę pracować w command line.  
+* Z jakimi systemami kontroli wersji pracowałeś / jesteś zapoznany?
+Z gitem, pracowałem na githubie i gitlabie. Próbowałem używać interfejsów graficznych gita, ale jednak wolę pracować w command line.
 * Opisz kolejne zadania podczas tworzenia strony internetowej?
 * Opisz różnicę między stopniowym ulepszaniem (progressive enhancement) i wdzięczną degradacją (graceful degradation)?
   * Dodatkowe punkty za opisanie wykrywania obsługi cech (feature detection)
-* Wyjaśnij, co kryje się za terminem "semantyczny HTML".  
-Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich przeznaczeniem i znaczeniem semantycznym, a nie tylko do prezentowania danych. Znaczniki nadają sens i w różnym kontekście mogną oznaczać do innego. Np <i> i <em> <b> i <strong>, section, aside, nav. Jest to ważne dla robotów indeksujących google, dla czytników przeznaczonych dla osób niepełnosprawnych etc.  
+* Wyjaśnij, co kryje się za terminem "semantyczny HTML".
+Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich przeznaczeniem i znaczeniem semantycznym, a nie tylko do prezentowania danych. Znaczniki nadają sens i w różnym kontekście mogną oznaczać do innego. Np <i> i <em> <b> i <strong>, section, aside, nav. Jest to ważne dla robotów indeksujących google, dla czytników przeznaczonych dla osób niepełnosprawnych etc.
 
 * Jak optymalizowałbyś zasoby strony internetowej?
   * Myśląc o wielu rozwiązaniach, które zawierają:
@@ -74,15 +74,41 @@ Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich prz
 * Jeśli dołączasz do projektu, w którym używa się tabulacji, a ty używasz spacji, co wtedy zrobisz?
   * Sugerowanie użycia narzędzi w stylu EditorConfig (http://editorconfig.org)
   * Zgodnie z konwencjami (pozostań konsekwentny)
-  * `issue :retab! command`
+  * `issue :retab! command`   
+  Dostosuję się. Wystarczy przecież zmienić ustawienia edytora.  
+  
 * Napisz prosty pokaz slajdów
-  * Dodatkowe punkty, jeśli nie używasz JS.
+  * Dodatkowe punkty, jeśli nie używasz JS.  
+Można to zrobić za pomocą CSS3 wykorzystując unordered list i input type = radio. Najistotniejsze elementy kodu:
+
+```
+<li>
+    <input type="radio" id="slide1" name="slide" checked>
+    <label for="slide1"></label>
+    <img>
+</li>
+.your-ul-class img {
+    opacity: 0;
+    visibility: hidden;
+}
+.ul-class li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+```
+
+Pełny tutorial: http://joshnh.com/weblog/making-a-pure-css-featured-image-slider/  
+
 * Jakich narzędzi używasz do sprawdzenia wydajności swojego kodu?
   * Profiler, JSPerf, Dromaeo
+  
 * Gdybyś mógł opanować jedną technologię w tym roku, jaka byłaby to technologia?  
-Technologia budowy bomb termowodorowych. Ew. można odpowiedzieć czymś co jest aktualnie w modzie, np React Native, React Redux, ES7.  
+Technologia budowy bomb wodorowych. Ew. można odpowiedzieć czymś co jest aktualnie w modzie, np React Native, React Redux, ES7.  
 
-* Wyjaśnij znaczenie standardów sieciowych i ich twórców.
+* Wyjaśnij znaczenie standardów sieciowych i ich twórców.  
+Standardy są bardzo istotne ponieważ aplikacje pisane w danym języku są kompilowane przez różne przeglądarki. Pozwala to uniknąć sytuacji, w której kod działa w połowie przeglądarek, lub działa tylko w tej ulubionej kodera. Gdy opracowany jest standard przeglądarki wiedzą czego się spodziewać i każdy piszący w zgodzie ze standardem może zakładać, że wszystko będzie działać. Twórcami standardów są w3c, iso, ansi, unicode consortium, ietf oraz ecma.  
+
 * Czym jest FOUC? Jak unikasz FOUC?
 
 ### Pytania HTML:
@@ -105,15 +131,36 @@ Technologia budowy bomb termowodorowych. Ew. można odpowiedzieć czymś co jest
 * Jak radzisz sobie z testowaniem swojego kodu JavaScript?
 * AMD kontra CommonJS?
 * Czym jest tablica mieszająca (hashtable)?
-* Co oznaczają komunikaty `undefined` i `undeclared` dla zmiennych?
+* Co oznaczają komunikaty `null`, `undefined` i `undeclared` dla zmiennych?
+  - Undeclared jest to zmienna, która nie została stworzona za pomocą var/let/const, a więc została stworzona na obiekcie globalnym window/global.
+  - Undefined jest to zmienna, która została zadeklarowana, ale nie została do niej przypisana żadna wartość
+  - Null jest to typ, który ma przypisaną tylko jedną wartość null, zmienna została zadeklrowana i przypisny do niej obiekt typu Null
+  - Undefined jest typem, null jest obiektem
+  * Jak byś sprawdził te stany zmiennych?
+    - typeof undefined === 'undefined'
+    - typeof null === 'object';
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+  
 * Czym są domknięcia, jak i po co są używane?
-  * Ulubiony wzorzec używany do ich tworzenia? argyle (Dotyczy tylko IIFE)
+    Closure - domknięcie - pozwala na dostęp do wewnętrznego scope funkcji, nawet po jej wykonaniu.
+    Osiąga się to poprzez zwrócenie funkcji po wywołaniu funkcji nadrzędnej.
+    Pozwala to na symulowanie zmiennych publicznych i prywatnych.
+  * Ulubiony wzorzec używany do ich tworzenia?
+    - Module pattern
+  http://blog.nebula.us/13-javascript-closures-czyli-zrozumiec-i-wykorzystac-domkniecia
+
 * Jakie znasz typowe użycie funkcji anonimowych?
 * Wyjaśnij pojęcie "Moduł JavaScript" i kiedy jest warte stosowania.
   * Dodatkowe punkty za wzmiankę na temat czystości przestrzeni nazw.
   * Co jeśli Twój kod nie używa przestrzeni nazw?
 * Jak organizujesz swój kod? (moduły, klasyczne dziedziczenie?)
-* Jaka jest różnicza między obiektami typu `host` i `native`?
+* Jaka jest różnica między obiektami typu `host` i `native`?
+  Host objects są to obiekty dostarczane przez środowisko hosta. Mogą się one różnić pomędzy środowiskami, przykłady:
+  - window, document, location
+  Native objects są to obiecty opisane i w pełni zdefiniowane w specyfikacji ECMAScript, przykłady:
+  - Date, Math, parseInt.
+  http://stackoverflow.com/questions/7614317/what-is-the-difference-between-native-objects-and-host-objects
+
 * Różnica między:
 ```javascript
 function Person(){} var person = Person() var person = new Person()
@@ -144,10 +191,10 @@ function Person(){} var person = Person() var person = new Person()
   * Jeśli tak, jakie to były biblioteki? (Mustache.js, Handlebars itd.)
 * Wyjaśnij pojęcie "hoisting".
 * Zasieg zmiennych w jsie?
- 
+
  W JS, do wersji ES6 występowały tylko dwa rodzaje zasięgu zmiennych, tj. globalny (global scope) i zasięg lokalny - w obrębie funkcji (function scope).
  Od ES6 i pojawienia się zmiennych deklarowanych jako let i const pojawił się także zasięg blokowy (tj. wewnątrz { }).
- 
+
 var![var](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
 let![let](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Statements/let)
 const![const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
@@ -163,7 +210,7 @@ Other scopes![other scopes](http://stackoverflow.com/a/500459)
 * Wyjaśnij politykę `same-origin` w odniesieniu do JavaScript.
 * Opisz wzorce dziedziczenia w JavaScript.
 * Czy funkcje sa hoistowane?
- 
+
 W JS funcje można deklarować na dwa sposoby: poprzez function definition oraz function expression.
 Function definition są hoistowane, natomiast function expressions nie.
 
@@ -178,18 +225,18 @@ Function hoisting![Function hoisting](https://developer.mozilla.org/en-US/docs/W
 * Czym jest `arity` funkcji?
 * Co oznacza `"use strict";`? Jakie są zalety i wady takiego rozwiązania?
 * Jaka jest roznica miedzy funkcja a obiektem?
- Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
 
+Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
 Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
 
 * Czym jest event life cycle (event flow)?
- 
+
 Event lifecycle (event flow) opisuje cykl życia eventu w drzewie DOM. Przy każdym zdarzeniu, przeglądarka tworzy event i rozsyła go po drzewie DOM. Propagacja / rozsyłanie eventu odbywa się w trzech fazach:
- 
+
 - capturing faze - w tej fazie event przesyłany jest od najwyżeszego rodzica w drzewie DOM, aż do elementu, na którym nastąpiło zdarzenie.
 - on the object faze - występuje na elemencie, na którym nastąpiło zdarzenie
 - bubbling faze - w tej fazie event przesyłany jest od elementu na którym nastąpiło zdarzenie, aż do najwyżeszego rodzica w drzewie dom
- 
+
 Event flow![Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
 
 ### Przykłady kodu JS:
@@ -256,7 +303,10 @@ $(".foo div#bar:eq(0)")
 
 * Jaka jest różnica między klasami oraz idendyfikatorami w CSS?
   Idendyfikatory są unikalne, każdy element może posiadać tylko jeden identyfikator, dodatkowo przeglądarka może używać identyfikatorów do nawigacji (scrollując do elementu z danym ID). Klasy nie są unikalne oraz elementy mogą posiadać więcej niż jedną klasę, nie mają większego znaczenia dla samej przeglądarki.
+* Opisz BFC(Block Formatting Context) i powiedz jak działa.
+  Blokowe formatowanie kontekstu jest częścią wizualnego renderingu CSS strony. Jest to miejsce, w którym występuje układ elementów blokowych i, w którym float'y komunikują się między sobą. W BFC każde 'pudełko' dotyka lewą zewnętrzną krawędzią kontenera (dla formatowania od-prawej-do-lewej dotyka prawej krawędzi). Zasady dla pozycjonowania i czyszczenia float'ów działają w tym samym blokowym formatowaniu kontekstu. Dodatkowo BFC powoduje nakładanie się marginesów (margin collapsing).
 
+  https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context
 * Opisz czym jest z-index oraz jak tworzony jest układ warstw.
   Właściwość z-index kontroluje pionowe nakładania się elementów, które nachodzą na siebie. Bez wartości z-index, elementy układają się w kolejności w jakiej pojawiają się w DOM (najniżej położony element w DOM pojawia się na samej górze). Zagnieżdżanie jest również ważne, jeśli element B jest nad elementem A, dziecko elementu A nigdy nie będzie wyżej niż element B.
 
@@ -274,7 +324,7 @@ $(".foo div#bar:eq(0)")
   - użycie osobnych stylów CSS, które ładowałyby się tylko wtedy gdy dana przeglądarka jest używana
   - używając przedrostków CSS dotyczących poszczególnych przeglądarek (-moz-, -webkit-, itd)
   - resetując lub normalizując CSS
-  
+
 * Jakie znasz techniki kasowania (clearing) i kiedy wskazane jest ich stosowanie?
 * Wyjaśnij technikę "CSS sprites" oraz sposób jej wdrożenia na stronie.
 * Jakie są Twoje ulubione techniki zastępowania obrazów i kiedy je stosujesz?
