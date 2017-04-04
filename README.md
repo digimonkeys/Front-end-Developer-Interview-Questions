@@ -89,7 +89,11 @@ Full tutorial: http://joshnh.com/weblog/making-a-pure-css-featured-image-slider/
 
 * If you could master one technology this year, what would it be?
 * Explain the importance of standards and standards bodies.
-* What is Flash of Unstyled Content? How do you avoid FOUC?
+* What is Flash of Unstyled Content? How do you avoid FOUC?  
+Flash of unstyled content is displaying unstyled content for user for a while while loading page. Appears when CSS is slow to load or when JS causes multiple page rendering.
+To avoid FOUC, you should provide the user with the most optimized CSS (minimized, in one file), and use as little rrendering browser javascript as possible. Use Critical CSS (ie throwing the most important inline css rules in the head tag).
+Use media queries and serve CSS optimized for lower resolution devices. One can also hide whole page until all styles are loaded.  
+
 * Explain what ARIA and screenreaders are, and how to make a website accessible.
 * Explain some of the pros and cons for CSS animations versus JavaScript animations.
 * What does CORS stand for and what issue does it address?

@@ -104,7 +104,10 @@ Pełny tutorial: http://joshnh.com/weblog/making-a-pure-css-featured-image-slide
   * Profiler, JSPerf, Dromaeo
 * Gdybyś mógł opanować jedną technologię w tym roku, jaka byłaby to technologia?
 * Wyjaśnij znaczenie standardów sieciowych i ich twórców.
-* Czym jest FOUC? Jak unikasz FOUC?
+* Czym jest FOUC? Jak unikasz FOUC?  
+Flash of unstyled content jest to wyświetlenie użytkownikowi nieostylowanej strony (jej zawartości) podczas ładowania strony. Pojawia się gdy CSS jest wolno ładowany lub gdy JS powoduje wielokrotne renderowanie strony.
+Aby uniknąć FOUC należy serwować użytkownikowi jak najbardziej zoptymalizowany CSS (zminifikowany, w jednym pliku), oraz używać jak najmniej javascriptu powodującego fazę render przeglądarki. Używanie Critical CSS (czyli wrzucanie najważniejszych reguł css inline w znaczniku head).
+Używanie media queries i serwowanie CSS zoptymalizowanego dla urządzeń o mniejszej rozdzielczości. Można też ukryć całą stronę do czasu załadowania wszystkich styli.  
 
 ### Pytania HTML:
 
