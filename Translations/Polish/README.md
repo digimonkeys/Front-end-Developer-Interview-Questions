@@ -192,7 +192,12 @@ $(".foo div#bar:eq(0)")
 
 * Jaka jest różnica między klasami oraz idendyfikatorami w CSS?
   Idendyfikatory są unikalne, każdy element może posiadać tylko jeden identyfikator, dodatkowo przeglądarka może używać identyfikatorów do nawigacji (scrollując do elementu z danym ID). Klasy nie są unikalne oraz elementy mogą posiadać więcej niż jedną klasę, nie mają większego znaczenia dla samej przeglądarki.
+* Opisz BFC(Block Formatting Context) i powiedz jak działa.
+  A block formatting context is a part of a visual CSS rendering of a Web page. It is the region in which the layout of block boxes occurs and in which floats interact with each other. The rules for positioning and clearing of floats in apply only to things within the same block formatting context.
 
+  Blokowe formatowanie kontekstu jest częścią wizualnego renderingu CSS strony. Jest to miejsce, w którym występuje układ elementów blokowych i, w którym float'y komunikują się między sobą. Zasady dla pozycjonowania i czyszczenia float'ów działają w tym samym blokowym formatowaniu kontekstu.
+
+  https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context
 * Opisz, czym jest plik "reset" dla CSS i dlaczego jest użyteczny.
 * Opisz jak działa właściwość `float`.
 * Jakie znasz techniki kasowania (clearing) i kiedy wskazane jest ich stosowanie?
