@@ -40,7 +40,7 @@ Working on project based on boilerplate that used old version of webpack. When I
 * Which version control systems are you familiar with?
 * Can you describe your workflow when you create a web page?
 * If you have 5 different stylesheets, how would you best integrate them into the site?
-* Can you describe the difference between progressive enhancement and graceful degradation?  
+* Can you describe the difference between progressive enhancement and graceful degradation? Bonus points for describing feature detection.  
 progressive enhancement considers creating site for old browsers and then enhancing application with fetures for newer browsers  
 
 graceful degradation is creating app for new versions of eg. browsers, but in a way that lets the app maintain some basic functionalities if some of environment features happen to be unavalaible  
