@@ -161,6 +161,11 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * What is event loop?
   * What is the difference between call stack and task queue?
 * Explain the differences on the usage of `foo` between `function foo() {}` and `var foo = function() {}`
+* What is inheritance?
+
+Inheritance (in programming) is a mechanism that allow sharing functionality (and code reuse) beetwen classes (in classical inheritance) or between objects (in prototypal inheritance - like in JS). Class that inherits (called subclass) gains acess to all shared behaviors and attributes of parent class (called superclass);
+
+Inheritance![Wikipedia - Inheritance](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming))
 
 #### Testing Questions:
 
