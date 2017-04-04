@@ -93,6 +93,8 @@ Full tutorial: http://joshnh.com/weblog/making-a-pure-css-featured-image-slider/
 Flash of unstyled content is displaying unstyled content for user for a while while loading page. Appears when CSS is slow to load or when JS causes multiple page rendering.
 To avoid FOUC, you should provide the user with the most optimized CSS (minimized, in one file), and use as little rrendering browser javascript as possible. Use Critical CSS (ie throwing the most important inline css rules in the head tag).
 Use media queries and serve CSS optimized for lower resolution devices. One can also hide whole page until all styles are loaded.  
+https://en.wikipedia.org/wiki/Flash_of_unstyled_content  
+http://www.techrepublic.com/blog/web-designer/how-to-prevent-flash-of-unstyled-content-on-your-websites/  
 
 * Explain what ARIA and screenreaders are, and how to make a website accessible.
 * Explain some of the pros and cons for CSS animations versus JavaScript animations.
