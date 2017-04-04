@@ -186,6 +186,9 @@ Function prototype is Object, and it's prototype is Function();
 
 * What tools would you use to test your code's functionality?
 * What is the difference between a unit test and a functional/integration test?
+
+  Unit tests check whether the individual pieces of code (functions) work as expected on their own. Functional/integration tests check whether bigger parts of application, or even the application as a whole, work and interact with each other properly.
+
 * What is the purpose of a code style linting tool?
 
 #### Performance Questions:
