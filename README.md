@@ -139,11 +139,15 @@ git, I worked on github and gitlab. I tried using git guis but I prefer to work 
     In what function was used in which we defined it.
     Context, ie the way and place of the call.
 
-    function ab() { this } - window (because window.ab)
-    var obj = { fun: ab }; obj.fun(); - obj
-    var obj = { fun: function() { ab(); }} - window
-    ab.call(obj) - obj
-    const a = ab.bind(obj) - obj
+    Global context:
+    console.log(this === window); // true
+    this.a = 37;
+    console.log(window.a); // 37
+    As an object method:
+    var o = {  prop: 37, f: function() { return this.prop; }};
+    console.log(o.f()); // logs 37
+
+    https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Operatory/this
 
 * Explain how prototypal inheritance works
 * What do you think of AMD vs CommonJS?
