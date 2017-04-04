@@ -41,7 +41,9 @@ Working on project based on boilerplate that used old version of webpack. When I
 * Can you describe your workflow when you create a web page?
 * If you have 5 different stylesheets, how would you best integrate them into the site?
 * Can you describe the difference between progressive enhancement and graceful degradation?
-* How would you optimize a website's assets/resources?
+* How would you optimize a website's assets/resources?  
+Optimalize images, bundle files, use uglifyjs and minification, use svg, css sprites, serve cdn resources depending on distance and response time from user, cache some files, dont load whole huge libraries if you only use one function from them  
+
 * How many resources will a browser download from a given domain at a time?
   * What are the exceptions?
 * Name 3 ways to decrease page load (perceived or actual load time).

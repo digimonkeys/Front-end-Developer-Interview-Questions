@@ -43,13 +43,9 @@ Pracowałem nad projektem wykorzystującym boilerplate bundlujący się przez st
 * Opisz różnicę między stopniowym ulepszaniem (progressive enhancement) i wdzięczną degradacją (graceful degradation)?
   * Dodatkowe punkty za opisanie wykrywania obsługi cech (feature detection)
 * Wyjaśnij, co kryje się za terminem "semantyczny HTML".
-* Jak optymalizowałbyś zasoby strony internetowej?
-  * Myśląc o wielu rozwiązaniach, które zawierają:
-    * Łączenie plików
-    * Zmniejszenie rozmiaru plików
-    * Zasoby CDN
-    * Buforowanie
-    * itd.
+* Jak optymalizowałbyś zasoby strony internetowej?  
+Optymalizacja obrazków, łączenie plików, Zmniejszenie rozmiaru plików uglifyjs, minification, używanie SVG, css sprites (jeden obrazek, używany wiele razy), Zasoby CDN - mogą być serwowane w zależności od odległości od użytkoniwka, response time etc, cachowanie, nie ładować dużych bibliotek jeśli potrzebujemy z nich tylko jednej funkcji  
+
 * Dlaczego serwowanie zasobów strony przez wiele domen jest lepsze?
   * Ile zasobów pobiera przeglądarka z danej domeny w jednej chwili?
 * Podaj 3 sposoby na zmniejszenie czasu ładowania strony. (postrzeganego lub rzeczywistego czasu ładowania)
