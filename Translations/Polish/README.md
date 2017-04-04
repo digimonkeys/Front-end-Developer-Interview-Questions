@@ -38,11 +38,29 @@ Tworzenie rzeczy. Od dziecka uwielbiałem tworzyć coś nowego i rozwiązywac ł
 * Jakie wyzwanie technologiczne stanęło przed toba ostatnio i jak je rozwiązałeś?
 Pracowałem nad projektem wykorzystującym boilerplate bundlujący się przez starą wersję webpacka. Kiedy chciałem dodać do niego kilka niezbędnych rozszerzeń, wszystko okazało się niekompatybilne i rozsypało w drzazgi. Musiałem napisac cały skrypt webpacka od nowa.
 
+* Jak planujesz budowę UI, utrzymanie bezpieczeństwa, wysoką wydajność, SEO, łatwość w utrzymaniu kodu i jakie wykorzystujesz technologie kiedy zaczynasz budować aplikację webową lub stronę internetową?
+
+UI - zazwyczaj zaczynam od narysowania interfejsu na kartce papieru, która później służy mi jako generalny wyznacznik tego, co chcę osiągnąć na koniec pracy. Zawsze przykładam wagę do czytelności i prostoty interfejsu dla użytkowników.  
+
+Bezpieczeństwo - ponieważ po stronie klienta z kodem może stać się wszystko, trzymam wszystkie wrażliwe dane po stronie serwera.    
+
+Wydajność - skupiam się na pisaniu przejrzystego, zrozumiałego kodu, a gdy któraś funkcjonalność okazuje się zbyt wolna pracuje nad poprawieniem jej wydajności. Czasem jeśli jakiś problem wydaje mi się 'ciężki' dla aplikacji i moge go rozwiązać na kilka sposobów, od razu wykonuje pomiar czasów wykonania przy różnych rozwiązaniach.  
+
+SEO - nie zajmuję się optymalizacją SEO (nie bywało to moim zadaniem)  
+
+Utrzymanie kodu - stosuję ogólne dobre praktyki, takie jak proste i czytelne nazywanie funkcji i zmiennych, dzielenie kodu na małe, proste moduły. Zawsze kładę wielki nacisk na przystosowanie mojego kodu do zwyczajów panujących w zatrudniającej mnie firmie.  
+
+Technologie - ostatnio preferuję React i redux w połączeniu z webpackiem, ale używałem również angulara 1 z gulpem itd itp  
+
 * Jakie jest Twoje preferowane środowisko programistyczne? (system operacyjny, edytor, przeglądarki, narzędzia itd.)
+* Z jakimi systemami kontroli wersji pracowałeś / jesteś zapoznany?  
+Z gitem, pracowałem na githubie i gitlabie. Próbowałem używać interfejsów graficznych gita, ale jednak wolę pracować w command line.  
 * Opisz kolejne zadania podczas tworzenia strony internetowej?
 * Opisz różnicę między stopniowym ulepszaniem (progressive enhancement) i wdzięczną degradacją (graceful degradation)?
   * Dodatkowe punkty za opisanie wykrywania obsługi cech (feature detection)
-* Wyjaśnij, co kryje się za terminem "semantyczny HTML".
+* Wyjaśnij, co kryje się za terminem "semantyczny HTML".  
+Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich przeznaczeniem i znaczeniem semantycznym, a nie tylko do prezentowania danych. Znaczniki nadają sens i w różnym kontekście mogną oznaczać do innego. Np <i> i <em> <b> i <strong>, section, aside, nav. Jest to ważne dla robotów indeksujących google, dla czytników przeznaczonych dla osób niepełnosprawnych etc.  
+
 * Jak optymalizowałbyś zasoby strony internetowej?
   * Myśląc o wielu rozwiązaniach, które zawierają:
     * Łączenie plików
@@ -121,6 +139,16 @@ function Person(){} var person = Person() var person = new Person()
 * Czy kiedykolwiek używałeś szablonów w JavaScript?
   * Jeśli tak, jakie to były biblioteki? (Mustache.js, Handlebars itd.)
 * Wyjaśnij pojęcie "hoisting".
+* Zasieg zmiennych w jsie?
+ 
+ W JS, do wersji ES6 występowały tylko dwa rodzaje zasięgu zmiennych, tj. globalny (global scope) i zasięg lokalny - w obrębie funkcji (function scope).
+ Od ES6 i pojawienia się zmiennych deklarowanych jako let i const pojawił się także zasięg blokowy (tj. wewnątrz { }).
+ 
+var![var](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
+let![let](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Statements/let)
+const![const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
+Other scopes![other scopes](http://stackoverflow.com/a/500459)
+
 * Opisz bąbelkowanie zdarzeń.
 * Jak jest różnica między "atrybutem" i "właściwością"?
 * Czemu rozszerzanie obiektów wbudowanych w JavaScript jest złym pomysłem?
@@ -130,6 +158,13 @@ function Person(){} var person = Person() var person = new Person()
 * Wyjaśnij ewentualny sposób pobrania parametrów z adresu URL w oknie przeglądarki.
 * Wyjaśnij politykę `same-origin` w odniesieniu do JavaScript.
 * Opisz wzorce dziedziczenia w JavaScript.
+* Czy funkcje sa hoistowane?
+ 
+W JS funcje można deklarować na dwa sposoby: poprzez function definition oraz function expression.
+Function definition są hoistowane, natomiast function expressions nie.
+
+Function hoisting![Function hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+
 * Napisz działający kod:
 ```javascript
 [1,2,3,4,5].duplicate(); // [1,2,3,4,5,1,2,3,4,5]
@@ -138,6 +173,20 @@ function Person(){} var person = Person() var person = new Person()
 * Dlaczego mówimy wyrażenie trójkowe, co dokładnie oznacza słowo "trójkowy"?
 * Czym jest `arity` funkcji?
 * Co oznacza `"use strict";`? Jakie są zalety i wady takiego rozwiązania?
+* Jaka jest roznica miedzy funkcja a obiektem?
+ 
+Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
+Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
+
+* Czym jest event life cycle (event flow)?
+ 
+Event lifecycle (event flow) opisuje cykl życia eventu w drzewie DOM. Przy każdym zdarzeniu, przeglądarka tworzy event i rozsyła go po drzewie DOM. Propagacja / rozsyłanie eventu odbywa się w trzech fazach:
+ 
+- capturing faze - w tej fazie event przesyłany jest od najwyżeszego rodzica w drzewie DOM, aż do elementu, na którym nastąpiło zdarzenie.
+- on the object faze - występuje na elemencie, na którym nastąpiło zdarzenie
+- bubbling faze - w tej fazie event przesyłany jest od elementu na którym nastąpiło zdarzenie, aż do najwyżeszego rodzica w drzewie dom
+ 
+Event flow![Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
 
 ### Przykłady kodu JS:
 
@@ -204,8 +253,24 @@ $(".foo div#bar:eq(0)")
 * Jaka jest różnica między klasami oraz idendyfikatorami w CSS?
   Idendyfikatory są unikalne, każdy element może posiadać tylko jeden identyfikator, dodatkowo przeglądarka może używać identyfikatorów do nawigacji (scrollując do elementu z danym ID). Klasy nie są unikalne oraz elementy mogą posiadać więcej niż jedną klasę, nie mają większego znaczenia dla samej przeglądarki.
 
+* Opisz czym jest z-index oraz jak tworzony jest układ warstw.
+  Właściwość z-index kontroluje pionowe nakładania się elementów, które nachodzą na siebie. Bez wartości z-index, elementy układają się w kolejności w jakiej pojawiają się w DOM (najniżej położony element w DOM pojawia się na samej górze). Zagnieżdżanie jest również ważne, jeśli element B jest nad elementem A, dziecko elementu A nigdy nie będzie wyżej niż element B.
+
+  https://css-tricks.com/almanac/properties/z/z-index/
+* Jaka jest różnica między resetowaniem, a normalizowaniem styli CSS? Którą wybrałbyś i dlaczego?
+  Reset CSS służy usunięciu wszystkich styli CSS nadanych przez przeglądarki, więc trzeba je ostylować na nowo. Normalizowanie styli ustawia takie same style elementów dla każdej przeglądarki oraz naprawia część błędów, więc konieczne jest tylko stylowanie elementów, które różnią się wyglądem od pożądanego efektu. Użyłbym normalizowania, ponieważ każda zmiana będzie miała taki sam efekt w każdej przeglądarce.
+
+  http://stackoverflow.com/questions/6887336/what-is-the-difference-between-normalize-css-and-reset-css
 * Opisz, czym jest plik "reset" dla CSS i dlaczego jest użyteczny.
 * Opisz jak działa właściwość `float`.
+  Float'y mogą by używane do opakowywania tekstu wokół obrazka/elementu lub to tworzenia całych layoutów. Pływające elementy pozostają częścią flow strony, w odróżnieniu od elementów o ustalonym położeniu, które są usuwane z flow strony i nie uczestniczą w dostosowywaniu zawartości np. do zmieniającej się szerokości okna.
+
+  https://css-tricks.com/all-about-floats/
+* Jak podejdziesz do rozwiązywania problemów dotyczących stylizacji konkretnych przeglądarek?
+  - użycie osobnych stylów CSS, które ładowałyby się tylko wtedy gdy dana przeglądarka jest używana
+  - używając przedrostków CSS dotyczących poszczególnych przeglądarek (-moz-, -webkit-, itd)
+  - resetując lub normalizując CSS
+  
 * Jakie znasz techniki kasowania (clearing) i kiedy wskazane jest ich stosowanie?
 * Wyjaśnij technikę "CSS sprites" oraz sposób jej wdrożenia na stronie.
 * Jakie są Twoje ulubione techniki zastępowania obrazów i kiedy je stosujesz?
@@ -213,6 +278,10 @@ $(".foo div#bar:eq(0)")
 * Jak serwujesz strony dla przeglądarek z ograniczonym wsparciem funkcji?
   * Jakie techniki stosujesz?
 * Jakie istnieją sposoby wizualnego ukrycia treści (uczynienia ich dostępnymi tylko dla czytników ekranu)?
+  - visibility: hidden
+  - width: 0; height: 0;
+  - text-indent: -1000px
+  - absolute position - poza ekranem
 * Czy kiedykolwiek używałeś systemów siatek, a jeśli tak, to jakie preferujesz?
 * Czy używałeś 'media queries' lub tworzyłeś konkretne układy i arkusze dla urządzeń mobilnych?
 * Czy miałeś styczność ze stylizacją SVG?
@@ -223,6 +292,24 @@ $(".foo div#bar:eq(0)")
 * Jak tworzysz i wdrażasz projekt używający niestandardowych czcionek?
   * Czcionki sieciowe (serwisy czcionek jak: Google Webfonts, Typekit itd.)
 * Wyjaśnij jak przeglądarka określa elementy pasujące do selektora CSS?
+
+### Pytania z testowania:
+
+* Jakie są niektóre z plusów/minusów testowania pisanego kodu?
+
+  Testowanie kodu (testy jednostkowe) zapewniają, że kod działa tak jak powinien, pozwala prowadzić refaktoryzację kodu i sprawdzać, czy nic nie zostało zepsute.
+
+  Minusem jest to, że testy także potrzebują refaktoryzacji oraz jest to znacznie więcej kodu do konserwacji.
+
+* Jakich narzędzi użyłbyś do testowania swojego kodu?
+
+  * Jasmine - framework TDD
+  * Karma - runner testów
+  * Selenium driver - testowanie End-to-End
+
+* Jaka jest różnica pomiędzy testami jednostkowymi a testami funkcjonalnymi/integracyjnymi?
+
+  Testy jednostkowe sprawdzają czy poszczególne części kodu (funkcje) działają poprawnie. Natomiast testy funkcjonalne/integracyjne sprawdzają działanie części systemu, lub systemu jako całości, jak komponenty systemu funkcjonują miedzy sobą etc.
 
 ### Pytania dodatkowe (zabawne):
 
