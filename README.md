@@ -88,10 +88,12 @@ We can do it only with CSS3 using ul element and input type = radio. The most im
 Full tutorial: http://joshnh.com/weblog/making-a-pure-css-featured-image-slider/  
 
 * If you could master one technology this year, what would it be?
-* Explain the importance of standards and standards bodies.
+* Explain the importance of standards and standards bodies.  
+Standars are super important because apps being written in the same language are compiled by different browsers. Thanks to standards we avoid creating code that would work in half of browsers or only in one of them. Standard creators are: w3c, iso, ansi, unicode consortium, ietf and ecma  
+
 * What is Flash of Unstyled Content? How do you avoid FOUC?  
-Flash of unstyled content is displaying unstyled content for user for a while while loading page. Appears when CSS is slow to load or when JS causes multiple page rendering.
-To avoid FOUC, you should provide the user with the most optimized CSS (minimized, in one file), and use as little rrendering browser javascript as possible. Use Critical CSS (ie throwing the most important inline css rules in the head tag).
+Flash of unstyled content is displaying unstyled content for user for a while when loading page. Appears when CSS is slow to load or when JS causes multiple page rendering.
+To avoid FOUC, you should provide the user with the most optimized CSS (minimized, in one file), and use as little rerendering browser javascript as possible. Use Critical CSS (ie throw the most important inline css rules in the head tag).
 Use media queries and serve CSS optimized for lower resolution devices. One can also hide whole page until all styles are loaded.  
 https://en.wikipedia.org/wiki/Flash_of_unstyled_content  
 http://www.techrepublic.com/blog/web-designer/how-to-prevent-flash-of-unstyled-content-on-your-websites/  
