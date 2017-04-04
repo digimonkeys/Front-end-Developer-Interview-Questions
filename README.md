@@ -308,7 +308,7 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
   The word "Ternary" indicates that a Ternary expression takes three operands.
   It's the only JavaScript operator that takes three operands.
-  Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
+  Reference: [Conditional (ternary) Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
 * What is `"use strict";`? what are the advantages and disadvantages to using it?
 * Create a for loop that iterates up to `100` while outputting **"fizz"** at multiples of `3`, **"buzz"** at multiples of `5` and **"fizzbuzz"** at multiples of `3` and `5`
