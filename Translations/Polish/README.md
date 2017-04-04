@@ -65,7 +65,9 @@ Technologie - ostatnio preferuję React i redux w połączeniu z webpackiem, ale
     * Buforowanie
     * itd.
 * Dlaczego serwowanie zasobów strony przez wiele domen jest lepsze?
-  * Ile zasobów pobiera przeglądarka z danej domeny w jednej chwili?
+  * Ile zasobów pobiera przeglądarka z danej domeny w jednej chwili?  
+To zależy od konkeretnej przeglądarki, od wersji przeglądarki, od ustawienia ile może obsługiwać połączeń jednocześnie, od tego czy skrypty ładowane są synchronicznie (defer) czy asynchronicznie (async). Startsze przegląraki jak IE6 - 2, nowsze 6 / 8.  
+
 * Podaj 3 sposoby na zmniejszenie czasu ładowania strony. (postrzeganego lub rzeczywistego czasu ładowania)
 * Jeśli dołączasz do projektu, w którym używa się tabulacji, a ty używasz spacji, co wtedy zrobisz?
   * Sugerowanie użycia narzędzi w stylu EditorConfig (http://editorconfig.org)

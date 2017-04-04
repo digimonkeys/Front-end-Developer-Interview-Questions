@@ -56,7 +56,9 @@ Technology - Lately I prefer to use React with Redux and webpack, but I'm also f
 * Can you describe the difference between progressive enhancement and graceful degradation?
 * How would you optimize a website's assets/resources?
 * How many resources will a browser download from a given domain at a time?
-  * What are the exceptions?
+  * What are the exceptions?  
+It depends on a browser, older ones like IE6 - 2, newer ones 6-8.
+
 * Name 3 ways to decrease page load (perceived or actual load time).
 * If you jumped on a project and they used tabs and you used spaces, what would you do?
 * Describe how you would create a simple slideshow page.
