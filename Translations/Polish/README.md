@@ -222,8 +222,16 @@ Function hoisting![Function hoisting](https://developer.mozilla.org/en-US/docs/W
 
 * Napisz działający kod:
 ```javascript
-[1,2,3,4,5].duplicate(); // [1,2,3,4,5,1,2,3,4,5]
+duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 ```
+
+```javascript
+function duplicate(arr) {
+  return arr.concat(arr);
+}
+```
+Odniesienie: [Array.prototype.concat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
+
 * Opisz strategię zapamiętywania (unikanie powtarzalnych obliczeń) w JavaScript.
 * Dlaczego mówimy wyrażenie trójkowe, co dokładnie oznacza słowo "trójkowy"?
 * Czym jest `arity` funkcji?
