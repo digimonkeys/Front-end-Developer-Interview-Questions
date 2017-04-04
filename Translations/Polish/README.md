@@ -78,7 +78,28 @@ Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich prz
   Dostosuję się. Wystarczy przecież zmienić ustawienia edytora.  
   
 * Napisz prosty pokaz slajdów
-  * Dodatkowe punkty, jeśli nie używasz JS.
+  * Dodatkowe punkty, jeśli nie używasz JS.  
+Można to zrobić za pomocą CSS3 wykorzystując unordered list i input type = radio. Najistotniejsze elementy kodu:
+
+```
+<li>
+    <input type="radio" id="slide1" name="slide" checked>
+    <label for="slide1"></label>
+    <img>
+</li>
+.your-ul-class img {
+    opacity: 0;
+    visibility: hidden;
+}
+.ul-class li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+```
+
+Pełny tutorial: http://joshnh.com/weblog/making-a-pure-css-featured-image-slider/  
+
 * Jakich narzędzi używasz do sprawdzenia wydajności swojego kodu?
   * Profiler, JSPerf, Dromaeo
 * Gdybyś mógł opanować jedną technologię w tym roku, jaka byłaby to technologia?

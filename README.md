@@ -63,10 +63,30 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
 * How many resources will a browser download from a given domain at a time?
   * What are the exceptions?
 * Name 3 ways to decrease page load (perceived or actual load time).
-* If you jumped on a project and they used tabs and you used spaces, what would you do?  
-I will adapt (just change settings in my editor).  
+* If you jumped on a project and they used tabs and you used spaces, what would you do?
+I will adapt (just change settings in my editor).
+* Describe how you would create a simple slideshow page. Bonus points if without JS.  
+We can do it only with CSS3 using ul element and input type = radio. The most important parts of code:  
 
-* Describe how you would create a simple slideshow page.
+```
+<li>
+    <input type="radio" id="slide1" name="slide" checked>
+    <label for="slide1"></label>
+    <img>
+</li>
+.your-ul-class img {
+    opacity: 0;
+    visibility: hidden;
+}
+.ul-class li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+```
+
+Full tutorial: http://joshnh.com/weblog/making-a-pure-css-featured-image-slider/  
+
 * If you could master one technology this year, what would it be?
 * Explain the importance of standards and standards bodies.
 * What is Flash of Unstyled Content? How do you avoid FOUC?
