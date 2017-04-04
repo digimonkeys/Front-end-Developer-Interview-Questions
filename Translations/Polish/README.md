@@ -366,6 +366,8 @@ $(".foo div#bar:eq(0)")
   - preferuję klasy i identyfikatory zamiast selektorów tagów
   - unikam redundancji selektorów
   - staram się grupować i ponownie wykorzystywać wspólne wartości
+
+  https://css-tricks.com/efficiently-rendering-css/
 * Czy używasz narzędzi do przetwarzania CSS? (SASS, Compass, Stylus, LESS)
   * Jeśli tak, opisz cechy, które lubisz i nie lubisz w używanych narzędziach.
 * Jak tworzysz i wdrażasz projekt używający niestandardowych czcionek?

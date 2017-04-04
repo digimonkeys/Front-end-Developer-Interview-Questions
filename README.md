@@ -177,6 +177,8 @@ http://www.techrepublic.com/blog/web-designer/how-to-prevent-flash-of-unstyled-c
   - prefer class and ID selectors over tag selectors
   - avoid redundant selectors
   - try group and reuse common properties
+
+  https://css-tricks.com/efficiently-rendering-css/
 * What are the advantages/disadvantages of using CSS preprocessors?
   * Describe what you like and dislike about the CSS preprocessors you have used.
 * How would you implement a web design comp that uses non-standard fonts?
