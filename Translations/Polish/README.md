@@ -120,6 +120,15 @@ function Person(){} var person = Person() var person = new Person()
 * Wyjaśnij `Function.prototype.bind`?
 * Kiedy optymalizujesz swój kod?
 * Wyjaśnij działanie dziedziczenia w JavaScript?
+* Co to jest function declaration a co function expression i czym sie roznia?
+
+Function declaration jest to stworzenie obiektu typu Function i przypisanie mu nazwy oraz parametrów używanych przez funkcję.
+Function expression jest niemal identyczne, natomiast pozwala na ominięcie nazwy funkcji (co tworzy tzw. funkcję anonimową). Function expression może być także używane jako IIFE. Function expression, w przeciwieństwie do function declaration nie są hoistowane.
+
+Function delcaration![Function delcaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+Function expression![Function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function)
+Function declaration vs function expression![Function declaration vs function expression](https://www.sitepoint.com/function-expressions-vs-declarations/)
+
 * Kiedy użyłbyś `document.write()`?
     Document.write() jest zawsze dostępny, jest dobrym wyborem dla dostawcow skryptow zewnetrznych aby mogli dodać oni swoj kod.
     Wiele generowanych reklam używa `document.write()` choć nie jest to mile widziane.

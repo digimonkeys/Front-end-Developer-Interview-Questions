@@ -196,6 +196,15 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
 * Why is extending built-in JavaScript objects not a good idea?
 * Difference between document load event and document DOMContentLoaded event?
 * What is the difference between `==` and `===`?
+* Whats a function declaration and function expression? What are the differences?
+
+The function declaration defines a function with the specified name and parameters.
+Function expression is almost identical, but i allows to omit function name, thus creating annonymous function. Function expressions can be used as an IIFE. Function expressions (not like function declartion) arent hoisted.
+
+Function delcaration![Function delcaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+Function expression![Function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function)
+Function declaration vs function expression![Function declaration vs function expression](https://www.sitepoint.com/function-expressions-vs-declarations/)
+
 * Explain the same-origin policy with regards to JavaScript.
 * Make this work:
 ```javascript
