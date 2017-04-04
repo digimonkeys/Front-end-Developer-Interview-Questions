@@ -57,17 +57,15 @@ Technologie - ostatnio preferuję React i redux w połączeniu z webpackiem, ale
 Z gitem, pracowałem na githubie i gitlabie. Próbowałem używać interfejsów graficznych gita, ale jednak wolę pracować w command line.
 * Opisz kolejne zadania podczas tworzenia strony internetowej?
 * Opisz różnicę między stopniowym ulepszaniem (progressive enhancement) i wdzięczną degradacją (graceful degradation)?
-  * Dodatkowe punkty za opisanie wykrywania obsługi cech (feature detection)
-* Wyjaśnij, co kryje się za terminem "semantyczny HTML".
-Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich przeznaczeniem i znaczeniem semantycznym, a nie tylko do prezentowania danych. Znaczniki nadają sens i w różnym kontekście mogną oznaczać do innego. Np <i> i <em> <b> i <strong>, section, aside, nav. Jest to ważne dla robotów indeksujących google, dla czytników przeznaczonych dla osób niepełnosprawnych etc.
+  * Dodatkowe punkty za opisanie wykrywania obsługi cech (feature detection)  
+  
+* Wyjaśnij, co kryje się za terminem "semantyczny HTML".  
+Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich przeznaczeniem i znaczeniem semantycznym, a nie tylko do prezentowania danych. Znaczniki nadają sens i w różnym kontekście mogną oznaczać do innego. Np <i> i <em> <b> i <strong>, section, aside, nav. Jest to ważne dla robotów indeksujących google, dla czytników przeznaczonych dla osób niepełnosprawnych etc.  
 
-* Jak optymalizowałbyś zasoby strony internetowej?
-  * Myśląc o wielu rozwiązaniach, które zawierają:
-    * Łączenie plików
-    * Zmniejszenie rozmiaru plików
-    * Zasoby CDN
-    * Buforowanie
-    * itd.
+
+* Jak optymalizowałbyś zasoby strony internetowej?  
+Optymalizacja obrazków, łączenie plików, Zmniejszenie rozmiaru plików przy użyciu uglifyjs, stosowanie minifikacji, używanie SVG i css sprites (jeden obrazek, używany wiele razy), Zasoby CDN - mogą być serwowane w zależności od odległości od użytkoniwka, response time etc, cachowanie, nie ładować dużych bibliotek jeśli potrzebujemy z nich tylko jednej funkcji  
+
 * Dlaczego serwowanie zasobów strony przez wiele domen jest lepsze?
   * Ile zasobów pobiera przeglądarka z danej domeny w jednej chwili?
 * Podaj 3 sposoby na zmniejszenie czasu ładowania strony. (postrzeganego lub rzeczywistego czasu ładowania)
