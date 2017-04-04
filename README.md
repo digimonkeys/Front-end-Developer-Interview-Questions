@@ -188,6 +188,15 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 Function is a specific type of object in JavaScript, that has all the properties of normal object. Only difference is that function can be called / invoked. It's possible, because functions has internal [[Call]] method.
 Function prototype is Object, and it's prototype is Function();
 
+* What is event life cycle (event flow) ?
+ 
+Event life cycle (event flow) describes flow of an event through DOM tree. With every user interaction (or builtin event) browser creates event object and sends it (propagets it) through DOM tree. There are three phases of event life cycle:
+ 
+ - capturing faze - in this faze event is sent from top of the DOM to the element, that action was taken on.
+ - on the object faze - happens when event reach element which user made an action
+ - bubbling faze - in this faze event is sent from the element that action was taken on, to the top element of the DOM tree.
+
+Event flow![Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
 
 #### Testing Questions:
 
