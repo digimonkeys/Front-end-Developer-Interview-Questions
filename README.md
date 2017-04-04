@@ -187,6 +187,13 @@ Standars are super important because apps being written in the same language are
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
 
 * What is a closure, and how/why would you use one?
+    Closure - allows you to access the internal scope of the function, even after it has been completed.
+    This is achieved by returning the function after calling the master function.
+    This allows you to simulate public and private variables.
+    * Favorite pattern used to create them?
+    - Module pattern
+    http://blog.nebula.us/13-javascript-closures-czyli-zrozumiec-i-wykorzystac-domkniecia
+
 * What's a typical use case for anonymous functions?
 * How do you organize your code? (module pattern, classical inheritance?)
 * What's the difference between host objects and native objects?

@@ -139,7 +139,13 @@ Standardy są bardzo istotne ponieważ aplikacje pisane w danym języku są komp
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
   
 * Czym są domknięcia, jak i po co są używane?
-  * Ulubiony wzorzec używany do ich tworzenia? argyle (Dotyczy tylko IIFE)
+    Closure - domknięcie - pozwala na dostęp do wewnętrznego scope funkcji, nawet po jej wykonaniu.
+    Osiąga się to poprzez zwrócenie funkcji po wywołaniu funkcji nadrzędnej.
+    Pozwala to na symulowanie zmiennych publicznych i prywatnych.
+  * Ulubiony wzorzec używany do ich tworzenia?
+    - Module pattern
+  http://blog.nebula.us/13-javascript-closures-czyli-zrozumiec-i-wykorzystac-domkniecia
+
 * Jakie znasz typowe użycie funkcji anonimowych?
 * Wyjaśnij pojęcie "Moduł JavaScript" i kiedy jest warte stosowania.
   * Dodatkowe punkty za wzmiankę na temat czystości przestrzeni nazw.
@@ -210,6 +216,7 @@ Function hoisting![Function hoisting](https://developer.mozilla.org/en-US/docs/W
 * Czym jest `arity` funkcji?
 * Co oznacza `"use strict";`? Jakie są zalety i wady takiego rozwiązania?
 * Jaka jest roznica miedzy funkcja a obiektem?
+
 Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
 Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
 
