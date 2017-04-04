@@ -297,6 +297,13 @@ Odniesienie: [Conditional (ternary) Operator](https://developer.mozilla.org/en-U
 Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
 Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
 
+* Jak bardzo jesteś zaznajomiony z `Promises` i/czy ich polyfillami?
+
+Używam `Promises` od pewnego czasu, prawdopodobnie coś około połowy roku.
+Dzięki `Promises` mój asynchroniczny kod wygląda o wiele lepiej i przestałem utykać w tzw. "callback hell".
+Jedyny polyfill, który znam to `Bluebird`.
+
+
 * Czym jest event life cycle (event flow)?
 
 Event lifecycle (event flow) opisuje cykl życia eventu w drzewie DOM. Przy każdym zdarzeniu, przeglądarka tworzy event i rozsyła go po drzewie DOM. Propagacja / rozsyłanie eventu odbywa się w trzech fazach:

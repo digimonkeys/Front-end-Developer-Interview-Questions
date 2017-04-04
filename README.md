@@ -397,7 +397,12 @@ Callback![Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming
 
 * Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
 * Explain what a single page app is and how to make one SEO-friendly.
-* What is the extent of your experience with Promises and/or their polyfills?
+* What is the extent of your experience with `Promises` and/or their polyfills?
+
+I've been using `Promises` for some time now, probably about half of a year.
+Thanks to `Promises` my asynchronous code looks better and I dont get stuck in a callback hell.
+The only polyfill I've used is `Bluebird`.
+
 * What are the pros and cons of using Promises instead of callbacks?
 * Variables scope in JS?
 
