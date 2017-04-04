@@ -119,6 +119,13 @@ function Person(){} var person = Person() var person = new Person()
 * Jaka jest różnica między `.call` i `.apply`?
 * Wyjaśnij `Function.prototype.bind`?
 * Kiedy optymalizujesz swój kod?
+
+* Czy w jsie mamy metody prywatne?
+
+Tak, w JS można tworzyć zmienne i metody jako prywatne. Aby stworzyć metodę prywatną należy utworzyć definicję funkcji w konstruktorze obiektu (bez przypisania jej do this). W takim wypadku funkcja / metoda będzie dostępna tylko wewnątz obiektu i tylko dla funkcji prytwatnych.
+
+Private members![Croford on private members](http://javascript.crockford.com/private.html)
+
 * Wyjaśnij działanie dziedziczenia w JavaScript?
 * Kiedy użyłbyś `document.write()`?
     Document.write() jest zawsze dostępny, jest dobrym wyborem dla dostawcow skryptow zewnetrznych aby mogli dodać oni swoj kod.

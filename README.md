@@ -194,6 +194,14 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
 * Describe event bubbling.
 * What's the difference between an "attribute" and a "property"?
 * Why is extending built-in JavaScript objects not a good idea?
+
+* Does JavaScript have private methods?
+
+Yes, private members are made by the constructor. Ordinary vars and parameters of the constructor becomes the private members.
+Private methods cannot be called by public methods.
+
+Private members![Croford on private members](http://javascript.crockford.com/private.html)
+
 * Difference between document load event and document DOMContentLoaded event?
 * What is the difference between `==` and `===`?
 * Explain the same-origin policy with regards to JavaScript.
