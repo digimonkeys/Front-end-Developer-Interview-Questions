@@ -179,7 +179,7 @@ Full tutorial: http://joshnh.com/weblog/making-a-pure-css-featured-image-slider/
 * What is a closure, and how/why would you use one?
 * What's a typical use case for anonymous functions?
 * How do you organize your code? (module pattern, classical inheritance?)
-  Eg. Module pattern, IEEF's, Atomic design.
+  Eg. Module pattern, IFFE, Atomic design.
 
 * What's the difference between host objects and native objects?
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
