@@ -137,7 +137,7 @@ Working on project based on boilerplate that used old version of webpack. When I
       2. Floating frames.      
       3. Cookies.
 
-      AJAX is not limited to XML, I also support JSON or pure text.
+      AJAX is not limited to XML, It also support JSON or pure text.
 
 * What are the advantages and disadvantages of using Ajax?
   Advantages:
@@ -153,7 +153,7 @@ Working on project based on boilerplate that used old version of webpack. When I
     - The page is not refreshed, so you can not undo or repeat steps with the browser buttons
     - Delays when the server is heavily loaded
     - Data is loaded dynamically and therefore is not part of the web page. Web search engines do not index dynamically loaded content.
-    
+
 * Explain how JSONP works (and how it's not really Ajax).
 * Have you ever used JavaScript templating?
   * If so, what libraries have you used?
