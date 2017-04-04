@@ -185,6 +185,11 @@ Function prototype is Object, and it's prototype is Function();
   Tests also require refactorization and need to be maintained, which may be considered as a disadvantage.
 
 * What tools would you use to test your code's functionality?
+
+  * Jasmine - TDD framework
+  * Karma - tests runner
+  * Selenium driver - End-to-End testing
+
 * What is the difference between a unit test and a functional/integration test?
 * What is the purpose of a code style linting tool?
 
