@@ -389,6 +389,12 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * Create a for loop that iterates up to `100` while outputting **"fizz"** at multiples of `3`, **"buzz"** at multiples of `5` and **"fizzbuzz"** at multiples of `3` and `5`
 * Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
 
+It is generally a good idea to leave the global scope untouched, because all code share a single global namespace.
+Relying too much on global variables can result in collisions between various scripts on the same page.
+The best solution for avoiding global space pollution is IIFE.
+
+Reference: [Global variables disscusion](http://stackoverflow.com/questions/2613310/ive-heard-global-variables-are-bad-what-alternative-solution-should-i-use)
+
 * What is a callback?
 
 Callback is a function that is passed to the other function as an argument. Function that gets callback as argument can invoke it in its body. This execution may be immediate as in a synchronous callback, or it might happen at a later time as in an asynchronous callback.
