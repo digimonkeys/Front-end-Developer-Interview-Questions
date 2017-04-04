@@ -243,6 +243,16 @@ $(".foo div#bar:eq(0)")
 
   Chrome Dev-Tools Profiler
 
+### Pytania z sieci:
+
+* Dlaczego lepiej serwować zasoby strony z wielu domen?
+
+  Prędkość:
+  * Paralelizacja
+  * Zmniejszone zużycie zasóbów przez headery
+
+  [źródło](https://travishorn.com/why-it-is-better-to-serve-site-assets-from-multiple-domains-972a2bf69d71)
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
