@@ -106,26 +106,10 @@ function Person(){} var person = Person() var person = new Person()
   * Wiele generowanych reklam używa `document.write()` choć nie jest to mile widziane
 * Jakie są różnice między wykrywaniem obsługi funkcji, wnioskowaniem obsługi funkcji i używaniem ciągu UA?
 * Omów AJAX jak najbardziej szczegółowo.
-  AJAX (ang. Asynchronous JavaScript and XML, asynchroniczny JavaScript i XML).
-  Technologia tworzenia aplikacji internetowych, w której interakcja użytkownika z serwerem może odbywać się na dwa sposoby:
-    Synchroniczne - wstrzymując, działanie całej strony.
-    Asynchronicznie - wymaga przekazania funkcji obsługi (callback), nie zamrażając stanu aplikacji.
-      Nie ma pewności, że odpowiedzi na żądania wrócą do nas w kolejności wysyłania żądań.
-      Aby wykonać żądanie asynchronicznie możliwe jest wykorzystanie 3 technik:
-      1. Wykorzystanie obiektu XMLHttpRequest / ActiveObcjectX (starsze wersje IE) - najpopularniejszy sposob.
-      2. Pływające ramki.
-      3. Ciasteczka.
-
-      AJAX nie ogranicza się tylko do XML, obsługuję rownież JSON czy czysty tekst.
-
 * Podaj wady i zalety żywania technologii AJAX
   Zalety:
-    - Rozszerzenie funkcjonalności interfejsu użytkownika
-    - Lepsza, szybsza i wygodniejsza interaktywność
-    - Prostota i kompaktowość
     - Ciągłe i niewidoczne dla użytkownika uaktualnianie danych
     - Brak konieczności odświeżania całej strony
-    - Wykorzystywane przez znane marki np. Google Maps
 
   Wady:
     - Nie działa, gdy wyłączona jest obsługa JavaScript w przeglądarce
