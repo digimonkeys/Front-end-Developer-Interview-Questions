@@ -290,6 +290,12 @@ $(".foo div#bar:eq(0)")
 
   Minusem jest to, że testy także potrzebują refaktoryzacji oraz jest to znacznie więcej kodu do konserwacji.
 
+* Jakich narzędzi użyłbyś do testowania swojego kodu?
+
+  * Jasmine - framework TDD
+  * Karma - runner testów
+  * Selenium driver - testowanie End-to-End
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
