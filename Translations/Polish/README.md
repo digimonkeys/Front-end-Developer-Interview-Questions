@@ -212,7 +212,7 @@ $(".foo div#bar:eq(0)")
 
   https://css-tricks.com/all-about-floats/
 * Wyjaśnij technikę "CSS sprites" oraz sposób jej wdrożenia na stronie.
-  Jest to sposób na zmniejszenie zapytań HTTP, łącząc obrazy w jeden duży. Użyłbym do tego generatora sprite'ów, łącząc wszystkie obrazy w jeden duży, zazwyczaj odseparowane od siebie o piksel. W CSS, umieściłbym obraz tła w klasie sprite, który używałbym do każdego elementu z obrazkiem. Aby określi konkretny obraz lub ikonę, utworzyłbym inną klasę z pozycją obrazu tła i jego wymiarami.
+  Jest to sposób na zmniejszenie zapytań HTTP, łącząc obrazy w jeden duży. Użyłbym do tego generatora sprite'ów, łącząc wszystkie obrazy w jeden duży, zazwyczaj odseparowane od siebie o piksel. W CSS, umieściłbym obraz tła w klasie sprite, który używałbym do każdego elementu z obrazkiem. Aby określić konkretny obraz lub ikonę, utworzyłbym inną klasę z pozycją obrazu tła i jego wymiarami.
 
   https://css-tricks.com/css-sprites/
 * Jakie znasz techniki kasowania (clearing) i kiedy wskazane jest ich stosowanie?
