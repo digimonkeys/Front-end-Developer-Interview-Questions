@@ -338,6 +338,13 @@ $(".foo div#bar:eq(0)")
 * Czy używałeś 'media queries' lub tworzyłeś konkretne układy i arkusze dla urządzeń mobilnych?
 * Czy miałeś styczność ze stylizacją SVG?
 * Jak optymalizujesz swoje strony do druku?
+  - tworzę specjalny arkusz styli do druku
+  - staram się unikać niepotrzebnych tabel
+  - staram się określić, które partie strony nie mają wartości dla druku (np. poprzez dawanie im klas .no-print z display: none)
+  - używam łamania stron (page breaks) w miejscach, gdzie powinny się łamać (.page-break { page-break-before: always; display: none; })
+  - ustalam rozmiar strony do druku (szerokość najlepiej podać w calach lub centrymetrach(oba rekomendowane))
+  
+  https://davidwalsh.name/optimizing-structure-print-css
 * Jakie stosujesz "sztuczki" przy pisaniu efektywnych CSS?
 * Czy używasz narzędzi do przetwarzania CSS? (SASS, Compass, Stylus, LESS)
   * Jeśli tak, opisz cechy, które lubisz i nie lubisz w używanych narzędziach.

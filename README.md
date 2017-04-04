@@ -150,6 +150,13 @@ Standars are super important because apps being written in the same language are
 * Have you used or implemented media queries or mobile specific layouts/CSS?
 * Are you familiar with styling SVG?
 * How do you optimize your webpages for print?
+  - create a stylesheet for print
+  - avoid unnecessary HTML tables
+  - know which portions of the page do not have any print value (give him class .no-print with display:none)
+  - use page breaks in places where page should break (.page-break { page-break-before: always; display: none; })
+  - size page for print (width in inches or centimeters(both recommended))
+  
+  https://davidwalsh.name/optimizing-structure-print-css
 * What are some of the "gotchas" for writing efficient CSS?
 * What are the advantages/disadvantages of using CSS preprocessors?
   * Describe what you like and dislike about the CSS preprocessors you have used.
