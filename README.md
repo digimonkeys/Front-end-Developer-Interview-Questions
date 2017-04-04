@@ -411,6 +411,29 @@ Other scopes![other scopes](http://stackoverflow.com/a/500459)
 
 * What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
 * What tools and techniques do you use debugging JavaScript code?
+* Types in Javascript
+
+JS types can be split in two categories - primitives and objects
+
+Primitives are:
+- String
+- Number
+- Boolean
+- null
+- undefined
+- Symbol (from ES6)
+
+Not primitive type is Object type ie:
+- Array
+- Date
+- Function
+- Map, WeakMap
+- Set, WeakSet
+
+Primitive types are passed by value, objects are passed by reference.
+
+Javascript Types![Javascript Data Types](https://developer.mozilla.org/pl/docs/Web/JavaScript/Data_structures)
+
 * What language constructions do you use for iterating over object properties and array items?
 * Explain the difference between mutable and immutable objects.
   * What is an example of an immutable object in JavaScript?
