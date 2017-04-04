@@ -262,6 +262,15 @@ var foo = 10 + '20';
 
   `1020` (string)
 
+* Jaka jest wartość `foo.x`?
+```javascript
+var foo = {n: 1};
+var bar = foo;
+foo.x = foo = {n: 2};
+```
+
+  `undefined`
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?

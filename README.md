@@ -267,6 +267,8 @@ var bar = foo;
 foo.x = foo = {n: 2};
 ```
 
+  `undefined`
+
 *Question: What does the following code print?*
 ```javascript
 console.log('one');
