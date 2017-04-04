@@ -277,7 +277,10 @@ $(".foo div#bar:eq(0)")
 
 * Jaka jest różnica między klasami oraz idendyfikatorami w CSS?
   Idendyfikatory są unikalne, każdy element może posiadać tylko jeden identyfikator, dodatkowo przeglądarka może używać identyfikatorów do nawigacji (scrollując do elementu z danym ID). Klasy nie są unikalne oraz elementy mogą posiadać więcej niż jedną klasę, nie mają większego znaczenia dla samej przeglądarki.
+* Opisz BFC(Block Formatting Context) i powiedz jak działa.
+  Blokowe formatowanie kontekstu jest częścią wizualnego renderingu CSS strony. Jest to miejsce, w którym występuje układ elementów blokowych i, w którym float'y komunikują się między sobą. W BFC każde 'pudełko' dotyka lewą zewnętrzną krawędzią kontenera (dla formatowania od-prawej-do-lewej dotyka prawej krawędzi). Zasady dla pozycjonowania i czyszczenia float'ów działają w tym samym blokowym formatowaniu kontekstu. Dodatkowo BFC powoduje nakładanie się marginesów (margin collapsing).
 
+  https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context
 * Opisz czym jest z-index oraz jak tworzony jest układ warstw.
   Właściwość z-index kontroluje pionowe nakładania się elementów, które nachodzą na siebie. Bez wartości z-index, elementy układają się w kolejności w jakiej pojawiają się w DOM (najniżej położony element w DOM pojawia się na samej górze). Zagnieżdżanie jest również ważne, jeśli element B jest nad elementem A, dziecko elementu A nigdy nie będzie wyżej niż element B.
 

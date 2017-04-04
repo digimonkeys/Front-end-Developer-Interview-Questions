@@ -127,6 +127,9 @@ Full tutorial: http://joshnh.com/weblog/making-a-pure-css-featured-image-slider/
 
   https://css-tricks.com/almanac/properties/z/z-index/
 * Describe BFC(Block Formatting Context) and how it works.
+  A block formatting context is a part of a visual CSS rendering of a Web page. It is the region in which the layout of block boxes occurs and in which floats interact with each other. In a BFC, each box’s left outer edge touches the left edge of the containing block (for right-to-left formatting, right edges touch). The rules for positioning and clearing of floats in apply only to things within the same block formatting context. BFC is also causing margin collapsing.
+
+  https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context
 * What are the various clearing techniques and which is appropriate for what context?
 * Explain CSS sprites, and how you would implement them on a page or site.
 * What are your favourite image replacement techniques and which do you use when?
