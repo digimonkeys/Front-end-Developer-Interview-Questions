@@ -192,6 +192,9 @@ $(".foo div#bar:eq(0)")
 
 * Opisz, czym jest plik "reset" dla CSS i dlaczego jest użyteczny.
 * Opisz jak działa właściwość `float`.
+  Float'y mogą by używane do opływania tekstu wokół obrazka/elementu lub to tworzenia całych layoutów. Pływające elementy pozostają częścią flow strony. Trzeba pamięta również o czyścieniu float'ów używając 'clear: both', by uniknąć podstawowych problemów, takich jak 'opływanie' elementów, którym nie nadaliśmy właściwości float.
+
+  https://css-tricks.com/all-about-floats/
 * Jakie znasz techniki kasowania (clearing) i kiedy wskazane jest ich stosowanie?
 * Wyjaśnij technikę "CSS sprites" oraz sposób jej wdrożenia na stronie.
 * Jakie są Twoje ulubione techniki zastępowania obrazów i kiedy je stosujesz?
