@@ -209,6 +209,13 @@ Function prototype is Object, and it's prototype is Function();
 
 * Do your best to describe the process from the time you type in a website's URL to it finishing loading on your screen.
 * What are the differences between Long-Polling, Websockets and Server-Sent Events?
+
+  * Long-polling - The client sends a request, and when the server has a new information to report it sends it to the client. This process is one-off.
+  * WebSockets - The client connects to the server and the connection is maintained. The client can then exchange information with the server.
+  * Server-Sent Events - The client connects to the server by sending a request, this connection is maintained. The server can then send new information to the client as it becomes available. In comparison to WebSockets, the connection is unidirectional.
+
+  [more info](http://stackoverflow.com/a/12855533)
+
 * Explain the following request and response headers:
   * Diff. between Expires, Date, Age and If-Modified-...
   * Do Not Track
