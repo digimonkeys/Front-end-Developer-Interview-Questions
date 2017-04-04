@@ -397,6 +397,13 @@ Callback![Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming
 
 * Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
 * Explain what a single page app is and how to make one SEO-friendly.
+
+A single-page application (SPA) is a web application or web site that fits on a single web page with the goal of providing a user experience similiar to that of a desktop application. In an SPA, either all necessary code - HTML, JavaScript and CSS - is retrieved with a single page load, or dynamically loaded and added to the page as necessary.
+The page does not reload at any point in the process, although the `location hash` or the `HTML5 History API` can be used to provide the perception and navigabillity of separate logical pages in the application.
+The page can be SEO-friendly by enabling server-side rendering and using HTML5 semantics.
+
+[Single-page application](https://en.wikipedia.org/wiki/Single-page_application)
+
 * What is the extent of your experience with Promises and/or their polyfills?
 * What are the pros and cons of using Promises instead of callbacks?
 * Variables scope in JS?
