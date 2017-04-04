@@ -104,6 +104,48 @@ Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich prz
 * Wyjaśnij jak działa dziedziczenie prototypowe.
 * Jak radzisz sobie z testowaniem swojego kodu JavaScript?
 * AMD kontra CommonJS?
+* Jakie znasz patterny w javascripcie? 
+
+- Konstruktor
+Konstruktory obiektów używane są do tworzenia określonych typów obiektów - przygotowują obiekty do użycia oraz przyjmują argumenty, które konstruktor może wykorzystać do ustawiania wartości właściwości i metod obiektu, kiedy ten tworzony jest po raz pierwszy.
+
+- Moduł
+W JavaScript wzorzec modułu używany jest do głębszej emulacji klas, w taki sposób, że możemy tworzyć zarówno publiczne jak i prywatne metody i zmienne wewnątrz obiektu, jednocześnie ukrywając poszczególne jego części przed global scope. Wynikiem tego jest mniejsze ryzyko konfliktu nazw funkcji stworzonych w module z funkcjami stworzonymi przez inne skrypty w aplikacji.
+
+- Singleton
+Wzorzec singletonu ma w założeniu zapewnić tylko jedną instancję danej klasy. Oznacza to, że próba utworzenia obiektu danej klasy po raz drugi powinna zwrócić dokładnie ten sam obiekt, który został zwrócony za pierwszym razem. Jako, że w JS nie istnieją klasy, możemy mówić tylkoo instancjach obiektów. W JS istnieje kilka sposobów uzyskania singletonu:
+
+  - Wykorzystanie zmiennej globalnej do zapamitania instancji.
+  - Wykorzystanie właściwości statycznej konstruktora. Funkcje w jzyku JavaScript są obiektami, więc mają właściwości. Można utowrzyć właściwość "Object".instance i to w niej przechowywać obiekt.
+  - Zamknicie instancji w domkniciu. W ten sposób instancja staje si elementem prywatnym i nie może zostać zmieniona z zewnątrz.
+
+- Obserwator
+Wzorzec obserwatora jest niezwykle czsto wykorzystywany w programowaniu po stronie klienta w jzyku JavaScript.
+Głównym celem użwania wzorca jest promowanie luźnego powiązania elementów. Zamiast sytuacji, w której jeden obiekt wywołuje metod drugiego, mamy sytuacj, w której drugi z obiektów zgłasza chęć otrzymywania powiadomień o zmianie w pierwszym obiekcie. Subskrybenta
+nazywa si czsto obserwatorem, a obiekt obserwowany obiektem publikującym lub źródłem. Obiekt publikujący wywołuje subskrybentów po zajściu istotnego zdarzenia i bardzo często przekazuje informację o nim w postaci obiektu zdarzenia.
+
+  Uczestnicy
+
+  - Subject:
+    - zarząda lista observerów
+    - implementuje interfejs pozwalający observerom subskrybować i usuwać subskrypcję dla danego zdarzenia
+    - wysyła powiadomienie do swoich subskrybentów, gdy jego stan się zmieni
+  - Observers - posiadają sygnaturę funkcji, która może zostać wykonana, gdy zmieni się Subject
+
+- Strategia
+Wzorzec strategii umożliwa wybór odpowiedniego algorytmu na etapie działania aplikacji. Użytkownicy kodu mogą stosować ten sam interfejs zewntrzny, ale wybierać spośród kilku dostpnych algorytmów, by lepiej dopasować implementacj do aktualnego kontekstu.
+
+  Uczestnicy: 
+
+  - Context:
+    - przechowuje referencję do obecnego obiektu Strategii
+    - posiada interfejs dzięki któremu klienci mogą zarządać wykonania konkretnej strategii
+    - pozwala klientowi na zmianę strategii
+  - Strategy - implementuje algorytmy używając interfejsu Strategii
+
+DotFactory patterns![DotFactory patterns](http://www.dofactory.com/javascript/design-patterns)
+JavaScript Design Patterns![JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+
 * Czym jest tablica mieszająca (hashtable)?
 * Co oznaczają komunikaty `undefined` i `undeclared` dla zmiennych?
 * Czym są domknięcia, jak i po co są używane?
