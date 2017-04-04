@@ -225,6 +225,8 @@ Function prototype is Object, and it's prototype is Function();
 var foo = 10 + '20';
 ```
 
+  `1020` (string)
+
 *Question: How would you make this work?*
 ```javascript
 add(2, 5); // 7
