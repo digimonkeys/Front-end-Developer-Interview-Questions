@@ -41,7 +41,14 @@ Pracowałem nad projektem wykorzystującym boilerplate bundlujący się przez st
 * Jakie jest Twoje preferowane środowisko programistyczne? (system operacyjny, edytor, przeglądarki, narzędzia itd.)
 * Opisz kolejne zadania podczas tworzenia strony internetowej?
 * Opisz różnicę między stopniowym ulepszaniem (progressive enhancement) i wdzięczną degradacją (graceful degradation)?
-  * Dodatkowe punkty za opisanie wykrywania obsługi cech (feature detection)
+  * Dodatkowe punkty za opisanie wykrywania obsługi cech (feature detection)  
+Graceful degradation - oprogramowanie / strona jest tworzona dla użytkowników używających nowszych przeglądarek, obsługujących nowe technologie, zapewniając im pełne user expirience. Stopniowo zmniejsza się user expirience dla użytkowników używających starsze wersje przeglądarek, wciąż zapewniając im funkcjonalność aplikacji / strony na podstawowym poziomie.  
+
+ Progressive enhancement - tworzenie aplikacji strony zapewniającej pewien poziom funkcjonalności dla wszystkich przeglądarek, następnie rozbudowuje się ją o nowe funkcjonalności / features dla nowszych przeglądarek.  
+
+ wykrywanie obsługi cech to technika sprawdzania danego środowiska (np przeglądarki) pod względem dostepnych funkcjonalności, pozwalająca aplikacji na pewne dostosowanie swojego działania do zastanych możliwości
+
+
 * Wyjaśnij, co kryje się za terminem "semantyczny HTML".
 * Jak optymalizowałbyś zasoby strony internetowej?
   * Myśląc o wielu rozwiązaniach, które zawierają:
