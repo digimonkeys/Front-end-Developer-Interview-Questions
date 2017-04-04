@@ -64,7 +64,9 @@ Technologie - ostatnio preferuję React i redux w połączeniu z webpackiem, ale
     * Zasoby CDN
     * Buforowanie
     * itd.
-* Dlaczego serwowanie zasobów strony przez wiele domen jest lepsze?
+* Dlaczego serwowanie zasobów strony przez wiele domen jest lepsze?  
+Ponieważ pozwala na użycie lżejszego serwera, który nie będzie musiał ładować modułów wymaganych do serwowania dynamicznych treści przy każdym requeście o zasoby statyczne. Dodanie domeny oznacza, że zwięszymy liczbę możliwych równoległych pobrań dla przeglądarki. Można równiez wykorzystać brak potrzeby wysyłania plikow cookie przy przesyłaniu statycznych treści (css, obrazków, plików js) co zmniejszy obciażenie sieci.  
+
   * Ile zasobów pobiera przeglądarka z danej domeny w jednej chwili?
 * Podaj 3 sposoby na zmniejszenie czasu ładowania strony. (postrzeganego lub rzeczywistego czasu ładowania)
 * Jeśli dołączasz do projektu, w którym używa się tabulacji, a ty używasz spacji, co wtedy zrobisz?
