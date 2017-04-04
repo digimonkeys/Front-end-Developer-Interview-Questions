@@ -44,7 +44,7 @@ Pracowałem nad projektem wykorzystującym boilerplate bundlujący się przez st
   * Dodatkowe punkty za opisanie wykrywania obsługi cech (feature detection)
 * Wyjaśnij, co kryje się za terminem "semantyczny HTML".
 * Jak optymalizowałbyś zasoby strony internetowej?  
-Optymalizacja obrazków, łączenie plików, Zmniejszenie rozmiaru plików uglifyjs, minification, używanie SVG, css sprites (jeden obrazek, używany wiele razy), Zasoby CDN - mogą być serwowane w zależności od odległości od użytkoniwka, response time etc, cachowanie, nie ładować dużych bibliotek jeśli potrzebujemy z nich tylko jednej funkcji  
+Optymalizacja obrazków, łączenie plików, Zmniejszenie rozmiaru plików przy użyciu uglifyjs, stosowanie minifikacji, używanie SVG i css sprites (jeden obrazek, używany wiele razy), Zasoby CDN - mogą być serwowane w zależności od odległości od użytkoniwka, response time etc, cachowanie, nie ładować dużych bibliotek jeśli potrzebujemy z nich tylko jednej funkcji  
 
 * Dlaczego serwowanie zasobów strony przez wiele domen jest lepsze?
   * Ile zasobów pobiera przeglądarka z danej domeny w jednej chwili?
