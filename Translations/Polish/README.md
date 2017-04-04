@@ -74,7 +74,9 @@ Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich prz
 * Jeśli dołączasz do projektu, w którym używa się tabulacji, a ty używasz spacji, co wtedy zrobisz?
   * Sugerowanie użycia narzędzi w stylu EditorConfig (http://editorconfig.org)
   * Zgodnie z konwencjami (pozostań konsekwentny)
-  * `issue :retab! command`
+  * `issue :retab! command`   
+  Dostosuję się. Wystarczy przecież zmienić ustawienia edytora.  
+  
 * Napisz prosty pokaz slajdów
   * Dodatkowe punkty, jeśli nie używasz JS.  
 Można to zrobić za pomocą CSS3 wykorzystując unordered list i input type = radio. Najistotniejsze elementy kodu:

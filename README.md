@@ -64,6 +64,7 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
   * What are the exceptions?
 * Name 3 ways to decrease page load (perceived or actual load time).
 * If you jumped on a project and they used tabs and you used spaces, what would you do?
+I will adapt (just change settings in my editor).
 * Describe how you would create a simple slideshow page. Bonus points if without JS.  
 We can do it only with CSS3 using ul element and input type = radio. The most important parts of code:  
 
