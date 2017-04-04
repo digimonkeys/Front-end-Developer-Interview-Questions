@@ -81,7 +81,7 @@ Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich prz
   * Profiler, JSPerf, Dromaeo
 * Gdybyś mógł opanować jedną technologię w tym roku, jaka byłaby to technologia?
 * Wyjaśnij znaczenie standardów sieciowych i ich twórców.  
-Standardy są bardzo istotne ponieważ aplikacje pisane w danym języku są kompilowane przez różne przeglądarki. Pozwala to uniknąć sytuacji, w której kod działa na połowie przeglądarek, lub działa tylko na tej ulubionej kodera. Gdy opracowany jest standard przeglądarki wiedzą czego się spodziewać i każdy piszący w zgodzie ze standardem może zakładać, że wszystko będzie działać. Twórcami standardów są w3c, iso, ansi, unicode consortium, ietf oraz ecma.  
+Standardy są bardzo istotne ponieważ aplikacje pisane w danym języku są kompilowane przez różne przeglądarki. Pozwala to uniknąć sytuacji, w której kod działa w połowie przeglądarek, lub działa tylko w tej ulubionej kodera. Gdy opracowany jest standard przeglądarki wiedzą czego się spodziewać i każdy piszący w zgodzie ze standardem może zakładać, że wszystko będzie działać. Twórcami standardów są w3c, iso, ansi, unicode consortium, ietf oraz ecma.  
 
 * Czym jest FOUC? Jak unikasz FOUC?
 

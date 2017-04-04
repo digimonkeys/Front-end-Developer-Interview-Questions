@@ -67,7 +67,7 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
 * Describe how you would create a simple slideshow page.
 * If you could master one technology this year, what would it be?
 * Explain the importance of standards and standards bodies.  
-Standars are super important because apps being written in the same language are compiled by different browsers. Thanks to standards we avoid creating code that would work in half of browsers or only in one of them. Standard creators are: w3c, iso, ansi, unicode consortium, ietf oraz ecma  
+Standars are super important because apps being written in the same language are compiled by different browsers. Thanks to standards we avoid creating code that would work in half of browsers or only in one of them. Standard creators are: w3c, iso, ansi, unicode consortium, ietf and ecma  
 
 * What is Flash of Unstyled Content? How do you avoid FOUC?
 * Explain what ARIA and screenreaders are, and how to make a website accessible.
