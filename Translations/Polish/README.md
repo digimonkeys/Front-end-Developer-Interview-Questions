@@ -39,7 +39,12 @@ Tworzenie rzeczy. Od dziecka uwielbiałem tworzyć coś nowego i rozwiązywac ł
 Pracowałem nad projektem wykorzystującym boilerplate bundlujący się przez starą wersję webpacka. Kiedy chciałem dodać do niego kilka niezbędnych rozszerzeń, wszystko okazało się niekompatybilne i rozsypało w drzazgi. Musiałem napisac cały skrypt webpacka od nowa.  
 
 * Jakie jest Twoje preferowane środowisko programistyczne? (system operacyjny, edytor, przeglądarki, narzędzia itd.)
-* Opisz kolejne zadania podczas tworzenia strony internetowej?
+* Opisz kolejne zadania podczas tworzenia strony internetowej? 
+
+Najpierw zbieranie wymagań klienta, funkcjonalnych i niefunkcjonalnych.
+Tworzenie środowiska - skrypty służące do budowania w środowisku developerskim i produkcyjnym - webpack, gulp.
+Szkielet strony i semantyka, wypełnienie kontentem + poprawa semantyki, stylowanie, animacje, dodawanie interaktywności.  
+
 * Opisz różnicę między stopniowym ulepszaniem (progressive enhancement) i wdzięczną degradacją (graceful degradation)?
   * Dodatkowe punkty za opisanie wykrywania obsługi cech (feature detection)
 * Wyjaśnij, co kryje się za terminem "semantyczny HTML".
