@@ -24,7 +24,10 @@ This file contains a number of front-end interview questions that can be used wh
 
 #### General Questions:
 
-* What did you learn yesterday/this week?
+* What did you learn yesterday/this week?  
+ React Higher Order Components  
+ Sequelize ORM for NodeJS  
+
 * What excites or interests you about coding?
 * What is a recent technical challenge you experienced and how did you solve it?
 * What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?
