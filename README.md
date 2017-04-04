@@ -73,7 +73,7 @@ Creating stuff. Since childhood I loved processes of creation and also problem s
   IDs are unique, each element can have only one ID and ID's may be used by browser to scroll the page to show that element. Classes are not unique, each element can have multiple classes. Classes have not special meaning for browsers. Element can have both id and classes.
 * What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
 * Describe Floats and how they work.
-  Floats can be used to text wrapping around images/elements or to create entire web layouts. Floated elements remain a part of the flow of the web page.
+  Floats can be used to text wrapping around images/elements or to create entire web layouts. Floated elements remain a part of the flow of the web page, unlike elements with fixed position, which are removed from flow of the page and do not participate in adjusting content e.g. to the varying width of the window.
 
   https://css-tricks.com/all-about-floats/
 * Describe z-index and how stacking context is formed.
