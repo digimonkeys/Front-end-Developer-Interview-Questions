@@ -205,6 +205,12 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
   
   https://davidwalsh.name/optimizing-structure-print-css
 * What are some of the "gotchas" for writing efficient CSS?
+  - avoid key selectors that match large numbers of elements (tag and universal selectors)
+  - prefer class and ID selectors over tag selectors
+  - avoid redundant selectors
+  - try group and reuse common properties
+
+  https://css-tricks.com/efficiently-rendering-css/
 * What are the advantages/disadvantages of using CSS preprocessors?
   * Describe what you like and dislike about the CSS preprocessors you have used.
 * How would you implement a web design comp that uses non-standard fonts?
