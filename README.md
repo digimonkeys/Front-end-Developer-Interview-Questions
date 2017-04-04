@@ -133,9 +133,9 @@ Working on project based on boilerplate that used old version of webpack. When I
     Asynchronous - requires callback function, without freezing the application state.
       There is no assurance that the response to the requests will return to us in the order in which requests are sent.
       It is possible to make asynchronous requests using 3 techniques:
-      1. Using the XMLHttpRequest / ActiveObcjectX object (older versions of IE) - the most common way.
-      2. Floating frames.      
-      3. Cookies.
+      1. Using the XMLHttpRequest / ActiveObcjectX object (older versions of IE) - the most common way
+      2. Floating frames
+      3. Cookies
 
       AJAX is not limited to XML, It also support JSON or pure text.
 
