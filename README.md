@@ -257,6 +257,8 @@ Event flow![Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
 
 * What is the purpose of a code style linting tool?
 
+  Avoids introducing simple bugs at the stage of writing the code. It assures that code formatting is more consistent between members of the team.
+
 #### Performance Questions:
 
 * What tools would you use to find a performance bug in your code?
