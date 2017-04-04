@@ -187,6 +187,12 @@ function Person(){} var person = Person() var person = new Person()
 ```
 * Jaka jest różnica między `.call` i `.apply`?
 * Wyjaśnij `Function.prototype.bind`?
+* Czym jest callback?
+
+Callback jest to funckcja przekazywana do innej funkcji poprzez argument. Funkcja, która przyjmuje callback jako argument może w swoim ciele wywołać przekazaną funkcję. Wywołanie to może nastąpić natychmiast (synchronicznie), albo późniejszym czasie (asynchronicznie).
+
+Callback![Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming))
+
 * Kiedy optymalizujesz swój kod?
 * Wyjaśnij działanie dziedziczenia w JavaScript?
 * Kiedy użyłbyś `document.write()`?
