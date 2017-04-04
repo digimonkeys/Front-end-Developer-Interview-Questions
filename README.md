@@ -188,6 +188,8 @@ Function prototype is Object, and it's prototype is Function();
 * What is the difference between a unit test and a functional/integration test?
 * What is the purpose of a code style linting tool?
 
+  Eliminating of simple errors at the stage of writing the code. It assures that code formatting is the same for all members of the team.
+
 #### Performance Questions:
 
 * What tools would you use to find a performance bug in your code?
