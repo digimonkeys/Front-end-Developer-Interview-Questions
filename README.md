@@ -35,12 +35,30 @@ Creating stuff. Since childhood I loved processes of creation and also problem s
 
 Working on project based on boilerplate that used old version of webpack. When I tried to add some new indispensable features to it, everything occured to be incompatible and broke. I had to create whole webpack script from scratch.  
 
-* What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?
+* What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?  
+
+UI - I usually start with drawing sketch, simply with pencil on paper - later I treat it as general guide to what I want to accomplish. I always put accent on readability and simplicity for users.  
+
+Security - On frontend everything might happen, so I store fragile data on backend.  
+
+Performance - I focus on writing clear, understandable code - when some functionality seems to be slow, then I try to boost its performance. Sometimes, when particular task seems to be heavy and I can solve it in different ways, I register and compare times of execution for different solutions in the first place.  
+
+SEO - I usually dont take care of SEO in projects (it is not my task).  
+
+Maintainability - I use general best practises, eg. take care of simple functions and variables names, split code into small, simple modules. I always put big stress on adapting to my hiring company practises.  
+
+Technology - Lately I prefer to use React with Redux and webpack, but I'm also familiar with Angular and gulp etc (...)  
+
 * Talk about your preferred development environment.
-* Which version control systems are you familiar with?
+* Which version control systems are you familiar with?  
+git, I worked on github and gitlab. I tried using git guis but I prefer to work in command line.  
+
 * Can you describe your workflow when you create a web page?
 * If you have 5 different stylesheets, how would you best integrate them into the site?
-* Can you describe the difference between progressive enhancement and graceful degradation?
+* Can you describe the difference between progressive enhancement and graceful degradation?  
+* What is semantic html?  
+Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, of the information in webpages and web applications rather than merely to define its presentation or look. Semantic HTML is processed by traditional web browsers as well as by many other user agents. CSS is used to suggest its presentation to human users.    
+
 * How would you optimize a website's assets/resources?
 * How many resources will a browser download from a given domain at a time?
   * What are the exceptions?
@@ -91,9 +109,16 @@ Working on project based on boilerplate that used old version of webpack. When I
 * Explain CSS sprites, and how you would implement them on a page or site.
 * What are your favourite image replacement techniques and which do you use when?
 * How would you approach fixing browser-specific styling issues?
+  - use separate stylesheets that loads when that specific browser is being used. 
+  - use cross-browsers CSS prefixes (-moz-, -webkit-, etc)
+  - resetting or normalizing CSS
 * How do you serve your pages for feature-constrained browsers?
   * What techniques/processes do you use?
 * What are the different ways to visually hide content (and make it available only for screen readers)?
+  - visibility: hidden
+  - width: 0; height: 0;
+  - text-indent: -1000px
+  - absolute position off the screen
 * Have you ever used a grid system, and if so, what do you prefer?
 * Have you used or implemented media queries or mobile specific layouts/CSS?
 * Are you familiar with styling SVG?
@@ -178,10 +203,24 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 Function is a specific type of object in JavaScript, that has all the properties of normal object. Only difference is that function can be called / invoked. It's possible, because functions has internal [[Call]] method.
 Function prototype is Object, and it's prototype is Function();
 
+* What is event life cycle (event flow) ?
+ 
+Event life cycle (event flow) describes flow of an event through DOM tree. With every user interaction (or builtin event) browser creates event object and sends it (propagets it) through DOM tree. There are three phases of event life cycle:
+ 
+ - capturing faze - in this faze event is sent from top of the DOM to the element, that action was taken on.
+ - on the object faze - happens when event reach element which user made an action
+ - bubbling faze - in this faze event is sent from the element that action was taken on, to the top element of the DOM tree.
+
+Event flow![Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
 
 #### Testing Questions:
 
 * What are some advantages/disadvantages to testing your code?
+
+  Testing your code (unit testing) assures that the code is working as it should, allows you to refactor it and check whether nothing has been broken.
+
+  Tests also require refactorization and need to be maintained, which may be considered as a disadvantage.
+
 * What tools would you use to test your code's functionality?
 * What is the difference between a unit test and a functional/integration test?
 * What is the purpose of a code style linting tool?
