@@ -254,6 +254,14 @@ $(".foo div#bar:eq(0)")
   * Czcionki sieciowe (serwisy czcionek jak: Google Webfonts, Typekit itd.)
 * Wyjaśnij jak przeglądarka określa elementy pasujące do selektora CSS?
 
+### Pytania z testowania:
+
+* Jakie są niektóre z plusów/minusów testowania pisanego kodu?
+
+  Testowanie kodu (testy jednostkowe) zapewniają, że kod działa tak jak powinien, pozwala prowadzić refaktoryzację kodu i sprawdzać, czy nic nie zostało zepsute.
+
+  Minusem jest to, że testy także potrzebują refaktoryzacji oraz jest to znacznie więcej kodu do konserwacji.
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
