@@ -121,6 +121,19 @@ function Person(){} var person = Person() var person = new Person()
 * Kiedy użyłbyś `document.write()`?
   * Wiele generowanych reklam używa `document.write()` choć nie jest to mile widziane
 * Jakie są różnice między wykrywaniem obsługi funkcji, wnioskowaniem obsługi funkcji i używaniem ciągu UA?
+* Co to sa falsy values?
+ 
+Falsy values są to wartości, które podczas porównań == (double equals) oraz umieszczone w if (..) zmieniane są (koercja) na wartość false. Są to:
+
+- 0
+- "" - pusty string
+- null
+- undefined
+- NaN
+- false 
+
+Falsy values![MDN falsy values](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+
 * Omów AJAX jak najbardziej szczegółowo.
 * Wyjaśnij działanie JSONP (i dlaczego nie jest właściwie AJAX).
 * Czy kiedykolwiek używałeś szablonów w JavaScript?
