@@ -188,7 +188,13 @@ Primitives are:
 - undefined
 - Symbol (from ES6)
 
-Not primitive type is Object type.
+Not primitive type is Object type ie:
+- Array
+- Date
+- Function
+- Map, WeakMap
+- Set, WeakSet
+
 Primitive types are passed by value, objects are passed by reference.
 
 Javascript Types![Javascript Data Types](https://developer.mozilla.org/pl/docs/Web/JavaScript/Data_structures)
