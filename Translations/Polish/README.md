@@ -216,7 +216,13 @@ $(".foo div#bar:eq(0)")
 * Jakie są Twoje ulubione techniki zastępowania obrazów i kiedy je stosujesz?
 * Haczyki właściwości CSS, warunkowe dołączanie plików .css lub... coś innego?
 * Jak serwujesz strony dla przeglądarek z ograniczonym wsparciem funkcji?
+  - odzielne style CSS, które ładują się gdy dana przeglądarka jest używana
+  
   * Jakie techniki stosujesz?
+      - Progressive Enhancement
+      - Graceful Degradation
+      
+  https://www.sitepoint.com/progressive-enhancement-graceful-degradation-basics/
 * Jakie istnieją sposoby wizualnego ukrycia treści (uczynienia ich dostępnymi tylko dla czytników ekranu)?
 * Czy kiedykolwiek używałeś systemów siatek, a jeśli tak, to jakie preferujesz?
 * Czy używałeś 'media queries' lub tworzyłeś konkretne układy i arkusze dla urządzeń mobilnych?

@@ -92,7 +92,13 @@ Working on project based on boilerplate that used old version of webpack. When I
 * What are your favourite image replacement techniques and which do you use when?
 * How would you approach fixing browser-specific styling issues?
 * How do you serve your pages for feature-constrained browsers?
+  - separate stylesheets that loads when that specific browser is being used
+
   * What techniques/processes do you use?
+      Progressive Enhancement
+      Graceful Degradation
+
+  https://www.sitepoint.com/progressive-enhancement-graceful-degradation-basics/
 * What are the different ways to visually hide content (and make it available only for screen readers)?
 * Have you ever used a grid system, and if so, what do you prefer?
 * Have you used or implemented media queries or mobile specific layouts/CSS?
