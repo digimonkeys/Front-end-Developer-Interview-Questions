@@ -870,6 +870,12 @@ console.log('three');
   two
   ```
 
+* Czym jest routing w AngularJS?
+  AngularJS wspiera SPA używając modułu routującego ngRoute. Ten moduł bazuje na url. Kiedy użytkownik żąda określonego url, silnik routingu przechwytuje ten url i renderuje widok bazując na zdefiniowanych zasadach routingu. 
+
+  https://docs.angularjs.org/api/ngRoute/service/$route
+  http://www.tutorialsteacher.com/angularjs/angularjs-routing
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
