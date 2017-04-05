@@ -165,7 +165,13 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 * What are `data-` attributes good for?
 * Consider HTML5 as an open web platform. What are the building blocks of HTML5?
 * Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.
-* Describe the difference between `<script>`, `<script async>` and `<script defer>`.
+* Describe the difference between `<script>`, `<script async>` and `<script defer>`.  
+Browser behaviour encountering:  
+- script tag: Pause parsing the document. Make a request to fetch the file. Execute the script after it has been downloaded. Resume parsing the document.  
+- script tag with async: Make parallel requests to fetch the files. Continue parsing the document as if it was never interrupted. Execute the individual scripts the moment the files are downloaded.  
+- script tag with defer: Make parallel requests to fetch the files. Continue parsing the document as if it was never interrupted. Finish parsing the document even if the script files have downloaded. Execute each script in the order they were encountered in the document.  
+http://javascript.tutorialhorizon.com/2015/08/11/script-async-defer-attribute/  
+
 * Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
 * What is progressive rendering?
 * Have you used different HTML templating languages before?

@@ -167,6 +167,12 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 * Jaka jest przydatność atrybutów `data-`
 * Rozpatrujemy HTML5 jako otwartą platformę internetową. Jakie składniki tworzą HTML5?
 * Opisz różnice między cookies, sessionStorage i localStorage.
+* Opisz różnice między `<script>`, `<script async>` i `<script defer>`.  
+Zachowanie przeglądarki napotykającej:  
+- script tag: Zatrzymuje parsowanie dokumentu. Wykonuje request po plik skryptu. Wykonuje skrypt po ściągnięciu go. Kontynuuje parsowanie dokumentu.  
+- script tag z async: Wykonuje równoległe requesty po każdy napotkany skrypt. Kontynuuje parsowanie dokumentu jakby nic nie przerwało tego procesu. Kiedy którykolwiek skrypt zostanie ściągnięty, wykonuje go.  
+- script tag z defer: Wykonuje równoległe requesty po każdy napotkany skrypt. Kontynuuje parsowanie dokumentu jakby nic nie przerwało tego procesu. Parsuje dokument do końca, nawet jeśli jakiś skrypt się ściągnął. Następnie wykonuje skrypty w kolejności, w jakiej zostały napotkane w dokumencie.  
+http://javascript.tutorialhorizon.com/2015/08/11/script-async-defer-attribute/  
 
 ### Pytania JS:
 
