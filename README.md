@@ -201,6 +201,8 @@ Function prototype is Object, and it's prototype is Function();
   * painting - filling in pixels, drawing elements: text, graphics etc.
   * compositing - showing of elements on the page in the correct order - rendering of the page.
 
+  [source](https://developers.google.com/web/fundamentals/performance/rendering/?hl=en)
+
 #### Network Questions:
 
 * Traditionally, why has it been better to serve site assets from multiple domains?

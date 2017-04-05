@@ -249,6 +249,8 @@ $(".foo div#bar:eq(0)")
   * painting - wypełnianie pixelami, rysowanie tekstów, kolorów, grafiki.
   * compositing - składanie komponentów i wyświeltanie ich we właściwej kolejności, na właściwym miejscu - renderowanie całej strony.
 
+  [źródło](https://developers.google.com/web/fundamentals/performance/rendering/?hl=en)
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
