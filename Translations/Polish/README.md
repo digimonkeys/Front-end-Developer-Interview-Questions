@@ -834,6 +834,11 @@ console.log('three');
   two
   ```
 
+* Czym jest zakres (scope) w AngularJS?
+  Scope jest obiektem, który odnosi się do warstwy modelu aplikacji. Jest kontekstem wykonawczym dla wyrażeń. Zakresy są zorganizowane w hierarchiczną strukturę, które imitują strukurę DOM aplikacji. Zakresy mogą obserwować wyrażenia i propagować zdarzenia.
+
+  https://docs.angularjs.org/guide/scope
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
