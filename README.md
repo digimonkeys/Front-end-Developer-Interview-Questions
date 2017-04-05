@@ -274,6 +274,9 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
 * Describe pseudo-elements and discuss what they are used for.
 * Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
 * What does ```* { box-sizing: border-box; }``` do? What are its advantages?
+  It’s the IE6 Quirks mode: if you set a width, and add paddings and borders, the total width won’t change. It’s the inner width that will adapt.
+
+  Advantage: You can play with the paddings and border values without worrying about expanding your box. Very convenient for column layouts. And you can mix percentage and pixel values, so you do not have to rely on a child element for the padding.
 * List as many values for the display property that you can remember.
 * What's the difference between inline and inline-block?
   Elements with display:inline-block are like display:inline elements, but they can have a width and a height. That means that you can use an inline-block element as a block while flowing it within text or other elements.
@@ -327,6 +330,25 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
     http://stackoverflow.com/questions/7614317/what-is-the-difference-between-native-objects-and-host-objects
     
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
+* How you can achieve inheritance in JavaScript (new + Object.create)
+
+- With a constructor
+
+A "constructor" in JavaScript is "just" a function that happens to be called with the new operator.
+In constructor functions, the newly created object inherits from the constructor's prototype.
+In the new Function() form the declared properties/functions do not form the prototype.
+
+- With Object.create
+
+ECMAScript 5 introduced a new method: Object.create(). Calling this method creates a new object. The prototype of this object is the first argument of the function
+Object.create builds an object that inherits directly from the one passed as its first argument. Object.create doesn't execute the constructor function.
+
+- With the class keyword
+
+ECMAScript 2015 introduced a new set of keywords implementing classes. Although these constructs look like those familiar to developers of class-based languages, they are not the same. JavaScript remains prototype-based. Classes are just a syntactic sugar for creating object using constructor. 
+
+Difference new vs Object.create![Difference new vs Object.create](http://stackoverflow.com/questions/4166616/understanding-the-difference-between-object-create-and-new-somefunction)
+
 * What's the difference between `.call` and `.apply`?
 * Explain `Function.prototype.bind`.
 * When would you use `document.write()`?
@@ -524,15 +546,56 @@ Event flow![Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
   [source](https://travishorn.com/why-it-is-better-to-serve-site-assets-from-multiple-domains-972a2bf69d71)
 
 * Do your best to describe the process from the time you type in a website's URL to it finishing loading on your screen.
+
+  1. Get the servers IP address based on the URL from the DNS.
+  2. Send an HTTP request to the server.
+  3. Parse the response and render the page.
+
+  [more details](http://stackoverflow.com/a/2092602)
+
 * What are the differences between Long-Polling, Websockets and Server-Sent Events?
+
+  * Long-polling - The client sends a request, and when the server has a new information to report it sends it to the client. This process is one-off.
+  * WebSockets - The client connects to the server and the connection is maintained. The client can then exchange information with the server.
+  * Server-Sent Events - The client connects to the server by sending a request, this connection is maintained. The server can then send new information to the client as it becomes available. In comparison to WebSockets, the connection is unidirectional.
+
+  [more info](http://stackoverflow.com/a/12855533)
+
 * Explain the following request and response headers:
-  * Diff. between Expires, Date, Age and If-Modified-...
+  * Diff. between Expires, Date, Age and If-Modified-Since
   * Do Not Track
   * Cache-Control
   * Transfer-Encoding
   * ETag
   * X-Frame-Options
+
+  * Date - the date when the message was sent.
+  * Expires - the date after which the message is considered stale.
+  * Age - the number of seconds the object has been in the proxy cache.
+  * If-Modified-Since - allows the server to return 304 code when the message wasn't change since the date inside this header.
+  * DNT (Do Not Track) - asks the server not to track the user.
+  * Cache-Control - controls the options related to caching, eg. for how long should the response be cached.
+  * Transfer-Encoding - form of encoding used on the message, eg.: chunked, compress, deflate, gzip, identity.
+  * ETag - may be used for versioning of the resource.
+  * X-Frame-Options - controls the clickjacking protection.
+
+  [source](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)
+
 * What are HTTP methods? List all HTTP methods that you know, and explain them.
+
+  HTTP methods indicate an action the client wants to be performed on the specified resource.
+
+  * GET - retrieves a resource without changing it.
+  * HEAD - same as GET, but doesn't retrieve the actual body. May be useful when only the headers are needed.
+  * POST - adds a new resource.
+  * PUT - updates the resource.
+  * DELETE - deletes the resource.
+  * TRACE - echoes data sent in the request back to the client.
+  * OPTIONS - returns the methods that the server supports for the specified URL.
+  * CONNECT - converts the connection to a TCP/IP tunnel.
+  * PATCH - applies partial modifications to the resource.
+
+  [source](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)
 
 #### Coding Questions:
 
