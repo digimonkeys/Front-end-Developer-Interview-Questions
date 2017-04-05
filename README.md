@@ -163,7 +163,10 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 
 * What kind of things must you be wary of when design or developing for multilingual sites?
 * What are `data-` attributes good for?
-* Consider HTML5 as an open web platform. What are the building blocks of HTML5?
+* Consider HTML5 as an open web platform. What are the building blocks of HTML5?  
+The main building blocks are centred on HTML 5, CSS3, Javascript and SVG. Where HTML is a language to define the mark-up of a document (titles, headers, body, footer, tables, input forms etc.), CSS is a language to define style (formatting, colours, shades and the like). Javascript is a programming/scripting language and SVG is a language for creating 2D scalable vector graphics and images.  
+http://yucianga.info/?p=655  
+
 * Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.
 * Describe the difference between `<script>`, `<script async>` and `<script defer>`.
 * Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?

@@ -165,7 +165,10 @@ Zawsze należy używać atrybutu language na tagu html do określenia domyślneg
 https://www.w3.org/International/questions/qa-html-language-declarations  
 
 * Jaka jest przydatność atrybutów `data-`
-* Rozpatrujemy HTML5 jako otwartą platformę internetową. Jakie składniki tworzą HTML5?
+* Rozpatrujemy HTML5 jako otwartą platformę internetową. Jakie składniki tworzą HTML5?  
+Główne składniki takiej platformy internetowej to html 5, css3, js i svg. Html 5 służy do definiowania kształtu dokumentu (tytułów, nagłówków, tabel itp), css do nadawania mu stylu, js do tworzenia skryptów i svg do tworzenia skalowalnych grafik wektorowych.  
+http://yucianga.info/?p=655  
+
 * Opisz różnice między cookies, sessionStorage i localStorage.
 
 ### Pytania JS:
