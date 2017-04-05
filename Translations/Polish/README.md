@@ -862,6 +862,12 @@ console.log('three');
 
 ### Pytania z NodeJS:
 
+* Kiedy użyłbyś npm a kiedy yarn?
+
+  Użyłbym yarn gdy czas wykonania jest najważniejszy, lub gdy ważna jest instalacja offline.
+
+  [więcej info](https://yarnpkg.com/lang/en/)
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
