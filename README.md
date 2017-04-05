@@ -354,6 +354,11 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 * The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
 * What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
 * Have you played around with the new CSS Flexbox or Grid specs?
+  Yes, I use flexbox in my projects. It is very simple and comfortable in use and giving great effects. Grid seems to be supported by all major browsers (except Edge, which has old syntax), so it is worthy to learn it.
+
+  http://caniuse.com/#feat=css-grid
+  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+  https://css-tricks.com/snippets/css/complete-guide-grid/
 * How is responsive design different from adaptive design?
 * Have you ever worked with retina graphics? If so, when and what techniques did you use?
 * Is there any reason you'd want to use `translate()` instead of *absolute positioning*, or vice-versa? And why?
