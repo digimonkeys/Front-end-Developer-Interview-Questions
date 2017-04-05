@@ -395,6 +395,10 @@ Object.create![Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScri
 
 * Why is extending built-in JavaScript objects not a good idea?
 * Difference between document load event and document DOMContentLoaded event?
+    The DOMContentLoaded event is fired when the document has been completely loaded and parsed the DOM tree,
+    the load event will do it when all the images and sub-frames have finished loading.
+    http://stackoverflow.com/questions/2414750/difference-between-domcontentloaded-and-load-events
+    
 * What is the difference between `==` and `===`?
 * Explain the same-origin policy with regards to JavaScript.
 * Make this work:

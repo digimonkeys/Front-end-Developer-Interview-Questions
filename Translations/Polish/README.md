@@ -278,7 +278,11 @@ W ECMAScript 2015 przedstawiono nowe słowa kluczowe implementujące klasy. Mog�
 Difference new vs Object.create![Difference new vs Object.create](http://stackoverflow.com/questions/4166616/understanding-the-difference-between-object-create-and-new-somefunction)
 
 * Czemu rozszerzanie to dobry pomysł?
-* Jak jest różnicą między zdarzeniami `load` i `ready` dla strony internetowej?
+* Jak jest różnicą między zdarzeniami `document load` i `DOMContentLoaded` dla strony internetowej?
+    Event DOMContentLoaded jest uruchamiany, gdy HTML został załadowany i drzewo DOM zbudowane
+    natomiast event load, gdy cała strona, włącznie z css, grafiką zostały załadowane.
+    http://stackoverflow.com/questions/2414750/difference-between-domcontentloaded-and-load-events
+
 * Jaka jest różnica między `==` i `===`?
 * Wyjaśnij ewentualny sposób pobrania parametrów z adresu URL w oknie przeglądarki.
 * Wyjaśnij politykę `same-origin` w odniesieniu do JavaScript.
