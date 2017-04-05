@@ -132,10 +132,10 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
 * Opowiedz o wadach i zaletach animacji w css i w JS.   
 Minusy CSS w stosunku do JS:  
 - skalowanie, rotacja, pozycja zostały wepchnięte do jednej właściwości transform, co uniemożliwia kontrolowanie skomplikowanych animacji  
-- CSS chwali się za używanie pamięci GPU zamiast CPU do obsługi animacji, jednak używa jej głównie tylko do transform i opacity a w JS można osiągnąć to samo za pomocą charakterystyk 3D  
+- CSS chwali się za używanie pamięci GPU zamiast CPU do obsługi animacji, jednak używa jej tylko do transform i opacity a w JS można osiągnąć to samo za pomocą charakterystyk 3D  
 - CSS teoretycznie korzysta z wielu wątków procesora, ale w rzeczywistości tylko dla elementów nie wpływających na flow dokumentu (transform, opacity - znikomy procent)  
 - niemal w każdym środowisku animacje tworzone w JS (z wykorzystaniem GASP) są szybsze od tych tworzonych przez CSS  
-- brak kontroli nad flow animacji - nie można przejść do jej konkretnego punktu, cofnąć jej, zmienić prędkości lub dodać callbacków w jej punktach  
+- brak kontroli nad flow animacji - nie można przejść do jej konkretnego punktu, cofnąć jej, zmienić prędkości lub dodać callbacków w konkretnych punktach  
 - przeglądarki starsze niż IE9 nie obsługują animacji CSS  
 
 Plusy animacji CSS w stosunku do JS:  
