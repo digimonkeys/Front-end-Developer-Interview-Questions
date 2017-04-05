@@ -122,8 +122,8 @@ function Person(){} var person = Person() var person = new Person()
   * Wiele generowanych reklam używa `document.write()` choć nie jest to mile widziane
 * Jakie są różnice między wykrywaniem obsługi funkcji, wnioskowaniem obsługi funkcji i używaniem ciągu UA?
 * Co to sa falsy values?
- 
-Falsy values są to wartości, które podczas porównań == (double equals) oraz umieszczone w if (..) zmieniane są (koercja) na wartość false. Są to:
+
+Falsy values są to wartości, które użyte w wyrażeniu warunku zostaną przekształcone w wartość false. Są to:
 
 - 0
 - "" - pusty string
