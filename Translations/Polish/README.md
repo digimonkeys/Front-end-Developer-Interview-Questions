@@ -503,6 +503,7 @@ $(".foo div#bar:eq(0)")
 * Jak tworzysz i wdrażasz projekt używający niestandardowych czcionek?
   * Czcionki sieciowe (serwisy czcionek jak: Google Webfonts, Typekit itd.)
 * Wyjaśnij jak przeglądarka określa elementy pasujące do selektora CSS?
+  Przeglądarki szukają selektorów od-prawej-do-lewej. Najpierw szuka wszystkich elementów pasujących do danego key selectora (najdalszego na prawo). Później sprawdza czy ten selektor pasuje lub jest w następnym (najdalszym na lewo) elemencie.
 
 ### Pytania z testowania:
 
