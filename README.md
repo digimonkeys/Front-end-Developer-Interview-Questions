@@ -570,17 +570,21 @@ Other scopes![other scopes](http://stackoverflow.com/a/500459)
 
 * What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
 
-pros:
-  - Typos caught at compilation time
-  - Rich IDE support with autocomplete and code navigation features
-  - Class-based OO, with inheritance, private members and interfaces
+Pros:
+  - Typos caught at compilation time.
+  - Rich IDE support with autocomplete and code navigation features.
+  - Class-based OO, with inheritance, private members and interfaces.
+  - Simplier syntax.
+  - Better maintainability.
 
-cons:
-  - In order to run the application in a browser, a compile step is required
-  - Debugging can be a pain
-  - Smaller community, generally less resources avaible
+Cons:
+  - In order to run the application in a browser, a compile step is required.
+  - Debugging can be a pain.
+  - Learning new language / syntax.
+  - Smaller community, generally less resources avaible.
 
-Reference: [Typescript pros and cons](https://designmodo.com/typescript/)
+Reference: [Typescript pros and cons](https://designmodo.com/typescript/),
+[Javascript, CoffeScript, Dart and TypeScript](https://smthngsmwhr.wordpress.com/2013/02/25/javascript-and-friends-coffeescript-dart-and-typescript/)
 
 * What tools and techniques do you use debugging JavaScript code?
 * Types in Javascript

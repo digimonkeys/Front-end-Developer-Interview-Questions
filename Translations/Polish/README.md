@@ -413,17 +413,21 @@ Oczekująca obietnica może być spełniona z jakąś wartością lub odrzucona 
 
 * Jakie są wady/zalety pisania kodu w języku, który kompiluje się do JavaScriptu?
 
-zalety:
+Zalety:
   - Błędne typy zostają wyłapane w fazie kompilacji.
   - Bogate wsparcie od IDE z autouzupełnianiem i nawigacją po kodzie.
   - Oparte na klasach OO, z dziedziczeniem, prywatnymi zmiennymi i interfejsami.
+  - Prostsza składnia.
+  - Kod jest łatwiejszy do utrzymania / rozszerzania.
 
-wady:
+Wady:
   - Aby uruchomić aplikację w przeglądarce, kod musi być skompilowany.
   - Debugowanie kodu może stać się trudne.
+  - Potrzeba nauczenia się nowego języka / składni.
   - Mniejsza społeczność, ogólnie mniej materiałów.
 
-Odniesienie: [Typescript wady i zalety](https://designmodo.com/typescript/)
+Odniesienie: [Typescript wady i zalety](https://designmodo.com/typescript/),
+[Javascript, CoffeScript, Dart i TypeScript](https://smthngsmwhr.wordpress.com/2013/02/25/javascript-and-friends-coffeescript-dart-and-typescript/)
 
 
 * Czym jest event life cycle (event flow)?
