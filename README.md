@@ -815,6 +815,12 @@ console.log('three');
 
 #### NodeJS questions:
 
+* What is the purpose of Buffer object in Node?
+
+  Buffers allow devs to manipulate and temporarily store binary data, as well to act as buffers for streams.
+
+  [more info](https://nodejs.org/api/buffer.html)
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
