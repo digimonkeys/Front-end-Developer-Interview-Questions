@@ -815,6 +815,28 @@ console.log('three');
 
 #### NodeJS questions:
 
+* Consider the following JavaScript code:
+```javascript
+console.log("first");
+setTimeout(function() {
+    console.log("second");
+}, 0);
+console.log("third");
+```
+
+  The output will be:
+  ```
+  first
+  third
+  second
+  ```
+
+  Assuming that this is the desired behavior, and that we are using Node.js version 0.10 or higher, how else might we write this code?
+
+  Answer:
+
+  Instead of using `setTimeout`, we can use `setImmediate` (behind all I/O events) or `process.nextTick` (ahead all I/O events)
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
