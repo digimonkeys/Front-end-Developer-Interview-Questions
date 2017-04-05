@@ -641,6 +641,17 @@ $(".foo div#bar:eq(0)")
   Jest to IE6 Quirks mode (tryb dziwactw): jeśli uwstawisz szerokość, dodasz paddingi oraz obramowanie, całkowita szerokość nie zmieni się. Wewnętrzna szerokość dostosuje się do reszty.
 
   Zalety: Możesz ustawiać wartości paddingów i obramowania bez przejmowania się o 'rozjechanie', rozszerzenie się pudełka. Jest to bardzo wygodne dla kolumnowych layoutów. Możesz również używać na przemian wartości w procentach i pikselach, więc nie musisz polega na elemencie podrzędnym dla paddingu.
+* Pracowałeś kiedykolwiek z ekranami Retina? Jeśli tak, jakich technik użyłeś do tego celu?
+  Ekrany retina mają podwójną gęstość pikseli, pozwala to na tworzenie ostszych obrazów na mniejszych ekranach. Potrzebne jest dostarczenie odpowiednich obrazów dla tych ekranów.
+
+  Zmiana rozmiaru obrazów
+    - używanie alternatywnych obrazów wysokiej rozdzielczości
+    - używanie @face-fonts zamiast obrazkowych ikon
+    - używanie obrazów SVG zamiast bitmapowych
+    - używanie JavaScript do zamieniania wszystkich zwykłych obrazów na te z podwójną rozdzielczością
+  Praca z faviconami wysokiej rozdzielczości
+
+  https://www.sitepoint.com/css-techniques-for-retina-displays/
 
 ### Pytania z testowania:
 

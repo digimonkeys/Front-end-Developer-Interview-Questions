@@ -356,6 +356,16 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 * Have you played around with the new CSS Flexbox or Grid specs?
 * How is responsive design different from adaptive design?
 * Have you ever worked with retina graphics? If so, when and what techniques did you use?
+  Retina has double density pixel screen, it allows to create sharper images on smaller screens. You need to provide suitable images for these screens.
+
+  Resizing Images
+    - Using alternate high resolution pixels
+    - Using @face-fonts instead of images icon
+    - Using SVG images instead of Bitmap images
+    - Using JavaScript to replace all the images with double sized image
+  Working with high resolution favicons
+
+  https://www.sitepoint.com/css-techniques-for-retina-displays/
 * Is there any reason you'd want to use `translate()` instead of *absolute positioning*, or vice-versa? And why?
 
 #### JS Questions:
