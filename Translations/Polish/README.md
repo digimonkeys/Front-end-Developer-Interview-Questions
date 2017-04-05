@@ -742,6 +742,22 @@ var foo = 10 + '20';
 
   `1020` (string)
 
+* Jak napisałbyś tą funkcję?
+```javascript
+add(2, 5); // 7
+add(2)(5); // 7
+```
+
+  ```javascript
+  const add = (a, b) => {
+  if (!b) {
+    return b => a + b;
+  }
+
+  return a + b;
+  };
+  ```
+
 * Jaka jest wartość `foo.length`?
 ```javascript
 var foo = [];
