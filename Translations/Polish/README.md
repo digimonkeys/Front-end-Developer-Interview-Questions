@@ -585,6 +585,14 @@ $(".foo div#bar:eq(0)")
 
   [więcej szczegółów](http://stackoverflow.com/a/2092602)
 
+* Jakie są różnice pomiędzy Long-Polling, WebSockets i Server-Sent Events?
+
+  * Long-polling - Klient wysyła zapytanie do serwera. Kiedy serwer będzie miał nową informację do zaraportowania, odpowiada klientowi. Ten proces jest jednorazowy.
+  * WebSockets - Klient łączy się z serwerem i utrzymuje połączenie. Klient może wtedy wymieniać informacje z serwerem.
+  * Server-Sent Events - Klient łączy się z serwerem wysyłając zapytanie. Połączenie jest utrzymywane, a serwer może odpowiadać gdy ma nowe informacje do zaraportowania. Połączenie to w przeciwieństwie do WebSocketów jest jednokierunkowe.
+
+  [więcej informacji](http://stackoverflow.com/a/12855533)
+
 ### Pytania z kodowania:
 
 * Jaka jest wartość `foo`?

@@ -546,6 +546,13 @@ Event flow![Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
   [more details](http://stackoverflow.com/a/2092602)
 
 * What are the differences between Long-Polling, Websockets and Server-Sent Events?
+
+  * Long-polling - The client sends a request, and when the server has a new information to report it sends it to the client. This process is one-off.
+  * WebSockets - The client connects to the server and the connection is maintained. The client can then exchange information with the server.
+  * Server-Sent Events - The client connects to the server by sending a request, this connection is maintained. The server can then send new information to the client as it becomes available. In comparison to WebSockets, the connection is unidirectional.
+
+  [more info](http://stackoverflow.com/a/12855533)
+
 * Explain the following request and response headers:
   * Diff. between Expires, Date, Age and If-Modified-...
   * Do Not Track
