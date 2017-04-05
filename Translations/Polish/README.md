@@ -550,6 +550,12 @@ $(".foo div#bar:eq(0)")
   - inherit - odziedzicza wartość po elemencie nadrzędnym (rodzicu)
 
   https://www.w3schools.com/cssref/pr_class_display.asp
+* Jaka jest różnica między display: 'inline' i 'inline-block'
+  Elementy z 'display: inline-block' są jak elementy z 'display: inline', lecz mogą mieć szerokość oraz wysokość. To znaczy, że można używać elementów 'inline-block' jako bloków wewnątrz tekstu lub innych elementów.
+  
+  Różnica w wspieranych stylach:
+    inline: tylko margin-left, margin-right, padding-left, padding-right
+    inline-block: margin, padding, height, width
 * Wyjaśnij czym jest według ciebie model pudełkowy (box model) i jak powiesz przeglądarce używając CSS do renderowania layoutu w różnych modelach pudełkowych.
   Dla celów wyświetlania, każdy element na stronie jest traktowany jako pudełko. Model pudełkowy dotyczy specyfikacji atrybutów pudełka, takich jak szerokość, padding, obramowanie i margines.
   Model pudełkowy można ustawić dodając właściwość 'box-sizing'. Wartości: 'content-box' (standardowo), 'padding-box' i 'border-box'.
