@@ -800,6 +800,37 @@ console.log('three');
   two
   ```
 
+* What are the basic steps to unit test an AngularJS filter?
+  1. Inject '$filter'
+  2. Call it with '$filter(filterName)(input, options)'
+  Example:
+  ```
+  describe('The test filter', function () {
+  'use strict'; 
+
+  var $filter;
+
+  beforeEach(function () {
+    module('myTestFilterModule');
+
+    inject(function (_$filter_) {
+      $filter = _$filter_;
+    });
+  });
+
+    it('should capitalize a string', function () {
+      // Arrange.
+      var foo = 'hello world', result;
+
+      // Act.
+      result = $filter('testFilter')(foo, 'capitalize');
+
+      // Assert.
+      expect(result).toEqual('HELLO WORLD');
+    });
+  });
+  ```
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?

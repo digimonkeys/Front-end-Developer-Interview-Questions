@@ -834,6 +834,37 @@ console.log('three');
   two
   ```
 
+* Jakie są podstawowe kroki do jednostkowego przetestowania filtra w AngularJS?
+  1. Wstrzyknąć '$filter'
+  2. Wywołać to w ten sposób: '$filter(nazwaFiltra)(daneWejsciowe, opcje)'
+  Przykład:
+  ```
+  describe('The test filter', function () {
+  'use strict'; 
+
+  var $filter;
+
+  beforeEach(function () {
+    module('myTestFilterModule');
+
+    inject(function (_$filter_) {
+      $filter = _$filter_;
+    });
+  });
+
+    it('should capitalize a string', function () {
+      // Arrange.
+      var foo = 'hello world', result;
+
+      // Act.
+      result = $filter('testFilter')(foo, 'capitalize');
+
+      // Assert.
+      expect(result).toEqual('HELLO WORLD');
+    });
+  });
+  ```
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
