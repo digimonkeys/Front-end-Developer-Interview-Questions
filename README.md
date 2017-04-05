@@ -815,6 +815,10 @@ console.log('three');
 
 #### NodeJS questions:
 
+* What is an error-first callback?
+
+  It is a type of callback where the first argument is always an error and other arguments are the result data. The dev can then make sure the function calling the callback executed without troubles by checking whether the error argument is not null.
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
