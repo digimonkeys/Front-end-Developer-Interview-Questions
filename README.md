@@ -162,7 +162,10 @@ Always use a language attribute on the html tag to declare the default language 
 https://www.w3.org/International/questions/qa-html-language-declarations  
 
 * What kind of things must you be wary of when design or developing for multilingual sites?
-* What are `data-` attributes good for?
+* What are `data-` attributes good for?  
+The data-* attributes is used to store custom data private to the page or application. The data-* attributes gives us the ability to embed custom data attributes on all HTML elements.The stored (custom) data can then be used in the page's JavaScript to create a more engaging user experience (without any Ajax calls or server-side database queries).  
+https://www.w3schools.com/tags/att_global_data.asp  
+
 * Consider HTML5 as an open web platform. What are the building blocks of HTML5?
 * Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.
 * Describe the difference between `<script>`, `<script async>` and `<script defer>`.

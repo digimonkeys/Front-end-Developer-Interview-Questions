@@ -164,7 +164,10 @@ http://www.webdevout.net/articles/beware-of-xhtml#myths
 Zawsze należy używać atrybutu language na tagu html do określenia domyślnego języka strony. Zawartość w innym języku należy otoczyć jakimś elementem do którego dodamy równiez atrybut language. Dla stron html należy używać atrybutu lang, zaś dla xhtml xml:lang. W html 1.x i w html 5 obu. 
 https://www.w3.org/International/questions/qa-html-language-declarations  
 
-* Jaka jest przydatność atrybutów `data-`
+* Jaka jest przydatność atrybutów `data-`  
+Służą do przechowywania daych aplikacji w atrybutach elementów html. Dane te mogą później zostać wykorzystane przez skrypty JS do stworzenia lepszego UX.  
+https://www.w3schools.com/tags/att_global_data.asp  
+
 * Rozpatrujemy HTML5 jako otwartą platformę internetową. Jakie składniki tworzą HTML5?
 * Opisz różnice między cookies, sessionStorage i localStorage.
 
