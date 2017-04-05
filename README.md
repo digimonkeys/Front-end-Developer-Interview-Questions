@@ -276,6 +276,11 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
 * What does ```* { box-sizing: border-box; }``` do? What are its advantages?
 * List as many values for the display property that you can remember.
 * What's the difference between inline and inline-block?
+  Elements with display:inline-block are like display:inline elements, but they can have a width and a height. That means that you can use an inline-block element as a block while flowing it within text or other elements.
+
+  Difference of supported styles:
+    inline: only margin-left, margin-right, padding-left, padding-right
+    inline-block: margin, padding, height, width
 * What's the difference between a relative, fixed, absolute and statically positioned element?
 * The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
 * What existing CSS frameworks have you used locally, or in production? How would you change/improve them?

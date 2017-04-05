@@ -504,6 +504,13 @@ $(".foo div#bar:eq(0)")
   * Czcionki sieciowe (serwisy czcionek jak: Google Webfonts, Typekit itd.)
 * Wyjaśnij jak przeglądarka określa elementy pasujące do selektora CSS?
 
+* Jaka jest różnica między display: 'inline' i 'inline-block'
+  Elementy z 'display: inline-block' są jak elementy z 'display: inline', lecz mogą mieć szerokość oraz wysokość. To znaczy, że można używać elementów 'inline-block' jako bloków wewnątrz tekstu lub innych elementów.
+  
+  Różnica w wspieranych stylach:
+    inline: tylko margin-left, margin-right, padding-left, padding-right
+    inline-block: margin, padding, height, width
+
 ### Pytania z testowania:
 
 * Jakie są niektóre z plusów/minusów testowania pisanego kodu?
