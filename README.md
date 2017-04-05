@@ -494,6 +494,12 @@ Event flow![Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
   [more info](https://developers.google.com/web/tools/chrome-devtools/rendering-tools/js-execution)
 
 * What are some ways you may improve your website's scrolling performance?
+
+  * Graphics size should be adjusted to the size of their containers, they should be optimized so as not to take to much bandwidth.
+  * Avoid using large amounts of box-shadows and other styles that require more work to draw by the browser.
+  * Avoid JavaScript methods/properties that cause reflow/repaint the page, such as elements offsets, container sizes etc.
+  * Use debouncing with scrolling events.
+
 * Explain the difference between layout, painting and compositing.
 
 #### Network Questions:
