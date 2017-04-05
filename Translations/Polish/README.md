@@ -593,6 +593,27 @@ $(".foo div#bar:eq(0)")
 
   [więcej informacji](http://stackoverflow.com/a/12855533)
 
+* Wyjaśnij poniższe nagłówki zapytania i odpowiedzi:
+
+  * Różnica pomiędzy Expires, Date, Age i If-Modified-Since
+  * Do Not Track
+  * Cache-Control
+  * Transfer-Encoding
+  * ETag
+  * X-Frame-Options
+
+  * Date - data wysłania wiadomości.
+  * Expires - data po której wiadomość jest uznawana za nieważną.
+  * Age - liczba sekund którą wiadomość spędziła w cache.
+  * If-Modified-Since - pozwala serwerowi odpowiedzieć statusem 304 gdy wiadomość nie została zmieniona od daty zawartej w tym nagłówku.
+  * DNT (Do Not Track) - prosi serwer aby nie śledził użytkownika.
+  * Cache-Control - kontroluje opcje związane z cachowaniem, np. jak długo wiadomość może pozostawać w cache.
+  * Transfer-Encoding - forma kodowania wiadomości, np.: chunked, compress, deflate, gzip, identity.
+  * ETag - może być użyte w celu wersjonowania wiadomości.
+  * X-Frame-Options - kontroluje ochronę przed "clickjackingiem".
+
+  [źródło](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)
+
 ### Pytania z kodowania:
 
 * Jaka jest wartość `foo`?

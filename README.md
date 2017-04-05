@@ -554,12 +554,25 @@ Event flow![Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
   [more info](http://stackoverflow.com/a/12855533)
 
 * Explain the following request and response headers:
-  * Diff. between Expires, Date, Age and If-Modified-...
+  * Diff. between Expires, Date, Age and If-Modified-Since
   * Do Not Track
   * Cache-Control
   * Transfer-Encoding
   * ETag
   * X-Frame-Options
+
+  * Date - the date when the message was sent.
+  * Expires - the date after which the message is considered stale.
+  * Age - the number of seconds the object has been in the proxy cache.
+  * If-Modified-Since - allows the server to return 304 code when the message wasn't change since the date inside this header.
+  * DNT (Do Not Track) - asks the server not to track the user.
+  * Cache-Control - controls the options related to caching, eg. for how long should the response be cached.
+  * Transfer-Encoding - form of encoding used on the message, eg.: chunked, compress, deflate, gzip, identity.
+  * ETag - may be used for versioning of the resource.
+  * X-Frame-Options - controls the clickjacking protection.
+
+  [source](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)
+
 * What are HTTP methods? List all HTTP methods that you know, and explain them.
 
 #### Coding Questions:
