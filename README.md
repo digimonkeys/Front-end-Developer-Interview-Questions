@@ -129,7 +129,9 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
 
 * What does a `doctype` do?
 * What's the difference between full standards mode, almost standards mode and quirks mode?
-* What's the difference between HTML and XHTML?
+* What's the difference between HTML and XHTML?  
+XHTML is HTML written as XML. They are almost identical. Most important differences are: XHTML is stricter and is supported by all major browsers. Doctype is mandatory, also xmlns attribute in <html> and <html>, <head>, <title>, and <body> are mandatory. XHTML elements must be properly nested, always be closed, always in lowercase, always have one root element.  
+
 * Are there any problems with serving pages as `application/xhtml+xml`?
 * How do you serve a page with content in multiple languages?
 * What kind of things must you be wary of when design or developing for multilingual sites?
