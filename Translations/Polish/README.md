@@ -411,6 +411,21 @@ Oczekująca obietnica może być spełniona z jakąś wartością lub odrzucona 
 
 [Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
+* Jakie są wady/zalety pisania kodu w języku, który kompiluje się do JavaScriptu?
+
+zalety:
+  - Błędne typy zostają wyłapane w fazie kompilacji.
+  - Bogate wsparcie od IDE z autouzupełnianiem i nawigacją po kodzie.
+  - Oparte na klasach OO, z dziedziczeniem, prywatnymi zmiennymi i interfejsami.
+
+wady:
+  - Aby uruchomić aplikację w przeglądarce, kod musi być skompilowany.
+  - Debugowanie kodu może stać się trudne.
+  - Mniejsza społeczność, ogólnie mniej materiałów.
+
+Odniesienie: [Typescript wady i zalety](https://designmodo.com/typescript/)
+
+
 * Czym jest event life cycle (event flow)?
 
 Event lifecycle (event flow) opisuje cykl życia eventu w drzewie DOM. Przy każdym zdarzeniu, przeglądarka tworzy event i rozsyła go po drzewie DOM. Propagacja / rozsyłanie eventu odbywa się w trzech fazach:
