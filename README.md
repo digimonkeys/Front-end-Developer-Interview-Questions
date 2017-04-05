@@ -136,6 +136,18 @@ https://developer.mozilla.org/pl/docs/Quirks_Mode_and_Standards_Mode
 XHTML is HTML written as XML. They are almost identical. Most important differences are: XHTML is stricter and is supported by all major browsers. Doctype is mandatory, also xmlns attribute in <html> and <html>, <head>, <title>, and <body> are mandatory. XHTML elements must be properly nested, always be closed, always in lowercase, always have one root element.  
 https://www.w3schools.com/html/html_xhtml.asp  
 
+* What are the limitations when serving xhtml page?  
+Perhaps the biggest issue is the poor browser support XHTML currently enjoys. In typical setups, most browsers simply pretend that your XHTML pages are regular HTML. XHTML source is not necessarily any “cleaner” than HTML source. Plus we have to take care of restrictions like this:  
+- all elements must have a start tag.  
+- non-void elements with a start tag must have an end tag (p and li, for example).  
+- any element may be “self-closed” using />.  
+- tags and attributes are case sensitive, typically lowercase.
+- attribute values must be enclosed in quotes.  
+- empty attributes are forbidden (checked must instead be checked="checked" or checked="true").  
+- special characters must be escaped using character entities.  
+
+http://www.webdevout.net/articles/beware-of-xhtml#myths  
+
 * Are there any problems with serving pages as `application/xhtml+xml`?
 * How do you serve a page with content in multiple languages?
 * What kind of things must you be wary of when design or developing for multilingual sites?

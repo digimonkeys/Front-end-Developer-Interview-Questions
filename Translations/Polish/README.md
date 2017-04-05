@@ -139,8 +139,19 @@ https://developer.mozilla.org/pl/docs/Quirks_Mode_and_Standards_Mode
 XHTML to HTML napisany jako XML. Są niemal identyczne. Główne różnice to to, że xhtml jest bardziej restrykcyjny i dzięki temu obsługiwany przez wszystkie główne przeglądarki. Doctype jest obowiązkowy, podobnie atrybut xmlns w znaczniku html oraz znaczniki <html>, <head>, <title> i <body>. Elementy xhtmla musza być poprawnie zagnieżdżone, zawsze zamknięte, napisane małymi literami; zawsze muszą mieć jeden root element.  
 https://www.w3schools.com/html/html_xhtml.asp  
 
-* Jakie są ograniczenia w serwowaniu stron XHTML?
-  * Czy istnieją problemy z serwowaniem stron jako `application/xhtml+xml`?
+* Jakie są ograniczenia w serwowaniu stron XHTML?  
+Wbrew pozorom i założeniom największym problemem jest wsparcie przeglądarek. Większość z nich przekształca xhtml na zwykły html. Kod xhtml też niekoniecznie jest 'czystszy' od kodu html. Do tego trzeba pamiętać o następujących ograniczeniach:  
+- wszystkie elementy muszą mieć początkowy znacznik  
+- elementy non-void ze znacznikiem początkowym muszą mieć też znacznik końcowy  
+- każdy element może sam się zamknąć przez '/>'  
+- tagi i atrybuty są case sensitive  
+- atrybuty musza być w cudzysłowiu  
+- puste atrybuty są zabronione, więc checked zmienia się w checked="true"  
+- znaki specjalne muszą być escapowane  
+
+http://www.webdevout.net/articles/beware-of-xhtml#myths  
+
+* Czy istnieją problemy z serwowaniem stron jako `application/xhtml+xml`?
 * Jak serwujesz stronę z treścią w wielu językach?
   * Co jest ważne przy projektowaniu i tworzeniu stron wielojęzycznych?
 * Jaka jest przydatność atrybutów `data-`
