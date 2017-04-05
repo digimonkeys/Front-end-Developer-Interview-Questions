@@ -95,7 +95,7 @@ Working on project based on boilerplate that used old version of webpack. When I
   * What techniques/processes do you use?
 * What are the different ways to visually hide content (and make it available only for screen readers)?
 * Have you ever used a grid system, and if so, what do you prefer?
-  I used Bootstrap and Angular Material. Additionally I heard about Skeleton and Foundation. I prefer Bootstrap, because I worked using it most of the time and I know it most, but I'm open for new grids.
+  I used Bootstrap and Angular Material. Additionally I heard about Skeleton and Foundation. I prefer Bootstrap, because creating pages with this grid is very easy. Whether you need a fixed grid or a responsive, its only matter of a few changes. Offsetting and nesting of columns is also possible in both fixed and fluid width layouts.
 * Have you used or implemented media queries or mobile specific layouts/CSS?
 * Are you familiar with styling SVG?
 * How do you optimize your webpages for print?

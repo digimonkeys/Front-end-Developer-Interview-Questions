@@ -219,7 +219,7 @@ $(".foo div#bar:eq(0)")
   * Jakie techniki stosujesz?
 * Jakie istnieją sposoby wizualnego ukrycia treści (uczynienia ich dostępnymi tylko dla czytników ekranu)?
 * Czy kiedykolwiek używałeś systemów siatek, a jeśli tak, to jakie preferujesz?
-  Używałem Boostrap oraz Angular Material. Dodatkowo słyszałem o Skeleton i Foundation. Preferuję Bootstrapa, ponieważ pracowałem z nim najwięcej i znam go najlepiej z pozostałych, lecz jednak otwarty na inne systemy siatek.
+  Używałem Boostrap oraz Angular Material. Dodatkowo słyszałem o Skeleton i Foundation. Preferuję Bootstrapa, ponieważ tworzenie stron z tym gridem jest bardzo proste. Jeśli potrzebujesz stałego grida lub responsywnego, jest to kwestia paru zmian. Wyrównanie i zagnieżdżanie kolumn jest również możliwe w obu przypadkach, stałej i zmieniającej się szerokości layoutów.
 * Czy używałeś 'media queries' lub tworzyłeś konkretne układy i arkusze dla urządzeń mobilnych?
 * Czy miałeś styczność ze stylizacją SVG?
 * Jak optymalizujesz swoje strony do druku?
