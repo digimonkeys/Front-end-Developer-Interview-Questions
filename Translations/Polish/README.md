@@ -133,8 +133,19 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
 
 * Co robi `doctype` i jakie znasz przykłady?
 * Jaka jest różnica między trybem standardów a trybem dziwactw (quirks mode)?
-* Jakie są ograniczenia w serwowaniu stron XHTML?
-  * Czy istnieją problemy z serwowaniem stron jako `application/xhtml+xml`?
+* Jakie są ograniczenia w serwowaniu stron XHTML?  
+Wbrew pozorom i założeniom największym problemem jest wsparcie przeglądarek. Większość z nich przekształca xhtml na zwykły html. Kod xhtml też niekoniecznie jest 'czystszy' od kodu html. Do tego trzeba pamiętać o następujących ograniczeniach:  
+- wszystkie elementy muszą mieć początkowy znacznik  
+- elementy non-void ze znacznikiem początkowym muszą mieć też znacznik końcowy  
+- każdy element może sam się zamknąć przez '/>'  
+- tagi i atrybuty są case sensitive  
+- atrybuty musza być w cudzysłowiu  
+- puste atrybuty są zabronione, więc checked zmienia się w checked="true"  
+- znaki specjalne muszą być escapowane  
+
+http://www.webdevout.net/articles/beware-of-xhtml#myths  
+
+* Czy istnieją problemy z serwowaniem stron jako `application/xhtml+xml`?
 * Jak serwujesz stronę z treścią w wielu językach?
   * Co jest ważne przy projektowaniu i tworzeniu stron wielojęzycznych?
 * Jaka jest przydatność atrybutów `data-`

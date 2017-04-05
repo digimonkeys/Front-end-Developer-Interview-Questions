@@ -130,6 +130,18 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
 * What does a `doctype` do?
 * What's the difference between full standards mode, almost standards mode and quirks mode?
 * What's the difference between HTML and XHTML?
+* What are the limitations when serving xhtml page?  
+Perhaps the biggest issue is the poor browser support XHTML currently enjoys. In typical setups, most browsers simply pretend that your XHTML pages are regular HTML. XHTML source is not necessarily any “cleaner” than HTML source. Plus we have to take care of restrictions like this:  
+- all elements must have a start tag.  
+- non-void elements with a start tag must have an end tag (p and li, for example).  
+- any element may be “self-closed” using />.  
+- tags and attributes are case sensitive, typically lowercase.
+- attribute values must be enclosed in quotes.  
+- empty attributes are forbidden (checked must instead be checked="checked" or checked="true").  
+- special characters must be escaped using character entities.  
+
+http://www.webdevout.net/articles/beware-of-xhtml#myths  
+
 * Are there any problems with serving pages as `application/xhtml+xml`?
 * How do you serve a page with content in multiple languages?
 * What kind of things must you be wary of when design or developing for multilingual sites?
