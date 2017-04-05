@@ -815,6 +815,12 @@ console.log('three');
 
 #### NodeJS questions:
 
+* What is Event Loop?
+
+  The event loop allows Node.JS to offload operations to system kernel, which in turn allows Node to handle multiple background operations at the same time. When the operation completes, the kernel tells Node.JS so that it can add appropriate callbacks to the poll queue.
+
+  [more info](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/)
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
