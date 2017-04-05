@@ -164,7 +164,15 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 * What kind of things must you be wary of when design or developing for multilingual sites?
 * What are `data-` attributes good for?
 * Consider HTML5 as an open web platform. What are the building blocks of HTML5?
-* Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.
+* Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.  
+Cookie:
+Max size of 4093 bytes, can set expiration date, sent on every request  
+sessionStorage:
+Max size of 2.5MBs+ depending on browser, stored in browser and not sent with every request, if you close a tab using sessionStorage, open a new tab, or exit the browser - you'll lose that specific sessionStorage data. 
+localStorage:
+Max size of 2.5MBs+ depending on browser, stored in browser and not sent with every request, will persist if browser/tabs are closed.  
+http://stackoverflow.com/a/19869560  
+
 * Describe the difference between `<script>`, `<script async>` and `<script defer>`.
 * Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
 * What is progressive rendering?

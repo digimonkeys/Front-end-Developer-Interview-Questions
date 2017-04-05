@@ -166,7 +166,13 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 
 * Jaka jest przydatność atrybutów `data-`
 * Rozpatrujemy HTML5 jako otwartą platformę internetową. Jakie składniki tworzą HTML5?
-* Opisz różnice między cookies, sessionStorage i localStorage.
+* Opisz różnice między cookies, sessionStorage i localStorage.  
+cookie:
+maksymalny rozmiar to 4093B, może mieć datę ważności, wysyłane przy każdym requeście  
+sessionStorage:
+maksymalny rozmiar 2,5MB+ w zależności od przeglądarki, przechowywanie danych w przeglądarce bez wysyłania ich przy requestach, przy zamknięciu karty lub przeglądarki session storage jest czyszczony  
+localStorage: tak jak sessionStorage ale jest zachowywane nawet po zamknięciu przeglądarki  
+http://stackoverflow.com/a/19869560  
 
 ### Pytania JS:
 
