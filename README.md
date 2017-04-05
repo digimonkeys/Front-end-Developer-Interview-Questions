@@ -322,6 +322,25 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
     http://stackoverflow.com/questions/7614317/what-is-the-difference-between-native-objects-and-host-objects
     
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
+* How you can achieve inheritance in JavaScript (new + Object.create)
+
+- With a constructor
+
+A "constructor" in JavaScript is "just" a function that happens to be called with the new operator.
+In constructor functions, the newly created object inherits from the constructor's prototype.
+In the new Function() form the declared properties/functions do not form the prototype.
+
+- With Object.create
+
+ECMAScript 5 introduced a new method: Object.create(). Calling this method creates a new object. The prototype of this object is the first argument of the function
+Object.create builds an object that inherits directly from the one passed as its first argument. Object.create doesn't execute the constructor function.
+
+- With the class keyword
+
+ECMAScript 2015 introduced a new set of keywords implementing classes. Although these constructs look like those familiar to developers of class-based languages, they are not the same. JavaScript remains prototype-based. Classes are just a syntactic sugar for creating object using constructor. 
+
+Difference new vs Object.create![Difference new vs Object.create](http://stackoverflow.com/questions/4166616/understanding-the-difference-between-object-create-and-new-somefunction)
+
 * What's the difference between `.call` and `.apply`?
 * Explain `Function.prototype.bind`.
 * When would you use `document.write()`?
