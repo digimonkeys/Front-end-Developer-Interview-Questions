@@ -575,6 +575,20 @@ Event flow![Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
 
 * What are HTTP methods? List all HTTP methods that you know, and explain them.
 
+  HTTP methods indicate an action the client wants to be performed on the specified resource.
+
+  * GET - retrieves a resource without changing it.
+  * HEAD - same as GET, but doesn't retrieve the actual body. May be useful when only the headers are needed.
+  * POST - adds a new resource.
+  * PUT - updates the resource.
+  * DELETE - deletes the resource.
+  * TRACE - echoes data sent in the request back to the client.
+  * OPTIONS - returns the methods that the server supports for the specified URL.
+  * CONNECT - converts the connection to a TCP/IP tunnel.
+  * PATCH - applies partial modifications to the resource.
+
+  [source](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)
+
 #### Coding Questions:
 
 *Question: What is the value of `foo`?*
