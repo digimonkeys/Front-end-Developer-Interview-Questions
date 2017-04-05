@@ -63,7 +63,7 @@ Pracowałem nad projektem wykorzystującym boilerplate bundlujący się przez st
   * Profiler, JSPerf, Dromaeo
 * Gdybyś mógł opanować jedną technologię w tym roku, jaka byłaby to technologia?
 * Wyjaśnij znaczenie standardów sieciowych i ich twórców.
-* Czym jest FOUC? Jak unikasz FOUC?
+* FOUC? Jak unikasz FOUC?
 
 ### Pytania HTML:
 
@@ -134,7 +134,7 @@ Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
 
 * Czym jest dziedziczenie?
  
- Dziedziczenie jest mechanizmem współdzielenia funkcjonalności między klasami (w rozumieniu klasycznym) lub obiektami (w dziedziczeniu prototypowym - jak w js). Klasa dziedzicząca (zwana klasą pochodną) otrzymuje dostęp do udostępnionych zachowń oraz atrybutów od klasy, z której następuje dziedziczenie (zwanej klasą bazową).
+ Dziedziczenie jest mechanizmem współdzielenia funkcjonalności między klasami i/lub obiektami (w rozumieniu klasycznym) lub obiektami (w dziedziczeniu prototypowym - jak w js). Klasa dziedzicząca (zwana klasą pochodną) otrzymuje dostęp do udostępnionych zachowń oraz atrybutów od klasy, z której następuje dziedziczenie (zwanej klasą bazową).
  
 Dziedziczenie![Wikipedia - dziedziczenie](https://pl.wikipedia.org/wiki/Dziedziczenie_(programowanie)) 
 
