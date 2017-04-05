@@ -130,7 +130,15 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
 
 ### Pytania HTML:
 
-* Co robi `doctype` i jakie znasz przykłady?
+* Co robi `doctype` i jakie znasz przykłady?  
+służy do deklaracji typu dokumentu, i powinien być umieszczony jako pierwszy element w dokumencie HTML, w szczególności przed znacznikiem <html>. Ten znacznik informuje przeglądarkę której wersji HTML lub XHTML używa wczytywana właśnie strona. Przykłady:  
+
+```
+html 5: <!DOCTYPE html>
+HTML 4.01 Strict <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+XHTML 1.0 Strict <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+```
+
 * Jaka jest różnica między trybem full standards, almost standards a trybem dziwactw (quirks mode)?  
 Quirks mode to renderowanie strony przez przeglądarkę w wersji dla navigatora 4 i IE 5, zaś full standards mode to renderowanie zgodne ze współczesnymi standardami html i css. Tryb almost standards posiada zaimplementowaną pewną niewielką ilość dziwactw navigatora i IE.  
 https://developer.mozilla.org/pl/docs/Quirks_Mode_and_Standards_Mode  

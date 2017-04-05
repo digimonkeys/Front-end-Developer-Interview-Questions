@@ -127,7 +127,15 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
 
 #### HTML Questions:
 
-* What does a `doctype` do?
+* What does a `doctype` do?  
+DOCTYPEs are required for legacy reasons. When omitted, browsers tend to use a different rendering mode that is incompatible with some specifications. Including the DOCTYPE in a document ensures that the browser makes a best-effort attempt at following the relevant specifications. Examples:  
+
+```
+html 5: <!DOCTYPE html>
+HTML 4.01 Strict <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+XHTML 1.0 Strict <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+```
+
 * What's the difference between full standards mode, almost standards mode and quirks mode?  
 Full standards mode renders page according to modern web standards of html and css. Quirks mode is rendering mode for very old browsers - IE 5 and Navigator 4. Almost standards mode renders page with a small amount of quirks.    
 https://developer.mozilla.org/pl/docs/Quirks_Mode_and_Standards_Mode  
