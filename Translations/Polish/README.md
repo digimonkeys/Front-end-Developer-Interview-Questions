@@ -834,6 +834,22 @@ console.log('three');
   two
   ```
 
+* Czym są kontrolery w AngularJS?
+  W AngularJS, kontrolery są zdefiniowane jako JavaScriptowe konstruktory, które są używane do powiększenia zakresu (scope) AngularJS. Kiedy kontroller jest załączony w DOM przez dyrektywę 'ng-controller', AngularJS wypromuje nowy obiekt kontrollera używając określonych kontruktorów kontrolera. Nowe dziecko zakresu (scope'u) zostanie stworzone i będzie dostępne jako wstrzykiwalny parametr do konstruktora kontrolera jako '$scope'. Jeśli kontroler został załączony używając kontrolera jako składni, wtedy instancja kontrolera będzie przypisana do właściwości nowego zakresu.
+
+  Używaj kontrolerów do:
+    Ustawiania początkowych stanów obiektu $scope
+    Dodawania zachowań do obiektu $scope
+
+  Nie używaj kontrolerów do:
+    Manipulowania DOM - Kontrolery powinny zawierać tylko logikę biznesową. Wrzucanie jakiejkolwiek logiki prezentacji do kontrolerów znacząco ma wpływ na ich testowalność. AngularJS posiada data-binding dla większości przypadków i dyrektywy do enkapsulacji manualnej manipulacji DOM.
+    Formatowania danych wejściowych - Używaj do tego kontrolerów formularzy
+    Filtrowania danych wyjściowych - Używaj do tego filtrów
+    Współdzielenia kodu lub stanu pomiędzy kontrolerami - Używaj do tego serwisów
+    Zarządzania cyklem życia (life-cycle) innych komponentów (np. tworzenie instacji serwisów)
+
+  https://docs.angularjs.org/guide/controller
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
