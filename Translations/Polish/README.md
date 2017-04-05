@@ -503,6 +503,12 @@ $(".foo div#bar:eq(0)")
 * Jak tworzysz i wdrażasz projekt używający niestandardowych czcionek?
   * Czcionki sieciowe (serwisy czcionek jak: Google Webfonts, Typekit itd.)
 * Wyjaśnij jak przeglądarka określa elementy pasujące do selektora CSS?
+* Wyjaśnij czym jest według ciebie model pudełkowy (box model) i jak powiesz przeglądarce używając CSS do renderowania layoutu w różnych modelach pudełkowych.
+  Dla celów wyświetlania, każdy element na stronie jest traktowany jako pudełko. Model pudełkowy dotyczy specyfikacji atrybutów pudełka, takich jak szerokość, padding, obramowanie i margines.
+  Model pudełkowy można ustawić dodając właściwość 'box-sizing'. Wartości: 'content-box' (standardowo), 'padding-box' i 'border-box'.
+  - Content-box: szerokość i wysokość uwzględniają zawartość, ale nie padding/obramowanie/margines
+  - Padding-box: uwzględniają powyższe razem z paddingiem, lecz bez obramowania/marginesu
+  - Border-box uwzględniają powyższe z obramowaniem, lecz bez marginesu
 
 ### Pytania z testowania:
 
