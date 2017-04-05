@@ -281,6 +281,11 @@ Other scopes![other scopes](http://stackoverflow.com/a/500459)
 
 * Opisz bąbelkowanie zdarzeń.
 * Jak jest różnica między "atrybutem" i "właściwością"?
+    Atrybut jest to wartość w samym HTML, która jest zawsze stringiem
+    Property jest przypisana do obiektu w drzewie DOM, może mieć różne typy jak String czy boolean
+
+    http://lucybain.com/blog/2014/attribute-vs-property/
+
 * Czemu rozszerzanie obiektów wbudowanych w JavaScript jest złym pomysłem?
 * W jaki sposob mozemy realizowac dziedziczenie w javascripcie (new + Object.create)?
 

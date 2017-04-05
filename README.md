@@ -438,12 +438,19 @@ Difference new vs Object.create![Difference new vs Object.create](http://stackov
 * Explain "hoisting".
 * Describe event bubbling.
 * What's the difference between an "attribute" and a "property"?
+    Attribute is a value in HTML itself, which is always a string
+    JS DOM objects have properties. These properties are kind of
+    like instance variables for the particular element.
+    As such, a property can be different types (boolean, string, etc.).
+
+    http://lucybain.com/blog/2014/attribute-vs-property/
 
 * What does second parameter in Object.create do?
 
 It specify property descriptors to be added to the newly-created object, with the corresponding property names. These properties correspond to the second argument of Object.defineProperties().
 
 Object.create![Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
+
 
 * Why is extending built-in JavaScript objects not a good idea?
 * Difference between document load event and document DOMContentLoaded event?
