@@ -862,6 +862,10 @@ console.log('three');
 
 ### Pytania z NodeJS:
 
+* Jakich narzędzi można użyć aby utrzymać spójny styl kodu? Dlaczego jest to ważne?
+
+  Tak zwane code-style lintery (jshint, jslint, eslint, etc.) pomagają w utrzymaniu spójnego stylu. Jest to ważne ponieważ pozwala na eliminacje prostych błędów już podczas pisania kodu. Zapewnia jednakowe, konsekwentne formatowanie kodu dla wszystkich członków zespołu. 
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?

@@ -815,6 +815,10 @@ console.log('three');
 
 #### NodeJS questions:
 
+* What tools can be used to assure consistent style? Why is it important?
+
+  So called code style linters (jshint, jslint, eslint, etc.) help you keep a consistent style. It is important because it helps you avoid introducing simple bugs at the stage of writing the code. It assures that code formatting is more consistent between members of the team.
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
