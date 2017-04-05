@@ -434,6 +434,20 @@ Callback![Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming
 * Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
 * Explain what a single page app is and how to make one SEO-friendly.
 * What is the extent of your experience with Promises and/or their polyfills?
+
+* Whats a Promise ?
+
+The Promise object is used for asynchronous computations. A Promise represents a value which may be available now, or in the future, or never.
+A Promise is in one of these states:
+
+- pending: initial state, not fulfilled or rejected.
+- fulfilled: meaning that the operation completed successfully.
+- rejected: meaning that the operation failed.
+
+A pending promise can either be fulfilled with a value, or rejected with a reason (error). When either of these options happen, the associated handlers queued up by a promise's then method are called.
+
+Promise![Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+
 * What are the pros and cons of using Promises instead of callbacks?
 * Variables scope in JS?
 

@@ -149,6 +149,7 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
 * Jak radzisz sobie z testowaniem swojego kodu JavaScript?
 * AMD kontra CommonJS?
 * Czym jest tablica mieszająca (hashtable)?
+* Co oznaczają komunikaty `undefined` i `undeclared` dla zmiennych?
 * Co oznaczają komunikaty `null`, `undefined` i `undeclared` dla zmiennych?
   - Undeclared jest to zmienna, która nie została stworzona za pomocą var/let/const, a więc została stworzona na obiekcie globalnym window/global.
   - Undefined jest to zmienna, która została zadeklarowana, ale nie została do niej przypisana żadna wartość
@@ -158,7 +159,14 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
     - typeof undefined === 'undefined'
     - typeof null === 'object';
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
-  
+
+* Czym jest promise?
+
+Promise (natywnie dodany w ES6) jest obiektem używanym w operacjach asynchronicznych. Jest to obiekt, który reprezentuje wartość, która może być dostępna teraz, w przyszłości, lub nie być dostępna wcale.
+Promise ma trzy stany: pending (rozpoczęte), fullfiled (zakończone pozytywnie), rejected (zakończone niepowodzeniem - błędem). Gdy Promise osiągnie stan fullfiled lub rejected uruchamiane są handlery poprzez .then (.catch jest aliasem do .then(undefined, function()))
+
+Promise![Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+
 * Czym są domknięcia, jak i po co są używane?
     Closure - domknięcie - pozwala na dostęp do wewnętrznego scope funkcji, nawet po jej wykonaniu.
     Osiąga się to poprzez zwrócenie funkcji po wywołaniu funkcji nadrzędnej.
