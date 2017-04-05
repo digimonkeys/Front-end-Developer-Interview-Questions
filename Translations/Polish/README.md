@@ -862,6 +862,15 @@ console.log('three');
 
 ### Pytania z NodeJS:
 
+* Co to jest piramida testów? Podaj przykład!
+
+  Piramida testów składa się z 3 części:
+  * Testy UI testują system tak jak by to robił użytkownik w prawdziwym świecie. Imitują one jego interakcję z elementami interfejsu.
+  * Testy integracyjne, podobnie jak testy UI, sprawdzają różne warstwy aplikacji, ale w przeciwieństwie do UI nie robią tego korzystając z interfejsu wizualnego.
+  * Testy jednostkowe pozwalają deweloperom na sprawdzenie czy ich kod działa tak jak zakładali. Pozwala im na wprowadzanie zmian bez strachu przed wprowadzeniem błędów.
+
+  [źródło](http://www.agilenutshell.com/episodes/41-testing-pyramid)
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?

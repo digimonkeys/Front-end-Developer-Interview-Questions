@@ -815,6 +815,15 @@ console.log('three');
 
 #### NodeJS questions:
 
+* What's a test pyramid? Give an example!
+
+  A testing pyramid consists of 3 parts:
+  * UI tests test the system just like a real live end user would. They mimic the user's interactions in the form.
+  * Integration tests, like UI tests, test various layers of the application, but they don't do it through the UI.
+  * Unit tests are tests developers write to prove to themselves, that the code they are writing works. It enables them to make changes, without fear of breaking everything.
+
+  [source](http://www.agilenutshell.com/episodes/41-testing-pyramid)
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
