@@ -317,7 +317,6 @@ Other scopes![other scopes](http://stackoverflow.com/a/500459)
 
     http://lucybain.com/blog/2014/attribute-vs-property/
 
-* Czemu rozszerzanie obiektów wbudowanych w JavaScript jest złym pomysłem?
 * W jaki sposob mozemy realizowac dziedziczenie w javascripcie (new + Object.create)?
 
 - Używając konstruktora
@@ -336,7 +335,21 @@ W ECMAScript 2015 przedstawiono nowe słowa kluczowe implementujące klasy. Mog�
 
 Difference new vs Object.create![Difference new vs Object.create](http://stackoverflow.com/questions/4166616/understanding-the-difference-between-object-create-and-new-somefunction)
 
-* Czemu rozszerzanie to dobry pomysł?
+* Czemu rozszerzanie obiektów wbudowanych w JavaScript jest złym pomysłem?
+    Ponieważ obiekty te zostały stworzone według pewnej dobrze udokumentowanej i przemyślanej specyfikacji
+    Jeśli dodamy swoje metody do wbudowanego obiektu, mogą one zostać nadpisane
+    przez nieświadomego developera używającego naszego kodu,
+    twórcy przeglądarki mogą zaimplementować metodę o takiej samej nazwie,
+    użytkownik nie będzie wiedział której używa itp.
+
+* Czy rozszerzanie obiektów wbudowanych ma dobre strony?
+    Można wykorzystać możliwości normalnie niedostępne dla danej metody.
+    Np. odwrocenie stringa z wykorzystaniem metody `reverse` z Array.
+    String.prototype.reverse = function() {
+      return Array.prototype.reverse.apply(this.split('')).join('');
+    };
+    https://code.tutsplus.com/tutorials/quick-tip-how-to-extend-built-in-objects-in-javascript--net-9168
+    
 * Jak jest różnicą między zdarzeniami `document load` i `DOMContentLoaded` dla strony internetowej?
     Event DOMContentLoaded jest uruchamiany, gdy HTML został załadowany i drzewo DOM zbudowane
     natomiast event load, gdy cała strona, włącznie z css, grafiką zostały załadowane.

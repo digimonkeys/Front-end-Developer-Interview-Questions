@@ -487,6 +487,19 @@ Object.create![Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScri
 
 
 * Why is extending built-in JavaScript objects not a good idea?
+    Because these objects were created according to some well-documented
+    and well-thought-out specifications. If we add our methods to the built-in object,
+    they can be overwritten by an unknowable developer using our code,
+    developers may implement a method with the same name.
+
+* Does extending built-in objects have good part?
+    You can use features that are not normally available for a given method.
+    For example, reverse the string using the `reverse` method from the Array.
+    String.prototype.reverse = function() {
+      return Array.prototype.reverse.apply(this.split('')).join('');
+    };
+    https://code.tutsplus.com/tutorials/quick-tip-how-to-extend-built-in-objects-in-javascript--net-9168
+
 * Difference between document load event and document DOMContentLoaded event?
     The DOMContentLoaded event is fired when the document has been completely loaded and parsed the DOM tree,
     the load event will do it when all the images and sub-frames have finished loading.
