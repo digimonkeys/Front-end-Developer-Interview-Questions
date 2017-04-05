@@ -815,6 +815,17 @@ console.log('three');
 
 #### NodeJS questions:
 
+* What is the preferred method of resolving unhandled exceptions in Node.js?
+
+  By adding a listener for the `uncaughtException` process-level event:
+
+  ```javascript
+  process.on('uncaughtException', function(err) {
+    // Handle error
+    console.log(err);
+  });
+  ```
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
