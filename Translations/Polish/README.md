@@ -862,6 +862,17 @@ console.log('three');
 
 ### Pytania z NodeJS:
 
+* Co to są stub-y? Wymień przykład użycia!
+
+  Stub-y są funkcjami które mogą zastępować inne funkcje podczas testowania.
+
+  Pozwalają one na:
+  * Podmienianie problematycznych kawałków kodu.
+  * Wywoływanie ścieżek kodu które w inny sposób nie zostałyby wywołane, np. obsługa błędów.
+  * Pomaga prościej testowa asynchroniczny kod.
+
+  [źródło](https://semaphoreci.com/community/tutorials/best-practices-for-spies-stubs-and-mocks-in-sinon-js)
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
