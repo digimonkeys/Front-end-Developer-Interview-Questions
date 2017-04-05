@@ -275,6 +275,14 @@ https://www.w3schools.com/html/html_xhtml.asp
 * How would you implement a web design comp that uses non-standard fonts?
 * Explain how a browser determines what elements match a CSS selector.
 * Describe pseudo-elements and discuss what they are used for.
+  Pseudo-elements starts with '::' and are used to style specified parts of and element.
+    Syntax: 'selector::pseudo-element {}'
+    We distinguish the following pseudo-elements:
+     - ::after - add additional layer/content after the element
+     - ::before - add additional layer/content before element
+     - ::first-letter - selects the first letter
+     - ::first-line - selects the first line
+     - ::selection - selects the portion of and element that is selected by user
 * Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
   For display purpose, every element in the page is considered a box. The box model refers to the specification of the box attributes such as the width, padding, border and margin.
   You can change the box model by setting the box-sizing property. Some values are: content-box (default), padding-box, and border-box)
