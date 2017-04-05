@@ -131,7 +131,10 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
 ### Pytania HTML:
 
 * Co robi `doctype` i jakie znasz przykłady?
-* Jaka jest różnica między trybem standardów a trybem dziwactw (quirks mode)?  
+* Jaka jest różnica między trybem full standards, almost standards a trybem dziwactw (quirks mode)?  
+Quirks mode to renderowanie strony przez przeglądarkę w wersji dla navigatora 4 i IE 5, zaś full standards mode to renderowanie zgodne ze współczesnymi standardami html i css. Tryb almost standards posiada zaimplementowaną pewną niewielką ilość dziwactw navigatora i IE.  
+https://developer.mozilla.org/pl/docs/Quirks_Mode_and_Standards_Mode  
+
 * Jaka jest różnica między html a xhtml?  
 XHTML to HTML napisany jako XML. Są niemal identyczne. Główne różnice to to, że xhtml jest bardziej restrykcyjny i dzięki temu obsługiwany przez wszystkie główne przeglądarki. Doctype jest obowiązkowy, podobnie atrybut xmlns w znaczniku html oraz znaczniki <html>, <head>, <title> i <body>. Elementy xhtmla musza być poprawnie zagnieżdżone, zawsze zamknięte, napisane małymi literami; zawsze muszą mieć jeden root element.  
 https://www.w3schools.com/html/html_xhtml.asp  
@@ -292,6 +295,11 @@ Other scopes![other scopes](http://stackoverflow.com/a/500459)
 
 * Opisz bąbelkowanie zdarzeń.
 * Jak jest różnica między "atrybutem" i "właściwością"?
+    Atrybut jest to wartość w samym HTML, która jest zawsze stringiem
+    Property jest przypisana do obiektu w drzewie DOM, może mieć różne typy jak String czy boolean
+
+    http://lucybain.com/blog/2014/attribute-vs-property/
+
 * Czemu rozszerzanie obiektów wbudowanych w JavaScript jest złym pomysłem?
 * W jaki sposob mozemy realizowac dziedziczenie w javascripcie (new + Object.create)?
 
@@ -323,6 +331,10 @@ Difference new vs Object.create![Difference new vs Object.create](http://stackov
 
 * Wyjaśnij ewentualny sposób pobrania parametrów z adresu URL w oknie przeglądarki.
 * Wyjaśnij politykę `same-origin` w odniesieniu do JavaScript.
+    Jest to fundamentalny mechanizm bezpieczeństwa przeglądarki. Mechanizm ten zapobiega dostępowi
+    skryptów js do drzew DOM różnego pochodzenia.
+    Same origin zachodzi wtedy, gdy zgodne są protokół port i host stron, z których wywoływane są skrypty.
+
 * Opisz wzorce dziedziczenia w JavaScript.
 * Czy funkcje sa hoistowane?
 

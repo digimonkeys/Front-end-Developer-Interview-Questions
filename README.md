@@ -128,8 +128,11 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
 #### HTML Questions:
 
 * What does a `doctype` do?
-* What's the difference between full standards mode, almost standards mode and quirks mode?
-* What's the difference between HTML and XHTML?
+* What's the difference between full standards mode, almost standards mode and quirks mode?  
+Full standards mode renders page according to modern web standards of html and css. Quirks mode is rendering mode for very old browsers - IE 5 and Navigator 4. Almost standards mode renders page with a small amount of quirks.    
+https://developer.mozilla.org/pl/docs/Quirks_Mode_and_Standards_Mode  
+
+* What's the difference between HTML and XHTML?  
 XHTML is HTML written as XML. They are almost identical. Most important differences are: XHTML is stricter and is supported by all major browsers. Doctype is mandatory, also xmlns attribute in <html> and <html>, <head>, <title>, and <body> are mandatory. XHTML elements must be properly nested, always be closed, always in lowercase, always have one root element.  
 https://www.w3schools.com/html/html_xhtml.asp  
 
@@ -450,12 +453,19 @@ Difference new vs Object.create![Difference new vs Object.create](http://stackov
 * Explain "hoisting".
 * Describe event bubbling.
 * What's the difference between an "attribute" and a "property"?
+    Attribute is a value in HTML itself, which is always a string
+    JS DOM objects have properties. These properties are kind of
+    like instance variables for the particular element.
+    As such, a property can be different types (boolean, string, etc.).
+
+    http://lucybain.com/blog/2014/attribute-vs-property/
 
 * What does second parameter in Object.create do?
 
 It specify property descriptors to be added to the newly-created object, with the corresponding property names. These properties correspond to the second argument of Object.defineProperties().
 
 Object.create![Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
+
 
 * Why is extending built-in JavaScript objects not a good idea?
 * Difference between document load event and document DOMContentLoaded event?
@@ -468,6 +478,11 @@ Object.create![Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScri
     `===` Compares the values and types of variables without making coercion
     
 * Explain the same-origin policy with regards to JavaScript.
+    This is a fundamental security mechanism of the browser.
+    This mechanism prevents js scripts from accessing the DOM trees of different origins.
+    The same origin occurs when the port protocol and the host
+    of the pages that trigger the scripts are compatible.
+    
 * Make this work:
 ```javascript
 duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
