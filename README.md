@@ -813,6 +813,18 @@ console.log('three');
   two
   ```
 
+* What are the advantages of AngularJS?
+  Built by Google
+    AngularJS has been developed as well as maintained by dedicated Google engineers. This means that there is a huge community out there for you to learn from.
+  Great MVC
+    Most frameworks require programmers to splitting the app into multiple MVC components. After that, the programmer has to write a code to put them together again. AngularJS, however, strings it together automatically.
+  Intuitive
+    AngularJS is more intuitive as it makes use of HTML as a declarative language. Moreover, it is less brittle for reorganizing.
+  Comprehensive
+    AngularJS is a comprehensive solution for rapid front-end development. It does not need any other plugins or frameworks. Moreover, there are a range of other features that include Restful actions, data building, dependency injection, enterprise-level testing, etc.
+  Unit Testing Ready
+    AngularJS is unit testing ready, and that is one of its most compelling advantages.
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
