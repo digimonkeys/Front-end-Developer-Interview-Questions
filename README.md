@@ -135,8 +135,7 @@ git, I worked on github and gitlab. I tried using git guis but I prefer to work 
 
 * Explain event delegation
 * Explain how `this` works in JavaScript
-    This points to an object depending on the context,
-    In what function was used in which we defined it.
+    `this` points to an object depending on the function context in which it was declared.
     Context, ie the way and place of the call.
 
     Global context:
@@ -148,6 +147,7 @@ git, I worked on github and gitlab. I tried using git guis but I prefer to work 
     console.log(o.f()); // logs 37
 
     https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Operatory/this
+    http://stackoverflow.com/questions/3127429/how-does-the-this-keyword-work
 
 * Explain how prototypal inheritance works
 * What do you think of AMD vs CommonJS?
