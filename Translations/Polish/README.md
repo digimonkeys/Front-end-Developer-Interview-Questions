@@ -870,6 +870,11 @@ console.log('three');
   two
   ```
 
+* Wyjaśnij dyrektywy w AngularJS.
+  Wysokopoziomowo, dyrektywy są markerami na elementach DOM (jak na przykład atrybut, nazwa elementu, komentarz lub klasa CSS), które mówią kompilerowi HTML AngularJS ($compile), by dołączył określone zachowanie do tego elementu DOM (np. przez słuchacz zdarzeń (event listener)), lub nawet przekształcać element DOM i jego dzieci.
+  
+  https://docs.angularjs.org/guide/directive
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
