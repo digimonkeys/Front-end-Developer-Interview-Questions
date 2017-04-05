@@ -106,6 +106,11 @@ Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich prz
 * AMD kontra CommonJS?
 * Jakie znasz patterny w javascripcie? 
 
+- Strażnik (Guard Pattern)
+
+W programowaniu strażnik jest wyrażeniem typu boolean, które musi zwrócić true jeśli program ma kontynuować swoje wykonanie. Bez względu na język programowania, kod ochrony lub klauzula ochronna jest sprawdzeniem warunków, które pozwolą uniknięcia błędów podczas dalszego wykonywania programu.
+
+
 - Konstruktor
 Konstruktory obiektów używane są do tworzenia określonych typów obiektów - przygotowują obiekty do użycia oraz przyjmują argumenty, które konstruktor może wykorzystać do ustawiania wartości właściwości i metod obiektu, kiedy ten tworzony jest po raz pierwszy.
 

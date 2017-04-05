@@ -211,6 +211,9 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 
 * Which JavaScript patterns do you know?
 
+- Guard pattern
+In computer programming, a guard is a boolean expression that must evaluate to true if the program execution is to continue in the branch in question. Regardless of which programming language is used, guard code or a guard clause is a check of integrity preconditions used to avoid errors during execution.
+
 - Constructor pattern
 Object constructors are used to create specific types of objects - both preparing the object for use and accepting arguments which a constructor can use to set the values of member properties and methods when the object is first created.
 
