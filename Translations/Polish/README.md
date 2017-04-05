@@ -388,13 +388,14 @@ Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
 * Jakie sa wady i zalety używania obietnic zamiast callbacków?
 
 Zalety:
-  - unikanie "callback hell"
-  - wieksze mozliwosci
-  - operowanie na odpowiednim typie danych, zamiast funkcji
+  - Unikanie "callback hell".
+  - Wieksze mozliwosci.
+  - Bogaty interfejs.
+  - Obsługa błędów.
 
 Wady:
-  - więcej kodu
-  - kod jest bardziej skomplikowany
+  - Środowisko musi wspierać obietnice.
+  - Kod jest bardziej skomplikowany.
 
 * Czym jest event life cycle (event flow)?
 

@@ -546,14 +546,15 @@ Promise![Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference
 
 * What are the pros and cons of using Promises instead of callbacks?
 
-pros:
-  - avoiding "callback hell"
-  - more flexibility
-  - dealing with a proper data type, instead of a function
+Pros:
+  - Avoiding "callback hell".
+  - More flexibility.
+  - Rich interface.
+  - Error handling.
 
-cons:
-  - more code
-  - complexity
+Cons:
+  - The envoirnment needs to support promises.
+  - Complexity.
 
 * Variables scope in JS?
 
