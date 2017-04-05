@@ -178,7 +178,7 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * What tools and techniques do you use debugging JavaScript code?
 * What are falsy values
 
-Falsy values are values that evaluate to false when converted to boolean type at the time of e.g. conversion by double exclamation mark or in if statement:
+Falsy values are values that evaluate to false when passed to a conditional statement:
 - 0
 - "" - empty string
 - null
