@@ -259,6 +259,24 @@ Other scopes![other scopes](http://stackoverflow.com/a/500459)
 * Opisz bąbelkowanie zdarzeń.
 * Jak jest różnica między "atrybutem" i "właściwością"?
 * Czemu rozszerzanie obiektów wbudowanych w JavaScript jest złym pomysłem?
+* W jaki sposob mozemy realizowac dziedziczenie w javascripcie (new + Object.create)?
+
+- Używając konstruktora
+
+W JS konstruktor jest po prostu dowolną funkcją, którą jest wykonywana za pomocą operatora new.
+W konstruktorach, nowo stworzona funkcja dziedziczy bezpośrednio z prototypu konstruktora.
+Przy wykonaniu new Funcition(), zadeklarowane właściwości / funkcje wewnątrz konstruktora nie tworzą prototypu.
+
+- Używając Object.create
+
+Object.create zostało dodane w ECMAScript 5. Object.create tworzy nowy obiekt, który dziedziczy bezpośrednio z obiektu podanego jako pierwszy argument wywołania funkcji. Object.create nie uruchamia konstruktora.
+
+- Za pomocą class
+
+W ECMAScript 2015 przedstawiono nowe słowa kluczowe implementujące klasy. Mogą one wyglądać identycznie do konstrukcji znanych z języków implementujących klasyczny model dziedziczenia, jednak nie są one tym samym. Dziedziczenie w JavaScript nadal pozostało prototypowe. Klasy są tak naprawdę tylko "lukrem składniowym" na tworzenie obiektu za pomocą konstruktora i new.
+
+Difference new vs Object.create![Difference new vs Object.create](http://stackoverflow.com/questions/4166616/understanding-the-difference-between-object-create-and-new-somefunction)
+
 * Czemu rozszerzanie to dobry pomysł?
 * Jak jest różnicą między zdarzeniami `load` i `ready` dla strony internetowej?
 * Jaka jest różnica między `==` i `===`?
