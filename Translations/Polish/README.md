@@ -65,7 +65,6 @@ Z gitem, pracowałem na githubie i gitlabie. Próbowałem używać interfejsów 
 * Wyjaśnij, co kryje się za terminem "semantyczny HTML".  
 Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich przeznaczeniem i znaczeniem semantycznym, a nie tylko do prezentowania danych. Znaczniki nadają sens i w różnym kontekście mogną oznaczać do innego. Np <i> i <em> <b> i <strong>, section, aside, nav. Jest to ważne dla robotów indeksujących google, dla czytników przeznaczonych dla osób niepełnosprawnych etc.  
 
-
 * Jak optymalizowałbyś zasoby strony internetowej?  
 Optymalizacja obrazków, łączenie plików, Zmniejszenie rozmiaru plików przy użyciu uglifyjs, stosowanie minifikacji, używanie SVG i css sprites (jeden obrazek, używany wiele razy), Zasoby CDN - mogą być serwowane w zależności od odległości od użytkoniwka, response time etc, cachowanie, nie ładować dużych bibliotek jeśli potrzebujemy z nich tylko jednej funkcji  
 
@@ -140,9 +139,27 @@ HTML 4.01 Strict <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w
 XHTML 1.0 Strict <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 ```
 
-* Jaka jest różnica między trybem standardów a trybem dziwactw (quirks mode)?
-* Jakie są ograniczenia w serwowaniu stron XHTML?
-  * Czy istnieją problemy z serwowaniem stron jako `application/xhtml+xml`?
+* Jaka jest różnica między trybem full standards, almost standards a trybem dziwactw (quirks mode)?  
+Quirks mode to renderowanie strony przez przeglądarkę w wersji dla navigatora 4 i IE 5, zaś full standards mode to renderowanie zgodne ze współczesnymi standardami html i css. Tryb almost standards posiada zaimplementowaną pewną niewielką ilość dziwactw navigatora i IE.  
+https://developer.mozilla.org/pl/docs/Quirks_Mode_and_Standards_Mode  
+
+* Jaka jest różnica między html a xhtml?  
+XHTML to HTML napisany jako XML. Są niemal identyczne. Główne różnice to to, że xhtml jest bardziej restrykcyjny i dzięki temu obsługiwany przez wszystkie główne przeglądarki. Doctype jest obowiązkowy, podobnie atrybut xmlns w znaczniku html oraz znaczniki <html>, <head>, <title> i <body>. Elementy xhtmla musza być poprawnie zagnieżdżone, zawsze zamknięte, napisane małymi literami; zawsze muszą mieć jeden root element.  
+https://www.w3schools.com/html/html_xhtml.asp  
+
+* Jakie są ograniczenia w serwowaniu stron XHTML?  
+Wbrew pozorom i założeniom największym problemem jest wsparcie przeglądarek. Większość z nich przekształca xhtml na zwykły html. Kod xhtml też niekoniecznie jest 'czystszy' od kodu html. Do tego trzeba pamiętać o następujących ograniczeniach:  
+- wszystkie elementy muszą mieć początkowy znacznik  
+- elementy non-void ze znacznikiem początkowym muszą mieć też znacznik końcowy  
+- każdy element może sam się zamknąć przez '/>'  
+- tagi i atrybuty są case sensitive  
+- atrybuty musza być w cudzysłowiu  
+- puste atrybuty są zabronione, więc checked zmienia się w checked="true"  
+- znaki specjalne muszą być escapowane  
+
+http://www.webdevout.net/articles/beware-of-xhtml#myths  
+
+* Czy istnieją problemy z serwowaniem stron jako `application/xhtml+xml`?
 * Jak serwujesz stronę z treścią w wielu językach?
   * Co jest ważne przy projektowaniu i tworzeniu stron wielojęzycznych?
 * Jaka jest przydatność atrybutów `data-`
@@ -156,7 +173,20 @@ XHTML 1.0 Strict <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http:
 * Wyjaśnij jak działa dziedziczenie prototypowe.
 * Jak radzisz sobie z testowaniem swojego kodu JavaScript?
 * AMD kontra CommonJS?
+    Obie specyfikacje opisują format i sposób w jaki moduły i ich zależności powinnybyć definiowane;
+    Głowną rożnicą pomiędzy AMD(Asynchronous Module Definition) a CommonJS est asynchroniczne ładowanie modułow w AMD.
+
+    AMD:
+     - używane jest w przeglądarkach, umożliwia asynchroniczne ładowanie modułów
+     - define('module', [dependencies], function module() { return contents });
+    CommonJS:
+     - na backendzie - dawniej często używana w NodeJS, obecnie się od niej odchodzi.
+     - exports / module.exports | require
+
+     https://auth0.com/blog/javascript-module-systems-showdown/
+
 * Czym jest tablica mieszająca (hashtable)?
+* Co oznaczają komunikaty `undefined` i `undeclared` dla zmiennych?
 * Co oznaczają komunikaty `null`, `undefined` i `undeclared` dla zmiennych?
   - Undeclared jest to zmienna, która nie została stworzona za pomocą var/let/const, a więc została stworzona na obiekcie globalnym window/global.
   - Undefined jest to zmienna, która została zadeklarowana, ale nie została do niej przypisana żadna wartość
@@ -166,7 +196,14 @@ XHTML 1.0 Strict <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http:
     - typeof undefined === 'undefined'
     - typeof null === 'object';
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
-  
+
+* Czym jest promise?
+
+Promise (natywnie dodany w ES6) jest obiektem używanym w operacjach asynchronicznych. Jest to obiekt, który reprezentuje wartość, która może być dostępna teraz, w przyszłości, lub nie być dostępna wcale.
+Promise ma trzy stany: pending (rozpoczęte), fullfiled (zakończone pozytywnie), rejected (zakończone niepowodzeniem - błędem). Gdy Promise osiągnie stan fullfiled lub rejected uruchamiane są handlery poprzez .then (.catch jest aliasem do .then(undefined, function()))
+
+Promise![Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+
 * Czym są domknięcia, jak i po co są używane?
     Closure - domknięcie - pozwala na dostęp do wewnętrznego scope funkcji, nawet po jej wykonaniu.
     Osiąga się to poprzez zwrócenie funkcji po wywołaniu funkcji nadrzędnej.
@@ -266,12 +303,46 @@ Other scopes![other scopes](http://stackoverflow.com/a/500459)
 
 * Opisz bąbelkowanie zdarzeń.
 * Jak jest różnica między "atrybutem" i "właściwością"?
+    Atrybut jest to wartość w samym HTML, która jest zawsze stringiem
+    Property jest przypisana do obiektu w drzewie DOM, może mieć różne typy jak String czy boolean
+
+    http://lucybain.com/blog/2014/attribute-vs-property/
+
 * Czemu rozszerzanie obiektów wbudowanych w JavaScript jest złym pomysłem?
+* W jaki sposob mozemy realizowac dziedziczenie w javascripcie (new + Object.create)?
+
+- Używając konstruktora
+
+W JS konstruktor jest po prostu dowolną funkcją, którą jest wykonywana za pomocą operatora new.
+W konstruktorach, nowo stworzona funkcja dziedziczy bezpośrednio z prototypu konstruktora.
+Przy wykonaniu new Funcition(), zadeklarowane właściwości / funkcje wewnątrz konstruktora nie tworzą prototypu.
+
+- Używając Object.create
+
+Object.create zostało dodane w ECMAScript 5. Object.create tworzy nowy obiekt, który dziedziczy bezpośrednio z obiektu podanego jako pierwszy argument wywołania funkcji. Object.create nie uruchamia konstruktora.
+
+- Za pomocą class
+
+W ECMAScript 2015 przedstawiono nowe słowa kluczowe implementujące klasy. Mogą one wyglądać identycznie do konstrukcji znanych z języków implementujących klasyczny model dziedziczenia, jednak nie są one tym samym. Dziedziczenie w JavaScript nadal pozostało prototypowe. Klasy są tak naprawdę tylko "lukrem składniowym" na tworzenie obiektu za pomocą konstruktora i new.
+
+Difference new vs Object.create![Difference new vs Object.create](http://stackoverflow.com/questions/4166616/understanding-the-difference-between-object-create-and-new-somefunction)
+
 * Czemu rozszerzanie to dobry pomysł?
-* Jak jest różnicą między zdarzeniami `load` i `ready` dla strony internetowej?
+* Jak jest różnicą między zdarzeniami `document load` i `DOMContentLoaded` dla strony internetowej?
+    Event DOMContentLoaded jest uruchamiany, gdy HTML został załadowany i drzewo DOM zbudowane
+    natomiast event load, gdy cała strona, włącznie z css, grafiką zostały załadowane.
+    http://stackoverflow.com/questions/2414750/difference-between-domcontentloaded-and-load-events
+
 * Jaka jest różnica między `==` i `===`?
+    `==` porównuje wartości, dokonując koercji jeśli typy zmiennych nie są jednakowe
+    `===` porównuje wartości jak i typy zmiennych, nie dokonując koercji
+
 * Wyjaśnij ewentualny sposób pobrania parametrów z adresu URL w oknie przeglądarki.
 * Wyjaśnij politykę `same-origin` w odniesieniu do JavaScript.
+    Jest to fundamentalny mechanizm bezpieczeństwa przeglądarki. Mechanizm ten zapobiega dostępowi
+    skryptów js do drzew DOM różnego pochodzenia.
+    Same origin zachodzi wtedy, gdy zgodne są protokół port i host stron, z których wywoływane są skrypty.
+
 * Opisz wzorce dziedziczenia w JavaScript.
 * Czy funkcje sa hoistowane?
 
@@ -511,6 +582,56 @@ $(".foo div#bar:eq(0)")
 * Jak tworzysz i wdrażasz projekt używający niestandardowych czcionek?
   * Czcionki sieciowe (serwisy czcionek jak: Google Webfonts, Typekit itd.)
 * Wyjaśnij jak przeglądarka określa elementy pasujące do selektora CSS?
+* Opisz czym są pseudo-elementy i do czego służą
+  Pseudo-elementy zaczynają się od '::' i są używane do stylowania specyficznych części elementu
+  Składnia: 'selector::pseudo-element {}'
+  Rozróżniamy następujące pseudo-elementy:
+   - ::after - dodaje dodatkową warstwę/zawartość po elemencie
+   - ::before - dodaje dodatkową warstwę/zawartość przed elementem
+   - ::first-letter - wybiera pierwszą literę
+   - ::first-line - wybiera pierwszą linię
+   - ::selection - wybiera część elementu zaznaczoną przez użytkownika
+* Wymień jak najwięcej wartości właściwości 'display'
+  display: value; - wyświetla element jako...
+  - inline - element liniowy, domyślne ustawienie
+  - block -  element blokowy
+  - inline-block - blokowy element liniowy
+  - flex - blokowo-poziomowy płynny kontener (flex container)
+  - inline-flex - liniowo-poziomowy płynny kontener (inline-flex container)
+  - inline-table - liniową tabelę
+  - run-in - blok lub liniowy element, w zależności od kontekstu
+  Pozwala elementowi zachowywać się jak...
+  - list-item - <li>
+  - table - <table>
+  - table-caption - <caption>
+  - table-column-group - <colgroup>
+  - table-header-group - <thead>
+  - table-footer-group - <tfoot>
+  - table-row-group - <tbody>
+  - table-cell - <td>
+  - table-column - <col>
+  - table-row - <tr>
+  - none - element nie zostanie wyświetlony
+  - initial - ustawia wartość tej właściwości do jej domyślnej wartości
+  - inherit - odziedzicza wartość po elemencie nadrzędnym (rodzicu)
+
+  https://www.w3schools.com/cssref/pr_class_display.asp
+* Jaka jest różnica między display: 'inline' i 'inline-block'
+  Elementy z 'display: inline-block' są jak elementy z 'display: inline', lecz mogą mieć szerokość oraz wysokość. To znaczy, że można używać elementów 'inline-block' jako bloków wewnątrz tekstu lub innych elementów.
+  
+  Różnica w wspieranych stylach:
+    inline: tylko margin-left, margin-right, padding-left, padding-right
+    inline-block: margin, padding, height, width
+* Wyjaśnij czym jest według ciebie model pudełkowy (box model) i jak powiesz przeglądarce używając CSS do renderowania layoutu w różnych modelach pudełkowych.
+  Dla celów wyświetlania, każdy element na stronie jest traktowany jako pudełko. Model pudełkowy dotyczy specyfikacji atrybutów pudełka, takich jak szerokość, padding, obramowanie i margines.
+  Model pudełkowy można ustawić dodając właściwość 'box-sizing'. Wartości: 'content-box' (standardowo), 'padding-box' i 'border-box'.
+  - Content-box: szerokość i wysokość uwzględniają zawartość, ale nie padding/obramowanie/margines
+  - Padding-box: uwzględniają powyższe razem z paddingiem, lecz bez obramowania/marginesu
+  - Border-box uwzględniają powyższe z obramowaniem, lecz bez marginesu
+* Co robi ```* { box-sizing: border-box; }```? Jakie są tego zalety?
+  Jest to IE6 Quirks mode (tryb dziwactw): jeśli uwstawisz szerokość, dodasz paddingi oraz obramowanie, całkowita szerokość nie zmieni się. Wewnętrzna szerokość dostosuje się do reszty.
+
+  Zalety: Możesz ustawiać wartości paddingów i obramowania bez przejmowania się o 'rozjechanie', rozszerzenie się pudełka. Jest to bardzo wygodne dla kolumnowych layoutów. Możesz również używać na przemian wartości w procentach i pikselach, więc nie musisz polega na elemencie podrzędnym dla paddingu.
 
 ### Pytania z testowania:
 
@@ -541,6 +662,102 @@ $(".foo div#bar:eq(0)")
   Chrome Dev-Tools Profiler - pozwala sprawdzić ile czasu wykonuje się jaka funkcji i w ten sposób określić które funkcje zabierają najwięcej procesora.
 
   [więcej info](https://developers.google.com/web/tools/chrome-devtools/rendering-tools/js-execution)
+
+* Jakie są niektóre ze sposób na poprawienie wydajności przewijania strony?
+
+  * Rozmiar grafik powinien być dostosowany do rozmiaru ich kontenera, powinny być zoptymalizowane aby nie zabierać za dużo transferu.
+  * Unikanie używania dużej ilości box-shadow i innych styli wymagających dużej ilości skomplikowanego rysowania przez przeglądarke.
+  * Unikanie metod/właściwości JavaScript które powodują reflow/repaint strony przez przeglądarkę, takich jak offset elementów, wielkość kontenerów etc.
+  * Używanie debounce w eventach przewijania.
+
+* Wyjaśnij różnicę pomiędzy fazami layout, painting i compositing przeglądarki.
+
+  * layout - jest to faza, w której przeglądarka sprawdza ile miejsca potrzeba dla każdego komponentu na stronie.
+  * painting - wypełnianie pixelami, rysowanie tekstów, kolorów, grafiki.
+  * compositing - składanie komponentów i wyświeltanie ich we właściwej kolejności, na właściwym miejscu - renderowanie całej strony.
+
+  [źródło](https://developers.google.com/web/fundamentals/performance/rendering/?hl=en)
+
+### Pytania z sieci:
+
+* Dlaczego lepiej serwować zasoby strony z wielu domen?
+
+  Ponieważ zwiększa to prędkość ładowania strony:
+  * Paralelizacja - pozwala na wysłanie wielu requestów naraz do wielu różnych serwerów, co pozwala na zmniejszenie ogólnego czasu ładowania zasobów.
+  * Zmniejszone zużycie zasóbów przez headery - zazwyczaj serwer wysyła klientowi pliki cookie, które dołączane są potem do każdego zapytania w tej samej domenie co strona. Serwując statyczny content z innych domen niż strona unikamy potrzeby wysyłania plików cookie przy każdym zapytaniu.
+
+  [źródło](https://travishorn.com/why-it-is-better-to-serve-site-assets-from-multiple-domains-972a2bf69d71)
+
+* Postaraj się wyjaśnić jak wygląda proces wczytywania strony, od czasu wpisania jej adresu do czasu zakończenia jej ładowania.
+
+  1. Pobranie z DNS adresu IP serwera, bazując na wpisanym adresie URL.
+  2. Wysłanie zapytania HTTP do serwera.
+  3. Parsowanie odpowiedzi i renderowanie strony.
+
+  [więcej szczegółów](http://stackoverflow.com/a/2092602)
+
+* Jakie są różnice pomiędzy Long-Polling, WebSockets i Server-Sent Events?
+
+  * Long-polling - Klient wysyła zapytanie do serwera. Kiedy serwer będzie miał nową informację do zaraportowania, odpowiada klientowi. Ten proces jest jednorazowy.
+  * WebSockets - Klient łączy się z serwerem i utrzymuje połączenie. Klient może wtedy wymieniać informacje z serwerem.
+  * Server-Sent Events - Klient łączy się z serwerem wysyłając zapytanie. Połączenie jest utrzymywane, a serwer może odpowiadać gdy ma nowe informacje do zaraportowania. Połączenie to w przeciwieństwie do WebSocketów jest jednokierunkowe.
+
+  [więcej informacji](http://stackoverflow.com/a/12855533)
+
+* Wyjaśnij poniższe nagłówki zapytania i odpowiedzi:
+
+  * Różnica pomiędzy Expires, Date, Age i If-Modified-Since
+  * Do Not Track
+  * Cache-Control
+  * Transfer-Encoding
+  * ETag
+  * X-Frame-Options
+
+  * Date - data wysłania wiadomości.
+  * Expires - data po której wiadomość jest uznawana za nieważną.
+  * Age - liczba sekund którą wiadomość spędziła w cache.
+  * If-Modified-Since - pozwala serwerowi odpowiedzieć statusem 304 gdy wiadomość nie została zmieniona od daty zawartej w tym nagłówku.
+  * DNT (Do Not Track) - prosi serwer aby nie śledził użytkownika.
+  * Cache-Control - kontroluje opcje związane z cachowaniem, np. jak długo wiadomość może pozostawać w cache.
+  * Transfer-Encoding - forma kodowania wiadomości, np.: chunked, compress, deflate, gzip, identity.
+  * ETag - może być użyte w celu wersjonowania wiadomości.
+  * X-Frame-Options - kontroluje ochronę przed "clickjackingiem".
+
+  [źródło](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)
+
+* Co to są metody HTTP? Wymień wszystkie które znasz i krótko je opisz.
+
+  Metody HTTP wskazują jaką akcję klient chce wykonać na wskazanym zasobie.
+
+  * GET - pobiera zasób bez jego modyfikacji.
+  * HEAD - takie samo jak GET, ale nie pobiera danych zasobu. Może być przydatne gdy potrzebne są jedynie nagłówki.
+  * POST - dodaje nowy zasób.
+  * PUT - aktualizuje zasób.
+  * DELETE - usuwa zasób.
+  * TRACE - zwraca dane otrzymane w zapytaniu bez ich modyfikacji.
+  * OPTIONS - zwraca metody obsługiwane przez serwer dla danego zasobu.
+  * CONNECT - konwertuje połączenie w tunel TCP/IP.
+  * PATCH - nakłada częściowe modyfikacje na zasób.
+
+  [źródło](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)
+
+### Pytania z kodowania:
+
+* Jaka jest wartość `foo`?
+```javascript
+var foo = 10 + '20';
+```
+
+  `1020` (string)
+
+* Jaka jest wartość `foo.length`?
+```javascript
+var foo = [];
+foo.push(1);
+foo.push(2);
+```
+
+  `2`
 
 ### Pytania dodatkowe (zabawne):
 
