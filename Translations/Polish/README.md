@@ -105,7 +105,7 @@ Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich prz
 * Wyjaśnij czemu podany kod nie zadziała jako IIFE: `function foo(){ }();`.
   * co trzeba zmienić aby było to poprawne IIFE?
   a) Funkcja foo() zapisana jest jako function declaration a nie function expression (IIFE - Immediately-Invoked Function Expression )
-  b) Brakuje zewnętrznych nawiasow {} - {function foo(){ }()};
+  b) Brakuje zewnętrznych nawiasow () - (function foo(){ }());
   http://benalman.com/news/2010/11/immediately-invoked-function-expression/
 
 * Czym jest tablica mieszająca (hashtable)?
