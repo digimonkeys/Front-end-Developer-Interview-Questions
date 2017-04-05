@@ -65,7 +65,6 @@ Z gitem, pracowałem na githubie i gitlabie. Próbowałem używać interfejsów 
 * Wyjaśnij, co kryje się za terminem "semantyczny HTML".  
 Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich przeznaczeniem i znaczeniem semantycznym, a nie tylko do prezentowania danych. Znaczniki nadają sens i w różnym kontekście mogną oznaczać do innego. Np <i> i <em> <b> i <strong>, section, aside, nav. Jest to ważne dla robotów indeksujących google, dla czytników przeznaczonych dla osób niepełnosprawnych etc.  
 
-
 * Jak optymalizowałbyś zasoby strony internetowej?  
 Optymalizacja obrazków, łączenie plików, Zmniejszenie rozmiaru plików przy użyciu uglifyjs, stosowanie minifikacji, używanie SVG i css sprites (jeden obrazek, używany wiele razy), Zasoby CDN - mogą być serwowane w zależności od odległości od użytkoniwka, response time etc, cachowanie, nie ładować dużych bibliotek jeśli potrzebujemy z nich tylko jednej funkcji  
 
@@ -152,6 +151,18 @@ https://www.w3schools.com/html/html_xhtml.asp
 * Wyjaśnij jak działa dziedziczenie prototypowe.
 * Jak radzisz sobie z testowaniem swojego kodu JavaScript?
 * AMD kontra CommonJS?
+    Obie specyfikacje opisują format i sposób w jaki moduły i ich zależności powinnybyć definiowane;
+    Głowną rożnicą pomiędzy AMD(Asynchronous Module Definition) a CommonJS est asynchroniczne ładowanie modułow w AMD.
+
+    AMD:
+     - używane jest w przeglądarkach, umożliwia asynchroniczne ładowanie modułów
+     - define('module', [dependencies], function module() { return contents });
+    CommonJS:
+     - na backendzie - dawniej często używana w NodeJS, obecnie się od niej odchodzi.
+     - exports / module.exports | require
+
+     https://auth0.com/blog/javascript-module-systems-showdown/
+
 * Czym jest tablica mieszająca (hashtable)?
 * Co oznaczają komunikaty `undefined` i `undeclared` dla zmiennych?
 * Co oznaczają komunikaty `null`, `undefined` i `undeclared` dla zmiennych?

@@ -330,6 +330,18 @@ https://www.w3schools.com/html/html_xhtml.asp
 * Explain how `this` works in JavaScript
 * Explain how prototypal inheritance works
 * What do you think of AMD vs CommonJS?
+    Both specifications describe the format and manner in which modules and their dependencies should be defined.
+    The main difference between AMD (Asynchronous Module Definition) and CommonJS is the asynchronous loading of modules in AMD.
+
+    AMD:
+     - Used in browsers, asynchronous loading of modules
+     - define('module', [dependencies], function module() { return contents });
+    CommonJS:
+     - On backend - Formerly used in NodeJS, nowadays less popular.
+     - exports / module.exports | require
+
+     https://auth0.com/blog/javascript-module-systems-showdown/
+
 * Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
   * What needs to be changed to properly make it an IIFE?
 * What's the difference between a variable that is: `null`, `undefined` or undeclared?
