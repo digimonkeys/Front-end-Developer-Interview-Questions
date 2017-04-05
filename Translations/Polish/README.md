@@ -766,6 +766,13 @@ add(2)(5); // 7
   };
   ```
 
+* Co zwraca poniższe zapytanie?
+```javascript
+"i'm a lasagna hog".split("").reverse().join("");
+```
+
+  `goh angasal a m'i`
+
 * Jaka jest wartość `foo.length`?
 ```javascript
 var foo = [];
