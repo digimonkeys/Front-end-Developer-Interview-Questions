@@ -810,6 +810,15 @@ foo.push(2);
 
   `2`
 
+* Jaka jest wartość `foo.x`?
+```javascript
+var foo = {n: 1};
+var bar = foo;
+foo.x = foo = {n: 2};
+```
+
+  `undefined` - po tym jak `x` jest przypisane do zmiennej `foo`, do zmiennej `foo` zostaje przypisany inny obiekt który nie ma przypisanego `x`. `x` jest wciąż przypisany do poprzedniego obiekty, który teraz znajduje się w zmiennej `bar`.
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
