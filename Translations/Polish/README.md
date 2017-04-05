@@ -834,6 +834,13 @@ console.log('three');
   two
   ```
 
+### Pytania AngularJS
+
+* Czym jest AngularJS?
+  AngularJS jest strukturalnym frameworkiem dla dynamicznych aplikacji webowych. Pozwala na użycie HTML jako języka szablonów i pozwala rozszerzyć jego składnię by wyrazić komponenty aplikacji czysto oraz treściwie. Wiązanie danych (data binding) oraz wstrzykiwanie zależności (dependency injection) eliminują ogrom kodu, który musiałby zostać napisany. I wszystko to dzieje się wewnątrz przeglądarki, czyni to, z AngularJS, idealnym partnerem z każdą technologią serwerową.
+
+  https://docs.angularjs.org/guide/introduction
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
