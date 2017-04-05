@@ -156,7 +156,7 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
 * How do you organize your code? (module pattern, classical inheritance?)
 * What's the difference between host objects and native objects?
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
-  - This is a function declaration that assigns a name to a function
+  - A Function Declaration defines a named function variable without requiring variable assignment.
   - Assigns to the person variable the value returned by the person function, in this case undefined
   - Assigns a Person object to person variable, with this assigned to the person object
   https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/

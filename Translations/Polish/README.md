@@ -116,9 +116,9 @@ Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich prz
 ```javascript
 function Person(){}, var person = Person(), var person = new Person()
 ```
-  - Jest to deklaracja funkcji, przypisuje nazwę do funkcji
+  - Jest to deklaracja funkcji, przypisuje nazwę do funkcji bez konieczności przypisywania jej do zmiennej
   - Przypisuje do zmiennej person wartość zwracaną przez funkcję person, w tym przypadku undefined
-  - Przypisuje do zmiennej person obiekt typu Person, z this przypisanym do obiektu person
+  - Przypisuje do zmiennej person obiekt/konstruktor typu Person, z this przypisanym do obiektu Person
   https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/
 
 * Jaka jest różnica między `.call` i `.apply`?
