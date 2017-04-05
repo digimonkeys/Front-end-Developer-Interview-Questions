@@ -259,6 +259,8 @@ $(".foo div#bar:eq(0)")
   2. Wysłanie zapytania HTTP do serwera.
   3. Parsowanie odpowiedzi i renderowanie strony.
 
+  [więcej szczegółów](http://stackoverflow.com/a/2092602)
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?

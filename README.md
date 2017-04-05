@@ -213,6 +213,8 @@ Function prototype is Object, and it's prototype is Function();
   2. Send an HTTP request to the server.
   3. Parse the response and render the page.
 
+  [more details](http://stackoverflow.com/a/2092602)
+
 * What are the differences between Long-Polling, Websockets and Server-Sent Events?
 * Explain the following request and response headers:
   * Diff. between Expires, Date, Age and If-Modified-...
