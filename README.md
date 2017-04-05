@@ -542,7 +542,7 @@ A Promise is in one of these states:
 
 A pending promise can either be fulfilled with a value, or rejected with a reason (error). When either of these options happen, the associated handlers queued up by a promise's then method are called.
 
-Promise![Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+[Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
 * What are the pros and cons of using Promises instead of callbacks?
 * Variables scope in JS?

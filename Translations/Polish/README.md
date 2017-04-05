@@ -385,6 +385,19 @@ Odniesienie: [Conditional (ternary) Operator](https://developer.mozilla.org/en-U
 Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
 Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
 
+* Czym jest obietnica (`Promise`)?
+
+Obietnica jest używana do asynchronicznych operacji. Reprezentuje wartość, która może być dostępna teraz, w przyszłości albo nigdy.
+Może posiadać jeden z trzech stanów:
+
+- oczekujacy: stan początkowy, nie jest ani spełniona ani odrzucona.
+- spełniony: operacja przebiegła pomyślnie.
+- odrzucony: operacja się nie powiodła.
+
+Oczekująca obietnica może być spełniona z jakąś wartością lub odrzucona z jakimś powodem (błędem). Gdy tak się stanie, przypisane funkcje w metodzie then zostaną wykonane.
+
+[Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+
 * Czym jest event life cycle (event flow)?
 
 Event lifecycle (event flow) opisuje cykl życia eventu w drzewie DOM. Przy każdym zdarzeniu, przeglądarka tworzy event i rozsyła go po drzewie DOM. Propagacja / rozsyłanie eventu odbywa się w trzech fazach:
