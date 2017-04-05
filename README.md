@@ -815,6 +815,12 @@ console.log('three');
 
 #### NodeJS questions:
 
+* What are Promises?
+
+  Promises are used for asynchronous computations. A Promise represents a value which may be available now, in the future, or never.
+
+  [source](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
