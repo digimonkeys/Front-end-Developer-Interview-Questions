@@ -40,21 +40,24 @@ Pracowałem nad projektem wykorzystującym boilerplate bundlujący się przez st
 
 * Jak planujesz budowę UI, utrzymanie bezpieczeństwa, wysoką wydajność, SEO, łatwość w utrzymaniu kodu i jakie wykorzystujesz technologie kiedy zaczynasz budować aplikację webową lub stronę internetową?
 
-UI - zazwyczaj zaczynam od narysowania interfejsu na kartce papieru, która później służy mi jako generalny wyznacznik tego, co chcę osiągnąć na koniec pracy. Zawsze przykładam wagę do czytelności i prostoty interfejsu dla użytkowników.  
+UI - zazwyczaj zaczynam od narysowania interfejsu na kartce papieru, która później służy mi jako generalny wyznacznik tego, co chcę osiągnąć na koniec pracy. Zawsze przykładam wagę do czytelności i prostoty interfejsu dla użytkowników.
 
-Bezpieczeństwo - ponieważ po stronie klienta z kodem może stać się wszystko, trzymam wszystkie wrażliwe dane po stronie serwera.    
+Bezpieczeństwo - ponieważ po stronie klienta z kodem może stać się wszystko, trzymam wszystkie wrażliwe dane po stronie serwera.
 
-Wydajność - skupiam się na pisaniu przejrzystego, zrozumiałego kodu, a gdy któraś funkcjonalność okazuje się zbyt wolna pracuje nad poprawieniem jej wydajności. Czasem jeśli jakiś problem wydaje mi się 'ciężki' dla aplikacji i moge go rozwiązać na kilka sposobów, od razu wykonuje pomiar czasów wykonania przy różnych rozwiązaniach.  
+Wydajność - skupiam się na pisaniu przejrzystego, zrozumiałego kodu, a gdy któraś funkcjonalność okazuje się zbyt wolna pracuje nad poprawieniem jej wydajności. Czasem jeśli jakiś problem wydaje mi się 'ciężki' dla aplikacji i moge go rozwiązać na kilka sposobów, od razu wykonuje pomiar czasów wykonania przy różnych rozwiązaniach.
 
-SEO - nie zajmuję się optymalizacją SEO (nie bywało to moim zadaniem)  
+SEO - nie zajmuję się optymalizacją SEO (nie bywało to moim zadaniem)
 
-Utrzymanie kodu - stosuję ogólne dobre praktyki, takie jak proste i czytelne nazywanie funkcji i zmiennych, dzielenie kodu na małe, proste moduły. Zawsze kładę wielki nacisk na przystosowanie mojego kodu do zwyczajów panujących w zatrudniającej mnie firmie.  
+Utrzymanie kodu - stosuję ogólne dobre praktyki, takie jak proste i czytelne nazywanie funkcji i zmiennych, dzielenie kodu na małe, proste moduły. Zawsze kładę wielki nacisk na przystosowanie mojego kodu do zwyczajów panujących w zatrudniającej mnie firmie.
 
-Technologie - ostatnio preferuję React i redux w połączeniu z webpackiem, ale używałem również angulara 1 z gulpem itd itp  
+Technologie - ostatnio preferuję React i redux w połączeniu z webpackiem, ale używałem również angulara 1 z gulpem itd itp
 
-* Jakie jest Twoje preferowane środowisko programistyczne? (system operacyjny, edytor, przeglądarki, narzędzia itd.)
+* Jakie jest Twoje preferowane środowisko programistyczne? (system operacyjny, edytor, przeglądarki, narzędzia itd.)  
+Używam sublime 3 z jego dodatkowymi pluginami i świetnymi funcjonalnościami pomagającymi w edycji tekstu. Preferuję pracę na chromie i jego dev toolsach, ale używam też firebuga. Mam pewną wiedzę na temat linuksa, ale obecnie pracuję na win10. Korzystam też z gulpa, webpacka, managerów okien linterów itp.  
+
 * Z jakimi systemami kontroli wersji pracowałeś / jesteś zapoznany?  
 Z gitem, pracowałem na githubie i gitlabie. Próbowałem używać interfejsów graficznych gita, ale jednak wolę pracować w command line.  
+
 * Opisz kolejne zadania podczas tworzenia strony internetowej?
 * Opisz różnicę między stopniowym ulepszaniem (progressive enhancement) i wdzięczną degradacją (graceful degradation)?
   * Dodatkowe punkty za opisanie wykrywania obsługi cech (feature detection)  
@@ -63,16 +66,14 @@ Graceful degradation - oprogramowanie / strona jest tworzona dla użytkowników 
  Progressive enhancement - tworzenie aplikacji strony zapewniającej pewien poziom funkcjonalności dla wszystkich przeglądarek, następnie rozbudowuje się ją o nowe funkcjonalności / features dla nowszych przeglądarek.  
 
  wykrywanie obsługi cech to technika sprawdzania danego środowiska (np przeglądarki) pod względem dostepnych funkcjonalności, pozwalająca aplikacji na pewne dostosowanie swojego działania do zastanych możliwości  
+
 * Wyjaśnij, co kryje się za terminem "semantyczny HTML".  
 Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich przeznaczeniem i znaczeniem semantycznym, a nie tylko do prezentowania danych. Znaczniki nadają sens i w różnym kontekście mogną oznaczać do innego. Np <i> i <em> <b> i <strong>, section, aside, nav. Jest to ważne dla robotów indeksujących google, dla czytników przeznaczonych dla osób niepełnosprawnych etc.  
 
-* Jak optymalizowałbyś zasoby strony internetowej?
-  * Myśląc o wielu rozwiązaniach, które zawierają:
-    * Łączenie plików
-    * Zmniejszenie rozmiaru plików
-    * Zasoby CDN
-    * Buforowanie
-    * itd.
+
+* Jak optymalizowałbyś zasoby strony internetowej?  
+Optymalizacja obrazków, łączenie plików, Zmniejszenie rozmiaru plików przy użyciu uglifyjs, stosowanie minifikacji, używanie SVG i css sprites (jeden obrazek, używany wiele razy), Zasoby CDN - mogą być serwowane w zależności od odległości od użytkoniwka, response time etc, cachowanie, nie ładować dużych bibliotek jeśli potrzebujemy z nich tylko jednej funkcji  
+
 * Dlaczego serwowanie zasobów strony przez wiele domen jest lepsze?
   * Ile zasobów pobiera przeglądarka z danej domeny w jednej chwili?
 * Podaj 3 sposoby na zmniejszenie czasu ładowania strony. (postrzeganego lub rzeczywistego czasu ładowania)
@@ -80,13 +81,58 @@ Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich prz
   * Sugerowanie użycia narzędzi w stylu EditorConfig (http://editorconfig.org)
   * Zgodnie z konwencjami (pozostań konsekwentny)
   * `issue :retab! command`
+  Dostosuję się. Wystarczy przecież zmienić ustawienia edytora.
+
 * Napisz prosty pokaz slajdów
   * Dodatkowe punkty, jeśli nie używasz JS.
+Można to zrobić za pomocą CSS3 wykorzystując unordered list i input type = radio. Najistotniejsze elementy kodu:
+
+```
+<li>
+    <input type="radio" id="slide1" name="slide" checked>
+    <label for="slide1"></label>
+    <img>
+</li>
+.your-ul-class img {
+    opacity: 0;
+    visibility: hidden;
+}
+.ul-class li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+```
+
+Pełny tutorial: http://joshnh.com/weblog/making-a-pure-css-featured-image-slider/
+
 * Jakich narzędzi używasz do sprawdzenia wydajności swojego kodu?
-  * Profiler, JSPerf, Dromaeo
+  * Profiler, JSPerf, Dromaeo  
+Chrome Timeline - dostępne w devTools, nagrywa i pozwala na analizę wszystkich aktywności aplikacji podczas jej działania 
+JSPerf - jsPerf umożliwia łatwe tworzenie i udostepnianie testów wydajności, porównując wydajność snippetów JS przez testy benchmarkowe
+ Dromaeo - zetaw testów wydajności dla JS od Mozilli, obecnie nadal w fazie rozwoju  
+https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool  
+https://jsperf.com/  
+https://wiki.mozilla.org/Dromaeo  
+
 * Gdybyś mógł opanować jedną technologię w tym roku, jaka byłaby to technologia?
-* Wyjaśnij znaczenie standardów sieciowych i ich twórców.
-* Czym jest FOUC? Jak unikasz FOUC?
+* Wyjaśnij znaczenie standardów sieciowych i ich twórców.  
+Standardy są bardzo istotne ponieważ aplikacje pisane w danym języku są kompilowane przez różne przeglądarki. Pozwala to uniknąć sytuacji, w której kod działa w połowie przeglądarek, lub działa tylko w tej ulubionej kodera. Gdy opracowany jest standard przeglądarki wiedzą czego się spodziewać i każdy piszący w zgodzie ze standardem może zakładać, że wszystko będzie działać. Twórcami standardów są w3c, iso, ansi, unicode consortium, ietf oraz ecma.  
+
+* Czym jest FOUC? Jak unikasz FOUC?  
+Flash of unstyled content jest to wyświetlenie użytkownikowi nieostylowanej strony (jej zawartości) podczas ładowania strony. Pojawia się gdy CSS jest wolno ładowany lub gdy JS powoduje wielokrotne renderowanie strony.
+Aby uniknąć FOUC należy serwować użytkownikowi jak najbardziej zoptymalizowany CSS (zminifikowany, w jednym pliku), oraz używać jak najmniej javascriptu powodującego fazę render przeglądarki. Używanie Critical CSS (czyli wrzucanie najważniejszych reguł css inline w znaczniku head).
+Używanie media queries i serwowanie CSS zoptymalizowanego dla urządzeń o mniejszej rozdzielczości. Można też ukryć całą stronę do czasu załadowania wszystkich styli.  
+https://en.wikipedia.org/wiki/Flash_of_unstyled_content  
+http://www.techrepublic.com/blog/web-designer/how-to-prevent-flash-of-unstyled-content-on-your-websites/  
+* Co to jest ARIA, screenreader i jak stworzyć stronę z ułatwieniami dostępu?
+ARIA to zestaw wytycznych opracowanych przez WAI(Web Accessibility Initiative) aby umożliwić korzystanie z aplikacji ludziom z dysfunkcjami(np. niewidomi), którzy posługują się technologiami wspierającymi.
+
+Screenreadery to programy służące do odczytywania treści i dostępnych akcji, które podejmuje się na komputerze.
+
+3 kroki tworzenia aplikacji z ułatwieniami dostępu: używaj natywnych tagów HTML kiedy tylko się da; elementy interaktywne twórz z możliwością obsługi przez klawiaturę; zapewnij dodatkowe znaczniki specjalnie dla AT (accessibility technology). 
+https://www.w3.org/WAI/intro/aria
+http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-applications-accessible/
 
 ### Pytania HTML:
 
@@ -108,21 +154,50 @@ Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich prz
 * Jak radzisz sobie z testowaniem swojego kodu JavaScript?
 * AMD kontra CommonJS?
 * Czym jest tablica mieszająca (hashtable)?
-* Co oznaczają komunikaty `undefined` i `undeclared` dla zmiennych?
+* Co oznaczają komunikaty `null`, `undefined` i `undeclared` dla zmiennych?
+  - Undeclared jest to zmienna, która nie została stworzona za pomocą var/let/const, a więc została stworzona na obiekcie globalnym window/global.
+  - Undefined jest to zmienna, która została zadeklarowana, ale nie została do niej przypisana żadna wartość
+  - Null jest to typ, który ma przypisaną tylko jedną wartość null, zmienna została zadeklrowana i przypisny do niej obiekt typu Null
+  - Undefined jest typem, null jest obiektem
+  * Jak byś sprawdził te stany zmiennych?
+    - typeof undefined === 'undefined'
+    - typeof null === 'object';
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+  
 * Czym są domknięcia, jak i po co są używane?
-  * Ulubiony wzorzec używany do ich tworzenia? argyle (Dotyczy tylko IIFE)
+    Closure - domknięcie - pozwala na dostęp do wewnętrznego scope funkcji, nawet po jej wykonaniu.
+    Osiąga się to poprzez zwrócenie funkcji po wywołaniu funkcji nadrzędnej.
+    Pozwala to na symulowanie zmiennych publicznych i prywatnych.
+  * Ulubiony wzorzec używany do ich tworzenia?
+    - Module pattern
+  http://blog.nebula.us/13-javascript-closures-czyli-zrozumiec-i-wykorzystac-domkniecia
+
 * Jakie znasz typowe użycie funkcji anonimowych?
 * Wyjaśnij pojęcie "Moduł JavaScript" i kiedy jest warte stosowania.
   * Dodatkowe punkty za wzmiankę na temat czystości przestrzeni nazw.
   * Co jeśli Twój kod nie używa przestrzeni nazw?
 * Jak organizujesz swój kod? (moduły, klasyczne dziedziczenie?)
-* Jaka jest różnicza między obiektami typu `host` i `native`?
+  Np. Używam module pattern, IIFE, Atomic design
+
+* Jaka jest różnica między obiektami typu `host` i `native`?
+  Host objects są to obiekty dostarczane przez środowisko hosta. Mogą się one różnić pomędzy środowiskami, przykłady:
+  - window, document, location
+  Native objects są to obiecty opisane i w pełni zdefiniowane w specyfikacji ECMAScript, przykłady:
+  - Date, Math, parseInt.
+  http://stackoverflow.com/questions/7614317/what-is-the-difference-between-native-objects-and-host-objects
+
 * Różnica między:
 ```javascript
 function Person(){} var person = Person() var person = new Person()
 ```
 * Jaka jest różnica między `.call` i `.apply`?
 * Wyjaśnij `Function.prototype.bind`?
+* Czym jest callback?
+
+Callback jest to funckcja przekazywana do innej funkcji poprzez argument. Funkcja, która przyjmuje callback jako argument może w swoim ciele wywołać przekazaną funkcję. Wywołanie to może nastąpić natychmiast (synchronicznie), albo późniejszym czasie (asynchronicznie).
+
+Callback![Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming))
+
 * Kiedy optymalizujesz swój kod?
 * Wyjaśnij działanie dziedziczenia w JavaScript?
 * Kiedy użyłbyś `document.write()`?
@@ -143,14 +218,44 @@ function Person(){} var person = Person() var person = new Person()
     - Dane są ładowane dynamicznie a więc nie są częścią strony WWW. Wyszukiwarki internetowe nie indeksują treści ładowanych dynamicznie
 
 * Wyjaśnij działanie JSONP (i dlaczego nie jest właściwie AJAX).
+* Typy zmiennych w jsie?
+ 
+W JS rozróżniamy dwa typy danych: typy proste i typy złożone.
+
+Do typów prostych należą:
+- String
+- Number
+- Boolean
+- null
+- undefined
+- Symbol (od ES6)
+
+Typem złożonym jest Object jak np:
+- Array
+- Date
+- Function
+- Map, WeakMap
+- Set, WeakSet
+
+Typy proste przekazywane są przez wartość, natomiast typy złożone przez referencję.
+ 
+Javascript Types![Javascript Data Types](https://developer.mozilla.org/pl/docs/Web/JavaScript/Data_structures)
+
 * Czy kiedykolwiek używałeś szablonów w JavaScript?
   * Jeśli tak, jakie to były biblioteki? (Mustache.js, Handlebars itd.)
+
+* Co robi drugi parametr object.create?
+
+Drugi parametr Object.create pozwala na dodanie właściwości do nowo powstałego obiektu. Format w jakim podajemy te właściwości jest taki sam jak w drugim argumencie Object.defineProperties().
+
+Object.create![Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
+
 * Wyjaśnij pojęcie "hoisting".
 * Zasieg zmiennych w jsie?
- 
+
  W JS, do wersji ES6 występowały tylko dwa rodzaje zasięgu zmiennych, tj. globalny (global scope) i zasięg lokalny - w obrębie funkcji (function scope).
  Od ES6 i pojawienia się zmiennych deklarowanych jako let i const pojawił się także zasięg blokowy (tj. wewnątrz { }).
- 
+
 var![var](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
 let![let](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Statements/let)
 const![const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
@@ -166,7 +271,7 @@ Other scopes![other scopes](http://stackoverflow.com/a/500459)
 * Wyjaśnij politykę `same-origin` w odniesieniu do JavaScript.
 * Opisz wzorce dziedziczenia w JavaScript.
 * Czy funkcje sa hoistowane?
- 
+
 W JS funcje można deklarować na dwa sposoby: poprzez function definition oraz function expression.
 Function definition są hoistowane, natomiast function expressions nie.
 
@@ -174,25 +279,37 @@ Function hoisting![Function hoisting](https://developer.mozilla.org/en-US/docs/W
 
 * Napisz działający kod:
 ```javascript
-[1,2,3,4,5].duplicate(); // [1,2,3,4,5,1,2,3,4,5]
+duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 ```
+
+```javascript
+function duplicate(arr) {
+  return arr.concat(arr);
+}
+```
+Odniesienie: [Array.prototype.concat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
+
 * Opisz strategię zapamiętywania (unikanie powtarzalnych obliczeń) w JavaScript.
 * Dlaczego mówimy wyrażenie trójkowe, co dokładnie oznacza słowo "trójkowy"?
+
+Mówimy wyrażenie trójkowe, ponieważ przyjmuje trzy operandy (operand - argument).
+Jako ciekawostke można dodać, że jest to jedyny operator w JavaScripcie, który przyjmuje trzy operandy.
+Odniesienie: [Conditional (ternary) Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+
 * Czym jest `arity` funkcji?
 * Co oznacza `"use strict";`? Jakie są zalety i wady takiego rozwiązania?
 * Jaka jest roznica miedzy funkcja a obiektem?
- Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
-
+Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
 Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
 
 * Czym jest event life cycle (event flow)?
- 
+
 Event lifecycle (event flow) opisuje cykl życia eventu w drzewie DOM. Przy każdym zdarzeniu, przeglądarka tworzy event i rozsyła go po drzewie DOM. Propagacja / rozsyłanie eventu odbywa się w trzech fazach:
- 
+
 - capturing faze - w tej fazie event przesyłany jest od najwyżeszego rodzica w drzewie DOM, aż do elementu, na którym nastąpiło zdarzenie.
 - on the object faze - występuje na elemencie, na którym nastąpiło zdarzenie
 - bubbling faze - w tej fazie event przesyłany jest od elementu na którym nastąpiło zdarzenie, aż do najwyżeszego rodzica w drzewie dom
- 
+
 Event flow![Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
 
 ### Przykłady kodu JS:
@@ -259,7 +376,10 @@ $(".foo div#bar:eq(0)")
 
 * Jaka jest różnica między klasami oraz idendyfikatorami w CSS?
   Idendyfikatory są unikalne, każdy element może posiadać tylko jeden identyfikator, dodatkowo przeglądarka może używać identyfikatorów do nawigacji (scrollując do elementu z danym ID). Klasy nie są unikalne oraz elementy mogą posiadać więcej niż jedną klasę, nie mają większego znaczenia dla samej przeglądarki.
+* Opisz BFC(Block Formatting Context) i powiedz jak działa.
+  Blokowe formatowanie kontekstu jest częścią wizualnego renderingu CSS strony. Jest to miejsce, w którym występuje układ elementów blokowych i, w którym float'y komunikują się między sobą. W BFC każde 'pudełko' dotyka lewą zewnętrzną krawędzią kontenera (dla formatowania od-prawej-do-lewej dotyka prawej krawędzi). Zasady dla pozycjonowania i czyszczenia float'ów działają w tym samym blokowym formatowaniu kontekstu. Dodatkowo BFC powoduje nakładanie się marginesów (margin collapsing).
 
+  https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context
 * Opisz czym jest z-index oraz jak tworzony jest układ warstw.
   Właściwość z-index kontroluje pionowe nakładania się elementów, które nachodzą na siebie. Bez wartości z-index, elementy układają się w kolejności w jakiej pojawiają się w DOM (najniżej położony element w DOM pojawia się na samej górze). Zagnieżdżanie jest również ważne, jeśli element B jest nad elementem A, dziecko elementu A nigdy nie będzie wyżej niż element B.
 
@@ -268,6 +388,24 @@ $(".foo div#bar:eq(0)")
   Reset CSS służy usunięciu wszystkich styli CSS nadanych przez przeglądarki, więc trzeba je ostylować na nowo. Normalizowanie styli ustawia takie same style elementów dla każdej przeglądarki oraz naprawia część błędów, więc konieczne jest tylko stylowanie elementów, które różnią się wyglądem od pożądanego efektu. Użyłbym normalizowania, ponieważ każda zmiana będzie miała taki sam efekt w każdej przeglądarce.
 
   http://stackoverflow.com/questions/6887336/what-is-the-difference-between-normalize-css-and-reset-css
+
+* Jakie są różne metody czyszczenia i które są odpowiednie dla jakich kontekstów?
+  - Metoda pustego Div'a:
+    <div style="clear:both;"></div>
+    Nie używam tej metody, ponieważ w kodzie pozostaje pusty, niepotrzebny div z zahardcorowanym stylem. Tej metody można używać przy tworzeniu layoutów strony (często w stopce)
+  - Metoda Overflow: ustawienie wartości 'auto' lub 'hidden' właściwości overflow na elemencie-rodzicu
+    Jeśli dodasz overflow: hidden do elementu, który posiada pływające dzieci, automatycznie dopasuje wysokość biorąc pod uwagę dzieci
+  - Metoda łatwego czyszczenia: używa selektora elementu-rodzica :after, by dodać 'clear: both'
+    .clearfix:after {
+      content: ".";
+      visibility: hidden;
+      display: block;
+      height: 0;
+      clear: both;
+    }
+    Często używam tego podejścia, jednak generuje to niepotrzebną zawartość, która nie ma zastosowania.
+
+  https://css-tricks.com/all-about-floats/
 * Opisz, czym jest plik "reset" dla CSS i dlaczego jest użyteczny.
 * Opisz jak działa właściwość `float`.
   Float'y mogą by używane do opakowywania tekstu wokół obrazka/elementu lub to tworzenia całych layoutów. Pływające elementy pozostają częścią flow strony, w odróżnieniu od elementów o ustalonym położeniu, które są usuwane z flow strony i nie uczestniczą w dostosowywaniu zawartości np. do zmieniającej się szerokości okna.
@@ -277,13 +415,67 @@ $(".foo div#bar:eq(0)")
   - użycie osobnych stylów CSS, które ładowałyby się tylko wtedy gdy dana przeglądarka jest używana
   - używając przedrostków CSS dotyczących poszczególnych przeglądarek (-moz-, -webkit-, itd)
   - resetując lub normalizując CSS
-  
+
 * Jakie znasz techniki kasowania (clearing) i kiedy wskazane jest ich stosowanie?
 * Wyjaśnij technikę "CSS sprites" oraz sposób jej wdrożenia na stronie.
 * Jakie są Twoje ulubione techniki zastępowania obrazów i kiedy je stosujesz?
+  Zastępowanie obrazów CSS jest techniką zastępowania tekstowego elementu (zazwyczaj tagu nagłówkowego) obrazem. Można użyć do tego <h1> i tekstu dla benefitów płynących z dostępności oraz SEO.
+  Używam zastępowania obrazów (w zależności od potrzeby), kiedy chcę by moja strona była bardziej dostępna dla urządzeń takich jak czytniki itp. Zazwyczaj używam do tego celu ukrywania tagu span poprzed 'display: none'.
+
+  #1: Ukrywanie tagu span poprzez 'display: none'
+  <h1 id="logo">
+    <span>CSS-Tricks</span>
+  </h1>
+
+  h1#logo {
+    width: 250px;
+    height: 25px;
+    background-image: url(logo.gif);
+  }
+  h1#logo span {
+    display: none;
+  }
+
+  #2: Text-indent poza zasięgiem wzroku(ekranu)
+  <h1 id="logo">
+    CSS-Tricks
+  </h1>
+
+  h1#logo {
+    width: 300px;
+    height: 75px;
+    background: url(test.png);
+    text-indent: -9999px;
+  }
+
+  #3: Niewidzialny tekst
+  <h3 class="leon">
+    <span>CSS-Tricks</span>
+  </h3>
+
+  h3.leon {
+    width: 300px;
+    height: 75px;
+    background: url(test.png);
+  }
+  h3.leon span {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  https://css-tricks.com/css-image-replacement/
 * Haczyki właściwości CSS, warunkowe dołączanie plików .css lub... coś innego?
 * Jak serwujesz strony dla przeglądarek z ograniczonym wsparciem funkcji?
+  - oddzielne style CSS, które ładują się gdy dana przeglądarka jest używana
+  - oddzielny layout
+  - polyfills (Pollyfil jest kodem, który wykrywa czy są braki w oczekiwanym API i manualnie implementuje je)
+  
   * Jakie techniki stosujesz?
+      - Graceful Degradation
+      
+  https://www.sitepoint.com/progressive-enhancement-graceful-degradation-basics/
 * Jakie istnieją sposoby wizualnego ukrycia treści (uczynienia ich dostępnymi tylko dla czytników ekranu)?
   - visibility: hidden
   - width: 0; height: 0;
@@ -291,9 +483,26 @@ $(".foo div#bar:eq(0)")
   - absolute position - poza ekranem
 * Czy kiedykolwiek używałeś systemów siatek, a jeśli tak, to jakie preferujesz?
 * Czy używałeś 'media queries' lub tworzyłeś konkretne układy i arkusze dla urządzeń mobilnych?
+  Tak, używałem 'media queries' po stworzeniu projektu z użyciem siatki Boostrapa, by nauczyć się jak działają strony responsywne. Kierowałem się zasadą mobile-first, by uzyskać stronę w pełni responsywną i czytelną na każdym urządzeniu bez dodatkowej, niepotrzebnej zawartości.
+  'media queries' pozwalają na kontrolowanie używania zadeklarowanych styli CSS bazując na - na przykład - wielkości ekranu, orientacji urządzenia lub gęstości wyświetlacza. Pozwala to na wyświetlanie strony na różne sposoby na różnych urządzeniach.
+
+  http://cssmediaqueries.com/
 * Czy miałeś styczność ze stylizacją SVG?
 * Jak optymalizujesz swoje strony do druku?
+  - tworzę specjalny arkusz styli do druku
+  - staram się unikać niepotrzebnych tabel
+  - staram się określić, które partie strony nie mają wartości dla druku (np. poprzez dawanie im klas .no-print z display: none)
+  - używam łamania stron (page breaks) w miejscach, gdzie powinny się łamać (.page-break { page-break-before: always; display: none; })
+  - ustalam rozmiar strony do druku (szerokość najlepiej podać w calach lub centrymetrach(oba rekomendowane))
+  
+  https://davidwalsh.name/optimizing-structure-print-css
 * Jakie stosujesz "sztuczki" przy pisaniu efektywnych CSS?
+  - unikam selektorów, które łapią duże ilości elementów (tagi i uniwersalne selektory)
+  - preferuję klasy i identyfikatory zamiast selektorów tagów
+  - unikam redundancji selektorów
+  - staram się grupować i ponownie wykorzystywać wspólne wartości
+
+  https://css-tricks.com/efficiently-rendering-css/
 * Czy używasz narzędzi do przetwarzania CSS? (SASS, Compass, Stylus, LESS)
   * Jeśli tak, opisz cechy, które lubisz i nie lubisz w używanych narzędziach.
 * Jak tworzysz i wdrażasz projekt używający niestandardowych czcionek?
