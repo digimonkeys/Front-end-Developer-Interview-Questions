@@ -559,6 +559,15 @@ $(".foo div#bar:eq(0)")
 
   [źródło](https://travishorn.com/why-it-is-better-to-serve-site-assets-from-multiple-domains-972a2bf69d71)
 
+### Pytania z kodowania:
+
+* Jaka jest wartość `foo`?
+```javascript
+var foo = 10 + '20';
+```
+
+  `1020` (string)
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?

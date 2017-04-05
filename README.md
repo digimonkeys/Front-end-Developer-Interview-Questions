@@ -536,6 +536,8 @@ Event flow![Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
 var foo = 10 + '20';
 ```
 
+  `1020` (string)
+
 *Question: How would you make this work?*
 ```javascript
 add(2, 5); // 7
