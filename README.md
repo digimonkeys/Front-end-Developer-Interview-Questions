@@ -273,6 +273,11 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
 * Explain how a browser determines what elements match a CSS selector.
 * Describe pseudo-elements and discuss what they are used for.
 * Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
+  For display purpose, every element in the page is considered a box. The box model refers to the specification of the box attributes such as the width, padding, border and margin.
+  You can change the box model by setting the box-sizing property. Some values are: content-box (default), padding-box, and border-box)
+  Content-box: width & height includes content but not padding/border/margin
+  Padding-box: include up to padding
+  Border-box: include up to border, but not margin
 * What does ```* { box-sizing: border-box; }``` do? What are its advantages?
   It’s the IE6 Quirks mode: if you set a width, and add paddings and borders, the total width won’t change. It’s the inner width that will adapt.
 
