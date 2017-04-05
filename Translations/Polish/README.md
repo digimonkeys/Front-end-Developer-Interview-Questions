@@ -537,20 +537,43 @@ $(".foo div#bar:eq(0)")
 * Jak tworzysz i wdrażasz projekt używający niestandardowych czcionek?
   * Czcionki sieciowe (serwisy czcionek jak: Google Webfonts, Typekit itd.)
 * Wyjaśnij jak przeglądarka określa elementy pasujące do selektora CSS?
+* Wymień jak najwięcej wartości właściwości 'display'
+  display: value; - wyświetla element jako...
+  - inline - element liniowy, domyślne ustawienie
+  - block -  element blokowy
+  - inline-block - blokowy element liniowy
+  - flex - blokowo-poziomowy płynny kontener (flex container)
+  - inline-flex - liniowo-poziomowy płynny kontener (inline-flex container)
+  - inline-table - liniową tabelę
+  - run-in - blok lub liniowy element, w zależności od kontekstu
+  Pozwala elementowi zachowywać się jak...
+  - list-item - <li>
+  - table - <table>
+  - table-caption - <caption>
+  - table-column-group - <colgroup>
+  - table-header-group - <thead>
+  - table-footer-group - <tfoot>
+  - table-row-group - <tbody>
+  - table-cell - <td>
+  - table-column - <col>
+  - table-row - <tr>
+  - none - element nie zostanie wyświetlony
+  - initial - ustawia wartość tej właściwości do jej domyślnej wartości
+  - inherit - odziedzicza wartość po elemencie nadrzędnym (rodzicu)
+
+  https://www.w3schools.com/cssref/pr_class_display.asp
 * Jaka jest różnica między display: 'inline' i 'inline-block'
   Elementy z 'display: inline-block' są jak elementy z 'display: inline', lecz mogą mieć szerokość oraz wysokość. To znaczy, że można używać elementów 'inline-block' jako bloków wewnątrz tekstu lub innych elementów.
   
   Różnica w wspieranych stylach:
     inline: tylko margin-left, margin-right, padding-left, padding-right
     inline-block: margin, padding, height, width
-
 * Wyjaśnij czym jest według ciebie model pudełkowy (box model) i jak powiesz przeglądarce używając CSS do renderowania layoutu w różnych modelach pudełkowych.
   Dla celów wyświetlania, każdy element na stronie jest traktowany jako pudełko. Model pudełkowy dotyczy specyfikacji atrybutów pudełka, takich jak szerokość, padding, obramowanie i margines.
   Model pudełkowy można ustawić dodając właściwość 'box-sizing'. Wartości: 'content-box' (standardowo), 'padding-box' i 'border-box'.
   - Content-box: szerokość i wysokość uwzględniają zawartość, ale nie padding/obramowanie/margines
   - Padding-box: uwzględniają powyższe razem z paddingiem, lecz bez obramowania/marginesu
   - Border-box uwzględniają powyższe z obramowaniem, lecz bez marginesu
-
 * Co robi ```* { box-sizing: border-box; }```? Jakie są tego zalety?
   Jest to IE6 Quirks mode (tryb dziwactw): jeśli uwstawisz szerokość, dodasz paddingi oraz obramowanie, całkowita szerokość nie zmieni się. Wewnętrzna szerokość dostosuje się do reszty.
 

@@ -286,6 +286,30 @@ https://www.w3schools.com/html/html_xhtml.asp
 
   Advantage: You can play with the paddings and border values without worrying about expanding your box. Very convenient for column layouts. And you can mix percentage and pixel values, so you do not have to rely on a child element for the padding.
 * List as many values for the display property that you can remember.
+  display: value; - displays an element as...
+  - inline - an inline element, default value
+  - block -  a block element
+  - inline-block - an inline-level block container
+  - flex - an block-level flex container
+  - inline-flex - an inline-level flex container
+  - inline-table - an inline-level table
+  - run-in - either block or inline, depending on context
+  Let the element behave like...
+  - list-item - <li>
+  - table - <table>
+  - table-caption - <caption>
+  - table-column-group - <colgroup>
+  - table-header-group - <thead>
+  - table-footer-group - <tfoot>
+  - table-row-group - <tbody>
+  - table-cell - <td>
+  - table-column - <col>
+  - table-row - <tr>
+  - none - the element will not be displayed
+  - initial - sets this property to its default value
+  - inherit - inherits this property from its parent
+
+  https://www.w3schools.com/cssref/pr_class_display.asp
 * What's the difference between inline and inline-block?
   Elements with display:inline-block are like display:inline elements, but they can have a width and a height. That means that you can use an inline-block element as a block while flowing it within text or other elements.
 
