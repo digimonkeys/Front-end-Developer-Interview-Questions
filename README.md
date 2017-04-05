@@ -102,14 +102,14 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
   https://css-tricks.com/all-about-floats/
 * Describe z-index and how stacking context is formed.
   The z-index property controls the vertical stacking order of elements that overlap. Without any z-index value, elements stack in the order that they appear in the DOM (the lowest one down at the same hierarchy level appears on top). Nesting is important too, if an element B sits on top of element A, a child element of element A can never be higher than element B.
-  
+
   https://css-tricks.com/almanac/properties/z/z-index/
 * Describe BFC(Block Formatting Context) and how it works.
 * What are the various clearing techniques and which is appropriate for what context?
 * Explain CSS sprites, and how you would implement them on a page or site.
 * What are your favourite image replacement techniques and which do you use when?
 * How would you approach fixing browser-specific styling issues?
-  - use separate stylesheets that loads when that specific browser is being used. 
+  - use separate stylesheets that loads when that specific browser is being used.
   - use cross-browsers CSS prefixes (-moz-, -webkit-, etc)
   - resetting or normalizing CSS
 * How do you serve your pages for feature-constrained browsers?
@@ -171,6 +171,9 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
 * Why is extending built-in JavaScript objects not a good idea?
 * Difference between document load event and document DOMContentLoaded event?
 * What is the difference between `==` and `===`?
+    `==` Compares values by making coerces if the types of variables are not the same
+    `===` Compares the values and types of variables without making coercion
+    
 * Explain the same-origin policy with regards to JavaScript.
 * Make this work:
 ```javascript
@@ -185,7 +188,7 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * What is the extent of your experience with Promises and/or their polyfills?
 * What are the pros and cons of using Promises instead of callbacks?
 * Variables scope in JS?
- 
+
 In JavaScript, til version ES6, there were only two versions of variables scope - global scope, and local - function scope.
 In ES6 there is one more - block scope for variables defined with let and const (scope in {}).
 
@@ -216,9 +219,9 @@ Function is a specific type of object in JavaScript, that has all the properties
 Function prototype is Object, and it's prototype is Function();
 
 * What is event life cycle (event flow) ?
- 
+
 Event life cycle (event flow) describes flow of an event through DOM tree. With every user interaction (or builtin event) browser creates event object and sends it (propagets it) through DOM tree. There are three phases of event life cycle:
- 
+
  - capturing faze - in this faze event is sent from top of the DOM to the element, that action was taken on.
  - on the object faze - happens when event reach element which user made an action
  - bubbling faze - in this faze event is sent from the element that action was taken on, to the top element of the DOM tree.
