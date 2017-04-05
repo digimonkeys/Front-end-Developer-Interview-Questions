@@ -432,6 +432,9 @@ Object.create![Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScri
     http://stackoverflow.com/questions/2414750/difference-between-domcontentloaded-and-load-events
     
 * What is the difference between `==` and `===`?
+    `==` Compares values by making coerces if the types of variables are not the same
+    `===` Compares the values and types of variables without making coercion
+    
 * Explain the same-origin policy with regards to JavaScript.
 * Make this work:
 ```javascript

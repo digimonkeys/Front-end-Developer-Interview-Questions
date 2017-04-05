@@ -296,6 +296,9 @@ Difference new vs Object.create![Difference new vs Object.create](http://stackov
     http://stackoverflow.com/questions/2414750/difference-between-domcontentloaded-and-load-events
 
 * Jaka jest różnica między `==` i `===`?
+    `==` porównuje wartości, dokonując koercji jeśli typy zmiennych nie są jednakowe
+    `===` porównuje wartości jak i typy zmiennych, nie dokonując koercji
+
 * Wyjaśnij ewentualny sposób pobrania parametrów z adresu URL w oknie przeglądarki.
 * Wyjaśnij politykę `same-origin` w odniesieniu do JavaScript.
 * Opisz wzorce dziedziczenia w JavaScript.
