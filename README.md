@@ -357,6 +357,7 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 * How is responsive design different from adaptive design?
 * Have you ever worked with retina graphics? If so, when and what techniques did you use?
 * Is there any reason you'd want to use `translate()` instead of *absolute positioning*, or vice-versa? And why?
+  Yes, translate do not cause the browser to repaint when it is used, which if you're looking for the best performance is undoubtly better.
 
 #### JS Questions:
 
