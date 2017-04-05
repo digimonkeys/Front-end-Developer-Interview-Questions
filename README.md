@@ -813,6 +813,17 @@ console.log('three');
   two
   ```
 
+* Explain templates in AngularJS.
+  In AngularJS, templates are written with HTML that contains AngularJS-specific elements and attributes. AngularJS combines the template with information from the model and controller to render the dynamic view that a user sees in the browser.
+
+  These are the types of AngularJS elements and attributes you can use:
+    Directive — An attribute or element that augments an existing DOM element or represents a reusable DOM component.
+    Markup — The double curly brace notation {{ }} to bind expressions to elements is built-in AngularJS markup.
+    Filter — Formats data for display.
+    Form controls — Validates user input.
+
+  https://docs.angularjs.org/guide/templates
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
