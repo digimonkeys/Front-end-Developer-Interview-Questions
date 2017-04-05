@@ -157,10 +157,16 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
 * What's the difference between host objects and native objects?
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
 * What's the difference between `.call` and `.apply`?
-    Call requires the parameters be listed explicitly, apply lets you invoke the function with arguments as an array.
+    You can use `.call` and` .apply` to assign another object when calling an existing function.
+   `This` refers to the current object.
+    So you can write the method once and then inherit it in another object, without rewriting the method for the new object.
+    Call accepts `this` and single arguments, and apply as an array.
     theFunction.apply(valueForThis, arrayOfArgs)
     theFunction.call(valueForThis, arg1, arg2, ...)
     http://stackoverflow.com/questions/1986896/what-is-the-difference-between-call-and-apply
+    http://stackoverflow.com/questions/1986896/what-is-the-difference-between-call-and-apply
+    https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Function/apply
+    https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Function/call
 
 * Explain `Function.prototype.bind`.
 * When would you use `document.write()`?

@@ -117,10 +117,15 @@ Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich prz
 function Person(){} var person = Person() var person = new Person()
 ```
 * Jaka jest różnica między `.call` i `.apply`?
-  Call przymuje argumenty funkcji normalnie, natomiast apply w postaci tablicy.
+  Za pomocą `.call` i `.apply` można przypisać inny obiekt podczas wywoływania istniejącą funkcji.
+  `this` odnosi się do bieżącego obiektu, obiektu wywołującego.
+  Dzięki czemu można napisać metodę raz, a następnie dziedziczyć ją w innym obiekcie, bez konieczności przepisywania metody dla nowego obiektu.
+  Call przymuje wartość `this` i pojednyńcze argumenty, natomiast apply w postaci tablicy.
   theFunction.apply(valueForThis, arrayOfArgs)
   theFunction.call(valueForThis, arg1, arg2, ...)
   http://stackoverflow.com/questions/1986896/what-is-the-difference-between-call-and-apply
+  https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Function/apply
+  https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Function/call
 
 * Wyjaśnij `Function.prototype.bind`?
 * Kiedy optymalizujesz swój kod?
