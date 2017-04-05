@@ -259,8 +259,30 @@ Other scopes![other scopes](http://stackoverflow.com/a/500459)
 * Opisz bąbelkowanie zdarzeń.
 * Jak jest różnica między "atrybutem" i "właściwością"?
 * Czemu rozszerzanie obiektów wbudowanych w JavaScript jest złym pomysłem?
+* W jaki sposob mozemy realizowac dziedziczenie w javascripcie (new + Object.create)?
+
+- Używając konstruktora
+
+W JS konstruktor jest po prostu dowolną funkcją, którą jest wykonywana za pomocą operatora new.
+W konstruktorach, nowo stworzona funkcja dziedziczy bezpośrednio z prototypu konstruktora.
+Przy wykonaniu new Funcition(), zadeklarowane właściwości / funkcje wewnątrz konstruktora nie tworzą prototypu.
+
+- Używając Object.create
+
+Object.create zostało dodane w ECMAScript 5. Object.create tworzy nowy obiekt, który dziedziczy bezpośrednio z obiektu podanego jako pierwszy argument wywołania funkcji. Object.create nie uruchamia konstruktora.
+
+- Za pomocą class
+
+W ECMAScript 2015 przedstawiono nowe słowa kluczowe implementujące klasy. Mogą one wyglądać identycznie do konstrukcji znanych z języków implementujących klasyczny model dziedziczenia, jednak nie są one tym samym. Dziedziczenie w JavaScript nadal pozostało prototypowe. Klasy są tak naprawdę tylko "lukrem składniowym" na tworzenie obiektu za pomocą konstruktora i new.
+
+Difference new vs Object.create![Difference new vs Object.create](http://stackoverflow.com/questions/4166616/understanding-the-difference-between-object-create-and-new-somefunction)
+
 * Czemu rozszerzanie to dobry pomysł?
-* Jak jest różnicą między zdarzeniami `load` i `ready` dla strony internetowej?
+* Jak jest różnicą między zdarzeniami `document load` i `DOMContentLoaded` dla strony internetowej?
+    Event DOMContentLoaded jest uruchamiany, gdy HTML został załadowany i drzewo DOM zbudowane
+    natomiast event load, gdy cała strona, włącznie z css, grafiką zostały załadowane.
+    http://stackoverflow.com/questions/2414750/difference-between-domcontentloaded-and-load-events
+
 * Jaka jest różnica między `==` i `===`?
 * Wyjaśnij ewentualny sposób pobrania parametrów z adresu URL w oknie przeglądarki.
 * Wyjaśnij politykę `same-origin` w odniesieniu do JavaScript.
@@ -528,6 +550,16 @@ $(".foo div#bar:eq(0)")
   - inherit - odziedzicza wartość po elemencie nadrzędnym (rodzicu)
 
   https://www.w3schools.com/cssref/pr_class_display.asp
+* Wyjaśnij czym jest według ciebie model pudełkowy (box model) i jak powiesz przeglądarce używając CSS do renderowania layoutu w różnych modelach pudełkowych.
+  Dla celów wyświetlania, każdy element na stronie jest traktowany jako pudełko. Model pudełkowy dotyczy specyfikacji atrybutów pudełka, takich jak szerokość, padding, obramowanie i margines.
+  Model pudełkowy można ustawić dodając właściwość 'box-sizing'. Wartości: 'content-box' (standardowo), 'padding-box' i 'border-box'.
+  - Content-box: szerokość i wysokość uwzględniają zawartość, ale nie padding/obramowanie/margines
+  - Padding-box: uwzględniają powyższe razem z paddingiem, lecz bez obramowania/marginesu
+  - Border-box uwzględniają powyższe z obramowaniem, lecz bez marginesu
+* Co robi ```* { box-sizing: border-box; }```? Jakie są tego zalety?
+  Jest to IE6 Quirks mode (tryb dziwactw): jeśli uwstawisz szerokość, dodasz paddingi oraz obramowanie, całkowita szerokość nie zmieni się. Wewnętrzna szerokość dostosuje się do reszty.
+
+  Zalety: Możesz ustawiać wartości paddingów i obramowania bez przejmowania się o 'rozjechanie', rozszerzenie się pudełka. Jest to bardzo wygodne dla kolumnowych layoutów. Możesz również używać na przemian wartości w procentach i pikselach, więc nie musisz polega na elemencie podrzędnym dla paddingu.
 
 ### Pytania z testowania:
 
@@ -583,6 +615,77 @@ $(".foo div#bar:eq(0)")
   * Zmniejszone zużycie zasóbów przez headery - zazwyczaj serwer wysyła klientowi pliki cookie, które dołączane są potem do każdego zapytania w tej samej domenie co strona. Serwując statyczny content z innych domen niż strona unikamy potrzeby wysyłania plików cookie przy każdym zapytaniu.
 
   [źródło](https://travishorn.com/why-it-is-better-to-serve-site-assets-from-multiple-domains-972a2bf69d71)
+
+* Postaraj się wyjaśnić jak wygląda proces wczytywania strony, od czasu wpisania jej adresu do czasu zakończenia jej ładowania.
+
+  1. Pobranie z DNS adresu IP serwera, bazując na wpisanym adresie URL.
+  2. Wysłanie zapytania HTTP do serwera.
+  3. Parsowanie odpowiedzi i renderowanie strony.
+
+  [więcej szczegółów](http://stackoverflow.com/a/2092602)
+
+* Jakie są różnice pomiędzy Long-Polling, WebSockets i Server-Sent Events?
+
+  * Long-polling - Klient wysyła zapytanie do serwera. Kiedy serwer będzie miał nową informację do zaraportowania, odpowiada klientowi. Ten proces jest jednorazowy.
+  * WebSockets - Klient łączy się z serwerem i utrzymuje połączenie. Klient może wtedy wymieniać informacje z serwerem.
+  * Server-Sent Events - Klient łączy się z serwerem wysyłając zapytanie. Połączenie jest utrzymywane, a serwer może odpowiadać gdy ma nowe informacje do zaraportowania. Połączenie to w przeciwieństwie do WebSocketów jest jednokierunkowe.
+
+  [więcej informacji](http://stackoverflow.com/a/12855533)
+
+* Wyjaśnij poniższe nagłówki zapytania i odpowiedzi:
+
+  * Różnica pomiędzy Expires, Date, Age i If-Modified-Since
+  * Do Not Track
+  * Cache-Control
+  * Transfer-Encoding
+  * ETag
+  * X-Frame-Options
+
+  * Date - data wysłania wiadomości.
+  * Expires - data po której wiadomość jest uznawana za nieważną.
+  * Age - liczba sekund którą wiadomość spędziła w cache.
+  * If-Modified-Since - pozwala serwerowi odpowiedzieć statusem 304 gdy wiadomość nie została zmieniona od daty zawartej w tym nagłówku.
+  * DNT (Do Not Track) - prosi serwer aby nie śledził użytkownika.
+  * Cache-Control - kontroluje opcje związane z cachowaniem, np. jak długo wiadomość może pozostawać w cache.
+  * Transfer-Encoding - forma kodowania wiadomości, np.: chunked, compress, deflate, gzip, identity.
+  * ETag - może być użyte w celu wersjonowania wiadomości.
+  * X-Frame-Options - kontroluje ochronę przed "clickjackingiem".
+
+  [źródło](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)
+
+* Co to są metody HTTP? Wymień wszystkie które znasz i krótko je opisz.
+
+  Metody HTTP wskazują jaką akcję klient chce wykonać na wskazanym zasobie.
+
+  * GET - pobiera zasób bez jego modyfikacji.
+  * HEAD - takie samo jak GET, ale nie pobiera danych zasobu. Może być przydatne gdy potrzebne są jedynie nagłówki.
+  * POST - dodaje nowy zasób.
+  * PUT - aktualizuje zasób.
+  * DELETE - usuwa zasób.
+  * TRACE - zwraca dane otrzymane w zapytaniu bez ich modyfikacji.
+  * OPTIONS - zwraca metody obsługiwane przez serwer dla danego zasobu.
+  * CONNECT - konwertuje połączenie w tunel TCP/IP.
+  * PATCH - nakłada częściowe modyfikacje na zasób.
+
+  [źródło](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)
+
+### Pytania z kodowania:
+
+* Jaka jest wartość `foo`?
+```javascript
+var foo = 10 + '20';
+```
+
+  `1020` (string)
+
+* Jaka jest wartość `foo.length`?
+```javascript
+var foo = [];
+foo.push(1);
+foo.push(2);
+```
+
+  `2`
 
 ### Pytania dodatkowe (zabawne):
 
