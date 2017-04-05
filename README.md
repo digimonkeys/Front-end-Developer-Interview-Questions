@@ -297,6 +297,8 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
   - none - the element will not be displayed
   - initial - sets this property to its default value
   - inherit - inherits this property from its parent
+
+  https://www.w3schools.com/cssref/pr_class_display.asp
 * What's the difference between inline and inline-block?
 * What's the difference between a relative, fixed, absolute and statically positioned element?
 * The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?

@@ -527,6 +527,8 @@ $(".foo div#bar:eq(0)")
   - initial - ustawia wartość tej właściwości do jej domyślnej wartości
   - inherit - odziedzicza wartość po elemencie nadrzędnym (rodzicu)
 
+  https://www.w3schools.com/cssref/pr_class_display.asp
+
 ### Pytania z testowania:
 
 * Jakie są niektóre z plusów/minusów testowania pisanego kodu?
