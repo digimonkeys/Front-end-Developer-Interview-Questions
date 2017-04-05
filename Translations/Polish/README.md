@@ -132,7 +132,10 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
 ### Pytania HTML:
 
 * Co robi `doctype` i jakie znasz przykłady?
-* Jaka jest różnica między trybem standardów a trybem dziwactw (quirks mode)?
+* Jaka jest różnica między trybem full standards, almost standards a trybem dziwactw (quirks mode)?  
+Quirks mode to renderowanie strony przez przeglądarkę w wersji dla navigatora 4 i IE 5, zaś full standards mode to renderowanie zgodne ze współczesnymi standardami html i css. Tryb almost standards posiada zaimplementowaną pewną niewielką ilość dziwactw navigatora i IE.  
+https://developer.mozilla.org/pl/docs/Quirks_Mode_and_Standards_Mode  
+
 * Jakie są ograniczenia w serwowaniu stron XHTML?
   * Czy istnieją problemy z serwowaniem stron jako `application/xhtml+xml`?
 * Jak serwujesz stronę z treścią w wielu językach?
