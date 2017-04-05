@@ -876,3 +876,113 @@ console.log('three');
 * Jakie są Twoje ulubione części narzędzi programistycznych, których używasz?
 * Czy masz jakiś swój własny projekt na boku? Jaki?
 * Jaka jest Twoja ulubiona funkcja w Internet Explorer?
+
+### React
+
+* Jeśli stworzyłbyś element taki jak Twitter poniżej, jak wyglądała by definicja tego componentu?
+
+```jsx
+<Twitter username='tylermcginnis33'>
+ {(user) => user === null
+   ? <Loading />
+   : <Badge info={user} />}
+</Twitter>
+```
+
+props.children działa jak każde inne prop, może przekazać każdy rodzaj danych, nie tylko te dane, które React wie jak renderować. Dzieci przekazane do niestatndardowego componentu mogą być wszystkim, dopóki komponent ten przekształca je do formy, jaką React zrozumie przed renderowaniem.
+
+
+```jsx
+import React, { Component, PropTypes } from 'react'
+import fetchUser from 'twitter'
+// fetchUser take in a username returns a promise
+// which will resolve with that username's data.
+
+class Twitter extends Component {
+  state = {
+    user: null,
+  }
+
+  componentDidMount () {
+    fetchUser(this.props.username)
+      .then((user) => this.setState({user}))
+  }
+  render () {
+    return this.props.children(this.state.user)
+  }
+}
+
+Twitter.propTypes = {
+  username: PropTypes.String.isRequired,
+};
+```
+
+Functions as children![Functions as children](https://facebook.github.io/react/docs/jsx-in-depth.html#functions-as-children)
+
+* Jaka jest różnica między kontrolowanym a niekontrolowanym komponentem?
+
+Komponent kontrolowany jest to komponent w którym React kontroluje wszystko i jest "jedynym źródłem prawdy" dla danych formularza. W komponentach tych wartość elementu pchodzi ze stanu komponentu, a nie bezpośrednio z DOM.
+
+W komponentach niekontrolowanych dane pochodzą bezpośrednio z drzewa DOM. Aby dostać się do tych danych używa się event handlerów lub ref (polecane).
+
+Controlled components![Controlled components](https://facebook.github.io/react/docs/forms.html#controlled-components)
+Uncontrolled components![Uncontrolled components](https://facebook.github.io/react/docs/uncontrolled-components.html)
+
+* W którym zdarzeniu cyklu życia elementu wykonuje się rządania AJAX i dlaczego?
+
+Rządania ajax powinny być wykonywane w zdarzeniu componentDidMount. Dzieje się tak ponieważ, gdy rządanie zwróci dane, zazwyczaj chcemy je przypisać do stanu komponentu, a to może zostać wykonane tylko na komponentach już zamontowanych.
+
+State and lifecycle![State and lifecycle](https://facebook.github.io/react/docs/state-and-lifecycle.html)
+
+* Co robi shouldComponentUpdate i dlaczego jest takie ważne?
+
+shouldComponentUpdate jest ważne z powodów wydajnościowych.
+Jeżeli wiemy, że pewna cześć naszego UI się nie zmieni, nie ma powodu żeby React dokonywał sprawdzania, czy powinien uaktualniać tę część. Zwracając false z metody shouldComponentUpdate, dajemy znać Reactowi że obecny komponent i wszystkie jego dzieci pozostaną niezmienione.
+
+Optimizing performance![Optimizing performance](https://facebook.github.io/react/docs/optimizing-performance.html)
+
+* Jak dać znać Reactowi, żeby zbudował w Production mode i co to dokładnie spowoduje?
+
+Przeważnie powinno się użyć DefinePlugin dla Webpacka aby ustawić wartość zmiennej środowiskowej NODE_ENV na "production". Spowoduje to usunięcie dodatkowych ostrzeżeń oraz m.in. walidacji propTypes.
+
+Development and production![Development and production](https://facebook.github.io/react/docs/installation.html#development-and-production-versions)
+
+* Dlaczego użyłbyś React.Children.map(props.children, () => ) zamiast props.children.map(() => )
+
+Ponieważ props.children może być zarówno tablicą komponentów, ale także pojedynczym komponentem. Jeśli przekażemy pojedynczy komponent do natywnej funkcji map, funkcja zwróci bład. React.Children.map potrafi obsłużyć dwa przypadki, gdy children są tablicą oraz elementem.
+
+React.Children.map![React.Children.map](https://facebook.github.io/react/docs/react-api.html#react.children.map)
+
+* Opisz eventy w React.
+
+W React natywne eventy opakowane są w instancje SyntheticEvent, które rozwiązują problem różnić w działaniu eventów między przeglądarkami. SyntheticEvent używa się tak samo jak natywnych eventów, mają ten sam interfejs.
+React w rzeczywistośći nie przypisuje eventów do samych child nodes. Nasłuchuje on wszystkich eventów na najwyższym komponencie i używa pojedynczego event listenera.
+
+Handling events![Handling events](https://facebook.github.io/react/docs/handling-events.html)
+
+* Jaka jest różnica między createElement i cloneElement?
+
+createElement jest funkcją, która przekształca JSX na obiekt zrozumiały dla React, który jest używany do tworzenia elementów (obiektowej reprezentacji interfejsu użytkownika). cloneElement służy do klonowaina elementów i przekazywania im nowych props.
+
+Create Element![Create Element](https://facebook.github.io/react/docs/react-api.html#createelement)
+Clone Element![Clone Element](https://facebook.github.io/react/docs/react-api.html#cloneelement)
+ 
+* Czym jest drugi argument, który możemy przekazać do funkcji setState i do czego służy?
+
+Funkcja setState jest asynchroniczna dlatego przyjmuje callback jako drugi argument. Funkcja ta jest wykonywana, gdy setState skończył swoje wykonanie i komponent jest ponownie renderowany.
+
+setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
+
+* Co jest nie tak z tym kodem?
+
+```jsx
+this.setState((prevState, props) => {
+ return {
+   streak: prevState.streak + props.count
+ }
+})
+```
+
+Nic. setState może także przyjmować funkcję jako pierwszy argument. Funkcja ta pozwala na ustawienie obecnego stanu na podstawie stanu poprzedniego.
+
+setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
