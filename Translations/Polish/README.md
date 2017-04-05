@@ -411,6 +411,16 @@ Oczekująca obietnica może być spełniona z jakąś wartością lub odrzucona 
 
 [Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
+* Zasieg zmiennych w JavaScript?
+
+W JavaScripcie, przed wersją ES6, były tylko dwa zakresy zmiennych. Zakres globalny oraz lokalny - funkcja.
+W ES6 jest jeszcze jeden zakres - zasięg blokowy, który dotyczy zmiennych zadeklarowanych przy użyciu let i const (zasięg w {}).
+
+[var](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
+[let](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Statements/let)
+[const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
+[inne](http://stackoverflow.com/a/500459)
+
 * Czym jest event life cycle (event flow)?
 
 Event lifecycle (event flow) opisuje cykl życia eventu w drzewie DOM. Przy każdym zdarzeniu, przeglądarka tworzy event i rozsyła go po drzewie DOM. Propagacja / rozsyłanie eventu odbywa się w trzech fazach:

@@ -563,10 +563,10 @@ A pending promise can either be fulfilled with a value, or rejected with a reaso
 In JavaScript, til version ES6, there were only two versions of variables scope - global scope, and local - function scope.
 In ES6 there is one more - block scope for variables defined with let and const (scope in {}).
 
-var![var](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
-let![let](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Statements/let)
-const![const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
-Other scopes![other scopes](http://stackoverflow.com/a/500459)
+[var](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
+[let](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Statements/let)
+[const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
+[other scopes](http://stackoverflow.com/a/500459)
 
 * What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
 * What tools and techniques do you use debugging JavaScript code?
