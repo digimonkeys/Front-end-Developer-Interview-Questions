@@ -527,6 +527,16 @@ $(".foo div#bar:eq(0)")
 
   Zalety: Możesz ustawiać wartości paddingów i obramowania bez przejmowania się o 'rozjechanie', rozszerzenie się pudełka. Jest to bardzo wygodne dla kolumnowych layoutów. Możesz również używać na przemian wartości w procentach i pikselach, więc nie musisz polega na elemencie podrzędnym dla paddingu.
 
+* Jakie są różnice między relatywnie, statycznie, absolutnie i stale pozycjonowanych elementach?
+  Elementy są pozycjonowane statycznie domyślnie. Kiedy element nie ma nadanego 'position', będzie on pozycjonowany statycznie. Te elementy będą układać się jeden pod drugim.
+  
+  Pozycjonowanie relatywne
+  Możesz ustawić pozycję elementu relatywnie pozycjonowanego używając 'top: XXX', 'bottom: XXX', 'left: XXX', 'right: XXX'. Element poruszy się od określonej strony, więc jeśli napiszesz 'top: 50px;' element ruszy się 50 pikseli od góry w dół. Nie ma to wpływu na elementy pozycjonowane statycznie, więc element relatywny oraz statystyczny mogą się na siebie nakładać.
+
+  Elementy pozycjonowanie absolutnie są usunięte z DOM i pozycjonują się bazując na najbliższym nadrzędnym elemencie pozycjonowanym relatywnie. W przeciwieństwie do relatywnie pozycjonowanych elementów, które nie mają wpływu na statyczne elementy, jeśli dasz elementowi 'position: absolute' to tak jakby w ogóle nie istniał (w danym miejscu). To znaczy, że inne statyczne elementy będą poruszać się do góry w miejsce absolutnie pozycjonowanego tak jakby go tam nie było. Jeśli wszystkie nadrzędne elementy są statyczne lub nie ma ich w ogóle, element pozycjonowany absolutnie będzie bazował na <body>.
+
+  Stałe elemenety są kompletnie niezależne od wszystkiego na stronie. Bez względu na rodziców, stały element będzie zawsze pozycjonowany na bazie okna przeglądarki. Interesującą rzeczą jest to, że po zescrollowaniu strony element będzie dalej w tym samym miejscu w oknie przeglądarki, więc zawsze będzie widoczny.
+
 ### Pytania z testowania:
 
 * Jakie są niektóre z plusów/minusów testowania pisanego kodu?
