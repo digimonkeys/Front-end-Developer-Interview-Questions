@@ -773,6 +773,13 @@ add(2)(5); // 7
 
   `goh angasal a m'i`
 
+* Jaka jest wartość `window.foo`?
+```javascript
+( window.foo || ( window.foo = "bar" ) );
+```
+
+  Jeśli `window.foo` było wcześniej zdefiniowane to jego wartość się nie zmienia, jeśli nie było to jego wartość to `bar`.
+
 * Jaka jest wartość `foo.length`?
 ```javascript
 var foo = [];
