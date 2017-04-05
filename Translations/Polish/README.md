@@ -167,6 +167,10 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 * Jaka jest przydatność atrybutów `data-`
 * Rozpatrujemy HTML5 jako otwartą platformę internetową. Jakie składniki tworzą HTML5?
 * Opisz różnice między cookies, sessionStorage i localStorage.
+* Dlaczego dobrą praktyką jest umieszczanie cssów (<link>) w headerze i skryptów JS (<script>) tuż przed znacznikiem </body>? Czy znasz jakieś wyjątki?
+Umieszczanie cssów w headerze pozwala uniknąć FOUC. Umieszczanie script tagów pod koniec body ma sens dla starych przeglądarek, które ładując skrypty przestawały renderować stronę. Dla dużych stron był to jednak problem, ponieważ ściąganie skryptów nie mogło się rozpocząć dopóki wszystkie pozostałe elementy nie zostały załadowane.  
+Obecnie przeglądarki obsługują script tagi defer i async, istnieje również speculative parsing, więc współczesnym podejściem jest po prostu zasotowanie atrybutu defer na tagu script.  
+http://stackoverflow.com/a/24070373  
 
 ### Pytania JS:
 

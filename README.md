@@ -166,7 +166,11 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 * Consider HTML5 as an open web platform. What are the building blocks of HTML5?
 * Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.
 * Describe the difference between `<script>`, `<script async>` and `<script defer>`.
-* Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
+* Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?  
+Placing css in header lets us avoid FOUC. Placing script before body tag makes sense for old browsers that stops rendering page when encountered script tag. The browser cannot start downloading the scripts until the entire document is parsed. For larger websites with large scripts & stylesheets, being able to download the script as soon as possible is very important for performance.  
+Nowadays browsers have defer and async scripts, also speculative parsing, so modern approach is to just use defer script tags.  
+http://stackoverflow.com/a/24070373  
+
 * What is progressive rendering?
 * Have you used different HTML templating languages before?
 
