@@ -815,6 +815,12 @@ console.log('three');
 
 #### NodeJS questions:
 
+* What's your favorite HTTP framework and why?
+
+  There's a lot of them. Some of the more popular include Express, Koa and Meteor.
+
+  [more info](http://nodeframework.com/)
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?

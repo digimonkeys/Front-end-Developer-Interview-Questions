@@ -862,6 +862,12 @@ console.log('three');
 
 ### Pytania z NodeJS:
 
+* Jaki jest twój ulubiony HTTP framework i dlaczego?
+
+  Jest ich wiele, niektóre z popularniejszych to m.in.: Express, Koa i Meteor.
+
+  [więcej info](http://nodeframework.com/)
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
