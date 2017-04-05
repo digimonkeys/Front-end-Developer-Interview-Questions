@@ -834,6 +834,11 @@ console.log('three');
   two
   ```
 
+  * Czym jest wiązanie danych (data binding) w AngularJS?
+  Data-binding w aplikacjach w AngularJS jest automatyczną synchronizacją danych między warstwą modelu oraz warstwą widoku komponentów. Sposób w jaki AngularJS implementuje data-binding pozwala traktować warstwę modelu jako jedno-źródło-prawdy w aplikacji. Warstwa widoku jest projekcją warstwy modelu przez cały czas. Kiedy zachodzą zmiany w warstwie modelu, warstwa widoku również się zmienia i vice versa.
+
+  https://docs.angularjs.org/guide/databinding
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
