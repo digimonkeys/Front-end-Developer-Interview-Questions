@@ -815,6 +815,10 @@ console.log('three');
 
 #### NodeJS questions:
 
+* How can you make sure your dependencies are safe?
+
+  Use only tested libraries. A good way is to use the most popular ones, as they have a higher chance of errors being detected and fixed by the community. Another way is to freeze a known good version of a library in npm, so it doesn't get updated to an unstable and possibly buggy version, though this requires manual updating in case a newer version contains a bug-fix for the version that's freezed in npm.
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
