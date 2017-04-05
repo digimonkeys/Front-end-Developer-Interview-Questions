@@ -55,8 +55,7 @@ Technology - Lately I prefer to use React with Redux and webpack, but I'm also f
 * If you have 5 different stylesheets, how would you best integrate them into the site?
 * Can you describe the difference between progressive enhancement and graceful degradation?
 * How would you optimize a website's assets/resources?
-* How many resources will a browser download from a given domain at a time?
-  * What are the exceptions?  
+* How many resources will a browser download from a given domain at a time? 
 It depends on a browser, older ones like IE6 - 2, newer ones 6-8.
 
 * Name 3 ways to decrease page load (perceived or actual load time).
