@@ -598,6 +598,28 @@ Javascript Types![Javascript Data Types](https://developer.mozilla.org/pl/docs/W
   * What is an example of an immutable object in JavaScript?
   * What are the pros and cons of immutability?
   * How can you achieve immutability in your own code?
+
+A mutable object is a object that can be changed.
+An immutable object is a object than can't be changed. Instead on every change it returns new object.
+
+Pros:
+  - Less complicated in using.
+  - Operations can be chained.
+  - Can be easily copied.
+  - Never changes.
+  - Can be shared easily.
+  - Easy debugging.
+
+Cons:
+  - More memory usage.
+  - Sometimes difficult to build.
+
+Immutability can be achieved by using Object.freeze and Object.seal.
+Also a library like Immutable.js can be used.
+
+Reference: [Discussion on Quora](https://www.quora.com/What-are-the-advantages-and-disadvantages-of-immutable-data-structures),
+[Discussion on Stackoverflow](http://stackoverflow.com/questions/1863515/pros-cons-of-immutability-vs-mutability)
+
 * Explain the difference between synchronous and asynchronous functions.
 * Are functions hoisted in js?
 

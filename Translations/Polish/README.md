@@ -398,6 +398,32 @@ Odniesienie: [Conditional (ternary) Operator](https://developer.mozilla.org/en-U
 Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
 Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
 
+* Wytlumacz różnicę pomiędzy zmiennymi i niezmiennymi obiektami.
+  * Jaki jest przykład niezmienialnego obiektu w JavaScripcie?
+  * Jakie są wady i zalety niezmienności?
+  * Jak możesz osiągnąć niezmienność w Twoim kodzie?
+
+Zmienny obiekt może zostać zmieniony.
+Niezmienny obiekt nie może zostać zmieniony. Przy każdej zmianie zostaje zwrócony nowy obiekt.
+
+Zalety:
+ - Mniej skomplikowany w użyciu.
+ - Operacje mogą być łączone.
+ - Może być łatwo skopiowany.
+ - Nigdy nie zmienia swojego stanu.
+ - Łatwo można go przekazywać.
+ - Łatwe debugowanie.
+
+Wady:
+  - Większe zużycie pamięci.
+  - Ciężki do zbudowania.
+
+Można osiągnąć niezmienność obiektu poprzez użycie Object.freeze lub Object.seal.
+Można również użyć bibliotek np. Immutable.js.
+
+Odniesienie: [Dyskusja na Quora](https://www.quora.com/What-are-the-advantages-and-disadvantages-of-immutable-data-structures),
+[Dyskusja na Stackoverflow](http://stackoverflow.com/questions/1863515/pros-cons-of-immutability-vs-mutability)
+
 * Czym jest obietnica (`Promise`)?
 
 Obietnica jest używana do asynchronicznych operacji. Reprezentuje wartość, która może być dostępna teraz, w przyszłości albo nigdy.
