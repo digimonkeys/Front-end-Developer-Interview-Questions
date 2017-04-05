@@ -527,6 +527,14 @@ $(".foo div#bar:eq(0)")
   Różnica w wspieranych stylach:
     inline: tylko margin-left, margin-right, padding-left, padding-right
     inline-block: margin, padding, height, width
+
+* Wyjaśnij czym jest według ciebie model pudełkowy (box model) i jak powiesz przeglądarce używając CSS do renderowania layoutu w różnych modelach pudełkowych.
+  Dla celów wyświetlania, każdy element na stronie jest traktowany jako pudełko. Model pudełkowy dotyczy specyfikacji atrybutów pudełka, takich jak szerokość, padding, obramowanie i margines.
+  Model pudełkowy można ustawić dodając właściwość 'box-sizing'. Wartości: 'content-box' (standardowo), 'padding-box' i 'border-box'.
+  - Content-box: szerokość i wysokość uwzględniają zawartość, ale nie padding/obramowanie/margines
+  - Padding-box: uwzględniają powyższe razem z paddingiem, lecz bez obramowania/marginesu
+  - Border-box uwzględniają powyższe z obramowaniem, lecz bez marginesu
+
 * Co robi ```* { box-sizing: border-box; }```? Jakie są tego zalety?
   Jest to IE6 Quirks mode (tryb dziwactw): jeśli uwstawisz szerokość, dodasz paddingi oraz obramowanie, całkowita szerokość nie zmieni się. Wewnętrzna szerokość dostosuje się do reszty.
 
