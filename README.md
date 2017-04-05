@@ -815,6 +815,12 @@ console.log('three');
 
 #### NodeJS questions:
 
+* What is the purpose of process object?
+
+  Process object is a global object that gives information about the underlying Node.JS process, such as: arguments passed to the process, environmental variables, memory usage etc.
+
+  [more info](https://nodejs.org/api/process.html)
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
