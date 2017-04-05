@@ -152,8 +152,10 @@ Wbrew pozorom i założeniom największym problemem jest wsparcie przeglądarek.
 http://www.webdevout.net/articles/beware-of-xhtml#myths  
 
 * Czy istnieją problemy z serwowaniem stron jako `application/xhtml+xml`?
-* Jak serwujesz stronę z treścią w wielu językach?
-  * Co jest ważne przy projektowaniu i tworzeniu stron wielojęzycznych?
+* Jak serwujesz stronę z treścią w wielu językach?  
+Zawsze należy używać atrybutu language na tagu html do określenia domyślnego języka strony. Zawartość w innym języku należy otoczyć jakimś elementem do którego dodamy równiez atrybut language. Dla stron html należy używać atrybutu lang, zaś dla xhtml xml:lang. W html 1.x i w html 5 obu. 
+https://www.w3.org/International/questions/qa-html-language-declarations  
+
 * Jaka jest przydatność atrybutów `data-`
 * Rozpatrujemy HTML5 jako otwartą platformę internetową. Jakie składniki tworzą HTML5?
 * Opisz różnice między cookies, sessionStorage i localStorage.

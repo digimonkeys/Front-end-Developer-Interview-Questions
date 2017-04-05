@@ -149,7 +149,10 @@ Perhaps the biggest issue is the poor browser support XHTML currently enjoys. In
 http://www.webdevout.net/articles/beware-of-xhtml#myths  
 
 * Are there any problems with serving pages as `application/xhtml+xml`?
-* How do you serve a page with content in multiple languages?
+* How do you serve a page with content in multiple languages?  
+Always use a language attribute on the html tag to declare the default language of the text in the page. When the page contains content in another language, add a language attribute to an element surrounding that content. Use the lang attribute for pages served as HTML, and the xml:lang attribute for pages served as XML. For XHTML 1.x and HTML5 polyglot documents, use both together.  
+https://www.w3.org/International/questions/qa-html-language-declarations  
+
 * What kind of things must you be wary of when design or developing for multilingual sites?
 * What are `data-` attributes good for?
 * Consider HTML5 as an open web platform. What are the building blocks of HTML5?
