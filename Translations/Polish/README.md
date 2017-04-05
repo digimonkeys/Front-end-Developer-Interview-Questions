@@ -134,7 +134,13 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
 * Co robi `doctype` i jakie znasz przykłady?
 * Jaka jest różnica między trybem standardów a trybem dziwactw (quirks mode)?
 * Jakie są ograniczenia w serwowaniu stron XHTML?
-  * Czy istnieją problemy z serwowaniem stron jako `application/xhtml+xml`?
+* Czy istnieją problemy z serwowaniem stron jako `application/xhtml+xml`?  
+Kiedy browser dostaje xml, używa xml parsera. Niestety przeglądarki do IE8 włącznie nie obługują tego typu plików. Wiele plików xhtml jest więc serwowanych jako text/html. Wymusza to na deweloperach rozważanie pewnych różnic między tymi formatami podczas pisania kodu.
+W ie8 dla tak serwowanej strony otwiera się dialog pobierania. Serwery proxy keszujące przy zapytaniu z takim content-type mogą zwrócić kod xml przeglądarce nie obsługującej tego typu. Przeglądarki wyświetlą błędy xml (jeśli jakieś będą) na stronie. 
+
+http://stackoverflow.com/a/351908  
+https://www.w3.org/International/articles/serving-xhtml/   
+
 * Jak serwujesz stronę z treścią w wielu językach?
   * Co jest ważne przy projektowaniu i tworzeniu stron wielojęzycznych?
 * Jaka jest przydatność atrybutów `data-`

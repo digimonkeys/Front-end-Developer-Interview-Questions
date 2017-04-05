@@ -130,7 +130,13 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
 * What does a `doctype` do?
 * What's the difference between full standards mode, almost standards mode and quirks mode?
 * What's the difference between HTML and XHTML?
-* Are there any problems with serving pages as `application/xhtml+xml`?
+* Are there any problems with serving pages as `application/xhtml+xml`?  
+When a browser reads XML it uses an XML parser, not an HTML parser. Unfortunately, up to and including version 8, Internet Explorer doesn't support files served as XML, although a number of other browsers do. To get around the fact that not all browsers support content served as XML, many XHTML files are actually served using the text/html MIME type. In this case, the user agent will read the file as if it were HTML, and use the HTML parser. Since the browser considers the XML to actually be HTML, you need to take into account some of the differences between the two formats when writing your XHTML code, to ensure that the differences between XML and HTML syntax do not trip up the browser. This includes different ways of declaring the character encoding or language declarations inside the document.  
+In IE8 there would be opened downloading dialogue for such served site. Proxy servers might already have cached xml version of site and they later will send it to browsers that dont support xml. Xml errors will be shown by browser when they occure. 
+
+http://stackoverflow.com/a/351908  
+https://www.w3.org/International/articles/serving-xhtml/  
+
 * How do you serve a page with content in multiple languages?
 * What kind of things must you be wary of when design or developing for multilingual sites?
 * What are `data-` attributes good for?
