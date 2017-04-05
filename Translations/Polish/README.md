@@ -865,6 +865,8 @@ console.log('three');
   });
   ```
 
+  http://stackoverflow.com/questions/21094569/how-to-unit-test-a-filter-in-angularjs-1-x
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
