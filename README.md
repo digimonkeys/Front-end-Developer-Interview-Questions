@@ -201,9 +201,9 @@ Function prototype is Object, and it's prototype is Function();
 
 * Traditionally, why has it been better to serve site assets from multiple domains?
 
-  Speed:
-  * Parallelization
-  * Reduced header overhead
+  Doing so increases page loading speed:
+  * Parallelization - it allows to send multiple request at once to many servers, which decreases the loading time of assets overall.
+  * Reduced header overhead - usually servers send clients some cookies, which are then attached to every client request in the same domain as the site. Serving static content from different domains than the server allows the client to skip sending the headers.
 
   [source](https://travishorn.com/why-it-is-better-to-serve-site-assets-from-multiple-domains-972a2bf69d71)
 

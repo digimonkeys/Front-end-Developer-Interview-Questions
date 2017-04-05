@@ -247,9 +247,9 @@ $(".foo div#bar:eq(0)")
 
 * Dlaczego lepiej serwować zasoby strony z wielu domen?
 
-  Prędkość:
-  * Paralelizacja
-  * Zmniejszone zużycie zasóbów przez headery
+  Ponieważ zwiększa to prędkość ładowania strony:
+  * Paralelizacja - pozwala na wysłanie wielu requestów naraz do wielu różnych serwerów, co pozwala na zmniejszenie ogólnego czasu ładowania zasobów.
+  * Zmniejszone zużycie zasóbów przez headery - zazwyczaj serwer wysyła klientowi pliki cookie, które dołączane są potem do każdego zapytania w tej samej domenie co strona. Serwując statyczny content z innych domen niż strona unikamy potrzeby wysyłania plików cookie przy każdym zapytaniu.
 
   [źródło](https://travishorn.com/why-it-is-better-to-serve-site-assets-from-multiple-domains-972a2bf69d71)
 
