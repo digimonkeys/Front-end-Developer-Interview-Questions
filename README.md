@@ -169,7 +169,7 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 * Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
 * What is progressive rendering?
 * Have you used different HTML templating languages before?  
-No. Examples of what I didn't use: Jade, EJS, HandlebarsJs, Underscore Templates, Mustache  
+No, but I'm familiar with Jade, EJS, HandlebarsJs, Underscore Templates, Mustache  
 
 #### CSS Questions:
 
