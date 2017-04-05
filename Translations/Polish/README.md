@@ -168,7 +168,7 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 * Rozpatrujemy HTML5 jako otwartą platformę internetową. Jakie składniki tworzą HTML5?
 * Opisz różnice między cookies, sessionStorage i localStorage.
 * Czy używałeś różnych HTML templating languages?  
-Nie, na przykład nie używałem: Jade, EJS, HandlebarsJs, Underscore Templates, Mustache  
+Nie, ale jestem zaznajomiony z: Jade, EJS, HandlebarsJs, Underscore Templates, Mustache  
 
 ### Pytania JS:
 
