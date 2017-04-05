@@ -128,7 +128,10 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
 #### HTML Questions:
 
 * What does a `doctype` do?
-* What's the difference between full standards mode, almost standards mode and quirks mode?
+* What's the difference between full standards mode, almost standards mode and quirks mode?  
+Full standards mode renders page according to modern web standards of html and css. Quirks mode is rendering mode for very old browsers - IE 5 and Navigator 4. Almost standards mode renders page with a small amount of quirks.    
+https://developer.mozilla.org/pl/docs/Quirks_Mode_and_Standards_Mode  
+
 * What's the difference between HTML and XHTML?  
 XHTML is HTML written as XML. They are almost identical. Most important differences are: XHTML is stricter and is supported by all major browsers. Doctype is mandatory, also xmlns attribute in <html> and <html>, <head>, <title>, and <body> are mandatory. XHTML elements must be properly nested, always be closed, always in lowercase, always have one root element.  
 https://www.w3schools.com/html/html_xhtml.asp  

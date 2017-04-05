@@ -131,7 +131,10 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
 ### Pytania HTML:
 
 * Co robi `doctype` i jakie znasz przykłady?
-* Jaka jest różnica między trybem standardów a trybem dziwactw (quirks mode)?  
+* Jaka jest różnica między trybem full standards, almost standards a trybem dziwactw (quirks mode)?  
+Quirks mode to renderowanie strony przez przeglądarkę w wersji dla navigatora 4 i IE 5, zaś full standards mode to renderowanie zgodne ze współczesnymi standardami html i css. Tryb almost standards posiada zaimplementowaną pewną niewielką ilość dziwactw navigatora i IE.  
+https://developer.mozilla.org/pl/docs/Quirks_Mode_and_Standards_Mode  
+
 * Jaka jest różnica między html a xhtml?  
 XHTML to HTML napisany jako XML. Są niemal identyczne. Główne różnice to to, że xhtml jest bardziej restrykcyjny i dzięki temu obsługiwany przez wszystkie główne przeglądarki. Doctype jest obowiązkowy, podobnie atrybut xmlns w znaczniku html oraz znaczniki <html>, <head>, <title> i <body>. Elementy xhtmla musza być poprawnie zagnieżdżone, zawsze zamknięte, napisane małymi literami; zawsze muszą mieć jeden root element.  
 https://www.w3schools.com/html/html_xhtml.asp  
