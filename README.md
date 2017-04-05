@@ -267,7 +267,7 @@ var bar = foo;
 foo.x = foo = {n: 2};
 ```
 
-  `undefined`
+  `undefined` - after `x` is set in `foo`, the `foo` is assigned a different object that doesn't have `x` set. `x` is still assigned in the previous object, which is now in a variable named `bar`.
 
 *Question: What does the following code print?*
 ```javascript

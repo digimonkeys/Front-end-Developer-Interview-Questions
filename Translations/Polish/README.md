@@ -269,7 +269,7 @@ var bar = foo;
 foo.x = foo = {n: 2};
 ```
 
-  `undefined`
+  `undefined` - po tym jak `x` jest przypisane do zmiennej `foo`, do zmiennej `foo` zostaje przypisany inny obiekt który nie ma przypisanego `x`. `x` jest wciąż przypisany do poprzedniego obiekty, który teraz znajduje się w zmiennej `bar`.
 
 ### Pytania dodatkowe (zabawne):
 
