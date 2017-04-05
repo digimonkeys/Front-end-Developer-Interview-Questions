@@ -49,17 +49,22 @@ Maintainability - I use general best practises, eg. take care of simple function
 
 Technology - Lately I prefer to use React with Redux and webpack, but I'm also familiar with Angular and gulp etc (...)  
 
-* Talk about your preferred development environment.
+* Talk about your preferred development environment.  
+I prefer easily configurable Sublime 3 with its additional packages and briliant editorial functions. My browser of choice is chrome with its dev tools, but I also use firebug. I have some knowledge about linux, but currently I use windows 10. I also use tools like gulp, webpack, window managers, linters etc.  
+
 * Which version control systems are you familiar with?  
 git, I worked on github and gitlab. I tried using git guis but I prefer to work in command line.  
 
 * Can you describe your workflow when you create a web page?
 * If you have 5 different stylesheets, how would you best integrate them into the site?
-* Can you describe the difference between progressive enhancement and graceful degradation?  
-* What is semantic html?  
-Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, of the information in webpages and web applications rather than merely to define its presentation or look. Semantic HTML is processed by traditional web browsers as well as by many other user agents. CSS is used to suggest its presentation to human users.    
+* Can you describe the difference between progressive enhancement and graceful degradation? 
 
-* How would you optimize a website's assets/resources?
+* What is semantic html?  
+Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, of the information in webpages and web applications rather than merely to define its presentation or look. Semantic HTML is processed by traditional web browsers as well as by many other user agents. CSS is used to suggest its presentation to human users.  
+
+* How would you optimize a website's assets/resources?  
+Optimalize images, bundle files, use uglifyjs and minification, use svg, css sprites, serve cdn resources depending on distance and response time from user, cache some files, dont load whole huge libraries if you only use one function from them  
+
 * How many resources will a browser download from a given domain at a time?
   * What are the exceptions?
 * Name 3 ways to decrease page load (perceived or actual load time).
@@ -87,12 +92,38 @@ We can do it only with CSS3 using ul element and input type = radio. The most im
 
 Full tutorial: http://joshnh.com/weblog/making-a-pure-css-featured-image-slider/  
 
-* If you could master one technology this year, what would it be?  
+* What tools do you use to check your code performance?  
+Chrome Timeline - record and analyze all the activity in your application as it runs, accessible in devTools  
+JSPerf - jsPerf aims to provide an easy way to create and share test cases, comparing the performance of different JavaScript snippets by running benchmarks.  
+ Dromaeo - Mozilla JavaScript performance test suite currently considered to be a "work in progress."  
+https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool  
+https://jsperf.com/  
+https://wiki.mozilla.org/Dromaeo   
+
+* If you could master one technology this year, what would it be?
 I'd love to learn how to create fusion bomb. ...or just pick something trendy, React Native, React Redux, ES7.  
 
-* Explain the importance of standards and standards bodies.
-* What is Flash of Unstyled Content? How do you avoid FOUC?
-* Explain what ARIA and screenreaders are, and how to make a website accessible.
+* Explain the importance of standards and standards bodies.  
+Standars are super important because apps being written in the same language are compiled by different browsers. Thanks to standards we avoid creating code that would work in half of browsers or only in one of them. Standard creators are: w3c, iso, ansi, unicode consortium, ietf and ecma  
+
+* What is Flash of Unstyled Content? How do you avoid FOUC?  
+Flash of unstyled content is displaying unstyled content for user for a while when loading page. Appears when CSS is slow to load or when JS causes multiple page rendering.
+To avoid FOUC, you should provide the user with the most optimized CSS (minimized, in one file), and use as little rerendering browser javascript as possible. Use Critical CSS (ie throw the most important inline css rules in the head tag).
+Use media queries and serve CSS optimized for lower resolution devices. One can also hide whole page until all styles are loaded.  
+https://en.wikipedia.org/wiki/Flash_of_unstyled_content  
+http://www.techrepublic.com/blog/web-designer/how-to-prevent-flash-of-unstyled-content-on-your-websites/  
+
+* Explain what ARIA and screenreaders are, and how to make a website accessible.  
+ARIA defines ways to make Web content and Web applications (especially those developed with Ajax and JavaScript) more accessible to people with disabilities.
+A screen reader is a software application which, rather than presenting web content visually, converts text into 'synthesised speech' allowing user to alternatively listen to content.
+The steps to follow to make your Web apps accessible are as follows:
+
+Use native HTML tags wherever possible
+Make interactive elements keyboard accessible
+Provide extra markup for AT (accessibility technology) 
+https://www.w3.org/WAI/intro/aria
+http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-applications-accessible/
+
 * Explain some of the pros and cons for CSS animations versus JavaScript animations.
 * What does CORS stand for and what issue does it address?
 
@@ -133,14 +164,84 @@ I'd love to learn how to create fusion bomb. ...or just pick something trendy, R
 
   https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context
 * What are the various clearing techniques and which is appropriate for what context?
+  - Empty Div Method:
+    <div style="clear:both;"></div>
+    I do not use this method, because you have additional, unnecessary div with hardcored style. You can use this method when you create a layout (often in footer)
+  - Overflow Method: setting auto or hidden overflow property on parent will expand it to contain the floats.
+    If you add overflow: hidden to the containing element, it will automatically adjust its height and take the floated children into account.
+  - The Easy Clearing Method: uses the parent's :after to add the clear: both property
+    .clearfix:after {
+      content: ".";
+      visibility: hidden;
+      display: block;
+      height: 0;
+      clear: both;
+    }
+    I often use this, but it generates content to the page that has nothing to do there in the first place.
+
+  https://css-tricks.com/all-about-floats/
 * Explain CSS sprites, and how you would implement them on a page or site.
 * What are your favourite image replacement techniques and which do you use when?
+  CSS image replacement is a technique of replacing a text element (usually a header tag) with an image. You may want to use a <h1> tag and text for this for the accessibility and SEO benefits.
+  I use image replacements (depending on the needs), when I want to make my page more accessible for devices like readers etc. Usually I use display none span in header.
+
+  #1: Display none span in header
+  <h1 id="logo">
+    <span>CSS-Tricks</span>
+  </h1>
+
+  h1#logo {
+    width: 250px;
+    height: 25px;
+    background-image: url(logo.gif);
+  }
+  h1#logo span {
+    display: none;
+  }
+
+  #2: Text-indent out of sight
+  <h1 id="logo">
+    CSS-Tricks
+  </h1>
+
+  h1#logo {
+    width: 300px;
+    height: 75px;
+    background: url(test.png);
+    text-indent: -9999px;
+  }
+
+  #3: Invisible Text
+  <h3 class="leon">
+    <span>CSS-Tricks</span>
+  </h3>
+
+  h3.leon {
+    width: 300px;
+    height: 75px;
+    background: url(test.png);
+  }
+  h3.leon span {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  https://css-tricks.com/css-image-replacement/
 * How would you approach fixing browser-specific styling issues?
   - use separate stylesheets that loads when that specific browser is being used.
   - use cross-browsers CSS prefixes (-moz-, -webkit-, etc)
   - resetting or normalizing CSS
 * How do you serve your pages for feature-constrained browsers?
+  - separate stylesheets that loads when that specific browser is being used
+  - create a completely separate layout
+  - polyfills (A polyfill is code that detects if a certain "expected" API is missing and manually implements it.)
+
   * What techniques/processes do you use?
+      Graceful Degradation
+
+  https://www.sitepoint.com/progressive-enhancement-graceful-degradation-basics/
 * What are the different ways to visually hide content (and make it available only for screen readers)?
   - visibility: hidden
   - width: 0; height: 0;
@@ -148,9 +249,26 @@ I'd love to learn how to create fusion bomb. ...or just pick something trendy, R
   - absolute position off the screen
 * Have you ever used a grid system, and if so, what do you prefer?
 * Have you used or implemented media queries or mobile specific layouts/CSS?
+  Yes, I used media queries after I created a project using Bootstrap grid to learn how Bootstrap and responsive pages works. I used mobile-first method to have a fully-responsive, readable page on any device without unnecessary content.
+  Media queries allow you to target CSS rules based on - for instance - screen size, device-orientation or display-density. It allows you to display your page in different way on different devices.
+
+  http://cssmediaqueries.com/
 * Are you familiar with styling SVG?
 * How do you optimize your webpages for print?
+  - create a stylesheet for print
+  - avoid unnecessary HTML tables
+  - know which portions of the page do not have any print value (give him class .no-print with display:none)
+  - use page breaks in places where page should break (.page-break { page-break-before: always; display: none; })
+  - size page for print (width in inches or centimeters(both recommended))
+  
+  https://davidwalsh.name/optimizing-structure-print-css
 * What are some of the "gotchas" for writing efficient CSS?
+  - avoid key selectors that match large numbers of elements (tag and universal selectors)
+  - prefer class and ID selectors over tag selectors
+  - avoid redundant selectors
+  - try group and reuse common properties
+
+  https://css-tricks.com/efficiently-rendering-css/
 * What are the advantages/disadvantages of using CSS preprocessors?
   * Describe what you like and dislike about the CSS preprocessors you have used.
 * How would you implement a web design comp that uses non-standard fonts?
@@ -196,6 +314,8 @@ I'd love to learn how to create fusion bomb. ...or just pick something trendy, R
 
 * What's a typical use case for anonymous functions?
 * How do you organize your code? (module pattern, classical inheritance?)
+  Eg. Module pattern, IIFE, Atomic design.
+
 * What's the difference between host objects and native objects?
     Host objects are objects provided by the host environment. They may be different between environments, examples:
     - window, document, location
@@ -241,6 +361,13 @@ I'd love to learn how to create fusion bomb. ...or just pick something trendy, R
 * Explain "hoisting".
 * Describe event bubbling.
 * What's the difference between an "attribute" and a "property"?
+
+* What does second parameter in Object.create do?
+
+It specify property descriptors to be added to the newly-created object, with the corresponding property names. These properties correspond to the second argument of Object.defineProperties().
+
+Object.create![Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
+
 * Why is extending built-in JavaScript objects not a good idea?
 * Difference between document load event and document DOMContentLoaded event?
 * What is the difference between `==` and `===`?
@@ -249,10 +376,27 @@ I'd love to learn how to create fusion bomb. ...or just pick something trendy, R
 ```javascript
 duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 ```
+  ```javascript
+  function duplicate(arr) {
+    return arr.concat(arr);
+  }
+  ```
+  Reference: [Array.prototype.concat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
+  The word "Ternary" indicates that a Ternary expression takes three operands.
+  It's the only JavaScript operator that takes three operands.
+  Reference: [Conditional (ternary) Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+
 * What is `"use strict";`? what are the advantages and disadvantages to using it?
 * Create a for loop that iterates up to `100` while outputting **"fizz"** at multiples of `3`, **"buzz"** at multiples of `5` and **"fizzbuzz"** at multiples of `3` and `5`
 * Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
+
+* What is a callback?
+
+Callback is a function that is passed to the other function as an argument. Function that gets callback as argument can invoke it in its body. This execution may be immediate as in a synchronous callback, or it might happen at a later time as in an asynchronous callback.
+
+Callback![Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming))
+
 * Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
 * Explain what a single page app is and how to make one SEO-friendly.
 * What is the extent of your experience with Promises and/or their polyfills?
@@ -269,6 +413,29 @@ Other scopes![other scopes](http://stackoverflow.com/a/500459)
 
 * What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
 * What tools and techniques do you use debugging JavaScript code?
+* Types in Javascript
+
+JS types can be split in two categories - primitives and objects
+
+Primitives are:
+- String
+- Number
+- Boolean
+- null
+- undefined
+- Symbol (from ES6)
+
+Not primitive type is Object type ie:
+- Array
+- Date
+- Function
+- Map, WeakMap
+- Set, WeakSet
+
+Primitive types are passed by value, objects are passed by reference.
+
+Javascript Types![Javascript Data Types](https://developer.mozilla.org/pl/docs/Web/JavaScript/Data_structures)
+
 * What language constructions do you use for iterating over object properties and array items?
 * Explain the difference between mutable and immutable objects.
   * What is an example of an immutable object in JavaScript?
