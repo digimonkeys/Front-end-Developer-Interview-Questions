@@ -312,6 +312,10 @@ Difference new vs Object.create![Difference new vs Object.create](http://stackov
 
 * Wyjaśnij ewentualny sposób pobrania parametrów z adresu URL w oknie przeglądarki.
 * Wyjaśnij politykę `same-origin` w odniesieniu do JavaScript.
+    Jest to fundamentalny mechanizm bezpieczeństwa przeglądarki. Mechanizm ten zapobiega dostępowi
+    skryptów js do drzew DOM różnego pochodzenia.
+    Same origin zachodzi wtedy, gdy zgodne są protokół port i host stron, z których wywoływane są skrypty.
+
 * Opisz wzorce dziedziczenia w JavaScript.
 * Czy funkcje sa hoistowane?
 
