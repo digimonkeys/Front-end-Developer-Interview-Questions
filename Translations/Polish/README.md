@@ -862,6 +862,12 @@ console.log('three');
 
 ### Pytania z NodeJS:
 
+* W jaki sposób Node.JS wspiera platformy wieloprocesorowe, i czy jest w stanie w pełni wykorzystac zasoby wszystkich procesorów?
+
+  Jako że Node.JS jest aplikacją jednowątkową, będzie ona działać tylko na jednym rdzeniu procesora. Node.JS udostępnia jednak moduł `cluster`, który wspomaga w wielokrotnym instancjonowaniu aplikacji, które pozwala na użycie wszystkich zasobów komputera.
+
+  [więcej info](https://nodejs.org/api/cluster.html)
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?

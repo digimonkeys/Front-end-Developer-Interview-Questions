@@ -815,6 +815,12 @@ console.log('three');
 
 #### NodeJS questions:
 
+* How does Node.js support multi-processor platforms, and does it fully utilize all processor resources?
+
+  Node.JS is a single-threaded application, and as such it will run only on a single core of a system. Node.JS provides a way to create multiple instances in the form of `cluster` module, which aids in fully utilizing system resources.
+
+  [more info](https://nodejs.org/api/cluster.html)
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
