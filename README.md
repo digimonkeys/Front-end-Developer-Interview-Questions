@@ -272,6 +272,14 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
 * How would you implement a web design comp that uses non-standard fonts?
 * Explain how a browser determines what elements match a CSS selector.
 * Describe pseudo-elements and discuss what they are used for.
+  Pseudo-elements starts with '::' and are used to style specified parts of and element.
+    Syntax: 'selector::pseudo-element {}'
+    We distinguish the following pseudo-elements:
+     - ::after - add additional layer/content after the element
+     - ::before - add additional layer/content before element
+     - ::first-letter - selects the first letter
+     - ::first-line - selects the first line
+     - ::selection - selects the portion of and element that is selected by user
 * Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
 * What does ```* { box-sizing: border-box; }``` do? What are its advantages?
 * List as many values for the display property that you can remember.

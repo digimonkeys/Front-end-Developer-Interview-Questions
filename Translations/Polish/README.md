@@ -503,6 +503,15 @@ $(".foo div#bar:eq(0)")
 * Jak tworzysz i wdrażasz projekt używający niestandardowych czcionek?
   * Czcionki sieciowe (serwisy czcionek jak: Google Webfonts, Typekit itd.)
 * Wyjaśnij jak przeglądarka określa elementy pasujące do selektora CSS?
+* Opisz czym są pseudo-elementy i do czego służą
+  Pseudo-elementy zaczynają się od '::' i są używane do stylowania specyficznych części elementu
+  Składnia: 'selector::pseudo-element {}'
+  Rozróżniamy następujące pseudo-elementy:
+   - ::after - dodaje dodatkową warstwę/zawartość po elemencie
+   - ::before - dodaje dodatkową warstwę/zawartość przed elementem
+   - ::first-letter - wybiera pierwszą literę
+   - ::first-line - wybiera pierwszą linię
+   - ::selection - wybiera część elementu zaznaczoną przez użytkownika
 
 ### Pytania z testowania:
 
