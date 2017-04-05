@@ -754,6 +754,8 @@ var foo = "Hello";
 alert(foo + bar);
 ```
 
+  Second alert call will fail because of the `bar` variable being set in a different block-scope.
+
 *Question: What is the value of `foo.length`?*
 ```javascript
 var foo = [];

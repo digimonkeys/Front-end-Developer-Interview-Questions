@@ -780,6 +780,18 @@ add(2)(5); // 7
 
   Jeśli `window.foo` było wcześniej zdefiniowane to jego wartość się nie zmienia, jeśli nie było to jego wartość to `bar`.
 
+* Jaki jest wynik poniższych dwóch wywołań `alert`?
+```javascript
+var foo = "Hello";
+(function() {
+  var bar = " World";
+  alert(foo + bar);
+})();
+alert(foo + bar);
+```
+
+  Drugie wywołanie skutkuje błędem, ponieważ zmienna `bar` jest zdefiniowana w innym block-scope.
+
 * Jaka jest wartość `foo.length`?
 ```javascript
 var foo = [];
