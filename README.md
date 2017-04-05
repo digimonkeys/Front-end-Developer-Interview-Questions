@@ -123,7 +123,11 @@ https://www.w3.org/WAI/intro/aria
 http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-applications-accessible/
 
 * Explain some of the pros and cons for CSS animations versus JavaScript animations.
-* What does CORS stand for and what issue does it address?
+* What does CORS stand for and what issue does it address?  
+Cross-origin resource sharing - is a mechanism that allows restricted resources (e.g. fonts) on a web page to be requested from another domain outside the domain from which the first resource was served. Normally it is not possible due to Same origin policy - a web browser permits scripts contained in a first web page to access data in a second web page, but only if both web pages have the same origin. An origin is defined as a combination of URI scheme, hostname, and port number. This policy prevents a malicious script on one page from obtaining access to sensitive data on another web page through that page's Document Object Model.  
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS  
+https://en.wikipedia.org/wiki/Cross-origin_resource_sharing  
+https://en.wikipedia.org/wiki/Same-origin_policy  
 
 #### HTML Questions:
 

@@ -129,6 +129,12 @@ Screenreadery to programy służące do odczytywania treści i dostępnych akcji
 https://www.w3.org/WAI/intro/aria
 http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-applications-accessible/
 
+* Co to jest CORS i do czego jest potrzebny?  
+Cross-origin resource sharing (w skrócie CORS) – mechanizm umożliwiający współdzielenie zasobów pomiędzy serwerami znajdującymi się w różnych domenach. Normalnie jest to niemożliwe ze względu na same orign policy - sop uniemożliwia dwóm osobnym kontekstom Javascript modyfikację swoich drzew DOM. Dzięki temu strona Agresora aggressive.com nie może modyfikować DOM strony Banku bank.com, w sytuacji kiedy np. te dwie strony są otwarte w kartach przeglądarki.  
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS  
+https://en.wikipedia.org/wiki/Cross-origin_resource_sharing  
+https://en.wikipedia.org/wiki/Same-origin_policy  
+
 ### Pytania HTML:
 
 * Co robi `doctype` i jakie znasz przykłady?
