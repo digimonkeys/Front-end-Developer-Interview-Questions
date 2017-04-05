@@ -794,6 +794,12 @@ setTimeout(function() {
 console.log('three');
 ```
 
+  ```
+  one
+  three
+  two
+  ```
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
