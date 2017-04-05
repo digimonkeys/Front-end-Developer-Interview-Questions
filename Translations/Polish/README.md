@@ -147,7 +147,7 @@ Other scopes![other scopes](http://stackoverflow.com/a/500459)
 * Wyjaśnij ewentualny sposób pobrania parametrów z adresu URL w oknie przeglądarki.
 * Wyjaśnij politykę `same-origin` w odniesieniu do JavaScript.
     Jest to fundamentalny mechanizm bezpieczeństwa przeglądarki. Mechanizm ten zapobiega dostępowi
-    skryptów js do drzew DOM znajdujących się na różnych originach.
+    skryptów js różnego pochodzenia do drzew DOM znajdujących się na różnych originach.
     Same origin zachodzi wtedy, gdy zgodne są protokół port i host stron, z których wywoływane są skrypty.
 
 * Opisz wzorce dziedziczenia w JavaScript.
