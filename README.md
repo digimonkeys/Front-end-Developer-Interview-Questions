@@ -815,6 +815,20 @@ console.log('three');
 
 #### NodeJS questions:
 
+* What is Chaining in Node?
+
+  Chaining methods allows devs to use the result of a function call without assigning it to a variable first, for example:
+
+  ```javascript
+  const result =
+    [1,2,3,4,5]
+      .filter(val => val > 1)
+      .map(val => val * val)
+      .reduce((a, b) => a + b);
+
+  console.log(result); // 55
+  ```
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
