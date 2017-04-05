@@ -167,6 +167,9 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 * Jaka jest przydatność atrybutów `data-`
 * Rozpatrujemy HTML5 jako otwartą platformę internetową. Jakie składniki tworzą HTML5?
 * Opisz różnice między cookies, sessionStorage i localStorage.
+* Czym jest renderowanie progresywne?  
+Są to techniki renderowania treści do wyświetlenia tak szybko, jak to możliwe. Przykład: opóźnione ładowanie obrazków, gdzie skrypt js ładuje obrazek dopiero gdy znajdzie się w viewporcie przeglądarki, zamiast ładować wszystkie - również niewidoczne - obrazki podczas startu strony.  
+http://stackoverflow.com/a/33651444  
 
 ### Pytania JS:
 
