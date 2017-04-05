@@ -503,6 +503,29 @@ $(".foo div#bar:eq(0)")
 * Jak tworzysz i wdrażasz projekt używający niestandardowych czcionek?
   * Czcionki sieciowe (serwisy czcionek jak: Google Webfonts, Typekit itd.)
 * Wyjaśnij jak przeglądarka określa elementy pasujące do selektora CSS?
+* Wymień jak najwięcej wartości właściwości 'display'
+  display: value; - wyświetla element jako...
+  - inline - element liniowy, domyślne ustawienie
+  - block -  element blokowy
+  - inline-block - blokowy element liniowy
+  - flex - blokowo-poziomowy płynny kontener (flex container)
+  - inline-flex - liniowo-poziomowy płynny kontener (inline-flex container)
+  - inline-table - liniową tabelę
+  - run-in - blok lub liniowy element, w zależności od kontekstu
+  Pozwala elementowi zachowywać się jak...
+  - list-item - <li>
+  - table - <table>
+  - table-caption - <caption>
+  - table-column-group - <colgroup>
+  - table-header-group - <thead>
+  - table-footer-group - <tfoot>
+  - table-row-group - <tbody>
+  - table-cell - <td>
+  - table-column - <col>
+  - table-row - <tr>
+  - none - element nie zostanie wyświetlony
+  - initial - ustawia wartość tej właściwości do jej domyślnej wartości
+  - inherit - odziedzicza wartość po elemencie nadrzędnym (rodzicu)
 
 ### Pytania z testowania:
 

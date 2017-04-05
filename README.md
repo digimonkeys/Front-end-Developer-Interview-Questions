@@ -275,6 +275,28 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
 * Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
 * What does ```* { box-sizing: border-box; }``` do? What are its advantages?
 * List as many values for the display property that you can remember.
+  display: value; - displays an element as...
+  - inline - an inline element, default value
+  - block -  a block element
+  - inline-block - an inline-level block container
+  - flex - an block-level flex container
+  - inline-flex - an inline-level flex container
+  - inline-table - an inline-level table
+  - run-in - either block or inline, depending on context
+  Let the element behave like...
+  - list-item - <li>
+  - table - <table>
+  - table-caption - <caption>
+  - table-column-group - <colgroup>
+  - table-header-group - <thead>
+  - table-footer-group - <tfoot>
+  - table-row-group - <tbody>
+  - table-cell - <td>
+  - table-column - <col>
+  - table-row - <tr>
+  - none - the element will not be displayed
+  - initial - sets this property to its default value
+  - inherit - inherits this property from its parent
 * What's the difference between inline and inline-block?
 * What's the difference between a relative, fixed, absolute and statically positioned element?
 * The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
