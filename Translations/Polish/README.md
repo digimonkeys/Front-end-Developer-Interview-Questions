@@ -134,7 +134,8 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
 * Co robi `doctype` i jakie znasz przykłady?
 * Jaka jest różnica między trybem standardów a trybem dziwactw (quirks mode)?  
 * Jaka jest różnica między html a xhtml?  
-XHTML to HTML napisany jako XML. Są niemal identyczne. Główne różnice to to, że xhtml jest bardziej restrykcyjny i dzięki temu obsługiwany przez wszystkie główne przeglądarki. Doctype jest obowiązkowy, podobnie atrybut xmlns w znaczniku html oraz znaczniki <html>, <head>, <title> i <body>. Elementy xhtmla musza być opprawnie zagnieżdżone, zawsze zamknięte, napisane małymi literami; zawsze muszą mieć jeden root element.  
+XHTML to HTML napisany jako XML. Są niemal identyczne. Główne różnice to to, że xhtml jest bardziej restrykcyjny i dzięki temu obsługiwany przez wszystkie główne przeglądarki. Doctype jest obowiązkowy, podobnie atrybut xmlns w znaczniku html oraz znaczniki <html>, <head>, <title> i <body>. Elementy xhtmla musza być poprawnie zagnieżdżone, zawsze zamknięte, napisane małymi literami; zawsze muszą mieć jeden root element.  
+https://www.w3schools.com/html/html_xhtml.asp  
 
 * Jakie są ograniczenia w serwowaniu stron XHTML?
   * Czy istnieją problemy z serwowaniem stron jako `application/xhtml+xml`?
