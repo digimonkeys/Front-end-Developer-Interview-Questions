@@ -27,39 +27,39 @@ Większość pytań zaczerpnięto z wątku [oksoclap](http://oksoclap.com/) stwo
 
 ### Pytania ogólne:
 
-* Czego nauczyłeś się wczoraj/w tym tygodniu?  
- React Higher Order Components  
- Sequelize ORM dla NodeJS  
+* Czego nauczyłeś się wczoraj/w tym tygodniu?
+ React Higher Order Components
+ Sequelize ORM dla NodeJS
 
-* Co pobudza lub interesuje cię w programowaniu?  
+* Co pobudza lub interesuje cię w programowaniu?
 
-Tworzenie rzeczy. Od dziecka uwielbiałem tworzyć coś nowego i rozwiązywac łamigłówki. Uwielbiam stale się rozwijać, uczyć się nowych rzeczy i codziennie stawiać czoła nowym wyzwaniom.  
+Tworzenie rzeczy. Od dziecka uwielbiałem tworzyć coś nowego i rozwiązywac łamigłówki. Uwielbiam stale się rozwijać, uczyć się nowych rzeczy i codziennie stawiać czoła nowym wyzwaniom.
 
-* Jakie wyzwanie technologiczne stanęło przed toba ostatnio i jak je rozwiązałeś?  
-Pracowałem nad projektem wykorzystującym boilerplate bundlujący się przez starą wersję webpacka. Kiedy chciałem dodać do niego kilka niezbędnych rozszerzeń, wszystko okazało się niekompatybilne i rozsypało w drzazgi. Musiałem napisac cały skrypt webpacka od nowa.  
+* Jakie wyzwanie technologiczne stanęło przed toba ostatnio i jak je rozwiązałeś?
+Pracowałem nad projektem wykorzystującym boilerplate bundlujący się przez starą wersję webpacka. Kiedy chciałem dodać do niego kilka niezbędnych rozszerzeń, wszystko okazało się niekompatybilne i rozsypało w drzazgi. Musiałem napisac cały skrypt webpacka od nowa.
 
 * Jak planujesz budowę UI, utrzymanie bezpieczeństwa, wysoką wydajność, SEO, łatwość w utrzymaniu kodu i jakie wykorzystujesz technologie kiedy zaczynasz budować aplikację webową lub stronę internetową?
 
-UI - zazwyczaj zaczynam od narysowania interfejsu na kartce papieru, która później służy mi jako generalny wyznacznik tego, co chcę osiągnąć na koniec pracy. Zawsze przykładam wagę do czytelności i prostoty interfejsu dla użytkowników.  
+UI - zazwyczaj zaczynam od narysowania interfejsu na kartce papieru, która później służy mi jako generalny wyznacznik tego, co chcę osiągnąć na koniec pracy. Zawsze przykładam wagę do czytelności i prostoty interfejsu dla użytkowników.
 
-Bezpieczeństwo - ponieważ po stronie klienta z kodem może stać się wszystko, trzymam wszystkie wrażliwe dane po stronie serwera.    
+Bezpieczeństwo - ponieważ po stronie klienta z kodem może stać się wszystko, trzymam wszystkie wrażliwe dane po stronie serwera.
 
-Wydajność - skupiam się na pisaniu przejrzystego, zrozumiałego kodu, a gdy któraś funkcjonalność okazuje się zbyt wolna pracuje nad poprawieniem jej wydajności. Czasem jeśli jakiś problem wydaje mi się 'ciężki' dla aplikacji i moge go rozwiązać na kilka sposobów, od razu wykonuje pomiar czasów wykonania przy różnych rozwiązaniach.  
+Wydajność - skupiam się na pisaniu przejrzystego, zrozumiałego kodu, a gdy któraś funkcjonalność okazuje się zbyt wolna pracuje nad poprawieniem jej wydajności. Czasem jeśli jakiś problem wydaje mi się 'ciężki' dla aplikacji i moge go rozwiązać na kilka sposobów, od razu wykonuje pomiar czasów wykonania przy różnych rozwiązaniach.
 
-SEO - nie zajmuję się optymalizacją SEO (nie bywało to moim zadaniem)  
+SEO - nie zajmuję się optymalizacją SEO (nie bywało to moim zadaniem)
 
-Utrzymanie kodu - stosuję ogólne dobre praktyki, takie jak proste i czytelne nazywanie funkcji i zmiennych, dzielenie kodu na małe, proste moduły. Zawsze kładę wielki nacisk na przystosowanie mojego kodu do zwyczajów panujących w zatrudniającej mnie firmie.  
+Utrzymanie kodu - stosuję ogólne dobre praktyki, takie jak proste i czytelne nazywanie funkcji i zmiennych, dzielenie kodu na małe, proste moduły. Zawsze kładę wielki nacisk na przystosowanie mojego kodu do zwyczajów panujących w zatrudniającej mnie firmie.
 
-Technologie - ostatnio preferuję React i redux w połączeniu z webpackiem, ale używałem również angulara 1 z gulpem itd itp  
+Technologie - ostatnio preferuję React i redux w połączeniu z webpackiem, ale używałem również angulara 1 z gulpem itd itp
 
 * Jakie jest Twoje preferowane środowisko programistyczne? (system operacyjny, edytor, przeglądarki, narzędzia itd.)
-* Z jakimi systemami kontroli wersji pracowałeś / jesteś zapoznany?  
-Z gitem, pracowałem na githubie i gitlabie. Próbowałem używać interfejsów graficznych gita, ale jednak wolę pracować w command line.  
+* Z jakimi systemami kontroli wersji pracowałeś / jesteś zapoznany?
+Z gitem, pracowałem na githubie i gitlabie. Próbowałem używać interfejsów graficznych gita, ale jednak wolę pracować w command line.
 * Opisz kolejne zadania podczas tworzenia strony internetowej?
 * Opisz różnicę między stopniowym ulepszaniem (progressive enhancement) i wdzięczną degradacją (graceful degradation)?
   * Dodatkowe punkty za opisanie wykrywania obsługi cech (feature detection)
-* Wyjaśnij, co kryje się za terminem "semantyczny HTML".  
-Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich przeznaczeniem i znaczeniem semantycznym, a nie tylko do prezentowania danych. Znaczniki nadają sens i w różnym kontekście mogną oznaczać do innego. Np <i> i <em> <b> i <strong>, section, aside, nav. Jest to ważne dla robotów indeksujących google, dla czytników przeznaczonych dla osób niepełnosprawnych etc.  
+* Wyjaśnij, co kryje się za terminem "semantyczny HTML".
+Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich przeznaczeniem i znaczeniem semantycznym, a nie tylko do prezentowania danych. Znaczniki nadają sens i w różnym kontekście mogną oznaczać do innego. Np <i> i <em> <b> i <strong>, section, aside, nav. Jest to ważne dla robotów indeksujących google, dla czytników przeznaczonych dla osób niepełnosprawnych etc.
 
 * Jak optymalizowałbyś zasoby strony internetowej?
   * Myśląc o wielu rozwiązaniach, które zawierają:
@@ -141,12 +141,19 @@ Other scopes![other scopes](http://stackoverflow.com/a/500459)
 * Opisz bąbelkowanie zdarzeń.
 * Jak jest różnica między "atrybutem" i "właściwością"?
 * Czemu rozszerzanie obiektów wbudowanych w JavaScript jest złym pomysłem?
-* Czemu rozszerzanie to dobry pomysł?
     Ponieważ obiekty te zostały stworzone według pewnej dobrze udokumentowanej i przemyślanej specyfikacji
     Jeśli dodamy swoje metody do wbudowanego obiektu, mogą one zostać nadpisane
     przez nieświadomego developera używającego naszego kodu,
     twórcy przeglądarki mogą zaimplementować metodę o takiej samej nazwie,
     użytkownik nie będzie wiedział której używa itp.
+
+* Czy rozszerzanie obiektów wbudowanych ma dobre strony?
+    Można wykorzystać możliwości normalnie niedostępne dla danej metody.
+    Np. odwrocenie stringa z wykorzystaniem metody `reverse` z Array.
+    String.prototype.reverse = function() {
+      return Array.prototype.reverse.apply(this.split('')).join('');
+    };
+    https://code.tutsplus.com/tutorials/quick-tip-how-to-extend-built-in-objects-in-javascript--net-9168
 
 * Jak jest różnicą między zdarzeniami `load` i `ready` dla strony internetowej?
 * Jaka jest różnica między `==` i `===`?

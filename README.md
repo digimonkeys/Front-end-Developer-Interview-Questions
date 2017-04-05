@@ -174,6 +174,14 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
     they can be overwritten by an unknowable developer using our code,
     developers may implement a method with the same name.
 
+* Does extending built-in objects have good part?
+    You can use features that are not normally available for a given method.
+    For example, reverse the string using the `reverse` method from the Array.
+    String.prototype.reverse = function() {
+      return Array.prototype.reverse.apply(this.split('')).join('');
+    };
+    https://code.tutsplus.com/tutorials/quick-tip-how-to-extend-built-in-objects-in-javascript--net-9168
+
 * Difference between document load event and document DOMContentLoaded event?
 * What is the difference between `==` and `===`?
 * Explain the same-origin policy with regards to JavaScript.
