@@ -559,6 +559,14 @@ $(".foo div#bar:eq(0)")
 
   [źródło](https://travishorn.com/why-it-is-better-to-serve-site-assets-from-multiple-domains-972a2bf69d71)
 
+* Postaraj się wyjaśnić jak wygląda proces wczytywania strony, od czasu wpisania jej adresu do czasu zakończenia jej ładowania.
+
+  1. Pobranie z DNS adresu IP serwera, bazując na wpisanym adresie URL.
+  2. Wysłanie zapytania HTTP do serwera.
+  3. Parsowanie odpowiedzi i renderowanie strony.
+
+  [więcej szczegółów](http://stackoverflow.com/a/2092602)
+
 ### Pytania z kodowania:
 
 * Jaka jest wartość `foo`?
