@@ -639,6 +639,8 @@ foo.push(1);
 foo.push(2);
 ```
 
+  `2`
+
 *Question: What is the value of `foo.x`?*
 ```javascript
 var foo = {n: 1};
