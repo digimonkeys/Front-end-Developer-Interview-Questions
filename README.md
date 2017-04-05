@@ -168,7 +168,8 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 * Describe the difference between `<script>`, `<script async>` and `<script defer>`.
 * Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
 * What is progressive rendering?
-* Have you used different HTML templating languages before?
+* Have you used different HTML templating languages before?  
+No. Examples of what I didn't use: Jade, EJS, HandlebarsJs, Underscore Templates, Mustache  
 
 #### CSS Questions:
 
