@@ -150,7 +150,7 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
 * Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
   * What needs to be changed to properly make it an IIFE?
   a) The function foo () is written as a function declaration and not a function expression (IIFE - Immediately-Invoked Function Expression )
-  b) Missing outer parentheses () - (function foo(){ }());
+  b) Missing outer parentheses () - (function foo(){ }())
   http://benalman.com/news/2010/11/immediately-invoked-function-expression/
 
 * What's the difference between a variable that is: `null`, `undefined` or undeclared?
