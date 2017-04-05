@@ -52,9 +52,12 @@ Utrzymanie kodu - stosuję ogólne dobre praktyki, takie jak proste i czytelne n
 
 Technologie - ostatnio preferuję React i redux w połączeniu z webpackiem, ale używałem również angulara 1 z gulpem itd itp
 
-* Jakie jest Twoje preferowane środowisko programistyczne? (system operacyjny, edytor, przeglądarki, narzędzia itd.)
-* Z jakimi systemami kontroli wersji pracowałeś / jesteś zapoznany?
-Z gitem, pracowałem na githubie i gitlabie. Próbowałem używać interfejsów graficznych gita, ale jednak wolę pracować w command line.
+* Jakie jest Twoje preferowane środowisko programistyczne? (system operacyjny, edytor, przeglądarki, narzędzia itd.)  
+Używam sublime 3 z jego dodatkowymi pluginami i świetnymi funcjonalnościami pomagającymi w edycji tekstu. Preferuję pracę na chromie i jego dev toolsach, ale używam też firebuga. Mam pewną wiedzę na temat linuksa, ale obecnie pracuję na win10. Korzystam też z gulpa, webpacka, managerów okien linterów itp.  
+
+* Z jakimi systemami kontroli wersji pracowałeś / jesteś zapoznany?  
+Z gitem, pracowałem na githubie i gitlabie. Próbowałem używać interfejsów graficznych gita, ale jednak wolę pracować w command line.  
+
 * Opisz kolejne zadania podczas tworzenia strony internetowej?
 * Opisz różnicę między stopniowym ulepszaniem (progressive enhancement) i wdzięczną degradacją (graceful degradation)?
   * Dodatkowe punkty za opisanie wykrywania obsługi cech (feature detection)  
@@ -99,7 +102,14 @@ Można to zrobić za pomocą CSS3 wykorzystując unordered list i input type = r
 Pełny tutorial: http://joshnh.com/weblog/making-a-pure-css-featured-image-slider/
 
 * Jakich narzędzi używasz do sprawdzenia wydajności swojego kodu?
-  * Profiler, JSPerf, Dromaeo
+  * Profiler, JSPerf, Dromaeo  
+Chrome Timeline - dostępne w devTools, nagrywa i pozwala na analizę wszystkich aktywności aplikacji podczas jej działania 
+JSPerf - jsPerf umożliwia łatwe tworzenie i udostepnianie testów wydajności, porównując wydajność snippetów JS przez testy benchmarkowe
+ Dromaeo - zetaw testów wydajności dla JS od Mozilli, obecnie nadal w fazie rozwoju  
+https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool  
+https://jsperf.com/  
+https://wiki.mozilla.org/Dromaeo  
+
 * Gdybyś mógł opanować jedną technologię w tym roku, jaka byłaby to technologia?
 * Wyjaśnij znaczenie standardów sieciowych i ich twórców.  
 Standardy są bardzo istotne ponieważ aplikacje pisane w danym języku są kompilowane przez różne przeglądarki. Pozwala to uniknąć sytuacji, w której kod działa w połowie przeglądarek, lub działa tylko w tej ulubionej kodera. Gdy opracowany jest standard przeglądarki wiedzą czego się spodziewać i każdy piszący w zgodzie ze standardem może zakładać, że wszystko będzie działać. Twórcami standardów są w3c, iso, ansi, unicode consortium, ietf oraz ecma.  
@@ -110,6 +120,14 @@ Aby uniknąć FOUC należy serwować użytkownikowi jak najbardziej zoptymalizow
 Używanie media queries i serwowanie CSS zoptymalizowanego dla urządzeń o mniejszej rozdzielczości. Można też ukryć całą stronę do czasu załadowania wszystkich styli.  
 https://en.wikipedia.org/wiki/Flash_of_unstyled_content  
 http://www.techrepublic.com/blog/web-designer/how-to-prevent-flash-of-unstyled-content-on-your-websites/  
+* Co to jest ARIA, screenreader i jak stworzyć stronę z ułatwieniami dostępu?
+ARIA to zestaw wytycznych opracowanych przez WAI(Web Accessibility Initiative) aby umożliwić korzystanie z aplikacji ludziom z dysfunkcjami(np. niewidomi), którzy posługują się technologiami wspierającymi.
+
+Screenreadery to programy służące do odczytywania treści i dostępnych akcji, które podejmuje się na komputerze.
+
+3 kroki tworzenia aplikacji z ułatwieniami dostępu: używaj natywnych tagów HTML kiedy tylko się da; elementy interaktywne twórz z możliwością obsługi przez klawiaturę; zapewnij dodatkowe znaczniki specjalnie dla AT (accessibility technology). 
+https://www.w3.org/WAI/intro/aria
+http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-applications-accessible/
 
 ### Pytania HTML:
 
@@ -169,6 +187,12 @@ function Person(){} var person = Person() var person = new Person()
 ```
 * Jaka jest różnica między `.call` i `.apply`?
 * Wyjaśnij `Function.prototype.bind`?
+* Czym jest callback?
+
+Callback jest to funckcja przekazywana do innej funkcji poprzez argument. Funkcja, która przyjmuje callback jako argument może w swoim ciele wywołać przekazaną funkcję. Wywołanie to może nastąpić natychmiast (synchronicznie), albo późniejszym czasie (asynchronicznie).
+
+Callback![Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming))
+
 * Kiedy optymalizujesz swój kod?
 * Wyjaśnij działanie dziedziczenia w JavaScript?
 * Kiedy użyłbyś `document.write()`?
@@ -189,8 +213,38 @@ function Person(){} var person = Person() var person = new Person()
     - Dane są ładowane dynamicznie a więc nie są częścią strony WWW. Wyszukiwarki internetowe nie indeksują treści ładowanych dynamicznie
 
 * Wyjaśnij działanie JSONP (i dlaczego nie jest właściwie AJAX).
+* Typy zmiennych w jsie?
+ 
+W JS rozróżniamy dwa typy danych: typy proste i typy złożone.
+
+Do typów prostych należą:
+- String
+- Number
+- Boolean
+- null
+- undefined
+- Symbol (od ES6)
+
+Typem złożonym jest Object jak np:
+- Array
+- Date
+- Function
+- Map, WeakMap
+- Set, WeakSet
+
+Typy proste przekazywane są przez wartość, natomiast typy złożone przez referencję.
+ 
+Javascript Types![Javascript Data Types](https://developer.mozilla.org/pl/docs/Web/JavaScript/Data_structures)
+
 * Czy kiedykolwiek używałeś szablonów w JavaScript?
   * Jeśli tak, jakie to były biblioteki? (Mustache.js, Handlebars itd.)
+
+* Co robi drugi parametr object.create?
+
+Drugi parametr Object.create pozwala na dodanie właściwości do nowo powstałego obiektu. Format w jakim podajemy te właściwości jest taki sam jak w drugim argumencie Object.defineProperties().
+
+Object.create![Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
+
 * Wyjaśnij pojęcie "hoisting".
 * Zasieg zmiennych w jsie?
 
@@ -220,10 +274,23 @@ Function hoisting![Function hoisting](https://developer.mozilla.org/en-US/docs/W
 
 * Napisz działający kod:
 ```javascript
-[1,2,3,4,5].duplicate(); // [1,2,3,4,5,1,2,3,4,5]
+duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 ```
+
+```javascript
+function duplicate(arr) {
+  return arr.concat(arr);
+}
+```
+Odniesienie: [Array.prototype.concat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
+
 * Opisz strategię zapamiętywania (unikanie powtarzalnych obliczeń) w JavaScript.
 * Dlaczego mówimy wyrażenie trójkowe, co dokładnie oznacza słowo "trójkowy"?
+
+Mówimy wyrażenie trójkowe, ponieważ przyjmuje trzy operandy (operand - argument).
+Jako ciekawostke można dodać, że jest to jedyny operator w JavaScripcie, który przyjmuje trzy operandy.
+Odniesienie: [Conditional (ternary) Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+
 * Czym jest `arity` funkcji?
 * Co oznacza `"use strict";`? Jakie są zalety i wady takiego rozwiązania?
 * Jaka jest roznica miedzy funkcja a obiektem?
@@ -347,9 +414,63 @@ $(".foo div#bar:eq(0)")
 * Jakie znasz techniki kasowania (clearing) i kiedy wskazane jest ich stosowanie?
 * Wyjaśnij technikę "CSS sprites" oraz sposób jej wdrożenia na stronie.
 * Jakie są Twoje ulubione techniki zastępowania obrazów i kiedy je stosujesz?
+  Zastępowanie obrazów CSS jest techniką zastępowania tekstowego elementu (zazwyczaj tagu nagłówkowego) obrazem. Można użyć do tego <h1> i tekstu dla benefitów płynących z dostępności oraz SEO.
+  Używam zastępowania obrazów (w zależności od potrzeby), kiedy chcę by moja strona była bardziej dostępna dla urządzeń takich jak czytniki itp. Zazwyczaj używam do tego celu ukrywania tagu span poprzed 'display: none'.
+
+  #1: Ukrywanie tagu span poprzez 'display: none'
+  <h1 id="logo">
+    <span>CSS-Tricks</span>
+  </h1>
+
+  h1#logo {
+    width: 250px;
+    height: 25px;
+    background-image: url(logo.gif);
+  }
+  h1#logo span {
+    display: none;
+  }
+
+  #2: Text-indent poza zasięgiem wzroku(ekranu)
+  <h1 id="logo">
+    CSS-Tricks
+  </h1>
+
+  h1#logo {
+    width: 300px;
+    height: 75px;
+    background: url(test.png);
+    text-indent: -9999px;
+  }
+
+  #3: Niewidzialny tekst
+  <h3 class="leon">
+    <span>CSS-Tricks</span>
+  </h3>
+
+  h3.leon {
+    width: 300px;
+    height: 75px;
+    background: url(test.png);
+  }
+  h3.leon span {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  https://css-tricks.com/css-image-replacement/
 * Haczyki właściwości CSS, warunkowe dołączanie plików .css lub... coś innego?
 * Jak serwujesz strony dla przeglądarek z ograniczonym wsparciem funkcji?
+  - oddzielne style CSS, które ładują się gdy dana przeglądarka jest używana
+  - oddzielny layout
+  - polyfills (Pollyfil jest kodem, który wykrywa czy są braki w oczekiwanym API i manualnie implementuje je)
+  
   * Jakie techniki stosujesz?
+      - Graceful Degradation
+      
+  https://www.sitepoint.com/progressive-enhancement-graceful-degradation-basics/
 * Jakie istnieją sposoby wizualnego ukrycia treści (uczynienia ich dostępnymi tylko dla czytników ekranu)?
   - visibility: hidden
   - width: 0; height: 0;
@@ -357,9 +478,19 @@ $(".foo div#bar:eq(0)")
   - absolute position - poza ekranem
 * Czy kiedykolwiek używałeś systemów siatek, a jeśli tak, to jakie preferujesz?
 * Czy używałeś 'media queries' lub tworzyłeś konkretne układy i arkusze dla urządzeń mobilnych?
+  Tak, używałem 'media queries' po stworzeniu projektu z użyciem siatki Boostrapa, by nauczyć się jak działają strony responsywne. Kierowałem się zasadą mobile-first, by uzyskać stronę w pełni responsywną i czytelną na każdym urządzeniu bez dodatkowej, niepotrzebnej zawartości.
+  'media queries' pozwalają na kontrolowanie używania zadeklarowanych styli CSS bazując na - na przykład - wielkości ekranu, orientacji urządzenia lub gęstości wyświetlacza. Pozwala to na wyświetlanie strony na różne sposoby na różnych urządzeniach.
+
+  http://cssmediaqueries.com/
 * Czy miałeś styczność ze stylizacją SVG?
 * Jak optymalizujesz swoje strony do druku?
-* Jakie stosujesz "sztuczki" przy pisaniu efektywnych CSS?
+  - tworzę specjalny arkusz styli do druku
+  - staram się unikać niepotrzebnych tabel
+  - staram się określić, które partie strony nie mają wartości dla druku (np. poprzez dawanie im klas .no-print z display: none)
+  - używam łamania stron (page breaks) w miejscach, gdzie powinny się łamać (.page-break { page-break-before: always; display: none; })
+  - ustalam rozmiar strony do druku (szerokość najlepiej podać w calach lub centrymetrach(oba rekomendowane))
+  
+  https://davidwalsh.name/optimizing-structure-print-css
 * Jakie są zalety/wady używania preprocessorów CSS? (SASS, Compass, Stylus, LESS)
   Zalety
     - lepsza organizacja wynikająca z zagnieżdżania selektorów
@@ -373,6 +504,15 @@ $(".foo div#bar:eq(0)")
     Używałem SASS'a i naprawdę podoba mi się zagnieżdżanie, zmienne i matematyczne funkcje, które pomagają bardzo w stylowaniu. Nie bylo rzeczy, których nie lubiłem, możliwe że moja wiedza o SASS'ie jest zbyt mała.
 
   http://nosleepforsheep.com/using-a-css-preprocessor/
+* Jakie stosujesz "sztuczki" przy pisaniu efektywnych CSS?
+  - unikam selektorów, które łapią duże ilości elementów (tagi i uniwersalne selektory)
+  - preferuję klasy i identyfikatory zamiast selektorów tagów
+  - unikam redundancji selektorów
+  - staram się grupować i ponownie wykorzystywać wspólne wartości
+
+  https://css-tricks.com/efficiently-rendering-css/
+* Czy używasz narzędzi do przetwarzania CSS? (SASS, Compass, Stylus, LESS)
+  * Jeśli tak, opisz cechy, które lubisz i nie lubisz w używanych narzędziach.
 * Jak tworzysz i wdrażasz projekt używający niestandardowych czcionek?
   * Czcionki sieciowe (serwisy czcionek jak: Google Webfonts, Typekit itd.)
 * Wyjaśnij jak przeglądarka określa elementy pasujące do selektora CSS?
