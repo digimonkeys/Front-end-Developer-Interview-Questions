@@ -270,6 +270,8 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
 * What are the advantages/disadvantages of using CSS preprocessors?
   * Describe what you like and dislike about the CSS preprocessors you have used.
 * How would you implement a web design comp that uses non-standard fonts?
+  - use '@font-face' to render a font (uses 'src' for hard resources)
+  - link to a webfont as a stylesheet, use @import or javascript (link from e.g. google fonts)
 * Explain how a browser determines what elements match a CSS selector.
 * Describe pseudo-elements and discuss what they are used for.
 * Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.

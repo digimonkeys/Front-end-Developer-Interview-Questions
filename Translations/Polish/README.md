@@ -501,7 +501,8 @@ $(".foo div#bar:eq(0)")
 * Czy używasz narzędzi do przetwarzania CSS? (SASS, Compass, Stylus, LESS)
   * Jeśli tak, opisz cechy, które lubisz i nie lubisz w używanych narzędziach.
 * Jak tworzysz i wdrażasz projekt używający niestandardowych czcionek?
-  * Czcionki sieciowe (serwisy czcionek jak: Google Webfonts, Typekit itd.)
+  - używając '@font-face' do renderowania czcionki (używa 'src' dla zahardcorowanych zasobów)
+  - linkując do zewnętrznego serwisu z czcionkami jako arkusz styli, używając @import lub javascript (link z np. google fonts)
 * Wyjaśnij jak przeglądarka określa elementy pasujące do selektora CSS?
 
 ### Pytania z testowania:
