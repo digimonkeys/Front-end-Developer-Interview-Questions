@@ -570,6 +570,16 @@ Other scopes![other scopes](http://stackoverflow.com/a/500459)
 
 * What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
 * What tools and techniques do you use debugging JavaScript code?
+
+I'm using Chrome DevTools.
+Im using the following techniques:
+  - Break on node changes.
+  - XHR breakpoints.
+  - Pause on exception.
+  - Audits (optimization).
+
+Reference: [Tips & tricks](http://www.zsoltnagy.eu/javascript-debugging-tips-and-tricks/)
+
 * Types in Javascript
 
 JS types can be split in two categories - primitives and objects

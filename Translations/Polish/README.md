@@ -411,6 +411,17 @@ Oczekująca obietnica może być spełniona z jakąś wartością lub odrzucona 
 
 [Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
+* Jakich narzędzi i technik używasz do debugowania kodu JavaScript?
+
+Używam DevTools z Chrome.
+Używam następujących technik:
+  - Przerywanie wykonywania kodu przy zmianie wybranego elementu DOM.
+  - Breakpointy przy wysyłaniu żądan.
+  - Przerywanie wykonywania kodu przy wyjątku.
+  - Sprawdzanie optymalizacji kodu przy pomocy Audits (zakładka w DevTools).
+
+Odniesienie: [Wskazówki](http://www.zsoltnagy.eu/javascript-debugging-tips-and-tricks/)
+
 * Czym jest event life cycle (event flow)?
 
 Event lifecycle (event flow) opisuje cykl życia eventu w drzewie DOM. Przy każdym zdarzeniu, przeglądarka tworzy event i rozsyła go po drzewie DOM. Propagacja / rozsyłanie eventu odbywa się w trzech fazach:
