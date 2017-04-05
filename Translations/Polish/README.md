@@ -625,6 +625,23 @@ $(".foo div#bar:eq(0)")
 
   Zalety: Możesz ustawiać wartości paddingów i obramowania bez przejmowania się o 'rozjechanie', rozszerzenie się pudełka. Jest to bardzo wygodne dla kolumnowych layoutów. Możesz również używać na przemian wartości w procentach i pikselach, więc nie musisz polega na elemencie podrzędnym dla paddingu.
 
+* 'C' w CSS oznacza 'kaskadowe'. Jak 
+* The 'C' in CSS stands for Cascading. Jak wyznacza się pierwszeństwo w przypisywaniu stylów? Jak można wykorzystać ten system na swoją korzyść?
+  Pierwszeństwo w CSS jest zdeterminowane przez specyficzność oraz dziedziczenie.
+  Rosnąca kolejność znaczenia:
+    1. Deklaracje 'user agent'
+    2. Deklaracje użytkownika
+    3. Deklaracje autora
+    4. Deklaracje '!important' autora
+    5. Deklaracje '!important' użytkownika
+
+  Specyficzność: ID > klasa, pseudo-klasa > element, pseudo-element
+  Dziedziczenie: Określona wartość → obliczona wartość → używana wartość → aktualna wartość
+
+  Wiedząc to, mogę określić jak zaplanować mój kod używając specyficzności oraz dziedziczenia, więc będą stanowić tylko minimalny (lub wcale) problem.
+
+  https://www.smashingmagazine.com/2010/04/css-specificity-and-inheritance/
+
 ### Pytania z testowania:
 
 * Jakie są niektóre z plusów/minusów testowania pisanego kodu?

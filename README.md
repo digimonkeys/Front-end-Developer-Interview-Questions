@@ -340,7 +340,21 @@ http://www.webdevout.net/articles/beware-of-xhtml#myths
     inline: only margin-left, margin-right, padding-left, padding-right
     inline-block: margin, padding, height, width
 * What's the difference between a relative, fixed, absolute and statically positioned element?
-* The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
+* The 'C' in CSS stands for Cascading. How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
+  CSS priority is determined by specificity and inheritance.
+  Ascending order of importance:
+    1. User agent declarations,
+    2. User declarations,
+    3. Author declarations,
+    4. Author !important declarations,
+    5. User !important declarations.
+
+  Specificity: ID > class, pseudo-class > element, pseudo-element
+  Inheritence: specified value → computed value → used value → actual value
+
+  Knowing that I can define how to plan my code using specificity and inheritance, so they cause only minimal (or no) problems.
+
+  https://www.smashingmagazine.com/2010/04/css-specificity-and-inheritance/
 * What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
 * Have you played around with the new CSS Flexbox or Grid specs?
 * How is responsive design different from adaptive design?
