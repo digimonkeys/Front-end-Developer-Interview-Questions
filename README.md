@@ -463,6 +463,14 @@ Difference new vs Object.create![Difference new vs Object.create](http://stackov
   * If so, what libraries have you used?
 * Explain "hoisting".
 * Describe event bubbling.
+    Bubbling is an event passing up of the DOM tree.
+    When an event occurs in an element inside another element,
+    and both elements have registered a handle for that event.
+    With bubbling, the event is first captured and handled by the innermost element
+    and then propagated to outer elements.
+
+    http://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing
+
 * What's the difference between an "attribute" and a "property"?
     Attribute is a value in HTML itself, which is always a string
     JS DOM objects have properties. These properties are kind of

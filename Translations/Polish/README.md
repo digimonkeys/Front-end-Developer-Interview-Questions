@@ -304,6 +304,13 @@ const![const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/
 Other scopes![other scopes](http://stackoverflow.com/a/500459)
 
 * Opisz bąbelkowanie zdarzeń.
+    Bubbling jest to wynoszenie / przechodzenie eventu do góry drzewa DOM.
+    Jeśli mamy jakiś event w wewnętrznym elemencie i oba mają zarejestrowany event,
+    bąbelkowanie najpierw wykona się w najbardziej zagnieżdonym miejscu. Następnie
+    będzie przenosić się wyżej i uruchamiać kolejne eventy.
+
+    http://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing
+
 * Jak jest różnica między "atrybutem" i "właściwością"?
     Atrybut jest to wartość w samym HTML, która jest zawsze stringiem
     Property jest przypisana do obiektu w drzewie DOM, może mieć różne typy jak String czy boolean
