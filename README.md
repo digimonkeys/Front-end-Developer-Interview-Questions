@@ -815,6 +815,12 @@ console.log('three');
 
 #### NodeJS questions:
 
+* Which types of streams are present in Node?
+
+  writable, readable, duplex, transform, passthrough
+
+  [source](https://nodejs.org/api/stream.html)
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
