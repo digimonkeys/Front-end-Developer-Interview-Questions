@@ -815,6 +815,12 @@ console.log('three');
 
 #### NodeJS questions:
 
+* How does Node.js handle child threads?
+
+  Every Node.JS process is single-threaded, therefore to get multiple threads one must use multiple processes. Node.JS provides a `child_process` module that helps with this.
+
+  [more info](https://nodejs.org/api/child_process.html)
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?

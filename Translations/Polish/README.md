@@ -862,6 +862,12 @@ console.log('three');
 
 ### Pytania z NodeJS:
 
+* Jak Node.JS obsługuje child thready?
+
+  Każdy proces Node.JS jest jednowątkowy, a więc aby wykorzystać wiele wątków trzeba użyć do tego wielu procesów. Node.JS pomaga w tym udostępniając moduł `child_process`.
+
+  [więcej info](https://nodejs.org/api/child_process.html)
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
