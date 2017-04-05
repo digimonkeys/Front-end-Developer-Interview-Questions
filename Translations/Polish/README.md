@@ -862,6 +862,14 @@ console.log('three');
 
 ### Pytania z NodeJS:
 
+* Jak można uniknąć callback hell?
+
+  * Utrzymuj swój kod płytkim. Nie definiuj callbacków w środku innych callbacków, zamiast tego przenieś je do jednego block-u i używaj ich po nazwie funkcji.
+  * Modularyzuj. Podziel swój kod na mniejsze części, aby każda z nich miała do wykonania jedno zadanie.
+  * Obsługuj wszystkie błędy. Jest to ważne aby funkcja w której wystąpił błąd nie przekazała złych lub zniekształconych danych w dół chain'a callbacków, co może prowadzić do wystąpienia błędów w innych funkcjach.
+
+  [źródło](http://callbackhell.com/)
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
