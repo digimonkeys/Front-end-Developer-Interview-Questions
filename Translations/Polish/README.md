@@ -541,6 +541,14 @@ $(".foo div#bar:eq(0)")
   * Unikanie metod/właściwości JavaScript które powodują reflow/repaint strony przez przeglądarkę, takich jak offset elementów, wielkość kontenerów etc.
   * Używanie debounce w eventach przewijania.
 
+* Wyjaśnij różnicę pomiędzy fazami layout, painting i compositing przeglądarki.
+
+  * layout - jest to faza, w której przeglądarka sprawdza ile miejsca potrzeba dla każdego komponentu na stronie.
+  * painting - wypełnianie pixelami, rysowanie tekstów, kolorów, grafiki.
+  * compositing - składanie komponentów i wyświeltanie ich we właściwej kolejności, na właściwym miejscu - renderowanie całej strony.
+
+  [źródło](https://developers.google.com/web/fundamentals/performance/rendering/?hl=en)
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?

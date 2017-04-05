@@ -502,6 +502,12 @@ Event flow![Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
 
 * Explain the difference between layout, painting and compositing.
 
+  * layout - in this phase the browser checks how much space each of the page elements need.
+  * painting - filling in pixels, drawing elements: text, graphics etc.
+  * compositing - showing of elements on the page in the correct order - rendering of the page.
+
+  [source](https://developers.google.com/web/fundamentals/performance/rendering/?hl=en)
+
 #### Network Questions:
 
 * Traditionally, why has it been better to serve site assets from multiple domains?
