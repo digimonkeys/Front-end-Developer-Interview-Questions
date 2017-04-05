@@ -813,6 +813,11 @@ console.log('three');
   two
   ```
 
+* What is deep linking in AngularJS?
+  Deep linking is the usage of the URL, which will take to specific page (content) directly without traversing application from home page. It helps in getting indexed so that these links can be easily searchable by search engines like Google, Yahoo.. etc.
+
+  Using Angular, the deep linking is defaut done with the # prefix (when the HTML5 mode is not set).
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?

@@ -870,6 +870,11 @@ console.log('three');
   two
   ```
 
+* Czym są głębokie powiązania (deep linking) w AngularJS?
+  Deep linking jest użyciem URL, który bierze określoną stronę (zawartość) bez przeładowywania aplikacji. Pomaga to indeksować, więc te URL mogą być łatwo znalezione przez silniki wyszukiwarek takie jak Google, Yahoo itp.
+
+  Używając AngularJS, deep linking jest domyślnie robione z prefiksem '#' (kiedy tryb HTML5 nie jest ustawiony).
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
