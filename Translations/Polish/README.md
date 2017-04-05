@@ -385,6 +385,17 @@ Odniesienie: [Conditional (ternary) Operator](https://developer.mozilla.org/en-U
 Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
 Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
 
+* Jakie sa wady i zalety używania obietnic zamiast callbacków?
+
+Zalety:
+  - unikanie "callback hell"
+  - wieksze mozliwosci
+  - operowanie na odpowiednim typie danych, zamiast funkcji
+
+Wady:
+  - więcej kodu
+  - kod jest bardziej skomplikowany
+
 * Czym jest event life cycle (event flow)?
 
 Event lifecycle (event flow) opisuje cykl życia eventu w drzewie DOM. Przy każdym zdarzeniu, przeglądarka tworzy event i rozsyła go po drzewie DOM. Propagacja / rozsyłanie eventu odbywa się w trzech fazach:
