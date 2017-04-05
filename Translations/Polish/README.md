@@ -421,6 +421,13 @@ W ES6 jest jeszcze jeden zakres - zasięg blokowy, który dotyczy zmiennych zade
 [const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
 [inne](http://stackoverflow.com/a/500459)
 
+* Jakich konstrukcji językowych używasz do iterowania po obiekcie i tablicy? 
+
+Do iterowania po obiekcie używam pętli for...in z sprawdzaniem właściwości za pomocą hasOwnProperty.
+Do iterowania po tablicy używam pętli for.
+
+Odniesienie: [hasOwnProperty](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
+
 * Czym jest event life cycle (event flow)?
 
 Event lifecycle (event flow) opisuje cykl życia eventu w drzewie DOM. Przy każdym zdarzeniu, przeglądarka tworzy event i rozsyła go po drzewie DOM. Propagacja / rozsyłanie eventu odbywa się w trzech fazach:

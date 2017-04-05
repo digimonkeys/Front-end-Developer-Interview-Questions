@@ -594,6 +594,12 @@ Primitive types are passed by value, objects are passed by reference.
 Javascript Types![Javascript Data Types](https://developer.mozilla.org/pl/docs/Web/JavaScript/Data_structures)
 
 * What language constructions do you use for iterating over object properties and array items?
+
+For iterating over object properties I use for... in loop with hasOwnProperty property checking.
+For iterationg over array items I use for loop.
+
+Reference: [hasOwnProperty](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
+
 * Explain the difference between mutable and immutable objects.
   * What is an example of an immutable object in JavaScript?
   * What are the pros and cons of immutability?
