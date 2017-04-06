@@ -803,9 +803,12 @@ console.log('three');
 ### AngularJS Questions:
 
 * What is AngularJS?
-  AngularJS is a structural framework for dynamic web apps. It lets you use HTML as your template language and lets you extend HTML's syntax to express your application's components clearly and succinctly. AngularJS's data binding and dependency injection eliminate much of the code you would otherwise have to write. And it all happens within the browser, making it an ideal partner with any server technology.
+  AngularJS is a client side JavaScript MVC framework to develop a dynamic web application. AngularJS was originally started as a project in Google but now, it is open source framework.
+  AngularJS is entirely based on HTML and JavaScript, so there is no need to learn another syntax or language.
+  AngularJS changes static HTML to dynamic HTML. It extends the ability of HTML by adding built-in attributes and components and also provides an ability to create custom attributes using simple JavaScript. 
 
   https://docs.angularjs.org/guide/introduction
+  http://www.tutorialsteacher.com/angularjs/what-is-angularjs
   
 #### Fun Questions:
 
