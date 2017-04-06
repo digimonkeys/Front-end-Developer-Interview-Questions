@@ -1468,3 +1468,7 @@ this.setState((prevState, props) => {
 Nic. setState może także przyjmować funkcję jako pierwszy argument. Funkcja ta pozwala na ustawienie obecnego stanu na podstawie stanu poprzedniego.
 
 setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
+
+* Wyjaśnij działanie $scope.$apply()  
+$scope.$apply() przyjmuje funkcję lub wyrażenie angularowe, wykonuje je i wywołuje $scope.$digest() aby zaktualizować wszystkie wiązania. Kiedy potrzebujemy tej funkcjonalności? Bardzo rzadko. Angular zazwyczaj wywołuje ją automatycznie, jedynie kiedy chcemy wykonać jakiś kod w nowym cyklu i nie jest to kod stworzony za pomocą bibliotek Angulara. Np. jeśli używamy setTimeout, kod wykona się w nowym cyklu i angular nie będzie wiedział, że zaszła jakas zmiana danych, jeśli nie wywołamy ręcznie $scope.$apply().  
+http://jimhoskins.com/2012/12/17/angularjs-and-apply.html  
