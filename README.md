@@ -810,14 +810,11 @@ DotFactory patterns![DotFactory patterns](http://www.dofactory.com/javascript/de
 JavaScript Design Patterns![JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 
 * Explain what a single page app is and how to make one SEO-friendly.
-<<<<<<< HEAD
 * What is the extent of your experience with `Promises` and/or their polyfills?
 
 I've been using `Promises` for some time now, probably about half of a year.
 Thanks to `Promises` my asynchronous code looks better and I dont get stuck in a callback hell.
 The only polyfill I've used is `Bluebird`.
-=======
-* What is the extent of your experience with Promises and/or their polyfills?
 
 * Whats a Promise ?
 
@@ -831,7 +828,6 @@ A Promise is in one of these states:
 A pending promise can either be fulfilled with a value, or rejected with a reason (error). When either of these options happen, the associated handlers queued up by a promise's then method are called.
 
 [Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
->>>>>>> master
 
 * What are the pros and cons of using Promises instead of callbacks?
 * Variables scope in JS?

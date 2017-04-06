@@ -612,14 +612,12 @@ Classical vs Prototypal![Stackoverflow - classical vs prototypal](http://softwar
 Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
 Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
 
-<<<<<<< HEAD
 * Jak bardzo jesteś zaznajomiony z `Promises` i/czy ich polyfillami?
 
 Używam `Promises` od pewnego czasu, prawdopodobnie coś około połowy roku.
 Dzięki `Promises` mój asynchroniczny kod wygląda o wiele lepiej i przestałem utykać w tzw. "callback hell".
 Jedyny polyfill, który znam to `Bluebird`.
 
-=======
 * Czym jest dziedziczenie?
  
 Dziedziczenie jest mechanizmem współdzielenia funkcjonalności między klasami i/lub obiektami (w rozumieniu klasycznym) lub obiektami (w dziedziczeniu prototypowym - jak w js). Klasa dziedzicząca (zwana klasą pochodną) otrzymuje dostęp do udostępnionych zachowń oraz atrybutów od klasy, z której następuje dziedziczenie (zwanej klasą bazową).
@@ -655,7 +653,6 @@ Synchroniczna funkcja zostanie wykonana i kiedy się zakonczy, następne zadanie
 Asynchroniczna funkcja zostanie wykonana i niezależnie od tego czy się zakonczy czy nie, następne zadanie zostanie wykonane.
 
 Odniesienie: [Asynchronicznosc vs synchronicznosc](http://stackoverflow.com/questions/748175/asynchronous-vs-synchronous-execution-what-does-it-really-mean)
->>>>>>> master
 
 * Czym jest event life cycle (event flow)?
 
