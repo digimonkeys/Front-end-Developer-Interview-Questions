@@ -1287,6 +1287,11 @@ console.log('three');
 * Explain ng-bind directive.
   The ng-bind directive binds the model property declared via $scope or ng-model directive or the result of an expression to the HTML element. It also updates an element if the value of an expression changes. 
 
+* Explain ng-app directive of AngularJS.
+  The ng-app directive is a starting point of AngularJS Application. It initializes the AngularJS framework automatically. AngularJS framework will first check for ng-app directive in a HTML document after the entire document is loaded and if ng-app is found, it bootstraps itself and compiles the HTML template.
+  Typically ng-app directives should be placed at the root of an HTML document e.g. <html> or <body> tag, so that it can control the entire DOM hierarchy. However, you can place it in any DOM element.
+  The AngularJS framework will only process the DOM elements and its child elements where the ng-app directive is applied.
+  
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
@@ -1295,6 +1300,7 @@ console.log('three');
 * Do you have any pet projects? What kind?
 * What's your favorite feature of Internet Explorer?
 * How do you like your coffee?
+
 
 #### React Questions
 
@@ -1404,7 +1410,6 @@ this.setState((prevState, props) => {
 Nothing. setState can also take a function as an argument. That function allows to set current state, based on previus state.
 
 setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
-
 
 #### Contributors:
 
