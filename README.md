@@ -166,7 +166,8 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
 * Have you ever used JavaScript templating?
   * If so, what libraries have you used?
 * Explain "hoisting".
-    Hoisting is the lifting of variables and functions up to the very top (to global reach or function coverage).
+    Hoisting is the lifting of variables with assigned value and functions
+    up to the very top (to global reach or function coverage).
     Which allows them to be used before they are declared.
     x = 5; // Assign 5 to x
     elem = document.getElementById("demo"); // Find an element
