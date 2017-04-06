@@ -363,6 +363,13 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 * What is React? How is it different from other JS frameworks?
 * What happens during the lifecycle of a React component?
 * What can you tell me about JSX?
+    This is the so-called. Synthetic sugar / syntactic sugar for function
+    React.createElement (component, props, ... children).
+    It allows you to write code that is a combination of javascript and html
+    within the render function of the component. JSX syntax can be used to
+    render both regular HTML elements as well as other React components,
+    these must start with a capital letter.
+
 * Are you familiar with Flux?
 * What are stateless components?
 * Explain this Code:
