@@ -1468,3 +1468,8 @@ this.setState((prevState, props) => {
 Nic. setState może także przyjmować funkcję jako pierwszy argument. Funkcja ta pozwala na ustawienie obecnego stanu na podstawie stanu poprzedniego.
 
 setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
+
+* Wyjaśnij czym jest scope w AngularJS
+$scope w AngularJS jest zasięgiem widoczności danego kontrolera. Każdy kontroler posiada swój unikalny $scope do którego przypięte są funkcje oraz zmienne widoczne w warstwie widoku $scope jest jedynym elementem, który jest w stanie wystawić dane dla widoku i komunikować się z widokiem.  
+http://www.p-programowanie.pl/kurs-angular/scope-i-wyrazenia/  
+https://docs.angularjs.org/guide/scope  
