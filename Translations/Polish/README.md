@@ -882,6 +882,10 @@ console.log('three');
 
 * Wyjaśnij dyrektywę ng-controller.
   Dyrektywa ng-controller dołącza klasę kontrolera do widoku. Jest to kluczowy aspekt tego, jak Angular wspiera MVC. Ng-controller tworzy również nowy zakres.
+* Jakie jest zastosowanie $routeProvider w AngularJS?
+  $routeProvider jest używany do konfigurowania routów w aplikacji.
+
+  https://docs.angularjs.org/api/ngRoute/provider/$routeProvider
 
 ### Pytania dodatkowe (zabawne):
 
