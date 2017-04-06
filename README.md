@@ -987,6 +987,24 @@ Function definitions are hoisted, function expressions arent.
 
 * What is event loop?
   * What is the difference between call stack and task queue?
+
+The event loop got its name because of how it's usually implemented, which usually resembles:
+
+```javascript
+while (queue.waitForMessage()) {
+  queue.processNextMessage();
+}
+```
+
+queue.waitForMessage waits synchronously for a message to arrive if there is none currently.
+Each message is processed completely before any other message is processed. 
+This offers some nice properties when reasoning about your program, including the fact that whenever a function runs, 
+it cannot be pre-empted and will run entirely before any other code runs (and can modify data the function manipulates).
+
+A call stack is a queue of functions that are being executed.
+Task queue is a list of messages waiting to be processed. 
+A function is associated with each message. When the stack has enough capacity, a message is taken out of the queue and processed.
+
 * Explain the differences on the usage of `foo` between `function foo() {}` and `var foo = function() {}`
 * What is inheritance?
 
