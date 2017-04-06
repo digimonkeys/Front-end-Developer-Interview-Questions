@@ -988,8 +988,6 @@ Function definitions are hoisted, function expressions arent.
 * What is event loop?
   * What is the difference between call stack and task queue?
 
-JavaScript runtimes contain a message queue which stores a list of messages to be processed and their associated callback functions.
-
 * Explain the differences on the usage of `foo` between `function foo() {}` and `var foo = function() {}`.
 
 There is a function declaration (first one) and function expression (second one).
