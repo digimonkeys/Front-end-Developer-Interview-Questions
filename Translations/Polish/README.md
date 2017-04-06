@@ -1217,6 +1217,10 @@ console.log('three');
   http://www.tutorialsteacher.com/angularjs/what-is-angularjs
 * Wyjaśnij dyrektywę ng-controller.
   Dyrektywa ng-controller dołącza klasę kontrolera do widoku. Jest to kluczowy aspekt tego, jak Angular wspiera MVC. Ng-controller tworzy również nowy zakres.
+
+* Wyjaśnij dyrektywę ng-include.
+  Jest to sposób na pobranie, kompilację i dołączenie szablonu/fragmentu html z innych plików.
+
 * Jak pobierać dane używając AJAX w AngularJS?
   Do pobierania danych używając AJAX można użyć serwisów $http oraz $https
   ```
