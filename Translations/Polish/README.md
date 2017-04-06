@@ -1468,3 +1468,8 @@ this.setState((prevState, props) => {
 Nic. setState może także przyjmować funkcję jako pierwszy argument. Funkcja ta pozwala na ustawienie obecnego stanu na podstawie stanu poprzedniego.
 
 setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
+
+* Czym jest singleton i gdzie jest używany w angularJS?
+Jest to kreacyjny wzorzec projektowy, którego celem jest ograniczenie możliwości tworzenia obiektów danej klasy do jednej instancji oraz zapewnienie globalnego dostępu do stworzonego obiektu. W angularze pattern ten jest wykorzystywany w mechanizmie dependency injection i w serwisach.  
+http://joelhooks.com/blog/2013/05/01/when-is-a-singleton-not-a-singleton/  
+https://pl.wikipedia.org/wiki/Singleton_(wzorzec_projektowy)  

@@ -1411,3 +1411,7 @@ setState![setState](https://facebook.github.io/react/docs/react-component.html#s
 This document started in 2009 as a collaboration of [@paul_irish](https://twitter.com/paul_irish) [@bentruyman](https://twitter.com/bentruyman) [@cowboy](https://twitter.com/cowboy) [@ajpiano](https://twitter.com/ajpiano)  [@SlexAxton](https://twitter.com/slexaxton) [@boazsender](https://twitter.com/boazsender) [@miketaylr](https://twitter.com/miketaylr) [@vladikoff](https://twitter.com/vladikoff) [@gf3](https://twitter.com/gf3) [@jon_neal](https://twitter.com/jon_neal) [@sambreed](https://twitter.com/sambreed) and [@iansym](https://twitter.com/iansym).
 
 It has since received contributions from over [100 developers](https://github.com/h5bp/Front-end-Developer-Interview-Questions/graphs/contributors).
+
+* What is a singleton pattern and where we can find it in Angularjs?  
+Is a great pattern that restricts the use of a class more than once. We can find singleton pattern in angular in dependency injection and in the services. If you do 2 times ‘new Object()‘ without this pattern, you will be allocating 2 pieces of memory for the same object. With singleton pattern, if the object exists, you reuse it.  
+http://joelhooks.com/blog/2013/05/01/when-is-a-singleton-not-a-singleton/  
