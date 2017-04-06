@@ -815,6 +815,8 @@ console.log('three');
 
 * Explain ng-controller directive.
   The ng-controller directive attaches a controller class to the view. This is a key aspect of how angular supports the principles behind the Model-View-Controller design pattern. It also creates a new scope.
+* Explain ng-include directive.
+  It is the way to fetch, compile and include templates/html fragment from external files.
 
 #### Fun Questions:
 

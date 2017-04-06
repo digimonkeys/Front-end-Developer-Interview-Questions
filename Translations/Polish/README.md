@@ -872,6 +872,8 @@ console.log('three');
 
 * Wyjaśnij dyrektywę ng-controller.
   Dyrektywa ng-controller dołącza klasę kontrolera do widoku. Jest to kluczowy aspekt tego, jak Angular wspiera MVC. Ng-controller tworzy również nowy zakres.
+* Wyjaśnij dyrektywę ng-include.
+  Jest to sposób na pobranie, kompilację i dołączenie szablonu/fragmentu html z innych plików.
 
 ### Pytania dodatkowe (zabawne):
 
