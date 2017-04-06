@@ -629,6 +629,7 @@ $(".foo div#bar:eq(0)")
   - text-indent: -1000px
   - absolute position - poza ekranem
 * Czy kiedykolwiek używałeś systemów siatek, a jeśli tak, to jakie preferujesz?
+  Używałem Boostrap oraz Angular Material. Dodatkowo słyszałem o Skeleton i Foundation. Preferuję Bootstrapa, ponieważ tworzenie stron z tym gridem jest bardzo proste. Jeśli potrzebujesz stałego grida lub responsywnego, jest to kwestia paru zmian. Wyrównanie i zagnieżdżanie kolumn jest również możliwe w obu przypadkach, stałej i zmieniającej się szerokości layoutów.
 * Czy używałeś 'media queries' lub tworzyłeś konkretne układy i arkusze dla urządzeń mobilnych?
   Tak, używałem 'media queries' po stworzeniu projektu z użyciem siatki Boostrapa, by nauczyć się jak działają strony responsywne. Kierowałem się zasadą mobile-first, by uzyskać stronę w pełni responsywną i czytelną na każdym urządzeniu bez dodatkowej, niepotrzebnej zawartości.
   'media queries' pozwalają na kontrolowanie używania zadeklarowanych styli CSS bazując na - na przykład - wielkości ekranu, orientacji urządzenia lub gęstości wyświetlacza. Pozwala to na wyświetlanie strony na różne sposoby na różnych urządzeniach.
