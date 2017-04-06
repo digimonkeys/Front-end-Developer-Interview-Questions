@@ -410,6 +410,21 @@ http://javascript.tutorialhorizon.com/2015/08/11/script-async-defer-attribute/
   Difference of supported styles:
     inline: only margin-left, margin-right, padding-left, padding-right
     inline-block: margin, padding, height, width
+* The 'C' in CSS stands for Cascading. How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
+  CSS priority is determined by specificity and inheritance.
+  Ascending order of importance:
+    1. User agent declarations,
+    2. User declarations,
+    3. Author declarations,
+    4. Author !important declarations,
+    5. User !important declarations.
+
+  Specificity: ID > class, pseudo-class > element, pseudo-element
+  Inheritence: specified value → computed value → used value → actual value
+
+  Knowing that I can define how to plan my code using specificity and inheritance, so they cause only minimal (or no) problems.
+
+  https://www.smashingmagazine.com/2010/04/css-specificity-and-inheritance/
 * What's the difference between a relative, fixed, absolute and statically positioned element?
   Static is the default type of positioning. When elements don’t have a position specifically set, they default to static. These elements will stack in a standard one-after-another order.
 
@@ -419,7 +434,6 @@ http://javascript.tutorialhorizon.com/2015/08/11/script-async-defer-attribute/
   An absolutely positioned element is actually removed from the DOM and positioned based on its nearest relatively positioned parent element. Unlike a relatively positioned element which doesn’t effect other static elements, when you give an element position:absolute its like it no longer exists. This means that other static elements will move up to fill in the space where the absolute element would have been. The position of the absolute element is determined by its parent elements. If all of the parent elements are either static, or there are none, then the element is positioned based on the <body>. 
 
   Fixed elements are completely independent of everything else on the web page. Regardless of any parents, a fixed position element will always be positioned based on the browser window. The interesting thing about fixed position elements is that when the page is scrolled, the element stays “fixed” and is always visible.
-* The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
 * What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
   Bootstrap and Angular Material. Bootstrap is great for small pages, but for bigger projects there is too much to change. Every framework impose its own style of page, so a lot of pages looks the same, just with different colors. It is what I would change in CSS frameworks - more freedom and adjusting to create pages which don't look like a milion others.
 * Have you played around with the new CSS Flexbox or Grid specs?
