@@ -408,6 +408,7 @@ https://www.w3.org/International/questions/qa-html-language-declarations
   Fixed elements are completely independent of everything else on the web page. Regardless of any parents, a fixed position element will always be positioned based on the browser window. The interesting thing about fixed position elements is that when the page is scrolled, the element stays “fixed” and is always visible.
 * The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
 * What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
+  Bootstrap and Angular Material. Bootstrap is great for small pages, but for bigger projects there is too much to change. Every framework impose its own style of page, so a lot of pages looks the same, just with different colors. It is what I would change in CSS frameworks - more freedom and adjusting to create pages which don't look like a milion others.
 * Have you played around with the new CSS Flexbox or Grid specs?
 * How is responsive design different from adaptive design?
 * Have you ever worked with retina graphics? If so, when and what techniques did you use?
