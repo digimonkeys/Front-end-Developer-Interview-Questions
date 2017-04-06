@@ -1281,6 +1281,18 @@ console.log('three');
 
   Używając AngularJS, deep linking jest domyślnie robione z prefiksem '#' (kiedy tryb HTML5 nie jest ustawiony).
 
+* Jakie są zalety używania AngularJS?
+  Zrobiony przez Google
+    AngularJS został opracowany tak dobrze jak i utrzymywany przez dedykowanych inżynierów Google'a. To oznacza ogromną społeczność, od której można się uczyć.
+  Wspaniałe MVC
+    Większość frameworków wymaga od programistów dzielenia aplikacji na wiele komponentów MVC, później programista musi napisać kod, który połączy znów wszystko razem. Jednakże AngularJS łączy wszystko automatycznie.
+  Intuicyjność
+    AngularJS jest bardziej intuicyjny, jako że robi użytek z HTML jako deklaratywnego języka. Co więcej, jest mniej kruchy na reorganizację.
+  Wszechstronność
+    AngularJS jest wszechstronną odpowiedzią na szybki programowanie front-endu. Nie potrzebuje żadnych dodatkowych pluginów lub frameworków. Co więcej, posiada szeroki wachlarz właściwości, które zawierają RESTfulowe akcje, budowanie danych, wstrzykiwanie zalezności, testowanie na poziomie przedsiębiorstwa.
+  Gotowy do testów jednostkowych
+    AngularJS jest gotowy do testów jednostkowych i jest to jedna z jego najlepszych zalet.
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
