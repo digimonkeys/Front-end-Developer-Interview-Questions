@@ -411,7 +411,10 @@ https://www.w3.org/International/questions/qa-html-language-declarations
   }
 
   ```
-  - What happens when you call setState?
+* What happens when you call setState?
+    I change the value in the component state what is captured by React
+    And it leads to re-rendering only the item that has changed.
+    
   - What’s the difference between an Element and a Component in React?
   - When would you use a Class Component over a Functional Component?
   - What are refs in React and why are they important?
