@@ -1468,3 +1468,7 @@ this.setState((prevState, props) => {
 Nic. setState może także przyjmować funkcję jako pierwszy argument. Funkcja ta pozwala na ustawienie obecnego stanu na podstawie stanu poprzedniego.
 
 setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
+
+* Czym są dyrektywy?
+Dyrektywy to znaczniki na elementach DOM (atrybuty, nazwy elementów, komentarze lub klasy css), które mówią kompilatorowi html Angulara aby przywiązać specyficzne zachowanie do danego elementu przez event listenery lub nawet aby przekształcić cały element DOM i jego dzieci.  
+https://docs.angularjs.org/guide/directive  
