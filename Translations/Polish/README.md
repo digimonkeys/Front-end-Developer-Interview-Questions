@@ -1468,3 +1468,7 @@ this.setState((prevState, props) => {
 Nic. setState może także przyjmować funkcję jako pierwszy argument. Funkcja ta pozwala na ustawienie obecnego stanu na podstawie stanu poprzedniego.
 
 setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
+
+* Kiedy używać dyrektyw jako elementów a kiedy jako atrybutów?  
+Należy używać elementów kiedy tworzony komponent kontroluje cały szablon, a atrybutów gdy tylko dodajemy jakąś funkcjonalność do istniejącego elementu.  
+https://docs.angularjs.org/guide/directive  
