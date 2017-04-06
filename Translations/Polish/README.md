@@ -639,6 +639,32 @@ Classical vs Prototypal![Stackoverflow - classical vs prototypal](http://softwar
 Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
 Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
 
+* Wytlumacz różnicę pomiędzy zmiennymi i niezmiennymi obiektami.
+  * Jaki jest przykład niezmienialnego obiektu w JavaScripcie?
+  * Jakie są wady i zalety niezmienności?
+  * Jak możesz osiągnąć niezmienność w Twoim kodzie?
+
+Zmienny obiekt może zostać zmieniony.
+Niezmienny obiekt nie może zostać zmieniony. Przy każdej zmianie zostaje zwrócony nowy obiekt.
+
+Zalety:
+ - Mniej skomplikowany w użyciu.
+ - Operacje mogą być łączone.
+ - Może być łatwo skopiowany.
+ - Nigdy nie zmienia swojego stanu.
+ - Łatwo można go przekazywać.
+ - Łatwe debugowanie.
+
+Wady:
+  - Większe zużycie pamięci.
+  - Ciężki do zbudowania.
+
+Można osiągnąć niezmienność obiektu poprzez użycie Object.freeze lub Object.seal.
+Można również użyć bibliotek np. Immutable.js.
+
+Odniesienie: [Dyskusja na Quora](https://www.quora.com/What-are-the-advantages-and-disadvantages-of-immutable-data-structures),
+[Dyskusja na Stackoverflow](http://stackoverflow.com/questions/1863515/pros-cons-of-immutability-vs-mutability)
+
 * Jakie sa wady i zalety używania obietnic zamiast callbacków?
 
 Zalety:
@@ -661,7 +687,7 @@ Jedyny polyfill, który znam to `Bluebird`.
  
 Dziedziczenie jest mechanizmem współdzielenia funkcjonalności między klasami i/lub obiektami (w rozumieniu klasycznym) lub obiektami (w dziedziczeniu prototypowym - jak w js). Klasa dziedzicząca (zwana klasą pochodną) otrzymuje dostęp do udostępnionych zachowń oraz atrybutów od klasy, z której następuje dziedziczenie (zwanej klasą bazową).
  
-Dziedziczenie![Wikipedia - dziedziczenie](https://pl.wikipedia.org/wiki/Dziedziczenie_(programowanie)) 
+Dziedziczenie![Wikipedia - dziedziczenie](https://pl.wikipedia.org/wiki/Dziedziczenie_(programowanie))
 
 * Czym jest obietnica (`Promise`)?
 
