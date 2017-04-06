@@ -443,6 +443,8 @@ http://javascript.tutorialhorizon.com/2015/08/11/script-async-defer-attribute/
   https://css-tricks.com/snippets/css/a-guide-to-flexbox/
   https://css-tricks.com/snippets/css/complete-guide-grid/
 * How is responsive design different from adaptive design?
+  Responsive: There is one basic layout, and it changes responsively to screen changes
+  Adaptive: For each possible screen size, there is a distinct layout
 * Have you ever worked with retina graphics? If so, when and what techniques did you use?
 * Is there any reason you'd want to use `translate()` instead of *absolute positioning*, or vice-versa? And why?
 

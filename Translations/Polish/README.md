@@ -924,6 +924,9 @@ $(".foo div#bar:eq(0)")
   Jest to IE6 Quirks mode (tryb dziwactw): jeśli uwstawisz szerokość, dodasz paddingi oraz obramowanie, całkowita szerokość nie zmieni się. Wewnętrzna szerokość dostosuje się do reszty.
 
   Zalety: Możesz ustawiać wartości paddingów i obramowania bez przejmowania się o 'rozjechanie', rozszerzenie się pudełka. Jest to bardzo wygodne dla kolumnowych layoutów. Możesz również używać na przemian wartości w procentach i pikselach, więc nie musisz polega na elemencie podrzędnym dla paddingu.
+* Czym różni się projekt responsywny od adaptywnego? 
+  Responsywny: Jeden podstawowy wygląd, który dostosowwuje się do zmian ekranu
+  Adaptywny: Dla każdej możliwej wielkości ekranu dedykowany jest osobny wygląd
 * Używałeś Flexboxa lub Grida?
   Tak, używam flexboxa w moich projektach. Jest bardzo prosty i komfortowy w użyciu i daje wspaniałe efekty. Wygląda na to, że grid jest wspierany przez wszystkie większe przeglądarki (oprócz Edge, który wspiera starą składnie), więc warto jest się go nauczyć.
 
