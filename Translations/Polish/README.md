@@ -644,6 +644,8 @@ $(".foo div#bar:eq(0)")
 * Czy jest jakikolwiek powód, dla którego użyłbyś `translate()` zamiast *pozycjonowania absolutnego* lub vice-versa? Dlaczego?
   Tak, `translate()` nie powoduje repaintu w przeglądarce kiedy jest używany, więc jeśli patrzymy na wydajność jest nieporównywalnie lepszy.
 
+  https://www.paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/
+
 ### Pytania z testowania:
 
 * Jakie są niektóre z plusów/minusów testowania pisanego kodu?
