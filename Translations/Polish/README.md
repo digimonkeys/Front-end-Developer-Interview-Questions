@@ -639,6 +639,18 @@ Classical vs Prototypal![Stackoverflow - classical vs prototypal](http://softwar
 Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
 Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
 
+* Jakie sa wady i zalety używania obietnic zamiast callbacków?
+
+Zalety:
+  - Unikanie "callback hell".
+  - Wieksze mozliwosci.
+  - Bogaty interfejs.
+  - Obsługa błędów.
+
+Wady:
+  - Środowisko musi wspierać obietnice.
+  - Kod jest bardziej skomplikowany.
+
 * Jak bardzo jesteś zaznajomiony z `Promises` i/czy ich polyfillami?
 
 Używam `Promises` od pewnego czasu, prawdopodobnie coś około połowy roku.

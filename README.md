@@ -852,6 +852,17 @@ A pending promise can either be fulfilled with a value, or rejected with a reaso
 [Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
 * What are the pros and cons of using Promises instead of callbacks?
+
+Pros:
+  - Avoiding "callback hell".
+  - More flexibility.
+  - Rich interface.
+  - Error handling.
+
+Cons:
+  - The envoirnment needs to support promises.
+  - Complexity.
+
 * Variables scope in JS?
 
 In JavaScript, til version ES6, there were only two versions of variables scope - global scope, and local - function scope.
