@@ -1259,6 +1259,17 @@ console.log('three');
   
   https://docs.angularjs.org/guide/directive
 
+* Wyjaśnij szablony w AngularJS.
+  W AngularJS szablony są pisane z użyciem HTML, który zawiera specyficzne dla AngularJS elementy oraz atrybuty. AngularJS łączy szablon z informacjami warstwy modelu i kontrolera, by renderować dynamiczny widok, który użytkownik widzi w przeglądarce.
+
+  Typy elementów i atrybutów AngularJS, które możesz używać:
+    Dyrektywy - Atrybut lub element, który rozszerza istniejący element DOM lub reprezentuje komponent DOM możliwy do ponownego użycia.
+    Znacznik (Markup) - Podwójne nawiasy klamrowe {{ }}, by powiązać wyrażenie z elementem
+    Filtr - Formatuje dane do wyświetlenia
+    Kontrolowane formularze (form controls) - walidują dane wejściowe użytkownika
+
+  https://docs.angularjs.org/guide/templates
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
