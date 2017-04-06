@@ -870,6 +870,9 @@ console.log('three');
   two
   ```
 
+* Wyjaśnij dyrektywę ng-bind.
+  Dyrektywa ng-bind łączy właściwość warstwy modelu zadeklarowaną w $scope, dyrektywie ng-model lub rezultat wyrażenia z elementem HTML. Uaktualnia również element, jeśli wartość wyrażenia się zmieniła.
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?

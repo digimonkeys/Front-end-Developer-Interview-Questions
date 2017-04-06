@@ -813,6 +813,9 @@ console.log('three');
   two
   ```
 
+* Explain ng-bind directive.
+  The ng-bind directive binds the model property declared via $scope or ng-model directive or the result of an expression to the HTML element. It also updates an element if the value of an expression changes. 
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
