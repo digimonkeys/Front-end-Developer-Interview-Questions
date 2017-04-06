@@ -164,7 +164,6 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
     theFunction.apply(valueForThis, arrayOfArgs)
     theFunction.call(valueForThis, arg1, arg2, ...)
     http://stackoverflow.com/questions/1986896/what-is-the-difference-between-call-and-apply
-    http://stackoverflow.com/questions/1986896/what-is-the-difference-between-call-and-apply
     https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Function/apply
     https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Function/call
 
