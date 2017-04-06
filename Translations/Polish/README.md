@@ -502,6 +502,14 @@ Jako ciekawostke można dodać, że jest to jedyny operator w JavaScripcie, któ
 Odniesienie: [Conditional (ternary) Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
 * Czym jest `arity` funkcji?
+* Czemu, na ogół, dobrym pomysłem jest nie ruszanie globalnej przestrzeni strony?
+
+Generalnie nie deklarowanie zmiennych globalnych jest zalecane, ponieważ cały kod posiada jedną przestrzen nazw.
+Zbyt duża ilość zmiennych globalnych może skutkować konfliktem pomiędzy różnymi skryptami na stronie.
+Najlepszym rozwiązaniem, aby uniknąć zanieczyszczania globalnej przestrzeni jest użycie IIFE.
+
+Odniesienie: [Global variables disscusion](http://stackoverflow.com/questions/2613310/ive-heard-global-variables-are-bad-what-alternative-solution-should-i-use)
+
 * Co oznacza `"use strict";`? Jakie są zalety i wady takiego rozwiązania?
 * Czym rozni sie dziedziczenie w jsie od klasycznego dziedziczenia?
  
