@@ -178,6 +178,12 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 ### Pytania JS:
 
 * Wyjaśnij delegację zdarzeń.
+    Delegacja zdarzeń / eventów polega na przypięciu obsługi zdarzenia (event handler) do elementu nadrzędnego, zamiast do elementu który chcemy obsłużyć. Po kliknięciu na element wewnętrzny, event bubbles up (bąbluje do góry) dochodząc do elementu z przypisanym handlerem. Następnie za pomocą event.target możemy sprawdzić gdzie zdarzył się event i wykonać go na odpowiednim elemencie.
+    Dzięki temu możemy obsłużyć zdarzenia występujące na wielu elementach, za pomocą jednego handlera.
+
+    http://www.crimsteam.site90.net/crimsteam/dom/dom_zdarzenia_delegacja.html
+    https://davidwalsh.name/event-delegate
+    
 * Wyjaśnij jak działa `this` w JavaScripcie.
 * Wyjaśnij jak działa dziedziczenie prototypowe.
 * Jak radzisz sobie z testowaniem swojego kodu JavaScript?

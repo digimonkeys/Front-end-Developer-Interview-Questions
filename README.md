@@ -368,6 +368,14 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 #### JS Questions:
 
 * Explain event delegation
+    Event delegation consists in bundling an event handler into a parent rather than an element that we want to handle.
+    When we click on an interior element, the event bubbles up to the item assigned to the handler.
+    Then, with event.target, we can see where the event occurred and execute it on the corresponding element.
+    This allows us to handle events occurring on multiple items with one handler.
+
+    http://www.crimsteam.site90.net/crimsteam/dom/dom_zdarzenia_delegacja.html
+    https://davidwalsh.name/event-delegate
+
 * Explain how `this` works in JavaScript
 * Explain how prototypal inheritance works
 * What do you think of AMD vs CommonJS?
