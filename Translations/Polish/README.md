@@ -174,7 +174,12 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 * Co się dzieje w trakcie cykli zycia komponentow React?
 * Co możesz powiedzieć o JSX?
 * Czy jesteś obeznany z Flux?
-* Czym są bezstanowe elementy?
+* Czym są bezstanowe komponenty?
+  Komponenty bezstanowe są to komponenty, ktore nie mają w swoim wnętrzu `this.state`.
+  Inne spotykane nazwy to czyste lub głupie komponenty. Można je zadeklarować za pomocą
+  const i arrow function podobnie jak i wszystkie jego wewnętrze funkcje.
+  Dzięki czemu nie musimy się przejmować `this` wewnątrz komponentu.
+
 * Wyjaśnij ten kod:
 
   ```
