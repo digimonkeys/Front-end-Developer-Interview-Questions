@@ -676,6 +676,17 @@ Oczekująca obietnica może być spełniona z jakąś wartością lub odrzucona 
 
 [Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
+* Jakich narzędzi i technik używasz do debugowania kodu JavaScript?
+
+Używam DevTools z Chrome.
+Używam następujących technik:
+  - Przerywanie wykonywania kodu przy zmianie wybranego elementu DOM.
+  - Breakpointy przy wysyłaniu żądan.
+  - Przerywanie wykonywania kodu przy wyjątku.
+  - Sprawdzanie optymalizacji kodu przy pomocy Audits (zakładka w DevTools).
+
+Odniesienie: [Wskazówki](http://www.zsoltnagy.eu/javascript-debugging-tips-and-tricks/)
+
 * Zasieg zmiennych w JavaScript?
 
 W JavaScripcie, przed wersją ES6, były tylko dwa zakresy zmiennych. Zakres globalny oraz lokalny - funkcja.

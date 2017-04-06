@@ -875,6 +875,16 @@ In ES6 there is one more - block scope for variables defined with let and const 
 
 * What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
 * What tools and techniques do you use debugging JavaScript code?
+
+I'm using Chrome DevTools.
+Im using the following techniques:
+  - Break on node changes.
+  - XHR breakpoints.
+  - Pause on exception.
+  - Audits (optimization).
+
+Reference: [Tips & tricks](http://www.zsoltnagy.eu/javascript-debugging-tips-and-tricks/)
+
 * What are falsy values
 
 Falsy values are values that evaluate to false when they're converted to boolean:
