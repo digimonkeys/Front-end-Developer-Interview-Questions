@@ -1197,6 +1197,11 @@ console.log('three');
 
   https://docs.angularjs.org/guide/filter
 
+* Explain directives in AngularJS.
+  At a high level, directives are markers on a DOM element (such as an attribute, element name, comment or CSS class) that tell AngularJS's HTML compiler ($compile) to attach a specified behavior to that DOM element (e.g. via event listeners), or even to transform the DOM element and its children.
+
+  https://docs.angularjs.org/guide/directive
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
