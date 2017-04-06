@@ -822,6 +822,11 @@ console.log('three');
 * What's your favorite feature of Internet Explorer?
 * How do you like your coffee?
 
+* Explain ng-app directive of AngularJS.
+  The ng-app directive is a starting point of AngularJS Application. It initializes the AngularJS framework automatically. AngularJS framework will first check for ng-app directive in a HTML document after the entire document is loaded and if ng-app is found, it bootstraps itself and compiles the HTML template.
+  Typically ng-app directives should be placed at the root of an HTML document e.g. <html> or <body> tag, so that it can control the entire DOM hierarchy. However, you can place it in any DOM element.
+  The AngularJS framework will only process the DOM elements and its child elements where the ng-app directive is applied.
+
 
 #### Contributors:
 
