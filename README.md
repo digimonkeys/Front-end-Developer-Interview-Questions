@@ -1190,6 +1190,13 @@ console.log('three');
 
   https://docs.angularjs.org/guide/services
 
+* What are the filters in AngularJS?
+  Filters format the value of an expression for display to the user. They can be used in view templates, controllers or services. AngularJS comes with a collection of built-in filters, but it is easy to define your own as well.
+
+  The underlying API is the $filterProvider.
+
+  https://docs.angularjs.org/guide/filter
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
