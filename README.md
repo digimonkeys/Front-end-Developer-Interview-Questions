@@ -61,6 +61,7 @@ I start with gathering client requirements. Ten I create environment - bundling 
 
 * If you have 5 different stylesheets, how would you best integrate them into the site?
 * Can you describe the difference between progressive enhancement and graceful degradation? 
+
 * What is semantic html?  
 Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, of the information in webpages and web applications rather than merely to define its presentation or look. Semantic HTML is processed by traditional web browsers as well as by many other user agents. CSS is used to suggest its presentation to human users.  
 
@@ -74,9 +75,8 @@ If set up properly (e.g. your site is hosted on www.example.com instead of examp
 http://webmasters.stackexchange.com/a/26757
 http://webmasters.stackexchange.com/a/25091  
 
-* How many resources will a browser download from a given domain at a time? 
-It depends on a browser, older ones like IE6 - 2, newer ones 6-8.  
-
+* How many resources will a browser download from a given domain at a time?
+  * What are the exceptions?
 * Name 3 ways to decrease page load (perceived or actual load time).
 * If you jumped on a project and they used tabs and you used spaces, what would you do?
 I will adapt (just change settings in my editor).
@@ -148,7 +148,11 @@ Pros of CSS animations vs JS:
 https://developers.google.com/web/fundamentals/design-and-ui/animations/css-vs-javascript  
 https://css-tricks.com/myth-busting-css-animations-vs-javascript/  
 
-* What does CORS stand for and what issue does it address?
+* What does CORS stand for and what issue does it address?  
+Cross-origin resource sharing - is a mechanism that allows restricted resources (e.g. fonts) on a web page to be requested from another domain outside the domain from which the first resource was served. Normally it is not possible due to Same origin policy - a web browser permits scripts contained in a first web page to access data in a second web page, but only if both web pages have the same origin. An origin is defined as a combination of URI scheme, hostname, and port number. This policy prevents a malicious script on one page from obtaining access to sensitive data on another web page through that page's Document Object Model.  
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS  
+https://en.wikipedia.org/wiki/Cross-origin_resource_sharing  
+https://en.wikipedia.org/wiki/Same-origin_policy 
 
 #### HTML Questions:
 
@@ -181,13 +185,7 @@ Perhaps the biggest issue is the poor browser support XHTML currently enjoys. In
 
 http://www.webdevout.net/articles/beware-of-xhtml#myths  
 
-* Are there any problems with serving pages as `application/xhtml+xml`?  
-When a browser reads XML it uses an XML parser, not an HTML parser. Unfortunately, up to and including version 8, Internet Explorer doesn't support files served as XML, although a number of other browsers do. To get around the fact that not all browsers support content served as XML, many XHTML files are actually served using the text/html MIME type. In this case, the user agent will read the file as if it were HTML, and use the HTML parser. Since the browser considers the XML to actually be HTML, you need to take into account some of the differences between the two formats when writing your XHTML code, to ensure that the differences between XML and HTML syntax do not trip up the browser. This includes different ways of declaring the character encoding or language declarations inside the document.  
-In IE8 there would be opened downloading dialogue for such served site. Proxy servers might already have cached xml version of site and they later will send it to browsers that dont support xml. Xml errors will be shown by browser when they occure. 
-
-http://stackoverflow.com/a/351908  
-https://www.w3.org/International/articles/serving-xhtml/  
-
+* Are there any problems with serving pages as `application/xhtml+xml`?
 * How do you serve a page with content in multiple languages?  
 Always use a language attribute on the html tag to declare the default language of the text in the page. When the page contains content in another language, add a language attribute to an element surrounding that content. Use the lang attribute for pages served as HTML, and the xml:lang attribute for pages served as XML. For XHTML 1.x and HTML5 polyglot documents, use both together.  
 https://www.w3.org/International/questions/qa-html-language-declarations  
@@ -196,7 +194,10 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 I have to consider how will users to be directed to their native language? Also I need to remeber about things like: text in images wont translate or scale, colors might be perceived different in different culture, no text should be hardcoded in templates, dates formatting might differ, styling font-size for :lang({language_code}) selectors in CSS, difference in word length for each language.  
 https://www.quora.com/What-kind-of-things-one-should-be-wary-of-when-designing-or-developing-for-multilingual-sites  
 
-* What are `data-` attributes good for?
+* What are `data-` attributes good for?  
+The data-* attributes is used to store custom data private to the page or application. The data-* attributes gives us the ability to embed custom data attributes on all HTML elements.The stored (custom) data can then be used in the page's JavaScript to create a more engaging user experience (without any Ajax calls or server-side database queries).  
+https://www.w3schools.com/tags/att_global_data.asp  
+
 * Consider HTML5 as an open web platform. What are the building blocks of HTML5?  
 The main building blocks are centred on HTML 5, CSS3, Javascript and SVG. Where HTML is a language to define the mark-up of a document (titles, headers, body, footer, tables, input forms etc.), CSS is a language to define style (formatting, colours, shades and the like). Javascript is a programming/scripting language and SVG is a language for creating 2D scalable vector graphics and images.  
 http://yucianga.info/?p=655  
