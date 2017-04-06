@@ -607,6 +607,12 @@ Function definitions are hoisted, function expressions arent.
 * What is event loop?
   * What is the difference between call stack and task queue?
 * Explain the differences on the usage of `foo` between `function foo() {}` and `var foo = function() {}`
+* What is inheritance?
+
+Inheritance (in programming) is a mechanism that allow sharing functionality (and code reuse) beetwen classes and/or objects (in classical inheritance) or between objects (in prototypal inheritance - like in JS). Class that inherits (called subclass) gains acess to all shared behaviors and attributes of parent class (called superclass);
+
+Inheritance![Wikipedia - Inheritance](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming))
+
 * Whats the difference between function and an object?
 
 Function is a specific type of object in JavaScript, that has all the properties of normal object. Only difference is that function can be called / invoked. It's possible, because functions has internal [[Call]] method.
