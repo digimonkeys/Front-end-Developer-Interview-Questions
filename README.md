@@ -58,15 +58,22 @@ git, I worked on github and gitlab. I tried using git guis but I prefer to work 
 * Can you describe your workflow when you create a web page?  
 I start with gathering client requirements. Ten I create environment - bundling scripts from webpack, gulp etc. Next comes site skeleton, semantics, filling with content and fixes, styling, animations and adding interactivity.  
 
-* If you have 5 different stylesheets, how would you best integrate them into the site?  
-When creating my own styles, I tend to use postcss or even bundle them with webpack into one file. Given 5 stylesheets to integrate I'd probably use YUI Compressor.
 
-* Can you describe the difference between progressive enhancement and graceful degradation?  
+* If you have 5 different stylesheets, how would you best integrate them into the site?
+* Can you describe the difference between progressive enhancement and graceful degradation? 
+
 * What is semantic html?  
 Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, of the information in webpages and web applications rather than merely to define its presentation or look. Semantic HTML is processed by traditional web browsers as well as by many other user agents. CSS is used to suggest its presentation to human users.  
 
 * How would you optimize a website's assets/resources?  
 Optimalize images, bundle files, use uglifyjs and minification, use svg, css sprites, serve cdn resources depending on distance and response time from user, cache some files, dont load whole huge libraries if you only use one function from them  
+
+* Why serving resources from many domains is better?  
+You can use a lightweight web server that doesn't have to load all the modules/extensions that your dynamic content web server has to load on every single request.
+Adding an extra subdomain means you increase the number of parallel downloads that the browser can perform.
+If set up properly (e.g. your site is hosted on www.example.com instead of example.com), you can also take advantage of a cookieless subdomain, reducing traffic and roundtrip times. 
+http://webmasters.stackexchange.com/a/26757
+http://webmasters.stackexchange.com/a/25091  
 
 * How many resources will a browser download from a given domain at a time?
   * What are the exceptions?

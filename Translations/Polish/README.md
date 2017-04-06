@@ -63,9 +63,6 @@ Najpierw zbieranie wymagań klienta, funkcjonalnych i niefunkcjonalnych.
 Tworzenie środowiska - skrypty służące do budowania w środowisku developerskim i produkcyjnym - webpack, gulp.
 Szkielet strony i semantyka, wypełnienie kontentem + poprawa semantyki, stylowanie, animacje, dodawanie interaktywności.  
 
-* Jak zintegrujesz 5 istniejących stylesheetów ze stroną?  
-Tworząc swoje arkusze stylów raczej nie dopuszczam do tego typu problemów, poniewaz nawet jesli trzymam css w wielu plikach używam webapcka do łączenia ich w jeden. Jeśli jednak miałbym takie zadanie prawdopodobnie użyłbym narzędzia takiego jak YUI Compressor.
-
 * Opisz różnicę między stopniowym ulepszaniem (progressive enhancement) i wdzięczną degradacją (graceful degradation)?
   * Dodatkowe punkty za opisanie wykrywania obsługi cech (feature detection)  
   
@@ -75,7 +72,11 @@ Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich prz
 * Jak optymalizowałbyś zasoby strony internetowej?  
 Optymalizacja obrazków, łączenie plików, Zmniejszenie rozmiaru plików przy użyciu uglifyjs, stosowanie minifikacji, używanie SVG i css sprites (jeden obrazek, używany wiele razy), Zasoby CDN - mogą być serwowane w zależności od odległości od użytkoniwka, response time etc, cachowanie, nie ładować dużych bibliotek jeśli potrzebujemy z nich tylko jednej funkcji  
 
-* Dlaczego serwowanie zasobów strony przez wiele domen jest lepsze?
+* Dlaczego serwowanie zasobów strony przez wiele domen jest lepsze?  
+Ponieważ pozwala na użycie lżejszego serwera, który nie będzie musiał ładować modułów wymaganych do serwowania dynamicznych treści przy każdym requeście o zasoby statyczne. Dodanie domeny oznacza, że zwięszymy liczbę możliwych równoległych pobrań dla przeglądarki. Można równiez wykorzystać brak potrzeby wysyłania plikow cookie przy przesyłaniu statycznych treści (css, obrazków, plików js) co zmniejszy obciażenie sieci.
+http://webmasters.stackexchange.com/a/26757
+http://webmasters.stackexchange.com/a/25091 
+
   * Ile zasobów pobiera przeglądarka z danej domeny w jednej chwili?
 * Podaj 3 sposoby na zmniejszenie czasu ładowania strony. (postrzeganego lub rzeczywistego czasu ładowania)
 * Jeśli dołączasz do projektu, w którym używa się tabulacji, a ty używasz spacji, co wtedy zrobisz?
