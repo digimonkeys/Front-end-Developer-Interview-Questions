@@ -295,6 +295,11 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 
   http://cssmediaqueries.com/
 * Are you familiar with styling SVG?
+  A bit. I colored some SVG's.
+  Generally SVG is resolution independent (scalable, without losing quality), does not add any additional, unneccesary HTTP requests and is very easy to script. You can use SVG to make road maps, graphs, complex UI elements, logos and simple games. You are able to use CSS and style SVG what you like. Also you can use animations which will move your whole SVG or just paths (parts of SVG).
+
+  https://www.smashingmagazine.com/2014/11/styling-and-animating-svgs-with-css/
+  https://code.tutsplus.com/articles/why-arent-you-using-svg--net-25414
 * How do you optimize your webpages for print?
   - create a stylesheet for print
   - avoid unnecessary HTML tables

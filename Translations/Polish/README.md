@@ -738,6 +738,11 @@ $(".foo div#bar:eq(0)")
 
   http://cssmediaqueries.com/
 * Czy miałeś styczność ze stylizacją SVG?
+  Małą. Zmieniałem kolor paru SVG.
+  Generalnie SVG jest niezależne rozdzielczościowo (skalowalne bez utraty jakości), nie dodaje żadnych dodatkowych i niepotrzebnych zapytań HTTP i jest bardzo proste do skryptowania. Za jego pomocą można stworzyć mapy dróg, grafy, kompleksowe elementy UI, loga i proste gry. Możesz użyć CSS do stylowania SVG jak chcesz. Możliwe jest również użycie animacji, które poruszą całym SVG lub tylko ścieżkami (częściami SVG).
+
+  https://www.smashingmagazine.com/2014/11/styling-and-animating-svgs-with-css/
+  https://code.tutsplus.com/articles/why-arent-you-using-svg--net-25414
 * Jak optymalizujesz swoje strony do druku?
   - tworzę specjalny arkusz styli do druku
   - staram się unikać niepotrzebnych tabel
