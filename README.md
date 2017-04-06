@@ -813,6 +813,9 @@ console.log('three');
   two
   ```
 
+* Explain ng-controller directive.
+  The ng-controller directive attaches a controller class to the view. This is a key aspect of how angular supports the principles behind the Model-View-Controller design pattern. It also creates a new scope.
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
@@ -821,7 +824,6 @@ console.log('three');
 * Do you have any pet projects? What kind?
 * What's your favorite feature of Internet Explorer?
 * How do you like your coffee?
-
 
 #### Contributors:
 
