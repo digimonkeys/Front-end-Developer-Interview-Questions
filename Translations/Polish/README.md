@@ -424,9 +424,10 @@ W ES6 jest jeszcze jeden zakres - zasięg blokowy, który dotyczy zmiennych zade
 * Jakich konstrukcji językowych używasz do iterowania po obiekcie i tablicy? 
 
 Do iterowania po obiekcie używam pętli for...in z sprawdzaniem właściwości za pomocą hasOwnProperty.
-Do iterowania po tablicy używam pętli for.
+Do iterowania po tablicy używam pętli for i metod Array.prototype, takich jak .forEach lub .map.
 
-Odniesienie: [hasOwnProperty](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
+Odniesienie: [hasOwnProperty](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty),
+[Array.prototype](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype)
 
 * Czym jest event life cycle (event flow)?
 

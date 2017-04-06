@@ -596,9 +596,10 @@ Javascript Types![Javascript Data Types](https://developer.mozilla.org/pl/docs/W
 * What language constructions do you use for iterating over object properties and array items?
 
 For iterating over object properties I use for... in loop with hasOwnProperty property checking.
-For iterationg over array items I use for loop.
+For iterationg over array items I use for loop and methods of Array.prototype, for example .forEach, and .map.
 
-Reference: [hasOwnProperty](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
+Reference: [hasOwnProperty](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty),
+[Array.prototype](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype)
 
 * Explain the difference between mutable and immutable objects.
   * What is an example of an immutable object in JavaScript?
