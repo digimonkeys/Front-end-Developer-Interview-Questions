@@ -872,6 +872,20 @@ console.log('three');
 
 * Wyjaśnij dyrektywę ng-controller.
   Dyrektywa ng-controller dołącza klasę kontrolera do widoku. Jest to kluczowy aspekt tego, jak Angular wspiera MVC. Ng-controller tworzy również nowy zakres.
+* Jak pobierać dane używając AJAX w AngularJS?
+  Do pobierania danych używając AJAX można użyć serwisów $http oraz $https
+  ```
+  $http({
+    method: 'GET',
+    url: '/someUrl'
+  }).then(function successCallback(response) {
+    // this callback will be called asynchronously
+    // when the response is available
+  }, function errorCallback(response) {
+    // called asynchronously if an error occurs
+    // or server returns response with an error status.
+  });
+  ```
 
 ### Pytania dodatkowe (zabawne):
 
