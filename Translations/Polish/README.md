@@ -273,6 +273,13 @@ Callback jest to funckcja przekazywana do innej funkcji poprzez argument. Funkcj
 Callback![Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming))
 
 * Kiedy optymalizujesz swój kod?
+
+* Czy w jsie mamy metody prywatne?
+
+Tak, w JS można tworzyć zmienne i metody jako prywatne. Aby stworzyć metodę prywatną należy utworzyć definicję funkcji w konstruktorze obiektu (bez przypisania jej do this). W takim wypadku funkcja / metoda będzie dostępna tylko wewnątz obiektu i tylko dla funkcji prytwatnych.
+
+Private members![Crockford on private members](http://javascript.crockford.com/private.html)
+
 * Wyjaśnij działanie dziedziczenia w JavaScript?
 * Co to jest function declaration a co function expression i czym sie roznia?
 

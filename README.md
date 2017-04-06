@@ -523,6 +523,7 @@ Object.create![Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScri
 
 
 * Why is extending built-in JavaScript objects not a good idea?
+
     Because these objects were created according to some well-documented
     and well-thought-out specifications. If we add our methods to the built-in object,
     they can be overwritten by an unknowable developer using our code,
@@ -535,6 +536,13 @@ Object.create![Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScri
       return Array.prototype.reverse.apply(this.split('')).join('');
     };
     https://code.tutsplus.com/tutorials/quick-tip-how-to-extend-built-in-objects-in-javascript--net-9168
+
+* Does JavaScript have private methods?
+
+Yes, private methods are made by the constructor. Every function definition or function expression (not bound with this) will become private method.
+Private methods cannot be called by public methods.
+
+Private members![Crockford on private members](http://javascript.crockford.com/private.html)
 
 * Difference between document load event and document DOMContentLoaded event?
     The DOMContentLoaded event is fired when the document has been completely loaded and parsed the DOM tree,
