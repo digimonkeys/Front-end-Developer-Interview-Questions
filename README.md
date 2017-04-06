@@ -1106,7 +1106,7 @@ console.log('three');
   three
   two
   ```
-
+  
 ### AngularJS Questions:
 
 * What is AngularJS?
@@ -1118,6 +1118,38 @@ console.log('three');
   http://www.tutorialsteacher.com/angularjs/what-is-angularjs
 * Explain ng-controller directive.
   The ng-controller directive attaches a controller class to the view. This is a key aspect of how angular supports the principles behind the Model-View-Controller design pattern. It also creates a new scope.
+* What are the basic steps to unit test an AngularJS filter?
+  1. Inject '$filter'
+  2. Call it with '$filter(filterName)(input, options)'
+  Example:
+  ```
+  describe('The test filter', function () {
+  'use strict'; 
+
+  var $filter;
+
+  beforeEach(function () {
+    module('myTestFilterModule');
+
+    inject(function (_$filter_) {
+      $filter = _$filter_;
+    });
+  });
+
+    it('should capitalize a string', function () {
+      // Arrange.
+      var foo = 'hello world', result;
+
+      // Act.
+      result = $filter('testFilter')(foo, 'capitalize');
+
+      // Assert.
+      expect(result).toEqual('HELLO WORLD');
+    });
+  });
+  ```
+  
+  http://stackoverflow.com/questions/21094569/how-to-unit-test-a-filter-in-angularjs-1-x
 
 #### Fun Questions:
 
