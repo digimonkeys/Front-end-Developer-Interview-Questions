@@ -661,11 +661,21 @@ Function expression![Function expression](https://developer.mozilla.org/en-US/do
 Function declaration vs function expression![Function declaration vs function expression](https://www.sitepoint.com/function-expressions-vs-declarations/)
 
 * Explain the same-origin policy with regards to JavaScript.
-    This is a fundamental security mechanism of the browser.
-    This mechanism prevents js scripts from accessing the DOM trees of different origins.
-    The same origin occurs when the port protocol and the host
-    of the pages that trigger the scripts are compatible.
-    
+  This is a fundamental security mechanism of the browser.
+  This mechanism prevents js scripts from accessing the DOM trees of different origins.
+  The same origin occurs when the port protocol and the host
+  of the pages that trigger the scripts are compatible.
+
+* Describe inheritance patterns in JavaScript.
+  - Pseudoclassical pattern - Constructors/classes are created by `new`,
+    inheriting all methods and properties of the parent.
+    By creating an instance with `new` we bind it to` this`.
+    Class methods refer to `this` instance.
+  - Functional pattern - It contains all the methods and properties within the constructor function.
+  - Prototypal pattern - Expands the class/constructor to successive subclasses inheriting all parent methods and properties.
+
+  http://wes.is/2014/12/14/why-i-prefer-the-pseudoclassical-pattern-for-creating-classes-in-javascript-and-why-you-should-too/
+
 * Make this work:
 ```javascript
 duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]

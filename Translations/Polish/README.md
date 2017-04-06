@@ -544,6 +544,14 @@ Difference new vs Object.create![Difference new vs Object.create](http://stackov
     Same origin zachodzi wtedy, gdy zgodne są protokół port i host stron, z których wywoływane są skrypty.
 
 * Opisz wzorce dziedziczenia w JavaScript.
+  - Pseudoclassical pattern - instancje konstruktora/klas tworzone są przez `new`,
+    dziedziczące wszystkie metody i właściwości rodzica. Tworząc instancję poprzez `new`
+    bindujemy ją do `this`. Metody klasy odnoszą się do `this` instancji.
+  - Functional pattern - zawiera wszyskie metody i właściwości wewnątrz funkcji konstruktora.
+  - Prototypal pattern - rozszerza klasę/konstruktor o kolejne subklasy dziedziczące wszystkie metody i właściwości rodzica.
+
+  http://wes.is/2014/12/14/why-i-prefer-the-pseudoclassical-pattern-for-creating-classes-in-javascript-and-why-you-should-too/
+
 * Czy funkcje sa hoistowane?
 
 W JS funcje można deklarować na dwa sposoby: poprzez function definition oraz function expression.
