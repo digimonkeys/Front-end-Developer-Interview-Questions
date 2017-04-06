@@ -52,21 +52,21 @@ Utrzymanie kodu - stosuję ogólne dobre praktyki, takie jak proste i czytelne n
 
 Technologie - ostatnio preferuję React i redux w połączeniu z webpackiem, ale używałem również angulara 1 z gulpem itd itp
 
-* Jakie jest Twoje preferowane środowisko programistyczne? (system operacyjny, edytor, przeglądarki, narzędzia itd.)  
-Używam sublime 3 z jego dodatkowymi pluginami i świetnymi funcjonalnościami pomagającymi w edycji tekstu. Preferuję pracę na chromie i jego dev toolsach, ale używam też firebuga. Mam pewną wiedzę na temat linuksa, ale obecnie pracuję na win10. Korzystam też z gulpa, webpacka, managerów okien linterów itp.  
+* Jakie jest Twoje preferowane środowisko programistyczne? (system operacyjny, edytor, przeglądarki, narzędzia itd.)
+Używam sublime 3 z jego dodatkowymi pluginami i świetnymi funcjonalnościami pomagającymi w edycji tekstu. Preferuję pracę na chromie i jego dev toolsach, ale używam też firebuga. Mam pewną wiedzę na temat linuksa, ale obecnie pracuję na win10. Korzystam też z gulpa, webpacka, managerów okien linterów itp.
 
-* Z jakimi systemami kontroli wersji pracowałeś / jesteś zapoznany?  
-Z gitem, pracowałem na githubie i gitlabie. Próbowałem używać interfejsów graficznych gita, ale jednak wolę pracować w command line.  
+* Z jakimi systemami kontroli wersji pracowałeś / jesteś zapoznany?
+Z gitem, pracowałem na githubie i gitlabie. Próbowałem używać interfejsów graficznych gita, ale jednak wolę pracować w command line.
 
 * Opisz kolejne zadania podczas tworzenia strony internetowej?
 * Opisz różnicę między stopniowym ulepszaniem (progressive enhancement) i wdzięczną degradacją (graceful degradation)?
-  * Dodatkowe punkty za opisanie wykrywania obsługi cech (feature detection)  
-  
-* Wyjaśnij, co kryje się za terminem "semantyczny HTML".  
-Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich przeznaczeniem i znaczeniem semantycznym, a nie tylko do prezentowania danych. Znaczniki nadają sens i w różnym kontekście mogną oznaczać do innego. Np <i> i <em> <b> i <strong>, section, aside, nav. Jest to ważne dla robotów indeksujących google, dla czytników przeznaczonych dla osób niepełnosprawnych etc.  
+  * Dodatkowe punkty za opisanie wykrywania obsługi cech (feature detection)
 
-* Jak optymalizowałbyś zasoby strony internetowej?  
-Optymalizacja obrazków, łączenie plików, Zmniejszenie rozmiaru plików przy użyciu uglifyjs, stosowanie minifikacji, używanie SVG i css sprites (jeden obrazek, używany wiele razy), Zasoby CDN - mogą być serwowane w zależności od odległości od użytkoniwka, response time etc, cachowanie, nie ładować dużych bibliotek jeśli potrzebujemy z nich tylko jednej funkcji  
+* Wyjaśnij, co kryje się za terminem "semantyczny HTML".
+Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich przeznaczeniem i znaczeniem semantycznym, a nie tylko do prezentowania danych. Znaczniki nadają sens i w różnym kontekście mogną oznaczać do innego. Np <i> i <em> <b> i <strong>, section, aside, nav. Jest to ważne dla robotów indeksujących google, dla czytników przeznaczonych dla osób niepełnosprawnych etc.
+
+* Jak optymalizowałbyś zasoby strony internetowej?
+Optymalizacja obrazków, łączenie plików, Zmniejszenie rozmiaru plików przy użyciu uglifyjs, stosowanie minifikacji, używanie SVG i css sprites (jeden obrazek, używany wiele razy), Zasoby CDN - mogą być serwowane w zależności od odległości od użytkoniwka, response time etc, cachowanie, nie ładować dużych bibliotek jeśli potrzebujemy z nich tylko jednej funkcji
 
 * Dlaczego serwowanie zasobów strony przez wiele domen jest lepsze?
   * Ile zasobów pobiera przeglądarka z danej domeny w jednej chwili?
@@ -101,37 +101,37 @@ Można to zrobić za pomocą CSS3 wykorzystując unordered list i input type = r
 Pełny tutorial: http://joshnh.com/weblog/making-a-pure-css-featured-image-slider/
 
 * Jakich narzędzi używasz do sprawdzenia wydajności swojego kodu?
-  * Profiler, JSPerf, Dromaeo  
-Chrome Timeline - dostępne w devTools, nagrywa i pozwala na analizę wszystkich aktywności aplikacji podczas jej działania 
+  * Profiler, JSPerf, Dromaeo
+Chrome Timeline - dostępne w devTools, nagrywa i pozwala na analizę wszystkich aktywności aplikacji podczas jej działania
 JSPerf - jsPerf umożliwia łatwe tworzenie i udostepnianie testów wydajności, porównując wydajność snippetów JS przez testy benchmarkowe
- Dromaeo - zetaw testów wydajności dla JS od Mozilli, obecnie nadal w fazie rozwoju  
-https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool  
-https://jsperf.com/  
-https://wiki.mozilla.org/Dromaeo  
+ Dromaeo - zetaw testów wydajności dla JS od Mozilli, obecnie nadal w fazie rozwoju
+https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool
+https://jsperf.com/
+https://wiki.mozilla.org/Dromaeo
 
 * Gdybyś mógł opanować jedną technologię w tym roku, jaka byłaby to technologia?
-* Wyjaśnij znaczenie standardów sieciowych i ich twórców.  
-Standardy są bardzo istotne ponieważ aplikacje pisane w danym języku są kompilowane przez różne przeglądarki. Pozwala to uniknąć sytuacji, w której kod działa w połowie przeglądarek, lub działa tylko w tej ulubionej kodera. Gdy opracowany jest standard przeglądarki wiedzą czego się spodziewać i każdy piszący w zgodzie ze standardem może zakładać, że wszystko będzie działać. Twórcami standardów są w3c, iso, ansi, unicode consortium, ietf oraz ecma.  
+* Wyjaśnij znaczenie standardów sieciowych i ich twórców.
+Standardy są bardzo istotne ponieważ aplikacje pisane w danym języku są kompilowane przez różne przeglądarki. Pozwala to uniknąć sytuacji, w której kod działa w połowie przeglądarek, lub działa tylko w tej ulubionej kodera. Gdy opracowany jest standard przeglądarki wiedzą czego się spodziewać i każdy piszący w zgodzie ze standardem może zakładać, że wszystko będzie działać. Twórcami standardów są w3c, iso, ansi, unicode consortium, ietf oraz ecma.
 
-* Czym jest FOUC? Jak unikasz FOUC?  
+* Czym jest FOUC? Jak unikasz FOUC?
 Flash of unstyled content jest to wyświetlenie użytkownikowi nieostylowanej strony (jej zawartości) podczas ładowania strony. Pojawia się gdy CSS jest wolno ładowany lub gdy JS powoduje wielokrotne renderowanie strony.
 Aby uniknąć FOUC należy serwować użytkownikowi jak najbardziej zoptymalizowany CSS (zminifikowany, w jednym pliku), oraz używać jak najmniej javascriptu powodującego fazę render przeglądarki. Używanie Critical CSS (czyli wrzucanie najważniejszych reguł css inline w znaczniku head).
-Używanie media queries i serwowanie CSS zoptymalizowanego dla urządzeń o mniejszej rozdzielczości. Można też ukryć całą stronę do czasu załadowania wszystkich styli.  
-https://en.wikipedia.org/wiki/Flash_of_unstyled_content  
-http://www.techrepublic.com/blog/web-designer/how-to-prevent-flash-of-unstyled-content-on-your-websites/  
+Używanie media queries i serwowanie CSS zoptymalizowanego dla urządzeń o mniejszej rozdzielczości. Można też ukryć całą stronę do czasu załadowania wszystkich styli.
+https://en.wikipedia.org/wiki/Flash_of_unstyled_content
+http://www.techrepublic.com/blog/web-designer/how-to-prevent-flash-of-unstyled-content-on-your-websites/
 * Co to jest ARIA, screenreader i jak stworzyć stronę z ułatwieniami dostępu?
 ARIA to zestaw wytycznych opracowanych przez WAI(Web Accessibility Initiative) aby umożliwić korzystanie z aplikacji ludziom z dysfunkcjami(np. niewidomi), którzy posługują się technologiami wspierającymi.
 
 Screenreadery to programy służące do odczytywania treści i dostępnych akcji, które podejmuje się na komputerze.
 
-3 kroki tworzenia aplikacji z ułatwieniami dostępu: używaj natywnych tagów HTML kiedy tylko się da; elementy interaktywne twórz z możliwością obsługi przez klawiaturę; zapewnij dodatkowe znaczniki specjalnie dla AT (accessibility technology). 
+3 kroki tworzenia aplikacji z ułatwieniami dostępu: używaj natywnych tagów HTML kiedy tylko się da; elementy interaktywne twórz z możliwością obsługi przez klawiaturę; zapewnij dodatkowe znaczniki specjalnie dla AT (accessibility technology).
 https://www.w3.org/WAI/intro/aria
 http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-applications-accessible/
 
 ### Pytania HTML:
 
-* Co robi `doctype` i jakie znasz przykłady?  
-służy do deklaracji typu dokumentu, i powinien być umieszczony jako pierwszy element w dokumencie HTML, w szczególności przed znacznikiem <html>. Ten znacznik informuje przeglądarkę której wersji HTML lub XHTML używa wczytywana właśnie strona. Przykłady:  
+* Co robi `doctype` i jakie znasz przykłady?
+służy do deklaracji typu dokumentu, i powinien być umieszczony jako pierwszy element w dokumencie HTML, w szczególności przed znacznikiem <html>. Ten znacznik informuje przeglądarkę której wersji HTML lub XHTML używa wczytywana właśnie strona. Przykłady:
 
 ```
 html 5: <!DOCTYPE html>
@@ -139,34 +139,93 @@ HTML 4.01 Strict <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w
 XHTML 1.0 Strict <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 ```
 
-* Jaka jest różnica między trybem full standards, almost standards a trybem dziwactw (quirks mode)?  
-Quirks mode to renderowanie strony przez przeglądarkę w wersji dla navigatora 4 i IE 5, zaś full standards mode to renderowanie zgodne ze współczesnymi standardami html i css. Tryb almost standards posiada zaimplementowaną pewną niewielką ilość dziwactw navigatora i IE.  
-https://developer.mozilla.org/pl/docs/Quirks_Mode_and_Standards_Mode  
+* Jaka jest różnica między trybem full standards, almost standards a trybem dziwactw (quirks mode)?
+Quirks mode to renderowanie strony przez przeglądarkę w wersji dla navigatora 4 i IE 5, zaś full standards mode to renderowanie zgodne ze współczesnymi standardami html i css. Tryb almost standards posiada zaimplementowaną pewną niewielką ilość dziwactw navigatora i IE.
+https://developer.mozilla.org/pl/docs/Quirks_Mode_and_Standards_Mode
 
-* Jaka jest różnica między html a xhtml?  
-XHTML to HTML napisany jako XML. Są niemal identyczne. Główne różnice to to, że xhtml jest bardziej restrykcyjny i dzięki temu obsługiwany przez wszystkie główne przeglądarki. Doctype jest obowiązkowy, podobnie atrybut xmlns w znaczniku html oraz znaczniki <html>, <head>, <title> i <body>. Elementy xhtmla musza być poprawnie zagnieżdżone, zawsze zamknięte, napisane małymi literami; zawsze muszą mieć jeden root element.  
-https://www.w3schools.com/html/html_xhtml.asp  
+* Jaka jest różnica między html a xhtml?
+XHTML to HTML napisany jako XML. Są niemal identyczne. Główne różnice to to, że xhtml jest bardziej restrykcyjny i dzięki temu obsługiwany przez wszystkie główne przeglądarki. Doctype jest obowiązkowy, podobnie atrybut xmlns w znaczniku html oraz znaczniki <html>, <head>, <title> i <body>. Elementy xhtmla musza być poprawnie zagnieżdżone, zawsze zamknięte, napisane małymi literami; zawsze muszą mieć jeden root element.
+https://www.w3schools.com/html/html_xhtml.asp
 
-* Jakie są ograniczenia w serwowaniu stron XHTML?  
-Wbrew pozorom i założeniom największym problemem jest wsparcie przeglądarek. Większość z nich przekształca xhtml na zwykły html. Kod xhtml też niekoniecznie jest 'czystszy' od kodu html. Do tego trzeba pamiętać o następujących ograniczeniach:  
-- wszystkie elementy muszą mieć początkowy znacznik  
-- elementy non-void ze znacznikiem początkowym muszą mieć też znacznik końcowy  
-- każdy element może sam się zamknąć przez '/>'  
-- tagi i atrybuty są case sensitive  
-- atrybuty musza być w cudzysłowiu  
-- puste atrybuty są zabronione, więc checked zmienia się w checked="true"  
-- znaki specjalne muszą być escapowane  
+* Jakie są ograniczenia w serwowaniu stron XHTML?
+Wbrew pozorom i założeniom największym problemem jest wsparcie przeglądarek. Większość z nich przekształca xhtml na zwykły html. Kod xhtml też niekoniecznie jest 'czystszy' od kodu html. Do tego trzeba pamiętać o następujących ograniczeniach:
+- wszystkie elementy muszą mieć początkowy znacznik
+- elementy non-void ze znacznikiem początkowym muszą mieć też znacznik końcowy
+- każdy element może sam się zamknąć przez '/>'
+- tagi i atrybuty są case sensitive
+- atrybuty musza być w cudzysłowiu
+- puste atrybuty są zabronione, więc checked zmienia się w checked="true"
+- znaki specjalne muszą być escapowane
 
-http://www.webdevout.net/articles/beware-of-xhtml#myths  
+http://www.webdevout.net/articles/beware-of-xhtml#myths
 
 * Czy istnieją problemy z serwowaniem stron jako `application/xhtml+xml`?
-* Jak serwujesz stronę z treścią w wielu językach?  
-Zawsze należy używać atrybutu language na tagu html do określenia domyślnego języka strony. Zawartość w innym języku należy otoczyć jakimś elementem do którego dodamy równiez atrybut language. Dla stron html należy używać atrybutu lang, zaś dla xhtml xml:lang. W html 1.x i w html 5 obu. 
-https://www.w3.org/International/questions/qa-html-language-declarations  
+* Jak serwujesz stronę z treścią w wielu językach?
+Zawsze należy używać atrybutu language na tagu html do określenia domyślnego języka strony. Zawartość w innym języku należy otoczyć jakimś elementem do którego dodamy równiez atrybut language. Dla stron html należy używać atrybutu lang, zaś dla xhtml xml:lang. W html 1.x i w html 5 obu.
+https://www.w3.org/International/questions/qa-html-language-declarations
 
 * Jaka jest przydatność atrybutów `data-`
 * Rozpatrujemy HTML5 jako otwartą platformę internetową. Jakie składniki tworzą HTML5?
 * Opisz różnice między cookies, sessionStorage i localStorage.
+
+#### Pytania REACT:
+
+* Czym jest React? Oraz czym się rożni od innych frameworkow?
+* Co się dzieje w trakcie cykli zycia komponentow React?
+* Co możesz powiedzieć o JSX?
+* Czy jesteś obeznany z Flux?
+* Czym są bezstanowe elementy?
+* Wyjaśnij ten kod:
+
+  ```
+
+  class MyComponent extends React.Component {
+      constructor(props) {
+          // set the default internal state
+          this.state = {
+              clicks: 0
+          };
+      }
+
+      componentDidMount() {
+          this.refs.myComponentDiv.addEventListener(
+              ‘click’,
+              this.clickHandler
+          );
+      }
+
+      componentWillUnmount() {
+          this.refs.myComponentDiv.removeEventListener(
+              ‘click’,
+              this.clickHandler
+          );
+      }
+
+      clickHandler() {
+          this.setState({
+              clicks: this.clicks + 1
+          });
+      }
+
+      render() {
+          let children = this.props.children;
+
+          return (
+              <div className=”my-component” ref=”myComponentDiv”>
+                  <h2>My Component ({this.state.clicks} clicks})</h2>
+                  <h3>{this.props.headerText}</h3>
+                  {children}
+              </div>
+          );
+      }
+  }
+
+  ```
+  - Co się dzieje gdy wywołujesz metodę call setState?
+  - Jaka jest rożnica pomiędzy Elementem a Komponentem w React?
+  - Kiedy powinieneś użyć komponentu klasy a kiedy komponentu funkcyjnego?
+  - Czym są referencje/refs w React i czemu są ważne?
+  - Czym są klucze w React i czemu są ważne?
 
 ### Pytania JS:
 
@@ -261,7 +320,7 @@ Callback![Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming
 
 * Wyjaśnij działanie JSONP (i dlaczego nie jest właściwie AJAX).
 * Typy zmiennych w jsie?
- 
+
 W JS rozróżniamy dwa typy danych: typy proste i typy złożone.
 
 Do typów prostych należą:
@@ -280,7 +339,7 @@ Typem złożonym jest Object jak np:
 - Set, WeakSet
 
 Typy proste przekazywane są przez wartość, natomiast typy złożone przez referencję.
- 
+
 Javascript Types![Javascript Data Types](https://developer.mozilla.org/pl/docs/Web/JavaScript/Data_structures)
 
 * Czy kiedykolwiek używałeś szablonów w JavaScript?
@@ -349,7 +408,7 @@ Difference new vs Object.create![Difference new vs Object.create](http://stackov
       return Array.prototype.reverse.apply(this.split('')).join('');
     };
     https://code.tutsplus.com/tutorials/quick-tip-how-to-extend-built-in-objects-in-javascript--net-9168
-    
+
 * Jak jest różnicą między zdarzeniami `document load` i `DOMContentLoaded` dla strony internetowej?
     Event DOMContentLoaded jest uruchamiany, gdy HTML został załadowany i drzewo DOM zbudowane
     natomiast event load, gdy cała strona, włącznie z css, grafiką zostały załadowane.
@@ -590,10 +649,10 @@ $(".foo div#bar:eq(0)")
   - oddzielne style CSS, które ładują się gdy dana przeglądarka jest używana
   - oddzielny layout
   - polyfills (Pollyfil jest kodem, który wykrywa czy są braki w oczekiwanym API i manualnie implementuje je)
-  
+
   * Jakie techniki stosujesz?
       - Graceful Degradation
-      
+
   https://www.sitepoint.com/progressive-enhancement-graceful-degradation-basics/
 * Jakie istnieją sposoby wizualnego ukrycia treści (uczynienia ich dostępnymi tylko dla czytników ekranu)?
   - visibility: hidden
@@ -613,7 +672,7 @@ $(".foo div#bar:eq(0)")
   - staram się określić, które partie strony nie mają wartości dla druku (np. poprzez dawanie im klas .no-print z display: none)
   - używam łamania stron (page breaks) w miejscach, gdzie powinny się łamać (.page-break { page-break-before: always; display: none; })
   - ustalam rozmiar strony do druku (szerokość najlepiej podać w calach lub centrymetrach(oba rekomendowane))
-  
+
   https://davidwalsh.name/optimizing-structure-print-css
 * Jakie stosujesz "sztuczki" przy pisaniu efektywnych CSS?
   - unikam selektorów, które łapią duże ilości elementów (tagi i uniwersalne selektory)
@@ -663,7 +722,7 @@ $(".foo div#bar:eq(0)")
   https://www.w3schools.com/cssref/pr_class_display.asp
 * Jaka jest różnica między display: 'inline' i 'inline-block'
   Elementy z 'display: inline-block' są jak elementy z 'display: inline', lecz mogą mieć szerokość oraz wysokość. To znaczy, że można używać elementów 'inline-block' jako bloków wewnątrz tekstu lub innych elementów.
-  
+
   Różnica w wspieranych stylach:
     inline: tylko margin-left, margin-right, padding-left, padding-right
     inline-block: margin, padding, height, width

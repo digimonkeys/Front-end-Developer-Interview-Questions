@@ -57,7 +57,7 @@ git, I worked on github and gitlab. I tried using git guis but I prefer to work 
 
 * Can you describe your workflow when you create a web page?
 * If you have 5 different stylesheets, how would you best integrate them into the site?
-* Can you describe the difference between progressive enhancement and graceful degradation? 
+* Can you describe the difference between progressive enhancement and graceful degradation?
 
 * What is semantic html?  
 Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, of the information in webpages and web applications rather than merely to define its presentation or look. Semantic HTML is processed by traditional web browsers as well as by many other user agents. CSS is used to suggest its presentation to human users.  
@@ -118,7 +118,7 @@ The steps to follow to make your Web apps accessible are as follows:
 
 Use native HTML tags wherever possible
 Make interactive elements keyboard accessible
-Provide extra markup for AT (accessibility technology) 
+Provide extra markup for AT (accessibility technology)
 https://www.w3.org/WAI/intro/aria
 http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-applications-accessible/
 
@@ -287,7 +287,7 @@ https://www.w3.org/International/questions/qa-html-language-declarations
   - know which portions of the page do not have any print value (give him class .no-print with display:none)
   - use page breaks in places where page should break (.page-break { page-break-before: always; display: none; })
   - size page for print (width in inches or centimeters(both recommended))
-  
+
   https://davidwalsh.name/optimizing-structure-print-css
 * What are some of the "gotchas" for writing efficient CSS?
   - avoid key selectors that match large numbers of elements (tag and universal selectors)
@@ -358,6 +358,66 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 * Have you ever worked with retina graphics? If so, when and what techniques did you use?
 * Is there any reason you'd want to use `translate()` instead of *absolute positioning*, or vice-versa? And why?
 
+#### REACT Questions:
+
+* What is React? How is it different from other JS frameworks?
+* What happens during the lifecycle of a React component?
+* What can you tell me about JSX?
+* Are you familiar with Flux?
+* What are stateless components?
+* Explain this Code:
+
+  ```
+
+  class MyComponent extends React.Component {
+      constructor(props) {
+          // set the default internal state
+          this.state = {
+              clicks: 0
+          };
+      }
+
+      componentDidMount() {
+          this.refs.myComponentDiv.addEventListener(
+              ‘click’,
+              this.clickHandler
+          );
+      }
+
+      componentWillUnmount() {
+          this.refs.myComponentDiv.removeEventListener(
+              ‘click’,
+              this.clickHandler
+          );
+      }
+
+      clickHandler() {
+          this.setState({
+              clicks: this.clicks + 1
+          });
+      }
+
+      render() {
+          let children = this.props.children;
+
+          return (
+              <div className=”my-component” ref=”myComponentDiv”>
+                  <h2>My Component ({this.state.clicks} clicks})</h2>
+                  <h3>{this.props.headerText}</h3>
+                  {children}
+              </div>
+          );
+      }
+  }
+
+  ```
+  - What happens when you call setState?
+  - What’s the difference between an Element and a Component in React?
+  - When would you use a Class Component over a Functional Component?
+  - What are refs in React and why are they important?
+  - What are keys in React and why are they important?
+
+
 #### JS Questions:
 
 * Explain event delegation
@@ -406,7 +466,7 @@ https://www.w3.org/International/questions/qa-html-language-declarations
     Native objects are the ones described and fully defined in the ECMAScript specification, examples:
     - Date, Math, parseInt.
     http://stackoverflow.com/questions/7614317/what-is-the-difference-between-native-objects-and-host-objects
-    
+
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
 * How you can achieve inheritance in JavaScript (new + Object.create)
 
@@ -423,7 +483,7 @@ Object.create builds an object that inherits directly from the one passed as its
 
 - With the class keyword
 
-ECMAScript 2015 introduced a new set of keywords implementing classes. Although these constructs look like those familiar to developers of class-based languages, they are not the same. JavaScript remains prototype-based. Classes are just a syntactic sugar for creating object using constructor. 
+ECMAScript 2015 introduced a new set of keywords implementing classes. Although these constructs look like those familiar to developers of class-based languages, they are not the same. JavaScript remains prototype-based. Classes are just a syntactic sugar for creating object using constructor.
 
 Difference new vs Object.create![Difference new vs Object.create](http://stackoverflow.com/questions/4166616/understanding-the-difference-between-object-create-and-new-somefunction)
 
@@ -504,17 +564,17 @@ Object.create![Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScri
     The DOMContentLoaded event is fired when the document has been completely loaded and parsed the DOM tree,
     the load event will do it when all the images and sub-frames have finished loading.
     http://stackoverflow.com/questions/2414750/difference-between-domcontentloaded-and-load-events
-    
+
 * What is the difference between `==` and `===`?
     `==` Compares values by making coerces if the types of variables are not the same
     `===` Compares the values and types of variables without making coercion
-    
+
 * Explain the same-origin policy with regards to JavaScript.
     This is a fundamental security mechanism of the browser.
     This mechanism prevents js scripts from accessing the DOM trees of different origins.
     The same origin occurs when the port protocol and the host
     of the pages that trigger the scripts are compatible.
-    
+
 * Make this work:
 ```javascript
 duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
