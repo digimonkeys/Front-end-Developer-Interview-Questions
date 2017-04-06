@@ -933,3 +933,8 @@ console.log('three');
 * Jakie są Twoje ulubione części narzędzi programistycznych, których używasz?
 * Czy masz jakiś swój własny projekt na boku? Jaki?
 * Jaka jest Twoja ulubiona funkcja w Internet Explorer?
+
+* Jak można przekazywać dane pomiędzy kontrolerami?
+Stworzyć service przechowujący dane i wstrzykujący je do kontrolerów. Wykorzystanie service’ów jest najczystsze, najszybsze i najłatwiejsze do testowania. Można jednak wykorzystac do tego również eventy, użyć $parent, nextSibling, controllerAs itp. do bezpośredniego dostania się do kontrolerów oraz zapisać dane na $rootScope (nie jest to dobra praktyka).  
+https://daveceddia.com/sharing-data-between-controllers-best-practice-use-a-service/  
+http://stackoverflow.com/a/21920241  

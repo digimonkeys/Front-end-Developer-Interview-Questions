@@ -880,3 +880,9 @@ console.log('three');
 This document started in 2009 as a collaboration of [@paul_irish](https://twitter.com/paul_irish) [@bentruyman](https://twitter.com/bentruyman) [@cowboy](https://twitter.com/cowboy) [@ajpiano](https://twitter.com/ajpiano)  [@SlexAxton](https://twitter.com/slexaxton) [@boazsender](https://twitter.com/boazsender) [@miketaylr](https://twitter.com/miketaylr) [@vladikoff](https://twitter.com/vladikoff) [@gf3](https://twitter.com/gf3) [@jon_neal](https://twitter.com/jon_neal) [@sambreed](https://twitter.com/sambreed) and [@iansym](https://twitter.com/iansym).
 
 It has since received contributions from over [100 developers](https://github.com/h5bp/Front-end-Developer-Interview-Questions/graphs/contributors).
+
+* How do you share data between controllers?  
+Create an AngularJS service that will hold the data and inject it inside of the controllers. Using a service is the cleanest, fastest and easiest way to test. However, there are couple of other ways to implement data sharing between controllers, like: using events, usng $parent, nextSibling, controllerAs, etc. to directly access the controllers, using the $rootScope to add the data on (not a good practice).  
+The methods above are all correct, but are not the most efficient and easy to test.  
+https://daveceddia.com/sharing-data-between-controllers-best-practice-use-a-service/  
+http://stackoverflow.com/a/21920241  
