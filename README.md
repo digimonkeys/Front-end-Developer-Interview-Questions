@@ -1199,6 +1199,116 @@ console.log('three');
 * What's your favorite feature of Internet Explorer?
 * How do you like your coffee?
 
+#### React Questions
+
+* If you created a React element like Twitter below, what would the component definition of Twitter look like?
+
+```jsx
+<Twitter username='tylermcginnis33'>
+ {(user) => user === null
+   ? <Loading />
+   : <Badge info={user} />}
+</Twitter>
+```
+
+props.children works just like any other prop in that it can pass any sort of data, not just the sorts that React knows how to render. Children passed to a custom component can be anything, as long as that component transforms them into something React can understand before rendering.
+
+```jsx
+import React, { Component, PropTypes } from 'react'
+import fetchUser from 'twitter'
+// fetchUser take in a username returns a promise
+// which will resolve with that username's data.
+
+class Twitter extends Component {
+  state = {
+    user: null,
+  }
+
+  componentDidMount () {
+    fetchUser(this.props.username)
+      .then((user) => this.setState({user}))
+  }
+  render () {
+    return this.props.children(this.state.user)
+  }
+}
+
+Twitter.propTypes = {
+  username: PropTypes.String.isRequired,
+};
+```
+
+Functions as children![Functions as children](https://facebook.github.io/react/docs/jsx-in-depth.html#functions-as-children)
+
+* What is the difference between a controlled component and an uncontrolled component?
+
+A controlled component is a component where React is in control and is the single source of truth for the form data. In those components value of the element is based on component state, not the DOM.
+
+In uncontrolled components data is handled directly by the DOM. To access data you can use an event handler or a ref to get form values from the DOM.
+
+Controlled components![Controlled components](https://facebook.github.io/react/docs/forms.html#controlled-components)
+Uncontrolled components![Uncontrolled components](https://facebook.github.io/react/docs/uncontrolled-components.html)
+
+* In which lifecycle event do you make AJAX requests and why?
+
+AJAX request should be done in componentDidMount event lifecycle. It's because after AJAX call returns some data, in most cases we want to assign that date to the state of the component, and this can be done only on mounted components.
+
+State and lifecycle![State and lifecycle](https://facebook.github.io/react/docs/state-and-lifecycle.html)
+
+* What does shouldComponentUpdate do and why is it important?
+
+shouldComponentUpdate is important because of performance reasons.
+If we know that a certain section of our UI isn’t going to change, there’s no reason to have React go through the trouble of trying to figure out if it should update it. By returning false from shouldComponentUpdate, React will assume that the current component, and all its child components, will stay the same as they currently are.
+
+Optimizing performance![Optimizing performance](https://facebook.github.io/react/docs/optimizing-performance.html)
+
+* How do you tell React to build in Production mode and what will that do?
+
+Typically you’d use Webpack’s DefinePlugin method to set NODE_ENV to production. This will strip out things like propType validation and extra warnings.
+
+Development and production![Development and production](https://facebook.github.io/react/docs/installation.html#development-and-production-versions)
+
+* Why would you use React.Children.map(props.children, () => ) instead of props.children.map(() => )
+
+Because props.children can be an array but also a single component. If you'll pass single component then native map method will fail. React.Children.map handles both arrays of components and single components.
+
+React.Children.map![React.Children.map](https://facebook.github.io/react/docs/react-api.html#react.children.map)
+
+* Describe how events are handled in React.
+
+In React native events are wrapped in SyntheticEvent instances, which solves cross browser compatibility issues. SyntheticEvent have the same interface as native events.
+React doesn’t actually attach events to the child nodes themselves. React will listen to all events at the top level using a single event listener (due performance reasons).
+
+Handling events![Handling events](https://facebook.github.io/react/docs/handling-events.html)
+
+* What is the difference between createElement and cloneElement?
+
+createElement is what JSX gets transpiled to and is what React uses to create React Elements (object representations of some UI). cloneElement is used in order to clone an element and pass it new props.
+
+Create Element![Create Element](https://facebook.github.io/react/docs/react-api.html#createelement)
+Clone Element![Clone Element](https://facebook.github.io/react/docs/react-api.html#cloneelement)
+
+* What is the second argument that can be passed to setState and what is its purpose?
+
+The setState is asynchronous so it takes also a callback function as the second argument. This function is invoked when setState has finished and the component is re-rendered.
+
+setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
+
+* What is wrong with this code?
+
+```jsx
+this.setState((prevState, props) => {
+ return {
+   streak: prevState.streak + props.count
+ }
+})
+```
+
+Nothing. setState can also take a function as an argument. That function allows to set current state, based on previus state.
+
+setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
+
+
 #### Contributors:
 
 This document started in 2009 as a collaboration of [@paul_irish](https://twitter.com/paul_irish) [@bentruyman](https://twitter.com/bentruyman) [@cowboy](https://twitter.com/cowboy) [@ajpiano](https://twitter.com/ajpiano)  [@SlexAxton](https://twitter.com/slexaxton) [@boazsender](https://twitter.com/boazsender) [@miketaylr](https://twitter.com/miketaylr) [@vladikoff](https://twitter.com/vladikoff) [@gf3](https://twitter.com/gf3) [@jon_neal](https://twitter.com/jon_neal) [@sambreed](https://twitter.com/sambreed) and [@iansym](https://twitter.com/iansym).
