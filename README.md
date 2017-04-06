@@ -344,6 +344,8 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 
   http://nosleepforsheep.com/using-a-css-preprocessor/
 * How would you implement a web design comp that uses non-standard fonts?
+  - use '@font-face' to render a font (uses 'src' for hard resources)
+  - link to a webfont as a stylesheet, use @import or javascript (link from e.g. google fonts)
 * Explain how a browser determines what elements match a CSS selector.
 * Describe pseudo-elements and discuss what they are used for.
   Pseudo-elements starts with '::' and are used to style specified parts of and element.
