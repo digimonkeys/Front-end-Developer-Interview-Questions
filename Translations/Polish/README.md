@@ -870,6 +870,11 @@ console.log('three');
   two
   ```
 
+* Jakie są główne dyrektywy w AngularJS?
+  - ng-app − Ta dyrektywa definiuje i linkuje aplikację w HTML
+  - ng-model − Ta dyrektywa wiąże wartości danych z aplikacji z HTML'owymi kontrolerami danych wejściowych 
+  - ng-bind − Ta dyrektywa wiąże dane aplikacji z tagami HTML
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
