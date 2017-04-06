@@ -1468,3 +1468,6 @@ this.setState((prevState, props) => {
 Nic. setState może także przyjmować funkcję jako pierwszy argument. Funkcja ta pozwala na ustawienie obecnego stanu na podstawie stanu poprzedniego.
 
 setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
+
+* Jak schowasz element html przez kliknięcie guzikiem w angularJs?  
+Użyje dyrektywy ng-hide uzależnionej od zmiennej typu boolean, którą będę togglował za pomocą ng-click na buttonie.  
