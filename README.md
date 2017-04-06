@@ -415,7 +415,10 @@ https://www.w3.org/International/questions/qa-html-language-declarations
   - What’s the difference between an Element and a Component in React?
   - When would you use a Class Component over a Functional Component?
   - What are refs in React and why are they important?
-  - What are keys in React and why are they important?
+* What are keys in React and why are they important?
+    When we render repetitive elements eg. a list with .map each <li> element
+    must have its own unique key in the DOM tree. So we give such an element
+    property <li key = {key}>.
 
 
 #### JS Questions:

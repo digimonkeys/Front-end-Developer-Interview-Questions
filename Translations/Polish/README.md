@@ -225,7 +225,10 @@ https://www.w3.org/International/questions/qa-html-language-declarations
   - Jaka jest rożnica pomiędzy Elementem a Komponentem w React?
   - Kiedy powinieneś użyć komponentu klasy a kiedy komponentu funkcyjnego?
   - Czym są referencje/refs w React i czemu są ważne?
-  - Czym są klucze w React i czemu są ważne?
+* Czym są klucze w React i czemu są ważne?
+    Gdy renderujemy powtarzające się elementy np. listę za pomocą .map każdy kolejny
+    element <li> musi posiadać swoj uniklany klucz w drzewie DOM. Dlatego podajemy
+    takiemu elementowi właściwość <li key={key}>.
 
 ### Pytania JS:
 
