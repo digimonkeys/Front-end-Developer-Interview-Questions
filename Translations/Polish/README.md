@@ -70,8 +70,8 @@ Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich prz
 Optymalizacja obrazków, łączenie plików, Zmniejszenie rozmiaru plików przy użyciu uglifyjs, stosowanie minifikacji, używanie SVG i css sprites (jeden obrazek, używany wiele razy), Zasoby CDN - mogą być serwowane w zależności od odległości od użytkoniwka, response time etc, cachowanie, nie ładować dużych bibliotek jeśli potrzebujemy z nich tylko jednej funkcji  
 
 * Dlaczego serwowanie zasobów strony przez wiele domen jest lepsze?
-  * Ile zasobów pobiera przeglądarka z danej domeny w jednej chwili?  
-To zależy od konkeretnej przeglądarki, od wersji przeglądarki, od ustawienia ile może obsługiwać połączeń jednocześnie, od tego czy skrypty ładowane są synchronicznie (defer) czy asynchronicznie (async). Startsze przegląraki jak IE6 - 2, nowsze 6 / 8.  
+* Ile zasobów pobiera przeglądarka z danej domeny w jednej chwili?  
+Starsze przeglądarki jak IE6 - 2, nowsze 6 / 8.  
 
 * Podaj 3 sposoby na zmniejszenie czasu ładowania strony. (postrzeganego lub rzeczywistego czasu ładowania)
 * Jeśli dołączasz do projektu, w którym używa się tabulacji, a ty używasz spacji, co wtedy zrobisz?
