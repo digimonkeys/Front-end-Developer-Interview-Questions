@@ -1468,3 +1468,25 @@ this.setState((prevState, props) => {
 Nic. setState może także przyjmować funkcję jako pierwszy argument. Funkcja ta pozwala na ustawienie obecnego stanu na podstawie stanu poprzedniego.
 
 setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
+
+* Jak stworzyć serwis Angulara, który zwróci Promise? Napisz przykładowy kod
+Należy wstrzyknąć $q do promisów i użyć go w ten sposób:
+
+```
+angular.factory('testService', function($q){
+ return {
+  getName: function(){
+   var deferred = $q.defer();
+
+   //API call here that returns data
+   testAPI.getName().then(function(name){
+    deferred.resolve(name)
+   })
+
+   return deferred.promise;
+  }
+ }
+})
+```
+
+https://docs.angularjs.org/api/ng/service/$q  
