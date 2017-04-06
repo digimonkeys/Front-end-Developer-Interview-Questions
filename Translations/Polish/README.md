@@ -319,8 +319,17 @@ function Person(){}, var person = Person(), var person = new Person()
 
 * Jaka jest różnica między `.call` i `.apply`?
 * Wyjaśnij `Function.prototype.bind`?
-* Czym jest callback?
+    Bind tworzy nową funkcję pozwalającą przypisać `this` do kontekstu jaki chcemy, ponieważ w funkcji zwrotnej
+    wartość obiektu bieżącego `this` może nie być tym, czego się spodziewamy.
+    Pozwala on także przypisać domyślne argumenty dla zwracanej funkcji:
+      var Person = function (name) { this.name = name; };
+      Person.prototype.speak = function (volume) {return this.name +  volume };
+      var person = new Person("John");
+      var f = person.speak.bind(person, "loudly");
+      // "John loudly"
+      http://www.kurshtml.edu.pl/js/bind,function-prototype.html
 
+* Czym jest callback?
 Callback jest to funckcja przekazywana do innej funkcji poprzez argument. Funkcja, która przyjmuje callback jako argument może w swoim ciele wywołać przekazaną funkcję. Wywołanie to może nastąpić natychmiast (synchronicznie), albo późniejszym czasie (asynchronicznie).
 
 Callback![Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming))

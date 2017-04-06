@@ -486,6 +486,16 @@ Difference new vs Object.create![Difference new vs Object.create](http://stackov
 
 * What's the difference between `.call` and `.apply`?
 * Explain `Function.prototype.bind`.
+    Bind creates a new function that allows `this` to be assigned to the context we want.
+    Because in callback the value of the current object `this` may not be what we expect.
+    It also allows you to assign default arguments to the returned function:
+      var Person = function (name) { this.name = name; };
+      Person.prototype.speak = function (volume) {return this.name +  volume };
+      var person = new Person("John");
+      var f = person.speak.bind(person, "loudly");
+      // "John loudly"
+      http://www.kurshtml.edu.pl/js/bind,function-prototype.html
+
 * When would you use `document.write()`?
   Document.write() is always available, it is a good choice for third party vendors to use it to add their scripts.
   Many generated ads use `document.write ()` although it is not welcome.
