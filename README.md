@@ -1151,6 +1151,11 @@ console.log('three');
   
   http://stackoverflow.com/questions/21094569/how-to-unit-test-a-filter-in-angularjs-1-x
 
+  * What is data binding in AngularJS?
+  Data-binding in AngularJS apps is the automatic synchronization of data between the model and view components. The way that AngularJS implements data-binding lets you treat the model as the single-source-of-truth in your application. The view is a projection of the model at all times. When the model changes, the view reflects the change, and vice versa.
+
+  https://docs.angularjs.org/guide/databinding
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
