@@ -202,7 +202,7 @@ Callback![Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming
 * Jakie są różnice między wykrywaniem obsługi funkcji, wnioskowaniem obsługi funkcji i używaniem ciągu UA?
 * Co to sa falsy values?
 
-Falsy values są to wartości, które użyte w wyrażeniu warunku zostaną przekształcone w wartość false. Są to:
+Falsy values są to wartości, które podczas konwersji na boolean dają wartość false. Są to:
 
 - 0
 - "" - pusty string
