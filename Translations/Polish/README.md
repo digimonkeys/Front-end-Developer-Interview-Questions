@@ -933,3 +933,8 @@ console.log('three');
 * Jakie są Twoje ulubione części narzędzi programistycznych, których używasz?
 * Czy masz jakiś swój własny projekt na boku? Jaki?
 * Jaka jest Twoja ulubiona funkcja w Internet Explorer?
+* What is the difference between ng-show/ng-hide and ng-if directives? 
+ 
+The ngIf directive removes or recreates a portion of the DOM tree based on an expression. When an element is removed using ngIf its scope is destroyed and a new scope is created when the element is restored.  
+The ngShow directive shows or hides the given HTML element based on the expression provided to the ngShow attribute. The element is shown or hidden by removing or adding the ng-hide CSS class onto the element. The .ng-hide CSS class is predefined in AngularJS and sets the display style to none (using an !important flag).  
+http://stackoverflow.com/a/19177773  
