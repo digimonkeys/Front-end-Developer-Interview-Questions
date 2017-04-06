@@ -322,6 +322,16 @@ function Person(){}, var person = Person(), var person = new Person()
   https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/
 
 * Jaka jest różnica między `.call` i `.apply`?
+  Za pomocą `.call` i `.apply` można przypisać inny obiekt podczas wywoływania istniejącą funkcji.
+  `this` odnosi się do bieżącego obiektu, obiektu wywołującego.
+  Dzięki czemu można napisać metodę raz, a następnie dziedziczyć ją w innym obiekcie, bez konieczności przepisywania metody dla nowego obiektu.
+  Call przymuje wartość `this` i pojednyńcze argumenty, natomiast apply w postaci tablicy.
+  theFunction.apply(valueForThis, arrayOfArgs)
+  theFunction.call(valueForThis, arg1, arg2, ...)
+  http://stackoverflow.com/questions/1986896/what-is-the-difference-between-call-and-apply
+  https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Function/apply
+  https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Function/call
+
 * Wyjaśnij `Function.prototype.bind`?
     Bind tworzy nową funkcję pozwalającą przypisać `this` do kontekstu jaki chcemy, ponieważ w funkcji zwrotnej
     wartość obiektu bieżącego `this` może nie być tym, czego się spodziewamy.

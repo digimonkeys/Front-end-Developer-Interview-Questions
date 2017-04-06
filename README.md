@@ -489,6 +489,16 @@ ECMAScript 2015 introduced a new set of keywords implementing classes. Although 
 Difference new vs Object.create![Difference new vs Object.create](http://stackoverflow.com/questions/4166616/understanding-the-difference-between-object-create-and-new-somefunction)
 
 * What's the difference between `.call` and `.apply`?
+    You can use `.call` and` .apply` to assign another object when calling an existing function.
+   `This` refers to the current object.
+    So you can write the method once and then inherit it in another object, without rewriting the method for the new object.
+    Call accepts `this` and single arguments, and apply as an array.
+    theFunction.apply(valueForThis, arrayOfArgs)
+    theFunction.call(valueForThis, arg1, arg2, ...)
+    http://stackoverflow.com/questions/1986896/what-is-the-difference-between-call-and-apply
+    https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Function/apply
+    https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Function/call
+
 * Explain `Function.prototype.bind`.
     Bind creates a new function that allows `this` to be assigned to the context we want.
     Because in callback the value of the current object `this` may not be what we expect.
