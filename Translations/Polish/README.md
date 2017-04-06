@@ -1469,6 +1469,6 @@ Nic. setState może także przyjmować funkcję jako pierwszy argument. Funkcja 
 
 setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
 
-* What makes the angular.copy() method so powerful?  
-It creates a deep copy of the variable. A deep copy of a variable means it doesn’t point to the same memory reference as that variable. Usually assigning one variable to another creates a “shallow copy”, which makes the two variables point to the same memory reference. Therefore if we change one, the other changes as well.  
+* Co stanowi o mocy metody angular.copy()?
+Tworzy ona głęboką kopię zmiennej, tzn wskazującą na nowy fragment pamięci. Zwykła kopia sprawia, że dwie zmienne wskazują na ten sam fragment pamięci (odwołują się do niego), zatem zmiana jednej z nich spowoduje również zmianę kopii.  
 https://docs.angularjs.org/api/ng/function/angular.copy  
