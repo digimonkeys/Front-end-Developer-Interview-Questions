@@ -1468,3 +1468,7 @@ this.setState((prevState, props) => {
 Nic. setState może także przyjmować funkcję jako pierwszy argument. Funkcja ta pozwala na ustawienie obecnego stanu na podstawie stanu poprzedniego.
 
 setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
+
+* Jak zmieniłbyś szablon dyrektywy zanim zostałby wykonany i przetransformowany?
+Użyłbym funkcji $compile, która pozwala na dostęp do szablonu dyrektywy zanim dojdzie do jego transformacji, więc zmiany elementów DOM mogą być bezpiecznie zaaplikowane. Funkcja ta jest bardzo użyteczna w przypadkach, w których DOM musi być skonstruowany bazując na bieżących parametrach dyrektywy.  
+https://docs.angularjs.org/api/ng/service/$compile  
