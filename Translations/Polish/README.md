@@ -387,6 +387,15 @@ Function declaration vs function expression![Function declaration vs function ex
     Wiele generowanych reklam używa `document.write()` choć nie jest to mile widziane.
 
 * Jakie są różnice między wykrywaniem obsługi funkcji, wnioskowaniem obsługi funkcji i używaniem ciągu UA?
+    Feauture detection(wykrywaniem obsługi funkcji) jest to wykrywanie, czy dany feature / właściwość / funkcjonalność /  jest dostępny w środowisku wykonywalnym
+    np: return !!document.createElement('canvas').getContext; // return true or false
+
+    Feauture inference (wnioskowanie obsługi funkcji) polega na założeniu, że jeśli dana funkcjonalność jest dostępna w danej wersji przeglądarki, to cała reszta funkcjonalności także. Używa się ich wtedy bez sprawdzania czy istnieją, co może prowadzić do błędów.
+
+    UA string czyli User Agent string domyślnie zwraca wersję przeglądarki jaka wykonuje zapytanie, jaka uruchamia danych skrypt js. UA string może być zmieniany przez klienta.
+
+    http://lucybain.com/blog/2014/feature-detection-vs-inference/
+
 * Co to sa falsy values?
 
 Falsy values są to wartości, które podczas konwersji na boolean dają wartość false. Są to:

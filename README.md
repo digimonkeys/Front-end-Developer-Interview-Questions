@@ -532,6 +532,15 @@ Difference new vs Object.create![Difference new vs Object.create](http://stackov
   Many generated ads use `document.write ()` although it is not welcome.
 
 * What's the difference between feature detection, feature inference, and using the UA string?
+    Feature detection is the detection of whether a feature / functionality is available in an executable environment
+    eg: return !!document.createElement('canvas').getContext; // return true or false
+
+    Feauture inference is based on the assumption that if a given functionality is available in a given browser version, then the rest of the functionality also. They are then used without checking if they exist, which can lead to errors.
+
+    UA string defaults return the version of the browser that executes the query that runs the js script. UA string can be changed by the client.
+
+    http://lucybain.com/blog/2014/feature-detection-vs-inference/
+
 * Explain Ajax in as much detail as possible.
   AJAX (Asynchronous JavaScript and XML).
   Web application development technology in which the user interacts with the server in two ways:
