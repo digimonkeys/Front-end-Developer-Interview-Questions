@@ -1468,3 +1468,6 @@ this.setState((prevState, props) => {
 Nic. setState może także przyjmować funkcję jako pierwszy argument. Funkcja ta pozwala na ustawienie obecnego stanu na podstawie stanu poprzedniego.
 
 setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
+
+* Jak oznaczyłbyś zmienną, która powinna mieć tylko one-time data binding?
+Przez dopisanie przed nią ‘::’;
