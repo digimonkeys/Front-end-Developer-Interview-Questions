@@ -933,3 +933,7 @@ console.log('three');
 * Jakie są Twoje ulubione części narzędzi programistycznych, których używasz?
 * Czy masz jakiś swój własny projekt na boku? Jaki?
 * Jaka jest Twoja ulubiona funkcja w Internet Explorer?
+
+* Czy jest dobra czy złą praktyką łączenie jQuery z Angularem?
+Złą, ponieważ 19 na 20 razy dany problem da się lepiej rozwiązać angularem bez jQuery, więc zwłaszcza początkujący deweloperzy powinni unikac tego połączenia.  
+http://ng-learn.org/2014/01/Dom-Manipulations/  
