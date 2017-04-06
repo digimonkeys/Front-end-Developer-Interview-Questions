@@ -538,9 +538,6 @@ Difference new vs Object.create![Difference new vs Object.create](http://stackov
     `===` porównuje wartości jak i typy zmiennych, nie dokonując koercji
 
 * Wyjaśnij ewentualny sposób pobrania parametrów z adresu URL w oknie przeglądarki.
-    Można je pobrać za pomocą biblioteki jQuery np.getUrlParam lub za pomocą JS i wyrażeń regularnych.
-    http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
-
 * Wyjaśnij politykę `same-origin` w odniesieniu do JavaScript.
     Jest to fundamentalny mechanizm bezpieczeństwa przeglądarki. Mechanizm ten zapobiega dostępowi
     skryptów js do drzew DOM różnego pochodzenia.
@@ -556,11 +553,9 @@ Difference new vs Object.create![Difference new vs Object.create](http://stackov
   http://wes.is/2014/12/14/why-i-prefer-the-pseudoclassical-pattern-for-creating-classes-in-javascript-and-why-you-should-too/
 
 * Czy funkcje sa hoistowane?
-
-W JS funcje można deklarować na dwa sposoby: poprzez function definition oraz function expression.
-Function definition są hoistowane, natomiast function expressions nie.
-
-Function hoisting![Function hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+    W JS funcje można deklarować na dwa sposoby: poprzez function definition oraz function expression.
+    Function definition są hoistowane, natomiast function expressions nie.
+    Function hoisting![Function hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
 
 * Napisz działający kod:
 ```javascript

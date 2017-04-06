@@ -646,13 +646,10 @@ Private members![Crockford on private members](http://javascript.crockford.com/p
     the load event will do it when all the images and sub-frames have finished loading.
     http://stackoverflow.com/questions/2414750/difference-between-domcontentloaded-and-load-events
     
-* Explain how you can get parameters from a URL in a browser window.
-    They can be retrieved using the jQuery library, eg .getUrlParam, or by using JS and regular expressions.
-    http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
-    
 * What is the difference between `==` and `===`?
-  `==` Compares values by making coerces if the types of variables are not the same
-  `===` Compares the values and types of variables without making coercion
+
+`==` Compares values by making coerces if the types of variables are not the same
+`===` Compares the values and types of variables without making coercion
 
 * Whats a function declaration and function expression? What are the differences?
 
@@ -663,6 +660,11 @@ Function delcaration![Function delcaration](https://developer.mozilla.org/en-US/
 Function expression![Function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function)
 Function declaration vs function expression![Function declaration vs function expression](https://www.sitepoint.com/function-expressions-vs-declarations/)
 
+* Are the functions hoisted?
+    In JS, functions can be declared in two ways: by function definition and function expression.
+    Function definition are hoisted, whereas function expressions do not.
+    Function hoisting![Function hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+    
 * Explain the same-origin policy with regards to JavaScript.
   This is a fundamental security mechanism of the browser.
   This mechanism prevents js scripts from accessing the DOM trees of different origins.
