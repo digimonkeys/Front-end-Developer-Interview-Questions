@@ -173,7 +173,7 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 * Czym jest React? Oraz czym się rożni od innych frameworkow?
 * Co się dzieje w trakcie cykli zycia komponentow React?
 * Co możesz powiedzieć o JSX?
-  Jest to tzw. Lukier składniowy/syntactic sugar dla funkcji
+  Jest to tzw. Lukier składniowy/syntax sugar dla funkcji
   React.createElement(component, props, ...children). Pozwala ona pisanie kodu
   ktory jest połączeniem javascriptu i html wewnątrz funkcji render danego komponentu.
   Składnia JSX może być wykorzystywana do renderowania zarowno zwyklych elementow HTML
