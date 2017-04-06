@@ -295,6 +295,10 @@ Promise![Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference
   http://blog.nebula.us/13-javascript-closures-czyli-zrozumiec-i-wykorzystac-domkniecia
 
 * Jakie znasz typowe użycie funkcji anonimowych?
+  - Callbacks
+  - IIFE's
+  - Closures
+
 * Wyjaśnij pojęcie "Moduł JavaScript" i kiedy jest warte stosowania.
   * Dodatkowe punkty za wzmiankę na temat czystości przestrzeni nazw.
   * Co jeśli Twój kod nie używa przestrzeni nazw?

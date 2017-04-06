@@ -449,6 +449,10 @@ https://www.w3.org/International/questions/qa-html-language-declarations
     http://blog.nebula.us/13-javascript-closures-czyli-zrozumiec-i-wykorzystac-domkniecia
 
 * What's a typical use case for anonymous functions?
+    - Callbacks
+    - IIFE's
+    - Closures
+    
 * How do you organize your code? (module pattern, classical inheritance?)
   Eg. Module pattern, IIFE, Atomic design.
 
