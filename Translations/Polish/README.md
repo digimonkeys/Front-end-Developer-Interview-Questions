@@ -907,6 +907,8 @@ console.log('three');
 
 * Wyjaśnij dyrektywę ng-controller.
   Dyrektywa ng-controller dołącza klasę kontrolera do widoku. Jest to kluczowy aspekt tego, jak Angular wspiera MVC. Ng-controller tworzy również nowy zakres.
+* Czym jest $rootScope?
+  $rootScope odnosi się do obiektu, który jest dostępny z każdego miejsca w aplikacji. Możesz myśleć o $rootScope jako globalnej zmiennej oraz $scope jako lokalnej.
 
 ### Pytania dodatkowe (zabawne):
 

@@ -844,6 +844,8 @@ console.log('three');
 
 * Explain ng-controller directive.
   The ng-controller directive attaches a controller class to the view. This is a key aspect of how angular supports the principles behind the Model-View-Controller design pattern. It also creates a new scope.
+* What is $rootScope?
+  $rootScope refers to an object which is accessible from everywhere of the application. You can think $rootScope as global variable and $scope as local variables.
 
 #### Fun Questions:
 
