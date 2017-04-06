@@ -197,7 +197,6 @@ I have to consider how will users to be directed to their native language? Also 
 https://www.quora.com/What-kind-of-things-one-should-be-wary-of-when-designing-or-developing-for-multilingual-sites  
 
 * What are `data-` attributes good for?
-
 * Consider HTML5 as an open web platform. What are the building blocks of HTML5?  
 The main building blocks are centred on HTML 5, CSS3, Javascript and SVG. Where HTML is a language to define the mark-up of a document (titles, headers, body, footer, tables, input forms etc.), CSS is a language to define style (formatting, colours, shades and the like). Javascript is a programming/scripting language and SVG is a language for creating 2D scalable vector graphics and images.  
 http://yucianga.info/?p=655  
@@ -218,7 +217,11 @@ Browser behaviour encountering:
 - script tag with defer: Make parallel requests to fetch the files. Continue parsing the document as if it was never interrupted. Finish parsing the document even if the script files have downloaded. Execute each script in the order they were encountered in the document.  
 http://javascript.tutorialhorizon.com/2015/08/11/script-async-defer-attribute/  
 
-* Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
+* Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?  
+Placing css in header lets us avoid FOUC. Placing script before body tag makes sense for old browsers that stops rendering page when encountered script tag. The browser cannot start downloading the scripts until the entire document is parsed. For larger websites with large scripts & stylesheets, being able to download the script as soon as possible is very important for performance.  
+Nowadays browsers have defer and async scripts, also speculative parsing, so modern approach is to just use defer script tags.  
+http://stackoverflow.com/a/24070373  
+
 * What is progressive rendering?
 * Have you used different HTML templating languages before?
 

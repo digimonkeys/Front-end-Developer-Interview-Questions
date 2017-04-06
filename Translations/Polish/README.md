@@ -223,6 +223,11 @@ Zachowanie przeglądarki napotykającej:
 - script tag z defer: Wykonuje równoległe requesty po każdy napotkany skrypt. Kontynuuje parsowanie dokumentu jakby nic nie przerwało tego procesu. Parsuje dokument do końca, nawet jeśli jakiś skrypt się ściągnął. Następnie wykonuje skrypty w kolejności, w jakiej zostały napotkane w dokumencie.  
 http://javascript.tutorialhorizon.com/2015/08/11/script-async-defer-attribute/  
 
+* Dlaczego dobrą praktyką jest umieszczanie cssów (<link>) w headerze i skryptów JS (<script>) tuż przed znacznikiem </body>? Czy znasz jakieś wyjątki?
+Umieszczanie cssów w headerze pozwala uniknąć FOUC. Umieszczanie script tagów pod koniec body ma sens dla starych przeglądarek, które ładując skrypty przestawały renderować stronę. Dla dużych stron był to jednak problem, ponieważ ściąganie skryptów nie mogło się rozpocząć dopóki wszystkie pozostałe elementy nie zostały załadowane.  
+Obecnie przeglądarki obsługują script tagi defer i async, istnieje również speculative parsing, więc współczesnym podejściem jest po prostu zasotowanie atrybutu defer na tagu script.  
+http://stackoverflow.com/a/24070373
+
 ### Pytania JS:
 
 * Wyjaśnij delegację zdarzeń.
