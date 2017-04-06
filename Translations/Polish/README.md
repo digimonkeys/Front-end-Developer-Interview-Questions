@@ -174,6 +174,17 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 * Co się dzieje w trakcie cykli zycia komponentow React?
 * Co możesz powiedzieć o JSX?
 * Czy jesteś obeznany z Flux?
+  Z Flux nie. Natomiast posiadam doświadczenie z Redux, ktory wywodzi się z Flux'a.
+  Najprościej mowiąc Redux jest to funkcja, która wywoływana jest pomiędzy rozgłoszeniem akcji
+  a momentem, w którym akcja ta zostaje obsłużona przez „reducer”.
+  Redux posiada trzy głowne zasady:
+  - Pojedyncze źródło prawdy – stan całej aplikacji przetrzymywany jest
+    w drzewie obiektów wewnątrz pojedynczego obiektu store
+  - Stan jest tylko do odczytu – jedynym sposobem na zmianę stanu jest wywołanie
+    akcji, która zwraca obiekt opisujący co powinno się stać
+  - Zmiany wykonywane są w ramach czystych funkcji – aby określić jak drzewo
+    stanu transformowane jest przez akcje musisz tworzyć „czyste reducery”
+
 * Czym są bezstanowe elementy?
 * Wyjaśnij ten kod:
 

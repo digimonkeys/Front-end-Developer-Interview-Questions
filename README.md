@@ -364,6 +364,17 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 * What happens during the lifecycle of a React component?
 * What can you tell me about JSX?
 * Are you familiar with Flux?
+    With Flux no. On the other hand, I have experience with Redux, which comes from Flux.
+    The simplest saying Redux middleware provides a third-party extension point
+    between dispatching an action, and the moment it reaches the reducer.
+    Redux can be described in three fundamental principles:
+    - Single source of truth - The state of your whole application is stored
+      in an object tree within a single store.
+    - State is read-only - The only way to change the state is to emit an action,
+      an object describing what happened.
+    - Changes are made with pure functions - To specify how the state tree
+      is transformed by actions, you write pure reducers.
+      
 * What are stateless components?
 * Explain this Code:
 
