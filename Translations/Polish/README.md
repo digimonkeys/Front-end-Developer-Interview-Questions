@@ -415,10 +415,8 @@ Oczekująca obietnica może być spełniona z jakąś wartością lub odrzucona 
 
 Zalety:
   - Błędne typy zostają wyłapane w fazie kompilacji.
-  - Bogate wsparcie od IDE z autouzupełnianiem i nawigacją po kodzie.
-  - Oparte na klasach OO, z dziedziczeniem, prywatnymi zmiennymi i interfejsami.
   - Prostsza składnia.
-  - Kod jest łatwiejszy do utrzymania / rozszerzania.
+  - Kod jest łatwiejszy do utrzymania / rozszerzenia.
 
 Wady:
   - Aby uruchomić aplikację w przeglądarce, kod musi być skompilowany.

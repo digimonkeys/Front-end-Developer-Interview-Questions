@@ -572,8 +572,6 @@ Other scopes![other scopes](http://stackoverflow.com/a/500459)
 
 Pros:
   - Typos caught at compilation time.
-  - Rich IDE support with autocomplete and code navigation features.
-  - Class-based OO, with inheritance, private members and interfaces.
   - Simplier syntax.
   - Better maintainability.
 
