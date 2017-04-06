@@ -758,6 +758,14 @@ W ES6 jest jeszcze jeden zakres - zasięg blokowy, który dotyczy zmiennych zade
 [const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
 [inne](http://stackoverflow.com/a/500459)
 
+* Jakich konstrukcji językowych używasz do iterowania po obiekcie i tablicy? 
+
+Do iterowania po obiekcie używam pętli for...in z sprawdzaniem właściwości za pomocą hasOwnProperty.
+Do iterowania po tablicy używam pętli for i metod Array.prototype, takich jak .forEach lub .map.
+
+Odniesienie: [hasOwnProperty](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty),
+[Array.prototype](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype)
+
 * Wytłumacz różnice pomiędzy synchronicznymi i asynchronicznymi funkcjami.
 
 Synchroniczna funkcja zostanie wykonana i kiedy się zakonczy, następne zadanie zostanie wykonane.
