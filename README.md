@@ -55,7 +55,9 @@ I prefer easily configurable Sublime 3 with its additional packages and briliant
 * Which version control systems are you familiar with?  
 git, I worked on github and gitlab. I tried using git guis but I prefer to work in command line.  
 
-* Can you describe your workflow when you create a web page?
+* Can you describe your workflow when you create a web page?  
+I start with gathering client requirements. Ten I create environment - bundling scripts from webpack, gulp etc. Next comes site skeleton, semantics, filling with content and fixes, styling, animations and adding interactivity.  
+
 * If you have 5 different stylesheets, how would you best integrate them into the site?  
 When creating my own styles, I tend to use postcss or even bundle them with webpack into one file. Given 5 stylesheets to integrate I'd probably use YUI Compressor.
 
@@ -128,11 +130,40 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
 
 #### HTML Questions:
 
-* What does a `doctype` do?
-* What's the difference between full standards mode, almost standards mode and quirks mode?
-* What's the difference between HTML and XHTML?
+* What does a `doctype` do?  
+DOCTYPEs are required for legacy reasons. When omitted, browsers tend to use a different rendering mode that is incompatible with some specifications. Including the DOCTYPE in a document ensures that the browser makes a best-effort attempt at following the relevant specifications. Examples:  
+
+```
+html 5: <!DOCTYPE html>
+HTML 4.01 Strict <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+XHTML 1.0 Strict <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+```
+
+* What's the difference between full standards mode, almost standards mode and quirks mode?  
+Full standards mode renders page according to modern web standards of html and css. Quirks mode is rendering mode for very old browsers - IE 5 and Navigator 4. Almost standards mode renders page with a small amount of quirks.    
+https://developer.mozilla.org/pl/docs/Quirks_Mode_and_Standards_Mode  
+
+* What's the difference between HTML and XHTML?  
+XHTML is HTML written as XML. They are almost identical. Most important differences are: XHTML is stricter and is supported by all major browsers. Doctype is mandatory, also xmlns attribute in <html> and <html>, <head>, <title>, and <body> are mandatory. XHTML elements must be properly nested, always be closed, always in lowercase, always have one root element.  
+https://www.w3schools.com/html/html_xhtml.asp  
+
+* What are the limitations when serving xhtml page?  
+Perhaps the biggest issue is the poor browser support XHTML currently enjoys. In typical setups, most browsers simply pretend that your XHTML pages are regular HTML. XHTML source is not necessarily any “cleaner” than HTML source. Plus we have to take care of restrictions like this:  
+- all elements must have a start tag.  
+- non-void elements with a start tag must have an end tag (p and li, for example).  
+- any element may be “self-closed” using />.  
+- tags and attributes are case sensitive, typically lowercase.
+- attribute values must be enclosed in quotes.  
+- empty attributes are forbidden (checked must instead be checked="checked" or checked="true").  
+- special characters must be escaped using character entities.  
+
+http://www.webdevout.net/articles/beware-of-xhtml#myths  
+
 * Are there any problems with serving pages as `application/xhtml+xml`?
-* How do you serve a page with content in multiple languages?
+* How do you serve a page with content in multiple languages?  
+Always use a language attribute on the html tag to declare the default language of the text in the page. When the page contains content in another language, add a language attribute to an element surrounding that content. Use the lang attribute for pages served as HTML, and the xml:lang attribute for pages served as XML. For XHTML 1.x and HTML5 polyglot documents, use both together.  
+https://www.w3.org/International/questions/qa-html-language-declarations  
+
 * What kind of things must you be wary of when design or developing for multilingual sites?
 * What are `data-` attributes good for?
 * Consider HTML5 as an open web platform. What are the building blocks of HTML5?
@@ -180,6 +211,9 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
 
   https://css-tricks.com/all-about-floats/
 * Explain CSS sprites, and how you would implement them on a page or site.
+  It is the way to reduce HTTP requests by combining images together into one big image. I would use sprite generator, combining all images into one big, usually separated by a pixel. In the css, put the background image on a sprite class that I use for all my image elements. To specify a specific image or icon, I'll set another class with the background positions and sizes of the image.
+
+  https://css-tricks.com/css-sprites/
 * What are your favourite image replacement techniques and which do you use when?
   CSS image replacement is a technique of replacing a text element (usually a header tag) with an image. You may want to use a <h1> tag and text for this for the accessibility and SEO benefits.
   I use image replacements (depending on the needs), when I want to make my page more accessible for devices like readers etc. Usually I use display none span in header.
@@ -247,6 +281,7 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
   - text-indent: -1000px
   - absolute position off the screen
 * Have you ever used a grid system, and if so, what do you prefer?
+  I used Bootstrap and Angular Material. Additionally I heard about Skeleton and Foundation. I prefer Bootstrap, because creating pages with this grid is very easy. Whether you need a fixed grid or a responsive, its only matter of a few changes. Offsetting and nesting of columns is also possible in both fixed and fluid width layouts.
 * Have you used or implemented media queries or mobile specific layouts/CSS?
   Yes, I used media queries after I created a project using Bootstrap grid to learn how Bootstrap and responsive pages works. I used mobile-first method to have a fully-responsive, readable page on any device without unnecessary content.
   Media queries allow you to target CSS rules based on - for instance - screen size, device-orientation or display-density. It allows you to display your page in different way on different devices.
@@ -273,10 +308,55 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
 * How would you implement a web design comp that uses non-standard fonts?
 * Explain how a browser determines what elements match a CSS selector.
 * Describe pseudo-elements and discuss what they are used for.
+  Pseudo-elements starts with '::' and are used to style specified parts of and element.
+    Syntax: 'selector::pseudo-element {}'
+    We distinguish the following pseudo-elements:
+     - ::after - add additional layer/content after the element
+     - ::before - add additional layer/content before element
+     - ::first-letter - selects the first letter
+     - ::first-line - selects the first line
+     - ::selection - selects the portion of and element that is selected by user
 * Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
+  For display purpose, every element in the page is considered a box. The box model refers to the specification of the box attributes such as the width, padding, border and margin.
+  You can change the box model by setting the box-sizing property. Some values are: content-box (default), padding-box, and border-box)
+  Content-box: width & height includes content but not padding/border/margin
+  Padding-box: include up to padding
+  Border-box: include up to border, but not margin
 * What does ```* { box-sizing: border-box; }``` do? What are its advantages?
+  It’s the IE6 Quirks mode: if you set a width, and add paddings and borders, the total width won’t change. It’s the inner width that will adapt.
+
+  Advantage: You can play with the paddings and border values without worrying about expanding your box. Very convenient for column layouts. And you can mix percentage and pixel values, so you do not have to rely on a child element for the padding.
 * List as many values for the display property that you can remember.
+  display: value; - displays an element as...
+  - inline - an inline element, default value
+  - block -  a block element
+  - inline-block - an inline-level block container
+  - flex - an block-level flex container
+  - inline-flex - an inline-level flex container
+  - inline-table - an inline-level table
+  - run-in - either block or inline, depending on context
+  Let the element behave like...
+  - list-item - <li>
+  - table - <table>
+  - table-caption - <caption>
+  - table-column-group - <colgroup>
+  - table-header-group - <thead>
+  - table-footer-group - <tfoot>
+  - table-row-group - <tbody>
+  - table-cell - <td>
+  - table-column - <col>
+  - table-row - <tr>
+  - none - the element will not be displayed
+  - initial - sets this property to its default value
+  - inherit - inherits this property from its parent
+
+  https://www.w3schools.com/cssref/pr_class_display.asp
 * What's the difference between inline and inline-block?
+  Elements with display:inline-block are like display:inline elements, but they can have a width and a height. That means that you can use an inline-block element as a block while flowing it within text or other elements.
+
+  Difference of supported styles:
+    inline: only margin-left, margin-right, padding-left, padding-right
+    inline-block: margin, padding, height, width
 * What's the difference between a relative, fixed, absolute and statically positioned element?
 * The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
 * What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
@@ -288,9 +368,43 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
 #### JS Questions:
 
 * Explain event delegation
+    Event delegation consists in bundling an event handler into a parent rather than an element that we want to handle.
+    When we click on an interior element, the event bubbles up to the item assigned to the handler.
+    Then, with event.target, we can see where the event occurred and execute it on the corresponding element.
+    This allows us to handle events occurring on multiple items with one handler.
+
+    http://www.crimsteam.site90.net/crimsteam/dom/dom_zdarzenia_delegacja.html
+    https://davidwalsh.name/event-delegate
+
 * Explain how `this` works in JavaScript
+    `this` points to an object depending on the function context in which it was declared.
+    Context, ie the way and place of the call.
+
+    Global context:
+    console.log(this === window); // true
+    this.a = 37;
+    console.log(window.a); // 37
+    As an object method:
+    var o = {  prop: 37, f: function() { return this.prop; }};
+    console.log(o.f()); // logs 37
+
+    https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Operatory/this
+    http://stackoverflow.com/questions/3127429/how-does-the-this-keyword-work
+
 * Explain how prototypal inheritance works
 * What do you think of AMD vs CommonJS?
+    Both specifications describe the format and manner in which modules and their dependencies should be defined.
+    The main difference between AMD (Asynchronous Module Definition) and CommonJS is the asynchronous loading of modules in AMD.
+
+    AMD:
+     - Used in browsers, asynchronous loading of modules
+     - define('module', [dependencies], function module() { return contents });
+    CommonJS:
+     - On backend - Formerly used in NodeJS, nowadays less popular.
+     - exports / module.exports | require
+
+     https://auth0.com/blog/javascript-module-systems-showdown/
+
 * Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
   * What needs to be changed to properly make it an IIFE?
 * What's the difference between a variable that is: `null`, `undefined` or undeclared?
@@ -323,6 +437,25 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
     http://stackoverflow.com/questions/7614317/what-is-the-difference-between-native-objects-and-host-objects
     
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
+* How you can achieve inheritance in JavaScript (new + Object.create)
+
+- With a constructor
+
+A "constructor" in JavaScript is "just" a function that happens to be called with the new operator.
+In constructor functions, the newly created object inherits from the constructor's prototype.
+In the new Function() form the declared properties/functions do not form the prototype.
+
+- With Object.create
+
+ECMAScript 5 introduced a new method: Object.create(). Calling this method creates a new object. The prototype of this object is the first argument of the function
+Object.create builds an object that inherits directly from the one passed as its first argument. Object.create doesn't execute the constructor function.
+
+- With the class keyword
+
+ECMAScript 2015 introduced a new set of keywords implementing classes. Although these constructs look like those familiar to developers of class-based languages, they are not the same. JavaScript remains prototype-based. Classes are just a syntactic sugar for creating object using constructor. 
+
+Difference new vs Object.create![Difference new vs Object.create](http://stackoverflow.com/questions/4166616/understanding-the-difference-between-object-create-and-new-somefunction)
+
 * What's the difference between `.call` and `.apply`?
 * Explain `Function.prototype.bind`.
 * When would you use `document.write()`?
@@ -359,7 +492,21 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
   * If so, what libraries have you used?
 * Explain "hoisting".
 * Describe event bubbling.
+    Bubbling is an event passing up of the DOM tree.
+    When an event occurs in an element inside another element,
+    and both elements have registered a handle for that event.
+    With bubbling, the event is first captured and handled by the innermost element
+    and then propagated to outer elements.
+
+    http://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing
+
 * What's the difference between an "attribute" and a "property"?
+    Attribute is a value in HTML itself, which is always a string
+    JS DOM objects have properties. These properties are kind of
+    like instance variables for the particular element.
+    As such, a property can be different types (boolean, string, etc.).
+
+    http://lucybain.com/blog/2014/attribute-vs-property/
 
 * What does second parameter in Object.create do?
 
@@ -367,10 +514,36 @@ It specify property descriptors to be added to the newly-created object, with th
 
 Object.create![Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
 
+
 * Why is extending built-in JavaScript objects not a good idea?
+    Because these objects were created according to some well-documented
+    and well-thought-out specifications. If we add our methods to the built-in object,
+    they can be overwritten by an unknowable developer using our code,
+    developers may implement a method with the same name.
+
+* Does extending built-in objects have good part?
+    You can use features that are not normally available for a given method.
+    For example, reverse the string using the `reverse` method from the Array.
+    String.prototype.reverse = function() {
+      return Array.prototype.reverse.apply(this.split('')).join('');
+    };
+    https://code.tutsplus.com/tutorials/quick-tip-how-to-extend-built-in-objects-in-javascript--net-9168
+
 * Difference between document load event and document DOMContentLoaded event?
+    The DOMContentLoaded event is fired when the document has been completely loaded and parsed the DOM tree,
+    the load event will do it when all the images and sub-frames have finished loading.
+    http://stackoverflow.com/questions/2414750/difference-between-domcontentloaded-and-load-events
+    
 * What is the difference between `==` and `===`?
+    `==` Compares values by making coerces if the types of variables are not the same
+    `===` Compares the values and types of variables without making coercion
+    
 * Explain the same-origin policy with regards to JavaScript.
+    This is a fundamental security mechanism of the browser.
+    This mechanism prevents js scripts from accessing the DOM trees of different origins.
+    The same origin occurs when the port protocol and the host
+    of the pages that trigger the scripts are compatible.
+    
 * Make this work:
 ```javascript
 duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
@@ -399,16 +572,30 @@ Callback![Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming
 * Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
 * Explain what a single page app is and how to make one SEO-friendly.
 * What is the extent of your experience with Promises and/or their polyfills?
+
+* Whats a Promise ?
+
+The Promise object is used for asynchronous computations. A Promise represents a value which may be available now, or in the future, or never.
+A Promise is in one of these states:
+
+- pending: initial state, not fulfilled or rejected.
+- fulfilled: meaning that the operation completed successfully.
+- rejected: meaning that the operation failed.
+
+A pending promise can either be fulfilled with a value, or rejected with a reason (error). When either of these options happen, the associated handlers queued up by a promise's then method are called.
+
+[Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+
 * What are the pros and cons of using Promises instead of callbacks?
 * Variables scope in JS?
 
 In JavaScript, til version ES6, there were only two versions of variables scope - global scope, and local - function scope.
 In ES6 there is one more - block scope for variables defined with let and const (scope in {}).
 
-var![var](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
-let![let](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Statements/let)
-const![const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
-Other scopes![other scopes](http://stackoverflow.com/a/500459)
+[var](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
+[let](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Statements/let)
+[const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
+[other scopes](http://stackoverflow.com/a/500459)
 
 * What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
 * What tools and techniques do you use debugging JavaScript code?
@@ -449,6 +636,20 @@ Function definitions are hoisted, function expressions arent.
 * What is event loop?
   * What is the difference between call stack and task queue?
 * Explain the differences on the usage of `foo` between `function foo() {}` and `var foo = function() {}`
+* What is inheritance?
+
+Inheritance (in programming) is a mechanism that allow sharing functionality (and code reuse) beetwen classes and/or objects (in classical inheritance) or between objects (in prototypal inheritance - like in JS). Class that inherits (called subclass) gains acess to all shared behaviors and attributes of parent class (called superclass);
+
+Inheritance![Wikipedia - Inheritance](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming))
+
+* Whats the difference between inheritance in JS and the classical inheritance?
+
+Classical inheritance inherits the behavior, without any state, from the parent class. It inherits the behavior at the moment the object is instantiated.
+
+Prototypal inheritance inherits behavior and state from the parent object. It inherits the behavior and state at the moment the object is called. When the parent object changes at run-time, the state and behavior of the child objects are affected.
+
+Classical vs Prototypal![Stackoverflow - classical vs prototypal](http://softwareengineering.stackexchange.com/a/99438)
+
 * Whats the difference between function and an object?
 
 Function is a specific type of object in JavaScript, that has all the properties of normal object. Only difference is that function can be called / invoked. It's possible, because functions has internal [[Call]] method.
@@ -495,21 +696,81 @@ Event flow![Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
   [more info](https://developers.google.com/web/tools/chrome-devtools/rendering-tools/js-execution)
 
 * What are some ways you may improve your website's scrolling performance?
+
+  * Graphics size should be adjusted to the size of their containers, they should be optimized so as not to take to much bandwidth.
+  * Avoid using large amounts of box-shadows and other styles that require more work to draw by the browser.
+  * Avoid JavaScript methods/properties that cause reflow/repaint the page, such as elements offsets, container sizes etc.
+  * Use debouncing with scrolling events.
+
 * Explain the difference between layout, painting and compositing.
+
+  * layout - in this phase the browser checks how much space each of the page elements need.
+  * painting - filling in pixels, drawing elements: text, graphics etc.
+  * compositing - showing of elements on the page in the correct order - rendering of the page.
+
+  [source](https://developers.google.com/web/fundamentals/performance/rendering/?hl=en)
 
 #### Network Questions:
 
 * Traditionally, why has it been better to serve site assets from multiple domains?
+
+  Doing so increases page loading speed:
+  * Parallelization - it allows to send multiple request at once to many servers, which decreases the loading time of assets overall.
+  * Reduced header overhead - usually servers send clients some cookies, which are then attached to every client request in the same domain as the site. Serving static content from different domains than the server allows the client to skip sending the headers.
+
+  [source](https://travishorn.com/why-it-is-better-to-serve-site-assets-from-multiple-domains-972a2bf69d71)
+
 * Do your best to describe the process from the time you type in a website's URL to it finishing loading on your screen.
+
+  1. Get the servers IP address based on the URL from the DNS.
+  2. Send an HTTP request to the server.
+  3. Parse the response and render the page.
+
+  [more details](http://stackoverflow.com/a/2092602)
+
 * What are the differences between Long-Polling, Websockets and Server-Sent Events?
+
+  * Long-polling - The client sends a request, and when the server has a new information to report it sends it to the client. This process is one-off.
+  * WebSockets - The client connects to the server and the connection is maintained. The client can then exchange information with the server.
+  * Server-Sent Events - The client connects to the server by sending a request, this connection is maintained. The server can then send new information to the client as it becomes available. In comparison to WebSockets, the connection is unidirectional.
+
+  [more info](http://stackoverflow.com/a/12855533)
+
 * Explain the following request and response headers:
-  * Diff. between Expires, Date, Age and If-Modified-...
+  * Diff. between Expires, Date, Age and If-Modified-Since
   * Do Not Track
   * Cache-Control
   * Transfer-Encoding
   * ETag
   * X-Frame-Options
+
+  * Date - the date when the message was sent.
+  * Expires - the date after which the message is considered stale.
+  * Age - the number of seconds the object has been in the proxy cache.
+  * If-Modified-Since - allows the server to return 304 code when the message wasn't change since the date inside this header.
+  * DNT (Do Not Track) - asks the server not to track the user.
+  * Cache-Control - controls the options related to caching, eg. for how long should the response be cached.
+  * Transfer-Encoding - form of encoding used on the message, eg.: chunked, compress, deflate, gzip, identity.
+  * ETag - may be used for versioning of the resource.
+  * X-Frame-Options - controls the clickjacking protection.
+
+  [source](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)
+
 * What are HTTP methods? List all HTTP methods that you know, and explain them.
+
+  HTTP methods indicate an action the client wants to be performed on the specified resource.
+
+  * GET - retrieves a resource without changing it.
+  * HEAD - same as GET, but doesn't retrieve the actual body. May be useful when only the headers are needed.
+  * POST - adds a new resource.
+  * PUT - updates the resource.
+  * DELETE - deletes the resource.
+  * TRACE - echoes data sent in the request back to the client.
+  * OPTIONS - returns the methods that the server supports for the specified URL.
+  * CONNECT - converts the connection to a TCP/IP tunnel.
+  * PATCH - applies partial modifications to the resource.
+
+  [source](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)
 
 #### Coding Questions:
 
@@ -518,21 +779,37 @@ Event flow![Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
 var foo = 10 + '20';
 ```
 
+  `1020` (string)
+
 *Question: How would you make this work?*
 ```javascript
 add(2, 5); // 7
 add(2)(5); // 7
 ```
 
+  ```javascript
+  const add = (a, b) => {
+  if (!b) {
+    return b => a + b;
+  }
+
+  return a + b;
+  };
+  ```
+
 *Question: What value is returned from the following statement?*
 ```javascript
 "i'm a lasagna hog".split("").reverse().join("");
 ```
 
+  `goh angasal a m'i`
+
 *Question: What is the value of `window.foo`?*
 ```javascript
 ( window.foo || ( window.foo = "bar" ) );
 ```
+
+  If `window.foo` was already set then it retains the previous value, if not then the value is `bar`.
 
 *Question: What is the outcome of the two alerts below?*
 ```javascript
@@ -544,6 +821,8 @@ var foo = "Hello";
 alert(foo + bar);
 ```
 
+  Second alert call will fail because of the `bar` variable being set in a different block-scope.
+
 *Question: What is the value of `foo.length`?*
 ```javascript
 var foo = [];
@@ -551,12 +830,16 @@ foo.push(1);
 foo.push(2);
 ```
 
+  `2`
+
 *Question: What is the value of `foo.x`?*
 ```javascript
 var foo = {n: 1};
 var bar = foo;
 foo.x = foo = {n: 2};
 ```
+
+  `undefined` - after `x` is set in `foo`, the `foo` is assigned a different object that doesn't have `x` set. `x` is still assigned in the previous object, which is now in a variable named `bar`.
 
 *Question: What does the following code print?*
 ```javascript
@@ -567,6 +850,15 @@ setTimeout(function() {
 console.log('three');
 ```
 
+  ```
+  one
+  three
+  two
+  ```
+
+* Explain ng-controller directive.
+  The ng-controller directive attaches a controller class to the view. This is a key aspect of how angular supports the principles behind the Model-View-Controller design pattern. It also creates a new scope.
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
@@ -575,7 +867,6 @@ console.log('three');
 * Do you have any pet projects? What kind?
 * What's your favorite feature of Internet Explorer?
 * How do you like your coffee?
-
 
 #### Contributors:
 
