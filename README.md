@@ -1272,6 +1272,11 @@ console.log('three');
   Name Clashes
     With AngularJS, you don’t have the ability to compose many NG-apps on the same page. This can cause name clashes.
 
+* Which are the core directives of AngularJS?
+  - ng-app − This directive defines and links an AngularJS application to HTML.
+  - ng-model − This directive binds the values of AngularJS application data to HTML input controls.
+  - ng-bind − This directive binds the AngularJS Application data to HTML tags.
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
