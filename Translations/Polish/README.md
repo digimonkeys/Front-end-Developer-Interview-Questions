@@ -639,6 +639,13 @@ Classical vs Prototypal![Stackoverflow - classical vs prototypal](http://softwar
 Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
 Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
 
+* Wytlumacz czym jest single-page application i jak można sprawić, by była ona bardziej przyjazna dla SEO.
+
+Single-page application (SPA) to aplikacja internetowa lub strona, która mieści się na jednej stronie internetowej w celu dostarczenia jak najlepszych doznan, porównywalnych do tych odczuwalnych w desktopowych aplikacjach. W SPA, albo cały kod - HTML, JavaScript i CSS - jest pobierany przy załadowaniu strony, albo jest dynamicznie doładowywany i dodawany do strony w razie zapotrzebowania. Single-page application nigdy nie się nie przeładowywuje w trakcie używania, chociaż `location hash` i `HTML5 History API` może zostać użyte, aby wprowadzić uczucie nawigacji po osobnych stronach w aplikacji.
+Stronę można uczynić przyjazną dla SEO poprzez server-side rendering i używanie semantycznych znaczników HTML5.
+
+[Single-page application](https://en.wikipedia.org/wiki/Single-page_application)
+
 * Wytlumacz różnicę pomiędzy zmiennymi i niezmiennymi obiektami.
   * Jaki jest przykład niezmienialnego obiektu w JavaScripcie?
   * Jakie są wady i zalety niezmienności?
