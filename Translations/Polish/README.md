@@ -1468,3 +1468,20 @@ this.setState((prevState, props) => {
 Nic. setState może także przyjmować funkcję jako pierwszy argument. Funkcja ta pozwala na ustawienie obecnego stanu na podstawie stanu poprzedniego.
 
 setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
+
+* Jak zresetować $timeout, $interval(), i jak wyłączyć $watch()?
+Aby zresetować $timeout/$interval() należy przypisać ich wynik do zmiennej i potem wywołac na niej .cancel(). Aby wyłączyć $watch wystarczy go wywołać.  
+
+```
+var customTimeout = $timeout(function () {
+// arbitrary code 
+}, 55);
+$timeout.cancel(customTimeout);
+var deregisterWatchFn = $rootScope.$watch(‘someGloballyAvailableProperty’, function (newVal) {
+if (newVal) {
+// we invoke that deregistration function, to disable the watch
+deregisterWatchFn();
+...
+}
+});
+```
