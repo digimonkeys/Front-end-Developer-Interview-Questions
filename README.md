@@ -146,15 +146,10 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
 * Explain event delegation
 * Explain how `this` works in JavaScript
 * Explain how prototypal inheritance works
-    Each constructor instance inherits all its methods and properties.
-    It is possible to add further subclasses that have access to all
-    the parent properties. Instances also have access to subclass methods.
-    function Vehicle(engine) {this.engine = engine;}
-    var testVehicle = new Vehicle(v8);
-    Vehicle.prototype.color = "red";
-    var testColor = testVehicle.color; // testColor === 'red'
-    https://msdn.microsoft.com/pl-pl/library/hh924508(v=vs.94).aspx
-    
+    Prototypal inheritance means prototypes of objects are linked,
+    which means, that when some property is used it is first searched at the object,
+    then (when not found) on its prototype and so on
+
 * What do you think of AMD vs CommonJS?
 * Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
   * What needs to be changed to properly make it an IIFE?
