@@ -858,6 +858,12 @@ console.log('three');
 
 * Explain ng-controller directive.
   The ng-controller directive attaches a controller class to the view. This is a key aspect of how angular supports the principles behind the Model-View-Controller design pattern. It also creates a new scope.
+* What are the differences between service and factory methods?
+  - service is a constructor function, factory is not
+  - factory returns an object
+  - services allow to use ES6 classes
+
+  https://blog.thoughtram.io/angular/2015/07/07/service-vs-factory-once-and-for-all.html
 
 #### Fun Questions:
 

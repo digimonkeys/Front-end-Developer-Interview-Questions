@@ -922,6 +922,12 @@ console.log('three');
 
 * Wyjaśnij dyrektywę ng-controller.
   Dyrektywa ng-controller dołącza klasę kontrolera do widoku. Jest to kluczowy aspekt tego, jak Angular wspiera MVC. Ng-controller tworzy również nowy zakres.
+* Jaka jest różnica między serwisami, a fabrykami?
+  - serwis jest funkcją konstruktora, fabryka nie
+  - fabryka zwraca obiekt
+  - serwisy pozwalają na użycie klas z ES6
+
+  https://blog.thoughtram.io/angular/2015/07/07/service-vs-factory-once-and-for-all.html
 
 ### Pytania dodatkowe (zabawne):
 
