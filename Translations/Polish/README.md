@@ -68,7 +68,6 @@ Szkielet strony i semantyka, wypełnienie kontentem + poprawa semantyki, stylowa
   
 * Wyjaśnij, co kryje się za terminem "semantyczny HTML".  
 Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich przeznaczeniem i znaczeniem semantycznym, a nie tylko do prezentowania danych. Znaczniki nadają sens i w różnym kontekście mogną oznaczać do innego. Np <i> i <em> <b> i <strong>, section, aside, nav. Jest to ważne dla robotów indeksujących google, dla czytników przeznaczonych dla osób niepełnosprawnych etc.  
-
 * Jak optymalizowałbyś zasoby strony internetowej?  
 Optymalizacja obrazków, łączenie plików, Zmniejszenie rozmiaru plików przy użyciu uglifyjs, stosowanie minifikacji, używanie SVG i css sprites (jeden obrazek, używany wiele razy), Zasoby CDN - mogą być serwowane w zależności od odległości od użytkoniwka, response time etc, cachowanie, nie ładować dużych bibliotek jeśli potrzebujemy z nich tylko jednej funkcji  
 
@@ -207,6 +206,11 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 * Wyjaśnij jak działa dziedziczenie prototypowe.
 * Jak radzisz sobie z testowaniem swojego kodu JavaScript?
 * AMD kontra CommonJS?
+* Wyjaśnij czemu podany kod nie zadziała jako IIFE: `function foo(){ }();`.
+  * co trzeba zmienić aby było to poprawne IIFE?
+  a) Funkcja foo() zapisana jest jako function declaration a nie function expression (IIFE - Immediately-Invoked Function Expression )
+  b) Brakuje zewnętrznych nawiasow () - (function foo(){ }());
+  http://benalman.com/news/2010/11/immediately-invoked-function-expression/
 
 Obie specyfikacje opisują format i sposób w jaki moduły i ich zależności powinnybyć definiowane;
 Głowną rożnicą pomiędzy AMD(Asynchronous Module Definition) a CommonJS est asynchroniczne ładowanie modułow w AMD.

@@ -430,6 +430,10 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 
 * Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
   * What needs to be changed to properly make it an IIFE?
+  a) The function foo () is written as a function declaration and not a function expression (IIFE - Immediately-Invoked Function Expression )
+  b) Missing outer parentheses () - (function foo(){ }())
+  http://benalman.com/news/2010/11/immediately-invoked-function-expression/
+
 * What's the difference between a variable that is: `null`, `undefined` or undeclared?
   - Undeclared is a variable that was not created with var / let / const and was created on a global window / global object.
   - Undefined is a variable that has been declared but has no value assigned to it.
