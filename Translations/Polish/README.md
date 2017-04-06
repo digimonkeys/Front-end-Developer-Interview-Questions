@@ -1468,3 +1468,11 @@ this.setState((prevState, props) => {
 Nic. setState może także przyjmować funkcję jako pierwszy argument. Funkcja ta pozwala na ustawienie obecnego stanu na podstawie stanu poprzedniego.
 
 setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
+
+* Gdy tworzysz dyrektywę można ją zastosować na kilka sposobów w widokach. Jakie sposoby znasz? Jak definiujesz sposoby, w jakie dyrektywa będzie użyta?
+Dyrektywy mogą być wykorzystane jako elementy, atrybuty lub klasy, ewentualnie komentarze. Aby zdefiniować sposób ich użycia, należy użyć opcji restrict:
+‘A’ – dyrektywa używana jako atrybut  
+‘E’ – dyrektywa używana jako element  
+‘C’ – dyrektywa używana jako klasa  
+'M' - dyrektywa używana jako komentarz  
+Opcje mogą być łączone, np. dyrektywa z restrict: ‘AEC’ może być użyta jako atrybut, klasa lub element.  
