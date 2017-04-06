@@ -132,7 +132,22 @@ Provide extra markup for AT (accessibility technology)
 https://www.w3.org/WAI/intro/aria
 http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-applications-accessible/
 
-* Explain some of the pros and cons for CSS animations versus JavaScript animations.
+* Explain some of the pros and cons for CSS animations versus JavaScript animations.  
+Cons of CSS animations vs JS:  
+- scale/rotation/position control are all crammed into one "transform" property, making them impossible to animate in a truly distinct way on a single element  
+- CSS is praised for using GPU instead of CPU for animations, but only transforms and opacity are the primary beneficiaries of this feature, plus in JS we can do that too by setting a transform with a 3D characteristic  
+- CSS in theory is able to use a different CPU thread for animation-related calculations, but only properties that don't affect document flow can truly be relegated to a different thread. So again, transforms and opacity are the primary beneficiaries - it's a very little boost on performance  
+- on almost every platform animations created with JS GASP are performing better than created with CSS  
+- no control over animation flow (you cannot seek to a particular spot in the animation, nor can you smoothly reverse part-way through or alter the time scale or add callbacks at certain spots or bind them to a rich set of playback events)  
+- some really old browsers cannot perform css animations (older than IE9)  
+
+Pros of CSS animations vs JS:  
+- they perform much better than JQuery animations  
+- great for simple sliders and hover effects  
+
+https://developers.google.com/web/fundamentals/design-and-ui/animations/css-vs-javascript  
+https://css-tricks.com/myth-busting-css-animations-vs-javascript/  
+
 * What does CORS stand for and what issue does it address?
 
 #### HTML Questions:
