@@ -377,6 +377,20 @@ https://www.w3.org/International/questions/qa-html-language-declarations
     https://davidwalsh.name/event-delegate
 
 * Explain how `this` works in JavaScript
+    `this` points to an object depending on the function context in which it was declared.
+    Context, ie the way and place of the call.
+
+    Global context:
+    console.log(this === window); // true
+    this.a = 37;
+    console.log(window.a); // 37
+    As an object method:
+    var o = {  prop: 37, f: function() { return this.prop; }};
+    console.log(o.f()); // logs 37
+
+    https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Operatory/this
+    http://stackoverflow.com/questions/3127429/how-does-the-this-keyword-work
+
 * Explain how prototypal inheritance works
 * What do you think of AMD vs CommonJS?
     Both specifications describe the format and manner in which modules and their dependencies should be defined.

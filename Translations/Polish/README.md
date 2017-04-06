@@ -185,6 +185,21 @@ https://www.w3.org/International/questions/qa-html-language-declarations
     https://davidwalsh.name/event-delegate
     
 * Wyjaśnij jak działa `this` w JavaScripcie.
+  `this` wskazuje na jakiś obiekt w zależności od kontekstu,
+  w jakim została użyta funkcja, w której go zdefiniowaliśmy.
+  Kontekstu czyli sposobu i miejsca wywołania.
+
+  Kontekst globalny:
+  console.log(this === window); // true
+  this.a = 37;
+  console.log(window.a); // 37
+  Jako metoda obiektu:
+  var o = {  prop: 37, f: function() { return this.prop; }};
+  console.log(o.f()); // logs 37
+
+  https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Operatory/this
+  http://stackoverflow.com/questions/3127429/how-does-the-this-keyword-work
+
 * Wyjaśnij jak działa dziedziczenie prototypowe.
 * Jak radzisz sobie z testowaniem swojego kodu JavaScript?
 * AMD kontra CommonJS?
