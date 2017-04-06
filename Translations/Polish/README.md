@@ -907,6 +907,10 @@ console.log('three');
 
 * Wyjaśnij dyrektywę ng-controller.
   Dyrektywa ng-controller dołącza klasę kontrolera do widoku. Jest to kluczowy aspekt tego, jak Angular wspiera MVC. Ng-controller tworzy również nowy zakres.
+* Czym jest hierarchia zakresów w AngularJS?
+  Obiekt $scope używany przez widok w AngularJS jest zorganizowany w hierarchię. Jest to 'root scope', $rootScope może mieć jedno lub więcej dzieci-zakresów. Każdy kontroler posiada swój własny zakres ($scope) (który jest dzieckiem $rootScope), więc utworzone zmiennie, gdziekolwiek w jednym zakresie kontrolera będą dostępne przez widok bazujący na tym kontrolerze.
+
+  http://www.dotnettricks.com/learn/angularjs/understanding-scope-inheritance-in-angularjs
 
 ### Pytania dodatkowe (zabawne):
 
