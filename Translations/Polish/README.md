@@ -933,3 +933,8 @@ console.log('three');
 * Jakie są Twoje ulubione części narzędzi programistycznych, których używasz?
 * Czy masz jakiś swój własny projekt na boku? Jaki?
 * Jaka jest Twoja ulubiona funkcja w Internet Explorer?
+
+* Gdzie można implementowac manipulacje DOM w Angularze?
+Teoretycznie tylko w dyrektywach, nigdy w kontrolerach i serwisach. Obecnie jednak dobrą praktyka jest stosowanie komponentów (które mogą być w formie dyrektyw), gdzie praktycznie cała logika znajduje się w kontrolerze. W takim wypadku uważam że można manipulować DOM wewnątrz template dyrektywy (komponentu) z kontrolera dyrektywy (komponentu).  
+http://ng-learn.org/2014/01/Dom-Manipulations/  
+http://stackoverflow.com/questions/37480150/manipulating-dom-in-angularjs-best-practice  
