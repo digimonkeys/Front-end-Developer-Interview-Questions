@@ -1346,6 +1346,9 @@ console.log('three');
   - ng-model − Ta dyrektywa wiąże wartości danych z aplikacji z HTML'owymi kontrolerami danych wejściowych 
   - ng-bind − Ta dyrektywa wiąże dane aplikacji z tagami HTML
 
+* Wyjaśnij dyrektywę ng-model
+  Dyrektywa ng-model jest używana do przepływu danych w dwie strony (two-way data binding). Wiąże elementy <input>, <select> lub <textarea> do określonych wartości na obiekcie #scope. Wartości tych elementów będą wartościami właściwości i vice-versa.
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?

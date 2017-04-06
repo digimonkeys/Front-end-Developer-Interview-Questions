@@ -1281,6 +1281,9 @@ console.log('three');
   - ng-model − This directive binds the values of AngularJS application data to HTML input controls.
   - ng-bind − This directive binds the AngularJS Application data to HTML tags.
 
+* Explain ng-model directive.
+  The ng-model directive is used for two-way data binding in AngularJS. It binds <input>, <select> or <textarea> elements to a specified property on the $scope object. So, the value of the element will be the value of a property and vice-versa. 
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
