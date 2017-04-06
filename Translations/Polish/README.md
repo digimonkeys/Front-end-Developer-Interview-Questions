@@ -397,6 +397,14 @@ Odniesienie: [Conditional (ternary) Operator](https://developer.mozilla.org/en-U
 
 * Czym jest `arity` funkcji?
 * Co oznacza `"use strict";`? Jakie są zalety i wady takiego rozwiązania?
+* Czym rozni sie dziedziczenie w jsie od klasycznego dziedziczenia?
+ 
+ Podmiotem dziedziczenia klasycznego, są klasy natomiast w js dziedziczenie (zwane prototypowym) odbywa się bezpośrednio na obiektach.
+ Konsekwencją tego, że w dziedziczeniu klasycznym hierarchia tworzona jest za pomocą klas, które są jakby opisem przyszłego obiektu, co uniemożliwia zmiany metod, które są dziedziczone. Nie dzidziczy się również stanu (gdyż klasy go nie posiadają).
+ W dziedziczeniu prototypowym, opartym na obiektach, każda zmiana metody czy atrybutu na obiektach, z których się dziedziczy, jest natychmiast odzwierciedlana na obiekcie dziedziczącym. Dziedziczy się także stan obiektu.
+ 
+Classical vs Prototypal![Stackoverflow - classical vs prototypal](http://softwareengineering.stackexchange.com/a/99438)
+
 * Jaka jest roznica miedzy funkcja a obiektem?
 
 Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
