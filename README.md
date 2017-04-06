@@ -824,6 +824,8 @@ console.log('three');
 
   All in all, these three components work together to create the three basic components of MVC.
 
+  http://softwareengineering.stackexchange.com/questions/127624/what-is-mvc-really
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?

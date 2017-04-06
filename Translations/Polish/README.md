@@ -881,6 +881,8 @@ console.log('three');
 
   Wszystkie te trzy komponenty pracują razem tworząc razem MVC.
 
+  http://softwareengineering.stackexchange.com/questions/127624/what-is-mvc-really
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
