@@ -922,6 +922,11 @@ console.log('three');
 
 * Wyjaśnij dyrektywę ng-controller.
   Dyrektywa ng-controller dołącza klasę kontrolera do widoku. Jest to kluczowy aspekt tego, jak Angular wspiera MVC. Ng-controller tworzy również nowy zakres.
+* Które komponenty mogą być wstrzyknięte jako zależności w AngularJS?
+  - Serwisy, dyrektywy, filtry, animacje
+  - Kontrolery
+  - Metoda 'run'
+  - Metoda 'config'
 
 ### Pytania dodatkowe (zabawne):
 
