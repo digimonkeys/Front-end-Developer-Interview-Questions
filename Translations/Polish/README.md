@@ -933,3 +933,12 @@ console.log('three');
 * Jakie są Twoje ulubione części narzędzi programistycznych, których używasz?
 * Czy masz jakiś swój własny projekt na boku? Jaki?
 * Jaka jest Twoja ulubiona funkcja w Internet Explorer?
+
+* Na jakich komponentach możemy stworzyć dyrektywę?
+Angular pozwala tworzyc dyrektywy dla następujących typów elementów:  
+AngularJS provides support to create custom directives for following type of elements :  
+Element directives − dyrektywa aktywująca się gdy dany znacznik html jest napotykany    
+Attribute − dyrektywa aktywująca się gdy dany atrybut jest napotykany    
+CSS − dyrektywa aktywująca się gdy dany styl css jest napotykany    
+Comment − dyrektywa aktywująca się gdy dany komentarz jest napotykany  
+https://docs.angularjs.org/guide/directive  

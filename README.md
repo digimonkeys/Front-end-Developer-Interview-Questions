@@ -880,3 +880,11 @@ console.log('three');
 This document started in 2009 as a collaboration of [@paul_irish](https://twitter.com/paul_irish) [@bentruyman](https://twitter.com/bentruyman) [@cowboy](https://twitter.com/cowboy) [@ajpiano](https://twitter.com/ajpiano)  [@SlexAxton](https://twitter.com/slexaxton) [@boazsender](https://twitter.com/boazsender) [@miketaylr](https://twitter.com/miketaylr) [@vladikoff](https://twitter.com/vladikoff) [@gf3](https://twitter.com/gf3) [@jon_neal](https://twitter.com/jon_neal) [@sambreed](https://twitter.com/sambreed) and [@iansym](https://twitter.com/iansym).
 
 It has since received contributions from over [100 developers](https://github.com/h5bp/Front-end-Developer-Interview-Questions/graphs/contributors).
+
+* On which types of component can we create a custom directive?  
+AngularJS provides support to create custom directives for following type of elements :  
+Element directives − Directive activates when a matching element is encountered.  
+Attribute − Directive activates when a matching attribute is encountered.  
+CSS − Directive activates when a matching css style is encountered.  
+Comment − Directive activates when a matching comment is encountered.  
+https://docs.angularjs.org/guide/directive  
