@@ -398,6 +398,14 @@ https://www.w3.org/International/questions/qa-html-language-declarations
     inline: only margin-left, margin-right, padding-left, padding-right
     inline-block: margin, padding, height, width
 * What's the difference between a relative, fixed, absolute and statically positioned element?
+  Static is the default type of positioning. When elements don’t have a position specifically set, they default to static. These elements will stack in a standard one-after-another order.
+
+  Relative Position
+  You can set its position using one of the following top: XXX ; bottom: XXX; left: XXX; right: XXX;. Element will move off from the side specified, so if you wrote top:50px; the element will move 50px off from the top, or basically down. When you do this though, it doesn’t effect any other static elements around it, so they can overlap.
+
+  An absolutely positioned element is actually removed from the DOM and positioned based on its nearest relatively positioned parent element. Unlike a relatively positioned element which doesn’t effect other static elements, when you give an element position:absolute its like it no longer exists. This means that other static elements will move up to fill in the space where the absolute element would have been. The position of the absolute element is determined by its parent elements. If all of the parent elements are either static, or there are none, then the element is positioned based on the <body>. 
+
+  Fixed elements are completely independent of everything else on the web page. Regardless of any parents, a fixed position element will always be positioned based on the browser window. The interesting thing about fixed position elements is that when the page is scrolled, the element stays “fixed” and is always visible.
 * The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
 * What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
 * Have you played around with the new CSS Flexbox or Grid specs?
