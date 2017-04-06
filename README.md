@@ -1107,6 +1107,15 @@ console.log('three');
   two
   ```
 
+### AngularJS Questions:
+
+* What is AngularJS?
+  AngularJS is a client side JavaScript MVC framework to develop a dynamic web application. AngularJS was originally started as a project in Google but now, it is open source framework.
+  AngularJS is entirely based on HTML and JavaScript, so there is no need to learn another syntax or language.
+  AngularJS changes static HTML to dynamic HTML. It extends the ability of HTML by adding built-in attributes and components and also provides an ability to create custom attributes using simple JavaScript. 
+
+  https://docs.angularjs.org/guide/introduction
+  http://www.tutorialsteacher.com/angularjs/what-is-angularjs
 * Explain ng-controller directive.
   The ng-controller directive attaches a controller class to the view. This is a key aspect of how angular supports the principles behind the Model-View-Controller design pattern. It also creates a new scope.
 

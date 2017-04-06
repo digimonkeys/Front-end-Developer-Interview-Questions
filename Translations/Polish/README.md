@@ -1166,6 +1166,15 @@ console.log('three');
   two
   ```
 
+### Pytania AngularJS
+
+* Czym jest AngularJS?
+  AngularJS jest JavaScriptowym frameworkiem MVC działającym po stronie klienta do do budowania dynamicznych aplikacji webowych. AngularJS został stworzony jako projekt Google, jednak teraz jest open source.
+  AngularJS bazuje na HTML oraz JavaScript, więc nie ma potrzebny uczenia się innej składni lub języka.
+  AngularJS zmienia statyczny HTML w dynamiczny. Rozwija możliwości HTML dodając wbudowane atrybuty i komponenty i dostarcza możliwości to tworzenia własnych atrybutów używając JavaScirpt.
+
+  https://docs.angularjs.org/guide/introduction
+  http://www.tutorialsteacher.com/angularjs/what-is-angularjs
 * Wyjaśnij dyrektywę ng-controller.
   Dyrektywa ng-controller dołącza klasę kontrolera do widoku. Jest to kluczowy aspekt tego, jak Angular wspiera MVC. Ng-controller tworzy również nowy zakres.
 
