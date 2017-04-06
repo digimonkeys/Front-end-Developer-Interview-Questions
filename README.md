@@ -413,7 +413,11 @@ https://www.w3.org/International/questions/qa-html-language-declarations
   ```
   - What happens when you call setState?
   - What’s the difference between an Element and a Component in React?
-  - When would you use a Class Component over a Functional Component?
+* When would you use a Class Component over a Functional Component?
+    The class component should be used when I know that the class will have its own state.
+    The function component can be used when the component has no state,
+    I can use eg. const, arrow function or other ES6 syntax features.
+
   - What are refs in React and why are they important?
   - What are keys in React and why are they important?
 
