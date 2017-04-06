@@ -873,6 +873,7 @@ $(".foo div#bar:eq(0)")
   - używając '@font-face' do renderowania czcionki (używa 'src' dla zahardcorowanych zasobów)
   - linkując do zewnętrznego serwisu z czcionkami jako arkusz styli, używając @import lub javascript (link z np. google fonts)
 * Wyjaśnij jak przeglądarka określa elementy pasujące do selektora CSS?
+  Przeglądarki szukają selektorów od-prawej-do-lewej. Najpierw szuka wszystkich elementów pasujących do danego key selectora (najdalszego na prawo). Później sprawdza czy ten selektor pasuje lub jest w następnym (najdalszym na lewo) elemencie.
 * Opisz czym są pseudo-elementy i do czego służą
   Pseudo-elementy zaczynają się od '::' i są używane do stylowania specyficznych części elementu
   Składnia: 'selector::pseudo-element {}'

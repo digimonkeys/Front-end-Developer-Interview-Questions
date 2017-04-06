@@ -359,6 +359,7 @@ http://javascript.tutorialhorizon.com/2015/08/11/script-async-defer-attribute/
   - use '@font-face' to render a font (uses 'src' for hard resources)
   - link to a webfont as a stylesheet, use @import or javascript (link from e.g. google fonts)
 * Explain how a browser determines what elements match a CSS selector.
+  Browsers read selectors from right-to-left. First looks for all elements matching the key selector (the right-most). Then checks if it matches or is under the next (left-most) element.
 * Describe pseudo-elements and discuss what they are used for.
   Pseudo-elements starts with '::' and are used to style specified parts of and element.
     Syntax: 'selector::pseudo-element {}'
