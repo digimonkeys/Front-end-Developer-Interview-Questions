@@ -1236,6 +1236,17 @@ console.log('three');
 
   https://docs.angularjs.org/guide/controller
 
+* Czym są serwisy w AngularJS?
+  Serwisy są substytucyjnymi obiektami, które łączone są razem za pomocą wstrzykiwania zalezności (dependency injection). Możesz używać serwisów do organizacji i dzielenia kodu w aplikacji.
+  
+  Serwisy w AngularJS są:
+    Leniwie tworzone (lazily instantiated) - AngularJS tworzy serwisy tylko wtedy kiedy komponent aplikacji zależy od niego
+    Singletonami - Każdy komponent zależny od serwisu dostaje referencję to pojedynczej instracji generowanej przez fabrykę serwisu.
+
+  AngularJS oferuje kilka użytecznych serwisów (np. $http), ale dla większości aplikacji będziesz mógł potrzebował (oraz mógł stworzyć) swoje własne.
+
+  https://docs.angularjs.org/guide/services
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
