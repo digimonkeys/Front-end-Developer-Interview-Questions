@@ -1468,3 +1468,7 @@ this.setState((prevState, props) => {
 Nic. setState może także przyjmować funkcję jako pierwszy argument. Funkcja ta pozwala na ustawienie obecnego stanu na podstawie stanu poprzedniego.
 
 setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
+
+* Jak sprawdziłbyś input tekstowy, który ma być nickiem z twittera zawierającym znak @?
+Użyłbym dyrektywy ngPattern do przeprowadzenia testu odpowiedniego regex.
+https://docs.angularjs.org/api/ng/directive/ngPattern  
