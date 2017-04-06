@@ -226,7 +226,11 @@ http://javascript.tutorialhorizon.com/2015/08/11/script-async-defer-attribute/
 * Dlaczego dobrą praktyką jest umieszczanie cssów (<link>) w headerze i skryptów JS (<script>) tuż przed znacznikiem </body>? Czy znasz jakieś wyjątki?
 Umieszczanie cssów w headerze pozwala uniknąć FOUC. Umieszczanie script tagów pod koniec body ma sens dla starych przeglądarek, które ładując skrypty przestawały renderować stronę. Dla dużych stron był to jednak problem, ponieważ ściąganie skryptów nie mogło się rozpocząć dopóki wszystkie pozostałe elementy nie zostały załadowane.  
 Obecnie przeglądarki obsługują script tagi defer i async, istnieje również speculative parsing, więc współczesnym podejściem jest po prostu zasotowanie atrybutu defer na tagu script.  
-http://stackoverflow.com/a/24070373
+http://stackoverflow.com/a/24070373  
+
+* Czym jest renderowanie progresywne?  
+Są to techniki renderowania treści do wyświetlenia tak szybko, jak to możliwe. Przykład: opóźnione ładowanie obrazków, gdzie skrypt js ładuje obrazek dopiero gdy znajdzie się w viewporcie przeglądarki, zamiast ładować wszystkie - również niewidoczne - obrazki podczas startu strony.  
+http://stackoverflow.com/a/33651444  
 
 ### Pytania JS:
 

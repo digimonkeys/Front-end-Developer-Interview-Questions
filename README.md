@@ -222,7 +222,10 @@ Placing css in header lets us avoid FOUC. Placing script before body tag makes s
 Nowadays browsers have defer and async scripts, also speculative parsing, so modern approach is to just use defer script tags.  
 http://stackoverflow.com/a/24070373  
 
-* What is progressive rendering?
+* What is progressive rendering?  
+Progressive rendering is the name given to techniques used to render content for display as quickly as possible. Example: lazy loading of images where (typically) some javascript will load an image when it comes into the browsers viewport instead of loading all images at page load.  
+http://stackoverflow.com/a/33651444  
+
 * Have you used different HTML templating languages before?
 
 #### CSS Questions:
