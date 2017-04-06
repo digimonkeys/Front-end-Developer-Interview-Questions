@@ -595,6 +595,58 @@ Callback is a function that is passed to the other function as an argument. Func
 Callback![Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming))
 
 * Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
+
+* Which JavaScript patterns do you know?
+
+- Guard pattern
+In computer programming, a guard is a boolean expression that must evaluate to true if the program execution is to continue in the branch in question. Regardless of which programming language is used, guard code or a guard clause is a check of integrity preconditions used to avoid errors during execution.
+
+- Constructor pattern
+Object constructors are used to create specific types of objects - both preparing the object for use and accepting arguments which a constructor can use to set the values of member properties and methods when the object is first created.
+
+- Module pattern
+In JavaScript, the Module pattern is used to further emulate the concept of classes in such a way that we're able to include both public/private methods and variables inside a single object, thus shielding particular parts from the global scope. What this results in is a reduction in the likelihood of our function names conflicting with other functions defined in additional scripts on the page.
+
+- Singleton pattern
+The Singleton pattern is thus known because it restricts instantiation of a class to a single object. Classically, the Singleton pattern can be implemented by creating a class with a method that creates a new instance of the class if one doesn't exist. In the event of an instance already existing, it simply returns a reference to that object.
+
+In JavaScript, Singletons serve as a shared resource namespace which isolate implementation code from the global namespace so as to provide a single point of access for functions.
+
+Participants
+
+- Singleton:
+  - defines getInstance() which returns the unique instance.
+  - responsible for creating and managing the instance object.
+
+- Observer pattern
+The Observer is a design pattern where an object (known as a subject) maintains a list of objects depending on it (observers), automatically notifying them of any changes to state.
+
+When a subject needs to notify observers about something interesting happening, it broadcasts a notification to the observers (which can include specific data related to the topic of the notification).
+
+When we no longer wish for a particular observer to be notified of changes by the subject they are registered with, the subject can remove them from the list of observers.
+
+  Participants
+
+  - Subject:
+    - maintains list of observers. Any number of Observer objects may observe a Subject
+    - implements an interface that lets observer objects subscribe or unsubscribe
+    - sends a notification to its observers when its state changes
+  - Observers - has a function signature that can be invoked when Subject changes (i.e. event occurs)
+
+
+- Strategy
+The Strategy pattern encapsulates alternative algorithms (or strategies) for a particular task. It allows a method to be swapped out at runtime by any other method (strategy) without the client realizing it. Essentially, Strategy is a group of algorithms that are interchangeable.
+
+  Participants: 
+  - Context:
+    - maintains a reference to the current Strategy object
+    - supports interface to allow clients to request Strategy calculations
+    - allows clients to change Strategy
+  - Strategy - implements the algorithm using the Strategy interface
+
+DotFactory patterns![DotFactory patterns](http://www.dofactory.com/javascript/design-patterns)
+JavaScript Design Patterns![JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+
 * Explain what a single page app is and how to make one SEO-friendly.
 * What is the extent of your experience with Promises and/or their polyfills?
 
