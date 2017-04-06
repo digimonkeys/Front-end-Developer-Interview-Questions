@@ -58,7 +58,11 @@ Używam sublime 3 z jego dodatkowymi pluginami i świetnymi funcjonalnościami p
 * Z jakimi systemami kontroli wersji pracowałeś / jesteś zapoznany?  
 Z gitem, pracowałem na githubie i gitlabie. Próbowałem używać interfejsów graficznych gita, ale jednak wolę pracować w command line.  
 
-* Opisz kolejne zadania podczas tworzenia strony internetowej?
+* Opisz kolejne zadania podczas tworzenia strony internetowej? 
+Najpierw zbieranie wymagań klienta, funkcjonalnych i niefunkcjonalnych.
+Tworzenie środowiska - skrypty służące do budowania w środowisku developerskim i produkcyjnym - webpack, gulp.
+Szkielet strony i semantyka, wypełnienie kontentem + poprawa semantyki, stylowanie, animacje, dodawanie interaktywności.  
+
 * Opisz różnicę między stopniowym ulepszaniem (progressive enhancement) i wdzięczną degradacją (graceful degradation)?
   * Dodatkowe punkty za opisanie wykrywania obsługi cech (feature detection)  
   

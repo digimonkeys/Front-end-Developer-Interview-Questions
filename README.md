@@ -55,7 +55,10 @@ I prefer easily configurable Sublime 3 with its additional packages and briliant
 * Which version control systems are you familiar with?  
 git, I worked on github and gitlab. I tried using git guis but I prefer to work in command line.  
 
-* Can you describe your workflow when you create a web page?
+* Can you describe your workflow when you create a web page?  
+I start with gathering client requirements. Ten I create environment - bundling scripts from webpack, gulp etc. Next comes site skeleton, semantics, filling with content and fixes, styling, animations and adding interactivity.  
+
+
 * If you have 5 different stylesheets, how would you best integrate them into the site?
 * Can you describe the difference between progressive enhancement and graceful degradation? 
 
