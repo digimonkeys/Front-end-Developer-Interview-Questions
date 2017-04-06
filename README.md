@@ -55,7 +55,10 @@ I prefer easily configurable Sublime 3 with its additional packages and briliant
 * Which version control systems are you familiar with?  
 git, I worked on github and gitlab. I tried using git guis but I prefer to work in command line.  
 
-* Can you describe your workflow when you create a web page?
+* Can you describe your workflow when you create a web page?  
+I start with gathering client requirements. Ten I create environment - bundling scripts from webpack, gulp etc. Next comes site skeleton, semantics, filling with content and fixes, styling, animations and adding interactivity.  
+
+
 * If you have 5 different stylesheets, how would you best integrate them into the site?
 * Can you describe the difference between progressive enhancement and graceful degradation? 
 
@@ -64,6 +67,13 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
 
 * How would you optimize a website's assets/resources?  
 Optimalize images, bundle files, use uglifyjs and minification, use svg, css sprites, serve cdn resources depending on distance and response time from user, cache some files, dont load whole huge libraries if you only use one function from them  
+
+* Why serving resources from many domains is better?  
+You can use a lightweight web server that doesn't have to load all the modules/extensions that your dynamic content web server has to load on every single request.
+Adding an extra subdomain means you increase the number of parallel downloads that the browser can perform.
+If set up properly (e.g. your site is hosted on www.example.com instead of example.com), you can also take advantage of a cookieless subdomain, reducing traffic and roundtrip times. 
+http://webmasters.stackexchange.com/a/26757
+http://webmasters.stackexchange.com/a/25091  
 
 * How many resources will a browser download from a given domain at a time?
   * What are the exceptions?
@@ -122,8 +132,27 @@ Provide extra markup for AT (accessibility technology)
 https://www.w3.org/WAI/intro/aria
 http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-applications-accessible/
 
-* Explain some of the pros and cons for CSS animations versus JavaScript animations.
-* What does CORS stand for and what issue does it address?
+* Explain some of the pros and cons for CSS animations versus JavaScript animations.  
+Cons of CSS animations vs JS:  
+- scale/rotation/position control are all crammed into one "transform" property, making them impossible to animate in a truly distinct way on a single element  
+- CSS is praised for using GPU instead of CPU for animations, but only transforms and opacity are the primary beneficiaries of this feature, plus in JS we can do that too by setting a transform with a 3D characteristic  
+- CSS in theory is able to use a different CPU thread for animation-related calculations, but only properties that don't affect document flow can truly be relegated to a different thread. So again, transforms and opacity are the primary beneficiaries - it's a very little boost on performance  
+- on almost every platform animations created with JS GASP are performing better than created with CSS  
+- no control over animation flow (you cannot seek to a particular spot in the animation, nor can you smoothly reverse part-way through or alter the time scale or add callbacks at certain spots or bind them to a rich set of playback events)  
+- some really old browsers cannot perform css animations (older than IE9)  
+
+Pros of CSS animations vs JS:  
+- they perform much better than JQuery animations  
+- great for simple sliders and hover effects  
+
+https://developers.google.com/web/fundamentals/design-and-ui/animations/css-vs-javascript  
+https://css-tricks.com/myth-busting-css-animations-vs-javascript/  
+
+* What does CORS stand for and what issue does it address?  
+Cross-origin resource sharing - is a mechanism that allows restricted resources (e.g. fonts) on a web page to be requested from another domain outside the domain from which the first resource was served. Normally it is not possible due to Same origin policy - a web browser permits scripts contained in a first web page to access data in a second web page, but only if both web pages have the same origin. An origin is defined as a combination of URI scheme, hostname, and port number. This policy prevents a malicious script on one page from obtaining access to sensitive data on another web page through that page's Document Object Model.  
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS  
+https://en.wikipedia.org/wiki/Cross-origin_resource_sharing  
+https://en.wikipedia.org/wiki/Same-origin_policy 
 
 #### HTML Questions:
 
@@ -161,14 +190,26 @@ http://www.webdevout.net/articles/beware-of-xhtml#myths
 Always use a language attribute on the html tag to declare the default language of the text in the page. When the page contains content in another language, add a language attribute to an element surrounding that content. Use the lang attribute for pages served as HTML, and the xml:lang attribute for pages served as XML. For XHTML 1.x and HTML5 polyglot documents, use both together.  
 https://www.w3.org/International/questions/qa-html-language-declarations  
 
-* What kind of things must you be wary of when design or developing for multilingual sites?
+* What kind of things must you be wary of when design or developing for multilingual sites?  
+I have to consider how will users to be directed to their native language? Also I need to remeber about things like: text in images wont translate or scale, colors might be perceived different in different culture, no text should be hardcoded in templates, dates formatting might differ, styling font-size for :lang({language_code}) selectors in CSS, difference in word length for each language.  
+https://www.quora.com/What-kind-of-things-one-should-be-wary-of-when-designing-or-developing-for-multilingual-sites  
+
 * What are `data-` attributes good for?  
 The data-* attributes is used to store custom data private to the page or application. The data-* attributes gives us the ability to embed custom data attributes on all HTML elements.The stored (custom) data can then be used in the page's JavaScript to create a more engaging user experience (without any Ajax calls or server-side database queries).  
 https://www.w3schools.com/tags/att_global_data.asp  
 
-* Consider HTML5 as an open web platform. What are the building blocks of HTML5?
+* Consider HTML5 as an open web platform. What are the building blocks of HTML5?  
+The main building blocks are centred on HTML 5, CSS3, Javascript and SVG. Where HTML is a language to define the mark-up of a document (titles, headers, body, footer, tables, input forms etc.), CSS is a language to define style (formatting, colours, shades and the like). Javascript is a programming/scripting language and SVG is a language for creating 2D scalable vector graphics and images.  
+http://yucianga.info/?p=655  
+
 * Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.
-* Describe the difference between `<script>`, `<script async>` and `<script defer>`.
+* Describe the difference between `<script>`, `<script async>` and `<script defer>`.  
+Browser behaviour encountering:  
+- script tag: Pause parsing the document. Make a request to fetch the file. Execute the script after it has been downloaded. Resume parsing the document.  
+- script tag with async: Make parallel requests to fetch the files. Continue parsing the document as if it was never interrupted. Execute the individual scripts the moment the files are downloaded.  
+- script tag with defer: Make parallel requests to fetch the files. Continue parsing the document as if it was never interrupted. Finish parsing the document even if the script files have downloaded. Execute each script in the order they were encountered in the document.  
+http://javascript.tutorialhorizon.com/2015/08/11/script-async-defer-attribute/  
+
 * Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
 * What is progressive rendering?
 * Have you used different HTML templating languages before?
@@ -211,6 +252,9 @@ https://www.w3schools.com/tags/att_global_data.asp
 
   https://css-tricks.com/all-about-floats/
 * Explain CSS sprites, and how you would implement them on a page or site.
+  It is the way to reduce HTTP requests by combining images together into one big image. I would use sprite generator, combining all images into one big, usually separated by a pixel. In the css, put the background image on a sprite class that I use for all my image elements. To specify a specific image or icon, I'll set another class with the background positions and sizes of the image.
+
+  https://css-tricks.com/css-sprites/
 * What are your favourite image replacement techniques and which do you use when?
   CSS image replacement is a technique of replacing a text element (usually a header tag) with an image. You may want to use a <h1> tag and text for this for the accessibility and SEO benefits.
   I use image replacements (depending on the needs), when I want to make my page more accessible for devices like readers etc. Usually I use display none span in header.
@@ -278,12 +322,18 @@ https://www.w3schools.com/tags/att_global_data.asp
   - text-indent: -1000px
   - absolute position off the screen
 * Have you ever used a grid system, and if so, what do you prefer?
+  I used Bootstrap and Angular Material. Additionally I heard about Skeleton and Foundation. I prefer Bootstrap, because creating pages with this grid is very easy. Whether you need a fixed grid or a responsive, its only matter of a few changes. Offsetting and nesting of columns is also possible in both fixed and fluid width layouts.
 * Have you used or implemented media queries or mobile specific layouts/CSS?
   Yes, I used media queries after I created a project using Bootstrap grid to learn how Bootstrap and responsive pages works. I used mobile-first method to have a fully-responsive, readable page on any device without unnecessary content.
   Media queries allow you to target CSS rules based on - for instance - screen size, device-orientation or display-density. It allows you to display your page in different way on different devices.
 
   http://cssmediaqueries.com/
 * Are you familiar with styling SVG?
+  A bit. I colored some SVG's.
+  Generally SVG is resolution independent (scalable, without losing quality), does not add any additional, unneccesary HTTP requests and is very easy to script. You can use SVG to make road maps, graphs, complex UI elements, logos and simple games. You are able to use CSS and style SVG what you like. Also you can use animations which will move your whole SVG or just paths (parts of SVG).
+
+  https://www.smashingmagazine.com/2014/11/styling-and-animating-svgs-with-css/
+  https://code.tutsplus.com/articles/why-arent-you-using-svg--net-25414
 * How do you optimize your webpages for print?
   - create a stylesheet for print
   - avoid unnecessary HTML tables
@@ -300,9 +350,23 @@ https://www.w3schools.com/tags/att_global_data.asp
 
   https://css-tricks.com/efficiently-rendering-css/
 * What are the advantages/disadvantages of using CSS preprocessors?
+  Advantages
+    - better organization from nesting selectors
+    - ability to define variables and mixins
+    - have mathematical functions
+    - joining multiple files
+    - in some cases, cleaner syntaxes
+  Disadvantages
+    - mainly for designers - not comfortable on the command line or programming concepts
   * Describe what you like and dislike about the CSS preprocessors you have used.
+    I used SASS and I really like nesting, variables and mathematical functions which help a lot in styling. There were no things I did not like, maybe my knowledge about SASS is not enough deep.
+
+  http://nosleepforsheep.com/using-a-css-preprocessor/
 * How would you implement a web design comp that uses non-standard fonts?
+  - use '@font-face' to render a font (uses 'src' for hard resources)
+  - link to a webfont as a stylesheet, use @import or javascript (link from e.g. google fonts)
 * Explain how a browser determines what elements match a CSS selector.
+  Browsers read selectors from right-to-left. First looks for all elements matching the key selector (the right-most). Then checks if it matches or is under the next (left-most) element.
 * Describe pseudo-elements and discuss what they are used for.
   Pseudo-elements starts with '::' and are used to style specified parts of and element.
     Syntax: 'selector::pseudo-element {}'
@@ -353,18 +417,80 @@ https://www.w3schools.com/tags/att_global_data.asp
   Difference of supported styles:
     inline: only margin-left, margin-right, padding-left, padding-right
     inline-block: margin, padding, height, width
+* The 'C' in CSS stands for Cascading. How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
+  CSS priority is determined by specificity and inheritance.
+  Ascending order of importance:
+    1. User agent declarations,
+    2. User declarations,
+    3. Author declarations,
+    4. Author !important declarations,
+    5. User !important declarations.
+
+  Specificity: ID > class, pseudo-class > element, pseudo-element
+  Inheritence: specified value → computed value → used value → actual value
+
+  Knowing that I can define how to plan my code using specificity and inheritance, so they cause only minimal (or no) problems.
+
+  https://www.smashingmagazine.com/2010/04/css-specificity-and-inheritance/
 * What's the difference between a relative, fixed, absolute and statically positioned element?
-* The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
+  Static is the default type of positioning. When elements don’t have a position specifically set, they default to static. These elements will stack in a standard one-after-another order.
+
+  Relative Position
+  You can set its position using one of the following top: XXX ; bottom: XXX; left: XXX; right: XXX;. Element will move off from the side specified, so if you wrote top:50px; the element will move 50px off from the top, or basically down. When you do this though, it doesn’t effect any other static elements around it, so they can overlap.
+
+  An absolutely positioned element is actually removed from the DOM and positioned based on its nearest relatively positioned parent element. Unlike a relatively positioned element which doesn’t effect other static elements, when you give an element position:absolute its like it no longer exists. This means that other static elements will move up to fill in the space where the absolute element would have been. The position of the absolute element is determined by its parent elements. If all of the parent elements are either static, or there are none, then the element is positioned based on the <body>. 
+
+  Fixed elements are completely independent of everything else on the web page. Regardless of any parents, a fixed position element will always be positioned based on the browser window. The interesting thing about fixed position elements is that when the page is scrolled, the element stays “fixed” and is always visible.
 * What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
+  Bootstrap and Angular Material. Bootstrap is great for small pages, but for bigger projects there is too much to change. Every framework impose its own style of page, so a lot of pages looks the same, just with different colors. It is what I would change in CSS frameworks - more freedom and adjusting to create pages which don't look like a milion others.
 * Have you played around with the new CSS Flexbox or Grid specs?
+  Yes, I use flexbox in my projects. It is very simple and comfortable in use and giving great effects. Grid seems to be supported by all major browsers (except Edge, which has old syntax), so it is worthy to learn it.
+
+  http://caniuse.com/#feat=css-grid
+  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+  https://css-tricks.com/snippets/css/complete-guide-grid/
 * How is responsive design different from adaptive design?
+  Responsive: There is one basic layout, and it changes responsively to screen changes
+  Adaptive: For each possible screen size, there is a distinct layout
 * Have you ever worked with retina graphics? If so, when and what techniques did you use?
+  Retina has double density pixel screen, it allows to create sharper images on smaller screens. You need to provide suitable images for these screens.
+
+  Resizing Images
+    - Using alternate high resolution pixels
+    - Using @face-fonts instead of images icon
+    - Using SVG images instead of Bitmap images
+    - Using JavaScript to replace all the images with double sized image
+  Working with high resolution favicons
+
+  https://www.sitepoint.com/css-techniques-for-retina-displays/
 * Is there any reason you'd want to use `translate()` instead of *absolute positioning*, or vice-versa? And why?
 
 #### JS Questions:
 
 * Explain event delegation
+    Event delegation consists in bundling an event handler into a parent rather than an element that we want to handle.
+    When we click on an interior element, the event bubbles up to the item assigned to the handler.
+    Then, with event.target, we can see where the event occurred and execute it on the corresponding element.
+    This allows us to handle events occurring on multiple items with one handler.
+
+    http://www.crimsteam.site90.net/crimsteam/dom/dom_zdarzenia_delegacja.html
+    https://davidwalsh.name/event-delegate
+
 * Explain how `this` works in JavaScript
+    `this` points to an object depending on the function context in which it was declared.
+    Context, ie the way and place of the call.
+
+    Global context:
+    console.log(this === window); // true
+    this.a = 37;
+    console.log(window.a); // 37
+    As an object method:
+    var o = {  prop: 37, f: function() { return this.prop; }};
+    console.log(o.f()); // logs 37
+
+    https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Operatory/this
+    http://stackoverflow.com/questions/3127429/how-does-the-this-keyword-work
+
 * Explain how prototypal inheritance works
 * What do you think of AMD vs CommonJS?
     Both specifications describe the format and manner in which modules and their dependencies should be defined.
@@ -400,6 +526,10 @@ https://www.w3schools.com/tags/att_global_data.asp
     http://blog.nebula.us/13-javascript-closures-czyli-zrozumiec-i-wykorzystac-domkniecia
 
 * What's a typical use case for anonymous functions?
+    - Callbacks
+    - IIFE's
+    - Closures
+    
 * How do you organize your code? (module pattern, classical inheritance?)
   Eg. Module pattern, IIFE, Atomic design.
 
@@ -411,6 +541,11 @@ https://www.w3schools.com/tags/att_global_data.asp
     http://stackoverflow.com/questions/7614317/what-is-the-difference-between-native-objects-and-host-objects
     
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
+  - A Function Declaration defines a named function variable without requiring variable assignment.
+  - Assigns to the person variable the value returned by the person function, in this case undefined
+  - Assigns a Person object to person variable, with this assigned to the person object
+  https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/
+
 * How you can achieve inheritance in JavaScript (new + Object.create)
 
 - With a constructor
@@ -431,12 +566,41 @@ ECMAScript 2015 introduced a new set of keywords implementing classes. Although 
 Difference new vs Object.create![Difference new vs Object.create](http://stackoverflow.com/questions/4166616/understanding-the-difference-between-object-create-and-new-somefunction)
 
 * What's the difference between `.call` and `.apply`?
+    You can use `.call` and` .apply` to assign another object when calling an existing function.
+   `This` refers to the current object.
+    So you can write the method once and then inherit it in another object, without rewriting the method for the new object.
+    Call accepts `this` and single arguments, and apply as an array.
+    theFunction.apply(valueForThis, arrayOfArgs)
+    theFunction.call(valueForThis, arg1, arg2, ...)
+    http://stackoverflow.com/questions/1986896/what-is-the-difference-between-call-and-apply
+    https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Function/apply
+    https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Function/call
+
 * Explain `Function.prototype.bind`.
+    Bind creates a new function that allows `this` to be assigned to the context we want.
+    Because in callback the value of the current object `this` may not be what we expect.
+    It also allows you to assign default arguments to the returned function:
+      var Person = function (name) { this.name = name; };
+      Person.prototype.speak = function (volume) {return this.name +  volume };
+      var person = new Person("John");
+      var f = person.speak.bind(person, "loudly");
+      // "John loudly"
+      http://www.kurshtml.edu.pl/js/bind,function-prototype.html
+
 * When would you use `document.write()`?
   Document.write() is always available, it is a good choice for third party vendors to use it to add their scripts.
   Many generated ads use `document.write ()` although it is not welcome.
 
 * What's the difference between feature detection, feature inference, and using the UA string?
+    Feature detection is the detection of whether a feature / functionality is available in an executable environment
+    eg: return !!document.createElement('canvas').getContext; // return true or false
+
+    Feauture inference is based on the assumption that if a given functionality is available in a given browser version, then the rest of the functionality also. They are then used without checking if they exist, which can lead to errors.
+
+    UA string defaults return the version of the browser that executes the query that runs the js script. UA string can be changed by the client.
+
+    http://lucybain.com/blog/2014/feature-detection-vs-inference/
+
 * Explain Ajax in as much detail as possible.
   AJAX (Asynchronous JavaScript and XML).
   Web application development technology in which the user interacts with the server in two ways:
@@ -462,8 +626,25 @@ Difference new vs Object.create![Difference new vs Object.create](http://stackov
     - Data is loaded dynamically and therefore is not part of the web page. Web search engines do not index dynamically loaded content.
 
 * Explain how JSONP works (and how it's not really Ajax).
+    JavaScript Object Notation with Padding - remote AJAX outside the domain.
+    Allows you to retrieve data from servers located in another domain,
+    Than the domain where script.js is started. Helps to bypass Same-origin policy.
+    JSONP allows you to retrieve JSON data by wrapping data into a JS function,
+    This makes it possible to run an external js script by adding it using a script tag.
+    In order to start the JSON return function we need to specify a callback in the url like the JSON wrapper function.
+    - `http://www.example.net/sample.aspx?callback=mycallback`
+    - Can only be used with GET queries
+
+    http://stackoverflow.com/questions/2067472/what-is-jsonp-all-about
+
 * Have you ever used JavaScript templating?
   * If so, what libraries have you used?
+    I only used Handlebars for simple scripts that needed to fill a lot of data in a loop.
+    Popular templates:
+    - Mustache
+    - Underscore
+    - Embedded JS
+
 * Explain "hoisting".
 * Describe event bubbling.
     Bubbling is an event passing up of the DOM tree.
@@ -490,21 +671,67 @@ Object.create![Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScri
 
 
 * Why is extending built-in JavaScript objects not a good idea?
+
+    Because these objects were created according to some well-documented
+    and well-thought-out specifications. If we add our methods to the built-in object,
+    they can be overwritten by an unknowable developer using our code,
+    developers may implement a method with the same name.
+
+* Does extending built-in objects have good part?
+    You can use features that are not normally available for a given method.
+    For example, reverse the string using the `reverse` method from the Array.
+    String.prototype.reverse = function() {
+      return Array.prototype.reverse.apply(this.split('')).join('');
+    };
+    https://code.tutsplus.com/tutorials/quick-tip-how-to-extend-built-in-objects-in-javascript--net-9168
+
+* Does JavaScript have private methods?
+
+Yes, private methods are made by the constructor. Every function definition or function expression (not bound with this) will become private method.
+Private methods cannot be called by public methods.
+
+Private members![Crockford on private members](http://javascript.crockford.com/private.html)
+
 * Difference between document load event and document DOMContentLoaded event?
     The DOMContentLoaded event is fired when the document has been completely loaded and parsed the DOM tree,
     the load event will do it when all the images and sub-frames have finished loading.
     http://stackoverflow.com/questions/2414750/difference-between-domcontentloaded-and-load-events
     
 * What is the difference between `==` and `===`?
-    `==` Compares values by making coerces if the types of variables are not the same
-    `===` Compares the values and types of variables without making coercion
+
+`==` Compares values by making coerces if the types of variables are not the same
+`===` Compares the values and types of variables without making coercion
+
+* Whats a function declaration and function expression? What are the differences?
+
+The function declaration defines a function with the specified name and parameters.
+Function expression is almost identical, but i allows to omit function name, thus creating annonymous function. Function expressions can be used as an IIFE. Function expressions (not like function declartion) arent hoisted.
+
+Function delcaration![Function delcaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+Function expression![Function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function)
+Function declaration vs function expression![Function declaration vs function expression](https://www.sitepoint.com/function-expressions-vs-declarations/)
+
+* Are the functions hoisted?
+    In JS, functions can be declared in two ways: by function definition and function expression.
+    Function definition are hoisted, whereas function expressions do not.
+    Function hoisting![Function hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
     
 * Explain the same-origin policy with regards to JavaScript.
-    This is a fundamental security mechanism of the browser.
-    This mechanism prevents js scripts from accessing the DOM trees of different origins.
-    The same origin occurs when the port protocol and the host
-    of the pages that trigger the scripts are compatible.
-    
+  This is a fundamental security mechanism of the browser.
+  This mechanism prevents js scripts from accessing the DOM trees of different origins.
+  The same origin occurs when the port protocol and the host
+  of the pages that trigger the scripts are compatible.
+
+* Describe inheritance patterns in JavaScript.
+  - Pseudoclassical pattern - Constructors/classes are created by `new`,
+    inheriting all methods and properties of the parent.
+    By creating an instance with `new` we bind it to` this`.
+    Class methods refer to `this` instance.
+  - Functional pattern - It contains all the methods and properties within the constructor function.
+  - Prototypal pattern - Expands the class/constructor to successive subclasses inheriting all parent methods and properties.
+
+  http://wes.is/2014/12/14/why-i-prefer-the-pseudoclassical-pattern-for-creating-classes-in-javascript-and-why-you-should-too/
+
 * Make this work:
 ```javascript
 duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
@@ -524,6 +751,12 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * Create a for loop that iterates up to `100` while outputting **"fizz"** at multiples of `3`, **"buzz"** at multiples of `5` and **"fizzbuzz"** at multiples of `3` and `5`
 * Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
 
+It is generally a good idea to leave the global scope untouched, because all code share a single global namespace.
+Relying too much on global variables can result in collisions between various scripts on the same page.
+The best solution for avoiding global space pollution is IIFE.
+
+Reference: [Global variables disscusion](http://stackoverflow.com/questions/2613310/ive-heard-global-variables-are-bad-what-alternative-solution-should-i-use)
+
 * What is a callback?
 
 Callback is a function that is passed to the other function as an argument. Function that gets callback as argument can invoke it in its body. This execution may be immediate as in a synchronous callback, or it might happen at a later time as in an asynchronous callback.
@@ -531,6 +764,58 @@ Callback is a function that is passed to the other function as an argument. Func
 Callback![Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming))
 
 * Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
+
+* Which JavaScript patterns do you know?
+
+- Guard pattern
+In computer programming, a guard is a boolean expression that must evaluate to true if the program execution is to continue in the branch in question. Regardless of which programming language is used, guard code or a guard clause is a check of integrity preconditions used to avoid errors during execution.
+
+- Constructor pattern
+Object constructors are used to create specific types of objects - both preparing the object for use and accepting arguments which a constructor can use to set the values of member properties and methods when the object is first created.
+
+- Module pattern
+In JavaScript, the Module pattern is used to further emulate the concept of classes in such a way that we're able to include both public/private methods and variables inside a single object, thus shielding particular parts from the global scope. What this results in is a reduction in the likelihood of our function names conflicting with other functions defined in additional scripts on the page.
+
+- Singleton pattern
+The Singleton pattern is thus known because it restricts instantiation of a class to a single object. Classically, the Singleton pattern can be implemented by creating a class with a method that creates a new instance of the class if one doesn't exist. In the event of an instance already existing, it simply returns a reference to that object.
+
+In JavaScript, Singletons serve as a shared resource namespace which isolate implementation code from the global namespace so as to provide a single point of access for functions.
+
+Participants
+
+- Singleton:
+  - defines getInstance() which returns the unique instance.
+  - responsible for creating and managing the instance object.
+
+- Observer pattern
+The Observer is a design pattern where an object (known as a subject) maintains a list of objects depending on it (observers), automatically notifying them of any changes to state.
+
+When a subject needs to notify observers about something interesting happening, it broadcasts a notification to the observers (which can include specific data related to the topic of the notification).
+
+When we no longer wish for a particular observer to be notified of changes by the subject they are registered with, the subject can remove them from the list of observers.
+
+  Participants
+
+  - Subject:
+    - maintains list of observers. Any number of Observer objects may observe a Subject
+    - implements an interface that lets observer objects subscribe or unsubscribe
+    - sends a notification to its observers when its state changes
+  - Observers - has a function signature that can be invoked when Subject changes (i.e. event occurs)
+
+
+- Strategy
+The Strategy pattern encapsulates alternative algorithms (or strategies) for a particular task. It allows a method to be swapped out at runtime by any other method (strategy) without the client realizing it. Essentially, Strategy is a group of algorithms that are interchangeable.
+
+  Participants: 
+  - Context:
+    - maintains a reference to the current Strategy object
+    - supports interface to allow clients to request Strategy calculations
+    - allows clients to change Strategy
+  - Strategy - implements the algorithm using the Strategy interface
+
+DotFactory patterns![DotFactory patterns](http://www.dofactory.com/javascript/design-patterns)
+JavaScript Design Patterns![JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+
 * Explain what a single page app is and how to make one SEO-friendly.
 * What is the extent of your experience with Promises and/or their polyfills?
 
@@ -545,7 +830,7 @@ A Promise is in one of these states:
 
 A pending promise can either be fulfilled with a value, or rejected with a reason (error). When either of these options happen, the associated handlers queued up by a promise's then method are called.
 
-Promise![Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+[Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
 * What are the pros and cons of using Promises instead of callbacks?
 * Variables scope in JS?
@@ -553,13 +838,25 @@ Promise![Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference
 In JavaScript, til version ES6, there were only two versions of variables scope - global scope, and local - function scope.
 In ES6 there is one more - block scope for variables defined with let and const (scope in {}).
 
-var![var](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
-let![let](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Statements/let)
-const![const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
-Other scopes![other scopes](http://stackoverflow.com/a/500459)
+[var](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
+[let](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Statements/let)
+[const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
+[other scopes](http://stackoverflow.com/a/500459)
 
 * What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
 * What tools and techniques do you use debugging JavaScript code?
+* What are falsy values
+
+Falsy values are values that evaluate to false when they're converted to boolean:
+- 0
+- "" - empty string
+- null
+- undefined
+- NaN
+- false
+
+Falsy values![MDN falsy values](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+
 * Types in Javascript
 
 JS types can be split in two categories - primitives and objects
@@ -589,6 +886,12 @@ Javascript Types![Javascript Data Types](https://developer.mozilla.org/pl/docs/W
   * What are the pros and cons of immutability?
   * How can you achieve immutability in your own code?
 * Explain the difference between synchronous and asynchronous functions.
+
+Synchronous function will be executed and finished before moving on to another task.
+Asynchronous function will be executed and whether its finished or not another next task will be executed.
+
+Reference: [Asynchronous vs synchronous](http://stackoverflow.com/questions/748175/asynchronous-vs-synchronous-execution-what-does-it-really-mean)
+
 * Are functions hoisted in js?
 
 There are two ways of declaring a function in JS: function definition and function expression.
@@ -597,6 +900,20 @@ Function definitions are hoisted, function expressions arent.
 * What is event loop?
   * What is the difference between call stack and task queue?
 * Explain the differences on the usage of `foo` between `function foo() {}` and `var foo = function() {}`
+* What is inheritance?
+
+Inheritance (in programming) is a mechanism that allow sharing functionality (and code reuse) beetwen classes and/or objects (in classical inheritance) or between objects (in prototypal inheritance - like in JS). Class that inherits (called subclass) gains acess to all shared behaviors and attributes of parent class (called superclass);
+
+Inheritance![Wikipedia - Inheritance](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming))
+
+* Whats the difference between inheritance in JS and the classical inheritance?
+
+Classical inheritance inherits the behavior, without any state, from the parent class. It inherits the behavior at the moment the object is instantiated.
+
+Prototypal inheritance inherits behavior and state from the parent object. It inherits the behavior and state at the moment the object is called. When the parent object changes at run-time, the state and behavior of the child objects are affected.
+
+Classical vs Prototypal![Stackoverflow - classical vs prototypal](http://softwareengineering.stackexchange.com/a/99438)
+
 * Whats the difference between function and an object?
 
 Function is a specific type of object in JavaScript, that has all the properties of normal object. Only difference is that function can be called / invoked. It's possible, because functions has internal [[Call]] method.
@@ -802,6 +1119,135 @@ console.log('three');
   three
   two
   ```
+  
+### AngularJS Questions:
+
+* What is AngularJS?
+  AngularJS is a client side JavaScript MVC framework to develop a dynamic web application. AngularJS was originally started as a project in Google but now, it is open source framework.
+  AngularJS is entirely based on HTML and JavaScript, so there is no need to learn another syntax or language.
+  AngularJS changes static HTML to dynamic HTML. It extends the ability of HTML by adding built-in attributes and components and also provides an ability to create custom attributes using simple JavaScript. 
+
+  https://docs.angularjs.org/guide/introduction
+  http://www.tutorialsteacher.com/angularjs/what-is-angularjs
+* Explain ng-controller directive.
+  The ng-controller directive attaches a controller class to the view. This is a key aspect of how angular supports the principles behind the Model-View-Controller design pattern. It also creates a new scope.
+* What are the basic steps to unit test an AngularJS filter?
+  1. Inject '$filter'
+  2. Call it with '$filter(filterName)(input, options)'
+  Example:
+  ```
+  describe('The test filter', function () {
+  'use strict'; 
+
+  var $filter;
+
+  beforeEach(function () {
+    module('myTestFilterModule');
+
+    inject(function (_$filter_) {
+      $filter = _$filter_;
+    });
+  });
+
+    it('should capitalize a string', function () {
+      // Arrange.
+      var foo = 'hello world', result;
+
+      // Act.
+      result = $filter('testFilter')(foo, 'capitalize');
+
+      // Assert.
+      expect(result).toEqual('HELLO WORLD');
+    });
+  });
+  ```
+  
+  http://stackoverflow.com/questions/21094569/how-to-unit-test-a-filter-in-angularjs-1-x
+
+  * What is data binding in AngularJS?
+  Data-binding in AngularJS apps is the automatic synchronization of data between the model and view components. The way that AngularJS implements data-binding lets you treat the model as the single-source-of-truth in your application. The view is a projection of the model at all times. When the model changes, the view reflects the change, and vice versa.
+
+  https://docs.angularjs.org/guide/databinding
+
+* What is scope in AngularJS?
+  Scope is an object that refers to the application model. It is an execution context for expressions. Scopes are arranged in hierarchical structure which mimic the DOM structure of the application. Scopes can watch expressions and propagate events.
+
+  https://docs.angularjs.org/guide/scope
+
+* What are the controllers in AngularJS?
+  In AngularJS, a Controller is defined by a JavaScript constructor function that is used to augment the AngularJS Scope.
+  When a Controller is attached to the DOM via the ng-controller directive, AngularJS will instantiate a new Controller object, using the specified Controller's constructor function. A new child scope will be created and made available as an injectable parameter to the Controller's constructor function as $scope.
+  If the controller has been attached using the controller as syntax then the controller instance will be assigned to a property on the new scope.
+
+  Use controllers to:
+    Set up the initial state of the $scope object.
+    Add behavior to the $scope object.
+
+  Do not use controllers to:
+    Manipulate DOM — Controllers should contain only business logic. Putting any presentation logic into Controllers significantly affects its testability. AngularJS has databinding for most cases and directives to encapsulate manual DOM manipulation.
+    Format input — Use AngularJS form controls instead.
+    Filter output — Use AngularJS filters instead.
+    Share code or state across controllers — Use AngularJS services instead.
+    Manage the life-cycle of other components (for example, to create service instances).
+
+  https://docs.angularjs.org/guide/controller
+
+* What are the services in AngularJS?
+  AngularJS services are substitutable objects that are wired together using dependency injection (DI). You can use services to organize and share code across your app.
+  
+  AngularJS services are:
+    Lazily instantiated – AngularJS only instantiates a service when an application component depends on it.
+    Singletons – Each component dependent on a service gets a reference to the single instance generated by the service factory.
+
+  AngularJS offers several useful services (like $http), but for most applications you'll also want to create your own.
+
+  https://docs.angularjs.org/guide/services
+
+* What are the filters in AngularJS?
+  Filters format the value of an expression for display to the user. They can be used in view templates, controllers or services. AngularJS comes with a collection of built-in filters, but it is easy to define your own as well.
+
+  The underlying API is the $filterProvider.
+
+  https://docs.angularjs.org/guide/filter
+
+* Explain directives in AngularJS.
+  At a high level, directives are markers on a DOM element (such as an attribute, element name, comment or CSS class) that tell AngularJS's HTML compiler ($compile) to attach a specified behavior to that DOM element (e.g. via event listeners), or even to transform the DOM element and its children.
+
+  https://docs.angularjs.org/guide/directive
+
+* Explain templates in AngularJS.
+  In AngularJS, templates are written with HTML that contains AngularJS-specific elements and attributes. AngularJS combines the template with information from the model and controller to render the dynamic view that a user sees in the browser.
+
+  These are the types of AngularJS elements and attributes you can use:
+    Directive — An attribute or element that augments an existing DOM element or represents a reusable DOM component.
+    Markup — The double curly brace notation {{ }} to bind expressions to elements is built-in AngularJS markup.
+    Filter — Formats data for display.
+    Form controls — Validates user input.
+
+  https://docs.angularjs.org/guide/templates
+
+* What is routing in AngularJS?
+  AngularJS supports SPA using routing module ngRoute. This routing module acts based on the url. When a user requests a specific url, the routing engine captures that url and renders the view based on the defined routing rules.
+
+  https://docs.angularjs.org/api/ngRoute/service/$route
+  http://www.tutorialsteacher.com/angularjs/angularjs-routing
+
+* What is deep linking in AngularJS?
+  Deep linking is the usage of the URL, which will take to specific page (content) directly without traversing application from home page. It helps in getting indexed so that these links can be easily searchable by search engines like Google, Yahoo.. etc.
+
+  Using Angular, the deep linking is defaut done with the # prefix (when the HTML5 mode is not set).
+
+* What are the advantages of AngularJS?
+  Built by Google
+    AngularJS has been developed as well as maintained by dedicated Google engineers. This means that there is a huge community out there for you to learn from.
+  Great MVC
+    Most frameworks require programmers to splitting the app into multiple MVC components. After that, the programmer has to write a code to put them together again. AngularJS, however, strings it together automatically.
+  Intuitive
+    AngularJS is more intuitive as it makes use of HTML as a declarative language. Moreover, it is less brittle for reorganizing.
+  Comprehensive
+    AngularJS is a comprehensive solution for rapid front-end development. It does not need any other plugins or frameworks. Moreover, there are a range of other features that include Restful actions, data building, dependency injection, enterprise-level testing, etc.
+  Unit Testing Ready
+    AngularJS is unit testing ready, and that is one of its most compelling advantages.
 
 #### Fun Questions:
 
@@ -811,6 +1257,115 @@ console.log('three');
 * Do you have any pet projects? What kind?
 * What's your favorite feature of Internet Explorer?
 * How do you like your coffee?
+
+#### React Questions
+
+* If you created a React element like Twitter below, what would the component definition of Twitter look like?
+
+```jsx
+<Twitter username='tylermcginnis33'>
+ {(user) => user === null
+   ? <Loading />
+   : <Badge info={user} />}
+</Twitter>
+```
+
+props.children works just like any other prop in that it can pass any sort of data, not just the sorts that React knows how to render. Children passed to a custom component can be anything, as long as that component transforms them into something React can understand before rendering.
+
+```jsx
+import React, { Component, PropTypes } from 'react'
+import fetchUser from 'twitter'
+// fetchUser take in a username returns a promise
+// which will resolve with that username's data.
+
+class Twitter extends Component {
+  state = {
+    user: null,
+  }
+
+  componentDidMount () {
+    fetchUser(this.props.username)
+      .then((user) => this.setState({user}))
+  }
+  render () {
+    return this.props.children(this.state.user)
+  }
+}
+
+Twitter.propTypes = {
+  username: PropTypes.String.isRequired,
+};
+```
+
+Functions as children![Functions as children](https://facebook.github.io/react/docs/jsx-in-depth.html#functions-as-children)
+
+* What is the difference between a controlled component and an uncontrolled component?
+
+A controlled component is a component where React is in control and is the single source of truth for the form data. In those components value of the element is based on component state, not the DOM.
+
+In uncontrolled components data is handled directly by the DOM. To access data you can use an event handler or a ref to get form values from the DOM.
+
+Controlled components![Controlled components](https://facebook.github.io/react/docs/forms.html#controlled-components)
+Uncontrolled components![Uncontrolled components](https://facebook.github.io/react/docs/uncontrolled-components.html)
+
+* In which lifecycle event do you make AJAX requests and why?
+
+AJAX request should be done in componentDidMount event lifecycle. It's because after AJAX call returns some data, in most cases we want to assign that date to the state of the component, and this can be done only on mounted components.
+
+State and lifecycle![State and lifecycle](https://facebook.github.io/react/docs/state-and-lifecycle.html)
+
+* What does shouldComponentUpdate do and why is it important?
+
+shouldComponentUpdate is important because of performance reasons.
+If we know that a certain section of our UI isn’t going to change, there’s no reason to have React go through the trouble of trying to figure out if it should update it. By returning false from shouldComponentUpdate, React will assume that the current component, and all its child components, will stay the same as they currently are.
+
+Optimizing performance![Optimizing performance](https://facebook.github.io/react/docs/optimizing-performance.html)
+
+* How do you tell React to build in Production mode and what will that do?
+
+Typically you’d use Webpack’s DefinePlugin method to set NODE_ENV to production. This will strip out things like propType validation and extra warnings.
+
+Development and production![Development and production](https://facebook.github.io/react/docs/installation.html#development-and-production-versions)
+
+* Why would you use React.Children.map(props.children, () => ) instead of props.children.map(() => )
+
+Because props.children can be an array but also a single component. If you'll pass single component then native map method will fail. React.Children.map handles both arrays of components and single components.
+
+React.Children.map![React.Children.map](https://facebook.github.io/react/docs/react-api.html#react.children.map)
+
+* Describe how events are handled in React.
+
+In React native events are wrapped in SyntheticEvent instances, which solves cross browser compatibility issues. SyntheticEvent have the same interface as native events.
+React doesn’t actually attach events to the child nodes themselves. React will listen to all events at the top level using a single event listener (due performance reasons).
+
+Handling events![Handling events](https://facebook.github.io/react/docs/handling-events.html)
+
+* What is the difference between createElement and cloneElement?
+
+createElement is what JSX gets transpiled to and is what React uses to create React Elements (object representations of some UI). cloneElement is used in order to clone an element and pass it new props.
+
+Create Element![Create Element](https://facebook.github.io/react/docs/react-api.html#createelement)
+Clone Element![Clone Element](https://facebook.github.io/react/docs/react-api.html#cloneelement)
+
+* What is the second argument that can be passed to setState and what is its purpose?
+
+The setState is asynchronous so it takes also a callback function as the second argument. This function is invoked when setState has finished and the component is re-rendered.
+
+setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
+
+* What is wrong with this code?
+
+```jsx
+this.setState((prevState, props) => {
+ return {
+   streak: prevState.streak + props.count
+ }
+})
+```
+
+Nothing. setState can also take a function as an argument. That function allows to set current state, based on previus state.
+
+setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
 
 
 #### Contributors:
