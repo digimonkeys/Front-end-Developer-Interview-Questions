@@ -295,6 +295,19 @@ Function declaration vs function expression![Function declaration vs function ex
     Wiele generowanych reklam używa `document.write()` choć nie jest to mile widziane.
 
 * Jakie są różnice między wykrywaniem obsługi funkcji, wnioskowaniem obsługi funkcji i używaniem ciągu UA?
+* Co to sa falsy values?
+
+Falsy values są to wartości, które podczas konwersji na boolean dają wartość false. Są to:
+
+- 0
+- "" - pusty string
+- null
+- undefined
+- NaN
+- false 
+
+Falsy values![MDN falsy values](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+
 * Omów AJAX jak najbardziej szczegółowo.
 * Podaj wady i zalety żywania technologii AJAX
   Zalety:

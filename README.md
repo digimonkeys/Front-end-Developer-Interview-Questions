@@ -624,6 +624,18 @@ In ES6 there is one more - block scope for variables defined with let and const 
 
 * What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
 * What tools and techniques do you use debugging JavaScript code?
+* What are falsy values
+
+Falsy values are values that evaluate to false when they're converted to boolean:
+- 0
+- "" - empty string
+- null
+- undefined
+- NaN
+- false
+
+Falsy values![MDN falsy values](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+
 * Types in Javascript
 
 JS types can be split in two categories - primitives and objects
