@@ -790,7 +790,7 @@ Reference: [Global variables disscusion](http://stackoverflow.com/questions/2613
 
 Callback is a function that is passed to the other function as an argument. Function that gets callback as argument can invoke it in its body. This execution may be immediate as in a synchronous callback, or it might happen at a later time as in an asynchronous callback.
 
-Callback![Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming))
+[Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming))
 
 * Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
 

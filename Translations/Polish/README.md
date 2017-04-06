@@ -617,6 +617,12 @@ Jako ciekawostke można dodać, że jest to jedyny operator w JavaScripcie, któ
 Odniesienie: [Conditional (ternary) Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
 * Czym jest `arity` funkcji?
+* Co to jest `callback`?
+
+Callback to funkcja, ktora przekazujemy do innej funkcji jako argument. Funkcja, która otrzymuje callback jako argument może go wywołac w swoim ciele. To wykonanie może być natychmiastowe w synchronicznym wywołaniu zwrotnym lub może zostać wykonane po czasie w sposób asynchroniczny. 
+
+[Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming))
+
 * Czemu, na ogół, dobrym pomysłem jest nie ruszanie globalnej przestrzeni strony?
 
 Generalnie nie deklarowanie zmiennych globalnych jest zalecane, ponieważ cały kod posiada jedną przestrzen nazw.
