@@ -555,6 +555,17 @@ Difference new vs Object.create![Difference new vs Object.create](http://stackov
     - Data is loaded dynamically and therefore is not part of the web page. Web search engines do not index dynamically loaded content.
 
 * Explain how JSONP works (and how it's not really Ajax).
+    JavaScript Object Notation with Padding - remote AJAX outside the domain.
+    Allows you to retrieve data from servers located in another domain,
+    Than the domain where script.js is started. Helps to bypass Same-origin policy.
+    JSONP allows you to retrieve JSON data by wrapping data into a JS function,
+    This makes it possible to run an external js script by adding it using a script tag.
+    In order to start the JSON return function we need to specify a callback in the url like the JSON wrapper function.
+    - `http://www.example.net/sample.aspx?callback=mycallback`
+    - Can only be used with GET queries
+
+    http://stackoverflow.com/questions/2067472/what-is-jsonp-all-about
+
 * Have you ever used JavaScript templating?
   * If so, what libraries have you used?
 * Explain "hoisting".

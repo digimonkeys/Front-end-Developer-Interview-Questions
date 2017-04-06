@@ -413,6 +413,17 @@ Falsy values![MDN falsy values](https://developer.mozilla.org/en-US/docs/Web/Jav
     - Dane są ładowane dynamicznie a więc nie są częścią strony WWW. Wyszukiwarki internetowe nie indeksują treści ładowanych dynamicznie
 
 * Wyjaśnij działanie JSONP (i dlaczego nie jest właściwie AJAX).
+    JavaScript Object Notation with Padding - zdalny AJAX spoza domeny.
+    Pozwala na pobieranie danych z serwerów znajdujących się w innej domenie,
+    niż domena w której uruchamiany jest skrypt.js. Pomaga ominąć Same-origin policy.
+    JSONP umożliwa pobieranie danych JSON poprzez opakowanie danych w funkcję JS,
+    co umożliwia uruchomienie zewnętrznego skryptu js poprzez dodanie go za pomocą tagu script.
+    W celu uruchomienia funkcji zwracającej JSON musimy w urlu podać callback taki sam jak funkcja opakowująca JSON.
+    - `http://www.example.net/sample.aspx?callback=mycallback`
+    - można używać tylko z zapytaniami GET
+
+    http://stackoverflow.com/questions/2067472/what-is-jsonp-all-about
+
 * Typy zmiennych w jsie?
  
 W JS rozróżniamy dwa typy danych: typy proste i typy złożone.
