@@ -852,6 +852,17 @@ A pending promise can either be fulfilled with a value, or rejected with a reaso
 [Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
 * What are the pros and cons of using Promises instead of callbacks?
+
+Pros:
+  - Avoiding "callback hell".
+  - More flexibility.
+  - Rich interface.
+  - Error handling.
+
+Cons:
+  - The envoirnment needs to support promises.
+  - Complexity.
+
 * Variables scope in JS?
 
 In JavaScript, til version ES6, there were only two versions of variables scope - global scope, and local - function scope.
@@ -864,6 +875,16 @@ In ES6 there is one more - block scope for variables defined with let and const 
 
 * What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
 * What tools and techniques do you use debugging JavaScript code?
+
+I'm using Chrome DevTools.
+Im using the following techniques:
+  - Break on node changes.
+  - XHR breakpoints.
+  - Pause on exception.
+  - Audits (optimization).
+
+Reference: [Tips & tricks](http://www.zsoltnagy.eu/javascript-debugging-tips-and-tricks/)
+
 * What are falsy values
 
 Falsy values are values that evaluate to false when they're converted to boolean:
@@ -1150,6 +1171,38 @@ console.log('three');
   http://www.tutorialsteacher.com/angularjs/what-is-angularjs
 * Explain ng-controller directive.
   The ng-controller directive attaches a controller class to the view. This is a key aspect of how angular supports the principles behind the Model-View-Controller design pattern. It also creates a new scope.
+
+* What is $rootScope?
+  $rootScope refers to an object which is accessible from everywhere of the application. You can think $rootScope as global variable and $scope as local variables.
+
+* What is use of $routeProvider in AngularJS?
+  $routeProvider is used for configuring routes in app.
+
+  https://docs.angularjs.org/api/ngRoute/provider/$routeProvider
+
+* Explain ng-include directive.
+  It is the way to fetch, compile and include templates/html fragment from external files.
+
+* How to make an ajax call using Angular JS?
+  You can make ajax calls using services $http or $https.
+  ```
+  $http({
+    method: 'GET',
+    url: '/someUrl'
+  }).then(function successCallback(response) {
+    // this callback will be called asynchronously
+    // when the response is available
+  }, function errorCallback(response) {
+    // called asynchronously if an error occurs
+    // or server returns response with an error status.
+  });
+  ```
+
+* How to validate data in AngularJS?
+  You can use two-way data-binding (ng-model) to validate data. Validation happens in the model, where you have a lot of options to validate data using JavaScript and its methods. 
+
+  AngularJS provides basic implementation for most common HTML5 input types: (text, number, url, email, date, radio, checkbox), as well as some directives for validation (required, pattern, minlength, maxlength, min, max).
+
 * What are the basic steps to unit test an AngularJS filter?
   1. Inject '$filter'
   2. Call it with '$filter(filterName)(input, options)'
@@ -1287,6 +1340,11 @@ console.log('three');
 * Explain ng-bind directive.
   The ng-bind directive binds the model property declared via $scope or ng-model directive or the result of an expression to the HTML element. It also updates an element if the value of an expression changes. 
 
+* Explain ng-app directive of AngularJS.
+  The ng-app directive is a starting point of AngularJS Application. It initializes the AngularJS framework automatically. AngularJS framework will first check for ng-app directive in a HTML document after the entire document is loaded and if ng-app is found, it bootstraps itself and compiles the HTML template.
+  Typically ng-app directives should be placed at the root of an HTML document e.g. <html> or <body> tag, so that it can control the entire DOM hierarchy. However, you can place it in any DOM element.
+  The AngularJS framework will only process the DOM elements and its child elements where the ng-app directive is applied.
+  
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
@@ -1295,6 +1353,7 @@ console.log('three');
 * Do you have any pet projects? What kind?
 * What's your favorite feature of Internet Explorer?
 * How do you like your coffee?
+
 
 #### React Questions
 
@@ -1404,7 +1463,6 @@ this.setState((prevState, props) => {
 Nothing. setState can also take a function as an argument. That function allows to set current state, based on previus state.
 
 setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
-
 
 #### Contributors:
 

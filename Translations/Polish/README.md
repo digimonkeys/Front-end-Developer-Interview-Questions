@@ -639,6 +639,18 @@ Classical vs Prototypal![Stackoverflow - classical vs prototypal](http://softwar
 Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
 Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
 
+* Jakie sa wady i zalety używania obietnic zamiast callbacków?
+
+Zalety:
+  - Unikanie "callback hell".
+  - Wieksze mozliwosci.
+  - Bogaty interfejs.
+  - Obsługa błędów.
+
+Wady:
+  - Środowisko musi wspierać obietnice.
+  - Kod jest bardziej skomplikowany.
+
 * Jak bardzo jesteś zaznajomiony z `Promises` i/czy ich polyfillami?
 
 Używam `Promises` od pewnego czasu, prawdopodobnie coś około połowy roku.
@@ -663,6 +675,17 @@ Może posiadać jeden z trzech stanów:
 Oczekująca obietnica może być spełniona z jakąś wartością lub odrzucona z jakimś powodem (błędem). Gdy tak się stanie, przypisane funkcje w metodzie then zostaną wykonane.
 
 [Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+
+* Jakich narzędzi i technik używasz do debugowania kodu JavaScript?
+
+Używam DevTools z Chrome.
+Używam następujących technik:
+  - Przerywanie wykonywania kodu przy zmianie wybranego elementu DOM.
+  - Breakpointy przy wysyłaniu żądan.
+  - Przerywanie wykonywania kodu przy wyjątku.
+  - Sprawdzanie optymalizacji kodu przy pomocy Audits (zakładka w DevTools).
+
+Odniesienie: [Wskazówki](http://www.zsoltnagy.eu/javascript-debugging-tips-and-tricks/)
 
 * Zasieg zmiennych w JavaScript?
 
@@ -1217,6 +1240,38 @@ console.log('three');
   http://www.tutorialsteacher.com/angularjs/what-is-angularjs
 * Wyjaśnij dyrektywę ng-controller.
   Dyrektywa ng-controller dołącza klasę kontrolera do widoku. Jest to kluczowy aspekt tego, jak Angular wspiera MVC. Ng-controller tworzy również nowy zakres.
+
+* Czym jest $rootScope?
+  $rootScope odnosi się do obiektu, który jest dostępny z każdego miejsca w aplikacji. Możesz myśleć o $rootScope jako globalnej zmiennej oraz $scope jako lokalnej.
+
+* Jakie jest zastosowanie $routeProvider w AngularJS?
+  $routeProvider jest używany do konfigurowania routów w aplikacji.
+
+  https://docs.angularjs.org/api/ngRoute/provider/$routeProvider
+
+* Wyjaśnij dyrektywę ng-include.
+  Jest to sposób na pobranie, kompilację i dołączenie szablonu/fragmentu html z innych plików.
+
+* Jak pobierać dane używając AJAX w AngularJS?
+  Do pobierania danych używając AJAX można użyć serwisów $http oraz $https
+  ```
+  $http({
+    method: 'GET',
+    url: '/someUrl'
+  }).then(function successCallback(response) {
+    // this callback will be called asynchronously
+    // when the response is available
+  }, function errorCallback(response) {
+    // called asynchronously if an error occurs
+    // or server returns response with an error status.
+  });
+  ```
+
+* Jak weryfikować dane w AngularJS?
+  Możesz użyć przepływu danych w dwie strony (data binding, ng-model) by weryfikować dane. Weryfikacja dzieje się w warstwie modelu, gdzie masz dużo opcji do weryfikacji danych używając JavaScriptu i jego metod.
+
+  AngularJS zapewnia podstawową implementację większości typów danych wejściowych HTML5 (text, number, url, emial, date, radio, checkbox) oraz parę dyrektyw dla weryfikacji danych (required, pattern, minlength, maxlength, min, max).
+
 * Jakie są podstawowe kroki do jednostkowego przetestowania filtra w AngularJS?
   1. Wstrzyknąć '$filter'
   2. Wywołać to w ten sposób: '$filter(nazwaFiltra)(daneWejsciowe, opcje)'
@@ -1351,6 +1406,11 @@ console.log('three');
 
 * Wyjaśnij dyrektywę ng-bind.
   Dyrektywa ng-bind łączy właściwość warstwy modelu zadeklarowaną w $scope, dyrektywie ng-model lub rezultat wyrażenia z elementem HTML. Uaktualnia również element, jeśli wartość wyrażenia się zmieniła.
+
+* Wyjaśnij dyrektywę ng-app w AngularJS.
+  Dyrektywa ng-app jest punktem startującym aplikację AngularJS. Inicjalizuje framework automatycznie. AngularJS najpierw szuka dyrektywy ng-app w dokumencie HTML po załadowaniu całego dokumentu. Jeśli znajdzie ng-app, ładuje sam siebie i kompiluje szablon HTML.
+  Dyrektywa ng-app powinna znajdować się w głównych tagach dokumentu HTML, np. <html> lub <body>, pozwala to kontrolować całą wewnętrzną hierarchię DOM. Jednakże, możesz umieścić ng-app w każdym elemencie DOM.
+  AngularJS będzie przetwarzał tylko ten element DOM oraz wszystkie jego dzieci.
 
 ### Pytania dodatkowe (zabawne):
 
