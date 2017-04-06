@@ -63,6 +63,9 @@ Najpierw zbieranie wymagań klienta, funkcjonalnych i niefunkcjonalnych.
 Tworzenie środowiska - skrypty służące do budowania w środowisku developerskim i produkcyjnym - webpack, gulp.
 Szkielet strony i semantyka, wypełnienie kontentem + poprawa semantyki, stylowanie, animacje, dodawanie interaktywności.  
 
+* Jak zintegrujesz 5 istniejących stylesheetów ze stroną?  
+Tworząc swoje arkusze stylów raczej nie dopuszczam do tego typu problemów, poniewaz nawet jesli trzymam css w wielu plikach używam webapcka do łączenia ich w jeden. Jeśli jednak miałbym takie zadanie prawdopodobnie użyłbym narzędzia takiego jak YUI Compressor.
+
 * Opisz różnicę między stopniowym ulepszaniem (progressive enhancement) i wdzięczną degradacją (graceful degradation)?
   * Dodatkowe punkty za opisanie wykrywania obsługi cech (feature detection)  
   
