@@ -362,6 +362,23 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 
 * What is React? How is it different from other JS frameworks?
 * What happens during the lifecycle of a React component?
+    React.Component has three main life cycles, allowing them to manage
+    Component before adding it to the DOM tree, during its life
+    and when it was removed. These are:
+    1. mount - Methods created when adding to a DOM tree:
+      - constructor()
+      - componentWillMount()
+      - render()
+      - componentDidMount()
+    2. update - Methods invoked when changing the state of a component or variable in this.props object:
+      - componentWillReceiveProps()
+      - shouldComponentUpdate()
+      - componentWillUpdate()
+      - render()
+      - componentDidUpdate()
+    3. unmount - Method invoked when a component is removed from a DOM tree:
+      - componentWillUnmount()
+
 * What can you tell me about JSX?
 * Are you familiar with Flux?
 * What are stateless components?
