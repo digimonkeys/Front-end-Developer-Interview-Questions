@@ -1263,6 +1263,14 @@ console.log('three');
   Unit Testing Ready
     AngularJS is unit testing ready, and that is one of its most compelling advantages.
 
+* What are the disadvantages of AngularJS?
+  Confusion
+    There are multiple ways to do the same thing with AngularJS. Sometimes, it can be hard for novices to say which way is better for a task.
+  Lagging UI
+    If there are more than 2000 watchers, it can get the UI to severely lag. This means that the possible complexity of Angular Forms is limited. This includes big data grids and lists.
+  Name Clashes
+    With AngularJS, you don’t have the ability to compose many NG-apps on the same page. This can cause name clashes.
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
