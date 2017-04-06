@@ -108,9 +108,9 @@ Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich prz
   * Ulubiony wzorzec używany do ich tworzenia? argyle (Dotyczy tylko IIFE)
 * Jakie znasz typowe użycie funkcji anonimowych?
   - Callbacks
-  - IFFE's
+  - IIFE's
   - Closures
-  
+
 * Wyjaśnij pojęcie "Moduł JavaScript" i kiedy jest warte stosowania.
   * Dodatkowe punkty za wzmiankę na temat czystości przestrzeni nazw.
   * Co jeśli Twój kod nie używa przestrzeni nazw?

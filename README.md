@@ -154,8 +154,9 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
 * What is a closure, and how/why would you use one?
 * What's a typical use case for anonymous functions?
     - Callbacks
-    - IFFE's
+    - IIFE's
     - Closures
+    
 * How do you organize your code? (module pattern, classical inheritance?)
 * What's the difference between host objects and native objects?
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
