@@ -191,6 +191,10 @@ http://www.webdevout.net/articles/beware-of-xhtml#myths
 Zawsze należy używać atrybutu language na tagu html do określenia domyślnego języka strony. Zawartość w innym języku należy otoczyć jakimś elementem do którego dodamy równiez atrybut language. Dla stron html należy używać atrybutu lang, zaś dla xhtml xml:lang. W html 1.x i w html 5 obu. 
 https://www.w3.org/International/questions/qa-html-language-declarations  
 
+* O czym trzeba pamiętać tworząc strony wielojęzykowe?
+Należy rozważyć jak userzy będą przekierowywani na odpowiednią wersję językową strony. Należy również pamiętać o sprawach takich jak: tekst w obrazkach się nie przetłumaczy ani nie przeskaluje, kolory mogą być inaczej postrzegane przez ludzi z innych kultur, nie powinno się wpisywać w ogóle tekstu do szablonów strony (tekst powinien być dynamicznie renderowany), formaty dat mogą się różnić, należy pamiętać o stylowaniu czcionek przez selector css :lang, słowa w różnych językach będą miały różną długość.  
+https://www.quora.com/What-kind-of-things-one-should-be-wary-of-when-designing-or-developing-for-multilingual-sites  
+
 * Jaka jest przydatność atrybutów `data-`
 * Rozpatrujemy HTML5 jako otwartą platformę internetową. Jakie składniki tworzą HTML5?
 * Opisz różnice między cookies, sessionStorage i localStorage.
