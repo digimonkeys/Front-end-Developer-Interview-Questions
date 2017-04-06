@@ -934,6 +934,7 @@ console.log('three');
 * Czy masz jakiś swój własny projekt na boku? Jaki?
 * Jaka jest Twoja ulubiona funkcja w Internet Explorer?
 
+* Czym jest cykl digest w angularze?
 Cykl $digest to pętla przechodząca po wszystkich utworzonych wiązaniach sprawdzająca, czy doszło do zmiany danych i ponownie renderująca zmienione wartości. Angular w celu uaktualnienia widoku po zmianie danych, których obserwowanie zarejestrowaliśmy, musi śledzić zachodzące zmiany. Robi to dodając funkcję watch do $watch list. Lista ta jest sprawdzana w cyklach $digest za pomocą tzw. ‘brudnego sprawdzenia’. Sprawdzana jest każda wartość po kolei – jeśli nie uległa zmianie, Angular przechodzi do kolejnego elementu listy, jeśli się zmieniła – rejestruje nową wartość i przechodzi dalej, a po zakończeniu sprawdzania listy od razu sprawdza ją od nowa. Dzieje się tak, ponieważ zmiana jednej wartości mogła pociągnąć za sobą zmianę wartości, którą angular sprawdził wcześniej (gdyby nie ponowne przejrzenie listy $watch zmiana ta pozostałaby niezauważona). Jeśli cała pętla powtórzy się 10 razy, Angular wyrzuca błąd w celu zapobiegnięcia utworzeniu nieskończonej pętli.  
 Cykl $digest jest rozpoczynany zawsze, gdy jako część kontekstu Angulara wydarzy się DOM event, zapytanie ajax z powiązanych callbackiem, timer z callbackiem, użycie $apply, $digest, itp. Normalne eventy DOM, ajaxy itd. nie uruchamiają cyklu, tylko te bezpośrednio związane z angularem (np. ng-click).  
 https://www.ng-book.com/p/The-Digest-Loop-and-apply/  
