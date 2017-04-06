@@ -430,10 +430,6 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 
 * Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
   * What needs to be changed to properly make it an IIFE?
-  a) The function foo () is written as a function declaration and not a function expression (IIFE - Immediately-Invoked Function Expression )
-  b) Missing outer parentheses () - (function foo(){ }())
-  http://benalman.com/news/2010/11/immediately-invoked-function-expression/
-
 * What's the difference between a variable that is: `null`, `undefined` or undeclared?
   - Undeclared is a variable that was not created with var / let / const and was created on a global window / global object.
   - Undefined is a variable that has been declared but has no value assigned to it.
@@ -464,6 +460,11 @@ https://www.w3.org/International/questions/qa-html-language-declarations
     http://stackoverflow.com/questions/7614317/what-is-the-difference-between-native-objects-and-host-objects
     
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
+  - A Function Declaration defines a named function variable without requiring variable assignment.
+  - Assigns to the person variable the value returned by the person function, in this case undefined
+  - Assigns a Person object to person variable, with this assigned to the person object
+  https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/
+
 * How you can achieve inheritance in JavaScript (new + Object.create)
 
 - With a constructor
