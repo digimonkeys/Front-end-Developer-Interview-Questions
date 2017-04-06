@@ -296,7 +296,7 @@ Odniesienie: [Conditional (ternary) Operator](https://developer.mozilla.org/en-U
 
 Callback to funkcja, ktora przekazujemy do innej funkcji jako argument. Funkcja, która otrzymuje callback jako argument może go wywołac w swoim ciele. To wykonanie może być natychmiastowe w synchronicznym wywołaniu zwrotnym lub może zostać wykonane po czasie w sposób asynchroniczny. 
 
-Callback![Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming))
+[Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming))
 
 * Co oznacza `"use strict";`? Jakie są zalety i wady takiego rozwiązania?
 * Jaka jest roznica miedzy funkcja a obiektem?
