@@ -226,7 +226,8 @@ http://stackoverflow.com/a/24070373
 Progressive rendering is the name given to techniques used to render content for display as quickly as possible. Example: lazy loading of images where (typically) some javascript will load an image when it comes into the browsers viewport instead of loading all images at page load.  
 http://stackoverflow.com/a/33651444  
 
-* Have you used different HTML templating languages before?
+* Have you used different HTML templating languages before?  
+No, but I'm familiar with Jade, EJS, HandlebarsJs, Underscore Templates, Mustache  
 
 #### CSS Questions:
 

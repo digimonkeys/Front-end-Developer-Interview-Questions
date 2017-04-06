@@ -232,6 +232,9 @@ http://stackoverflow.com/a/24070373
 Są to techniki renderowania treści do wyświetlenia tak szybko, jak to możliwe. Przykład: opóźnione ładowanie obrazków, gdzie skrypt js ładuje obrazek dopiero gdy znajdzie się w viewporcie przeglądarki, zamiast ładować wszystkie - również niewidoczne - obrazki podczas startu strony.  
 http://stackoverflow.com/a/33651444  
 
+* Czy używałeś różnych HTML templating languages?  
+Nie, ale jestem zaznajomiony z: Jade, EJS, HandlebarsJs, Underscore Templates, Mustache  
+
 ### Pytania JS:
 
 * Wyjaśnij delegację zdarzeń.
