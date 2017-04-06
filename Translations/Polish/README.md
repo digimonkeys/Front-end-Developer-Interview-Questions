@@ -548,13 +548,19 @@ $(".foo div#bar:eq(0)")
   Float'y mogą by używane do opakowywania tekstu wokół obrazka/elementu lub to tworzenia całych layoutów. Pływające elementy pozostają częścią flow strony, w odróżnieniu od elementów o ustalonym położeniu, które są usuwane z flow strony i nie uczestniczą w dostosowywaniu zawartości np. do zmieniającej się szerokości okna.
 
   https://css-tricks.com/all-about-floats/
+
 * Jak podejdziesz do rozwiązywania problemów dotyczących stylizacji konkretnych przeglądarek?
   - użycie osobnych stylów CSS, które ładowałyby się tylko wtedy gdy dana przeglądarka jest używana
   - używając przedrostków CSS dotyczących poszczególnych przeglądarek (-moz-, -webkit-, itd)
   - resetując lub normalizując CSS
 
 * Jakie znasz techniki kasowania (clearing) i kiedy wskazane jest ich stosowanie?
+
 * Wyjaśnij technikę "CSS sprites" oraz sposób jej wdrożenia na stronie.
+  Jest to sposób na zmniejszenie zapytań HTTP, łącząc obrazy w jeden duży. Użyłbym do tego generatora sprite'ów, łącząc wszystkie obrazy w jeden duży, zazwyczaj odseparowane od siebie o piksel. W CSS, umieściłbym obraz tła w klasie sprite, który używałbym do każdego elementu z obrazkiem. Aby określić konkretny obraz lub ikonę, utworzyłbym inną klasę z pozycją obrazu tła i jego wymiarami.
+
+  https://css-tricks.com/css-sprites/
+* Jakie znasz techniki kasowania (clearing) i kiedy wskazane jest ich stosowanie?
 * Jakie są Twoje ulubione techniki zastępowania obrazów i kiedy je stosujesz?
   Zastępowanie obrazów CSS jest techniką zastępowania tekstowego elementu (zazwyczaj tagu nagłówkowego) obrazem. Można użyć do tego <h1> i tekstu dla benefitów płynących z dostępności oraz SEO.
   Używam zastępowania obrazów (w zależności od potrzeby), kiedy chcę by moja strona była bardziej dostępna dla urządzeń takich jak czytniki itp. Zazwyczaj używam do tego celu ukrywania tagu span poprzed 'display: none'.

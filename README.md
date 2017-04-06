@@ -208,6 +208,9 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 
   https://css-tricks.com/all-about-floats/
 * Explain CSS sprites, and how you would implement them on a page or site.
+  It is the way to reduce HTTP requests by combining images together into one big image. I would use sprite generator, combining all images into one big, usually separated by a pixel. In the css, put the background image on a sprite class that I use for all my image elements. To specify a specific image or icon, I'll set another class with the background positions and sizes of the image.
+
+  https://css-tricks.com/css-sprites/
 * What are your favourite image replacement techniques and which do you use when?
   CSS image replacement is a technique of replacing a text element (usually a header tag) with an image. You may want to use a <h1> tag and text for this for the accessibility and SEO benefits.
   I use image replacements (depending on the needs), when I want to make my page more accessible for devices like readers etc. Usually I use display none span in header.
