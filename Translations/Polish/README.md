@@ -172,6 +172,23 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 
 * Czym jest React? Oraz czym się rożni od innych frameworkow?
 * Co się dzieje w trakcie cykli zycia komponentow React?
+  React.Component posiada trzy głowne cykle swojego życia, pozwalają one na zarzązdanie
+  komponentem zarowno przed dodaniem go do drzewa dom, w trakcie jego życia
+  oraz w momencie jego usunięcia. Są to:
+  1. montowanie - metody tworzone podczas dodawania do drzewa DOM:
+    - constructor()
+    - componentWillMount()
+    - render()
+    - componentDidMount()
+  2. Odświeżanie - metody wywoływane w przypadku zmiany stanu komponentu lub zmiennych w obiekcie this.props:
+    - componentWillReceiveProps()
+    - shouldComponentUpdate()
+    - componentWillUpdate()
+    - render()
+    - componentDidUpdate()
+  3. Demontowanie - metoda wywoływana kiedy komponent jest usuwany z drzewa DOM:
+    - componentWillUnmount()
+
 * Co możesz powiedzieć o JSX?
 * Czy jesteś obeznany z Flux?
 * Czym są bezstanowe elementy?
