@@ -924,6 +924,12 @@ $(".foo div#bar:eq(0)")
   Jest to IE6 Quirks mode (tryb dziwactw): jeśli uwstawisz szerokość, dodasz paddingi oraz obramowanie, całkowita szerokość nie zmieni się. Wewnętrzna szerokość dostosuje się do reszty.
 
   Zalety: Możesz ustawiać wartości paddingów i obramowania bez przejmowania się o 'rozjechanie', rozszerzenie się pudełka. Jest to bardzo wygodne dla kolumnowych layoutów. Możesz również używać na przemian wartości w procentach i pikselach, więc nie musisz polega na elemencie podrzędnym dla paddingu.
+* Używałeś Flexboxa lub Grida?
+  Tak, używam flexboxa w moich projektach. Jest bardzo prosty i komfortowy w użyciu i daje wspaniałe efekty. Wygląda na to, że grid jest wspierany przez wszystkie większe przeglądarki (oprócz Edge, który wspiera starą składnie), więc warto jest się go nauczyć.
+
+  http://caniuse.com/#feat=css-grid
+  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+  https://css-tricks.com/snippets/css/complete-guide-grid/
 * Jakiego frameworka CSS używałeś lokalnie, lub na produkcji? Jak byś go zmienił/ulepszył?
   Używałem Boostrapa i Angular Material. Boostrap jest świetny dla małych stron, jednak dla większych projektów jest za dużo do zmieniania. Każdy framework narzuca swój własny styl strony, więc wiele stron wygląda tak samo, tylko ze zmienionymi kolorami. To jest to co chciałbym zmienić w frameworkach CSS - więcej wolności i dopasowywania, by tworzyć strony, które nie wyglądają tak samo jak milion innych.
 

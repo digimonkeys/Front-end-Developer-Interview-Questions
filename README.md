@@ -437,6 +437,11 @@ http://javascript.tutorialhorizon.com/2015/08/11/script-async-defer-attribute/
 * What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
   Bootstrap and Angular Material. Bootstrap is great for small pages, but for bigger projects there is too much to change. Every framework impose its own style of page, so a lot of pages looks the same, just with different colors. It is what I would change in CSS frameworks - more freedom and adjusting to create pages which don't look like a milion others.
 * Have you played around with the new CSS Flexbox or Grid specs?
+  Yes, I use flexbox in my projects. It is very simple and comfortable in use and giving great effects. Grid seems to be supported by all major browsers (except Edge, which has old syntax), so it is worthy to learn it.
+
+  http://caniuse.com/#feat=css-grid
+  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+  https://css-tricks.com/snippets/css/complete-guide-grid/
 * How is responsive design different from adaptive design?
 * Have you ever worked with retina graphics? If so, when and what techniques did you use?
 * Is there any reason you'd want to use `translate()` instead of *absolute positioning*, or vice-versa? And why?
