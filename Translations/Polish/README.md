@@ -196,7 +196,10 @@ Należy rozważyć jak userzy będą przekierowywani na odpowiednią wersję ję
 https://www.quora.com/What-kind-of-things-one-should-be-wary-of-when-designing-or-developing-for-multilingual-sites  
 
 * Jaka jest przydatność atrybutów `data-`
-* Rozpatrujemy HTML5 jako otwartą platformę internetową. Jakie składniki tworzą HTML5?
+* Rozpatrujemy HTML5 jako otwartą platformę internetową. Jakie składniki tworzą HTML5?  
+Główne składniki takiej platformy internetowej to html 5, css3, js i svg. Html 5 służy do definiowania kształtu dokumentu (tytułów, nagłówków, tabel itp), css do nadawania mu stylu, js do tworzenia skryptów i svg do tworzenia skalowalnych grafik wektorowych.  
+http://yucianga.info/?p=655  
+
 * Opisz różnice między cookies, sessionStorage i localStorage.
 
 ### Pytania JS:
