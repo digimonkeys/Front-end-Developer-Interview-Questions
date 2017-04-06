@@ -542,9 +542,19 @@ Object.create![Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScri
     http://stackoverflow.com/questions/2414750/difference-between-domcontentloaded-and-load-events
     
 * What is the difference between `==` and `===`?
-    `==` Compares values by making coerces if the types of variables are not the same
-    `===` Compares the values and types of variables without making coercion
-    
+
+`==` Compares values by making coerces if the types of variables are not the same
+`===` Compares the values and types of variables without making coercion
+
+* Whats a function declaration and function expression? What are the differences?
+
+The function declaration defines a function with the specified name and parameters.
+Function expression is almost identical, but i allows to omit function name, thus creating annonymous function. Function expressions can be used as an IIFE. Function expressions (not like function declartion) arent hoisted.
+
+Function delcaration![Function delcaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+Function expression![Function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function)
+Function declaration vs function expression![Function declaration vs function expression](https://www.sitepoint.com/function-expressions-vs-declarations/)
+
 * Explain the same-origin policy with regards to JavaScript.
     This is a fundamental security mechanism of the browser.
     This mechanism prevents js scripts from accessing the DOM trees of different origins.
