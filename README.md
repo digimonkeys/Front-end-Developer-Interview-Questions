@@ -832,7 +832,11 @@ DotFactory patterns![DotFactory patterns](http://www.dofactory.com/javascript/de
 JavaScript Design Patterns![JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 
 * Explain what a single page app is and how to make one SEO-friendly.
-* What is the extent of your experience with Promises and/or their polyfills?
+* What is the extent of your experience with `Promises` and/or their polyfills?
+
+I've been using `Promises` for some time now, probably about half of a year.
+Thanks to `Promises` my asynchronous code looks better and I dont get stuck in a callback hell.
+The only polyfill I've used is `Bluebird`.
 
 * Whats a Promise ?
 
