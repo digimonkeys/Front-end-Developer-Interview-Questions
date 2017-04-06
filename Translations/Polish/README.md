@@ -77,9 +77,7 @@ Ponieważ pozwala na użycie lżejszego serwera, który nie będzie musiał ład
 http://webmasters.stackexchange.com/a/26757
 http://webmasters.stackexchange.com/a/25091 
 
-* Ile zasobów pobiera przeglądarka z danej domeny w jednej chwili?  
-Starsze przeglądarki jak IE6 - 2, nowsze 6 / 8.  
-
+  * Ile zasobów pobiera przeglądarka z danej domeny w jednej chwili?
 * Podaj 3 sposoby na zmniejszenie czasu ładowania strony. (postrzeganego lub rzeczywistego czasu ładowania)
 * Jeśli dołączasz do projektu, w którym używa się tabulacji, a ty używasz spacji, co wtedy zrobisz?
   * Sugerowanie użycia narzędzi w stylu EditorConfig (http://editorconfig.org)
@@ -156,6 +154,12 @@ Plusy animacji CSS w stosunku do JS:
 
 https://developers.google.com/web/fundamentals/design-and-ui/animations/css-vs-javascript  
 https://css-tricks.com/myth-busting-css-animations-vs-javascript/  
+
+* Co to jest CORS i do czego jest potrzebny?  
+Cross-origin resource sharing (w skrócie CORS) – mechanizm umożliwiający współdzielenie zasobów pomiędzy serwerami znajdującymi się w różnych domenach. Normalnie jest to niemożliwe ze względu na same orign policy - sop uniemożliwia dwóm osobnym kontekstom Javascript modyfikację swoich drzew DOM. Dzięki temu strona Agresora aggressive.com nie może modyfikować DOM strony Banku bank.com, w sytuacji kiedy np. te dwie strony są otwarte w kartach przeglądarki.  
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS  
+https://en.wikipedia.org/wiki/Cross-origin_resource_sharing  
+https://en.wikipedia.org/wiki/Same-origin_policy 
 
 ### Pytania HTML:
 

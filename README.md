@@ -61,6 +61,7 @@ I start with gathering client requirements. Ten I create environment - bundling 
 
 * If you have 5 different stylesheets, how would you best integrate them into the site?
 * Can you describe the difference between progressive enhancement and graceful degradation? 
+
 * What is semantic html?  
 Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, of the information in webpages and web applications rather than merely to define its presentation or look. Semantic HTML is processed by traditional web browsers as well as by many other user agents. CSS is used to suggest its presentation to human users.  
 
@@ -74,9 +75,8 @@ If set up properly (e.g. your site is hosted on www.example.com instead of examp
 http://webmasters.stackexchange.com/a/26757
 http://webmasters.stackexchange.com/a/25091  
 
-* How many resources will a browser download from a given domain at a time? 
-It depends on a browser, older ones like IE6 - 2, newer ones 6-8.  
-
+* How many resources will a browser download from a given domain at a time?
+  * What are the exceptions?
 * Name 3 ways to decrease page load (perceived or actual load time).
 * If you jumped on a project and they used tabs and you used spaces, what would you do?
 I will adapt (just change settings in my editor).
@@ -148,7 +148,11 @@ Pros of CSS animations vs JS:
 https://developers.google.com/web/fundamentals/design-and-ui/animations/css-vs-javascript  
 https://css-tricks.com/myth-busting-css-animations-vs-javascript/  
 
-* What does CORS stand for and what issue does it address?
+* What does CORS stand for and what issue does it address?  
+Cross-origin resource sharing - is a mechanism that allows restricted resources (e.g. fonts) on a web page to be requested from another domain outside the domain from which the first resource was served. Normally it is not possible due to Same origin policy - a web browser permits scripts contained in a first web page to access data in a second web page, but only if both web pages have the same origin. An origin is defined as a combination of URI scheme, hostname, and port number. This policy prevents a malicious script on one page from obtaining access to sensitive data on another web page through that page's Document Object Model.  
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS  
+https://en.wikipedia.org/wiki/Cross-origin_resource_sharing  
+https://en.wikipedia.org/wiki/Same-origin_policy 
 
 #### HTML Questions:
 
