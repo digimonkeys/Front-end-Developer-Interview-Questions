@@ -1468,3 +1468,7 @@ this.setState((prevState, props) => {
 Nic. setState może także przyjmować funkcję jako pierwszy argument. Funkcja ta pozwala na ustawienie obecnego stanu na podstawie stanu poprzedniego.
 
 setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
+
+* Czym jest DDO (Directive Definition Object)?
+DDO to obiekt definiujący dyrektywę, zawiera on instrukcje tworzenia dyrektywy dla kompilatora.  
+https://docs.angularjs.org/api/ng/service/$compile#directive-definition-object  
