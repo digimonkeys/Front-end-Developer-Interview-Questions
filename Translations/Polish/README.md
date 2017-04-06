@@ -110,10 +110,13 @@ https://jsperf.com/
 https://wiki.mozilla.org/Dromaeo  
 
 * Gdybyś mógł opanować jedną technologię w tym roku, jaka byłaby to technologia?
+* FOUC? Jak unikasz FOUC?
 * Wyjaśnij znaczenie standardów sieciowych i ich twórców.  
+
 Standardy są bardzo istotne ponieważ aplikacje pisane w danym języku są kompilowane przez różne przeglądarki. Pozwala to uniknąć sytuacji, w której kod działa w połowie przeglądarek, lub działa tylko w tej ulubionej kodera. Gdy opracowany jest standard przeglądarki wiedzą czego się spodziewać i każdy piszący w zgodzie ze standardem może zakładać, że wszystko będzie działać. Twórcami standardów są w3c, iso, ansi, unicode consortium, ietf oraz ecma.  
 
 * Czym jest FOUC? Jak unikasz FOUC?  
+
 Flash of unstyled content jest to wyświetlenie użytkownikowi nieostylowanej strony (jej zawartości) podczas ładowania strony. Pojawia się gdy CSS jest wolno ładowany lub gdy JS powoduje wielokrotne renderowanie strony.
 Aby uniknąć FOUC należy serwować użytkownikowi jak najbardziej zoptymalizowany CSS (zminifikowany, w jednym pliku), oraz używać jak najmniej javascriptu powodującego fazę render przeglądarki. Używanie Critical CSS (czyli wrzucanie najważniejszych reguł css inline w znaczniku head).
 Używanie media queries i serwowanie CSS zoptymalizowanego dla urządzeń o mniejszej rozdzielczości. Można też ukryć całą stronę do czasu załadowania wszystkich styli.  
@@ -395,8 +398,15 @@ Odniesienie: [Conditional (ternary) Operator](https://developer.mozilla.org/en-U
 * Czym jest `arity` funkcji?
 * Co oznacza `"use strict";`? Jakie są zalety i wady takiego rozwiązania?
 * Jaka jest roznica miedzy funkcja a obiektem?
+
 Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
 Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
+
+* Czym jest dziedziczenie?
+ 
+Dziedziczenie jest mechanizmem współdzielenia funkcjonalności między klasami i/lub obiektami (w rozumieniu klasycznym) lub obiektami (w dziedziczeniu prototypowym - jak w js). Klasa dziedzicząca (zwana klasą pochodną) otrzymuje dostęp do udostępnionych zachowń oraz atrybutów od klasy, z której następuje dziedziczenie (zwanej klasą bazową).
+ 
+Dziedziczenie![Wikipedia - dziedziczenie](https://pl.wikipedia.org/wiki/Dziedziczenie_(programowanie)) 
 
 * Czym jest obietnica (`Promise`)?
 
