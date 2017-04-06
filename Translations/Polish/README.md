@@ -751,6 +751,19 @@ $(".foo div#bar:eq(0)")
   - ustalam rozmiar strony do druku (szerokość najlepiej podać w calach lub centrymetrach(oba rekomendowane))
   
   https://davidwalsh.name/optimizing-structure-print-css
+* Jakie są zalety/wady używania preprocessorów CSS? (SASS, Compass, Stylus, LESS)
+  Zalety
+    - lepsza organizacja wynikająca z zagnieżdżania selektorów
+    - zdolność do definiowania zmiennych i mixinów
+    - matematyczne funkcje
+    - łączenie plików
+    - w paru przypadkach czystsza składnia
+  Wady
+    - głównie dla projektantów - mniejszy komfort wynikający z używania wiersza poleceń lub konceptów programistycznych
+  * Opisz co podoba ci (lub nie) w używanych wcześniej przez ciebie preprocessorów.
+    Używałem SASS'a i naprawdę podoba mi się zagnieżdżanie, zmienne i matematyczne funkcje, które pomagają bardzo w stylowaniu. Nie bylo rzeczy, których nie lubiłem, możliwe że moja wiedza o SASS'ie jest zbyt mała.
+
+  http://nosleepforsheep.com/using-a-css-preprocessor/
 * Jakie stosujesz "sztuczki" przy pisaniu efektywnych CSS?
   - unikam selektorów, które łapią duże ilości elementów (tagi i uniwersalne selektory)
   - preferuję klasy i identyfikatory zamiast selektorów tagów
