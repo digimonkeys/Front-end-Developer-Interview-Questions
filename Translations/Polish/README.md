@@ -171,7 +171,7 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 #### Pytania REACT:
 
 * Czym jest React? Oraz czym się rożni od innych frameworkow?
-  React jest frameworkiem, pozwalającym na tworzenie komponowalnych interfejsow użytkownika.
+  React jest biblioteką, pozwalają na tworzenie komponowalnych interfejsow użytkownika.
   Posiada wirtualne drzewo DOM, a podczas zmiany jakichś danych renderowane są tylko te elementy,
   ktore uległy zmianie. Porownywany do warstwy V (Widok) w MVC. Głownym założeniem jest
   tworzenie reużywalnych komponentow.
