@@ -646,10 +646,13 @@ Private members![Crockford on private members](http://javascript.crockford.com/p
     the load event will do it when all the images and sub-frames have finished loading.
     http://stackoverflow.com/questions/2414750/difference-between-domcontentloaded-and-load-events
     
+* Explain how you can get parameters from a URL in a browser window.
+    They can be retrieved using the jQuery library, eg .getUrlParam, or by using JS and regular expressions.
+    http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+    
 * What is the difference between `==` and `===`?
-
-`==` Compares values by making coerces if the types of variables are not the same
-`===` Compares the values and types of variables without making coercion
+  `==` Compares values by making coerces if the types of variables are not the same
+  `===` Compares the values and types of variables without making coercion
 
 * Whats a function declaration and function expression? What are the differences?
 

@@ -538,6 +538,9 @@ Difference new vs Object.create![Difference new vs Object.create](http://stackov
     `===` porównuje wartości jak i typy zmiennych, nie dokonując koercji
 
 * Wyjaśnij ewentualny sposób pobrania parametrów z adresu URL w oknie przeglądarki.
+    Można je pobrać za pomocą biblioteki jQuery np.getUrlParam lub za pomocą JS i wyrażeń regularnych.
+    http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+
 * Wyjaśnij politykę `same-origin` w odniesieniu do JavaScript.
     Jest to fundamentalny mechanizm bezpieczeństwa przeglądarki. Mechanizm ten zapobiega dostępowi
     skryptów js do drzew DOM różnego pochodzenia.
