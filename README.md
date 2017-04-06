@@ -413,7 +413,7 @@ Other scopes![other scopes](http://stackoverflow.com/a/500459)
 * What tools and techniques do you use debugging JavaScript code?
 * What are falsy values
 
-Falsy values are values that evaluate to false when passed to a conditional statement:
+Falsy values are values that evaluate to false when they're converted to boolean:
 - 0
 - "" - empty string
 - null
