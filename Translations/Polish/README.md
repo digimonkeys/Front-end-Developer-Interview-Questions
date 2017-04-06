@@ -872,6 +872,10 @@ console.log('three');
 
 * Wyjaśnij dyrektywę ng-controller.
   Dyrektywa ng-controller dołącza klasę kontrolera do widoku. Jest to kluczowy aspekt tego, jak Angular wspiera MVC. Ng-controller tworzy również nowy zakres.
+* Jak weryfikować dane w AngularJS?
+  Możesz użyć przepływu danych w dwie strony (data binding, ng-model) by weryfikować dane. Weryfikacja dzieje się w warstwie modelu, gdzie masz dużo opcji do weryfikacji danych używając JavaScriptu i jego metod.
+
+  AngularJS zapewnia podstawową implementację większości typów danych wejściowych HTML5 (text, number, url, emial, date, radio, checkbox) oraz parę dyrektyw dla weryfikacji danych (required, pattern, minlength, maxlength, min, max).
 
 ### Pytania dodatkowe (zabawne):
 

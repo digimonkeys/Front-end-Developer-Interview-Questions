@@ -815,6 +815,10 @@ console.log('three');
 
 * Explain ng-controller directive.
   The ng-controller directive attaches a controller class to the view. This is a key aspect of how angular supports the principles behind the Model-View-Controller design pattern. It also creates a new scope.
+* How to validate data in AngularJS?
+  You can use two-way data-binding (ng-model) to validate data. Validation happens in the model, where you have a lot of options to validate data using JavaScript and its methods. 
+
+  AngularJS provides basic implementation for most common HTML5 input types: (text, number, url, email, date, radio, checkbox), as well as some directives for validation (required, pattern, minlength, maxlength, min, max).
 
 #### Fun Questions:
 
