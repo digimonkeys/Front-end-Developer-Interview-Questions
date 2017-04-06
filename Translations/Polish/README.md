@@ -77,7 +77,9 @@ Ponieważ pozwala na użycie lżejszego serwera, który nie będzie musiał ład
 http://webmasters.stackexchange.com/a/26757
 http://webmasters.stackexchange.com/a/25091 
 
-  * Ile zasobów pobiera przeglądarka z danej domeny w jednej chwili?
+* Ile zasobów pobiera przeglądarka z danej domeny w jednej chwili?  
+Starsze przeglądarki jak IE6 - 2, nowsze 6 / 8.  
+
 * Podaj 3 sposoby na zmniejszenie czasu ładowania strony. (postrzeganego lub rzeczywistego czasu ładowania)
 * Jeśli dołączasz do projektu, w którym używa się tabulacji, a ty używasz spacji, co wtedy zrobisz?
   * Sugerowanie użycia narzędzi w stylu EditorConfig (http://editorconfig.org)
