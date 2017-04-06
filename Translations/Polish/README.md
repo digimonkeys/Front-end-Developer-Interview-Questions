@@ -449,6 +449,11 @@ Javascript Types![Javascript Data Types](https://developer.mozilla.org/pl/docs/W
 
 * Czy kiedykolwiek używałeś szablonów w JavaScript?
   * Jeśli tak, jakie to były biblioteki? (Mustache.js, Handlebars itd.)
+    Używałem jedynie Handlebars do prostych skryptów wymagających wypełniania dużej ilości danych w pętli.
+    Popularne szablony:
+    - Mustache
+    - Underscore
+    - Embedded JS
 
 * Co robi drugi parametr object.create?
 

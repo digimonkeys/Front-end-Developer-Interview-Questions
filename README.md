@@ -570,6 +570,12 @@ Difference new vs Object.create![Difference new vs Object.create](http://stackov
 
 * Have you ever used JavaScript templating?
   * If so, what libraries have you used?
+    I only used Handlebars for simple scripts that needed to fill a lot of data in a loop.
+    Popular templates:
+    - Mustache
+    - Underscore
+    - Embedded JS
+
 * Explain "hoisting".
 * Describe event bubbling.
     Bubbling is an event passing up of the DOM tree.
