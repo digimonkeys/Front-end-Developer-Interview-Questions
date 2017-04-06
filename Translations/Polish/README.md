@@ -626,6 +626,20 @@ Najlepszym rozwiązaniem, aby uniknąć zanieczyszczania globalnej przestrzeni j
 Odniesienie: [Global variables disscusion](http://stackoverflow.com/questions/2613310/ive-heard-global-variables-are-bad-what-alternative-solution-should-i-use)
 
 * Co oznacza `"use strict";`? Jakie są zalety i wady takiego rozwiązania?
+
+  "use strict" włącza bardziej restrykcyjną wersje JavaScriptu.
+  Kod jest inaczej odczytywany przez silnik w niektórych przypadkach.
+
+  Zalety:
+    - Eliminuje niektóre ciche błędy, a zamiast nich wyrzuca błąd.
+    - Naprawia niektóre pomyłki, które sprawiają, że JavaScriptowe silniki mają trudność z optymalizacją kodu (wersja kodu w strict mode może być szybsza niż normalna).
+    - Rezerwuje składnię, która prawdopodobnie będzie użyta w przyszłych wersjach ECMAScript.
+
+  Wady:
+    - Przeglądarki, które nie wspierają strict mode'u będą wykonywać kod zgodnie z normalnymi standardami.
+  
+  Odniesienie: [Strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+
 * Czym rozni sie dziedziczenie w jsie od klasycznego dziedziczenia?
  
  Podmiotem dziedziczenia klasycznego, są klasy natomiast w js dziedziczenie (zwane prototypowym) odbywa się bezpośrednio na obiektach.
