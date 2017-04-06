@@ -1217,6 +1217,20 @@ console.log('three');
   http://www.tutorialsteacher.com/angularjs/what-is-angularjs
 * Wyjaśnij dyrektywę ng-controller.
   Dyrektywa ng-controller dołącza klasę kontrolera do widoku. Jest to kluczowy aspekt tego, jak Angular wspiera MVC. Ng-controller tworzy również nowy zakres.
+* Jak pobierać dane używając AJAX w AngularJS?
+  Do pobierania danych używając AJAX można użyć serwisów $http oraz $https
+  ```
+  $http({
+    method: 'GET',
+    url: '/someUrl'
+  }).then(function successCallback(response) {
+    // this callback will be called asynchronously
+    // when the response is available
+  }, function errorCallback(response) {
+    // called asynchronously if an error occurs
+    // or server returns response with an error status.
+  });
+  ```
 
 * Jak weryfikować dane w AngularJS?
   Możesz użyć przepływu danych w dwie strony (data binding, ng-model) by weryfikować dane. Weryfikacja dzieje się w warstwie modelu, gdzie masz dużo opcji do weryfikacji danych używając JavaScriptu i jego metod.
