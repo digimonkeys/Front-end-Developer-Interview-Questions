@@ -1411,3 +1411,20 @@ setState![setState](https://facebook.github.io/react/docs/react-component.html#s
 This document started in 2009 as a collaboration of [@paul_irish](https://twitter.com/paul_irish) [@bentruyman](https://twitter.com/bentruyman) [@cowboy](https://twitter.com/cowboy) [@ajpiano](https://twitter.com/ajpiano)  [@SlexAxton](https://twitter.com/slexaxton) [@boazsender](https://twitter.com/boazsender) [@miketaylr](https://twitter.com/miketaylr) [@vladikoff](https://twitter.com/vladikoff) [@gf3](https://twitter.com/gf3) [@jon_neal](https://twitter.com/jon_neal) [@sambreed](https://twitter.com/sambreed) and [@iansym](https://twitter.com/iansym).
 
 It has since received contributions from over [100 developers](https://github.com/h5bp/Front-end-Developer-Interview-Questions/graphs/contributors).
+
+* How would you implement application-wide exception handling in your Angular app?  
+Angular has a built-in error handler service called $exceptionHandler which can easily be overriden as seen below:  
+
+```
+angular.
+  module('exceptionOverwrite', []).
+  factory('$exceptionHandler', ['$log', 'logErrorsToBackend', function($log, logErrorsToBackend) {
+    return function myExceptionHandler(exception, cause) {
+      logErrorsToBackend(exception, cause);
+      $log.warn(exception, cause);
+    };
+  }]);
+```
+
+This is very useful for sending errors to third party error logging services or helpdesk applications. Errors trapped inside of event callbacks are not propagated to this handler, but can manually be relayed to this handler by calling $exceptionHandler(e) from within a try catch block.  
+https://docs.angularjs.org/api/ng/service/$exceptionHandler  
