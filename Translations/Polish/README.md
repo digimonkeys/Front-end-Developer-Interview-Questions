@@ -870,6 +870,14 @@ console.log('three');
   two
   ```
 
+* Jakie są wady AngularJS?
+  Dezorientacja
+    Istnieje wiele sposób na stworzenie tej samej rzeczy używając AngularJS. Czasami dla nowicjuszy może być trudne określenie, który sposób jest lepszy dla danego zadania.
+  Powolne UI
+    Jeśli jest więcej niż 2000 obserwatorów, mogą wystąpić duże opóźnienia dla interfejsu użytkownika. To oznacza, że możliwa złożoność formularzy Angular jest limitowana. Może to wystąpić w listach i dużych sieciach danych.
+  Konflikty nazw
+    W AngularJS nie ma możliwości tworzenia paru ng-app (aplikacji) na tej samej stronie. Może to spowodować konflikty nazw.
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?

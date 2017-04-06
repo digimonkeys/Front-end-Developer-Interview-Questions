@@ -815,7 +815,7 @@ console.log('three');
 
 * What are the disadvantages of AngularJS?
   Confusion
-    There are multiple ways to do the same thing with AngularJS. Sometimes, it can be hard for novices to say which way is better for a task. Hence, it is imperative for programmers to develop an understanding of the various components and how they help.
+    There are multiple ways to do the same thing with AngularJS. Sometimes, it can be hard for novices to say which way is better for a task.
   Lagging UI
     If there are more than 2000 watchers, it can get the UI to severely lag. This means that the possible complexity of Angular Forms is limited. This includes big data grids and lists.
   Name Clashes
