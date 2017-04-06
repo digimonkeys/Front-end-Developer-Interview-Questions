@@ -616,6 +616,14 @@ Inheritance (in programming) is a mechanism that allow sharing functionality (an
 
 Inheritance![Wikipedia - Inheritance](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming))
 
+* Whats the difference between inheritance in JS and the classical inheritance?
+
+Classical inheritance inherits the behavior, without any state, from the parent class. It inherits the behavior at the moment the object is instantiated.
+
+Prototypal inheritance inherits behavior and state from the parent object. It inherits the behavior and state at the moment the object is called. When the parent object changes at run-time, the state and behavior of the child objects are affected.
+
+Classical vs Prototypal![Stackoverflow - classical vs prototypal](http://softwareengineering.stackexchange.com/a/99438)
+
 * Whats the difference between function and an object?
 
 Function is a specific type of object in JavaScript, that has all the properties of normal object. Only difference is that function can be called / invoked. It's possible, because functions has internal [[Call]] method.
