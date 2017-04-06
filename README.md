@@ -197,7 +197,7 @@ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, 
 
 * Does JavaScript have private methods?
 
-Yes, private members are made by the constructor. Ordinary vars and parameters of the constructor becomes the private members.
+Yes, private methods are made by the constructor. Every function definition or function expression (not bound with this) will become private method.
 Private methods cannot be called by public methods.
 
 Private members![Crockford on private members](http://javascript.crockford.com/private.html)
