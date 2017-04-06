@@ -1161,6 +1161,24 @@ console.log('three');
 
   https://docs.angularjs.org/guide/scope
 
+* What are the controllers in AngularJS?
+  In AngularJS, a Controller is defined by a JavaScript constructor function that is used to augment the AngularJS Scope.
+  When a Controller is attached to the DOM via the ng-controller directive, AngularJS will instantiate a new Controller object, using the specified Controller's constructor function. A new child scope will be created and made available as an injectable parameter to the Controller's constructor function as $scope.
+  If the controller has been attached using the controller as syntax then the controller instance will be assigned to a property on the new scope.
+
+  Use controllers to:
+    Set up the initial state of the $scope object.
+    Add behavior to the $scope object.
+
+  Do not use controllers to:
+    Manipulate DOM — Controllers should contain only business logic. Putting any presentation logic into Controllers significantly affects its testability. AngularJS has databinding for most cases and directives to encapsulate manual DOM manipulation.
+    Format input — Use AngularJS form controls instead.
+    Filter output — Use AngularJS filters instead.
+    Share code or state across controllers — Use AngularJS services instead.
+    Manage the life-cycle of other components (for example, to create service instances).
+
+  https://docs.angularjs.org/guide/controller
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
