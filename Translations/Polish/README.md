@@ -58,7 +58,11 @@ Używam sublime 3 z jego dodatkowymi pluginami i świetnymi funcjonalnościami p
 * Z jakimi systemami kontroli wersji pracowałeś / jesteś zapoznany?  
 Z gitem, pracowałem na githubie i gitlabie. Próbowałem używać interfejsów graficznych gita, ale jednak wolę pracować w command line.  
 
-* Opisz kolejne zadania podczas tworzenia strony internetowej?
+* Opisz kolejne zadania podczas tworzenia strony internetowej? 
+Najpierw zbieranie wymagań klienta, funkcjonalnych i niefunkcjonalnych.
+Tworzenie środowiska - skrypty służące do budowania w środowisku developerskim i produkcyjnym - webpack, gulp.
+Szkielet strony i semantyka, wypełnienie kontentem + poprawa semantyki, stylowanie, animacje, dodawanie interaktywności.  
+
 * Opisz różnicę między stopniowym ulepszaniem (progressive enhancement) i wdzięczną degradacją (graceful degradation)?
   * Dodatkowe punkty za opisanie wykrywania obsługi cech (feature detection)  
   
@@ -68,7 +72,11 @@ Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich prz
 * Jak optymalizowałbyś zasoby strony internetowej?  
 Optymalizacja obrazków, łączenie plików, Zmniejszenie rozmiaru plików przy użyciu uglifyjs, stosowanie minifikacji, używanie SVG i css sprites (jeden obrazek, używany wiele razy), Zasoby CDN - mogą być serwowane w zależności od odległości od użytkoniwka, response time etc, cachowanie, nie ładować dużych bibliotek jeśli potrzebujemy z nich tylko jednej funkcji  
 
-* Dlaczego serwowanie zasobów strony przez wiele domen jest lepsze?
+* Dlaczego serwowanie zasobów strony przez wiele domen jest lepsze?  
+Ponieważ pozwala na użycie lżejszego serwera, który nie będzie musiał ładować modułów wymaganych do serwowania dynamicznych treści przy każdym requeście o zasoby statyczne. Dodanie domeny oznacza, że zwięszymy liczbę możliwych równoległych pobrań dla przeglądarki. Można równiez wykorzystać brak potrzeby wysyłania plikow cookie przy przesyłaniu statycznych treści (css, obrazków, plików js) co zmniejszy obciażenie sieci.
+http://webmasters.stackexchange.com/a/26757
+http://webmasters.stackexchange.com/a/25091 
+
   * Ile zasobów pobiera przeglądarka z danej domeny w jednej chwili?
 * Podaj 3 sposoby na zmniejszenie czasu ładowania strony. (postrzeganego lub rzeczywistego czasu ładowania)
 * Jeśli dołączasz do projektu, w którym używa się tabulacji, a ty używasz spacji, co wtedy zrobisz?
@@ -110,10 +118,13 @@ https://jsperf.com/
 https://wiki.mozilla.org/Dromaeo  
 
 * Gdybyś mógł opanować jedną technologię w tym roku, jaka byłaby to technologia?
+* FOUC? Jak unikasz FOUC?
 * Wyjaśnij znaczenie standardów sieciowych i ich twórców.  
+
 Standardy są bardzo istotne ponieważ aplikacje pisane w danym języku są kompilowane przez różne przeglądarki. Pozwala to uniknąć sytuacji, w której kod działa w połowie przeglądarek, lub działa tylko w tej ulubionej kodera. Gdy opracowany jest standard przeglądarki wiedzą czego się spodziewać i każdy piszący w zgodzie ze standardem może zakładać, że wszystko będzie działać. Twórcami standardów są w3c, iso, ansi, unicode consortium, ietf oraz ecma.  
 
 * Czym jest FOUC? Jak unikasz FOUC?  
+
 Flash of unstyled content jest to wyświetlenie użytkownikowi nieostylowanej strony (jej zawartości) podczas ładowania strony. Pojawia się gdy CSS jest wolno ładowany lub gdy JS powoduje wielokrotne renderowanie strony.
 Aby uniknąć FOUC należy serwować użytkownikowi jak najbardziej zoptymalizowany CSS (zminifikowany, w jednym pliku), oraz używać jak najmniej javascriptu powodującego fazę render przeglądarki. Używanie Critical CSS (czyli wrzucanie najważniejszych reguł css inline w znaczniku head).
 Używanie media queries i serwowanie CSS zoptymalizowanego dla urządzeń o mniejszej rozdzielczości. Można też ukryć całą stronę do czasu załadowania wszystkich styli.  
@@ -127,6 +138,22 @@ Screenreadery to programy służące do odczytywania treści i dostępnych akcji
 3 kroki tworzenia aplikacji z ułatwieniami dostępu: używaj natywnych tagów HTML kiedy tylko się da; elementy interaktywne twórz z możliwością obsługi przez klawiaturę; zapewnij dodatkowe znaczniki specjalnie dla AT (accessibility technology). 
 https://www.w3.org/WAI/intro/aria
 http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-applications-accessible/
+
+* Opowiedz o wadach i zaletach animacji w css i w JS.   
+Minusy CSS w stosunku do JS:  
+- skalowanie, rotacja, pozycja zostały wepchnięte do jednej właściwości transform, co uniemożliwia kontrolowanie skomplikowanych animacji  
+- CSS chwali się za używanie pamięci GPU zamiast CPU do obsługi animacji, jednak używa jej tylko do transform i opacity a w JS można osiągnąć to samo za pomocą charakterystyk 3D  
+- CSS teoretycznie korzysta z wielu wątków procesora, ale w rzeczywistości tylko dla elementów nie wpływających na flow dokumentu (transform, opacity - znikomy procent)  
+- niemal w każdym środowisku animacje tworzone w JS (z wykorzystaniem GASP) są szybsze od tych tworzonych przez CSS  
+- brak kontroli nad flow animacji - nie można przejść do jej konkretnego punktu, cofnąć jej, zmienić prędkości lub dodać callbacków w konkretnych punktach  
+- przeglądarki starsze niż IE9 nie obsługują animacji CSS  
+
+Plusy animacji CSS w stosunku do JS:  
+- są szybsze od animacji jQuery  
+- bardzo dobre do prostych przejść, np proste slidery, ofc również do efektów hover  
+
+https://developers.google.com/web/fundamentals/design-and-ui/animations/css-vs-javascript  
+https://css-tricks.com/myth-busting-css-animations-vs-javascript/  
 
 ### Pytania HTML:
 
@@ -164,28 +191,110 @@ http://www.webdevout.net/articles/beware-of-xhtml#myths
 Zawsze należy używać atrybutu language na tagu html do określenia domyślnego języka strony. Zawartość w innym języku należy otoczyć jakimś elementem do którego dodamy równiez atrybut language. Dla stron html należy używać atrybutu lang, zaś dla xhtml xml:lang. W html 1.x i w html 5 obu. 
 https://www.w3.org/International/questions/qa-html-language-declarations  
 
+* O czym trzeba pamiętać tworząc strony wielojęzykowe?
+Należy rozważyć jak userzy będą przekierowywani na odpowiednią wersję językową strony. Należy również pamiętać o sprawach takich jak: tekst w obrazkach się nie przetłumaczy ani nie przeskaluje, kolory mogą być inaczej postrzegane przez ludzi z innych kultur, nie powinno się wpisywać w ogóle tekstu do szablonów strony (tekst powinien być dynamicznie renderowany), formaty dat mogą się różnić, należy pamiętać o stylowaniu czcionek przez selector css :lang, słowa w różnych językach będą miały różną długość.  
+https://www.quora.com/What-kind-of-things-one-should-be-wary-of-when-designing-or-developing-for-multilingual-sites  
+
 * Jaka jest przydatność atrybutów `data-`
-* Rozpatrujemy HTML5 jako otwartą platformę internetową. Jakie składniki tworzą HTML5?
+* Rozpatrujemy HTML5 jako otwartą platformę internetową. Jakie składniki tworzą HTML5?  
+Główne składniki takiej platformy internetowej to html 5, css3, js i svg. Html 5 służy do definiowania kształtu dokumentu (tytułów, nagłówków, tabel itp), css do nadawania mu stylu, js do tworzenia skryptów i svg do tworzenia skalowalnych grafik wektorowych.  
+http://yucianga.info/?p=655  
+
 * Opisz różnice między cookies, sessionStorage i localStorage.
+* Opisz różnice między `<script>`, `<script async>` i `<script defer>`.  
+Zachowanie przeglądarki napotykającej:  
+- script tag: Zatrzymuje parsowanie dokumentu. Wykonuje request po plik skryptu. Wykonuje skrypt po ściągnięciu go. Kontynuuje parsowanie dokumentu.  
+- script tag z async: Wykonuje równoległe requesty po każdy napotkany skrypt. Kontynuuje parsowanie dokumentu jakby nic nie przerwało tego procesu. Kiedy którykolwiek skrypt zostanie ściągnięty, wykonuje go.  
+- script tag z defer: Wykonuje równoległe requesty po każdy napotkany skrypt. Kontynuuje parsowanie dokumentu jakby nic nie przerwało tego procesu. Parsuje dokument do końca, nawet jeśli jakiś skrypt się ściągnął. Następnie wykonuje skrypty w kolejności, w jakiej zostały napotkane w dokumencie.  
+http://javascript.tutorialhorizon.com/2015/08/11/script-async-defer-attribute/  
 
 ### Pytania JS:
 
 * Wyjaśnij delegację zdarzeń.
+    Delegacja zdarzeń / eventów polega na przypięciu obsługi zdarzenia (event handler) do elementu nadrzędnego, zamiast do elementu który chcemy obsłużyć. Po kliknięciu na element wewnętrzny, event bubbles up (bąbluje do góry) dochodząc do elementu z przypisanym handlerem. Następnie za pomocą event.target możemy sprawdzić gdzie zdarzył się event i wykonać go na odpowiednim elemencie.
+    Dzięki temu możemy obsłużyć zdarzenia występujące na wielu elementach, za pomocą jednego handlera.
+
+    http://www.crimsteam.site90.net/crimsteam/dom/dom_zdarzenia_delegacja.html
+    https://davidwalsh.name/event-delegate
+    
 * Wyjaśnij jak działa `this` w JavaScripcie.
+  `this` wskazuje na jakiś obiekt w zależności od kontekstu,
+  w jakim została użyta funkcja, w której go zdefiniowaliśmy.
+  Kontekstu czyli sposobu i miejsca wywołania.
+
+  Kontekst globalny:
+  console.log(this === window); // true
+  this.a = 37;
+  console.log(window.a); // 37
+  Jako metoda obiektu:
+  var o = {  prop: 37, f: function() { return this.prop; }};
+  console.log(o.f()); // logs 37
+
+  https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Operatory/this
+  http://stackoverflow.com/questions/3127429/how-does-the-this-keyword-work
+
 * Wyjaśnij jak działa dziedziczenie prototypowe.
 * Jak radzisz sobie z testowaniem swojego kodu JavaScript?
 * AMD kontra CommonJS?
-    Obie specyfikacje opisują format i sposób w jaki moduły i ich zależności powinnybyć definiowane;
-    Głowną rożnicą pomiędzy AMD(Asynchronous Module Definition) a CommonJS est asynchroniczne ładowanie modułow w AMD.
 
-    AMD:
-     - używane jest w przeglądarkach, umożliwia asynchroniczne ładowanie modułów
-     - define('module', [dependencies], function module() { return contents });
-    CommonJS:
-     - na backendzie - dawniej często używana w NodeJS, obecnie się od niej odchodzi.
-     - exports / module.exports | require
+Obie specyfikacje opisują format i sposób w jaki moduły i ich zależności powinnybyć definiowane;
+Głowną rożnicą pomiędzy AMD(Asynchronous Module Definition) a CommonJS est asynchroniczne ładowanie modułow w AMD.
 
-     https://auth0.com/blog/javascript-module-systems-showdown/
+AMD:
+ - używane jest w przeglądarkach, umożliwia asynchroniczne ładowanie modułów
+ - define('module', [dependencies], function module() { return contents });
+CommonJS:
+ - na backendzie - dawniej często używana w NodeJS, obecnie się od niej odchodzi.
+ - exports / module.exports | require
+
+ https://auth0.com/blog/javascript-module-systems-showdown/
+ 
+* Jakie znasz patterny w javascripcie? 
+
+- Strażnik (Guard Pattern)
+
+W programowaniu strażnik jest wyrażeniem typu boolean, które musi zwrócić true jeśli program ma kontynuować swoje wykonanie. Bez względu na język programowania, kod ochrony lub klauzula ochronna jest sprawdzeniem warunków, które pozwolą uniknięcia błędów podczas dalszego wykonywania programu.
+
+
+- Konstruktor
+Konstruktory obiektów używane są do tworzenia określonych typów obiektów - przygotowują obiekty do użycia oraz przyjmują argumenty, które konstruktor może wykorzystać do ustawiania wartości właściwości i metod obiektu, kiedy ten tworzony jest po raz pierwszy.
+
+- Moduł
+W JavaScript wzorzec modułu używany jest do głębszej emulacji klas, w taki sposób, że możemy tworzyć zarówno publiczne jak i prywatne metody i zmienne wewnątrz obiektu, jednocześnie ukrywając poszczególne jego części przed global scope. Wynikiem tego jest mniejsze ryzyko konfliktu nazw funkcji stworzonych w module z funkcjami stworzonymi przez inne skrypty w aplikacji.
+
+- Singleton
+Wzorzec singletonu ma w założeniu zapewnić tylko jedną instancję danej klasy. Oznacza to, że próba utworzenia obiektu danej klasy po raz drugi powinna zwrócić dokładnie ten sam obiekt, który został zwrócony za pierwszym razem. Jako, że w JS nie istnieją klasy, możemy mówić tylkoo instancjach obiektów. W JS istnieje kilka sposobów uzyskania singletonu:
+
+  - Wykorzystanie zmiennej globalnej do zapamitania instancji.
+  - Wykorzystanie właściwości statycznej konstruktora. Funkcje w jzyku JavaScript są obiektami, więc mają właściwości. Można utowrzyć właściwość "Object".instance i to w niej przechowywać obiekt.
+  - Zamknicie instancji w domkniciu. W ten sposób instancja staje si elementem prywatnym i nie może zostać zmieniona z zewnątrz.
+
+- Obserwator
+Wzorzec obserwatora jest niezwykle czsto wykorzystywany w programowaniu po stronie klienta w jzyku JavaScript.
+Głównym celem użwania wzorca jest promowanie luźnego powiązania elementów. Zamiast sytuacji, w której jeden obiekt wywołuje metod drugiego, mamy sytuacj, w której drugi z obiektów zgłasza chęć otrzymywania powiadomień o zmianie w pierwszym obiekcie. Subskrybenta
+nazywa si czsto obserwatorem, a obiekt obserwowany obiektem publikującym lub źródłem. Obiekt publikujący wywołuje subskrybentów po zajściu istotnego zdarzenia i bardzo często przekazuje informację o nim w postaci obiektu zdarzenia.
+
+  Uczestnicy
+
+  - Subject:
+    - zarząda lista observerów
+    - implementuje interfejs pozwalający observerom subskrybować i usuwać subskrypcję dla danego zdarzenia
+    - wysyła powiadomienie do swoich subskrybentów, gdy jego stan się zmieni
+  - Observers - posiadają sygnaturę funkcji, która może zostać wykonana, gdy zmieni się Subject
+
+- Strategia
+Wzorzec strategii umożliwa wybór odpowiedniego algorytmu na etapie działania aplikacji. Użytkownicy kodu mogą stosować ten sam interfejs zewntrzny, ale wybierać spośród kilku dostpnych algorytmów, by lepiej dopasować implementacj do aktualnego kontekstu.
+
+  Uczestnicy: 
+
+  - Context:
+    - przechowuje referencję do obecnego obiektu Strategii
+    - posiada interfejs dzięki któremu klienci mogą zarządać wykonania konkretnej strategii
+    - pozwala klientowi na zmianę strategii
+  - Strategy - implementuje algorytmy używając interfejsu Strategii
+
+DotFactory patterns![DotFactory patterns](http://www.dofactory.com/javascript/design-patterns)
+JavaScript Design Patterns![JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 
 * Czym jest tablica mieszająca (hashtable)?
 * Co oznaczają komunikaty `undefined` i `undeclared` dla zmiennych?
@@ -215,6 +324,10 @@ Promise![Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference
   http://blog.nebula.us/13-javascript-closures-czyli-zrozumiec-i-wykorzystac-domkniecia
 
 * Jakie znasz typowe użycie funkcji anonimowych?
+  - Callbacks
+  - IIFE's
+  - Closures
+
 * Wyjaśnij pojęcie "Moduł JavaScript" i kiedy jest warte stosowania.
   * Dodatkowe punkty za wzmiankę na temat czystości przestrzeni nazw.
   * Co jeśli Twój kod nie używa przestrzeni nazw?
@@ -230,23 +343,85 @@ Promise![Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference
 
 * Różnica między:
 ```javascript
-function Person(){} var person = Person() var person = new Person()
+function Person(){}, var person = Person(), var person = new Person()
 ```
-* Jaka jest różnica między `.call` i `.apply`?
-* Wyjaśnij `Function.prototype.bind`?
-* Czym jest callback?
+  - Jest to deklaracja funkcji, przypisuje nazwę do funkcji bez konieczności przypisywania jej do zmiennej
+  - Przypisuje do zmiennej person wartość zwracaną przez funkcję person, w tym przypadku undefined
+  - Przypisuje do zmiennej person obiekt/konstruktor typu Person, z this przypisanym do obiektu Person
+  https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/
 
+* Jaka jest różnica między `.call` i `.apply`?
+  Za pomocą `.call` i `.apply` można przypisać inny obiekt podczas wywoływania istniejącą funkcji.
+  `this` odnosi się do bieżącego obiektu, obiektu wywołującego.
+  Dzięki czemu można napisać metodę raz, a następnie dziedziczyć ją w innym obiekcie, bez konieczności przepisywania metody dla nowego obiektu.
+  Call przymuje wartość `this` i pojednyńcze argumenty, natomiast apply w postaci tablicy.
+  theFunction.apply(valueForThis, arrayOfArgs)
+  theFunction.call(valueForThis, arg1, arg2, ...)
+  http://stackoverflow.com/questions/1986896/what-is-the-difference-between-call-and-apply
+  https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Function/apply
+  https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Function/call
+
+* Wyjaśnij `Function.prototype.bind`?
+    Bind tworzy nową funkcję pozwalającą przypisać `this` do kontekstu jaki chcemy, ponieważ w funkcji zwrotnej
+    wartość obiektu bieżącego `this` może nie być tym, czego się spodziewamy.
+    Pozwala on także przypisać domyślne argumenty dla zwracanej funkcji:
+      var Person = function (name) { this.name = name; };
+      Person.prototype.speak = function (volume) {return this.name +  volume };
+      var person = new Person("John");
+      var f = person.speak.bind(person, "loudly");
+      // "John loudly"
+      http://www.kurshtml.edu.pl/js/bind,function-prototype.html
+
+* Czym jest callback?
 Callback jest to funckcja przekazywana do innej funkcji poprzez argument. Funkcja, która przyjmuje callback jako argument może w swoim ciele wywołać przekazaną funkcję. Wywołanie to może nastąpić natychmiast (synchronicznie), albo późniejszym czasie (asynchronicznie).
 
 Callback![Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming))
 
 * Kiedy optymalizujesz swój kod?
+
+* Czy w jsie mamy metody prywatne?
+
+Tak, w JS można tworzyć zmienne i metody jako prywatne. Aby stworzyć metodę prywatną należy utworzyć definicję funkcji w konstruktorze obiektu (bez przypisania jej do this). W takim wypadku funkcja / metoda będzie dostępna tylko wewnątz obiektu i tylko dla funkcji prytwatnych.
+
+Private members![Crockford on private members](http://javascript.crockford.com/private.html)
+
 * Wyjaśnij działanie dziedziczenia w JavaScript?
+* Co to jest function declaration a co function expression i czym sie roznia?
+
+Function declaration jest to stworzenie obiektu typu Function i przypisanie mu nazwy oraz parametrów używanych przez funkcję.
+Function expression jest niemal identyczne, natomiast pozwala na ominięcie nazwy funkcji (co tworzy tzw. funkcję anonimową). Function expression może być także używane jako IIFE. Function expression, w przeciwieństwie do function declaration nie są hoistowane.
+
+Function delcaration![Function delcaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+Function expression![Function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function)
+Function declaration vs function expression![Function declaration vs function expression](https://www.sitepoint.com/function-expressions-vs-declarations/)
+
 * Kiedy użyłbyś `document.write()`?
     Document.write() jest zawsze dostępny, jest dobrym wyborem dla dostawcow skryptow zewnetrznych aby mogli dodać oni swoj kod.
     Wiele generowanych reklam używa `document.write()` choć nie jest to mile widziane.
 
 * Jakie są różnice między wykrywaniem obsługi funkcji, wnioskowaniem obsługi funkcji i używaniem ciągu UA?
+    Feauture detection(wykrywaniem obsługi funkcji) jest to wykrywanie, czy dany feature / właściwość / funkcjonalność /  jest dostępny w środowisku wykonywalnym
+    np: return !!document.createElement('canvas').getContext; // return true or false
+
+    Feauture inference (wnioskowanie obsługi funkcji) polega na założeniu, że jeśli dana funkcjonalność jest dostępna w danej wersji przeglądarki, to cała reszta funkcjonalności także. Używa się ich wtedy bez sprawdzania czy istnieją, co może prowadzić do błędów.
+
+    UA string czyli User Agent string domyślnie zwraca wersję przeglądarki jaka wykonuje zapytanie, jaka uruchamia danych skrypt js. UA string może być zmieniany przez klienta.
+
+    http://lucybain.com/blog/2014/feature-detection-vs-inference/
+
+* Co to sa falsy values?
+
+Falsy values są to wartości, które podczas konwersji na boolean dają wartość false. Są to:
+
+- 0
+- "" - pusty string
+- null
+- undefined
+- NaN
+- false 
+
+Falsy values![MDN falsy values](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+
 * Omów AJAX jak najbardziej szczegółowo.
 * Podaj wady i zalety żywania technologii AJAX
   Zalety:
@@ -260,6 +435,17 @@ Callback![Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming
     - Dane są ładowane dynamicznie a więc nie są częścią strony WWW. Wyszukiwarki internetowe nie indeksują treści ładowanych dynamicznie
 
 * Wyjaśnij działanie JSONP (i dlaczego nie jest właściwie AJAX).
+    JavaScript Object Notation with Padding - zdalny AJAX spoza domeny.
+    Pozwala na pobieranie danych z serwerów znajdujących się w innej domenie,
+    niż domena w której uruchamiany jest skrypt.js. Pomaga ominąć Same-origin policy.
+    JSONP umożliwa pobieranie danych JSON poprzez opakowanie danych w funkcję JS,
+    co umożliwia uruchomienie zewnętrznego skryptu js poprzez dodanie go za pomocą tagu script.
+    W celu uruchomienia funkcji zwracającej JSON musimy w urlu podać callback taki sam jak funkcja opakowująca JSON.
+    - `http://www.example.net/sample.aspx?callback=mycallback`
+    - można używać tylko z zapytaniami GET
+
+    http://stackoverflow.com/questions/2067472/what-is-jsonp-all-about
+
 * Typy zmiennych w jsie?
  
 W JS rozróżniamy dwa typy danych: typy proste i typy złożone.
@@ -285,6 +471,11 @@ Javascript Types![Javascript Data Types](https://developer.mozilla.org/pl/docs/W
 
 * Czy kiedykolwiek używałeś szablonów w JavaScript?
   * Jeśli tak, jakie to były biblioteki? (Mustache.js, Handlebars itd.)
+    Używałem jedynie Handlebars do prostych skryptów wymagających wypełniania dużej ilości danych w pętli.
+    Popularne szablony:
+    - Mustache
+    - Underscore
+    - Embedded JS
 
 * Co robi drugi parametr object.create?
 
@@ -366,12 +557,18 @@ Difference new vs Object.create![Difference new vs Object.create](http://stackov
     Same origin zachodzi wtedy, gdy zgodne są protokół port i host stron, z których wywoływane są skrypty.
 
 * Opisz wzorce dziedziczenia w JavaScript.
+  - Pseudoclassical pattern - instancje konstruktora/klas tworzone są przez `new`,
+    dziedziczące wszystkie metody i właściwości rodzica. Tworząc instancję poprzez `new`
+    bindujemy ją do `this`. Metody klasy odnoszą się do `this` instancji.
+  - Functional pattern - zawiera wszyskie metody i właściwości wewnątrz funkcji konstruktora.
+  - Prototypal pattern - rozszerza klasę/konstruktor o kolejne subklasy dziedziczące wszystkie metody i właściwości rodzica.
+
+  http://wes.is/2014/12/14/why-i-prefer-the-pseudoclassical-pattern-for-creating-classes-in-javascript-and-why-you-should-too/
+
 * Czy funkcje sa hoistowane?
-
-W JS funcje można deklarować na dwa sposoby: poprzez function definition oraz function expression.
-Function definition są hoistowane, natomiast function expressions nie.
-
-Function hoisting![Function hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+    W JS funcje można deklarować na dwa sposoby: poprzez function definition oraz function expression.
+    Function definition są hoistowane, natomiast function expressions nie.
+    Function hoisting![Function hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
 
 * Napisz działający kod:
 ```javascript
@@ -393,10 +590,33 @@ Jako ciekawostke można dodać, że jest to jedyny operator w JavaScripcie, któ
 Odniesienie: [Conditional (ternary) Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
 * Czym jest `arity` funkcji?
+* Czemu, na ogół, dobrym pomysłem jest nie ruszanie globalnej przestrzeni strony?
+
+Generalnie nie deklarowanie zmiennych globalnych jest zalecane, ponieważ cały kod posiada jedną przestrzen nazw.
+Zbyt duża ilość zmiennych globalnych może skutkować konfliktem pomiędzy różnymi skryptami na stronie.
+Najlepszym rozwiązaniem, aby uniknąć zanieczyszczania globalnej przestrzeni jest użycie IIFE.
+
+Odniesienie: [Global variables disscusion](http://stackoverflow.com/questions/2613310/ive-heard-global-variables-are-bad-what-alternative-solution-should-i-use)
+
 * Co oznacza `"use strict";`? Jakie są zalety i wady takiego rozwiązania?
+* Czym rozni sie dziedziczenie w jsie od klasycznego dziedziczenia?
+ 
+ Podmiotem dziedziczenia klasycznego, są klasy natomiast w js dziedziczenie (zwane prototypowym) odbywa się bezpośrednio na obiektach.
+ Konsekwencją tego, że w dziedziczeniu klasycznym hierarchia tworzona jest za pomocą klas, które są jakby opisem przyszłego obiektu, co uniemożliwia zmiany metod, które są dziedziczone. Nie dzidziczy się również stanu (gdyż klasy go nie posiadają).
+ W dziedziczeniu prototypowym, opartym na obiektach, każda zmiana metody czy atrybutu na obiektach, z których się dziedziczy, jest natychmiast odzwierciedlana na obiekcie dziedziczącym. Dziedziczy się także stan obiektu.
+ 
+Classical vs Prototypal![Stackoverflow - classical vs prototypal](http://softwareengineering.stackexchange.com/a/99438)
+
 * Jaka jest roznica miedzy funkcja a obiektem?
+
 Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
 Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
+
+* Czym jest dziedziczenie?
+ 
+Dziedziczenie jest mechanizmem współdzielenia funkcjonalności między klasami i/lub obiektami (w rozumieniu klasycznym) lub obiektami (w dziedziczeniu prototypowym - jak w js). Klasa dziedzicząca (zwana klasą pochodną) otrzymuje dostęp do udostępnionych zachowń oraz atrybutów od klasy, z której następuje dziedziczenie (zwanej klasą bazową).
+ 
+Dziedziczenie![Wikipedia - dziedziczenie](https://pl.wikipedia.org/wiki/Dziedziczenie_(programowanie)) 
 
 * Czym jest obietnica (`Promise`)?
 
@@ -530,13 +750,19 @@ $(".foo div#bar:eq(0)")
   Float'y mogą by używane do opakowywania tekstu wokół obrazka/elementu lub to tworzenia całych layoutów. Pływające elementy pozostają częścią flow strony, w odróżnieniu od elementów o ustalonym położeniu, które są usuwane z flow strony i nie uczestniczą w dostosowywaniu zawartości np. do zmieniającej się szerokości okna.
 
   https://css-tricks.com/all-about-floats/
+
 * Jak podejdziesz do rozwiązywania problemów dotyczących stylizacji konkretnych przeglądarek?
   - użycie osobnych stylów CSS, które ładowałyby się tylko wtedy gdy dana przeglądarka jest używana
   - używając przedrostków CSS dotyczących poszczególnych przeglądarek (-moz-, -webkit-, itd)
   - resetując lub normalizując CSS
 
 * Jakie znasz techniki kasowania (clearing) i kiedy wskazane jest ich stosowanie?
+
 * Wyjaśnij technikę "CSS sprites" oraz sposób jej wdrożenia na stronie.
+  Jest to sposób na zmniejszenie zapytań HTTP, łącząc obrazy w jeden duży. Użyłbym do tego generatora sprite'ów, łącząc wszystkie obrazy w jeden duży, zazwyczaj odseparowane od siebie o piksel. W CSS, umieściłbym obraz tła w klasie sprite, który używałbym do każdego elementu z obrazkiem. Aby określić konkretny obraz lub ikonę, utworzyłbym inną klasę z pozycją obrazu tła i jego wymiarami.
+
+  https://css-tricks.com/css-sprites/
+* Jakie znasz techniki kasowania (clearing) i kiedy wskazane jest ich stosowanie?
 * Jakie są Twoje ulubione techniki zastępowania obrazów i kiedy je stosujesz?
   Zastępowanie obrazów CSS jest techniką zastępowania tekstowego elementu (zazwyczaj tagu nagłówkowego) obrazem. Można użyć do tego <h1> i tekstu dla benefitów płynących z dostępności oraz SEO.
   Używam zastępowania obrazów (w zależności od potrzeby), kiedy chcę by moja strona była bardziej dostępna dla urządzeń takich jak czytniki itp. Zazwyczaj używam do tego celu ukrywania tagu span poprzed 'display: none'.
@@ -601,12 +827,18 @@ $(".foo div#bar:eq(0)")
   - text-indent: -1000px
   - absolute position - poza ekranem
 * Czy kiedykolwiek używałeś systemów siatek, a jeśli tak, to jakie preferujesz?
+  Używałem Boostrap oraz Angular Material. Dodatkowo słyszałem o Skeleton i Foundation. Preferuję Bootstrapa, ponieważ tworzenie stron z tym gridem jest bardzo proste. Jeśli potrzebujesz stałego grida lub responsywnego, jest to kwestia paru zmian. Wyrównanie i zagnieżdżanie kolumn jest również możliwe w obu przypadkach, stałej i zmieniającej się szerokości layoutów.
 * Czy używałeś 'media queries' lub tworzyłeś konkretne układy i arkusze dla urządzeń mobilnych?
   Tak, używałem 'media queries' po stworzeniu projektu z użyciem siatki Boostrapa, by nauczyć się jak działają strony responsywne. Kierowałem się zasadą mobile-first, by uzyskać stronę w pełni responsywną i czytelną na każdym urządzeniu bez dodatkowej, niepotrzebnej zawartości.
   'media queries' pozwalają na kontrolowanie używania zadeklarowanych styli CSS bazując na - na przykład - wielkości ekranu, orientacji urządzenia lub gęstości wyświetlacza. Pozwala to na wyświetlanie strony na różne sposoby na różnych urządzeniach.
 
   http://cssmediaqueries.com/
 * Czy miałeś styczność ze stylizacją SVG?
+  Małą. Zmieniałem kolor paru SVG.
+  Generalnie SVG jest niezależne rozdzielczościowo (skalowalne bez utraty jakości), nie dodaje żadnych dodatkowych i niepotrzebnych zapytań HTTP i jest bardzo proste do skryptowania. Za jego pomocą można stworzyć mapy dróg, grafy, kompleksowe elementy UI, loga i proste gry. Możesz użyć CSS do stylowania SVG jak chcesz. Możliwe jest również użycie animacji, które poruszą całym SVG lub tylko ścieżkami (częściami SVG).
+
+  https://www.smashingmagazine.com/2014/11/styling-and-animating-svgs-with-css/
+  https://code.tutsplus.com/articles/why-arent-you-using-svg--net-25414
 * Jak optymalizujesz swoje strony do druku?
   - tworzę specjalny arkusz styli do druku
   - staram się unikać niepotrzebnych tabel
@@ -615,6 +847,19 @@ $(".foo div#bar:eq(0)")
   - ustalam rozmiar strony do druku (szerokość najlepiej podać w calach lub centrymetrach(oba rekomendowane))
   
   https://davidwalsh.name/optimizing-structure-print-css
+* Jakie są zalety/wady używania preprocessorów CSS? (SASS, Compass, Stylus, LESS)
+  Zalety
+    - lepsza organizacja wynikająca z zagnieżdżania selektorów
+    - zdolność do definiowania zmiennych i mixinów
+    - matematyczne funkcje
+    - łączenie plików
+    - w paru przypadkach czystsza składnia
+  Wady
+    - głównie dla projektantów - mniejszy komfort wynikający z używania wiersza poleceń lub konceptów programistycznych
+  * Opisz co podoba ci (lub nie) w używanych wcześniej przez ciebie preprocessorów.
+    Używałem SASS'a i naprawdę podoba mi się zagnieżdżanie, zmienne i matematyczne funkcje, które pomagają bardzo w stylowaniu. Nie bylo rzeczy, których nie lubiłem, możliwe że moja wiedza o SASS'ie jest zbyt mała.
+
+  http://nosleepforsheep.com/using-a-css-preprocessor/
 * Jakie stosujesz "sztuczki" przy pisaniu efektywnych CSS?
   - unikam selektorów, które łapią duże ilości elementów (tagi i uniwersalne selektory)
   - preferuję klasy i identyfikatory zamiast selektorów tagów
@@ -625,8 +870,10 @@ $(".foo div#bar:eq(0)")
 * Czy używasz narzędzi do przetwarzania CSS? (SASS, Compass, Stylus, LESS)
   * Jeśli tak, opisz cechy, które lubisz i nie lubisz w używanych narzędziach.
 * Jak tworzysz i wdrażasz projekt używający niestandardowych czcionek?
-  * Czcionki sieciowe (serwisy czcionek jak: Google Webfonts, Typekit itd.)
+  - używając '@font-face' do renderowania czcionki (używa 'src' dla zahardcorowanych zasobów)
+  - linkując do zewnętrznego serwisu z czcionkami jako arkusz styli, używając @import lub javascript (link z np. google fonts)
 * Wyjaśnij jak przeglądarka określa elementy pasujące do selektora CSS?
+  Przeglądarki szukają selektorów od-prawej-do-lewej. Najpierw szuka wszystkich elementów pasujących do danego key selectora (najdalszego na prawo). Później sprawdza czy ten selektor pasuje lub jest w następnym (najdalszym na lewo) elemencie.
 * Opisz czym są pseudo-elementy i do czego służą
   Pseudo-elementy zaczynają się od '::' i są używane do stylowania specyficznych części elementu
   Składnia: 'selector::pseudo-element {}'
@@ -677,6 +924,55 @@ $(".foo div#bar:eq(0)")
   Jest to IE6 Quirks mode (tryb dziwactw): jeśli uwstawisz szerokość, dodasz paddingi oraz obramowanie, całkowita szerokość nie zmieni się. Wewnętrzna szerokość dostosuje się do reszty.
 
   Zalety: Możesz ustawiać wartości paddingów i obramowania bez przejmowania się o 'rozjechanie', rozszerzenie się pudełka. Jest to bardzo wygodne dla kolumnowych layoutów. Możesz również używać na przemian wartości w procentach i pikselach, więc nie musisz polega na elemencie podrzędnym dla paddingu.
+* Pracowałeś kiedykolwiek z ekranami Retina? Jeśli tak, jakich technik użyłeś do tego celu?
+  Ekrany retina mają podwójną gęstość pikseli, pozwala to na tworzenie ostszych obrazów na mniejszych ekranach. Potrzebne jest dostarczenie odpowiednich obrazów dla tych ekranów.
+
+  Zmiana rozmiaru obrazów
+    - używanie alternatywnych obrazów wysokiej rozdzielczości
+    - używanie @face-fonts zamiast obrazkowych ikon
+    - używanie obrazów SVG zamiast bitmapowych
+    - używanie JavaScript do zamieniania wszystkich zwykłych obrazów na te z podwójną rozdzielczością
+  Praca z faviconami wysokiej rozdzielczości
+
+  https://www.sitepoint.com/css-techniques-for-retina-displays/
+* Czym różni się projekt responsywny od adaptywnego? 
+  Responsywny: Jeden podstawowy wygląd, który dostosowwuje się do zmian ekranu
+  Adaptywny: Dla każdej możliwej wielkości ekranu dedykowany jest osobny wygląd
+* Używałeś Flexboxa lub Grida?
+  Tak, używam flexboxa w moich projektach. Jest bardzo prosty i komfortowy w użyciu i daje wspaniałe efekty. Wygląda na to, że grid jest wspierany przez wszystkie większe przeglądarki (oprócz Edge, który wspiera starą składnie), więc warto jest się go nauczyć.
+
+  http://caniuse.com/#feat=css-grid
+  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+  https://css-tricks.com/snippets/css/complete-guide-grid/
+* Jakiego frameworka CSS używałeś lokalnie, lub na produkcji? Jak byś go zmienił/ulepszył?
+  Używałem Boostrapa i Angular Material. Boostrap jest świetny dla małych stron, jednak dla większych projektów jest za dużo do zmieniania. Każdy framework narzuca swój własny styl strony, więc wiele stron wygląda tak samo, tylko ze zmienionymi kolorami. To jest to co chciałbym zmienić w frameworkach CSS - więcej wolności i dopasowywania, by tworzyć strony, które nie wyglądają tak samo jak milion innych.
+
+* Jakie są różnice między relatywnie, statycznie, absolutnie i stale pozycjonowanych elementach?
+  Elementy są pozycjonowane statycznie domyślnie. Kiedy element nie ma nadanego 'position', będzie on pozycjonowany statycznie. Te elementy będą układać się jeden pod drugim.
+  
+  Pozycjonowanie relatywne
+  Możesz ustawić pozycję elementu relatywnie pozycjonowanego używając 'top: XXX', 'bottom: XXX', 'left: XXX', 'right: XXX'. Element poruszy się od określonej strony, więc jeśli napiszesz 'top: 50px;' element ruszy się 50 pikseli od góry w dół. Nie ma to wpływu na elementy pozycjonowane statycznie, więc element relatywny oraz statystyczny mogą się na siebie nakładać.
+
+  Elementy pozycjonowanie absolutnie są usunięte z DOM i pozycjonują się bazując na najbliższym nadrzędnym elemencie pozycjonowanym relatywnie. W przeciwieństwie do relatywnie pozycjonowanych elementów, które nie mają wpływu na statyczne elementy, jeśli dasz elementowi 'position: absolute' to tak jakby w ogóle nie istniał (w danym miejscu). To znaczy, że inne statyczne elementy będą poruszać się do góry w miejsce absolutnie pozycjonowanego tak jakby go tam nie było. Jeśli wszystkie nadrzędne elementy są statyczne lub nie ma ich w ogóle, element pozycjonowany absolutnie będzie bazował na <body>.
+
+  Stałe elemenety są kompletnie niezależne od wszystkiego na stronie. Bez względu na rodziców, stały element będzie zawsze pozycjonowany na bazie okna przeglądarki. Interesującą rzeczą jest to, że po zescrollowaniu strony element będzie dalej w tym samym miejscu w oknie przeglądarki, więc zawsze będzie widoczny.
+
+* 'C' w CSS oznacza 'kaskadowe'. Jak 
+* The 'C' in CSS stands for Cascading. Jak wyznacza się pierwszeństwo w przypisywaniu stylów? Jak można wykorzystać ten system na swoją korzyść?
+  Pierwszeństwo w CSS jest zdeterminowane przez specyficzność oraz dziedziczenie.
+  Rosnąca kolejność znaczenia:
+    1. Deklaracje 'user agent'
+    2. Deklaracje użytkownika
+    3. Deklaracje autora
+    4. Deklaracje '!important' autora
+    5. Deklaracje '!important' użytkownika
+
+  Specyficzność: ID > klasa, pseudo-klasa > element, pseudo-element
+  Dziedziczenie: Określona wartość → obliczona wartość → używana wartość → aktualna wartość
+
+  Wiedząc to, mogę określić jak zaplanować mój kod używając specyficzności oraz dziedziczenia, więc będą stanowić tylko minimalny (lub wcale) problem.
+
+  https://www.smashingmagazine.com/2010/04/css-specificity-and-inheritance/
 
 ### Pytania z testowania:
 
@@ -869,6 +1165,87 @@ console.log('three');
   three
   two
   ```
+  
+### Pytania AngularJS
+
+* Czym jest AngularJS?
+  AngularJS jest JavaScriptowym frameworkiem MVC działającym po stronie klienta do do budowania dynamicznych aplikacji webowych. AngularJS został stworzony jako projekt Google, jednak teraz jest open source.
+  AngularJS bazuje na HTML oraz JavaScript, więc nie ma potrzebny uczenia się innej składni lub języka.
+  AngularJS zmienia statyczny HTML w dynamiczny. Rozwija możliwości HTML dodając wbudowane atrybuty i komponenty i dostarcza możliwości to tworzenia własnych atrybutów używając JavaScirpt.
+
+  https://docs.angularjs.org/guide/introduction
+  http://www.tutorialsteacher.com/angularjs/what-is-angularjs
+* Wyjaśnij dyrektywę ng-controller.
+  Dyrektywa ng-controller dołącza klasę kontrolera do widoku. Jest to kluczowy aspekt tego, jak Angular wspiera MVC. Ng-controller tworzy również nowy zakres.
+* Jakie są podstawowe kroki do jednostkowego przetestowania filtra w AngularJS?
+  1. Wstrzyknąć '$filter'
+  2. Wywołać to w ten sposób: '$filter(nazwaFiltra)(daneWejsciowe, opcje)'
+  Przykład:
+  ```
+  describe('The test filter', function () {
+  'use strict'; 
+
+  var $filter;
+
+  beforeEach(function () {
+    module('myTestFilterModule');
+
+    inject(function (_$filter_) {
+      $filter = _$filter_;
+    });
+  });
+
+    it('should capitalize a string', function () {
+      // Arrange.
+      var foo = 'hello world', result;
+
+      // Act.
+      result = $filter('testFilter')(foo, 'capitalize');
+
+      // Assert.
+      expect(result).toEqual('HELLO WORLD');
+    });
+  });
+  ```
+
+  http://stackoverflow.com/questions/21094569/how-to-unit-test-a-filter-in-angularjs-1-x
+
+  * Czym jest wiązanie danych (data binding) w AngularJS?
+  Data-binding w aplikacjach w AngularJS jest automatyczną synchronizacją danych między warstwą modelu oraz warstwą widoku komponentów. Sposób w jaki AngularJS implementuje data-binding pozwala traktować warstwę modelu jako jedno-źródło-prawdy w aplikacji. Warstwa widoku jest projekcją warstwy modelu przez cały czas. Kiedy zachodzą zmiany w warstwie modelu, warstwa widoku również się zmienia i vice versa.
+
+  https://docs.angularjs.org/guide/databinding
+
+* Czym jest zakres (scope) w AngularJS?
+  Scope jest obiektem, który odnosi się do warstwy modelu aplikacji. Jest kontekstem wykonawczym dla wyrażeń. Zakresy są zorganizowane w hierarchiczną strukturę, które imitują strukurę DOM aplikacji. Zakresy mogą obserwować wyrażenia i propagować zdarzenia.
+
+  https://docs.angularjs.org/guide/scope
+
+* Czym są kontrolery w AngularJS?
+  W AngularJS, kontrolery są zdefiniowane jako JavaScriptowe konstruktory, które są używane do powiększenia zakresu (scope) AngularJS. Kiedy kontroller jest załączony w DOM przez dyrektywę 'ng-controller', AngularJS wypromuje nowy obiekt kontrollera używając określonych kontruktorów kontrolera. Nowe dziecko zakresu (scope'u) zostanie stworzone i będzie dostępne jako wstrzykiwalny parametr do konstruktora kontrolera jako '$scope'. Jeśli kontroler został załączony używając kontrolera jako składni, wtedy instancja kontrolera będzie przypisana do właściwości nowego zakresu.
+
+  Używaj kontrolerów do:
+    Ustawiania początkowych stanów obiektu $scope
+    Dodawania zachowań do obiektu $scope
+
+  Nie używaj kontrolerów do:
+    Manipulowania DOM - Kontrolery powinny zawierać tylko logikę biznesową. Wrzucanie jakiejkolwiek logiki prezentacji do kontrolerów znacząco ma wpływ na ich testowalność. AngularJS posiada data-binding dla większości przypadków i dyrektywy do enkapsulacji manualnej manipulacji DOM.
+    Formatowania danych wejściowych - Używaj do tego kontrolerów formularzy
+    Filtrowania danych wyjściowych - Używaj do tego filtrów
+    Współdzielenia kodu lub stanu pomiędzy kontrolerami - Używaj do tego serwisów
+    Zarządzania cyklem życia (life-cycle) innych komponentów (np. tworzenie instacji serwisów)
+
+  https://docs.angularjs.org/guide/controller
+
+* Czym są serwisy w AngularJS?
+  Serwisy są substytucyjnymi obiektami, które łączone są razem za pomocą wstrzykiwania zalezności (dependency injection). Możesz używać serwisów do organizacji i dzielenia kodu w aplikacji.
+  
+  Serwisy w AngularJS są:
+    Leniwie tworzone (lazily instantiated) - AngularJS tworzy serwisy tylko wtedy kiedy komponent aplikacji zależy od niego
+    Singletonami - Każdy komponent zależny od serwisu dostaje referencję to pojedynczej instracji generowanej przez fabrykę serwisu.
+
+  AngularJS oferuje kilka użytecznych serwisów (np. $http), ale dla większości aplikacji będziesz mógł potrzebował (oraz mógł stworzyć) swoje własne.
+
+  https://docs.angularjs.org/guide/services
 
 ### Pytania dodatkowe (zabawne):
 
