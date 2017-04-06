@@ -933,3 +933,7 @@ console.log('three');
 * Jakie są Twoje ulubione części narzędzi programistycznych, których używasz?
 * Czy masz jakiś swój własny projekt na boku? Jaki?
 * Jaka jest Twoja ulubiona funkcja w Internet Explorer?
+
+* Gdybyś musiał przerobić kod Angulara 1.4 na 1.5, co byłoby główną zmianą?
+Wprowadzenie/wymiana istniejącego kodu na komponenty.  
+https://www.sitepoint.com/upgrade-to-angular-components/  
