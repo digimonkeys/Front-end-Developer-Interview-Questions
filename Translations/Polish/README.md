@@ -1455,22 +1455,8 @@ Funkcja setState jest asynchroniczna dlatego przyjmuje callback jako drugi argum
 
 setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
 
-* Co jest nie tak z tym kodem?
-
-```jsx
-this.setState((prevState, props) => {
- return {
-   streak: prevState.streak + props.count
- }
-})
-```
-
-Nic. setState może także przyjmować funkcję jako pierwszy argument. Funkcja ta pozwala na ustawienie obecnego stanu na podstawie stanu poprzedniego.
-
-setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
-
-* How would you implement application-wide exception handling in your Angular app?  
-Angular has a built-in error handler service called $exceptionHandler which can easily be overriden as seen below:  
+* Jak zaimplementujesz globalną obsługę wyjątków w całej aplikacji w angularze?
+Angular ma wbudowany error handler $exceptionHandler, który można nadpisac w następujący sposób:
 
 ```
 angular.
@@ -1483,5 +1469,5 @@ angular.
   }]);
 ```
 
-This is very useful for sending errors to third party error logging services or helpdesk applications. Errors trapped inside of event callbacks are not propagated to this handler, but can manually be relayed to this handler by calling $exceptionHandler(e) from within a try catch block.  
+Jest to użyteczne do wysyłania błędów np. na serwer przechowujący wyjątki aplikacji. Błędy wewnątrz callbacków w eventach nie trafią do tego serwisu, ale możemy je tam wysłać ręcznie posługując się blokiem try catch i wywołując  $exceptionHandler(err).   
 https://docs.angularjs.org/api/ng/service/$exceptionHandler  
