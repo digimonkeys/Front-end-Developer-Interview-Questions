@@ -641,6 +641,13 @@ W ES6 jest jeszcze jeden zakres - zasięg blokowy, który dotyczy zmiennych zade
 [const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
 [inne](http://stackoverflow.com/a/500459)
 
+* Wytłumacz różnice pomiędzy synchronicznymi i asynchronicznymi funkcjami.
+
+Synchroniczna funkcja zostanie wykonana i kiedy się zakonczy, następne zadanie zostanie wykonane.
+Asynchroniczna funkcja zostanie wykonana i niezależnie od tego czy się zakonczy czy nie, następne zadanie zostanie wykonane.
+
+Odniesienie: [Asynchronicznosc vs synchronicznosc](http://stackoverflow.com/questions/748175/asynchronous-vs-synchronous-execution-what-does-it-really-mean)
+
 * Czym jest event life cycle (event flow)?
 
 Event lifecycle (event flow) opisuje cykl życia eventu w drzewie DOM. Przy każdym zdarzeniu, przeglądarka tworzy event i rozsyła go po drzewie DOM. Propagacja / rozsyłanie eventu odbywa się w trzech fazach:

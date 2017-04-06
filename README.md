@@ -879,6 +879,12 @@ Javascript Types![Javascript Data Types](https://developer.mozilla.org/pl/docs/W
   * What are the pros and cons of immutability?
   * How can you achieve immutability in your own code?
 * Explain the difference between synchronous and asynchronous functions.
+
+Synchronous function will be executed and finished before moving on to another task.
+Asynchronous function will be executed and whether its finished or not another next task will be executed.
+
+Reference: [Asynchronous vs synchronous](http://stackoverflow.com/questions/748175/asynchronous-vs-synchronous-execution-what-does-it-really-mean)
+
 * Are functions hoisted in js?
 
 There are two ways of declaring a function in JS: function definition and function expression.
