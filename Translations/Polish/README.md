@@ -981,6 +981,12 @@ console.log("third");
 
   [więcej info](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/)
 
+* Jakie zadanie ma obiekt Buffer w Node.JS?
+
+  Bufory pozwalają deweloperom na manipulacje i tymczasowe przechowywanie danych binarny, a także pełni funkcje bufora dla streamów.
+
+  [więcej info](https://nodejs.org/api/buffer.html)
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
