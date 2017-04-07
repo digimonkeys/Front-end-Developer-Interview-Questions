@@ -1400,6 +1400,170 @@ console.log('three');
   Typically ng-app directives should be placed at the root of an HTML document e.g. <html> or <body> tag, so that it can control the entire DOM hierarchy. However, you can place it in any DOM element.
   The AngularJS framework will only process the DOM elements and its child elements where the ng-app directive is applied.
   
+#### NodeJS questions:
+
+* What is an error-first callback?
+
+  It is a type of callback where the first argument is always an error and other arguments are the result data. The dev can then make sure the function calling the callback executed without troubles by checking whether the error argument is not null.
+
+* How can you avoid callback hells?
+
+  * Keep your code shallow. Don't define callbacks inside callbacks, instead move all callbacks to a single block level and the use them by function name.
+  * Modularize. Split your code into smaller pieces that each only have a single task.
+  * Handle all errors. This is neccessary so a failed function doesn't pass bad or malformed data down the callback chain and possibly cause other functions to throw errors.
+
+  [source](http://callbackhell.com/)
+
+* What are Promises?
+
+  Promises are used for asynchronous computations. A Promise represents a value which may be available now, in the future, or never.
+
+  [source](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+
+* What tools can be used to assure consistent style? Why is it important?
+
+  So called code style linters (jshint, jslint, eslint, etc.) help you keep a consistent style. It is important because it helps you avoid introducing simple bugs at the stage of writing the code. It assures that code formatting is more consistent between members of the team.
+
+* When would you use npm and when yarn?
+
+  I would use yarn when time is of the essence or when offline installation of modules is required.
+
+  [more info](https://yarnpkg.com/lang/en/)
+
+* What's a stub? Name a use case!
+
+  Stubs are functions used in testing to replace other functions.
+
+  Use cases:
+
+  * Replace problematic pieces of code.
+  * Trigger code paths that wouldn't otherwise trigger, such as error handling.
+  * Help test asynchronous code more easily.
+
+  [source](https://semaphoreci.com/community/tutorials/best-practices-for-spies-stubs-and-mocks-in-sinon-js)
+
+* What's a test pyramid? Give an example!
+
+  A testing pyramid consists of 3 parts:
+  * UI tests test the system just like a real live end user would. They mimic the user's interactions in the form.
+  * Integration tests, like UI tests, test various layers of the application, but they don't do it through the UI.
+  * Unit tests are tests developers write to prove to themselves, that the code they are writing works. It enables them to make changes, without fear of breaking everything.
+
+  [source](http://www.agilenutshell.com/episodes/41-testing-pyramid)
+
+* What's your favorite HTTP framework and why?
+
+  There's a lot of them. Some of the more popular include Express, Koa and Meteor. My favorite one is Express, because it's simple, powerful and well-supported.
+
+  [more info](http://nodeframework.com/)
+
+* How can you secure your HTTP cookies against XSS attacks?
+
+  Use HTTPOnly cookie flag, which disables access to the cookie from scripts.
+
+  [more info](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet#Bonus_Rule_.231:_Use_HTTPOnly_cookie_flag)
+
+* How can you make sure your dependencies are safe?
+
+  Use only tested libraries. A good way is to use the most popular ones, as they have a higher chance of errors being detected and fixed by the community. Another way is to freeze a known good version of a library in npm, so it doesn't get updated to an unstable and possibly buggy version, though this requires manual updating in case a newer version contains a bug-fix for the version that's freezed in npm.
+
+* How does Node.js handle child threads?
+
+  Every Node.JS process is single-threaded, therefore to get multiple threads one must use multiple processes. Node.JS provides a `child_process` module that helps with this.
+
+  [more info](https://nodejs.org/api/child_process.html)
+
+* What is the preferred method of resolving unhandled exceptions in Node.js?
+
+  By adding a listener for the `uncaughtException` process-level event:
+
+  ```javascript
+  process.on('uncaughtException', function(err) {
+    // Handle error
+    console.log(err);
+  });
+  ```
+
+* How does Node.js support multi-processor platforms, and does it fully utilize all processor resources?
+
+  Node.JS is a single-threaded application, and as such it will run only on a single core of a system. Node.JS provides a way to create multiple instances in the form of `cluster` module, which aids in fully utilizing system resources.
+
+  [more info](https://nodejs.org/api/cluster.html)
+
+* What is typically the first argument passed to a Node.js callback handler?
+
+  First argument in a callback is usually an error object if the function failed, or null if the function succeeded.
+
+* Consider the following JavaScript code:
+```javascript
+console.log("first");
+setTimeout(function() {
+    console.log("second");
+}, 0);
+console.log("third");
+```
+
+  The output will be:
+  ```
+  first
+  third
+  second
+  ```
+
+  Assuming that this is the desired behavior, and that we are using Node.js version 0.10 or higher, how else might we write this code?
+
+  Answer:
+
+  Instead of using `setTimeout`, we can use `setImmediate` (behind all I/O events) or `process.nextTick` (ahead all I/O events)
+
+* What is Event Loop?
+
+  The event loop allows Node.JS to offload operations to system kernel, which in turn allows Node to handle multiple background operations at the same time. When the operation completes, the kernel tells Node.JS so that it can add appropriate callbacks to the poll queue.
+
+  [more info](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/)
+
+* What is the purpose of Buffer object in Node?
+
+  Buffers allow devs to manipulate and temporarily store binary data, as well to act as buffers for streams.
+
+  [more info](https://nodejs.org/api/buffer.html)
+
+* Which types of streams are present in Node?
+
+  * writable
+  * readable
+  * duplex - implements both writable and readable streams.
+  * transform - similar to duplex, but also allows transformation of passing data.
+  * passthrough - similar to duplex, but the writable and readable parts are connected, everything that comes in on the writable side will come out unchanged on the readable side.
+
+  [source](https://nodejs.org/api/stream.html)
+
+* Name some of the events fired by streams in Node
+
+  error, close, end, finish, data, pipe, unpipe, readable
+
+  [source](https://nodejs.org/api/stream.html)
+
+* What is Chaining in Node?
+
+  Chaining methods allows devs to use the result of a function call without assigning it to a variable first, for example:
+
+  ```javascript
+  const result =
+    [1,2,3,4,5]
+      .filter(val => val > 1)
+      .map(val => val * val)
+      .reduce((a, b) => a + b);
+
+  console.log(result); // 55
+  ```
+
+* What is the purpose of process object?
+
+  Process object is a global object that gives information about the underlying Node.JS process, such as: arguments passed to the process, environmental variables, memory usage etc.
+
+  [more info](https://nodejs.org/api/process.html)
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
