@@ -1003,6 +1003,20 @@ console.log("third");
 
   [źródło](https://nodejs.org/api/stream.html)
 
+* Co to jest chainowanie w Node.JS?
+
+  Chainowanie metod pozwala deweloperom na użycie wyniku funkcji bez uprzedniego przypisania tego wyniku do zmiennej, na przykład:
+
+  ```javascript
+  const result =
+    [1,2,3,4,5]
+      .filter(val => val > 1)
+      .map(val => val * val)
+      .reduce((a, b) => a + b);
+
+  console.log(result); // 55
+  ```
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
