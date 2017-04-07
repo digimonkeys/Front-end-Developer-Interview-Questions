@@ -306,6 +306,7 @@ http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-application
 duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 ```
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
+
   The word "Ternary" indicates that a Ternary expression takes three operands.
   It's the only JavaScript operator that takes three operands.
   Reference: [Conditional (ternary) Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
