@@ -951,6 +951,12 @@ console.log("third");
 
   [source](https://nodejs.org/api/stream.html)
 
+* Name some of the events fired by streams in Node
+
+  error, close, end, finish, data, pipe, unpipe, readable
+
+  [source](https://nodejs.org/api/stream.html)
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?

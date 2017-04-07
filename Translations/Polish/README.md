@@ -997,6 +997,12 @@ console.log("third");
 
   [źródło](https://nodejs.org/api/stream.html)
 
+* Wymień niektóre z eventów emitowanych przez Streamy w Node.JS.
+
+  error, close, end, finish, data, pipe, unpipe, readable
+
+  [źródło](https://nodejs.org/api/stream.html)
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
