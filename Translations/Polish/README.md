@@ -864,7 +864,7 @@ console.log('three');
 
 * Jaki jest twój ulubiony HTTP framework i dlaczego?
 
-  Jest ich wiele, niektóre z popularniejszych to m.in.: Express, Koa i Meteor.
+  Jest ich wiele, niektóre z popularniejszych to m.in.: Express, Koa i Meteor. Moim ulubionym jest Express, ponieważ jest szybki, ma wszystkie potrzebne mi funkcje, oraz ma dobre wsparcie.
 
   [więcej info](http://nodeframework.com/)
 
