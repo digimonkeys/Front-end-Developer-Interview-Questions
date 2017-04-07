@@ -949,6 +949,10 @@ console.log('three');
 
   [więcej info](https://nodejs.org/api/cluster.html)
 
+* Co typowo jest pierwszym argumentem podanym do callback-a?
+
+  Pierwszym argumentem w callback-ach typowo jest obiekt error, jeśli wystąpił błąd w funkcji wywołującej callback, lub null, jeśli ta funkcja wykonała się pomyślnie.
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?

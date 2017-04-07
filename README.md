@@ -903,6 +903,10 @@ console.log('three');
 
   [more info](https://nodejs.org/api/cluster.html)
 
+* What is typically the first argument passed to a Node.js callback handler?
+
+  First argument in a callback is usually an error object if the function failed, or null if the function succeeded.
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
