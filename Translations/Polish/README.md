@@ -922,6 +922,10 @@ console.log('three');
 
   [więcej info](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet#Bonus_Rule_.231:_Use_HTTPOnly_cookie_flag)
 
+* Jak możesz upewnić się że zależności twojej aplikacji są bezpieczne?
+
+  Powinno się używać tylko sprawdzonych bibliotek. Dobry sposóbem jest używanie tych najpopularniejszych, ponieważ mają one większą szansę na dostrzeżenie i poprawę błędów przez społeczność. Innym sposobem jest zamrożenie w npm wersji którą wiemy że jest dobra, przez co nie będzie ona zaktualizowana do nowszej wersji która może być niestabilna lub zawierać błędy, jednak wymaga to ręcznej aktualizacji w przypadku gdy ta nowsza wersja zawiera fix-y dla błędów zawartych w wersji zamrożonej w npm.
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
