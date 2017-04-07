@@ -874,6 +874,12 @@ console.log('three');
 
   [źródło](http://callbackhell.com/)
 
+* Co to są Promisy?
+
+  Promisy są używane do asynchronicznego przetwarzania danych. Promise przedstawia wartość która może być dostępna teraz, w przyszłości lub nigdy.
+
+  [źródło](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+  
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
