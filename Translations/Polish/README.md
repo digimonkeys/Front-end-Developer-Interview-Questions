@@ -884,6 +884,12 @@ console.log('three');
 
   Tak zwane code-style lintery (jshint, jslint, eslint, etc.) pomagają w utrzymaniu spójnego stylu. Jest to ważne ponieważ pozwala na eliminacje prostych błędów już podczas pisania kodu. Zapewnia jednakowe, konsekwentne formatowanie kodu dla wszystkich członków zespołu. 
 
+* Kiedy użyłbyś npm a kiedy yarn?
+
+  Użyłbym yarn gdy czas wykonania jest najważniejszy, lub gdy ważna jest instalacja offline.
+
+  [więcej info](https://yarnpkg.com/lang/en/)
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
