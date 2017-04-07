@@ -864,6 +864,12 @@ console.log('three');
 
   [source](http://www.agilenutshell.com/episodes/41-testing-pyramid)
 
+* What's your favorite HTTP framework and why?
+
+  There's a lot of them. Some of the more popular include Express, Koa and Meteor. My favorite one is Express, because it's simple, powerful and well-supported.
+
+  [more info](http://nodeframework.com/)
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
