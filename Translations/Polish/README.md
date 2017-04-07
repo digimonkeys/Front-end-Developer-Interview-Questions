@@ -1017,6 +1017,12 @@ console.log("third");
   console.log(result); // 55
   ```
 
+* Jakie zadanie ma obiekt `process` w Node.JS?
+
+  Obiekt `process` jest globalnym obiektem który daje informacje na temat bazowego procesu Node.JS, np.: argumenty przekazane do procesu, zmienne środowiskowe, użycie pamięci itp.
+
+  [więcej info](https://nodejs.org/api/process.html)
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
