@@ -926,6 +926,12 @@ console.log('three');
 
   Powinno się używać tylko sprawdzonych bibliotek. Dobry sposóbem jest używanie tych najpopularniejszych, ponieważ mają one większą szansę na dostrzeżenie i poprawę błędów przez społeczność. Innym sposobem jest zamrożenie w npm wersji którą wiemy że jest dobra, przez co nie będzie ona zaktualizowana do nowszej wersji która może być niestabilna lub zawierać błędy, jednak wymaga to ręcznej aktualizacji w przypadku gdy ta nowsza wersja zawiera fix-y dla błędów zawartych w wersji zamrożonej w npm.
 
+* Jak Node.JS obsługuje child thready?
+
+  Każdy proces Node.JS jest jednowątkowy, a więc aby wykorzystać wiele wątków trzeba użyć do tego wielu procesów. Node.JS pomaga w tym udostępniając moduł `child_process`.
+
+  [więcej info](https://nodejs.org/api/child_process.html)
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?

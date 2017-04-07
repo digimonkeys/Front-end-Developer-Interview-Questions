@@ -880,6 +880,12 @@ console.log('three');
 
   Use only tested libraries. A good way is to use the most popular ones, as they have a higher chance of errors being detected and fixed by the community. Another way is to freeze a known good version of a library in npm, so it doesn't get updated to an unstable and possibly buggy version, though this requires manual updating in case a newer version contains a bug-fix for the version that's freezed in npm.
 
+* How does Node.js handle child threads?
+
+  Every Node.JS process is single-threaded, therefore to get multiple threads one must use multiple processes. Node.JS provides a `child_process` module that helps with this.
+
+  [more info](https://nodejs.org/api/child_process.html)
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
