@@ -987,6 +987,16 @@ console.log("third");
 
   [więcej info](https://nodejs.org/api/buffer.html)
 
+* Jakie są typy Streamów w Node.JS?
+
+  * writable
+  * readable
+  * duplex - implementuje streamy writable i readable naraz.
+  * transform - podobny do duplex, ale pozwala na transformację danych przechodzących przez stream.
+  * passthrough - podobny do duplex, ale oba streamy są połączone ze sobą, wszystkie dane które wejdą do streama writable, wyjdą w streamie readable w niezmienionej postaci.
+
+  [źródło](https://nodejs.org/api/stream.html)
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
