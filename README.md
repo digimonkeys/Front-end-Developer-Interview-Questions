@@ -843,6 +843,18 @@ console.log('three');
 
   [more info](https://yarnpkg.com/lang/en/)
 
+* What's a stub? Name a use case!
+
+  Stubs are functions used in testing to replace other functions.
+
+  Use cases:
+
+  * Replace problematic pieces of code.
+  * Trigger code paths that wouldn't otherwise trigger, such as error handling.
+  * Help test asynchronous code more easily.
+
+  [source](https://semaphoreci.com/community/tutorials/best-practices-for-spies-stubs-and-mocks-in-sinon-js)
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
