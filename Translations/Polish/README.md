@@ -866,6 +866,14 @@ console.log('three');
 
   Error-first callback jest typem callbacka gdzie pierwszym argumentem jest zawsze error, a resztą argumentów jest rezultat funkcji wywołującej ten callback. Deweloper może wtedy upewnić się że ta funkcja wykonała się pomyślnie sprawdzając czy pierwszy argument jest null, co oznacza że nie wystąpił żaden błąd.
 
+* Jak można uniknąć callback hell?
+
+  * Utrzymuj swój kod płytkim. Nie definiuj callbacków w środku innych callbacków, zamiast tego przenieś je do jednego block-u i używaj ich po nazwie funkcji.
+  * Modularyzuj. Podziel swój kod na mniejsze części, aby każda z nich miała do wykonania jedno zadanie.
+  * Obsługuj wszystkie błędy. Jest to ważne aby funkcja w której wystąpił błąd nie przekazała złych lub zniekształconych danych w dół chain'a callbacków, co może prowadzić do wystąpienia błędów w innych funkcjach.
+
+  [źródło](http://callbackhell.com/)
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?

@@ -819,6 +819,14 @@ console.log('three');
 
   It is a type of callback where the first argument is always an error and other arguments are the result data. The dev can then make sure the function calling the callback executed without troubles by checking whether the error argument is not null.
 
+* How can you avoid callback hells?
+
+  * Keep your code shallow. Don't define callbacks inside callbacks, instead move all callbacks to a single block level and the use them by function name.
+  * Modularize. Split your code into smaller pieces that each only have a single task.
+  * Handle all errors. This is neccessary so a failed function doesn't pass bad or malformed data down the callback chain and possibly cause other functions to throw errors.
+
+  [source](http://callbackhell.com/)
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
