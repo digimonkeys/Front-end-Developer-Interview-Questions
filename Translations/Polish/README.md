@@ -975,6 +975,12 @@ console.log("third");
 
   Zamiast `setTimeout` możemy użyc `setImmediate` (ustawia funkcje za eventami I/O) lub `process.nextTick` (ustawia funkcje przed eventami I/O)
 
+* Co to jest Event Loop?
+
+  Event Loop pozwala Node.JS na przekazanie operacji do kernela systemu, co z kolei pozwala na obsługę wielu operacji w tle jednocześnie. Kiedy taka operacja się zakończy, kernel daje o tym znać Node, które dodaje odpowiednie callbacki do kolejki wywołań.
+
+  [więcej info](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/)
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
