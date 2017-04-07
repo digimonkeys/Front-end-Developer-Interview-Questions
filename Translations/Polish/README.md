@@ -953,6 +953,28 @@ console.log('three');
 
   Pierwszym argumentem w callback-ach typowo jest obiekt error, jeśli wystąpił błąd w funkcji wywołującej callback, lub null, jeśli ta funkcja wykonała się pomyślnie.
 
+* Spójrz na poniższy kod:
+```javascript
+console.log("first");
+setTimeout(function() {
+    console.log("second");
+}, 0);
+console.log("third");
+```
+
+  Jego wynik to:
+  ```
+  first
+  third
+  second
+  ```
+
+  Zakładając że takie działanie jest pożądane, oraz że używamy Node.JS w wersji 0.10 albo wyższej, jak inaczej moglibyśmy napisać ten kod?
+
+  Odpowiedź:
+
+  Zamiast `setTimeout` możemy użyc `setImmediate` (ustawia funkcje za eventami I/O) lub `process.nextTick` (ustawia funkcje przed eventami I/O)
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
