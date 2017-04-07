@@ -932,6 +932,17 @@ console.log('three');
 
   [więcej info](https://nodejs.org/api/child_process.html)
 
+* Jaka jest preferowana metoda obsługi unhandlaed exceptions w Node.JS?
+
+  Dodanie listener'a event-u procesu `uncaughtException`:
+
+  ```javascript
+  process.on('uncaughtException', function(err) {
+    // Handle error
+    console.log(err);
+  });
+  ```
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
