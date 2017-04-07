@@ -870,6 +870,12 @@ console.log('three');
 
   [more info](http://nodeframework.com/)
 
+* How can you secure your HTTP cookies against XSS attacks?
+
+  Use HTTPOnly cookie flag, which disables access to the cookie from scripts.
+
+  [more info](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet#Bonus_Rule_.231:_Use_HTTPOnly_cookie_flag)
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?

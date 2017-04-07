@@ -916,6 +916,12 @@ console.log('three');
 
   [więcej info](http://nodeframework.com/)
 
+* Jak można zabezpieczyć ciasteczka przed atakami XSS?
+
+  Można użyć flagi ciasteczka HTTPOnly, która blokuje dostęp do ciasteczka z poziomu skryptów.
+
+  [więcej info](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet#Bonus_Rule_.231:_Use_HTTPOnly_cookie_flag)
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
