@@ -320,8 +320,8 @@ Wzorzec strategii umożliwa wybór odpowiedniego algorytmu na etapie działania 
     - pozwala klientowi na zmianę strategii
   - Strategy - implementuje algorytmy używając interfejsu Strategii
 
-DotFactory patterns![DotFactory patterns](http://www.dofactory.com/javascript/design-patterns)
-JavaScript Design Patterns![JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+[DotFactory patterns](http://www.dofactory.com/javascript/design-patterns)
+[JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 
 * Czym jest tablica mieszająca (hashtable)?
 * Co oznaczają komunikaty `undefined` i `undeclared` dla zmiennych?
@@ -340,7 +340,7 @@ JavaScript Design Patterns![JavaScript Design Patterns](https://addyosmani.com/r
 Promise (natywnie dodany w ES6) jest obiektem używanym w operacjach asynchronicznych. Jest to obiekt, który reprezentuje wartość, która może być dostępna teraz, w przyszłości, lub nie być dostępna wcale.
 Promise ma trzy stany: pending (rozpoczęte), fullfiled (zakończone pozytywnie), rejected (zakończone niepowodzeniem - błędem). Gdy Promise osiągnie stan fullfiled lub rejected uruchamiane są handlery poprzez .then (.catch jest aliasem do .then(undefined, function()))
 
-Promise![Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+[Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
 * Czym są domknięcia, jak i po co są używane?
     Closure - domknięcie - pozwala na dostęp do wewnętrznego scope funkcji, nawet po jej wykonaniu.
@@ -402,7 +402,7 @@ function Person(){}, var person = Person(), var person = new Person()
 * Czym jest callback?
 Callback jest to funckcja przekazywana do innej funkcji poprzez argument. Funkcja, która przyjmuje callback jako argument może w swoim ciele wywołać przekazaną funkcję. Wywołanie to może nastąpić natychmiast (synchronicznie), albo późniejszym czasie (asynchronicznie).
 
-Callback![Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming))
+[Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming))
 
 * Kiedy optymalizujesz swój kod?
 
@@ -410,7 +410,7 @@ Callback![Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming
 
 Tak, w JS można tworzyć zmienne i metody jako prywatne. Aby stworzyć metodę prywatną należy utworzyć definicję funkcji w konstruktorze obiektu (bez przypisania jej do this). W takim wypadku funkcja / metoda będzie dostępna tylko wewnątz obiektu i tylko dla funkcji prytwatnych.
 
-Private members![Crockford on private members](http://javascript.crockford.com/private.html)
+[Crockford on private members](http://javascript.crockford.com/private.html)
 
 * Wyjaśnij działanie dziedziczenia w JavaScript?
 * Co to jest function declaration a co function expression i czym sie roznia?
@@ -418,9 +418,9 @@ Private members![Crockford on private members](http://javascript.crockford.com/p
 Function declaration jest to stworzenie obiektu typu Function i przypisanie mu nazwy oraz parametrów używanych przez funkcję.
 Function expression jest niemal identyczne, natomiast pozwala na ominięcie nazwy funkcji (co tworzy tzw. funkcję anonimową). Function expression może być także używane jako IIFE. Function expression, w przeciwieństwie do function declaration nie są hoistowane.
 
-Function delcaration![Function delcaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
-Function expression![Function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function)
-Function declaration vs function expression![Function declaration vs function expression](https://www.sitepoint.com/function-expressions-vs-declarations/)
+[Function delcaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+[Function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function)
+[Function declaration vs function expression](https://www.sitepoint.com/function-expressions-vs-declarations/)
 
 * Kiedy użyłbyś `document.write()`?
     Document.write() jest zawsze dostępny, jest dobrym wyborem dla dostawcow skryptow zewnetrznych aby mogli dodać oni swoj kod.
@@ -447,7 +447,7 @@ Falsy values są to wartości, które podczas konwersji na boolean dają wartoś
 - NaN
 - false 
 
-Falsy values![MDN falsy values](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+[MDN falsy values](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 
 * Omów AJAX jak najbardziej szczegółowo.
 * Podaj wady i zalety żywania technologii AJAX
@@ -494,7 +494,7 @@ Typem złożonym jest Object jak np:
 
 Typy proste przekazywane są przez wartość, natomiast typy złożone przez referencję.
  
-Javascript Types![Javascript Data Types](https://developer.mozilla.org/pl/docs/Web/JavaScript/Data_structures)
+[Javascript Data Types](https://developer.mozilla.org/pl/docs/Web/JavaScript/Data_structures)
 
 * Czy kiedykolwiek używałeś szablonów w JavaScript?
   * Jeśli tak, jakie to były biblioteki? (Mustache.js, Handlebars itd.)
@@ -508,7 +508,7 @@ Javascript Types![Javascript Data Types](https://developer.mozilla.org/pl/docs/W
 
 Drugi parametr Object.create pozwala na dodanie właściwości do nowo powstałego obiektu. Format w jakim podajemy te właściwości jest taki sam jak w drugim argumencie Object.defineProperties().
 
-Object.create![Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
+[Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
 
 * Wyjaśnij pojęcie "hoisting".
 * Zasieg zmiennych w jsie?
@@ -516,10 +516,10 @@ Object.create![Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScri
  W JS, do wersji ES6 występowały tylko dwa rodzaje zasięgu zmiennych, tj. globalny (global scope) i zasięg lokalny - w obrębie funkcji (function scope).
  Od ES6 i pojawienia się zmiennych deklarowanych jako let i const pojawił się także zasięg blokowy (tj. wewnątrz { }).
 
-var![var](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
-let![let](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Statements/let)
-const![const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
-Other scopes![other scopes](http://stackoverflow.com/a/500459)
+[var](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
+[let](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Statements/let)
+[const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
+[other scopes](http://stackoverflow.com/a/500459)
 
 * Opisz bąbelkowanie zdarzeń.
     Bubbling jest to wynoszenie / przechodzenie eventu do góry drzewa DOM.
@@ -551,7 +551,7 @@ Object.create zostało dodane w ECMAScript 5. Object.create tworzy nowy obiekt, 
 
 W ECMAScript 2015 przedstawiono nowe słowa kluczowe implementujące klasy. Mogą one wyglądać identycznie do konstrukcji znanych z języków implementujących klasyczny model dziedziczenia, jednak nie są one tym samym. Dziedziczenie w JavaScript nadal pozostało prototypowe. Klasy są tak naprawdę tylko "lukrem składniowym" na tworzenie obiektu za pomocą konstruktora i new.
 
-Difference new vs Object.create![Difference new vs Object.create](http://stackoverflow.com/questions/4166616/understanding-the-difference-between-object-create-and-new-somefunction)
+[Difference new vs Object.create](http://stackoverflow.com/questions/4166616/understanding-the-difference-between-object-create-and-new-somefunction)
 
 * Czemu rozszerzanie obiektów wbudowanych w JavaScript jest złym pomysłem?
     Ponieważ obiekty te zostały stworzone według pewnej dobrze udokumentowanej i przemyślanej specyfikacji
@@ -595,7 +595,8 @@ Difference new vs Object.create![Difference new vs Object.create](http://stackov
 * Czy funkcje sa hoistowane?
     W JS funcje można deklarować na dwa sposoby: poprzez function definition oraz function expression.
     Function definition są hoistowane, natomiast function expressions nie.
-    Function hoisting![Function hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+
+    [Function hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
 
 * Napisz działający kod:
 ```javascript
@@ -652,7 +653,7 @@ Odniesienie: [Global variables disscusion](http://stackoverflow.com/questions/26
  Konsekwencją tego, że w dziedziczeniu klasycznym hierarchia tworzona jest za pomocą klas, które są jakby opisem przyszłego obiektu, co uniemożliwia zmiany metod, które są dziedziczone. Nie dzidziczy się również stanu (gdyż klasy go nie posiadają).
  W dziedziczeniu prototypowym, opartym na obiektach, każda zmiana metody czy atrybutu na obiektach, z których się dziedziczy, jest natychmiast odzwierciedlana na obiekcie dziedziczącym. Dziedziczy się także stan obiektu.
  
-Classical vs Prototypal![Stackoverflow - classical vs prototypal](http://softwareengineering.stackexchange.com/a/99438)
+[Stackoverflow - classical vs prototypal](http://softwareengineering.stackexchange.com/a/99438)
 
 * Jaka jest roznica miedzy funkcja a obiektem?
 
@@ -722,7 +723,7 @@ Jedyny polyfill, który znam to `Bluebird`.
  
 Dziedziczenie jest mechanizmem współdzielenia funkcjonalności między klasami i/lub obiektami (w rozumieniu klasycznym) lub obiektami (w dziedziczeniu prototypowym - jak w js). Klasa dziedzicząca (zwana klasą pochodną) otrzymuje dostęp do udostępnionych zachowń oraz atrybutów od klasy, z której następuje dziedziczenie (zwanej klasą bazową).
  
-Dziedziczenie![Wikipedia - dziedziczenie](https://pl.wikipedia.org/wiki/Dziedziczenie_(programowanie))
+[Wikipedia - dziedziczenie](https://pl.wikipedia.org/wiki/Dziedziczenie_(programowanie))
 
 * Czym jest obietnica (`Promise`)?
 
@@ -781,7 +782,7 @@ Event lifecycle (event flow) opisuje cykl życia eventu w drzewie DOM. Przy każ
 - on the object faze - występuje na elemencie, na którym nastąpiło zdarzenie
 - bubbling faze - w tej fazie event przesyłany jest od elementu na którym nastąpiło zdarzenie, aż do najwyżeszego rodzica w drzewie dom
 
-Event flow![Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
+[Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
 
 ### Przykłady kodu JS:
 
@@ -1691,7 +1692,7 @@ Twitter.propTypes = {
 };
 ```
 
-Functions as children![Functions as children](https://facebook.github.io/react/docs/jsx-in-depth.html#functions-as-children)
+[Functions as children](https://facebook.github.io/react/docs/jsx-in-depth.html#functions-as-children)
 
 * Jaka jest różnica między kontrolowanym a niekontrolowanym komponentem?
 
@@ -1699,53 +1700,53 @@ Komponent kontrolowany jest to komponent w którym React kontroluje wszystko i j
 
 W komponentach niekontrolowanych dane pochodzą bezpośrednio z drzewa DOM. Aby dostać się do tych danych używa się event handlerów lub ref (polecane).
 
-Controlled components![Controlled components](https://facebook.github.io/react/docs/forms.html#controlled-components)
-Uncontrolled components![Uncontrolled components](https://facebook.github.io/react/docs/uncontrolled-components.html)
+[Controlled components](https://facebook.github.io/react/docs/forms.html#controlled-components)
+[Uncontrolled components](https://facebook.github.io/react/docs/uncontrolled-components.html)
 
 * W którym zdarzeniu cyklu życia elementu wykonuje się rządania AJAX i dlaczego?
 
 Rządania ajax powinny być wykonywane w zdarzeniu componentDidMount. Dzieje się tak ponieważ, gdy rządanie zwróci dane, zazwyczaj chcemy je przypisać do stanu komponentu, a to może zostać wykonane tylko na komponentach już zamontowanych.
 
-State and lifecycle![State and lifecycle](https://facebook.github.io/react/docs/state-and-lifecycle.html)
+[State and lifecycle](https://facebook.github.io/react/docs/state-and-lifecycle.html)
 
 * Co robi shouldComponentUpdate i dlaczego jest takie ważne?
 
 shouldComponentUpdate jest ważne z powodów wydajnościowych.
 Jeżeli wiemy, że pewna cześć naszego UI się nie zmieni, nie ma powodu żeby React dokonywał sprawdzania, czy powinien uaktualniać tę część. Zwracając false z metody shouldComponentUpdate, dajemy znać Reactowi że obecny komponent i wszystkie jego dzieci pozostaną niezmienione.
 
-Optimizing performance![Optimizing performance](https://facebook.github.io/react/docs/optimizing-performance.html)
+[Optimizing performance](https://facebook.github.io/react/docs/optimizing-performance.html)
 
 * Jak dać znać Reactowi, żeby zbudował w Production mode i co to dokładnie spowoduje?
 
 Przeważnie powinno się użyć DefinePlugin dla Webpacka aby ustawić wartość zmiennej środowiskowej NODE_ENV na "production". Spowoduje to usunięcie dodatkowych ostrzeżeń oraz m.in. walidacji propTypes.
 
-Development and production![Development and production](https://facebook.github.io/react/docs/installation.html#development-and-production-versions)
+[Development and production](https://facebook.github.io/react/docs/installation.html#development-and-production-versions)
 
 * Dlaczego użyłbyś React.Children.map(props.children, () => ) zamiast props.children.map(() => )
 
 Ponieważ props.children może być zarówno tablicą komponentów, ale także pojedynczym komponentem. Jeśli przekażemy pojedynczy komponent do natywnej funkcji map, funkcja zwróci bład. React.Children.map potrafi obsłużyć dwa przypadki, gdy children są tablicą oraz elementem.
 
-React.Children.map![React.Children.map](https://facebook.github.io/react/docs/react-api.html#react.children.map)
+[React.Children.map](https://facebook.github.io/react/docs/react-api.html#react.children.map)
 
 * Opisz eventy w React.
 
 W React natywne eventy opakowane są w instancje SyntheticEvent, które rozwiązują problem różnić w działaniu eventów między przeglądarkami. SyntheticEvent używa się tak samo jak natywnych eventów, mają ten sam interfejs.
 React w rzeczywistośći nie przypisuje eventów do samych child nodes. Nasłuchuje on wszystkich eventów na najwyższym komponencie i używa pojedynczego event listenera.
 
-Handling events![Handling events](https://facebook.github.io/react/docs/handling-events.html)
+[Handling events](https://facebook.github.io/react/docs/handling-events.html)
 
 * Jaka jest różnica między createElement i cloneElement?
 
 createElement jest funkcją, która przekształca JSX na obiekt zrozumiały dla React, który jest używany do tworzenia elementów (obiektowej reprezentacji interfejsu użytkownika). cloneElement służy do klonowaina elementów i przekazywania im nowych props.
 
-Create Element![Create Element](https://facebook.github.io/react/docs/react-api.html#createelement)
-Clone Element![Clone Element](https://facebook.github.io/react/docs/react-api.html#cloneelement)
+[Create Element](https://facebook.github.io/react/docs/react-api.html#createelement)
+[Clone Element](https://facebook.github.io/react/docs/react-api.html#cloneelement)
  
 * Czym jest drugi argument, który możemy przekazać do funkcji setState i do czego służy?
 
 Funkcja setState jest asynchroniczna dlatego przyjmuje callback jako drugi argument. Funkcja ta jest wykonywana, gdy setState skończył swoje wykonanie i komponent jest ponownie renderowany.
 
-setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
+[setState](https://facebook.github.io/react/docs/react-component.html#setstate)
 
 * Co jest nie tak z tym kodem?
 
@@ -1759,4 +1760,4 @@ this.setState((prevState, props) => {
 
 Nic. setState może także przyjmować funkcję jako pierwszy argument. Funkcja ta pozwala na ustawienie obecnego stanu na podstawie stanu poprzedniego.
 
-setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
+[setState](https://facebook.github.io/react/docs/react-component.html#setstate)
