@@ -1934,3 +1934,6 @@ https://docs.angularjs.org/api/ng/service/$http
 
 * How do you hide an HTML element via a button click in AngularJS?  
 You can do this by using the ng-hide directive in conjunction with a controller.  
+
+* How do you disable a button depending on a checkbox’s state?  
+We can use the ng-disabled directive and bind its condition to the checkbox’s state.  

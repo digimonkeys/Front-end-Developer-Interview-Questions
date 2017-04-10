@@ -1965,3 +1965,6 @@ https://docs.angularjs.org/api/ng/service/$http
 
 * Jak schowasz element html przez kliknięcie guzikiem w angularJs?  
 Użyje dyrektywy ng-hide uzależnionej od zmiennej typu boolean, którą będę togglował za pomocą ng-click na buttonie.  
+
+* Jak wyłączysz (ustawisz na disabled) button przez zmianę stanu checkboxa?  
+Użyję dyrektywy ng-disabled, której stan przypiszę do stanu checkboxa.  
