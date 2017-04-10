@@ -1924,3 +1924,6 @@ https://docs.angularjs.org/guide/scope
 * What are Directives?  
 Directives are markers on a DOM element (such as an attribute, element name, comment or CSS class) that tell AngularJS’s HTML compiler to attach a specified behavior to that DOM element (e.g. via event listeners), or even to transform the DOM element and its children.  
 https://docs.angularjs.org/guide/directive  
+* What is a singleton pattern and where we can find it in Angularjs?  
+Is a great pattern that restricts the use of a class more than once. We can find singleton pattern in angular in dependency injection and in the services. If you do 2 times ‘new Object()‘ without this pattern, you will be allocating 2 pieces of memory for the same object. With singleton pattern, if the object exists, you reuse it.  
+http://joelhooks.com/blog/2013/05/01/when-is-a-singleton-not-a-singleton/  

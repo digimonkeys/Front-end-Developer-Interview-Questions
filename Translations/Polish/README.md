@@ -1953,3 +1953,8 @@ https://docs.angularjs.org/guide/scope
 * Czym są dyrektywy?
 Dyrektywy to znaczniki na elementach DOM (atrybuty, nazwy elementów, komentarze lub klasy css), które mówią kompilatorowi html Angulara aby przywiązać specyficzne zachowanie do danego elementu przez event listenery lub nawet aby przekształcić cały element DOM i jego dzieci.  
 https://docs.angularjs.org/guide/directive  
+
+* Czym jest singleton i gdzie jest używany w angularJS?
+Jest to kreacyjny wzorzec projektowy, którego celem jest ograniczenie możliwości tworzenia obiektów danej klasy do jednej instancji oraz zapewnienie globalnego dostępu do stworzonego obiektu. W angularze pattern ten jest wykorzystywany w mechanizmie dependency injection i w serwisach.  
+http://joelhooks.com/blog/2013/05/01/when-is-a-singleton-not-a-singleton/  
+https://pl.wikipedia.org/wiki/Singleton_(wzorzec_projektowy)  
