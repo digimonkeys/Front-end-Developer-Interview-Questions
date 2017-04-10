@@ -1739,6 +1739,25 @@ console.log("third");
 * Czy masz jakiś swój własny projekt na boku? Jaki?
 * Jaka jest Twoja ulubiona funkcja w Internet Explorer?
 
+### Angular
+
+* Is AngularJS extensible?  
+Yes, in Angular we can create custom directive to extend AngularJS existing functionalities.  
+https://docs.angularjs.org/guide/directive 
+
+* Jaka powinna być maksymalna liczba zarejestrowanych „watchów”? Bonus: jak kontrolowałbyś ich ilość?
+Aby zmniejszyć zużycie pamięci i polepszyć wydajność dobrze jest nie przekraczać 2000 watchów. Liczbę można kontrolować za pomocą modułu npm ng-stats.  
+https://github.com/kentcdodds/ng-stats 
+
+* Jak można przekazywać dane pomiędzy kontrolerami?
+Stworzyć service przechowujący dane i wstrzykujący je do kontrolerów. Wykorzystanie service’ów jest najczystsze, najszybsze i najłatwiejsze do testowania. Można jednak wykorzystac do tego również eventy, użyć $parent, nextSibling, controllerAs itp. do bezpośredniego dostania się do kontrolerów oraz zapisać dane na $rootScope (nie jest to dobra praktyka).  
+https://daveceddia.com/sharing-data-between-controllers-best-practice-use-a-service/  
+http://stackoverflow.com/a/21920241  
+* Gdzie można implementowac manipulacje DOM w Angularze?
+Teoretycznie tylko w dyrektywach, nigdy w kontrolerach i serwisach. Obecnie jednak dobrą praktyka jest stosowanie komponentów (które mogą być w formie dyrektyw), gdzie praktycznie cała logika znajduje się w kontrolerze. W takim wypadku uważam że można manipulować DOM wewnątrz template dyrektywy (komponentu) z kontrolera dyrektywy (komponentu).  
+http://ng-learn.org/2014/01/Dom-Manipulations/  
+http://stackoverflow.com/questions/37480150/manipulating-dom-in-angularjs-best-practice  
+
 ### React
 
 * Jeśli stworzyłbyś element taki jak Twitter poniżej, jak wyglądała by definicja tego componentu?
@@ -1848,18 +1867,3 @@ this.setState((prevState, props) => {
 Nic. setState może także przyjmować funkcję jako pierwszy argument. Funkcja ta pozwala na ustawienie obecnego stanu na podstawie stanu poprzedniego.
 
 [setState](https://facebook.github.io/react/docs/react-component.html#setstate)
-
-### Angular
-
-* Is AngularJS extensible?  
-Yes, in Angular we can create custom directive to extend AngularJS existing functionalities.  
-https://docs.angularjs.org/guide/directive 
-
-* Jaka powinna być maksymalna liczba zarejestrowanych „watchów”? Bonus: jak kontrolowałbyś ich ilość?
-Aby zmniejszyć zużycie pamięci i polepszyć wydajność dobrze jest nie przekraczać 2000 watchów. Liczbę można kontrolować za pomocą modułu npm ng-stats.  
-https://github.com/kentcdodds/ng-stats 
-
-* Jak można przekazywać dane pomiędzy kontrolerami?
-Stworzyć service przechowujący dane i wstrzykujący je do kontrolerów. Wykorzystanie service’ów jest najczystsze, najszybsze i najłatwiejsze do testowania. Można jednak wykorzystac do tego również eventy, użyć $parent, nextSibling, controllerAs itp. do bezpośredniego dostania się do kontrolerów oraz zapisać dane na $rootScope (nie jest to dobra praktyka).  
-https://daveceddia.com/sharing-data-between-controllers-best-practice-use-a-service/  
-http://stackoverflow.com/a/21920241  

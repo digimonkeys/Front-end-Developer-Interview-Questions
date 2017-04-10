@@ -1831,3 +1831,7 @@ Create an AngularJS service that will hold the data and inject it inside of the 
 The methods above are all correct, but are not the most efficient and easy to test.  
 https://daveceddia.com/sharing-data-between-controllers-best-practice-use-a-service/  
 http://stackoverflow.com/a/21920241 
+* Where should we implement the DOM manipulation in AngularJS?
+Dom Manipulations theoretically should not exist in controllers, services or anywhere else but in directives. The currently suggested best practice is to use "components" (which can be realized via directives), where basically all the directive logic leaves in the controller. In that context, I believe it is perfectly fine to manipulate the DOM in a directive's template from within the directive's controller.  
+http://ng-learn.org/2014/01/Dom-Manipulations/  
+http://stackoverflow.com/questions/37480150/manipulating-dom-in-angularjs-best-practice  
