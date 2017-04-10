@@ -60,7 +60,13 @@ I start with gathering client requirements. Ten I create environment - bundling 
 
 
 * If you have 5 different stylesheets, how would you best integrate them into the site?
-* Can you describe the difference between progressive enhancement and graceful degradation? 
+* Can you describe the difference between progressive enhancement and graceful degradation? Bonus points for describing feature detection.  
+progressive enhancement considers creating site for old browsers and then enhancing application with fetures for newer browsers  
+
+graceful degradation is creating app for new versions of eg. browsers, but in a way that lets the app maintain some basic functionalities if some of environment features happen to be unavalaible  
+
+Feature detection (also feature testing) is a technique used in web development for handling differences between runtime environments (typically web browsers or user agents), by programmatically testing for clues that the environment may or may not offer certain functionality. This information is then used to make the application adapt in some way to suit the environment: to make use of certain APIs, or tailor for a better user experience  
+
 * What is semantic html?  
 Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, of the information in webpages and web applications rather than merely to define its presentation or look. Semantic HTML is processed by traditional web browsers as well as by many other user agents. CSS is used to suggest its presentation to human users.  
 

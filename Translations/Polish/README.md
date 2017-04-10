@@ -65,7 +65,12 @@ Szkielet strony i semantyka, wypełnienie kontentem + poprawa semantyki, stylowa
 
 * Opisz różnicę między stopniowym ulepszaniem (progressive enhancement) i wdzięczną degradacją (graceful degradation)?
   * Dodatkowe punkty za opisanie wykrywania obsługi cech (feature detection)  
-  
+Graceful degradation - oprogramowanie / strona jest tworzona dla użytkowników używających nowszych przeglądarek, obsługujących nowe technologie, zapewniając im pełne user expirience. Stopniowo zmniejsza się user expirience dla użytkowników używających starsze wersje przeglądarek, wciąż zapewniając im funkcjonalność aplikacji / strony na podstawowym poziomie.  
+
+ Progressive enhancement - tworzenie aplikacji strony zapewniającej pewien poziom funkcjonalności dla wszystkich przeglądarek, następnie rozbudowuje się ją o nowe funkcjonalności / features dla nowszych przeglądarek.  
+
+ wykrywanie obsługi cech to technika sprawdzania danego środowiska (np przeglądarki) pod względem dostepnych funkcjonalności, pozwalająca aplikacji na pewne dostosowanie swojego działania do zastanych możliwości  
+
 * Wyjaśnij, co kryje się za terminem "semantyczny HTML".  
 Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich przeznaczeniem i znaczeniem semantycznym, a nie tylko do prezentowania danych. Znaczniki nadają sens i w różnym kontekście mogną oznaczać do innego. Np <i> i <em> <b> i <strong>, section, aside, nav. Jest to ważne dla robotów indeksujących google, dla czytników przeznaczonych dla osób niepełnosprawnych etc.  
 
