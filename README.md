@@ -1852,3 +1852,6 @@ https://www.sitepoint.com/upgrade-to-angular-components/
 The ngIf directive removes or recreates a portion of the DOM tree based on an expression. When an element is removed using ngIf its scope is destroyed and a new scope is created when the element is restored.  
 The ngShow directive shows or hides the given HTML element based on the expression provided to the ngShow attribute. The element is shown or hidden by removing or adding the ng-hide CSS class onto the element. The .ng-hide CSS class is predefined in AngularJS and sets the display style to none (using an !important flag).  
 http://stackoverflow.com/a/19177773  
+* What is the difference between one-way binding and two-way binding?  
+With two-way binding, if I change the reference Object and Primitive in the parent and the isolate Component, you’ll see both values continue to update. With one way data binding  You’ll be able to change the isolate bindings without affecting the parent scope. However, the $watch is setup on the parent data source, so when changes occur, it’ll propagate down and flow into the Component to update it with new data   
+https://toddmotto.com/one-way-data-binding-in-angular-1-5/  
