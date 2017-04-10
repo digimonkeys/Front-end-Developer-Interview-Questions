@@ -77,7 +77,12 @@ http://webmasters.stackexchange.com/a/25091
 * How many resources will a browser download from a given domain at a time? 
 It depends on a browser, older ones like IE6 - 2, newer ones 6-8.  
 
-* Name 3 ways to decrease page load (perceived or actual load time).
+* How would you optimize a website's assets/resources?
+* How many resources will a browser download from a given domain at a time?
+  * What are the exceptions?
+* Name 3 ways to decrease page load (perceived or actual load time).  
+1. Optimalize images - decrease their amount, use miniatures, svg, css-sprites, preloaders 2.Cache content 3. Reduce amount of http requests  
+
 * If you jumped on a project and they used tabs and you used spaces, what would you do?
 I will adapt (just change settings in my editor).
 * Describe how you would create a simple slideshow page. Bonus points if without JS.  
@@ -149,6 +154,16 @@ https://developers.google.com/web/fundamentals/design-and-ui/animations/css-vs-j
 https://css-tricks.com/myth-busting-css-animations-vs-javascript/  
 
 * What does CORS stand for and what issue does it address?
+
+* What HTTP methods do you know?
+* How many requests are there on GET and how many on PUT, and where does the difference come from?
+* What's REST? What alternatives do you know?
+* What is the difference in logging into SPA app and normal app?
+* What threats and attacks are related to SPA apps?
+
+
+[9:34]  
+. co sie dzieje gdy uzywamy new?
 
 #### HTML Questions:
 
@@ -271,14 +286,16 @@ No, but I'm familiar with Jade, EJS, HandlebarsJs, Underscore Templates, Mustach
 
   https://css-tricks.com/css-sprites/
 * What are your favourite image replacement techniques and which do you use when?
-  CSS image replacement is a technique of replacing a text element (usually a header tag) with an image. You may want to use a <h1> tag and text for this for the accessibility and SEO benefits.
+  CSS image replacement is a technique of replacing a text element (usually a header tag) with an image. You may want to use a `<h1>` tag and text for this for the accessibility and SEO benefits.
   I use image replacements (depending on the needs), when I want to make my page more accessible for devices like readers etc. Usually I use display none span in header.
 
   #1: Display none span in header
+  ```html
   <h1 id="logo">
     <span>CSS-Tricks</span>
   </h1>
-
+  ```
+  ```css
   h1#logo {
     width: 250px;
     height: 25px;
@@ -287,24 +304,28 @@ No, but I'm familiar with Jade, EJS, HandlebarsJs, Underscore Templates, Mustach
   h1#logo span {
     display: none;
   }
-
+  ```
   #2: Text-indent out of sight
+  ```html
   <h1 id="logo">
     CSS-Tricks
   </h1>
-
+  ```
+  ```css
   h1#logo {
     width: 300px;
     height: 75px;
     background: url(test.png);
     text-indent: -9999px;
   }
-
+  ```
   #3: Invisible Text
+  ```html
   <h3 class="leon">
     <span>CSS-Tricks</span>
   </h3>
-
+  ```
+  ```css
   h3.leon {
     width: 300px;
     height: 75px;
@@ -316,7 +337,7 @@ No, but I'm familiar with Jade, EJS, HandlebarsJs, Underscore Templates, Mustach
     height: 0;
     overflow: hidden;
   }
-
+  ```
   https://css-tricks.com/css-image-replacement/
 * How would you approach fixing browser-specific styling issues?
   - use separate stylesheets that loads when that specific browser is being used.
@@ -507,6 +528,10 @@ No, but I'm familiar with Jade, EJS, HandlebarsJs, Underscore Templates, Mustach
     http://stackoverflow.com/questions/3127429/how-does-the-this-keyword-work
 
 * Explain how prototypal inheritance works
+    Prototypal inheritance means prototypes of objects are linked,
+    which means, that when some property is used it is first searched at the object,
+    then (when not found) on its prototype and so on
+
 * What do you think of AMD vs CommonJS?
     Both specifications describe the format and manner in which modules and their dependencies should be defined.
     The main difference between AMD (Asynchronous Module Definition) and CommonJS is the asynchronous loading of modules in AMD.
@@ -661,6 +686,14 @@ ECMAScript 2015 introduced a new set of keywords implementing classes. Although 
     - Embedded JS
 
 * Explain "hoisting".
+    Hoisting is the lifting of variables with assigned value and functions
+    up to the very top (to global reach or function coverage).
+    Which allows them to be used before they are declared.
+    x = 5; // Assign 5 to x
+    elem = document.getElementById("demo"); // Find an element
+    elem.innerHTML = x; // Display x in the element
+    var x; // Declare x
+
 * Describe event bubbling.
     Bubbling is an event passing up of the DOM tree.
     When an event occurs in an element inside another element,
@@ -759,6 +792,7 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
   ```
   Reference: [Array.prototype.concat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
+
   The word "Ternary" indicates that a Ternary expression takes three operands.
   It's the only JavaScript operator that takes three operands.
   Reference: [Conditional (ternary) Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
@@ -779,6 +813,11 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
   Reference: [Strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
 
 * Create a for loop that iterates up to `100` while outputting **"fizz"** at multiples of `3`, **"buzz"** at multiples of `5` and **"fizzbuzz"** at multiples of `3` and `5`
+
+```javascript
+  for(let i = 1; i <= 100; i += 1) console.log((i % 3 === 0 ? 'fizz' : '') + (i % 5 === 0 ? 'buzz' : ''));
+```
+
 * Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
 
 It is generally a good idea to leave the global scope untouched, because all code share a single global namespace.
@@ -901,6 +940,21 @@ In ES6 there is one more - block scope for variables defined with let and const 
 [other scopes](http://stackoverflow.com/a/500459)
 
 * What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
+
+Pros:
+  - Typos caught at compilation time.
+  - Simplier syntax.
+  - Better maintainability.
+
+Cons:
+  - In order to run the application in a browser, a compile step is required.
+  - Debugging can be a pain.
+  - Learning new language / syntax.
+  - Smaller community, generally less resources avaible.
+
+Reference: [Typescript pros and cons](https://designmodo.com/typescript/),
+[Javascript, CoffeScript, Dart and TypeScript](https://smthngsmwhr.wordpress.com/2013/02/25/javascript-and-friends-coffeescript-dart-and-typescript/)
+
 * What tools and techniques do you use debugging JavaScript code?
 
 I'm using Chrome DevTools.
@@ -995,7 +1049,39 @@ Function definitions are hoisted, function expressions arent.
 
 * What is event loop?
   * What is the difference between call stack and task queue?
-* Explain the differences on the usage of `foo` between `function foo() {}` and `var foo = function() {}`
+
+The event loop got its name because of how it's usually implemented, which usually resembles:
+
+```javascript
+while (queue.waitForMessage()) {
+  queue.processNextMessage();
+}
+```
+
+queue.waitForMessage waits synchronously for a message to arrive if there is none currently.
+Each message is processed completely before any other message is processed. 
+This offers some nice properties when reasoning about your program, including the fact that whenever a function runs, 
+it cannot be pre-empted and will run entirely before any other code runs (and can modify data the function manipulates).
+
+A call stack is a queue of functions that are being executed.
+Task queue is a list of messages waiting to be processed. 
+A function is associated with each message. When the stack has enough capacity, a message is taken out of the queue and processed.
+
+* Explain the differences on the usage of `foo` between `function foo() {}` and `var foo = function() {}`.
+
+There is a function declaration (first one) and function expression (second one).
+The usage is almost the same, except for one thing. 
+Calling foo before a declaration (first case) the function will be called, because functions are hoisted.
+Calling foo before an expression (second case) will result in throwing error, because, even though, variables are hoisted too, their value is undefined untill the declaration.
+
+```javascript
+foo(); // ok
+boo(); // TypeError: boo is not a function
+
+function foo() {};
+var boo = function () {};
+```
+
 * What is inheritance?
 
 Inheritance (in programming) is a mechanism that allow sharing functionality (and code reuse) beetwen classes and/or objects (in classical inheritance) or between objects (in prototypal inheritance - like in JS). Class that inherits (called subclass) gains acess to all shared behaviors and attributes of parent class (called superclass);
@@ -1026,6 +1112,13 @@ Event life cycle (event flow) describes flow of an event through DOM tree. With 
 [Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
 
 #### Testing Questions:
+
+* How do you test apps? What kinds of tests do you know? What tools do you use to those types of tests? (please include in response links to videos about those tests types)
+* What should you test with unit tests?
+* What should you test with e2e tests?
+* What's BDD? What's TDD?
+* What is code coverage?
+* What elements do you test?
 
 * What are some advantages/disadvantages to testing your code?
 
@@ -1227,6 +1320,10 @@ console.log('three');
   http://www.tutorialsteacher.com/angularjs/what-is-angularjs
 * Explain ng-controller directive.
   The ng-controller directive attaches a controller class to the view. This is a key aspect of how angular supports the principles behind the Model-View-Controller design pattern. It also creates a new scope.
+* What is scope hierarchy in AngularJS?
+  The $scope object used by views in AngularJS are organized into a hierarchy. There is a root scope, and the $rootScope can has one or more child scopes. Each controller has its own $scope (which is a child of the $rootScope), so whatever variables you create on $scope within controller, these variables are accessible by the view based on this controller.
+
+  http://www.dotnettricks.com/learn/angularjs/understanding-scope-inheritance-in-angularjs
 
 * What is $rootScope?
   $rootScope refers to an object which is accessible from everywhere of the application. You can think $rootScope as global variable and $scope as local variables.
@@ -1565,6 +1662,19 @@ console.log("third");
 
   [more info](https://nodejs.org/api/process.html)
 
+* What is MVC?
+  MVC is a software architecture - the structure of the system - that separates domain/application/business logic from the rest of the user interface. It does this by separating the application into three parts: the model, the view, and the controller.
+
+  The model manages fundamental behaviors and data of the application. It can respond to requests for information, respond to instructions to change the state of its information etc. This could be a database, or any number of data structures or storage systems. In short, it is the data and data-management of the application.
+
+  The view effectively provides the user interface element of the application. It'll render data from the model into a form that is suitable for the user interface.
+
+  The controller receives user input and makes calls to model objects and the view to perform appropriate actions.
+
+  All in all, these three components work together to create the three basic components of MVC.
+
+  http://softwareengineering.stackexchange.com/questions/127624/what-is-mvc-really
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
@@ -1689,3 +1799,6 @@ Nothing. setState can also take a function as an argument. That function allows 
 This document started in 2009 as a collaboration of [@paul_irish](https://twitter.com/paul_irish) [@bentruyman](https://twitter.com/bentruyman) [@cowboy](https://twitter.com/cowboy) [@ajpiano](https://twitter.com/ajpiano)  [@SlexAxton](https://twitter.com/slexaxton) [@boazsender](https://twitter.com/boazsender) [@miketaylr](https://twitter.com/miketaylr) [@vladikoff](https://twitter.com/vladikoff) [@gf3](https://twitter.com/gf3) [@jon_neal](https://twitter.com/jon_neal) [@sambreed](https://twitter.com/sambreed) and [@iansym](https://twitter.com/iansym).
 
 It has since received contributions from over [100 developers](https://github.com/h5bp/Front-end-Developer-Interview-Questions/graphs/contributors).
+
+* How would you specify that a scope variable should have one-time binding only?
+By using “::” in front of it.

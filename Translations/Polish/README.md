@@ -80,7 +80,9 @@ http://webmasters.stackexchange.com/a/25091
 * Ile zasobów pobiera przeglądarka z danej domeny w jednej chwili?  
 Starsze przeglądarki jak IE6 - 2, nowsze 6 / 8.  
 
-* Podaj 3 sposoby na zmniejszenie czasu ładowania strony. (postrzeganego lub rzeczywistego czasu ładowania)
+* Podaj 3 sposoby na zmniejszenie czasu ładowania strony. (postrzeganego lub rzeczywistego czasu ładowania)  
+1. Optymalizacja zdjęć - ograniczenie ilości, używanie miniatur, css sprites, svg, preloaderów obrazków 2. Cachowanie contentu 3. Używanie mniejszej ilości requestów http
+
 * Jeśli dołączasz do projektu, w którym używa się tabulacji, a ty używasz spacji, co wtedy zrobisz?
   * Sugerowanie użycia narzędzi w stylu EditorConfig (http://editorconfig.org)
   * Zgodnie z konwencjami (pozostań konsekwentny)
@@ -261,6 +263,10 @@ Nie, ale jestem zaznajomiony z: Jade, EJS, HandlebarsJs, Underscore Templates, M
   http://stackoverflow.com/questions/3127429/how-does-the-this-keyword-work
 
 * Wyjaśnij jak działa dziedziczenie prototypowe.
+    Dziedzieczenie prototypowe oznacza, że prototypy obiektow są połączone,
+    oznacza to, że jeśli jakaś właściwość jest użyta, najpierw przeszukiwany jest obiekt
+    wywołujący następnie ( jeśli nie zostanie znaleziona ) na swoim prototypie i tak dalej.
+
 * Jak radzisz sobie z testowaniem swojego kodu JavaScript?
 * AMD kontra CommonJS?
 
@@ -511,6 +517,14 @@ Drugi parametr Object.create pozwala na dodanie właściwości do nowo powstałe
 [Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
 
 * Wyjaśnij pojęcie "hoisting".
+    Hoisting jest to windowanie zmiennych z przypisaną wartością oraz funkcji
+    na samą górę (do globalnego zasięgu lub do zasięgu funkcji).
+    Co pozwala na ich użycie zanim zostaną zadeklarowane.
+    x = 5; // przypisanie 5 to x
+    elem = document.getElementById("demo"); // znalezienie elementu
+    elem.innerHTML = x; // wyświetlanie x wewnątrz elementu
+    var x; // deklaracja x
+
 * Zasieg zmiennych w jsie?
 
  W JS, do wersji ES6 występowały tylko dwa rodzaje zasięgu zmiennych, tj. globalny (global scope) i zasięg lokalny - w obrębie funkcji (function scope).
@@ -610,14 +624,18 @@ function duplicate(arr) {
 ```
 Odniesienie: [Array.prototype.concat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
 
-* Opisz strategię zapamiętywania (unikanie powtarzalnych obliczeń) w JavaScript.
 * Dlaczego mówimy wyrażenie trójkowe, co dokładnie oznacza słowo "trójkowy"?
 
 Mówimy wyrażenie trójkowe, ponieważ przyjmuje trzy operandy (operand - argument).
 Jako ciekawostke można dodać, że jest to jedyny operator w JavaScripcie, który przyjmuje trzy operandy.
 Odniesienie: [Conditional (ternary) Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
-* Czym jest `arity` funkcji?
+* Napisz pętlę for, która przeiteruje do `100` i wyświetli **"fizz"**, gdy liczba jest podzielna przez `3`, **"buzz"**, gdy liczba jest podzielna przez `5` oraz **"fizzbuzz"**, gdy liczba jest podzielna przez `3` i `5`
+
+```javascript
+  for(let i = 1; i <= 100; i += 1) console.log((i % 3 === 0 ? 'fizz' : '') + (i % 5 === 0 ? 'buzz' : ''));
+```
+
 * Co to jest `callback`?
 
 Callback to funkcja, ktora przekazujemy do innej funkcji jako argument. Funkcja, która otrzymuje callback jako argument może go wywołac w swoim ciele. To wykonanie może być natychmiastowe w synchronicznym wywołaniu zwrotnym lub może zostać wykonane po czasie w sposób asynchroniczny. 
@@ -738,6 +756,22 @@ Oczekująca obietnica może być spełniona z jakąś wartością lub odrzucona 
 
 [Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
+* Jakie są wady/zalety pisania kodu w języku, który kompiluje się do JavaScriptu?
+
+Zalety:
+  - Błędne typy zostają wyłapane w fazie kompilacji.
+  - Prostsza składnia.
+  - Kod jest łatwiejszy do utrzymania / rozszerzenia.
+
+Wady:
+  - Aby uruchomić aplikację w przeglądarce, kod musi być skompilowany.
+  - Debugowanie kodu może stać się trudne.
+  - Potrzeba nauczenia się nowego języka / składni.
+  - Mniejsza społeczność, ogólnie mniej materiałów.
+
+Odniesienie: [Typescript wady i zalety](https://designmodo.com/typescript/),
+[Javascript, CoffeScript, Dart i TypeScript](https://smthngsmwhr.wordpress.com/2013/02/25/javascript-and-friends-coffeescript-dart-and-typescript/)
+
 * Jakich narzędzi i technik używasz do debugowania kodu JavaScript?
 
 Używam DevTools z Chrome.
@@ -748,6 +782,21 @@ Używam następujących technik:
   - Sprawdzanie optymalizacji kodu przy pomocy Audits (zakładka w DevTools).
 
 Odniesienie: [Wskazówki](http://www.zsoltnagy.eu/javascript-debugging-tips-and-tricks/)
+
+* Wyjaśnij różnicę w używaniu `foo` pomiędzy `function foo() {}` i `var foo = function() {}`.
+
+Jest tutaj deklaracja funkcji (pierwszy przykład) i wyrażenie funkcyjne (drugi przykład).
+Używanie w obu przypadkach jest generalnie takie samo, z jednym wyjątkiem.
+Wywołanie foo przed deklaracją (pierwszy przykład), spowoduje normalne wywołanie funkcji, ponieważ funkcje "przenoszone" na góre naszego kodu (hoisting).
+Wywołanie foo przed wyrażeniem funkcyjnym (drugi przykład) skutkowac będzie błędem, ponieważ zmienne, dopóki nie są zadeklarowane, mają wartość undefined.
+
+```javascript
+foo(); // ok
+boo(); // TypeError: boo is not a function
+
+function foo() {};
+var boo = function () {};
+```
 
 * Zasieg zmiennych w JavaScript?
 
@@ -773,6 +822,24 @@ Synchroniczna funkcja zostanie wykonana i kiedy się zakonczy, następne zadanie
 Asynchroniczna funkcja zostanie wykonana i niezależnie od tego czy się zakonczy czy nie, następne zadanie zostanie wykonane.
 
 Odniesienie: [Asynchronicznosc vs synchronicznosc](http://stackoverflow.com/questions/748175/asynchronous-vs-synchronous-execution-what-does-it-really-mean)
+
+* Czym jest pętla zdarzen (event loop)?
+  * Jaka jest różnica między stosem wywołan i kolejką zadan?
+
+Pętla zdarzen wzięła swoją nazwę z sposobu w jaki jest zaimplementowana, który przypomina następujący kod: 
+
+```javascript
+while (queue.waitForMessage()) {
+  queue.processNextMessage();
+}
+```
+queue.waitForMessage czeka synchronicznie na nową wiadomość, jeżeli aktualnie nie ma żadnej.
+Każda wiadomość jest przetwarzana całkowicie zanim kolejna jest przetworzona.
+To rozwiązanie oferuje kilka dobrych właściwości podczas myślenia nad działaniem programu, w tym faktu, że gdy funkcja działa, nie może być ona zatrzymana i wykona się do konca, zanim następna wiadomość zostanie przetworzona.
+
+Stos wywołan to kolejka funkcji, które są aktualnie wykonywane.
+Kolejka zadan to lista wiadomości czekających na przetworzenie.
+Funkcja jest przypisana do każdej wiadomości. Kiedy stos ma wystarczająco zasobów, wiadomość zostaje wyjęta z kolejki zadan i przetworzona.
 
 * Czym jest event life cycle (event flow)?
 
@@ -1310,6 +1377,10 @@ console.log('three');
   http://www.tutorialsteacher.com/angularjs/what-is-angularjs
 * Wyjaśnij dyrektywę ng-controller.
   Dyrektywa ng-controller dołącza klasę kontrolera do widoku. Jest to kluczowy aspekt tego, jak Angular wspiera MVC. Ng-controller tworzy również nowy zakres.
+* Czym jest hierarchia zakresów w AngularJS?
+  Obiekt $scope używany przez widok w AngularJS jest zorganizowany w hierarchię. Jest to 'root scope', $rootScope może mieć jedno lub więcej dzieci-zakresów. Każdy kontroler posiada swój własny zakres ($scope) (który jest dzieckiem $rootScope), więc utworzone zmiennie, gdziekolwiek w jednym zakresie kontrolera będą dostępne przez widok bazujący na tym kontrolerze.
+
+  http://www.dotnettricks.com/learn/angularjs/understanding-scope-inheritance-in-angularjs
 
 * Czym jest $rootScope?
   $rootScope odnosi się do obiektu, który jest dostępny z każdego miejsca w aplikacji. Możesz myśleć o $rootScope jako globalnej zmiennej oraz $scope jako lokalnej.
@@ -1482,6 +1553,9 @@ console.log('three');
   Dyrektywa ng-app powinna znajdować się w głównych tagach dokumentu HTML, np. <html> lub <body>, pozwala to kontrolować całą wewnętrzną hierarchię DOM. Jednakże, możesz umieścić ng-app w każdym elemencie DOM.
   AngularJS będzie przetwarzał tylko ten element DOM oraz wszystkie jego dzieci.
 
+* Jak oznaczyłbyś zmienną, która powinna mieć tylko one-time data binding?
+  Przez dopisanie przed nią ‘::’;
+
 ### Pytania z NodeJS:
 
 * Co to jest error-first callback?
@@ -1644,6 +1718,19 @@ console.log("third");
   Obiekt `process` jest globalnym obiektem który daje informacje na temat bazowego procesu Node.JS, np.: argumenty przekazane do procesu, zmienne środowiskowe, użycie pamięci itp.
 
   [więcej info](https://nodejs.org/api/process.html)
+
+* Czym jest MVC?
+  MVC jest architekturą oprogramowania - strukturą systemu - który oddziela domenę/aplikację/logikę biznesową od reszty interfejsu użytkownika. Robi to poprzez podzielenie aplikacji na trzy części, warstwę modelu, warstwę widoku i warstwę kontrolera.
+
+  Warstwa modelu zarządza fundamentalnym zachowaniem i danymi w aplikacji. Może odpowiadać na żądania dla informacji, odpowiadać na instrukcje zmiany stanu tych informacji itp. To może być baza danych lub każda liczba struktur danych lub systemów magazynów. Po krótce, są to dane i możliwość zarządzania nimi w aplikacji.
+
+  Warstwa widoku zapewnia interfejs użytkownika aplikacji. Renderuje dane z warstwy modelu w odpowiednie miejsca dla interfejsu użytkownika.
+
+  Warstwa kontrolera odbiera dane wejściowe użytkownika i mówi obiektom warstwy modelu, i widoku by wykonały odpowiednie akcje.
+
+  Wszystkie te trzy komponenty pracują razem tworząc razem MVC.
+
+  http://softwareengineering.stackexchange.com/questions/127624/what-is-mvc-really
 
 ### Pytania dodatkowe (zabawne):
 
