@@ -1912,3 +1912,11 @@ angular.factory('testService', function($q){
 ```
 
 https://docs.angularjs.org/api/ng/service/$q  
+
+* Gdy tworzysz dyrektywę można ją zastosować na kilka sposobów w widokach. Jakie sposoby znasz? Jak definiujesz sposoby, w jakie dyrektywa będzie użyta?
+Dyrektywy mogą być wykorzystane jako elementy, atrybuty lub klasy, ewentualnie komentarze. Aby zdefiniować sposób ich użycia, należy użyć opcji restrict:
+‘A’ – dyrektywa używana jako atrybut  
+‘E’ – dyrektywa używana jako element  
+‘C’ – dyrektywa używana jako klasa  
+'M' - dyrektywa używana jako komentarz  
+Opcje mogą być łączone, np. dyrektywa z restrict: ‘AEC’ może być użyta jako atrybut, klasa lub element.  
