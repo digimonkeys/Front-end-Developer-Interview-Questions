@@ -796,6 +796,24 @@ Asynchroniczna funkcja zostanie wykonana i niezależnie od tego czy się zakoncz
 
 Odniesienie: [Asynchronicznosc vs synchronicznosc](http://stackoverflow.com/questions/748175/asynchronous-vs-synchronous-execution-what-does-it-really-mean)
 
+* Czym jest pętla zdarzen (event loop)?
+  * Jaka jest różnica między stosem wywołan i kolejką zadan?
+
+Pętla zdarzen wzięła swoją nazwę z sposobu w jaki jest zaimplementowana, który przypomina następujący kod: 
+
+```javascript
+while (queue.waitForMessage()) {
+  queue.processNextMessage();
+}
+```
+queue.waitForMessage czeka synchronicznie na nową wiadomość, jeżeli aktualnie nie ma żadnej.
+Każda wiadomość jest przetwarzana całkowicie zanim kolejna jest przetworzona.
+To rozwiązanie oferuje kilka dobrych właściwości podczas myślenia nad działaniem programu, w tym faktu, że gdy funkcja działa, nie może być ona zatrzymana i wykona się do konca, zanim następna wiadomość zostanie przetworzona.
+
+Stos wywołan to kolejka funkcji, które są aktualnie wykonywane.
+Kolejka zadan to lista wiadomości czekających na przetworzenie.
+Funkcja jest przypisana do każdej wiadomości. Kiedy stos ma wystarczająco zasobów, wiadomość zostaje wyjęta z kolejki zadan i przetworzona.
+
 * Czym jest event life cycle (event flow)?
 
 Event lifecycle (event flow) opisuje cykl życia eventu w drzewie DOM. Przy każdym zdarzeniu, przeglądarka tworzy event i rozsyła go po drzewie DOM. Propagacja / rozsyłanie eventu odbywa się w trzech fazach:
