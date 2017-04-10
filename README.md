@@ -1900,3 +1900,20 @@ https://docs.angularjs.org/api/ng/function/angular.copy
 * When should you use an attribute directive versus an element?  
 Use an element when you are creating a component that is in control of the template. Use an attribute when you are decorating an existing element with new functionality.   
 https://docs.angularjs.org/guide/directive  
+
+* How do you reset a $timeout, $interval(), and disable a $watch()?  
+To reset a timeout and/or $interval, assign the result of the function to a variable and then call the .cancel() function on this variable. To disable $watch(), we call it.  
+
+```
+var customTimeout = $timeout(function () {
+// arbitrary code 
+}, 55);
+$timeout.cancel(customTimeout);
+var deregisterWatchFn = $rootScope.$watch(‘someGloballyAvailableProperty’, function (newVal) {
+if (newVal) {
+// we invoke that deregistration function, to disable the watch
+deregisterWatchFn();
+...
+}
+});
+```

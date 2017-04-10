@@ -1928,3 +1928,19 @@ https://docs.angularjs.org/api/ng/function/angular.copy
 * Kiedy używać dyrektyw jako elementów a kiedy jako atrybutów?  
 Należy używać elementów kiedy tworzony komponent kontroluje cały szablon, a atrybutów gdy tylko dodajemy jakąś funkcjonalność do istniejącego elementu.  
 https://docs.angularjs.org/guide/directive  
+* Jak zresetować $timeout, $interval(), i jak wyłączyć $watch()?
+Aby zresetować $timeout/$interval() należy przypisać ich wynik do zmiennej i potem wywołac na niej .cancel(). Aby wyłączyć $watch wystarczy go wywołać.  
+
+```
+var customTimeout = $timeout(function () {
+// arbitrary code 
+}, 55);
+$timeout.cancel(customTimeout);
+var deregisterWatchFn = $rootScope.$watch(‘someGloballyAvailableProperty’, function (newVal) {
+if (newVal) {
+// we invoke that deregistration function, to disable the watch
+deregisterWatchFn();
+...
+}
+});
+```
