@@ -458,7 +458,21 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 
   ```
   - What happens when you call setState?
-  - What’s the difference between an Element and a Component in React?
+*  What’s the difference between an Element and a Component in React?
+    Element:
+    - Describes the DOM tree
+    - They do not have their own methods
+    - This is a syntax sugar for React.createElement (element)
+    - Element can be created without defined
+    - Within the component, you can create multiple elements and package them into another element
+    - They are not an instance of a component and describe how a component instance should look
+
+    Component:
+    - May have his state
+    - The component must be defined eg by React.Component
+    - The render () function returns the DOM element tree
+    - Has access to life cycle methods
+
   - When would you use a Class Component over a Functional Component?
   - What are refs in React and why are they important?
   - What are keys in React and why are they important?

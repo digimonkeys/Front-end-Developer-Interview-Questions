@@ -268,7 +268,21 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 
   ```
   - Co się dzieje gdy wywołujesz metodę call setState?
-  - Jaka jest rożnica pomiędzy Elementem a Komponentem w React?
+* Jaka jest rożnica pomiędzy Elementem a Komponentem w React?
+    Element:
+    - Opisują drzewo DOM
+    - Nie posiadają własnych metod
+    - Jest to Lukier składniowy dla React.createElement(element)
+    - Element może być stworzony bez wcześniejszego definiowania
+    - Wewnątrz komponentu można tworzyć wiele elementow i opakować je w inny element
+    - Nie są instancją komponentu a opisem jak instancja komponentu powinna wyglądać
+
+    Komponent:
+    - Może posiadać swoj stan
+    - Komponent musi zostać zdefiniowany np. przez React.Component
+    - funkcja render() zwraca drzewo DOM elementow
+    - ma dostęp do metod cykli życia
+
   - Kiedy powinieneś użyć komponentu klasy a kiedy komponentu funkcyjnego?
   - Czym są referencje/refs w React i czemu są ważne?
   - Czym są klucze w React i czemu są ważne?
