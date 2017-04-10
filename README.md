@@ -411,6 +411,11 @@ https://www.w3.org/International/questions/qa-html-language-declarations
       is transformed by actions, you write pure reducers.
       
 * What are stateless components?
+  Stateless components are components that do not have `this.state` inside them.
+  Other names are pure or dumb. You can declare them using the const and
+  arrow functions as well as all its internal functions. So we do not have to worry
+  about `this` inside the component.
+  
 * Explain this Code:
 
   ```

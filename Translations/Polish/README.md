@@ -220,7 +220,12 @@ https://www.w3.org/International/questions/qa-html-language-declarations
   - Zmiany wykonywane są w ramach czystych funkcji – aby określić jak drzewo
     stanu transformowane jest przez akcje musisz tworzyć „czyste reducery”
 
-* Czym są bezstanowe elementy?
+* Czym są bezstanowe komponenty?
+  Komponenty bezstanowe są to komponenty, ktore nie mają w swoim wnętrzu `this.state`.
+  Inne spotykane nazwy to czyste lub głupie komponenty. Można je zadeklarować za pomocą
+  const i arrow function podobnie jak i wszystkie jego wewnętrze funkcje.
+  Dzięki czemu nie musimy się przejmować `this` wewnątrz komponentu.
+
 * Wyjaśnij ten kod:
 
   ```
