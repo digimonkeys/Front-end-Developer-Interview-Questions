@@ -127,7 +127,8 @@ https://jsperf.com/
 https://wiki.mozilla.org/Dromaeo  
 
 * Gdybyś mógł opanować jedną technologię w tym roku, jaka byłaby to technologia?
-* FOUC? Jak unikasz FOUC?
+Technologia budowy bomb wodorowych. Ew. można odpowiedzieć czymś co jest aktualnie w modzie, np React Native, React Redux, ES7.  
+
 * Wyjaśnij znaczenie standardów sieciowych i ich twórców.  
 
 Standardy są bardzo istotne ponieważ aplikacje pisane w danym języku są kompilowane przez różne przeglądarki. Pozwala to uniknąć sytuacji, w której kod działa w połowie przeglądarek, lub działa tylko w tej ulubionej kodera. Gdy opracowany jest standard przeglądarki wiedzą czego się spodziewać i każdy piszący w zgodzie ze standardem może zakładać, że wszystko będzie działać. Twórcami standardów są w3c, iso, ansi, unicode consortium, ietf oraz ecma.  

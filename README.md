@@ -122,6 +122,8 @@ https://jsperf.com/
 https://wiki.mozilla.org/Dromaeo   
 
 * If you could master one technology this year, what would it be?
+I'd love to learn how to create fusion bomb. ...or just pick something trendy, React Native, React Redux, ES7.  
+
 * Explain the importance of standards and standards bodies.  
 Standars are super important because apps being written in the same language are compiled by different browsers. Thanks to standards we avoid creating code that would work in half of browsers or only in one of them. Standard creators are: w3c, iso, ansi, unicode consortium, ietf and ecma  
 
