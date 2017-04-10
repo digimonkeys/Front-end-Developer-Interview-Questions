@@ -743,6 +743,22 @@ Oczekująca obietnica może być spełniona z jakąś wartością lub odrzucona 
 
 [Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
+* Jakie są wady/zalety pisania kodu w języku, który kompiluje się do JavaScriptu?
+
+Zalety:
+  - Błędne typy zostają wyłapane w fazie kompilacji.
+  - Prostsza składnia.
+  - Kod jest łatwiejszy do utrzymania / rozszerzenia.
+
+Wady:
+  - Aby uruchomić aplikację w przeglądarce, kod musi być skompilowany.
+  - Debugowanie kodu może stać się trudne.
+  - Potrzeba nauczenia się nowego języka / składni.
+  - Mniejsza społeczność, ogólnie mniej materiałów.
+
+Odniesienie: [Typescript wady i zalety](https://designmodo.com/typescript/),
+[Javascript, CoffeScript, Dart i TypeScript](https://smthngsmwhr.wordpress.com/2013/02/25/javascript-and-friends-coffeescript-dart-and-typescript/)
+
 * Jakich narzędzi i technik używasz do debugowania kodu JavaScript?
 
 Używam DevTools z Chrome.

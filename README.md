@@ -911,6 +911,21 @@ In ES6 there is one more - block scope for variables defined with let and const 
 [other scopes](http://stackoverflow.com/a/500459)
 
 * What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
+
+Pros:
+  - Typos caught at compilation time.
+  - Simplier syntax.
+  - Better maintainability.
+
+Cons:
+  - In order to run the application in a browser, a compile step is required.
+  - Debugging can be a pain.
+  - Learning new language / syntax.
+  - Smaller community, generally less resources avaible.
+
+Reference: [Typescript pros and cons](https://designmodo.com/typescript/),
+[Javascript, CoffeScript, Dart and TypeScript](https://smthngsmwhr.wordpress.com/2013/02/25/javascript-and-friends-coffeescript-dart-and-typescript/)
+
 * What tools and techniques do you use debugging JavaScript code?
 
 I'm using Chrome DevTools.
