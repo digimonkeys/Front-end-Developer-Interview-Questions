@@ -611,7 +611,6 @@ function duplicate(arr) {
 ```
 Odniesienie: [Array.prototype.concat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
 
-* Opisz strategię zapamiętywania (unikanie powtarzalnych obliczeń) w JavaScript.
 * Dlaczego mówimy wyrażenie trójkowe, co dokładnie oznacza słowo "trójkowy"?
 
 Mówimy wyrażenie trójkowe, ponieważ przyjmuje trzy operandy (operand - argument).
