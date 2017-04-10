@@ -1962,3 +1962,6 @@ https://pl.wikipedia.org/wiki/Singleton_(wzorzec_projektowy)
 * Czym jest interceptor? Jakie są ich popularne zastosowania?
 Jest to funkcja pośrednicząca, przez którą przechodzą requesty $http. Są to serwisy rejestrowane przez $httpProvider przez dopisywanie ich do tablicy $http.Provider.interceptors. Są dwa typy requestów przechodzących przez interceptor, request i response http (oraz odpowiednie błędy). Tego rodzaju kod jest przydatny do obsługi błędów, potwierdzania tożsamości i ogólnie do przekształcania requestów i responsów http.  
 https://docs.angularjs.org/api/ng/service/$http  
+
+* Jak schowasz element html przez kliknięcie guzikiem w angularJs?  
+Użyje dyrektywy ng-hide uzależnionej od zmiennej typu boolean, którą będę togglował za pomocą ng-click na buttonie.  

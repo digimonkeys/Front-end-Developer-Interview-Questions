@@ -1931,3 +1931,6 @@ http://joelhooks.com/blog/2013/05/01/when-is-a-singleton-not-a-singleton/
 * What is an interceptor? What are common uses of it?  
 An interceptor is a middleware code where all the $http requests go through. The interceptors are service factories that are registered with the $httpProvider by adding them to the $httpProvider.interceptorsarray.  You have 2 types of requests that go through the interceptor, request and response (and their errors respectively). This piece of code is very useful for error handling, authentication or middleware in all the requests/responses.  
 https://docs.angularjs.org/api/ng/service/$http  
+
+* How do you hide an HTML element via a button click in AngularJS?  
+You can do this by using the ng-hide directive in conjunction with a controller.  
