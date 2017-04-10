@@ -1920,3 +1920,7 @@ Dyrektywy mogą być wykorzystane jako elementy, atrybuty lub klasy, ewentualnie
 ‘C’ – dyrektywa używana jako klasa  
 'M' - dyrektywa używana jako komentarz  
 Opcje mogą być łączone, np. dyrektywa z restrict: ‘AEC’ może być użyta jako atrybut, klasa lub element.  
+
+* Co stanowi o mocy metody angular.copy()?
+Tworzy ona głęboką kopię zmiennej, tzn wskazującą na nowy fragment pamięci. Zwykła kopia sprawia, że dwie zmienne wskazują na ten sam fragment pamięci (odwołują się do niego), zatem zmiana jednej z nich spowoduje również zmianę kopii.  
+https://docs.angularjs.org/api/ng/function/angular.copy  
