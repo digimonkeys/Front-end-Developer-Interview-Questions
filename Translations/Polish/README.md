@@ -1949,3 +1949,7 @@ deregisterWatchFn();
 $scope w AngularJS jest zasięgiem widoczności danego kontrolera. Każdy kontroler posiada swój unikalny $scope do którego przypięte są funkcje oraz zmienne widoczne w warstwie widoku $scope jest jedynym elementem, który jest w stanie wystawić dane dla widoku i komunikować się z widokiem.  
 http://www.p-programowanie.pl/kurs-angular/scope-i-wyrazenia/  
 https://docs.angularjs.org/guide/scope  
+
+* Czym są dyrektywy?
+Dyrektywy to znaczniki na elementach DOM (atrybuty, nazwy elementów, komentarze lub klasy css), które mówią kompilatorowi html Angulara aby przywiązać specyficzne zachowanie do danego elementu przez event listenery lub nawet aby przekształcić cały element DOM i jego dzieci.  
+https://docs.angularjs.org/guide/directive  
