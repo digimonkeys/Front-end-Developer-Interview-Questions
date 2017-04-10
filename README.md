@@ -361,9 +361,55 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 #### REACT Questions:
 
 * What is React? How is it different from other JS frameworks?
+    React is a library that allows you to create composite user interfaces.
+    It has a virtual DOM tree, and when you change some data, only those elements are rendered,
+    those that have changed. Compared by layer V (View) in MVC. The main assumption is
+    creating reusable components.
+
+    Difference:
+      - Virtual DOM tree
+      - Re-render only those elements that have changed
+      - Uses JSX - javascript and html combination
+      - It needs libraries like Flux or Redux to implement full architectures
+
 * What happens during the lifecycle of a React component?
+    React.Component has three main life cycles, allowing them to manage
+    Component before adding it to the DOM tree, during its life
+    and when it was removed. These are:
+    1. mount - Methods created when adding to a DOM tree:
+      - constructor()
+      - componentWillMount()
+      - render()
+      - componentDidMount()
+    2. update - Methods invoked when changing the state of a component or variable in this.props object:
+      - componentWillReceiveProps()
+      - shouldComponentUpdate()
+      - componentWillUpdate()
+      - render()
+      - componentDidUpdate()
+    3. unmount - Method invoked when a component is removed from a DOM tree:
+      - componentWillUnmount()
+
 * What can you tell me about JSX?
+    This is the so-called. Syntax sugar for function
+    React.createElement (component, props, ... children).
+    It allows you to write code that is a combination of javascript and html
+    within the render function of the component. JSX syntax can be used to
+    render both regular HTML elements as well as other React components,
+    these must start with a capital letter.
+
 * Are you familiar with Flux?
+    With Flux no. On the other hand, I have experience with Redux, which comes from Flux.
+    The simplest saying Redux middleware provides a third-party extension point
+    between dispatching an action, and the moment it reaches the reducer.
+    Redux can be described in three fundamental principles:
+    - Single source of truth - The state of your whole application is stored
+      in an object tree within a single store.
+    - State is read-only - The only way to change the state is to emit an action,
+      an object describing what happened.
+    - Changes are made with pure functions - To specify how the state tree
+      is transformed by actions, you write pure reducers.
+      
 * What are stateless components?
   Stateless components are components that do not have `this.state` inside them.
   Other names are pure or dumb. You can declare them using the const and
@@ -417,9 +463,26 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 
   ```
   - What happens when you call setState?
-  - What’s the difference between an Element and a Component in React?
+*  What’s the difference between an Element and a Component in React?
+    Element:
+    - Describes the DOM tree
+    - They do not have their own methods
+    - This is a syntax sugar for React.createElement (element)
+    - Element can be created without defined
+    - Within the component, you can create multiple elements and package them into another element
+    - They are not an instance of a component and describe how a component instance should look
+
+    Component:
+    - May have his state
+    - The component must be defined eg by React.Component
+    - The render () function returns the DOM element tree
+    - Has access to life cycle methods
+
   - When would you use a Class Component over a Functional Component?
-  - What are refs in React and why are they important?
+* What are refs in React and why are they important?
+    Used to return a reference to an element. They are useful to manipulating
+    the DOM tree and adding methods to components. They are  recommend as a last resort.
+    
   - What are keys in React and why are they important?
 
 
