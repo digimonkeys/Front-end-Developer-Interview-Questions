@@ -60,7 +60,13 @@ I start with gathering client requirements. Ten I create environment - bundling 
 
 
 * If you have 5 different stylesheets, how would you best integrate them into the site?
-* Can you describe the difference between progressive enhancement and graceful degradation? 
+* Can you describe the difference between progressive enhancement and graceful degradation? Bonus points for describing feature detection.  
+progressive enhancement considers creating site for old browsers and then enhancing application with fetures for newer browsers  
+
+graceful degradation is creating app for new versions of eg. browsers, but in a way that lets the app maintain some basic functionalities if some of environment features happen to be unavalaible  
+
+Feature detection (also feature testing) is a technique used in web development for handling differences between runtime environments (typically web browsers or user agents), by programmatically testing for clues that the environment may or may not offer certain functionality. This information is then used to make the application adapt in some way to suit the environment: to make use of certain APIs, or tailor for a better user experience  
+
 * What is semantic html?  
 Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, of the information in webpages and web applications rather than merely to define its presentation or look. Semantic HTML is processed by traditional web browsers as well as by many other user agents. CSS is used to suggest its presentation to human users.  
 
@@ -77,7 +83,12 @@ http://webmasters.stackexchange.com/a/25091
 * How many resources will a browser download from a given domain at a time? 
 It depends on a browser, older ones like IE6 - 2, newer ones 6-8.  
 
-* Name 3 ways to decrease page load (perceived or actual load time).
+* How would you optimize a website's assets/resources?
+* How many resources will a browser download from a given domain at a time?
+  * What are the exceptions?
+* Name 3 ways to decrease page load (perceived or actual load time).  
+1. Optimalize images - decrease their amount, use miniatures, svg, css-sprites, preloaders 2.Cache content 3. Reduce amount of http requests  
+
 * If you jumped on a project and they used tabs and you used spaces, what would you do?
 I will adapt (just change settings in my editor).
 * Describe how you would create a simple slideshow page. Bonus points if without JS.  
@@ -111,6 +122,8 @@ https://jsperf.com/
 https://wiki.mozilla.org/Dromaeo   
 
 * If you could master one technology this year, what would it be?
+I'd love to learn how to create fusion bomb. ...or just pick something trendy, React Native, React Redux, ES7.  
+
 * Explain the importance of standards and standards bodies.  
 Standars are super important because apps being written in the same language are compiled by different browsers. Thanks to standards we avoid creating code that would work in half of browsers or only in one of them. Standard creators are: w3c, iso, ansi, unicode consortium, ietf and ecma  
 
@@ -149,6 +162,16 @@ https://developers.google.com/web/fundamentals/design-and-ui/animations/css-vs-j
 https://css-tricks.com/myth-busting-css-animations-vs-javascript/  
 
 * What does CORS stand for and what issue does it address?
+
+* What HTTP methods do you know?
+* How many requests are there on GET and how many on PUT, and where does the difference come from?
+* What's REST? What alternatives do you know?
+* What is the difference in logging into SPA app and normal app?
+* What threats and attacks are related to SPA apps?
+
+
+[9:34]  
+. co sie dzieje gdy uzywamy new?
 
 #### HTML Questions:
 
@@ -271,14 +294,16 @@ No, but I'm familiar with Jade, EJS, HandlebarsJs, Underscore Templates, Mustach
 
   https://css-tricks.com/css-sprites/
 * What are your favourite image replacement techniques and which do you use when?
-  CSS image replacement is a technique of replacing a text element (usually a header tag) with an image. You may want to use a <h1> tag and text for this for the accessibility and SEO benefits.
+  CSS image replacement is a technique of replacing a text element (usually a header tag) with an image. You may want to use a `<h1>` tag and text for this for the accessibility and SEO benefits.
   I use image replacements (depending on the needs), when I want to make my page more accessible for devices like readers etc. Usually I use display none span in header.
 
   #1: Display none span in header
+  ```html
   <h1 id="logo">
     <span>CSS-Tricks</span>
   </h1>
-
+  ```
+  ```css
   h1#logo {
     width: 250px;
     height: 25px;
@@ -287,24 +312,28 @@ No, but I'm familiar with Jade, EJS, HandlebarsJs, Underscore Templates, Mustach
   h1#logo span {
     display: none;
   }
-
+  ```
   #2: Text-indent out of sight
+  ```html
   <h1 id="logo">
     CSS-Tricks
   </h1>
-
+  ```
+  ```css
   h1#logo {
     width: 300px;
     height: 75px;
     background: url(test.png);
     text-indent: -9999px;
   }
-
+  ```
   #3: Invisible Text
+  ```html
   <h3 class="leon">
     <span>CSS-Tricks</span>
   </h3>
-
+  ```
+  ```css
   h3.leon {
     width: 300px;
     height: 75px;
@@ -316,7 +345,7 @@ No, but I'm familiar with Jade, EJS, HandlebarsJs, Underscore Templates, Mustach
     height: 0;
     overflow: hidden;
   }
-
+  ```
   https://css-tricks.com/css-image-replacement/
 * How would you approach fixing browser-specific styling issues?
   - use separate stylesheets that loads when that specific browser is being used.
@@ -507,6 +536,10 @@ No, but I'm familiar with Jade, EJS, HandlebarsJs, Underscore Templates, Mustach
     http://stackoverflow.com/questions/3127429/how-does-the-this-keyword-work
 
 * Explain how prototypal inheritance works
+    Prototypal inheritance means prototypes of objects are linked,
+    which means, that when some property is used it is first searched at the object,
+    then (when not found) on its prototype and so on
+
 * What do you think of AMD vs CommonJS?
     Both specifications describe the format and manner in which modules and their dependencies should be defined.
     The main difference between AMD (Asynchronous Module Definition) and CommonJS is the asynchronous loading of modules in AMD.
@@ -661,6 +694,14 @@ Difference new vs Object.create![Difference new vs Object.create](http://stackov
     - Embedded JS
 
 * Explain "hoisting".
+    Hoisting is the lifting of variables with assigned value and functions
+    up to the very top (to global reach or function coverage).
+    Which allows them to be used before they are declared.
+    x = 5; // Assign 5 to x
+    elem = document.getElementById("demo"); // Find an element
+    elem.innerHTML = x; // Display x in the element
+    var x; // Declare x
+
 * Describe event bubbling.
     Bubbling is an event passing up of the DOM tree.
     When an event occurs in an element inside another element,
@@ -758,12 +799,32 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
   ```
   Reference: [Array.prototype.concat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
+
   The word "Ternary" indicates that a Ternary expression takes three operands.
   It's the only JavaScript operator that takes three operands.
   Reference: [Conditional (ternary) Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
 * What is `"use strict";`? what are the advantages and disadvantages to using it?
+
+  "use strict" turns on more restricted variant of JavaScript.
+  It has different semantics than a normal code.
+
+  Advantages:
+    - Eliminates some JavaScript silent errors by changing them to throw errors.
+    - Fixes mistakes that make it difficult for JavaScript engines to perform optimizations (strict mode version might be slightly faster than a normal version).
+    - Prohibits some syntax that is likely to be defined in the future versions of ECMAScript.
+
+  Disadvantages:
+    - Browsers not supporting strict mode will run strict mode code with different behavior from browsers that do.
+  
+  Reference: [Strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+
 * Create a for loop that iterates up to `100` while outputting **"fizz"** at multiples of `3`, **"buzz"** at multiples of `5` and **"fizzbuzz"** at multiples of `3` and `5`
+
+```javascript
+  for(let i = 1; i <= 100; i += 1) console.log((i % 3 === 0 ? 'fizz' : '') + (i % 5 === 0 ? 'buzz' : ''));
+```
+
 * Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
 
 It is generally a good idea to leave the global scope untouched, because all code share a single global namespace.
@@ -776,9 +837,14 @@ Reference: [Global variables disscusion](http://stackoverflow.com/questions/2613
 
 Callback is a function that is passed to the other function as an argument. Function that gets callback as argument can invoke it in its body. This execution may be immediate as in a synchronous callback, or it might happen at a later time as in an asynchronous callback.
 
-Callback![Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming))
+[Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming))
 
 * Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
+
+The `load` event is fired when a resource and its dependent resources have finished loading.
+It can be used to check when a page is ready to use (fully-loaded page).
+One of disadvantages is that the `load` event waits for everything to be ready - even stylesheets and images.
+The most recommended alternative is `DOMContentLoaded` event which is fired when the initial HTML document has been completely loaded and parsed.
 
 * Which JavaScript patterns do you know?
 
@@ -832,6 +898,13 @@ DotFactory patterns![DotFactory patterns](http://www.dofactory.com/javascript/de
 JavaScript Design Patterns![JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 
 * Explain what a single page app is and how to make one SEO-friendly.
+
+A single-page application (SPA) is a web application or web site that fits on a single web page with the goal of providing a user experience similiar to that of a desktop application. In an SPA, either all necessary code - HTML, JavaScript and CSS - is retrieved with a single page load, or dynamically loaded and added to the page as necessary.
+The page does not reload at any point in the process, although the `location hash` or the `HTML5 History API` can be used to provide the perception and navigabillity of separate logical pages in the application.
+The page can be SEO-friendly by enabling server-side rendering and using HTML5 semantics.
+
+[Single-page application](https://en.wikipedia.org/wiki/Single-page_application)
+
 * What is the extent of your experience with `Promises` and/or their polyfills?
 
 I've been using `Promises` for some time now, probably about half of a year.
@@ -852,6 +925,17 @@ A pending promise can either be fulfilled with a value, or rejected with a reaso
 [Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
 * What are the pros and cons of using Promises instead of callbacks?
+
+Pros:
+  - Avoiding "callback hell".
+  - More flexibility.
+  - Rich interface.
+  - Error handling.
+
+Cons:
+  - The envoirnment needs to support promises.
+  - Complexity.
+
 * Variables scope in JS?
 
 In JavaScript, til version ES6, there were only two versions of variables scope - global scope, and local - function scope.
@@ -863,7 +947,32 @@ In ES6 there is one more - block scope for variables defined with let and const 
 [other scopes](http://stackoverflow.com/a/500459)
 
 * What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
+
+Pros:
+  - Typos caught at compilation time.
+  - Simplier syntax.
+  - Better maintainability.
+
+Cons:
+  - In order to run the application in a browser, a compile step is required.
+  - Debugging can be a pain.
+  - Learning new language / syntax.
+  - Smaller community, generally less resources avaible.
+
+Reference: [Typescript pros and cons](https://designmodo.com/typescript/),
+[Javascript, CoffeScript, Dart and TypeScript](https://smthngsmwhr.wordpress.com/2013/02/25/javascript-and-friends-coffeescript-dart-and-typescript/)
+
 * What tools and techniques do you use debugging JavaScript code?
+
+I'm using Chrome DevTools.
+Im using the following techniques:
+  - Break on node changes.
+  - XHR breakpoints.
+  - Pause on exception.
+  - Audits (optimization).
+
+Reference: [Tips & tricks](http://www.zsoltnagy.eu/javascript-debugging-tips-and-tricks/)
+
 * What are falsy values
 
 Falsy values are values that evaluate to false when they're converted to boolean:
@@ -900,10 +1009,39 @@ Primitive types are passed by value, objects are passed by reference.
 Javascript Types![Javascript Data Types](https://developer.mozilla.org/pl/docs/Web/JavaScript/Data_structures)
 
 * What language constructions do you use for iterating over object properties and array items?
+
+For iterating over object properties I use for... in loop with hasOwnProperty property checking.
+For iterationg over array items I use for loop and methods of Array.prototype, for example .forEach, and .map.
+
+Reference: [hasOwnProperty](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty),
+[Array.prototype](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype)
+
 * Explain the difference between mutable and immutable objects.
   * What is an example of an immutable object in JavaScript?
   * What are the pros and cons of immutability?
   * How can you achieve immutability in your own code?
+
+A mutable object is a object that can be changed.
+An immutable object is a object than can't be changed. Instead on every change it returns new object.
+
+Pros:
+  - Less complicated in using.
+  - Operations can be chained.
+  - Can be easily copied.
+  - Never changes.
+  - Can be shared easily.
+  - Easy debugging.
+
+Cons:
+  - More memory usage.
+  - Sometimes difficult to build.
+
+Immutability can be achieved by using Object.freeze and Object.seal.
+Also a library like Immutable.js can be used.
+
+Reference: [Discussion on Quora](https://www.quora.com/What-are-the-advantages-and-disadvantages-of-immutable-data-structures),
+[Discussion on Stackoverflow](http://stackoverflow.com/questions/1863515/pros-cons-of-immutability-vs-mutability)
+
 * Explain the difference between synchronous and asynchronous functions.
 
 Synchronous function will be executed and finished before moving on to another task.
@@ -918,7 +1056,39 @@ Function definitions are hoisted, function expressions arent.
 
 * What is event loop?
   * What is the difference between call stack and task queue?
-* Explain the differences on the usage of `foo` between `function foo() {}` and `var foo = function() {}`
+
+The event loop got its name because of how it's usually implemented, which usually resembles:
+
+```javascript
+while (queue.waitForMessage()) {
+  queue.processNextMessage();
+}
+```
+
+queue.waitForMessage waits synchronously for a message to arrive if there is none currently.
+Each message is processed completely before any other message is processed. 
+This offers some nice properties when reasoning about your program, including the fact that whenever a function runs, 
+it cannot be pre-empted and will run entirely before any other code runs (and can modify data the function manipulates).
+
+A call stack is a queue of functions that are being executed.
+Task queue is a list of messages waiting to be processed. 
+A function is associated with each message. When the stack has enough capacity, a message is taken out of the queue and processed.
+
+* Explain the differences on the usage of `foo` between `function foo() {}` and `var foo = function() {}`.
+
+There is a function declaration (first one) and function expression (second one).
+The usage is almost the same, except for one thing. 
+Calling foo before a declaration (first case) the function will be called, because functions are hoisted.
+Calling foo before an expression (second case) will result in throwing error, because, even though, variables are hoisted too, their value is undefined untill the declaration.
+
+```javascript
+foo(); // ok
+boo(); // TypeError: boo is not a function
+
+function foo() {};
+var boo = function () {};
+```
+
 * What is inheritance?
 
 Inheritance (in programming) is a mechanism that allow sharing functionality (and code reuse) beetwen classes and/or objects (in classical inheritance) or between objects (in prototypal inheritance - like in JS). Class that inherits (called subclass) gains acess to all shared behaviors and attributes of parent class (called superclass);
@@ -949,6 +1119,13 @@ Event life cycle (event flow) describes flow of an event through DOM tree. With 
 Event flow![Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
 
 #### Testing Questions:
+
+* How do you test apps? What kinds of tests do you know? What tools do you use to those types of tests? (please include in response links to videos about those tests types)
+* What should you test with unit tests?
+* What should you test with e2e tests?
+* What's BDD? What's TDD?
+* What is code coverage?
+* What elements do you test?
 
 * What are some advantages/disadvantages to testing your code?
 
@@ -1150,6 +1327,42 @@ console.log('three');
   http://www.tutorialsteacher.com/angularjs/what-is-angularjs
 * Explain ng-controller directive.
   The ng-controller directive attaches a controller class to the view. This is a key aspect of how angular supports the principles behind the Model-View-Controller design pattern. It also creates a new scope.
+* What is scope hierarchy in AngularJS?
+  The $scope object used by views in AngularJS are organized into a hierarchy. There is a root scope, and the $rootScope can has one or more child scopes. Each controller has its own $scope (which is a child of the $rootScope), so whatever variables you create on $scope within controller, these variables are accessible by the view based on this controller.
+
+  http://www.dotnettricks.com/learn/angularjs/understanding-scope-inheritance-in-angularjs
+
+* What is $rootScope?
+  $rootScope refers to an object which is accessible from everywhere of the application. You can think $rootScope as global variable and $scope as local variables.
+
+* What is use of $routeProvider in AngularJS?
+  $routeProvider is used for configuring routes in app.
+
+  https://docs.angularjs.org/api/ngRoute/provider/$routeProvider
+
+* Explain ng-include directive.
+  It is the way to fetch, compile and include templates/html fragment from external files.
+
+* How to make an ajax call using Angular JS?
+  You can make ajax calls using services $http or $https.
+  ```
+  $http({
+    method: 'GET',
+    url: '/someUrl'
+  }).then(function successCallback(response) {
+    // this callback will be called asynchronously
+    // when the response is available
+  }, function errorCallback(response) {
+    // called asynchronously if an error occurs
+    // or server returns response with an error status.
+  });
+  ```
+
+* How to validate data in AngularJS?
+  You can use two-way data-binding (ng-model) to validate data. Validation happens in the model, where you have a lot of options to validate data using JavaScript and its methods. 
+
+  AngularJS provides basic implementation for most common HTML5 input types: (text, number, url, email, date, radio, checkbox), as well as some directives for validation (required, pattern, minlength, maxlength, min, max).
+
 * What are the basic steps to unit test an AngularJS filter?
   1. Inject '$filter'
   2. Call it with '$filter(filterName)(input, options)'
@@ -1184,16 +1397,19 @@ console.log('three');
   http://stackoverflow.com/questions/21094569/how-to-unit-test-a-filter-in-angularjs-1-x
 
   * What is data binding in AngularJS?
+  
   Data-binding in AngularJS apps is the automatic synchronization of data between the model and view components. The way that AngularJS implements data-binding lets you treat the model as the single-source-of-truth in your application. The view is a projection of the model at all times. When the model changes, the view reflects the change, and vice versa.
 
   https://docs.angularjs.org/guide/databinding
 
 * What is scope in AngularJS?
+
   Scope is an object that refers to the application model. It is an execution context for expressions. Scopes are arranged in hierarchical structure which mimic the DOM structure of the application. Scopes can watch expressions and propagate events.
 
   https://docs.angularjs.org/guide/scope
 
 * What are the controllers in AngularJS?
+
   In AngularJS, a Controller is defined by a JavaScript constructor function that is used to augment the AngularJS Scope.
   When a Controller is attached to the DOM via the ng-controller directive, AngularJS will instantiate a new Controller object, using the specified Controller's constructor function. A new child scope will be created and made available as an injectable parameter to the Controller's constructor function as $scope.
   If the controller has been attached using the controller as syntax then the controller instance will be assigned to a property on the new scope.
@@ -1212,6 +1428,7 @@ console.log('three');
   https://docs.angularjs.org/guide/controller
 
 * What are the services in AngularJS?
+
   AngularJS services are substitutable objects that are wired together using dependency injection (DI). You can use services to organize and share code across your app.
   
   AngularJS services are:
@@ -1223,6 +1440,7 @@ console.log('three');
   https://docs.angularjs.org/guide/services
 
 * What are the filters in AngularJS?
+
   Filters format the value of an expression for display to the user. They can be used in view templates, controllers or services. AngularJS comes with a collection of built-in filters, but it is easy to define your own as well.
 
   The underlying API is the $filterProvider.
@@ -1230,11 +1448,13 @@ console.log('three');
   https://docs.angularjs.org/guide/filter
 
 * Explain directives in AngularJS.
+
   At a high level, directives are markers on a DOM element (such as an attribute, element name, comment or CSS class) that tell AngularJS's HTML compiler ($compile) to attach a specified behavior to that DOM element (e.g. via event listeners), or even to transform the DOM element and its children.
 
   https://docs.angularjs.org/guide/directive
 
 * Explain templates in AngularJS.
+
   In AngularJS, templates are written with HTML that contains AngularJS-specific elements and attributes. AngularJS combines the template with information from the model and controller to render the dynamic view that a user sees in the browser.
 
   These are the types of AngularJS elements and attributes you can use:
@@ -1246,17 +1466,20 @@ console.log('three');
   https://docs.angularjs.org/guide/templates
 
 * What is routing in AngularJS?
+
   AngularJS supports SPA using routing module ngRoute. This routing module acts based on the url. When a user requests a specific url, the routing engine captures that url and renders the view based on the defined routing rules.
 
   https://docs.angularjs.org/api/ngRoute/service/$route
   http://www.tutorialsteacher.com/angularjs/angularjs-routing
 
 * What is deep linking in AngularJS?
+
   Deep linking is the usage of the URL, which will take to specific page (content) directly without traversing application from home page. It helps in getting indexed so that these links can be easily searchable by search engines like Google, Yahoo.. etc.
 
   Using Angular, the deep linking is defaut done with the # prefix (when the HTML5 mode is not set).
 
 * What are the advantages of AngularJS?
+
   Built by Google
     AngularJS has been developed as well as maintained by dedicated Google engineers. This means that there is a huge community out there for you to learn from.
   Great MVC
@@ -1269,6 +1492,7 @@ console.log('three');
     AngularJS is unit testing ready, and that is one of its most compelling advantages.
 
 * What are the disadvantages of AngularJS?
+
   Confusion
     There are multiple ways to do the same thing with AngularJS. Sometimes, it can be hard for novices to say which way is better for a task.
   Lagging UI
@@ -1277,15 +1501,201 @@ console.log('three');
     With AngularJS, you don’t have the ability to compose many NG-apps on the same page. This can cause name clashes.
 
 * Which are the core directives of AngularJS?
+
   - ng-app − This directive defines and links an AngularJS application to HTML.
   - ng-model − This directive binds the values of AngularJS application data to HTML input controls.
   - ng-bind − This directive binds the AngularJS Application data to HTML tags.
 
 * Explain ng-model directive.
-  The ng-model directive is used for two-way data binding in AngularJS. It binds <input>, <select> or <textarea> elements to a specified property on the $scope object. So, the value of the element will be the value of a property and vice-versa. 
+
+  The ng-model directive is used for two-way data binding in AngularJS. It binds `<input>`, `<select>` or `<textarea>` elements to a specified property on the $scope object. So, the value of the element will be the value of a property and vice-versa. 
 
 * Explain ng-bind directive.
+
   The ng-bind directive binds the model property declared via $scope or ng-model directive or the result of an expression to the HTML element. It also updates an element if the value of an expression changes. 
+
+* Explain ng-app directive of AngularJS.
+
+  The ng-app directive is a starting point of AngularJS Application. It initializes the AngularJS framework automatically. AngularJS framework will first check for ng-app directive in a HTML document after the entire document is loaded and if ng-app is found, it bootstraps itself and compiles the HTML template.
+  Typically ng-app directives should be placed at the root of an HTML document e.g. `<html>` or `<body>` tag, so that it can control the entire DOM hierarchy. However, you can place it in any DOM element.
+  The AngularJS framework will only process the DOM elements and its child elements where the ng-app directive is applied.
+  
+#### NodeJS questions:
+
+* What is an error-first callback?
+
+  It is a type of callback where the first argument is always an error and other arguments are the result data. The dev can then make sure the function calling the callback executed without troubles by checking whether the error argument is not null.
+
+* How can you avoid callback hells?
+
+  * Keep your code shallow. Don't define callbacks inside callbacks, instead move all callbacks to a single block level and the use them by function name.
+  * Modularize. Split your code into smaller pieces that each only have a single task.
+  * Handle all errors. This is neccessary so a failed function doesn't pass bad or malformed data down the callback chain and possibly cause other functions to throw errors.
+
+  [source](http://callbackhell.com/)
+
+* What are Promises?
+
+  Promises are used for asynchronous computations. A Promise represents a value which may be available now, in the future, or never.
+
+  [source](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+
+* What tools can be used to assure consistent style? Why is it important?
+
+  So called code style linters (jshint, jslint, eslint, etc.) help you keep a consistent style. It is important because it helps you avoid introducing simple bugs at the stage of writing the code. It assures that code formatting is more consistent between members of the team.
+
+* When would you use npm and when yarn?
+
+  I would use yarn when time is of the essence or when offline installation of modules is required.
+
+  [more info](https://yarnpkg.com/lang/en/)
+
+* What's a stub? Name a use case!
+
+  Stubs are functions used in testing to replace other functions.
+
+  Use cases:
+
+  * Replace problematic pieces of code.
+  * Trigger code paths that wouldn't otherwise trigger, such as error handling.
+  * Help test asynchronous code more easily.
+
+  [source](https://semaphoreci.com/community/tutorials/best-practices-for-spies-stubs-and-mocks-in-sinon-js)
+
+* What's a test pyramid? Give an example!
+
+  A testing pyramid consists of 3 parts:
+  * UI tests test the system just like a real live end user would. They mimic the user's interactions in the form.
+  * Integration tests, like UI tests, test various layers of the application, but they don't do it through the UI.
+  * Unit tests are tests developers write to prove to themselves, that the code they are writing works. It enables them to make changes, without fear of breaking everything.
+
+  [source](http://www.agilenutshell.com/episodes/41-testing-pyramid)
+
+* What's your favorite HTTP framework and why?
+
+  There's a lot of them. Some of the more popular include Express, Koa and Meteor. My favorite one is Express, because it's simple, powerful and well-supported.
+
+  [more info](http://nodeframework.com/)
+
+* How can you secure your HTTP cookies against XSS attacks?
+
+  Use HTTPOnly cookie flag, which disables access to the cookie from scripts.
+
+  [more info](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet#Bonus_Rule_.231:_Use_HTTPOnly_cookie_flag)
+
+* How can you make sure your dependencies are safe?
+
+  Use only tested libraries. A good way is to use the most popular ones, as they have a higher chance of errors being detected and fixed by the community. Another way is to freeze a known good version of a library in npm, so it doesn't get updated to an unstable and possibly buggy version, though this requires manual updating in case a newer version contains a bug-fix for the version that's freezed in npm.
+
+* How does Node.js handle child threads?
+
+  Every Node.JS process is single-threaded, therefore to get multiple threads one must use multiple processes. Node.JS provides a `child_process` module that helps with this.
+
+  [more info](https://nodejs.org/api/child_process.html)
+
+* What is the preferred method of resolving unhandled exceptions in Node.js?
+
+  By adding a listener for the `uncaughtException` process-level event:
+
+  ```javascript
+  process.on('uncaughtException', function(err) {
+    // Handle error
+    console.log(err);
+  });
+  ```
+
+* How does Node.js support multi-processor platforms, and does it fully utilize all processor resources?
+
+  Node.JS is a single-threaded application, and as such it will run only on a single core of a system. Node.JS provides a way to create multiple instances in the form of `cluster` module, which aids in fully utilizing system resources.
+
+  [more info](https://nodejs.org/api/cluster.html)
+
+* What is typically the first argument passed to a Node.js callback handler?
+
+  First argument in a callback is usually an error object if the function failed, or null if the function succeeded.
+
+* Consider the following JavaScript code:
+```javascript
+console.log("first");
+setTimeout(function() {
+    console.log("second");
+}, 0);
+console.log("third");
+```
+
+  The output will be:
+  ```
+  first
+  third
+  second
+  ```
+
+  Assuming that this is the desired behavior, and that we are using Node.js version 0.10 or higher, how else might we write this code?
+
+  Answer:
+
+  Instead of using `setTimeout`, we can use `setImmediate` (behind all I/O events) or `process.nextTick` (ahead all I/O events)
+
+* What is Event Loop?
+
+  The event loop allows Node.JS to offload operations to system kernel, which in turn allows Node to handle multiple background operations at the same time. When the operation completes, the kernel tells Node.JS so that it can add appropriate callbacks to the poll queue.
+
+  [more info](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/)
+
+* What is the purpose of Buffer object in Node?
+
+  Buffers allow devs to manipulate and temporarily store binary data, as well to act as buffers for streams.
+
+  [more info](https://nodejs.org/api/buffer.html)
+
+* Which types of streams are present in Node?
+
+  * writable
+  * readable
+  * duplex - implements both writable and readable streams.
+  * transform - similar to duplex, but also allows transformation of passing data.
+  * passthrough - similar to duplex, but the writable and readable parts are connected, everything that comes in on the writable side will come out unchanged on the readable side.
+
+  [source](https://nodejs.org/api/stream.html)
+
+* Name some of the events fired by streams in Node
+
+  error, close, end, finish, data, pipe, unpipe, readable
+
+  [source](https://nodejs.org/api/stream.html)
+
+* What is Chaining in Node?
+
+  Chaining methods allows devs to use the result of a function call without assigning it to a variable first, for example:
+
+  ```javascript
+  const result =
+    [1,2,3,4,5]
+      .filter(val => val > 1)
+      .map(val => val * val)
+      .reduce((a, b) => a + b);
+
+  console.log(result); // 55
+  ```
+
+* What is the purpose of process object?
+
+  Process object is a global object that gives information about the underlying Node.JS process, such as: arguments passed to the process, environmental variables, memory usage etc.
+
+  [more info](https://nodejs.org/api/process.html)
+
+* What is MVC?
+  MVC is a software architecture - the structure of the system - that separates domain/application/business logic from the rest of the user interface. It does this by separating the application into three parts: the model, the view, and the controller.
+
+  The model manages fundamental behaviors and data of the application. It can respond to requests for information, respond to instructions to change the state of its information etc. This could be a database, or any number of data structures or storage systems. In short, it is the data and data-management of the application.
+
+  The view effectively provides the user interface element of the application. It'll render data from the model into a form that is suitable for the user interface.
+
+  The controller receives user input and makes calls to model objects and the view to perform appropriate actions.
+
+  All in all, these three components work together to create the three basic components of MVC.
+
+  http://softwareengineering.stackexchange.com/questions/127624/what-is-mvc-really
 
 #### Fun Questions:
 
@@ -1295,6 +1705,7 @@ console.log('three');
 * Do you have any pet projects? What kind?
 * What's your favorite feature of Internet Explorer?
 * How do you like your coffee?
+
 
 #### React Questions
 
@@ -1405,6 +1816,9 @@ Nothing. setState can also take a function as an argument. That function allows 
 
 setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
 
+* How would you specify that a scope variable should have one-time binding only?
+
+By using “::” in front of it.
 
 #### Contributors:
 
@@ -1412,6 +1826,104 @@ This document started in 2009 as a collaboration of [@paul_irish](https://twitte
 
 It has since received contributions from over [100 developers](https://github.com/h5bp/Front-end-Developer-Interview-Questions/graphs/contributors).
 
+* Is AngularJS extensible?  
+Yes, in Angular we can create custom directive to extend AngularJS existing functionalities.  
+https://docs.angularjs.org/guide/directive  
+
+* What should be the maximum number of concurrent “watches”? Bonus: How would you keep an eye on that number?  
+To reduce memory consumption and improve performance it is a good idea to limit the number of watches on a page to 2,000. A utility called ng-stats can help track your watch count and digest cycles.  
+https://github.com/kentcdodds/ng-stats  
+
+* How do you share data between controllers?  
+Create an AngularJS service that will hold the data and inject it inside of the controllers. Using a service is the cleanest, fastest and easiest way to test. However, there are couple of other ways to implement data sharing between controllers, like: using events, usng $parent, nextSibling, controllerAs, etc. to directly access the controllers, using the $rootScope to add the data on (not a good practice).  
+The methods above are all correct, but are not the most efficient and easy to test.  
+https://daveceddia.com/sharing-data-between-controllers-best-practice-use-a-service/  
+http://stackoverflow.com/a/21920241 
+* Where should we implement the DOM manipulation in AngularJS?
+Dom Manipulations theoretically should not exist in controllers, services or anywhere else but in directives. The currently suggested best practice is to use "components" (which can be realized via directives), where basically all the directive logic leaves in the controller. In that context, I believe it is perfectly fine to manipulate the DOM in a directive's template from within the directive's controller.  
+http://ng-learn.org/2014/01/Dom-Manipulations/  
+http://stackoverflow.com/questions/37480150/manipulating-dom-in-angularjs-best-practice  
+
+* If you were to migrate from Angular 1.4 to Angular 1.5, what is the main thing that would need refactoring?  
+Refactor code to use components.  
+https://www.sitepoint.com/upgrade-to-angular-components/  
+
+* What is the difference between ng-show/ng-hide and ng-if directives?  
+The ngIf directive removes or recreates a portion of the DOM tree based on an expression. When an element is removed using ngIf its scope is destroyed and a new scope is created when the element is restored.  
+The ngShow directive shows or hides the given HTML element based on the expression provided to the ngShow attribute. The element is shown or hidden by removing or adding the ng-hide CSS class onto the element. The .ng-hide CSS class is predefined in AngularJS and sets the display style to none (using an !important flag).  
+http://stackoverflow.com/a/19177773  
+* What is the difference between one-way binding and two-way binding?  
+With two-way binding, if I change the reference Object and Primitive in the parent and the isolate Component, you’ll see both values continue to update. With one way data binding  You’ll be able to change the isolate bindings without affecting the parent scope. However, the $watch is setup on the parent data source, so when changes occur, it’ll propagate down and flow into the Component to update it with new data   
+https://toddmotto.com/one-way-data-binding-in-angular-1-5/  
+* Explain how $scope.$apply() works  
+$scope.$apply() takes a function or an Angular expression string, and executes it, then calls $scope.$digest() to update any bindings or watchers.  
+So, when do you need to call $apply()? Very rarely, actually. AngularJS actually calls almost all of your code within an $apply call. Events like ng-click, controller initialization, $http callbacks are all wrapped in $scope.$apply(). So you don’t need to call it yourself, in fact you can’t. Calling $apply inside $apply will throw an error.  
+You do need to use it if you are going to run code in a new turn. And only if that turn isn’t being created from a method in the AngularJS library. Inside that new turn, you should wrap your code in $scope.$apply(). Here is an example. We are using setTimeout, which will execute a function in a new turn after a delay. Since Angular doesn’t know about that new turn, the update will not be reflected.  
+http://jimhoskins.com/2012/12/17/angularjs-and-apply.html  
+
+* How would you make an Angular service return a promise? Write a code snippet as an example  
+To add promise functionality to a service, we inject the “$q” dependency in the service, and then use it like so:
+
+```
+angular.factory('testService', function($q){
+ return {
+  getName: function(){
+   var deferred = $q.defer();
+
+   //API call here that returns data
+   testAPI.getName().then(function(name){
+    deferred.resolve(name)
+   })
+
+   return deferred.promise;
+  }
+ }
+})
+```
+
+https://docs.angularjs.org/api/ng/service/$q  
+
+* When creating a directive, it can be used in several different ways in the view. Which ways for using a directive do you know? How do you define the way your directive will be used?  
+When you create a directive, it can be used as an attribute, element or class name. To define which way to use, you need to set the restrict option in your directive declaration.  
+The restrict option is typically set to:  
+‘A’ – only matches attribute name  
+‘E’ – only matches element name  
+‘C’ – only matches class name  
+'M' - only matches comment  
+These restrictions can all be combined as needed:  
+‘AEC’ – matches either attribute or element or class name  
+
+* What makes the angular.copy() method so powerful?  
+It creates a deep copy of the variable. A deep copy of a variable means it doesn’t point to the same memory reference as that variable. Usually assigning one variable to another creates a “shallow copy”, which makes the two variables point to the same memory reference. Therefore if we change one, the other changes as well.  
+https://docs.angularjs.org/api/ng/function/angular.copy  
+
+* When should you use an attribute directive versus an element?  
+Use an element when you are creating a component that is in control of the template. Use an attribute when you are decorating an existing element with new functionality.   
+https://docs.angularjs.org/guide/directive  
+
+* How do you reset a $timeout, $interval(), and disable a $watch()?  
+To reset a timeout and/or $interval, assign the result of the function to a variable and then call the .cancel() function on this variable. To disable $watch(), we call it.  
+
+```
+var customTimeout = $timeout(function () {
+// arbitrary code 
+}, 55);
+$timeout.cancel(customTimeout);
+var deregisterWatchFn = $rootScope.$watch(‘someGloballyAvailableProperty’, function (newVal) {
+if (newVal) {
+// we invoke that deregistration function, to disable the watch
+deregisterWatchFn();
+...
+}
+});
+```
+* Explain what is a $scope in AngularJS  
+Scope is an object that refers to the application model. It is an execution context for expressions. Scopes are arranged in hierarchical structure which mimic the DOM structure of the application. Scopes can watch expressions and propagate events.  
+https://docs.angularjs.org/guide/scope  
+
+* What are Directives?  
+Directives are markers on a DOM element (such as an attribute, element name, comment or CSS class) that tell AngularJS’s HTML compiler to attach a specified behavior to that DOM element (e.g. via event listeners), or even to transform the DOM element and its children.  
+https://docs.angularjs.org/guide/directive  
 * What is a singleton pattern and where we can find it in Angularjs?  
 Is a great pattern that restricts the use of a class more than once. We can find singleton pattern in angular in dependency injection and in the services. If you do 2 times ‘new Object()‘ without this pattern, you will be allocating 2 pieces of memory for the same object. With singleton pattern, if the object exists, you reuse it.  
 http://joelhooks.com/blog/2013/05/01/when-is-a-singleton-not-a-singleton/  
