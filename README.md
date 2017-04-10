@@ -1927,3 +1927,7 @@ https://docs.angularjs.org/guide/directive
 * What is a singleton pattern and where we can find it in Angularjs?  
 Is a great pattern that restricts the use of a class more than once. We can find singleton pattern in angular in dependency injection and in the services. If you do 2 times ‘new Object()‘ without this pattern, you will be allocating 2 pieces of memory for the same object. With singleton pattern, if the object exists, you reuse it.  
 http://joelhooks.com/blog/2013/05/01/when-is-a-singleton-not-a-singleton/  
+
+* What is an interceptor? What are common uses of it?  
+An interceptor is a middleware code where all the $http requests go through. The interceptors are service factories that are registered with the $httpProvider by adding them to the $httpProvider.interceptorsarray.  You have 2 types of requests that go through the interceptor, request and response (and their errors respectively). This piece of code is very useful for error handling, authentication or middleware in all the requests/responses.  
+https://docs.angularjs.org/api/ng/service/$http  

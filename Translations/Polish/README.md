@@ -1958,3 +1958,7 @@ https://docs.angularjs.org/guide/directive
 Jest to kreacyjny wzorzec projektowy, którego celem jest ograniczenie możliwości tworzenia obiektów danej klasy do jednej instancji oraz zapewnienie globalnego dostępu do stworzonego obiektu. W angularze pattern ten jest wykorzystywany w mechanizmie dependency injection i w serwisach.  
 http://joelhooks.com/blog/2013/05/01/when-is-a-singleton-not-a-singleton/  
 https://pl.wikipedia.org/wiki/Singleton_(wzorzec_projektowy)  
+
+* Czym jest interceptor? Jakie są ich popularne zastosowania?
+Jest to funkcja pośrednicząca, przez którą przechodzą requesty $http. Są to serwisy rejestrowane przez $httpProvider przez dopisywanie ich do tablicy $http.Provider.interceptors. Są dwa typy requestów przechodzących przez interceptor, request i response http (oraz odpowiednie błędy). Tego rodzaju kod jest przydatny do obsługi błędów, potwierdzania tożsamości i ogólnie do przekształcania requestów i responsów http.  
+https://docs.angularjs.org/api/ng/service/$http  
