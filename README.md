@@ -361,6 +361,17 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 #### REACT Questions:
 
 * What is React? How is it different from other JS frameworks?
+    React is a library that allows you to create composite user interfaces.
+    It has a virtual DOM tree, and when you change some data, only those elements are rendered,
+    those that have changed. Compared by layer V (View) in MVC. The main assumption is
+    creating reusable components.
+
+    Difference:
+      - Virtual DOM tree
+      - Re-render only those elements that have changed
+      - Uses JSX - javascript and html combination
+      - It needs libraries like Flux or Redux to implement full architectures
+
 * What happens during the lifecycle of a React component?
     React.Component has three main life cycles, allowing them to manage
     Component before adding it to the DOM tree, during its life
