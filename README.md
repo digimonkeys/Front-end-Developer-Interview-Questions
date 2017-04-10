@@ -155,6 +155,16 @@ https://css-tricks.com/myth-busting-css-animations-vs-javascript/
 
 * What does CORS stand for and what issue does it address?
 
+* What HTTP methods do you know?
+* How many requests are there on GET and how many on PUT, and where does the difference come from?
+* What's REST? What alternatives do you know?
+* What is the difference in logging into SPA app and normal app?
+* What threats and attacks are related to SPA apps?
+
+
+[9:34]  
+. co sie dzieje gdy uzywamy new?
+
 #### HTML Questions:
 
 * What does a `doctype` do?  
@@ -1095,6 +1105,13 @@ Event life cycle (event flow) describes flow of an event through DOM tree. With 
 Event flow![Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
 
 #### Testing Questions:
+
+* How do you test apps? What kinds of tests do you know? What tools do you use to those types of tests? (please include in response links to videos about those tests types)
+* What should you test with unit tests?
+* What should you test with e2e tests?
+* What's BDD? What's TDD?
+* What is code coverage?
+* What elements do you test?
 
 * What are some advantages/disadvantages to testing your code?
 
