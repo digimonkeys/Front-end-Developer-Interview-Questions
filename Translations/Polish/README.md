@@ -756,6 +756,21 @@ Używam następujących technik:
 
 Odniesienie: [Wskazówki](http://www.zsoltnagy.eu/javascript-debugging-tips-and-tricks/)
 
+* Wyjaśnij różnicę w używaniu `foo` pomiędzy `function foo() {}` i `var foo = function() {}`.
+
+Jest tutaj deklaracja funkcji (pierwszy przykład) i wyrażenie funkcyjne (drugi przykład).
+Używanie w obu przypadkach jest generalnie takie samo, z jednym wyjątkiem.
+Wywołanie foo przed deklaracją (pierwszy przykład), spowoduje normalne wywołanie funkcji, ponieważ funkcje "przenoszone" na góre naszego kodu (hoisting).
+Wywołanie foo przed wyrażeniem funkcyjnym (drugi przykład) skutkowac będzie błędem, ponieważ zmienne, dopóki nie są zadeklarowane, mają wartość undefined.
+
+```javascript
+foo(); // ok
+boo(); // TypeError: boo is not a function
+
+function foo() {};
+var boo = function () {};
+```
+
 * Zasieg zmiennych w JavaScript?
 
 W JavaScripcie, przed wersją ES6, były tylko dwa zakresy zmiennych. Zakres globalny oraz lokalny - funkcja.

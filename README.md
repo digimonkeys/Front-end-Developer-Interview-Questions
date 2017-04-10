@@ -1004,7 +1004,22 @@ Function definitions are hoisted, function expressions arent.
 
 * What is event loop?
   * What is the difference between call stack and task queue?
-* Explain the differences on the usage of `foo` between `function foo() {}` and `var foo = function() {}`
+
+* Explain the differences on the usage of `foo` between `function foo() {}` and `var foo = function() {}`.
+
+There is a function declaration (first one) and function expression (second one).
+The usage is almost the same, except for one thing. 
+Calling foo before a declaration (first case) the function will be called, because functions are hoisted.
+Calling foo before an expression (second case) will result in throwing error, because, even though, variables are hoisted too, their value is undefined untill the declaration.
+
+```javascript
+foo(); // ok
+boo(); // TypeError: boo is not a function
+
+function foo() {};
+var boo = function () {};
+```
+
 * What is inheritance?
 
 Inheritance (in programming) is a mechanism that allow sharing functionality (and code reuse) beetwen classes and/or objects (in classical inheritance) or between objects (in prototypal inheritance - like in JS). Class that inherits (called subclass) gains acess to all shared behaviors and attributes of parent class (called superclass);
