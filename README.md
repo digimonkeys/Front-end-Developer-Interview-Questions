@@ -778,6 +778,11 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
   Reference: [Strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
 
 * Create a for loop that iterates up to `100` while outputting **"fizz"** at multiples of `3`, **"buzz"** at multiples of `5` and **"fizzbuzz"** at multiples of `3` and `5`
+
+```javascript
+  for(let i = 1; i <= 100; i += 1) console.log((i % 3 === 0 ? 'fizz' : '') + (i % 5 === 0 ? 'buzz' : ''));
+```
+
 * Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
 
 It is generally a good idea to leave the global scope untouched, because all code share a single global namespace.
