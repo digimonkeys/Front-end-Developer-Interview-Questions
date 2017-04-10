@@ -603,7 +603,7 @@ Object.create builds an object that inherits directly from the one passed as its
 
 ECMAScript 2015 introduced a new set of keywords implementing classes. Although these constructs look like those familiar to developers of class-based languages, they are not the same. JavaScript remains prototype-based. Classes are just a syntactic sugar for creating object using constructor. 
 
-[Difference new vs Object.create](http://stackoverflow.com/questions/4166616/understanding-the-difference-between-object-create-and-new-somefunction)
+Difference new vs Object.create![Difference new vs Object.create](http://stackoverflow.com/questions/4166616/understanding-the-difference-between-object-create-and-new-somefunction)
 
 * What's the difference between `.call` and `.apply`?
     You can use `.call` and` .apply` to assign another object when calling an existing function.
@@ -715,7 +715,7 @@ ECMAScript 2015 introduced a new set of keywords implementing classes. Although 
 
 It specify property descriptors to be added to the newly-created object, with the corresponding property names. These properties correspond to the second argument of Object.defineProperties().
 
-[Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
+Object.create![Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
 
 
 * Why is extending built-in JavaScript objects not a good idea?
@@ -738,7 +738,7 @@ It specify property descriptors to be added to the newly-created object, with th
 Yes, private methods are made by the constructor. Every function definition or function expression (not bound with this) will become private method.
 Private methods cannot be called by public methods.
 
-[Crockford on private members](http://javascript.crockford.com/private.html)
+Private members![Crockford on private members](http://javascript.crockford.com/private.html)
 
 * Difference between document load event and document DOMContentLoaded event?
     The DOMContentLoaded event is fired when the document has been completely loaded and parsed the DOM tree,
@@ -755,15 +755,14 @@ Private methods cannot be called by public methods.
 The function declaration defines a function with the specified name and parameters.
 Function expression is almost identical, but i allows to omit function name, thus creating annonymous function. Function expressions can be used as an IIFE. Function expressions (not like function declartion) arent hoisted.
 
-[Function delcaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
-[Function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function)
-[Function declaration vs function expression](https://www.sitepoint.com/function-expressions-vs-declarations/)
+Function delcaration![Function delcaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+Function expression![Function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function)
+Function declaration vs function expression![Function declaration vs function expression](https://www.sitepoint.com/function-expressions-vs-declarations/)
 
 * Are the functions hoisted?
     In JS, functions can be declared in two ways: by function definition and function expression.
     Function definition are hoisted, whereas function expressions do not.
-
-    [Function hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+    Function hoisting![Function hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
     
 * Explain the same-origin policy with regards to JavaScript.
   This is a fundamental security mechanism of the browser.
@@ -887,8 +886,8 @@ The Strategy pattern encapsulates alternative algorithms (or strategies) for a p
     - allows clients to change Strategy
   - Strategy - implements the algorithm using the Strategy interface
 
-[DotFactory patterns](http://www.dofactory.com/javascript/design-patterns)
-[JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+DotFactory patterns![DotFactory patterns](http://www.dofactory.com/javascript/design-patterns)
+JavaScript Design Patterns![JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 
 * Explain what a single page app is and how to make one SEO-friendly.
 
@@ -976,7 +975,7 @@ Falsy values are values that evaluate to false when they're converted to boolean
 - NaN
 - false
 
-[MDN falsy values](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+Falsy values![MDN falsy values](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 
 * Types in Javascript
 
@@ -999,7 +998,7 @@ Not primitive type is Object type ie:
 
 Primitive types are passed by value, objects are passed by reference.
 
-[Javascript Data Types](https://developer.mozilla.org/pl/docs/Web/JavaScript/Data_structures)
+Javascript Types![Javascript Data Types](https://developer.mozilla.org/pl/docs/Web/JavaScript/Data_structures)
 
 * What language constructions do you use for iterating over object properties and array items?
 
@@ -1086,7 +1085,7 @@ var boo = function () {};
 
 Inheritance (in programming) is a mechanism that allow sharing functionality (and code reuse) beetwen classes and/or objects (in classical inheritance) or between objects (in prototypal inheritance - like in JS). Class that inherits (called subclass) gains acess to all shared behaviors and attributes of parent class (called superclass);
 
-[Wikipedia - Inheritance](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming))
+Inheritance![Wikipedia - Inheritance](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming))
 
 * Whats the difference between inheritance in JS and the classical inheritance?
 
@@ -1094,7 +1093,7 @@ Classical inheritance inherits the behavior, without any state, from the parent 
 
 Prototypal inheritance inherits behavior and state from the parent object. It inherits the behavior and state at the moment the object is called. When the parent object changes at run-time, the state and behavior of the child objects are affected.
 
-[Stackoverflow - classical vs prototypal](http://softwareengineering.stackexchange.com/a/99438)
+Classical vs Prototypal![Stackoverflow - classical vs prototypal](http://softwareengineering.stackexchange.com/a/99438)
 
 * Whats the difference between function and an object?
 
@@ -1109,7 +1108,7 @@ Event life cycle (event flow) describes flow of an event through DOM tree. With 
  - on the object faze - happens when event reach element which user made an action
  - bubbling faze - in this faze event is sent from the element that action was taken on, to the top element of the DOM tree.
 
-[Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
+Event flow![Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
 
 #### Testing Questions:
 
@@ -1390,16 +1389,19 @@ console.log('three');
   http://stackoverflow.com/questions/21094569/how-to-unit-test-a-filter-in-angularjs-1-x
 
   * What is data binding in AngularJS?
+  
   Data-binding in AngularJS apps is the automatic synchronization of data between the model and view components. The way that AngularJS implements data-binding lets you treat the model as the single-source-of-truth in your application. The view is a projection of the model at all times. When the model changes, the view reflects the change, and vice versa.
 
   https://docs.angularjs.org/guide/databinding
 
 * What is scope in AngularJS?
+
   Scope is an object that refers to the application model. It is an execution context for expressions. Scopes are arranged in hierarchical structure which mimic the DOM structure of the application. Scopes can watch expressions and propagate events.
 
   https://docs.angularjs.org/guide/scope
 
 * What are the controllers in AngularJS?
+
   In AngularJS, a Controller is defined by a JavaScript constructor function that is used to augment the AngularJS Scope.
   When a Controller is attached to the DOM via the ng-controller directive, AngularJS will instantiate a new Controller object, using the specified Controller's constructor function. A new child scope will be created and made available as an injectable parameter to the Controller's constructor function as $scope.
   If the controller has been attached using the controller as syntax then the controller instance will be assigned to a property on the new scope.
@@ -1418,6 +1420,7 @@ console.log('three');
   https://docs.angularjs.org/guide/controller
 
 * What are the services in AngularJS?
+
   AngularJS services are substitutable objects that are wired together using dependency injection (DI). You can use services to organize and share code across your app.
   
   AngularJS services are:
@@ -1429,6 +1432,7 @@ console.log('three');
   https://docs.angularjs.org/guide/services
 
 * What are the filters in AngularJS?
+
   Filters format the value of an expression for display to the user. They can be used in view templates, controllers or services. AngularJS comes with a collection of built-in filters, but it is easy to define your own as well.
 
   The underlying API is the $filterProvider.
@@ -1436,11 +1440,13 @@ console.log('three');
   https://docs.angularjs.org/guide/filter
 
 * Explain directives in AngularJS.
+
   At a high level, directives are markers on a DOM element (such as an attribute, element name, comment or CSS class) that tell AngularJS's HTML compiler ($compile) to attach a specified behavior to that DOM element (e.g. via event listeners), or even to transform the DOM element and its children.
 
   https://docs.angularjs.org/guide/directive
 
 * Explain templates in AngularJS.
+
   In AngularJS, templates are written with HTML that contains AngularJS-specific elements and attributes. AngularJS combines the template with information from the model and controller to render the dynamic view that a user sees in the browser.
 
   These are the types of AngularJS elements and attributes you can use:
@@ -1452,17 +1458,20 @@ console.log('three');
   https://docs.angularjs.org/guide/templates
 
 * What is routing in AngularJS?
+
   AngularJS supports SPA using routing module ngRoute. This routing module acts based on the url. When a user requests a specific url, the routing engine captures that url and renders the view based on the defined routing rules.
 
   https://docs.angularjs.org/api/ngRoute/service/$route
   http://www.tutorialsteacher.com/angularjs/angularjs-routing
 
 * What is deep linking in AngularJS?
+
   Deep linking is the usage of the URL, which will take to specific page (content) directly without traversing application from home page. It helps in getting indexed so that these links can be easily searchable by search engines like Google, Yahoo.. etc.
 
   Using Angular, the deep linking is defaut done with the # prefix (when the HTML5 mode is not set).
 
 * What are the advantages of AngularJS?
+
   Built by Google
     AngularJS has been developed as well as maintained by dedicated Google engineers. This means that there is a huge community out there for you to learn from.
   Great MVC
@@ -1475,6 +1484,7 @@ console.log('three');
     AngularJS is unit testing ready, and that is one of its most compelling advantages.
 
 * What are the disadvantages of AngularJS?
+
   Confusion
     There are multiple ways to do the same thing with AngularJS. Sometimes, it can be hard for novices to say which way is better for a task.
   Lagging UI
@@ -1483,19 +1493,23 @@ console.log('three');
     With AngularJS, you don’t have the ability to compose many NG-apps on the same page. This can cause name clashes.
 
 * Which are the core directives of AngularJS?
+
   - ng-app − This directive defines and links an AngularJS application to HTML.
   - ng-model − This directive binds the values of AngularJS application data to HTML input controls.
   - ng-bind − This directive binds the AngularJS Application data to HTML tags.
 
 * Explain ng-model directive.
-  The ng-model directive is used for two-way data binding in AngularJS. It binds <input>, <select> or <textarea> elements to a specified property on the $scope object. So, the value of the element will be the value of a property and vice-versa. 
+
+  The ng-model directive is used for two-way data binding in AngularJS. It binds `<input>`, `<select>` or `<textarea>` elements to a specified property on the $scope object. So, the value of the element will be the value of a property and vice-versa. 
 
 * Explain ng-bind directive.
+
   The ng-bind directive binds the model property declared via $scope or ng-model directive or the result of an expression to the HTML element. It also updates an element if the value of an expression changes. 
 
 * Explain ng-app directive of AngularJS.
+
   The ng-app directive is a starting point of AngularJS Application. It initializes the AngularJS framework automatically. AngularJS framework will first check for ng-app directive in a HTML document after the entire document is loaded and if ng-app is found, it bootstraps itself and compiles the HTML template.
-  Typically ng-app directives should be placed at the root of an HTML document e.g. <html> or <body> tag, so that it can control the entire DOM hierarchy. However, you can place it in any DOM element.
+  Typically ng-app directives should be placed at the root of an HTML document e.g. `<html>` or `<body>` tag, so that it can control the entire DOM hierarchy. However, you can place it in any DOM element.
   The AngularJS framework will only process the DOM elements and its child elements where the ng-app directive is applied.
   
 #### NodeJS questions:
@@ -1724,7 +1738,7 @@ Twitter.propTypes = {
 };
 ```
 
-[Functions as children](https://facebook.github.io/react/docs/jsx-in-depth.html#functions-as-children)
+Functions as children![Functions as children](https://facebook.github.io/react/docs/jsx-in-depth.html#functions-as-children)
 
 * What is the difference between a controlled component and an uncontrolled component?
 
@@ -1732,53 +1746,53 @@ A controlled component is a component where React is in control and is the singl
 
 In uncontrolled components data is handled directly by the DOM. To access data you can use an event handler or a ref to get form values from the DOM.
 
-[Controlled components](https://facebook.github.io/react/docs/forms.html#controlled-components)
-[Uncontrolled components](https://facebook.github.io/react/docs/uncontrolled-components.html)
+Controlled components![Controlled components](https://facebook.github.io/react/docs/forms.html#controlled-components)
+Uncontrolled components![Uncontrolled components](https://facebook.github.io/react/docs/uncontrolled-components.html)
 
 * In which lifecycle event do you make AJAX requests and why?
 
 AJAX request should be done in componentDidMount event lifecycle. It's because after AJAX call returns some data, in most cases we want to assign that date to the state of the component, and this can be done only on mounted components.
 
-[State and lifecycle](https://facebook.github.io/react/docs/state-and-lifecycle.html)
+State and lifecycle![State and lifecycle](https://facebook.github.io/react/docs/state-and-lifecycle.html)
 
 * What does shouldComponentUpdate do and why is it important?
 
 shouldComponentUpdate is important because of performance reasons.
 If we know that a certain section of our UI isn’t going to change, there’s no reason to have React go through the trouble of trying to figure out if it should update it. By returning false from shouldComponentUpdate, React will assume that the current component, and all its child components, will stay the same as they currently are.
 
-[Optimizing performance](https://facebook.github.io/react/docs/optimizing-performance.html)
+Optimizing performance![Optimizing performance](https://facebook.github.io/react/docs/optimizing-performance.html)
 
 * How do you tell React to build in Production mode and what will that do?
 
 Typically you’d use Webpack’s DefinePlugin method to set NODE_ENV to production. This will strip out things like propType validation and extra warnings.
 
-[Development and production](https://facebook.github.io/react/docs/installation.html#development-and-production-versions)
+Development and production![Development and production](https://facebook.github.io/react/docs/installation.html#development-and-production-versions)
 
 * Why would you use React.Children.map(props.children, () => ) instead of props.children.map(() => )
 
 Because props.children can be an array but also a single component. If you'll pass single component then native map method will fail. React.Children.map handles both arrays of components and single components.
 
-[React.Children.map](https://facebook.github.io/react/docs/react-api.html#react.children.map)
+React.Children.map![React.Children.map](https://facebook.github.io/react/docs/react-api.html#react.children.map)
 
 * Describe how events are handled in React.
 
 In React native events are wrapped in SyntheticEvent instances, which solves cross browser compatibility issues. SyntheticEvent have the same interface as native events.
 React doesn’t actually attach events to the child nodes themselves. React will listen to all events at the top level using a single event listener (due performance reasons).
 
-[Handling events](https://facebook.github.io/react/docs/handling-events.html)
+Handling events![Handling events](https://facebook.github.io/react/docs/handling-events.html)
 
 * What is the difference between createElement and cloneElement?
 
 createElement is what JSX gets transpiled to and is what React uses to create React Elements (object representations of some UI). cloneElement is used in order to clone an element and pass it new props.
 
-[Create Element](https://facebook.github.io/react/docs/react-api.html#createelement)
-[Clone Element](https://facebook.github.io/react/docs/react-api.html#cloneelement)
+Create Element![Create Element](https://facebook.github.io/react/docs/react-api.html#createelement)
+Clone Element![Clone Element](https://facebook.github.io/react/docs/react-api.html#cloneelement)
 
 * What is the second argument that can be passed to setState and what is its purpose?
 
 The setState is asynchronous so it takes also a callback function as the second argument. This function is invoked when setState has finished and the component is re-rendered.
 
-[setState](https://facebook.github.io/react/docs/react-component.html#setstate)
+setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
 
 * What is wrong with this code?
 
@@ -1792,13 +1806,14 @@ this.setState((prevState, props) => {
 
 Nothing. setState can also take a function as an argument. That function allows to set current state, based on previus state.
 
-[setState](https://facebook.github.io/react/docs/react-component.html#setstate)
+setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
+
+* How would you specify that a scope variable should have one-time binding only?
+
+By using “::” in front of it.
 
 #### Contributors:
 
 This document started in 2009 as a collaboration of [@paul_irish](https://twitter.com/paul_irish) [@bentruyman](https://twitter.com/bentruyman) [@cowboy](https://twitter.com/cowboy) [@ajpiano](https://twitter.com/ajpiano)  [@SlexAxton](https://twitter.com/slexaxton) [@boazsender](https://twitter.com/boazsender) [@miketaylr](https://twitter.com/miketaylr) [@vladikoff](https://twitter.com/vladikoff) [@gf3](https://twitter.com/gf3) [@jon_neal](https://twitter.com/jon_neal) [@sambreed](https://twitter.com/sambreed) and [@iansym](https://twitter.com/iansym).
 
 It has since received contributions from over [100 developers](https://github.com/h5bp/Front-end-Developer-Interview-Questions/graphs/contributors).
-
-* How would you specify that a scope variable should have one-time binding only?
-By using “::” in front of it.
