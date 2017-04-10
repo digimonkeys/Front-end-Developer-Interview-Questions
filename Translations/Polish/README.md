@@ -1924,3 +1924,7 @@ Opcje mogą być łączone, np. dyrektywa z restrict: ‘AEC’ może być użyt
 * Co stanowi o mocy metody angular.copy()?
 Tworzy ona głęboką kopię zmiennej, tzn wskazującą na nowy fragment pamięci. Zwykła kopia sprawia, że dwie zmienne wskazują na ten sam fragment pamięci (odwołują się do niego), zatem zmiana jednej z nich spowoduje również zmianę kopii.  
 https://docs.angularjs.org/api/ng/function/angular.copy  
+
+* Kiedy używać dyrektyw jako elementów a kiedy jako atrybutów?  
+Należy używać elementów kiedy tworzony komponent kontroluje cały szablon, a atrybutów gdy tylko dodajemy jakąś funkcjonalność do istniejącego elementu.  
+https://docs.angularjs.org/guide/directive  

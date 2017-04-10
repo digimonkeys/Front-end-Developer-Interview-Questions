@@ -1896,3 +1896,7 @@ These restrictions can all be combined as needed:
 * What makes the angular.copy() method so powerful?  
 It creates a deep copy of the variable. A deep copy of a variable means it doesn’t point to the same memory reference as that variable. Usually assigning one variable to another creates a “shallow copy”, which makes the two variables point to the same memory reference. Therefore if we change one, the other changes as well.  
 https://docs.angularjs.org/api/ng/function/angular.copy  
+
+* When should you use an attribute directive versus an element?  
+Use an element when you are creating a component that is in control of the template. Use an attribute when you are decorating an existing element with new functionality.   
+https://docs.angularjs.org/guide/directive  
