@@ -1917,3 +1917,6 @@ deregisterWatchFn();
 }
 });
 ```
+* Explain what is a $scope in AngularJS  
+Scope is an object that refers to the application model. It is an execution context for expressions. Scopes are arranged in hierarchical structure which mimic the DOM structure of the application. Scopes can watch expressions and propagate events.  
+https://docs.angularjs.org/guide/scope  

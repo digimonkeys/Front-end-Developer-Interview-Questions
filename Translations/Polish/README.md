@@ -1944,3 +1944,8 @@ deregisterWatchFn();
 }
 });
 ```
+
+* Wyjaśnij czym jest scope w AngularJS
+$scope w AngularJS jest zasięgiem widoczności danego kontrolera. Każdy kontroler posiada swój unikalny $scope do którego przypięte są funkcje oraz zmienne widoczne w warstwie widoku $scope jest jedynym elementem, który jest w stanie wystawić dane dla widoku i komunikować się z widokiem.  
+http://www.p-programowanie.pl/kurs-angular/scope-i-wyrazenia/  
+https://docs.angularjs.org/guide/scope  
