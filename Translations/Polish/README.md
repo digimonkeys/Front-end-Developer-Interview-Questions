@@ -1764,6 +1764,10 @@ Teoretycznie tylko w dyrektywach, nigdy w kontrolerach i serwisach. Obecnie jedn
 http://ng-learn.org/2014/01/Dom-Manipulations/  
 http://stackoverflow.com/questions/37480150/manipulating-dom-in-angularjs-best-practice  
 
+* Gdybyś musiał przerobić kod Angulara 1.4 na 1.5, co byłoby główną zmianą?
+Wprowadzenie/wymiana istniejącego kodu na komponenty.  
+https://www.sitepoint.com/upgrade-to-angular-components/  
+
 ### React
 
 * Jeśli stworzyłbyś element taki jak Twitter poniżej, jak wyglądała by definicja tego componentu?
