@@ -1847,3 +1847,8 @@ http://stackoverflow.com/questions/37480150/manipulating-dom-in-angularjs-best-p
 * If you were to migrate from Angular 1.4 to Angular 1.5, what is the main thing that would need refactoring?  
 Refactor code to use components.  
 https://www.sitepoint.com/upgrade-to-angular-components/  
+
+* What is the difference between ng-show/ng-hide and ng-if directives?  
+The ngIf directive removes or recreates a portion of the DOM tree based on an expression. When an element is removed using ngIf its scope is destroyed and a new scope is created when the element is restored.  
+The ngShow directive shows or hides the given HTML element based on the expression provided to the ngShow attribute. The element is shown or hidden by removing or adding the ng-hide CSS class onto the element. The .ng-hide CSS class is predefined in AngularJS and sets the display style to none (using an !important flag).  
+http://stackoverflow.com/a/19177773  

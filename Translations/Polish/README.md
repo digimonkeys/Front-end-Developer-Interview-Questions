@@ -1768,6 +1768,11 @@ http://stackoverflow.com/questions/37480150/manipulating-dom-in-angularjs-best-p
 Wprowadzenie/wymiana istniejącego kodu na komponenty.  
 https://www.sitepoint.com/upgrade-to-angular-components/  
 
+*Jaka jest różnica między użyciem  ng-show/ng-hide a ng-if?
+Ng-if usuwa lub tworzy fragment drzewa DOM w zależności od przypisanego wyrażenia. Kiedy fragment jest usuwany, niszczone jest jego scope (nowe scope powstaje podczas dodawania elementu).  
+Ng-show chowa lub pokazuje elementy html w zależności od przypisanego wyrażenia. Element jest chowany lub pokazywany za pomocą klas CSS predefiniowanych w AngularJS (ustawiany jest display: none z flagą !important).  
+http://stackoverflow.com/a/19177773  
+
 ### React
 
 * Jeśli stworzyłbyś element taki jak Twitter poniżej, jak wyglądała by definicja tego componentu?
