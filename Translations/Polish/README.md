@@ -624,7 +624,6 @@ Odniesienie: [Conditional (ternary) Operator](https://developer.mozilla.org/en-U
   for(let i = 1; i <= 100; i += 1) console.log((i % 3 === 0 ? 'fizz' : '') + (i % 5 === 0 ? 'buzz' : ''));
 ```
 
-* Czym jest `arity` funkcji?
 * Co to jest `callback`?
 
 Callback to funkcja, ktora przekazujemy do innej funkcji jako argument. Funkcja, która otrzymuje callback jako argument może go wywołac w swoim ciele. To wykonanie może być natychmiastowe w synchronicznym wywołaniu zwrotnym lub może zostać wykonane po czasie w sposób asynchroniczny. 
