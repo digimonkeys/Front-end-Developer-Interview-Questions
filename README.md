@@ -1937,3 +1937,20 @@ You can do this by using the ng-hide directive in conjunction with a controller.
 
 * How do you disable a button depending on a checkbox’s state?  
 We can use the ng-disabled directive and bind its condition to the checkbox’s state.  
+
+* How would you implement application-wide exception handling in your Angular app?  
+Angular has a built-in error handler service called $exceptionHandler which can easily be overriden as seen below:  
+
+```
+angular.
+  module('exceptionOverwrite', []).
+  factory('$exceptionHandler', ['$log', 'logErrorsToBackend', function($log, logErrorsToBackend) {
+    return function myExceptionHandler(exception, cause) {
+      logErrorsToBackend(exception, cause);
+      $log.warn(exception, cause);
+    };
+  }]);
+```
+
+This is very useful for sending errors to third party error logging services or helpdesk applications. Errors trapped inside of event callbacks are not propagated to this handler, but can manually be relayed to this handler by calling $exceptionHandler(e) from within a try catch block.  
+https://docs.angularjs.org/api/ng/service/$exceptionHandler  

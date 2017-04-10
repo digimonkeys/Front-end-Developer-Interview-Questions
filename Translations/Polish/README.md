@@ -1877,14 +1877,18 @@ Funkcja setState jest asynchroniczna dlatego przyjmuje callback jako drugi argum
 
 [setState](https://facebook.github.io/react/docs/react-component.html#setstate)
 
-* Co jest nie tak z tym kodem?
+* Jak zaimplementujesz globalną obsługę wyjątków w całej aplikacji w angularze?
+Angular ma wbudowany error handler $exceptionHandler, który można nadpisac w następujący sposób:
 
-```jsx
-this.setState((prevState, props) => {
- return {
-   streak: prevState.streak + props.count
- }
-})
+```
+angular.
+  module('exceptionOverwrite', []).
+  factory('$exceptionHandler', ['$log', 'logErrorsToBackend', function($log, logErrorsToBackend) {
+    return function myExceptionHandler(exception, cause) {
+      logErrorsToBackend(exception, cause);
+      $log.warn(exception, cause);
+    };
+  }]);
 ```
 
 Nic. setState może także przyjmować funkcję jako pierwszy argument. Funkcja ta pozwala na ustawienie obecnego stanu na podstawie stanu poprzedniego.
@@ -1968,3 +1972,6 @@ Użyje dyrektywy ng-hide uzależnionej od zmiennej typu boolean, którą będę 
 
 * Jak wyłączysz (ustawisz na disabled) button przez zmianę stanu checkboxa?  
 Użyję dyrektywy ng-disabled, której stan przypiszę do stanu checkboxa.  
+
+Jest to użyteczne do wysyłania błędów np. na serwer przechowujący wyjątki aplikacji. Błędy wewnątrz callbacków w eventach nie trafią do tego serwisu, ale możemy je tam wysłać ręcznie posługując się blokiem try catch i wywołując  $exceptionHandler(err).   
+https://docs.angularjs.org/api/ng/service/$exceptionHandler  
