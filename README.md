@@ -77,7 +77,12 @@ http://webmasters.stackexchange.com/a/25091
 * How many resources will a browser download from a given domain at a time? 
 It depends on a browser, older ones like IE6 - 2, newer ones 6-8.  
 
-* Name 3 ways to decrease page load (perceived or actual load time).
+* How would you optimize a website's assets/resources?
+* How many resources will a browser download from a given domain at a time?
+  * What are the exceptions?
+* Name 3 ways to decrease page load (perceived or actual load time).  
+1. Optimalize images - decrease their amount, use miniatures, svg, css-sprites, preloaders 2.Cache content 3. Reduce amount of http requests  
+
 * If you jumped on a project and they used tabs and you used spaces, what would you do?
 I will adapt (just change settings in my editor).
 * Describe how you would create a simple slideshow page. Bonus points if without JS.  
@@ -758,6 +763,7 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
   ```
   Reference: [Array.prototype.concat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
+
   The word "Ternary" indicates that a Ternary expression takes three operands.
   It's the only JavaScript operator that takes three operands.
   Reference: [Conditional (ternary) Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
@@ -778,6 +784,11 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
   Reference: [Strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
 
 * Create a for loop that iterates up to `100` while outputting **"fizz"** at multiples of `3`, **"buzz"** at multiples of `5` and **"fizzbuzz"** at multiples of `3` and `5`
+
+```javascript
+  for(let i = 1; i <= 100; i += 1) console.log((i % 3 === 0 ? 'fizz' : '') + (i % 5 === 0 ? 'buzz' : ''));
+```
+
 * Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
 
 It is generally a good idea to leave the global scope untouched, because all code share a single global namespace.
@@ -790,7 +801,7 @@ Reference: [Global variables disscusion](http://stackoverflow.com/questions/2613
 
 Callback is a function that is passed to the other function as an argument. Function that gets callback as argument can invoke it in its body. This execution may be immediate as in a synchronous callback, or it might happen at a later time as in an asynchronous callback.
 
-Callback![Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming))
+[Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming))
 
 * Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
 
@@ -947,6 +958,13 @@ Primitive types are passed by value, objects are passed by reference.
 Javascript Types![Javascript Data Types](https://developer.mozilla.org/pl/docs/Web/JavaScript/Data_structures)
 
 * What language constructions do you use for iterating over object properties and array items?
+
+For iterating over object properties I use for... in loop with hasOwnProperty property checking.
+For iterationg over array items I use for loop and methods of Array.prototype, for example .forEach, and .map.
+
+Reference: [hasOwnProperty](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty),
+[Array.prototype](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype)
+
 * Explain the difference between mutable and immutable objects.
   * What is an example of an immutable object in JavaScript?
   * What are the pros and cons of immutability?
@@ -1005,7 +1023,21 @@ A call stack is a queue of functions that are being executed.
 Task queue is a list of messages waiting to be processed. 
 A function is associated with each message. When the stack has enough capacity, a message is taken out of the queue and processed.
 
-* Explain the differences on the usage of `foo` between `function foo() {}` and `var foo = function() {}`
+* Explain the differences on the usage of `foo` between `function foo() {}` and `var foo = function() {}`.
+
+There is a function declaration (first one) and function expression (second one).
+The usage is almost the same, except for one thing. 
+Calling foo before a declaration (first case) the function will be called, because functions are hoisted.
+Calling foo before an expression (second case) will result in throwing error, because, even though, variables are hoisted too, their value is undefined untill the declaration.
+
+```javascript
+foo(); // ok
+boo(); // TypeError: boo is not a function
+
+function foo() {};
+var boo = function () {};
+```
+
 * What is inheritance?
 
 Inheritance (in programming) is a mechanism that allow sharing functionality (and code reuse) beetwen classes and/or objects (in classical inheritance) or between objects (in prototypal inheritance - like in JS). Class that inherits (called subclass) gains acess to all shared behaviors and attributes of parent class (called superclass);
@@ -1237,6 +1269,10 @@ console.log('three');
   http://www.tutorialsteacher.com/angularjs/what-is-angularjs
 * Explain ng-controller directive.
   The ng-controller directive attaches a controller class to the view. This is a key aspect of how angular supports the principles behind the Model-View-Controller design pattern. It also creates a new scope.
+* What is scope hierarchy in AngularJS?
+  The $scope object used by views in AngularJS are organized into a hierarchy. There is a root scope, and the $rootScope can has one or more child scopes. Each controller has its own $scope (which is a child of the $rootScope), so whatever variables you create on $scope within controller, these variables are accessible by the view based on this controller.
+
+  http://www.dotnettricks.com/learn/angularjs/understanding-scope-inheritance-in-angularjs
 
 * What is $rootScope?
   $rootScope refers to an object which is accessible from everywhere of the application. You can think $rootScope as global variable and $scope as local variables.
@@ -1411,6 +1447,183 @@ console.log('three');
   Typically ng-app directives should be placed at the root of an HTML document e.g. <html> or <body> tag, so that it can control the entire DOM hierarchy. However, you can place it in any DOM element.
   The AngularJS framework will only process the DOM elements and its child elements where the ng-app directive is applied.
   
+#### NodeJS questions:
+
+* What is an error-first callback?
+
+  It is a type of callback where the first argument is always an error and other arguments are the result data. The dev can then make sure the function calling the callback executed without troubles by checking whether the error argument is not null.
+
+* How can you avoid callback hells?
+
+  * Keep your code shallow. Don't define callbacks inside callbacks, instead move all callbacks to a single block level and the use them by function name.
+  * Modularize. Split your code into smaller pieces that each only have a single task.
+  * Handle all errors. This is neccessary so a failed function doesn't pass bad or malformed data down the callback chain and possibly cause other functions to throw errors.
+
+  [source](http://callbackhell.com/)
+
+* What are Promises?
+
+  Promises are used for asynchronous computations. A Promise represents a value which may be available now, in the future, or never.
+
+  [source](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+
+* What tools can be used to assure consistent style? Why is it important?
+
+  So called code style linters (jshint, jslint, eslint, etc.) help you keep a consistent style. It is important because it helps you avoid introducing simple bugs at the stage of writing the code. It assures that code formatting is more consistent between members of the team.
+
+* When would you use npm and when yarn?
+
+  I would use yarn when time is of the essence or when offline installation of modules is required.
+
+  [more info](https://yarnpkg.com/lang/en/)
+
+* What's a stub? Name a use case!
+
+  Stubs are functions used in testing to replace other functions.
+
+  Use cases:
+
+  * Replace problematic pieces of code.
+  * Trigger code paths that wouldn't otherwise trigger, such as error handling.
+  * Help test asynchronous code more easily.
+
+  [source](https://semaphoreci.com/community/tutorials/best-practices-for-spies-stubs-and-mocks-in-sinon-js)
+
+* What's a test pyramid? Give an example!
+
+  A testing pyramid consists of 3 parts:
+  * UI tests test the system just like a real live end user would. They mimic the user's interactions in the form.
+  * Integration tests, like UI tests, test various layers of the application, but they don't do it through the UI.
+  * Unit tests are tests developers write to prove to themselves, that the code they are writing works. It enables them to make changes, without fear of breaking everything.
+
+  [source](http://www.agilenutshell.com/episodes/41-testing-pyramid)
+
+* What's your favorite HTTP framework and why?
+
+  There's a lot of them. Some of the more popular include Express, Koa and Meteor. My favorite one is Express, because it's simple, powerful and well-supported.
+
+  [more info](http://nodeframework.com/)
+
+* How can you secure your HTTP cookies against XSS attacks?
+
+  Use HTTPOnly cookie flag, which disables access to the cookie from scripts.
+
+  [more info](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet#Bonus_Rule_.231:_Use_HTTPOnly_cookie_flag)
+
+* How can you make sure your dependencies are safe?
+
+  Use only tested libraries. A good way is to use the most popular ones, as they have a higher chance of errors being detected and fixed by the community. Another way is to freeze a known good version of a library in npm, so it doesn't get updated to an unstable and possibly buggy version, though this requires manual updating in case a newer version contains a bug-fix for the version that's freezed in npm.
+
+* How does Node.js handle child threads?
+
+  Every Node.JS process is single-threaded, therefore to get multiple threads one must use multiple processes. Node.JS provides a `child_process` module that helps with this.
+
+  [more info](https://nodejs.org/api/child_process.html)
+
+* What is the preferred method of resolving unhandled exceptions in Node.js?
+
+  By adding a listener for the `uncaughtException` process-level event:
+
+  ```javascript
+  process.on('uncaughtException', function(err) {
+    // Handle error
+    console.log(err);
+  });
+  ```
+
+* How does Node.js support multi-processor platforms, and does it fully utilize all processor resources?
+
+  Node.JS is a single-threaded application, and as such it will run only on a single core of a system. Node.JS provides a way to create multiple instances in the form of `cluster` module, which aids in fully utilizing system resources.
+
+  [more info](https://nodejs.org/api/cluster.html)
+
+* What is typically the first argument passed to a Node.js callback handler?
+
+  First argument in a callback is usually an error object if the function failed, or null if the function succeeded.
+
+* Consider the following JavaScript code:
+```javascript
+console.log("first");
+setTimeout(function() {
+    console.log("second");
+}, 0);
+console.log("third");
+```
+
+  The output will be:
+  ```
+  first
+  third
+  second
+  ```
+
+  Assuming that this is the desired behavior, and that we are using Node.js version 0.10 or higher, how else might we write this code?
+
+  Answer:
+
+  Instead of using `setTimeout`, we can use `setImmediate` (behind all I/O events) or `process.nextTick` (ahead all I/O events)
+
+* What is Event Loop?
+
+  The event loop allows Node.JS to offload operations to system kernel, which in turn allows Node to handle multiple background operations at the same time. When the operation completes, the kernel tells Node.JS so that it can add appropriate callbacks to the poll queue.
+
+  [more info](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/)
+
+* What is the purpose of Buffer object in Node?
+
+  Buffers allow devs to manipulate and temporarily store binary data, as well to act as buffers for streams.
+
+  [more info](https://nodejs.org/api/buffer.html)
+
+* Which types of streams are present in Node?
+
+  * writable
+  * readable
+  * duplex - implements both writable and readable streams.
+  * transform - similar to duplex, but also allows transformation of passing data.
+  * passthrough - similar to duplex, but the writable and readable parts are connected, everything that comes in on the writable side will come out unchanged on the readable side.
+
+  [source](https://nodejs.org/api/stream.html)
+
+* Name some of the events fired by streams in Node
+
+  error, close, end, finish, data, pipe, unpipe, readable
+
+  [source](https://nodejs.org/api/stream.html)
+
+* What is Chaining in Node?
+
+  Chaining methods allows devs to use the result of a function call without assigning it to a variable first, for example:
+
+  ```javascript
+  const result =
+    [1,2,3,4,5]
+      .filter(val => val > 1)
+      .map(val => val * val)
+      .reduce((a, b) => a + b);
+
+  console.log(result); // 55
+  ```
+
+* What is the purpose of process object?
+
+  Process object is a global object that gives information about the underlying Node.JS process, such as: arguments passed to the process, environmental variables, memory usage etc.
+
+  [more info](https://nodejs.org/api/process.html)
+
+* What is MVC?
+  MVC is a software architecture - the structure of the system - that separates domain/application/business logic from the rest of the user interface. It does this by separating the application into three parts: the model, the view, and the controller.
+
+  The model manages fundamental behaviors and data of the application. It can respond to requests for information, respond to instructions to change the state of its information etc. This could be a database, or any number of data structures or storage systems. In short, it is the data and data-management of the application.
+
+  The view effectively provides the user interface element of the application. It'll render data from the model into a form that is suitable for the user interface.
+
+  The controller receives user input and makes calls to model objects and the view to perform appropriate actions.
+
+  All in all, these three components work together to create the three basic components of MVC.
+
+  http://softwareengineering.stackexchange.com/questions/127624/what-is-mvc-really
+
 #### Fun Questions:
 
 * What's a cool project that you've recently worked on?
@@ -1535,3 +1748,6 @@ setState![setState](https://facebook.github.io/react/docs/react-component.html#s
 This document started in 2009 as a collaboration of [@paul_irish](https://twitter.com/paul_irish) [@bentruyman](https://twitter.com/bentruyman) [@cowboy](https://twitter.com/cowboy) [@ajpiano](https://twitter.com/ajpiano)  [@SlexAxton](https://twitter.com/slexaxton) [@boazsender](https://twitter.com/boazsender) [@miketaylr](https://twitter.com/miketaylr) [@vladikoff](https://twitter.com/vladikoff) [@gf3](https://twitter.com/gf3) [@jon_neal](https://twitter.com/jon_neal) [@sambreed](https://twitter.com/sambreed) and [@iansym](https://twitter.com/iansym).
 
 It has since received contributions from over [100 developers](https://github.com/h5bp/Front-end-Developer-Interview-Questions/graphs/contributors).
+
+* How would you specify that a scope variable should have one-time binding only?
+By using “::” in front of it.
