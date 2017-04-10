@@ -1825,3 +1825,9 @@ https://docs.angularjs.org/guide/directive
 * What should be the maximum number of concurrent “watches”? Bonus: How would you keep an eye on that number?  
 To reduce memory consumption and improve performance it is a good idea to limit the number of watches on a page to 2,000. A utility called ng-stats can help track your watch count and digest cycles.  
 https://github.com/kentcdodds/ng-stats  
+
+* How do you share data between controllers?  
+Create an AngularJS service that will hold the data and inject it inside of the controllers. Using a service is the cleanest, fastest and easiest way to test. However, there are couple of other ways to implement data sharing between controllers, like: using events, usng $parent, nextSibling, controllerAs, etc. to directly access the controllers, using the $rootScope to add the data on (not a good practice).  
+The methods above are all correct, but are not the most efficient and easy to test.  
+https://daveceddia.com/sharing-data-between-controllers-best-practice-use-a-service/  
+http://stackoverflow.com/a/21920241 
