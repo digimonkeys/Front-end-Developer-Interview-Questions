@@ -1821,3 +1821,7 @@ It has since received contributions from over [100 developers](https://github.co
 * Is AngularJS extensible?  
 Yes, in Angular we can create custom directive to extend AngularJS existing functionalities.  
 https://docs.angularjs.org/guide/directive  
+
+* What should be the maximum number of concurrent “watches”? Bonus: How would you keep an eye on that number?  
+To reduce memory consumption and improve performance it is a good idea to limit the number of watches on a page to 2,000. A utility called ng-stats can help track your watch count and digest cycles.  
+https://github.com/kentcdodds/ng-stats  

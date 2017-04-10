@@ -1854,3 +1854,7 @@ Nic. setState może także przyjmować funkcję jako pierwszy argument. Funkcja 
 * Is AngularJS extensible?  
 Yes, in Angular we can create custom directive to extend AngularJS existing functionalities.  
 https://docs.angularjs.org/guide/directive 
+
+* Jaka powinna być maksymalna liczba zarejestrowanych „watchów”? Bonus: jak kontrolowałbyś ich ilość?
+Aby zmniejszyć zużycie pamięci i polepszyć wydajność dobrze jest nie przekraczać 2000 watchów. Liczbę można kontrolować za pomocą modułu npm ng-stats.  
+https://github.com/kentcdodds/ng-stats 
