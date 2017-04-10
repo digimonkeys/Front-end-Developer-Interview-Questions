@@ -513,6 +513,14 @@ Drugi parametr Object.create pozwala na dodanie właściwości do nowo powstałe
 Object.create![Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
 
 * Wyjaśnij pojęcie "hoisting".
+    Hoisting jest to windowanie zmiennych z przypisaną wartością oraz funkcji
+    na samą górę (do globalnego zasięgu lub do zasięgu funkcji).
+    Co pozwala na ich użycie zanim zostaną zadeklarowane.
+    x = 5; // przypisanie 5 to x
+    elem = document.getElementById("demo"); // znalezienie elementu
+    elem.innerHTML = x; // wyświetlanie x wewnątrz elementu
+    var x; // deklaracja x
+
 * Zasieg zmiennych w jsie?
 
  W JS, do wersji ES6 występowały tylko dwa rodzaje zasięgu zmiennych, tj. globalny (global scope) i zasięg lokalny - w obrębie funkcji (function scope).

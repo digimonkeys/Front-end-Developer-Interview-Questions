@@ -666,6 +666,14 @@ Difference new vs Object.create![Difference new vs Object.create](http://stackov
     - Embedded JS
 
 * Explain "hoisting".
+    Hoisting is the lifting of variables with assigned value and functions
+    up to the very top (to global reach or function coverage).
+    Which allows them to be used before they are declared.
+    x = 5; // Assign 5 to x
+    elem = document.getElementById("demo"); // Find an element
+    elem.innerHTML = x; // Display x in the element
+    var x; // Declare x
+
 * Describe event bubbling.
     Bubbling is an event passing up of the DOM tree.
     When an event occurs in an element inside another element,
