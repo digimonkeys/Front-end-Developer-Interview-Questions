@@ -80,7 +80,9 @@ http://webmasters.stackexchange.com/a/25091
 * Ile zasobów pobiera przeglądarka z danej domeny w jednej chwili?  
 Starsze przeglądarki jak IE6 - 2, nowsze 6 / 8.  
 
-* Podaj 3 sposoby na zmniejszenie czasu ładowania strony. (postrzeganego lub rzeczywistego czasu ładowania)
+* Podaj 3 sposoby na zmniejszenie czasu ładowania strony. (postrzeganego lub rzeczywistego czasu ładowania)  
+1. Optymalizacja zdjęć - ograniczenie ilości, używanie miniatur, css sprites, svg, preloaderów obrazków 2. Cachowanie contentu 3. Używanie mniejszej ilości requestów http
+
 * Jeśli dołączasz do projektu, w którym używa się tabulacji, a ty używasz spacji, co wtedy zrobisz?
   * Sugerowanie użycia narzędzi w stylu EditorConfig (http://editorconfig.org)
   * Zgodnie z konwencjami (pozostań konsekwentny)

@@ -77,7 +77,12 @@ http://webmasters.stackexchange.com/a/25091
 * How many resources will a browser download from a given domain at a time? 
 It depends on a browser, older ones like IE6 - 2, newer ones 6-8.  
 
-* Name 3 ways to decrease page load (perceived or actual load time).
+* How would you optimize a website's assets/resources?
+* How many resources will a browser download from a given domain at a time?
+  * What are the exceptions?
+* Name 3 ways to decrease page load (perceived or actual load time).  
+1. Optimalize images - decrease their amount, use miniatures, svg, css-sprites, preloaders 2.Cache content 3. Reduce amount of http requests  
+
 * If you jumped on a project and they used tabs and you used spaces, what would you do?
 I will adapt (just change settings in my editor).
 * Describe how you would create a simple slideshow page. Bonus points if without JS.  
