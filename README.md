@@ -286,14 +286,16 @@ No, but I'm familiar with Jade, EJS, HandlebarsJs, Underscore Templates, Mustach
 
   https://css-tricks.com/css-sprites/
 * What are your favourite image replacement techniques and which do you use when?
-  CSS image replacement is a technique of replacing a text element (usually a header tag) with an image. You may want to use a <h1> tag and text for this for the accessibility and SEO benefits.
+  CSS image replacement is a technique of replacing a text element (usually a header tag) with an image. You may want to use a `<h1>` tag and text for this for the accessibility and SEO benefits.
   I use image replacements (depending on the needs), when I want to make my page more accessible for devices like readers etc. Usually I use display none span in header.
 
   #1: Display none span in header
+  ```html
   <h1 id="logo">
     <span>CSS-Tricks</span>
   </h1>
-
+  ```
+  ```css
   h1#logo {
     width: 250px;
     height: 25px;
@@ -302,24 +304,28 @@ No, but I'm familiar with Jade, EJS, HandlebarsJs, Underscore Templates, Mustach
   h1#logo span {
     display: none;
   }
-
+  ```
   #2: Text-indent out of sight
+  ```html
   <h1 id="logo">
     CSS-Tricks
   </h1>
-
+  ```
+  ```css
   h1#logo {
     width: 300px;
     height: 75px;
     background: url(test.png);
     text-indent: -9999px;
   }
-
+  ```
   #3: Invisible Text
+  ```html
   <h3 class="leon">
     <span>CSS-Tricks</span>
   </h3>
-
+  ```
+  ```css
   h3.leon {
     width: 300px;
     height: 75px;
@@ -331,7 +337,7 @@ No, but I'm familiar with Jade, EJS, HandlebarsJs, Underscore Templates, Mustach
     height: 0;
     overflow: hidden;
   }
-
+  ```
   https://css-tricks.com/css-image-replacement/
 * How would you approach fixing browser-specific styling issues?
   - use separate stylesheets that loads when that specific browser is being used.
