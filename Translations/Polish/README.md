@@ -1891,6 +1891,28 @@ Nic. setState może także przyjmować funkcję jako pierwszy argument. Funkcja 
 
 setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
 
+* Jak stworzyć serwis Angulara, który zwróci Promise? Napisz przykładowy kod
+Należy wstrzyknąć $q do promisów i użyć go w ten sposób:
+
+```
+angular.factory('testService', function($q){
+ return {
+  getName: function(){
+   var deferred = $q.defer();
+
+   //API call here that returns data
+   testAPI.getName().then(function(name){
+    deferred.resolve(name)
+   })
+
+   return deferred.promise;
+  }
+ }
+})
+```
+
+https://docs.angularjs.org/api/ng/service/$q  
+
 * Gdy tworzysz dyrektywę można ją zastosować na kilka sposobów w widokach. Jakie sposoby znasz? Jak definiujesz sposoby, w jakie dyrektywa będzie użyta?
 Dyrektywy mogą być wykorzystane jako elementy, atrybuty lub klasy, ewentualnie komentarze. Aby zdefiniować sposób ich użycia, należy użyć opcji restrict:
 ‘A’ – dyrektywa używana jako atrybut  

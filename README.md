@@ -1861,6 +1861,28 @@ So, when do you need to call $apply()? Very rarely, actually. AngularJS actually
 You do need to use it if you are going to run code in a new turn. And only if that turn isn’t being created from a method in the AngularJS library. Inside that new turn, you should wrap your code in $scope.$apply(). Here is an example. We are using setTimeout, which will execute a function in a new turn after a delay. Since Angular doesn’t know about that new turn, the update will not be reflected.  
 http://jimhoskins.com/2012/12/17/angularjs-and-apply.html  
 
+* How would you make an Angular service return a promise? Write a code snippet as an example  
+To add promise functionality to a service, we inject the “$q” dependency in the service, and then use it like so:
+
+```
+angular.factory('testService', function($q){
+ return {
+  getName: function(){
+   var deferred = $q.defer();
+
+   //API call here that returns data
+   testAPI.getName().then(function(name){
+    deferred.resolve(name)
+   })
+
+   return deferred.promise;
+  }
+ }
+})
+```
+
+https://docs.angularjs.org/api/ng/service/$q  
+
 * When creating a directive, it can be used in several different ways in the view. Which ways for using a directive do you know? How do you define the way your directive will be used?  
 When you create a directive, it can be used as an attribute, element or class name. To define which way to use, you need to set the restrict option in your directive declaration.  
 The restrict option is typically set to:  
