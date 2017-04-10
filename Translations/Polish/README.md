@@ -1652,6 +1652,19 @@ console.log("third");
 
   [więcej info](https://nodejs.org/api/process.html)
 
+* Czym jest MVC?
+  MVC jest architekturą oprogramowania - strukturą systemu - który oddziela domenę/aplikację/logikę biznesową od reszty interfejsu użytkownika. Robi to poprzez podzielenie aplikacji na trzy części, warstwę modelu, warstwę widoku i warstwę kontrolera.
+
+  Warstwa modelu zarządza fundamentalnym zachowaniem i danymi w aplikacji. Może odpowiadać na żądania dla informacji, odpowiadać na instrukcje zmiany stanu tych informacji itp. To może być baza danych lub każda liczba struktur danych lub systemów magazynów. Po krótce, są to dane i możliwość zarządzania nimi w aplikacji.
+
+  Warstwa widoku zapewnia interfejs użytkownika aplikacji. Renderuje dane z warstwy modelu w odpowiednie miejsca dla interfejsu użytkownika.
+
+  Warstwa kontrolera odbiera dane wejściowe użytkownika i mówi obiektom warstwy modelu, i widoku by wykonały odpowiednie akcje.
+
+  Wszystkie te trzy komponenty pracują razem tworząc razem MVC.
+
+  http://softwareengineering.stackexchange.com/questions/127624/what-is-mvc-really
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
