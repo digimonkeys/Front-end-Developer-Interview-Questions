@@ -618,7 +618,19 @@ Mówimy wyrażenie trójkowe, ponieważ przyjmuje trzy operandy (operand - argum
 Jako ciekawostke można dodać, że jest to jedyny operator w JavaScripcie, który przyjmuje trzy operandy.
 Odniesienie: [Conditional (ternary) Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
+* Napisz pętlę for, która przeiteruje do `100` i wyświetli **"fizz"**, gdy liczba jest podzielna przez `3`, **"buzz"**, gdy liczba jest podzielna przez `5` oraz **"fizzbuzz"**, gdy liczba jest podzielna przez `3` i `5`
+
+```javascript
+  for(let i = 1; i <= 100; i += 1) console.log((i % 3 === 0 ? 'fizz' : '') + (i % 5 === 0 ? 'buzz' : ''));
+```
+
 * Czym jest `arity` funkcji?
+* Co to jest `callback`?
+
+Callback to funkcja, ktora przekazujemy do innej funkcji jako argument. Funkcja, która otrzymuje callback jako argument może go wywołac w swoim ciele. To wykonanie może być natychmiastowe w synchronicznym wywołaniu zwrotnym lub może zostać wykonane po czasie w sposób asynchroniczny. 
+
+[Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming))
+
 * Czemu, na ogół, dobrym pomysłem jest nie ruszanie globalnej przestrzeni strony?
 
 Generalnie nie deklarowanie zmiennych globalnych jest zalecane, ponieważ cały kod posiada jedną przestrzen nazw.
@@ -628,6 +640,20 @@ Najlepszym rozwiązaniem, aby uniknąć zanieczyszczania globalnej przestrzeni j
 Odniesienie: [Global variables disscusion](http://stackoverflow.com/questions/2613310/ive-heard-global-variables-are-bad-what-alternative-solution-should-i-use)
 
 * Co oznacza `"use strict";`? Jakie są zalety i wady takiego rozwiązania?
+
+  "use strict" włącza bardziej restrykcyjną wersje JavaScriptu.
+  Kod jest inaczej odczytywany przez silnik w niektórych przypadkach.
+
+  Zalety:
+    - Eliminuje niektóre ciche błędy, a zamiast nich wyrzuca błąd.
+    - Naprawia niektóre pomyłki, które sprawiają, że JavaScriptowe silniki mają trudność z optymalizacją kodu (wersja kodu w strict mode może być szybsza niż normalna).
+    - Rezerwuje składnię, która prawdopodobnie będzie użyta w przyszłych wersjach ECMAScript.
+
+  Wady:
+    - Przeglądarki, które nie wspierają strict mode'u będą wykonywać kod zgodnie z normalnymi standardami.
+  
+  Odniesienie: [Strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+
 * Czym rozni sie dziedziczenie w jsie od klasycznego dziedziczenia?
  
  Podmiotem dziedziczenia klasycznego, są klasy natomiast w js dziedziczenie (zwane prototypowym) odbywa się bezpośrednio na obiektach.
@@ -641,11 +667,70 @@ Classical vs Prototypal![Stackoverflow - classical vs prototypal](http://softwar
 Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
 Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
 
+* Po co uzyłbyś czegoś takiego jak zdarzenie `load`? Czy posiada ono jakieś wady? Czy znasz jakieś alternatywy, i jeżeli tak to czemu użyłbyś ich?
+
+Zdarzenie `load` jest wywolane, gdy strona została w całości załadowana.
+Jedną z wad jest to, że zdarzenie `load` czeka na całą zawartość strony - nawet arkusze stylów i obrazki.
+Najbardziej polecaną alternatywą jest zdarzenie `DOMContentLoaded`, które zostaje wywołane, gdy podstawowy HTML dokumnetu został kompletnie załadowany i sparsowany.
+
+Odniesienia: [Load](https://developer.mozilla.org/en-US/docs/Web/Events/load), [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded)
+
+* Wytlumacz czym jest single-page application i jak można sprawić, by była ona bardziej przyjazna dla SEO.
+
+Single-page application (SPA) to aplikacja internetowa lub strona, która mieści się na jednej stronie internetowej w celu dostarczenia jak najlepszych doznan, porównywalnych do tych odczuwalnych w desktopowych aplikacjach. W SPA, albo cały kod - HTML, JavaScript i CSS - jest pobierany przy załadowaniu strony, albo jest dynamicznie doładowywany i dodawany do strony w razie zapotrzebowania. Single-page application nigdy nie się nie przeładowywuje w trakcie używania, chociaż `location hash` i `HTML5 History API` może zostać użyte, aby wprowadzić uczucie nawigacji po osobnych stronach w aplikacji.
+Stronę można uczynić przyjazną dla SEO poprzez server-side rendering i używanie semantycznych znaczników HTML5.
+
+[Single-page application](https://en.wikipedia.org/wiki/Single-page_application)
+
+* Wytlumacz różnicę pomiędzy zmiennymi i niezmiennymi obiektami.
+  * Jaki jest przykład niezmienialnego obiektu w JavaScripcie?
+  * Jakie są wady i zalety niezmienności?
+  * Jak możesz osiągnąć niezmienność w Twoim kodzie?
+
+Zmienny obiekt może zostać zmieniony.
+Niezmienny obiekt nie może zostać zmieniony. Przy każdej zmianie zostaje zwrócony nowy obiekt.
+
+Zalety:
+ - Mniej skomplikowany w użyciu.
+ - Operacje mogą być łączone.
+ - Może być łatwo skopiowany.
+ - Nigdy nie zmienia swojego stanu.
+ - Łatwo można go przekazywać.
+ - Łatwe debugowanie.
+
+Wady:
+  - Większe zużycie pamięci.
+  - Ciężki do zbudowania.
+
+Można osiągnąć niezmienność obiektu poprzez użycie Object.freeze lub Object.seal.
+Można również użyć bibliotek np. Immutable.js.
+
+Odniesienie: [Dyskusja na Quora](https://www.quora.com/What-are-the-advantages-and-disadvantages-of-immutable-data-structures),
+[Dyskusja na Stackoverflow](http://stackoverflow.com/questions/1863515/pros-cons-of-immutability-vs-mutability)
+
+* Jakie sa wady i zalety używania obietnic zamiast callbacków?
+
+Zalety:
+  - Unikanie "callback hell".
+  - Wieksze mozliwosci.
+  - Bogaty interfejs.
+  - Obsługa błędów.
+
+Wady:
+  - Środowisko musi wspierać obietnice.
+  - Kod jest bardziej skomplikowany.
+
+* Jak bardzo jesteś zaznajomiony z `Promises` i/czy ich polyfillami?
+
+Używam `Promises` od pewnego czasu, prawdopodobnie coś około połowy roku.
+Dzięki `Promises` mój asynchroniczny kod wygląda o wiele lepiej i przestałem utykać w tzw. "callback hell".
+Jedyny polyfill, który znam to `Bluebird`.
+
 * Czym jest dziedziczenie?
  
 Dziedziczenie jest mechanizmem współdzielenia funkcjonalności między klasami i/lub obiektami (w rozumieniu klasycznym) lub obiektami (w dziedziczeniu prototypowym - jak w js). Klasa dziedzicząca (zwana klasą pochodną) otrzymuje dostęp do udostępnionych zachowń oraz atrybutów od klasy, z której następuje dziedziczenie (zwanej klasą bazową).
  
-Dziedziczenie![Wikipedia - dziedziczenie](https://pl.wikipedia.org/wiki/Dziedziczenie_(programowanie)) 
+Dziedziczenie![Wikipedia - dziedziczenie](https://pl.wikipedia.org/wiki/Dziedziczenie_(programowanie))
 
 * Czym jest obietnica (`Promise`)?
 
@@ -660,6 +745,17 @@ Oczekująca obietnica może być spełniona z jakąś wartością lub odrzucona 
 
 [Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
+* Jakich narzędzi i technik używasz do debugowania kodu JavaScript?
+
+Używam DevTools z Chrome.
+Używam następujących technik:
+  - Przerywanie wykonywania kodu przy zmianie wybranego elementu DOM.
+  - Breakpointy przy wysyłaniu żądan.
+  - Przerywanie wykonywania kodu przy wyjątku.
+  - Sprawdzanie optymalizacji kodu przy pomocy Audits (zakładka w DevTools).
+
+Odniesienie: [Wskazówki](http://www.zsoltnagy.eu/javascript-debugging-tips-and-tricks/)
+
 * Zasieg zmiennych w JavaScript?
 
 W JavaScripcie, przed wersją ES6, były tylko dwa zakresy zmiennych. Zakres globalny oraz lokalny - funkcja.
@@ -669,6 +765,14 @@ W ES6 jest jeszcze jeden zakres - zasięg blokowy, który dotyczy zmiennych zade
 [let](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Statements/let)
 [const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
 [inne](http://stackoverflow.com/a/500459)
+
+* Jakich konstrukcji językowych używasz do iterowania po obiekcie i tablicy? 
+
+Do iterowania po obiekcie używam pętli for...in z sprawdzaniem właściwości za pomocą hasOwnProperty.
+Do iterowania po tablicy używam pętli for i metod Array.prototype, takich jak .forEach lub .map.
+
+Odniesienie: [hasOwnProperty](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty),
+[Array.prototype](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype)
 
 * Wytłumacz różnice pomiędzy synchronicznymi i asynchronicznymi funkcjami.
 
@@ -1213,6 +1317,38 @@ console.log('three');
   http://www.tutorialsteacher.com/angularjs/what-is-angularjs
 * Wyjaśnij dyrektywę ng-controller.
   Dyrektywa ng-controller dołącza klasę kontrolera do widoku. Jest to kluczowy aspekt tego, jak Angular wspiera MVC. Ng-controller tworzy również nowy zakres.
+
+* Czym jest $rootScope?
+  $rootScope odnosi się do obiektu, który jest dostępny z każdego miejsca w aplikacji. Możesz myśleć o $rootScope jako globalnej zmiennej oraz $scope jako lokalnej.
+
+* Jakie jest zastosowanie $routeProvider w AngularJS?
+  $routeProvider jest używany do konfigurowania routów w aplikacji.
+
+  https://docs.angularjs.org/api/ngRoute/provider/$routeProvider
+
+* Wyjaśnij dyrektywę ng-include.
+  Jest to sposób na pobranie, kompilację i dołączenie szablonu/fragmentu html z innych plików.
+
+* Jak pobierać dane używając AJAX w AngularJS?
+  Do pobierania danych używając AJAX można użyć serwisów $http oraz $https
+  ```
+  $http({
+    method: 'GET',
+    url: '/someUrl'
+  }).then(function successCallback(response) {
+    // this callback will be called asynchronously
+    // when the response is available
+  }, function errorCallback(response) {
+    // called asynchronously if an error occurs
+    // or server returns response with an error status.
+  });
+  ```
+
+* Jak weryfikować dane w AngularJS?
+  Możesz użyć przepływu danych w dwie strony (data binding, ng-model) by weryfikować dane. Weryfikacja dzieje się w warstwie modelu, gdzie masz dużo opcji do weryfikacji danych używając JavaScriptu i jego metod.
+
+  AngularJS zapewnia podstawową implementację większości typów danych wejściowych HTML5 (text, number, url, emial, date, radio, checkbox) oraz parę dyrektyw dla weryfikacji danych (required, pattern, minlength, maxlength, min, max).
+
 * Jakie są podstawowe kroki do jednostkowego przetestowania filtra w AngularJS?
   1. Wstrzyknąć '$filter'
   2. Wywołać to w ten sposób: '$filter(nazwaFiltra)(daneWejsciowe, opcje)'
@@ -1336,6 +1472,185 @@ console.log('three');
     Jeśli jest więcej niż 2000 obserwatorów, mogą wystąpić duże opóźnienia dla interfejsu użytkownika. To oznacza, że możliwa złożoność formularzy Angular jest limitowana. Może to wystąpić w listach i dużych sieciach danych.
   Konflikty nazw
     W AngularJS nie ma możliwości tworzenia paru ng-app (aplikacji) na tej samej stronie. Może to spowodować konflikty nazw.
+
+* Jakie są główne dyrektywy w AngularJS?
+  - ng-app − Ta dyrektywa definiuje i linkuje aplikację w HTML
+  - ng-model − Ta dyrektywa wiąże wartości danych z aplikacji z HTML'owymi kontrolerami danych wejściowych 
+  - ng-bind − Ta dyrektywa wiąże dane aplikacji z tagami HTML
+
+* Wyjaśnij dyrektywę ng-model
+  Dyrektywa ng-model jest używana do przepływu danych w dwie strony (two-way data binding). Wiąże elementy <input>, <select> lub <textarea> do określonych wartości na obiekcie #scope. Wartości tych elementów będą wartościami właściwości i vice-versa.
+
+* Wyjaśnij dyrektywę ng-bind.
+  Dyrektywa ng-bind łączy właściwość warstwy modelu zadeklarowaną w $scope, dyrektywie ng-model lub rezultat wyrażenia z elementem HTML. Uaktualnia również element, jeśli wartość wyrażenia się zmieniła.
+
+* Wyjaśnij dyrektywę ng-app w AngularJS.
+  Dyrektywa ng-app jest punktem startującym aplikację AngularJS. Inicjalizuje framework automatycznie. AngularJS najpierw szuka dyrektywy ng-app w dokumencie HTML po załadowaniu całego dokumentu. Jeśli znajdzie ng-app, ładuje sam siebie i kompiluje szablon HTML.
+  Dyrektywa ng-app powinna znajdować się w głównych tagach dokumentu HTML, np. <html> lub <body>, pozwala to kontrolować całą wewnętrzną hierarchię DOM. Jednakże, możesz umieścić ng-app w każdym elemencie DOM.
+  AngularJS będzie przetwarzał tylko ten element DOM oraz wszystkie jego dzieci.
+
+### Pytania z NodeJS:
+
+* Co to jest error-first callback?
+
+  Error-first callback jest typem callbacka gdzie pierwszym argumentem jest zawsze error, a resztą argumentów jest rezultat funkcji wywołującej ten callback. Deweloper może wtedy upewnić się że ta funkcja wykonała się pomyślnie sprawdzając czy pierwszy argument jest null, co oznacza że nie wystąpił żaden błąd.
+
+* Jak można uniknąć callback hell?
+
+  * Utrzymuj swój kod płytkim. Nie definiuj callbacków w środku innych callbacków, zamiast tego przenieś je do jednego block-u i używaj ich po nazwie funkcji.
+  * Modularyzuj. Podziel swój kod na mniejsze części, aby każda z nich miała do wykonania jedno zadanie.
+  * Obsługuj wszystkie błędy. Jest to ważne aby funkcja w której wystąpił błąd nie przekazała złych lub zniekształconych danych w dół chain'a callbacków, co może prowadzić do wystąpienia błędów w innych funkcjach.
+
+  [źródło](http://callbackhell.com/)
+
+* Co to są Promisy?
+
+  Promisy są używane do asynchronicznego przetwarzania danych. Promise przedstawia wartość która może być dostępna teraz, w przyszłości lub nigdy.
+
+  [źródło](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+  
+* Jakich narzędzi można użyć aby utrzymać spójny styl kodu? Dlaczego jest to ważne?
+
+  Tak zwane code-style lintery (jshint, jslint, eslint, etc.) pomagają w utrzymaniu spójnego stylu. Jest to ważne ponieważ pozwala na eliminacje prostych błędów już podczas pisania kodu. Zapewnia jednakowe, konsekwentne formatowanie kodu dla wszystkich członków zespołu. 
+
+* Kiedy użyłbyś npm a kiedy yarn?
+
+  Użyłbym yarn gdy czas wykonania jest najważniejszy, lub gdy ważna jest instalacja offline.
+
+  [więcej info](https://yarnpkg.com/lang/en/)
+
+* Co to są stub-y? Wymień przykład użycia!
+
+  Stub-y są funkcjami które mogą zastępować inne funkcje podczas testowania.
+
+  Pozwalają one na:
+  * Podmienianie problematycznych kawałków kodu.
+  * Wywoływanie ścieżek kodu które w inny sposób nie zostałyby wywołane, np. obsługa błędów.
+  * Pomaga prościej testowa asynchroniczny kod.
+
+  [źródło](https://semaphoreci.com/community/tutorials/best-practices-for-spies-stubs-and-mocks-in-sinon-js)
+
+* Co to jest piramida testów? Podaj przykład!
+
+  Piramida testów składa się z 3 części:
+  * Testy UI testują system tak jak by to robił użytkownik w prawdziwym świecie. Imitują one jego interakcję z elementami interfejsu.
+  * Testy integracyjne, podobnie jak testy UI, sprawdzają różne warstwy aplikacji, ale w przeciwieństwie do UI nie robią tego korzystając z interfejsu wizualnego.
+  * Testy jednostkowe pozwalają deweloperom na sprawdzenie czy ich kod działa tak jak zakładali. Pozwala im na wprowadzanie zmian bez strachu przed wprowadzeniem błędów.
+
+  [źródło](http://www.agilenutshell.com/episodes/41-testing-pyramid)
+
+* Jaki jest twój ulubiony HTTP framework i dlaczego?
+
+  Jest ich wiele, niektóre z popularniejszych to m.in.: Express, Koa i Meteor. Moim ulubionym jest Express, ponieważ jest szybki, ma wszystkie potrzebne mi funkcje, oraz ma dobre wsparcie.
+
+  [więcej info](http://nodeframework.com/)
+
+* Jak można zabezpieczyć ciasteczka przed atakami XSS?
+
+  Można użyć flagi ciasteczka HTTPOnly, która blokuje dostęp do ciasteczka z poziomu skryptów.
+
+  [więcej info](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet#Bonus_Rule_.231:_Use_HTTPOnly_cookie_flag)
+
+* Jak możesz upewnić się że zależności twojej aplikacji są bezpieczne?
+
+  Powinno się używać tylko sprawdzonych bibliotek. Dobry sposóbem jest używanie tych najpopularniejszych, ponieważ mają one większą szansę na dostrzeżenie i poprawę błędów przez społeczność. Innym sposobem jest zamrożenie w npm wersji którą wiemy że jest dobra, przez co nie będzie ona zaktualizowana do nowszej wersji która może być niestabilna lub zawierać błędy, jednak wymaga to ręcznej aktualizacji w przypadku gdy ta nowsza wersja zawiera fix-y dla błędów zawartych w wersji zamrożonej w npm.
+
+* Jak Node.JS obsługuje child thready?
+
+  Każdy proces Node.JS jest jednowątkowy, a więc aby wykorzystać wiele wątków trzeba użyć do tego wielu procesów. Node.JS pomaga w tym udostępniając moduł `child_process`.
+
+  [więcej info](https://nodejs.org/api/child_process.html)
+
+* Jaka jest preferowana metoda obsługi unhandlaed exceptions w Node.JS?
+
+  Dodanie listener'a event-u procesu `uncaughtException`:
+
+  ```javascript
+  process.on('uncaughtException', function(err) {
+    // Handle error
+    console.log(err);
+  });
+  ```
+
+* W jaki sposób Node.JS wspiera platformy wieloprocesorowe, i czy jest w stanie w pełni wykorzystac zasoby wszystkich procesorów?
+
+  Jako że Node.JS jest aplikacją jednowątkową, będzie ona działać tylko na jednym rdzeniu procesora. Node.JS udostępnia jednak moduł `cluster`, który wspomaga w wielokrotnym instancjonowaniu aplikacji, które pozwala na użycie wszystkich zasobów komputera.
+
+  [więcej info](https://nodejs.org/api/cluster.html)
+
+* Co typowo jest pierwszym argumentem podanym do callback-a?
+
+  Pierwszym argumentem w callback-ach typowo jest obiekt error, jeśli wystąpił błąd w funkcji wywołującej callback, lub null, jeśli ta funkcja wykonała się pomyślnie.
+
+* Spójrz na poniższy kod:
+```javascript
+console.log("first");
+setTimeout(function() {
+    console.log("second");
+}, 0);
+console.log("third");
+```
+
+  Jego wynik to:
+  ```
+  first
+  third
+  second
+  ```
+
+  Zakładając że takie działanie jest pożądane, oraz że używamy Node.JS w wersji 0.10 albo wyższej, jak inaczej moglibyśmy napisać ten kod?
+
+  Odpowiedź:
+
+  Zamiast `setTimeout` możemy użyc `setImmediate` (ustawia funkcje za eventami I/O) lub `process.nextTick` (ustawia funkcje przed eventami I/O)
+
+* Co to jest Event Loop?
+
+  Event Loop pozwala Node.JS na przekazanie operacji do kernela systemu, co z kolei pozwala na obsługę wielu operacji w tle jednocześnie. Kiedy taka operacja się zakończy, kernel daje o tym znać Node, które dodaje odpowiednie callbacki do kolejki wywołań.
+
+  [więcej info](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/)
+
+* Jakie zadanie ma obiekt Buffer w Node.JS?
+
+  Bufory pozwalają deweloperom na manipulacje i tymczasowe przechowywanie danych binarny, a także pełni funkcje bufora dla streamów.
+
+  [więcej info](https://nodejs.org/api/buffer.html)
+
+* Jakie są typy Streamów w Node.JS?
+
+  * writable
+  * readable
+  * duplex - implementuje streamy writable i readable naraz.
+  * transform - podobny do duplex, ale pozwala na transformację danych przechodzących przez stream.
+  * passthrough - podobny do duplex, ale oba streamy są połączone ze sobą, wszystkie dane które wejdą do streama writable, wyjdą w streamie readable w niezmienionej postaci.
+
+  [źródło](https://nodejs.org/api/stream.html)
+
+* Wymień niektóre z eventów emitowanych przez Streamy w Node.JS.
+
+  error, close, end, finish, data, pipe, unpipe, readable
+
+  [źródło](https://nodejs.org/api/stream.html)
+
+* Co to jest chainowanie w Node.JS?
+
+  Chainowanie metod pozwala deweloperom na użycie wyniku funkcji bez uprzedniego przypisania tego wyniku do zmiennej, na przykład:
+
+  ```javascript
+  const result =
+    [1,2,3,4,5]
+      .filter(val => val > 1)
+      .map(val => val * val)
+      .reduce((a, b) => a + b);
+
+  console.log(result); // 55
+  ```
+
+* Jakie zadanie ma obiekt `process` w Node.JS?
+
+  Obiekt `process` jest globalnym obiektem który daje informacje na temat bazowego procesu Node.JS, np.: argumenty przekazane do procesu, zmienne środowiskowe, użycie pamięci itp.
+
+  [więcej info](https://nodejs.org/api/process.html)
 
 ### Pytania dodatkowe (zabawne):
 
