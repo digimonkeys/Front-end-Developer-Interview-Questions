@@ -603,7 +603,7 @@ Object.create builds an object that inherits directly from the one passed as its
 
 ECMAScript 2015 introduced a new set of keywords implementing classes. Although these constructs look like those familiar to developers of class-based languages, they are not the same. JavaScript remains prototype-based. Classes are just a syntactic sugar for creating object using constructor. 
 
-Difference new vs Object.create![Difference new vs Object.create](http://stackoverflow.com/questions/4166616/understanding-the-difference-between-object-create-and-new-somefunction)
+[Difference new vs Object.create](http://stackoverflow.com/questions/4166616/understanding-the-difference-between-object-create-and-new-somefunction)
 
 * What's the difference between `.call` and `.apply`?
     You can use `.call` and` .apply` to assign another object when calling an existing function.
@@ -715,7 +715,7 @@ Difference new vs Object.create![Difference new vs Object.create](http://stackov
 
 It specify property descriptors to be added to the newly-created object, with the corresponding property names. These properties correspond to the second argument of Object.defineProperties().
 
-Object.create![Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
+[Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
 
 
 * Why is extending built-in JavaScript objects not a good idea?
@@ -738,7 +738,7 @@ Object.create![Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScri
 Yes, private methods are made by the constructor. Every function definition or function expression (not bound with this) will become private method.
 Private methods cannot be called by public methods.
 
-Private members![Crockford on private members](http://javascript.crockford.com/private.html)
+[Crockford on private members](http://javascript.crockford.com/private.html)
 
 * Difference between document load event and document DOMContentLoaded event?
     The DOMContentLoaded event is fired when the document has been completely loaded and parsed the DOM tree,
@@ -755,14 +755,15 @@ Private members![Crockford on private members](http://javascript.crockford.com/p
 The function declaration defines a function with the specified name and parameters.
 Function expression is almost identical, but i allows to omit function name, thus creating annonymous function. Function expressions can be used as an IIFE. Function expressions (not like function declartion) arent hoisted.
 
-Function delcaration![Function delcaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
-Function expression![Function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function)
-Function declaration vs function expression![Function declaration vs function expression](https://www.sitepoint.com/function-expressions-vs-declarations/)
+[Function delcaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+[Function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function)
+[Function declaration vs function expression](https://www.sitepoint.com/function-expressions-vs-declarations/)
 
 * Are the functions hoisted?
     In JS, functions can be declared in two ways: by function definition and function expression.
     Function definition are hoisted, whereas function expressions do not.
-    Function hoisting![Function hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+
+    [Function hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
     
 * Explain the same-origin policy with regards to JavaScript.
   This is a fundamental security mechanism of the browser.
@@ -886,8 +887,8 @@ The Strategy pattern encapsulates alternative algorithms (or strategies) for a p
     - allows clients to change Strategy
   - Strategy - implements the algorithm using the Strategy interface
 
-DotFactory patterns![DotFactory patterns](http://www.dofactory.com/javascript/design-patterns)
-JavaScript Design Patterns![JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+[DotFactory patterns](http://www.dofactory.com/javascript/design-patterns)
+[JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 
 * Explain what a single page app is and how to make one SEO-friendly.
 
@@ -975,7 +976,7 @@ Falsy values are values that evaluate to false when they're converted to boolean
 - NaN
 - false
 
-Falsy values![MDN falsy values](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+[MDN falsy values](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 
 * Types in Javascript
 
@@ -998,7 +999,7 @@ Not primitive type is Object type ie:
 
 Primitive types are passed by value, objects are passed by reference.
 
-Javascript Types![Javascript Data Types](https://developer.mozilla.org/pl/docs/Web/JavaScript/Data_structures)
+[Javascript Data Types](https://developer.mozilla.org/pl/docs/Web/JavaScript/Data_structures)
 
 * What language constructions do you use for iterating over object properties and array items?
 
@@ -1085,7 +1086,7 @@ var boo = function () {};
 
 Inheritance (in programming) is a mechanism that allow sharing functionality (and code reuse) beetwen classes and/or objects (in classical inheritance) or between objects (in prototypal inheritance - like in JS). Class that inherits (called subclass) gains acess to all shared behaviors and attributes of parent class (called superclass);
 
-Inheritance![Wikipedia - Inheritance](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming))
+[Wikipedia - Inheritance](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming))
 
 * Whats the difference between inheritance in JS and the classical inheritance?
 
@@ -1093,7 +1094,7 @@ Classical inheritance inherits the behavior, without any state, from the parent 
 
 Prototypal inheritance inherits behavior and state from the parent object. It inherits the behavior and state at the moment the object is called. When the parent object changes at run-time, the state and behavior of the child objects are affected.
 
-Classical vs Prototypal![Stackoverflow - classical vs prototypal](http://softwareengineering.stackexchange.com/a/99438)
+[Stackoverflow - classical vs prototypal](http://softwareengineering.stackexchange.com/a/99438)
 
 * Whats the difference between function and an object?
 
@@ -1108,7 +1109,7 @@ Event life cycle (event flow) describes flow of an event through DOM tree. With 
  - on the object faze - happens when event reach element which user made an action
  - bubbling faze - in this faze event is sent from the element that action was taken on, to the top element of the DOM tree.
 
-Event flow![Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
+[Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
 
 #### Testing Questions:
 
@@ -1723,7 +1724,7 @@ Twitter.propTypes = {
 };
 ```
 
-Functions as children![Functions as children](https://facebook.github.io/react/docs/jsx-in-depth.html#functions-as-children)
+[Functions as children](https://facebook.github.io/react/docs/jsx-in-depth.html#functions-as-children)
 
 * What is the difference between a controlled component and an uncontrolled component?
 
@@ -1731,53 +1732,53 @@ A controlled component is a component where React is in control and is the singl
 
 In uncontrolled components data is handled directly by the DOM. To access data you can use an event handler or a ref to get form values from the DOM.
 
-Controlled components![Controlled components](https://facebook.github.io/react/docs/forms.html#controlled-components)
-Uncontrolled components![Uncontrolled components](https://facebook.github.io/react/docs/uncontrolled-components.html)
+[Controlled components](https://facebook.github.io/react/docs/forms.html#controlled-components)
+[Uncontrolled components](https://facebook.github.io/react/docs/uncontrolled-components.html)
 
 * In which lifecycle event do you make AJAX requests and why?
 
 AJAX request should be done in componentDidMount event lifecycle. It's because after AJAX call returns some data, in most cases we want to assign that date to the state of the component, and this can be done only on mounted components.
 
-State and lifecycle![State and lifecycle](https://facebook.github.io/react/docs/state-and-lifecycle.html)
+[State and lifecycle](https://facebook.github.io/react/docs/state-and-lifecycle.html)
 
 * What does shouldComponentUpdate do and why is it important?
 
 shouldComponentUpdate is important because of performance reasons.
 If we know that a certain section of our UI isn’t going to change, there’s no reason to have React go through the trouble of trying to figure out if it should update it. By returning false from shouldComponentUpdate, React will assume that the current component, and all its child components, will stay the same as they currently are.
 
-Optimizing performance![Optimizing performance](https://facebook.github.io/react/docs/optimizing-performance.html)
+[Optimizing performance](https://facebook.github.io/react/docs/optimizing-performance.html)
 
 * How do you tell React to build in Production mode and what will that do?
 
 Typically you’d use Webpack’s DefinePlugin method to set NODE_ENV to production. This will strip out things like propType validation and extra warnings.
 
-Development and production![Development and production](https://facebook.github.io/react/docs/installation.html#development-and-production-versions)
+[Development and production](https://facebook.github.io/react/docs/installation.html#development-and-production-versions)
 
 * Why would you use React.Children.map(props.children, () => ) instead of props.children.map(() => )
 
 Because props.children can be an array but also a single component. If you'll pass single component then native map method will fail. React.Children.map handles both arrays of components and single components.
 
-React.Children.map![React.Children.map](https://facebook.github.io/react/docs/react-api.html#react.children.map)
+[React.Children.map](https://facebook.github.io/react/docs/react-api.html#react.children.map)
 
 * Describe how events are handled in React.
 
 In React native events are wrapped in SyntheticEvent instances, which solves cross browser compatibility issues. SyntheticEvent have the same interface as native events.
 React doesn’t actually attach events to the child nodes themselves. React will listen to all events at the top level using a single event listener (due performance reasons).
 
-Handling events![Handling events](https://facebook.github.io/react/docs/handling-events.html)
+[Handling events](https://facebook.github.io/react/docs/handling-events.html)
 
 * What is the difference between createElement and cloneElement?
 
 createElement is what JSX gets transpiled to and is what React uses to create React Elements (object representations of some UI). cloneElement is used in order to clone an element and pass it new props.
 
-Create Element![Create Element](https://facebook.github.io/react/docs/react-api.html#createelement)
-Clone Element![Clone Element](https://facebook.github.io/react/docs/react-api.html#cloneelement)
+[Create Element](https://facebook.github.io/react/docs/react-api.html#createelement)
+[Clone Element](https://facebook.github.io/react/docs/react-api.html#cloneelement)
 
 * What is the second argument that can be passed to setState and what is its purpose?
 
 The setState is asynchronous so it takes also a callback function as the second argument. This function is invoked when setState has finished and the component is re-rendered.
 
-setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
+[setState](https://facebook.github.io/react/docs/react-component.html#setstate)
 
 * What is wrong with this code?
 
@@ -1791,7 +1792,7 @@ this.setState((prevState, props) => {
 
 Nothing. setState can also take a function as an argument. That function allows to set current state, based on previus state.
 
-setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
+[setState](https://facebook.github.io/react/docs/react-component.html#setstate)
 
 #### Contributors:
 
