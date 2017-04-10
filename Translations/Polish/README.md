@@ -263,6 +263,10 @@ Nie, ale jestem zaznajomiony z: Jade, EJS, HandlebarsJs, Underscore Templates, M
   http://stackoverflow.com/questions/3127429/how-does-the-this-keyword-work
 
 * Wyjaśnij jak działa dziedziczenie prototypowe.
+    Dziedzieczenie prototypowe oznacza, że prototypy obiektow są połączone,
+    oznacza to, że jeśli jakaś właściwość jest użyta, najpierw przeszukiwany jest obiekt
+    wywołujący następnie ( jeśli nie zostanie znaleziona ) na swoim prototypie i tak dalej.
+
 * Jak radzisz sobie z testowaniem swojego kodu JavaScript?
 * AMD kontra CommonJS?
 

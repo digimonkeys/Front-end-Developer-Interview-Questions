@@ -512,6 +512,10 @@ No, but I'm familiar with Jade, EJS, HandlebarsJs, Underscore Templates, Mustach
     http://stackoverflow.com/questions/3127429/how-does-the-this-keyword-work
 
 * Explain how prototypal inheritance works
+    Prototypal inheritance means prototypes of objects are linked,
+    which means, that when some property is used it is first searched at the object,
+    then (when not found) on its prototype and so on
+
 * What do you think of AMD vs CommonJS?
     Both specifications describe the format and manner in which modules and their dependencies should be defined.
     The main difference between AMD (Asynchronous Module Definition) and CommonJS is the asynchronous loading of modules in AMD.
