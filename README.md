@@ -474,7 +474,10 @@ https://www.w3.org/International/questions/qa-html-language-declarations
     - Has access to life cycle methods
 
   - When would you use a Class Component over a Functional Component?
-  - What are refs in React and why are they important?
+* What are refs in React and why are they important?
+    Used to return a reference to an element. They are useful to manipulating
+    the DOM tree and adding methods to components. They are  recommend as a last resort.
+    
   - What are keys in React and why are they important?
 
 

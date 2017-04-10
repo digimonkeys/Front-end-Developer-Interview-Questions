@@ -284,7 +284,11 @@ https://www.w3.org/International/questions/qa-html-language-declarations
     - ma dostęp do metod cykli życia
 
   - Kiedy powinieneś użyć komponentu klasy a kiedy komponentu funkcyjnego?
-  - Czym są referencje/refs w React i czemu są ważne?
+* Czym są referencje/refs w React i czemu są ważne?
+    Używane są aby zwrocić referencję do danego elementu. Przydają się do
+    manipulacją drzewem DOM i do dodawania metod do komponentow. Poleca się ich
+    używanie w ostateczności.
+
   - Czym są klucze w React i czemu są ważne?
 
 ### Pytania JS:
