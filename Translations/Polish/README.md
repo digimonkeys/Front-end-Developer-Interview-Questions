@@ -65,7 +65,12 @@ Szkielet strony i semantyka, wypełnienie kontentem + poprawa semantyki, stylowa
 
 * Opisz różnicę między stopniowym ulepszaniem (progressive enhancement) i wdzięczną degradacją (graceful degradation)?
   * Dodatkowe punkty za opisanie wykrywania obsługi cech (feature detection)  
-  
+Graceful degradation - oprogramowanie / strona jest tworzona dla użytkowników używających nowszych przeglądarek, obsługujących nowe technologie, zapewniając im pełne user expirience. Stopniowo zmniejsza się user expirience dla użytkowników używających starsze wersje przeglądarek, wciąż zapewniając im funkcjonalność aplikacji / strony na podstawowym poziomie.  
+
+ Progressive enhancement - tworzenie aplikacji strony zapewniającej pewien poziom funkcjonalności dla wszystkich przeglądarek, następnie rozbudowuje się ją o nowe funkcjonalności / features dla nowszych przeglądarek.  
+
+ wykrywanie obsługi cech to technika sprawdzania danego środowiska (np przeglądarki) pod względem dostepnych funkcjonalności, pozwalająca aplikacji na pewne dostosowanie swojego działania do zastanych możliwości  
+
 * Wyjaśnij, co kryje się za terminem "semantyczny HTML".  
 Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich przeznaczeniem i znaczeniem semantycznym, a nie tylko do prezentowania danych. Znaczniki nadają sens i w różnym kontekście mogną oznaczać do innego. Np <i> i <em> <b> i <strong>, section, aside, nav. Jest to ważne dla robotów indeksujących google, dla czytników przeznaczonych dla osób niepełnosprawnych etc.  
 
@@ -80,7 +85,9 @@ http://webmasters.stackexchange.com/a/25091
 * Ile zasobów pobiera przeglądarka z danej domeny w jednej chwili?  
 Starsze przeglądarki jak IE6 - 2, nowsze 6 / 8.  
 
-* Podaj 3 sposoby na zmniejszenie czasu ładowania strony. (postrzeganego lub rzeczywistego czasu ładowania)
+* Podaj 3 sposoby na zmniejszenie czasu ładowania strony. (postrzeganego lub rzeczywistego czasu ładowania)  
+1. Optymalizacja zdjęć - ograniczenie ilości, używanie miniatur, css sprites, svg, preloaderów obrazków 2. Cachowanie contentu 3. Używanie mniejszej ilości requestów http
+
 * Jeśli dołączasz do projektu, w którym używa się tabulacji, a ty używasz spacji, co wtedy zrobisz?
   * Sugerowanie użycia narzędzi w stylu EditorConfig (http://editorconfig.org)
   * Zgodnie z konwencjami (pozostań konsekwentny)
@@ -120,7 +127,8 @@ https://jsperf.com/
 https://wiki.mozilla.org/Dromaeo  
 
 * Gdybyś mógł opanować jedną technologię w tym roku, jaka byłaby to technologia?
-* FOUC? Jak unikasz FOUC?
+Technologia budowy bomb wodorowych. Ew. można odpowiedzieć czymś co jest aktualnie w modzie, np React Native, React Redux, ES7.  
+
 * Wyjaśnij znaczenie standardów sieciowych i ich twórców.  
 
 Standardy są bardzo istotne ponieważ aplikacje pisane w danym języku są kompilowane przez różne przeglądarki. Pozwala to uniknąć sytuacji, w której kod działa w połowie przeglądarek, lub działa tylko w tej ulubionej kodera. Gdy opracowany jest standard przeglądarki wiedzą czego się spodziewać i każdy piszący w zgodzie ze standardem może zakładać, że wszystko będzie działać. Twórcami standardów są w3c, iso, ansi, unicode consortium, ietf oraz ecma.  
@@ -261,6 +269,10 @@ Nie, ale jestem zaznajomiony z: Jade, EJS, HandlebarsJs, Underscore Templates, M
   http://stackoverflow.com/questions/3127429/how-does-the-this-keyword-work
 
 * Wyjaśnij jak działa dziedziczenie prototypowe.
+    Dziedzieczenie prototypowe oznacza, że prototypy obiektow są połączone,
+    oznacza to, że jeśli jakaś właściwość jest użyta, najpierw przeszukiwany jest obiekt
+    wywołujący następnie ( jeśli nie zostanie znaleziona ) na swoim prototypie i tak dalej.
+
 * Jak radzisz sobie z testowaniem swojego kodu JavaScript?
 * AMD kontra CommonJS?
 
@@ -320,8 +332,8 @@ Wzorzec strategii umożliwa wybór odpowiedniego algorytmu na etapie działania 
     - pozwala klientowi na zmianę strategii
   - Strategy - implementuje algorytmy używając interfejsu Strategii
 
-DotFactory patterns![DotFactory patterns](http://www.dofactory.com/javascript/design-patterns)
-JavaScript Design Patterns![JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+[DotFactory patterns](http://www.dofactory.com/javascript/design-patterns)
+[JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 
 * Czym jest tablica mieszająca (hashtable)?
 * Co oznaczają komunikaty `undefined` i `undeclared` dla zmiennych?
@@ -340,7 +352,7 @@ JavaScript Design Patterns![JavaScript Design Patterns](https://addyosmani.com/r
 Promise (natywnie dodany w ES6) jest obiektem używanym w operacjach asynchronicznych. Jest to obiekt, który reprezentuje wartość, która może być dostępna teraz, w przyszłości, lub nie być dostępna wcale.
 Promise ma trzy stany: pending (rozpoczęte), fullfiled (zakończone pozytywnie), rejected (zakończone niepowodzeniem - błędem). Gdy Promise osiągnie stan fullfiled lub rejected uruchamiane są handlery poprzez .then (.catch jest aliasem do .then(undefined, function()))
 
-Promise![Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+[Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
 * Czym są domknięcia, jak i po co są używane?
     Closure - domknięcie - pozwala na dostęp do wewnętrznego scope funkcji, nawet po jej wykonaniu.
@@ -402,7 +414,7 @@ function Person(){}, var person = Person(), var person = new Person()
 * Czym jest callback?
 Callback jest to funckcja przekazywana do innej funkcji poprzez argument. Funkcja, która przyjmuje callback jako argument może w swoim ciele wywołać przekazaną funkcję. Wywołanie to może nastąpić natychmiast (synchronicznie), albo późniejszym czasie (asynchronicznie).
 
-Callback![Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming))
+[Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming))
 
 * Kiedy optymalizujesz swój kod?
 
@@ -410,7 +422,7 @@ Callback![Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming
 
 Tak, w JS można tworzyć zmienne i metody jako prywatne. Aby stworzyć metodę prywatną należy utworzyć definicję funkcji w konstruktorze obiektu (bez przypisania jej do this). W takim wypadku funkcja / metoda będzie dostępna tylko wewnątz obiektu i tylko dla funkcji prytwatnych.
 
-Private members![Crockford on private members](http://javascript.crockford.com/private.html)
+[Crockford on private members](http://javascript.crockford.com/private.html)
 
 * Wyjaśnij działanie dziedziczenia w JavaScript?
 * Co to jest function declaration a co function expression i czym sie roznia?
@@ -418,9 +430,9 @@ Private members![Crockford on private members](http://javascript.crockford.com/p
 Function declaration jest to stworzenie obiektu typu Function i przypisanie mu nazwy oraz parametrów używanych przez funkcję.
 Function expression jest niemal identyczne, natomiast pozwala na ominięcie nazwy funkcji (co tworzy tzw. funkcję anonimową). Function expression może być także używane jako IIFE. Function expression, w przeciwieństwie do function declaration nie są hoistowane.
 
-Function delcaration![Function delcaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
-Function expression![Function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function)
-Function declaration vs function expression![Function declaration vs function expression](https://www.sitepoint.com/function-expressions-vs-declarations/)
+[Function delcaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+[Function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function)
+[Function declaration vs function expression](https://www.sitepoint.com/function-expressions-vs-declarations/)
 
 * Kiedy użyłbyś `document.write()`?
     Document.write() jest zawsze dostępny, jest dobrym wyborem dla dostawcow skryptow zewnetrznych aby mogli dodać oni swoj kod.
@@ -447,7 +459,7 @@ Falsy values są to wartości, które podczas konwersji na boolean dają wartoś
 - NaN
 - false 
 
-Falsy values![MDN falsy values](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+[MDN falsy values](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 
 * Omów AJAX jak najbardziej szczegółowo.
 * Podaj wady i zalety żywania technologii AJAX
@@ -494,7 +506,7 @@ Typem złożonym jest Object jak np:
 
 Typy proste przekazywane są przez wartość, natomiast typy złożone przez referencję.
  
-Javascript Types![Javascript Data Types](https://developer.mozilla.org/pl/docs/Web/JavaScript/Data_structures)
+[Javascript Data Types](https://developer.mozilla.org/pl/docs/Web/JavaScript/Data_structures)
 
 * Czy kiedykolwiek używałeś szablonów w JavaScript?
   * Jeśli tak, jakie to były biblioteki? (Mustache.js, Handlebars itd.)
@@ -508,18 +520,26 @@ Javascript Types![Javascript Data Types](https://developer.mozilla.org/pl/docs/W
 
 Drugi parametr Object.create pozwala na dodanie właściwości do nowo powstałego obiektu. Format w jakim podajemy te właściwości jest taki sam jak w drugim argumencie Object.defineProperties().
 
-Object.create![Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
+[Object.create](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
 
 * Wyjaśnij pojęcie "hoisting".
+    Hoisting jest to windowanie zmiennych z przypisaną wartością oraz funkcji
+    na samą górę (do globalnego zasięgu lub do zasięgu funkcji).
+    Co pozwala na ich użycie zanim zostaną zadeklarowane.
+    x = 5; // przypisanie 5 to x
+    elem = document.getElementById("demo"); // znalezienie elementu
+    elem.innerHTML = x; // wyświetlanie x wewnątrz elementu
+    var x; // deklaracja x
+
 * Zasieg zmiennych w jsie?
 
  W JS, do wersji ES6 występowały tylko dwa rodzaje zasięgu zmiennych, tj. globalny (global scope) i zasięg lokalny - w obrębie funkcji (function scope).
  Od ES6 i pojawienia się zmiennych deklarowanych jako let i const pojawił się także zasięg blokowy (tj. wewnątrz { }).
 
-var![var](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
-let![let](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Statements/let)
-const![const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
-Other scopes![other scopes](http://stackoverflow.com/a/500459)
+[var](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
+[let](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Statements/let)
+[const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
+[other scopes](http://stackoverflow.com/a/500459)
 
 * Opisz bąbelkowanie zdarzeń.
     Bubbling jest to wynoszenie / przechodzenie eventu do góry drzewa DOM.
@@ -551,7 +571,7 @@ Object.create zostało dodane w ECMAScript 5. Object.create tworzy nowy obiekt, 
 
 W ECMAScript 2015 przedstawiono nowe słowa kluczowe implementujące klasy. Mogą one wyglądać identycznie do konstrukcji znanych z języków implementujących klasyczny model dziedziczenia, jednak nie są one tym samym. Dziedziczenie w JavaScript nadal pozostało prototypowe. Klasy są tak naprawdę tylko "lukrem składniowym" na tworzenie obiektu za pomocą konstruktora i new.
 
-Difference new vs Object.create![Difference new vs Object.create](http://stackoverflow.com/questions/4166616/understanding-the-difference-between-object-create-and-new-somefunction)
+[Difference new vs Object.create](http://stackoverflow.com/questions/4166616/understanding-the-difference-between-object-create-and-new-somefunction)
 
 * Czemu rozszerzanie obiektów wbudowanych w JavaScript jest złym pomysłem?
     Ponieważ obiekty te zostały stworzone według pewnej dobrze udokumentowanej i przemyślanej specyfikacji
@@ -595,7 +615,8 @@ Difference new vs Object.create![Difference new vs Object.create](http://stackov
 * Czy funkcje sa hoistowane?
     W JS funcje można deklarować na dwa sposoby: poprzez function definition oraz function expression.
     Function definition są hoistowane, natomiast function expressions nie.
-    Function hoisting![Function hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+
+    [Function hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
 
 * Napisz działający kod:
 ```javascript
@@ -609,14 +630,24 @@ function duplicate(arr) {
 ```
 Odniesienie: [Array.prototype.concat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
 
-* Opisz strategię zapamiętywania (unikanie powtarzalnych obliczeń) w JavaScript.
 * Dlaczego mówimy wyrażenie trójkowe, co dokładnie oznacza słowo "trójkowy"?
 
 Mówimy wyrażenie trójkowe, ponieważ przyjmuje trzy operandy (operand - argument).
 Jako ciekawostke można dodać, że jest to jedyny operator w JavaScripcie, który przyjmuje trzy operandy.
 Odniesienie: [Conditional (ternary) Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
-* Czym jest `arity` funkcji?
+* Napisz pętlę for, która przeiteruje do `100` i wyświetli **"fizz"**, gdy liczba jest podzielna przez `3`, **"buzz"**, gdy liczba jest podzielna przez `5` oraz **"fizzbuzz"**, gdy liczba jest podzielna przez `3` i `5`
+
+```javascript
+  for(let i = 1; i <= 100; i += 1) console.log((i % 3 === 0 ? 'fizz' : '') + (i % 5 === 0 ? 'buzz' : ''));
+```
+
+* Co to jest `callback`?
+
+Callback to funkcja, ktora przekazujemy do innej funkcji jako argument. Funkcja, która otrzymuje callback jako argument może go wywołac w swoim ciele. To wykonanie może być natychmiastowe w synchronicznym wywołaniu zwrotnym lub może zostać wykonane po czasie w sposób asynchroniczny. 
+
+[Callback](https://en.wikipedia.org/wiki/Callback_(computer_programming))
+
 * Czemu, na ogół, dobrym pomysłem jest nie ruszanie globalnej przestrzeni strony?
 
 Generalnie nie deklarowanie zmiennych globalnych jest zalecane, ponieważ cały kod posiada jedną przestrzen nazw.
@@ -626,18 +657,73 @@ Najlepszym rozwiązaniem, aby uniknąć zanieczyszczania globalnej przestrzeni j
 Odniesienie: [Global variables disscusion](http://stackoverflow.com/questions/2613310/ive-heard-global-variables-are-bad-what-alternative-solution-should-i-use)
 
 * Co oznacza `"use strict";`? Jakie są zalety i wady takiego rozwiązania?
+
+  "use strict" włącza bardziej restrykcyjną wersje JavaScriptu.
+  Kod jest inaczej odczytywany przez silnik w niektórych przypadkach.
+
+  Zalety:
+    - Eliminuje niektóre ciche błędy, a zamiast nich wyrzuca błąd.
+    - Naprawia niektóre pomyłki, które sprawiają, że JavaScriptowe silniki mają trudność z optymalizacją kodu (wersja kodu w strict mode może być szybsza niż normalna).
+    - Rezerwuje składnię, która prawdopodobnie będzie użyta w przyszłych wersjach ECMAScript.
+
+  Wady:
+    - Przeglądarki, które nie wspierają strict mode'u będą wykonywać kod zgodnie z normalnymi standardami.
+  
+  Odniesienie: [Strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+
 * Czym rozni sie dziedziczenie w jsie od klasycznego dziedziczenia?
  
  Podmiotem dziedziczenia klasycznego, są klasy natomiast w js dziedziczenie (zwane prototypowym) odbywa się bezpośrednio na obiektach.
  Konsekwencją tego, że w dziedziczeniu klasycznym hierarchia tworzona jest za pomocą klas, które są jakby opisem przyszłego obiektu, co uniemożliwia zmiany metod, które są dziedziczone. Nie dzidziczy się również stanu (gdyż klasy go nie posiadają).
  W dziedziczeniu prototypowym, opartym na obiektach, każda zmiana metody czy atrybutu na obiektach, z których się dziedziczy, jest natychmiast odzwierciedlana na obiekcie dziedziczącym. Dziedziczy się także stan obiektu.
  
-Classical vs Prototypal![Stackoverflow - classical vs prototypal](http://softwareengineering.stackexchange.com/a/99438)
+[Stackoverflow - classical vs prototypal](http://softwareengineering.stackexchange.com/a/99438)
 
 * Jaka jest roznica miedzy funkcja a obiektem?
 
 Tak naprawdę funkcja jest specyficznym typem obiektu w JavaScript, posiadającym wszystkie właściwości normalnego obiektu. Jedyną różnicą, między funkcją a zwykłym obiektem, jest możliwość wywołania funkcji, co jest możliwe dzięki wewnętrznej metodzie [[Call]], którą posiadają tylko funkcje.
 Prototypem funkcji jest Object, konstruktorem funkcji jest Function();
+
+* Po co uzyłbyś czegoś takiego jak zdarzenie `load`? Czy posiada ono jakieś wady? Czy znasz jakieś alternatywy, i jeżeli tak to czemu użyłbyś ich?
+
+Zdarzenie `load` jest wywolane, gdy strona została w całości załadowana.
+Jedną z wad jest to, że zdarzenie `load` czeka na całą zawartość strony - nawet arkusze stylów i obrazki.
+Najbardziej polecaną alternatywą jest zdarzenie `DOMContentLoaded`, które zostaje wywołane, gdy podstawowy HTML dokumnetu został kompletnie załadowany i sparsowany.
+
+Odniesienia: [Load](https://developer.mozilla.org/en-US/docs/Web/Events/load), [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded)
+
+* Wytlumacz czym jest single-page application i jak można sprawić, by była ona bardziej przyjazna dla SEO.
+
+Single-page application (SPA) to aplikacja internetowa lub strona, która mieści się na jednej stronie internetowej w celu dostarczenia jak najlepszych doznan, porównywalnych do tych odczuwalnych w desktopowych aplikacjach. W SPA, albo cały kod - HTML, JavaScript i CSS - jest pobierany przy załadowaniu strony, albo jest dynamicznie doładowywany i dodawany do strony w razie zapotrzebowania. Single-page application nigdy nie się nie przeładowywuje w trakcie używania, chociaż `location hash` i `HTML5 History API` może zostać użyte, aby wprowadzić uczucie nawigacji po osobnych stronach w aplikacji.
+Stronę można uczynić przyjazną dla SEO poprzez server-side rendering i używanie semantycznych znaczników HTML5.
+
+[Single-page application](https://en.wikipedia.org/wiki/Single-page_application)
+
+* Wytlumacz różnicę pomiędzy zmiennymi i niezmiennymi obiektami.
+  * Jaki jest przykład niezmienialnego obiektu w JavaScripcie?
+  * Jakie są wady i zalety niezmienności?
+  * Jak możesz osiągnąć niezmienność w Twoim kodzie?
+
+Zmienny obiekt może zostać zmieniony.
+Niezmienny obiekt nie może zostać zmieniony. Przy każdej zmianie zostaje zwrócony nowy obiekt.
+
+Zalety:
+ - Mniej skomplikowany w użyciu.
+ - Operacje mogą być łączone.
+ - Może być łatwo skopiowany.
+ - Nigdy nie zmienia swojego stanu.
+ - Łatwo można go przekazywać.
+ - Łatwe debugowanie.
+
+Wady:
+  - Większe zużycie pamięci.
+  - Ciężki do zbudowania.
+
+Można osiągnąć niezmienność obiektu poprzez użycie Object.freeze lub Object.seal.
+Można również użyć bibliotek np. Immutable.js.
+
+Odniesienie: [Dyskusja na Quora](https://www.quora.com/What-are-the-advantages-and-disadvantages-of-immutable-data-structures),
+[Dyskusja na Stackoverflow](http://stackoverflow.com/questions/1863515/pros-cons-of-immutability-vs-mutability)
 
 * Jakie sa wady i zalety używania obietnic zamiast callbacków?
 
@@ -661,7 +747,7 @@ Jedyny polyfill, który znam to `Bluebird`.
  
 Dziedziczenie jest mechanizmem współdzielenia funkcjonalności między klasami i/lub obiektami (w rozumieniu klasycznym) lub obiektami (w dziedziczeniu prototypowym - jak w js). Klasa dziedzicząca (zwana klasą pochodną) otrzymuje dostęp do udostępnionych zachowń oraz atrybutów od klasy, z której następuje dziedziczenie (zwanej klasą bazową).
  
-Dziedziczenie![Wikipedia - dziedziczenie](https://pl.wikipedia.org/wiki/Dziedziczenie_(programowanie)) 
+[Wikipedia - dziedziczenie](https://pl.wikipedia.org/wiki/Dziedziczenie_(programowanie))
 
 * Czym jest obietnica (`Promise`)?
 
@@ -676,6 +762,22 @@ Oczekująca obietnica może być spełniona z jakąś wartością lub odrzucona 
 
 [Promise](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
+* Jakie są wady/zalety pisania kodu w języku, który kompiluje się do JavaScriptu?
+
+Zalety:
+  - Błędne typy zostają wyłapane w fazie kompilacji.
+  - Prostsza składnia.
+  - Kod jest łatwiejszy do utrzymania / rozszerzenia.
+
+Wady:
+  - Aby uruchomić aplikację w przeglądarce, kod musi być skompilowany.
+  - Debugowanie kodu może stać się trudne.
+  - Potrzeba nauczenia się nowego języka / składni.
+  - Mniejsza społeczność, ogólnie mniej materiałów.
+
+Odniesienie: [Typescript wady i zalety](https://designmodo.com/typescript/),
+[Javascript, CoffeScript, Dart i TypeScript](https://smthngsmwhr.wordpress.com/2013/02/25/javascript-and-friends-coffeescript-dart-and-typescript/)
+
 * Jakich narzędzi i technik używasz do debugowania kodu JavaScript?
 
 Używam DevTools z Chrome.
@@ -687,6 +789,21 @@ Używam następujących technik:
 
 Odniesienie: [Wskazówki](http://www.zsoltnagy.eu/javascript-debugging-tips-and-tricks/)
 
+* Wyjaśnij różnicę w używaniu `foo` pomiędzy `function foo() {}` i `var foo = function() {}`.
+
+Jest tutaj deklaracja funkcji (pierwszy przykład) i wyrażenie funkcyjne (drugi przykład).
+Używanie w obu przypadkach jest generalnie takie samo, z jednym wyjątkiem.
+Wywołanie foo przed deklaracją (pierwszy przykład), spowoduje normalne wywołanie funkcji, ponieważ funkcje "przenoszone" na góre naszego kodu (hoisting).
+Wywołanie foo przed wyrażeniem funkcyjnym (drugi przykład) skutkowac będzie błędem, ponieważ zmienne, dopóki nie są zadeklarowane, mają wartość undefined.
+
+```javascript
+foo(); // ok
+boo(); // TypeError: boo is not a function
+
+function foo() {};
+var boo = function () {};
+```
+
 * Zasieg zmiennych w JavaScript?
 
 W JavaScripcie, przed wersją ES6, były tylko dwa zakresy zmiennych. Zakres globalny oraz lokalny - funkcja.
@@ -697,12 +814,38 @@ W ES6 jest jeszcze jeden zakres - zasięg blokowy, który dotyczy zmiennych zade
 [const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
 [inne](http://stackoverflow.com/a/500459)
 
+* Jakich konstrukcji językowych używasz do iterowania po obiekcie i tablicy? 
+
+Do iterowania po obiekcie używam pętli for...in z sprawdzaniem właściwości za pomocą hasOwnProperty.
+Do iterowania po tablicy używam pętli for i metod Array.prototype, takich jak .forEach lub .map.
+
+Odniesienie: [hasOwnProperty](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty),
+[Array.prototype](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype)
+
 * Wytłumacz różnice pomiędzy synchronicznymi i asynchronicznymi funkcjami.
 
 Synchroniczna funkcja zostanie wykonana i kiedy się zakonczy, następne zadanie zostanie wykonane.
 Asynchroniczna funkcja zostanie wykonana i niezależnie od tego czy się zakonczy czy nie, następne zadanie zostanie wykonane.
 
 Odniesienie: [Asynchronicznosc vs synchronicznosc](http://stackoverflow.com/questions/748175/asynchronous-vs-synchronous-execution-what-does-it-really-mean)
+
+* Czym jest pętla zdarzen (event loop)?
+  * Jaka jest różnica między stosem wywołan i kolejką zadan?
+
+Pętla zdarzen wzięła swoją nazwę z sposobu w jaki jest zaimplementowana, który przypomina następujący kod: 
+
+```javascript
+while (queue.waitForMessage()) {
+  queue.processNextMessage();
+}
+```
+queue.waitForMessage czeka synchronicznie na nową wiadomość, jeżeli aktualnie nie ma żadnej.
+Każda wiadomość jest przetwarzana całkowicie zanim kolejna jest przetworzona.
+To rozwiązanie oferuje kilka dobrych właściwości podczas myślenia nad działaniem programu, w tym faktu, że gdy funkcja działa, nie może być ona zatrzymana i wykona się do konca, zanim następna wiadomość zostanie przetworzona.
+
+Stos wywołan to kolejka funkcji, które są aktualnie wykonywane.
+Kolejka zadan to lista wiadomości czekających na przetworzenie.
+Funkcja jest przypisana do każdej wiadomości. Kiedy stos ma wystarczająco zasobów, wiadomość zostaje wyjęta z kolejki zadan i przetworzona.
 
 * Czym jest event life cycle (event flow)?
 
@@ -712,7 +855,7 @@ Event lifecycle (event flow) opisuje cykl życia eventu w drzewie DOM. Przy każ
 - on the object faze - występuje na elemencie, na którym nastąpiło zdarzenie
 - bubbling faze - w tej fazie event przesyłany jest od elementu na którym nastąpiło zdarzenie, aż do najwyżeszego rodzica w drzewie dom
 
-Event flow![Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
+[Event Life Cycle](http://www.quirksmode.org/js/events_order.html)
 
 ### Przykłady kodu JS:
 
@@ -1240,6 +1383,10 @@ console.log('three');
   http://www.tutorialsteacher.com/angularjs/what-is-angularjs
 * Wyjaśnij dyrektywę ng-controller.
   Dyrektywa ng-controller dołącza klasę kontrolera do widoku. Jest to kluczowy aspekt tego, jak Angular wspiera MVC. Ng-controller tworzy również nowy zakres.
+* Czym jest hierarchia zakresów w AngularJS?
+  Obiekt $scope używany przez widok w AngularJS jest zorganizowany w hierarchię. Jest to 'root scope', $rootScope może mieć jedno lub więcej dzieci-zakresów. Każdy kontroler posiada swój własny zakres ($scope) (który jest dzieckiem $rootScope), więc utworzone zmiennie, gdziekolwiek w jednym zakresie kontrolera będą dostępne przez widok bazujący na tym kontrolerze.
+
+  http://www.dotnettricks.com/learn/angularjs/understanding-scope-inheritance-in-angularjs
 
 * Czym jest $rootScope?
   $rootScope odnosi się do obiektu, który jest dostępny z każdego miejsca w aplikacji. Możesz myśleć o $rootScope jako globalnej zmiennej oraz $scope jako lokalnej.
@@ -1412,12 +1559,227 @@ console.log('three');
   Dyrektywa ng-app powinna znajdować się w głównych tagach dokumentu HTML, np. <html> lub <body>, pozwala to kontrolować całą wewnętrzną hierarchię DOM. Jednakże, możesz umieścić ng-app w każdym elemencie DOM.
   AngularJS będzie przetwarzał tylko ten element DOM oraz wszystkie jego dzieci.
 
+* Jak oznaczyłbyś zmienną, która powinna mieć tylko one-time data binding?
+  Przez dopisanie przed nią ‘::’;
+
+### Pytania z NodeJS:
+
+* Co to jest error-first callback?
+
+  Error-first callback jest typem callbacka gdzie pierwszym argumentem jest zawsze error, a resztą argumentów jest rezultat funkcji wywołującej ten callback. Deweloper może wtedy upewnić się że ta funkcja wykonała się pomyślnie sprawdzając czy pierwszy argument jest null, co oznacza że nie wystąpił żaden błąd.
+
+* Jak można uniknąć callback hell?
+
+  * Utrzymuj swój kod płytkim. Nie definiuj callbacków w środku innych callbacków, zamiast tego przenieś je do jednego block-u i używaj ich po nazwie funkcji.
+  * Modularyzuj. Podziel swój kod na mniejsze części, aby każda z nich miała do wykonania jedno zadanie.
+  * Obsługuj wszystkie błędy. Jest to ważne aby funkcja w której wystąpił błąd nie przekazała złych lub zniekształconych danych w dół chain'a callbacków, co może prowadzić do wystąpienia błędów w innych funkcjach.
+
+  [źródło](http://callbackhell.com/)
+
+* Co to są Promisy?
+
+  Promisy są używane do asynchronicznego przetwarzania danych. Promise przedstawia wartość która może być dostępna teraz, w przyszłości lub nigdy.
+
+  [źródło](https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+  
+* Jakich narzędzi można użyć aby utrzymać spójny styl kodu? Dlaczego jest to ważne?
+
+  Tak zwane code-style lintery (jshint, jslint, eslint, etc.) pomagają w utrzymaniu spójnego stylu. Jest to ważne ponieważ pozwala na eliminacje prostych błędów już podczas pisania kodu. Zapewnia jednakowe, konsekwentne formatowanie kodu dla wszystkich członków zespołu. 
+
+* Kiedy użyłbyś npm a kiedy yarn?
+
+  Użyłbym yarn gdy czas wykonania jest najważniejszy, lub gdy ważna jest instalacja offline.
+
+  [więcej info](https://yarnpkg.com/lang/en/)
+
+* Co to są stub-y? Wymień przykład użycia!
+
+  Stub-y są funkcjami które mogą zastępować inne funkcje podczas testowania.
+
+  Pozwalają one na:
+  * Podmienianie problematycznych kawałków kodu.
+  * Wywoływanie ścieżek kodu które w inny sposób nie zostałyby wywołane, np. obsługa błędów.
+  * Pomaga prościej testowa asynchroniczny kod.
+
+  [źródło](https://semaphoreci.com/community/tutorials/best-practices-for-spies-stubs-and-mocks-in-sinon-js)
+
+* Co to jest piramida testów? Podaj przykład!
+
+  Piramida testów składa się z 3 części:
+  * Testy UI testują system tak jak by to robił użytkownik w prawdziwym świecie. Imitują one jego interakcję z elementami interfejsu.
+  * Testy integracyjne, podobnie jak testy UI, sprawdzają różne warstwy aplikacji, ale w przeciwieństwie do UI nie robią tego korzystając z interfejsu wizualnego.
+  * Testy jednostkowe pozwalają deweloperom na sprawdzenie czy ich kod działa tak jak zakładali. Pozwala im na wprowadzanie zmian bez strachu przed wprowadzeniem błędów.
+
+  [źródło](http://www.agilenutshell.com/episodes/41-testing-pyramid)
+
+* Jaki jest twój ulubiony HTTP framework i dlaczego?
+
+  Jest ich wiele, niektóre z popularniejszych to m.in.: Express, Koa i Meteor. Moim ulubionym jest Express, ponieważ jest szybki, ma wszystkie potrzebne mi funkcje, oraz ma dobre wsparcie.
+
+  [więcej info](http://nodeframework.com/)
+
+* Jak można zabezpieczyć ciasteczka przed atakami XSS?
+
+  Można użyć flagi ciasteczka HTTPOnly, która blokuje dostęp do ciasteczka z poziomu skryptów.
+
+  [więcej info](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet#Bonus_Rule_.231:_Use_HTTPOnly_cookie_flag)
+
+* Jak możesz upewnić się że zależności twojej aplikacji są bezpieczne?
+
+  Powinno się używać tylko sprawdzonych bibliotek. Dobry sposóbem jest używanie tych najpopularniejszych, ponieważ mają one większą szansę na dostrzeżenie i poprawę błędów przez społeczność. Innym sposobem jest zamrożenie w npm wersji którą wiemy że jest dobra, przez co nie będzie ona zaktualizowana do nowszej wersji która może być niestabilna lub zawierać błędy, jednak wymaga to ręcznej aktualizacji w przypadku gdy ta nowsza wersja zawiera fix-y dla błędów zawartych w wersji zamrożonej w npm.
+
+* Jak Node.JS obsługuje child thready?
+
+  Każdy proces Node.JS jest jednowątkowy, a więc aby wykorzystać wiele wątków trzeba użyć do tego wielu procesów. Node.JS pomaga w tym udostępniając moduł `child_process`.
+
+  [więcej info](https://nodejs.org/api/child_process.html)
+
+* Jaka jest preferowana metoda obsługi unhandlaed exceptions w Node.JS?
+
+  Dodanie listener'a event-u procesu `uncaughtException`:
+
+  ```javascript
+  process.on('uncaughtException', function(err) {
+    // Handle error
+    console.log(err);
+  });
+  ```
+
+* W jaki sposób Node.JS wspiera platformy wieloprocesorowe, i czy jest w stanie w pełni wykorzystac zasoby wszystkich procesorów?
+
+  Jako że Node.JS jest aplikacją jednowątkową, będzie ona działać tylko na jednym rdzeniu procesora. Node.JS udostępnia jednak moduł `cluster`, który wspomaga w wielokrotnym instancjonowaniu aplikacji, które pozwala na użycie wszystkich zasobów komputera.
+
+  [więcej info](https://nodejs.org/api/cluster.html)
+
+* Co typowo jest pierwszym argumentem podanym do callback-a?
+
+  Pierwszym argumentem w callback-ach typowo jest obiekt error, jeśli wystąpił błąd w funkcji wywołującej callback, lub null, jeśli ta funkcja wykonała się pomyślnie.
+
+* Spójrz na poniższy kod:
+```javascript
+console.log("first");
+setTimeout(function() {
+    console.log("second");
+}, 0);
+console.log("third");
+```
+
+  Jego wynik to:
+  ```
+  first
+  third
+  second
+  ```
+
+  Zakładając że takie działanie jest pożądane, oraz że używamy Node.JS w wersji 0.10 albo wyższej, jak inaczej moglibyśmy napisać ten kod?
+
+  Odpowiedź:
+
+  Zamiast `setTimeout` możemy użyc `setImmediate` (ustawia funkcje za eventami I/O) lub `process.nextTick` (ustawia funkcje przed eventami I/O)
+
+* Co to jest Event Loop?
+
+  Event Loop pozwala Node.JS na przekazanie operacji do kernela systemu, co z kolei pozwala na obsługę wielu operacji w tle jednocześnie. Kiedy taka operacja się zakończy, kernel daje o tym znać Node, które dodaje odpowiednie callbacki do kolejki wywołań.
+
+  [więcej info](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/)
+
+* Jakie zadanie ma obiekt Buffer w Node.JS?
+
+  Bufory pozwalają deweloperom na manipulacje i tymczasowe przechowywanie danych binarny, a także pełni funkcje bufora dla streamów.
+
+  [więcej info](https://nodejs.org/api/buffer.html)
+
+* Jakie są typy Streamów w Node.JS?
+
+  * writable
+  * readable
+  * duplex - implementuje streamy writable i readable naraz.
+  * transform - podobny do duplex, ale pozwala na transformację danych przechodzących przez stream.
+  * passthrough - podobny do duplex, ale oba streamy są połączone ze sobą, wszystkie dane które wejdą do streama writable, wyjdą w streamie readable w niezmienionej postaci.
+
+  [źródło](https://nodejs.org/api/stream.html)
+
+* Wymień niektóre z eventów emitowanych przez Streamy w Node.JS.
+
+  error, close, end, finish, data, pipe, unpipe, readable
+
+  [źródło](https://nodejs.org/api/stream.html)
+
+* Co to jest chainowanie w Node.JS?
+
+  Chainowanie metod pozwala deweloperom na użycie wyniku funkcji bez uprzedniego przypisania tego wyniku do zmiennej, na przykład:
+
+  ```javascript
+  const result =
+    [1,2,3,4,5]
+      .filter(val => val > 1)
+      .map(val => val * val)
+      .reduce((a, b) => a + b);
+
+  console.log(result); // 55
+  ```
+
+* Jakie zadanie ma obiekt `process` w Node.JS?
+
+  Obiekt `process` jest globalnym obiektem który daje informacje na temat bazowego procesu Node.JS, np.: argumenty przekazane do procesu, zmienne środowiskowe, użycie pamięci itp.
+
+  [więcej info](https://nodejs.org/api/process.html)
+
+* Czym jest MVC?
+  MVC jest architekturą oprogramowania - strukturą systemu - który oddziela domenę/aplikację/logikę biznesową od reszty interfejsu użytkownika. Robi to poprzez podzielenie aplikacji na trzy części, warstwę modelu, warstwę widoku i warstwę kontrolera.
+
+  Warstwa modelu zarządza fundamentalnym zachowaniem i danymi w aplikacji. Może odpowiadać na żądania dla informacji, odpowiadać na instrukcje zmiany stanu tych informacji itp. To może być baza danych lub każda liczba struktur danych lub systemów magazynów. Po krótce, są to dane i możliwość zarządzania nimi w aplikacji.
+
+  Warstwa widoku zapewnia interfejs użytkownika aplikacji. Renderuje dane z warstwy modelu w odpowiednie miejsca dla interfejsu użytkownika.
+
+  Warstwa kontrolera odbiera dane wejściowe użytkownika i mówi obiektom warstwy modelu, i widoku by wykonały odpowiednie akcje.
+
+  Wszystkie te trzy komponenty pracują razem tworząc razem MVC.
+
+  http://softwareengineering.stackexchange.com/questions/127624/what-is-mvc-really
+
 ### Pytania dodatkowe (zabawne):
 
 * Opowiedz o najfajniejszej rzeczy jaką kiedykolwiek zakodowałeś. Z czego jesteś najbardziej dumny?
 * Jakie są Twoje ulubione części narzędzi programistycznych, których używasz?
 * Czy masz jakiś swój własny projekt na boku? Jaki?
 * Jaka jest Twoja ulubiona funkcja w Internet Explorer?
+
+### Angular
+
+* Is AngularJS extensible?  
+Yes, in Angular we can create custom directive to extend AngularJS existing functionalities.  
+https://docs.angularjs.org/guide/directive 
+
+* Jaka powinna być maksymalna liczba zarejestrowanych „watchów”? Bonus: jak kontrolowałbyś ich ilość?
+Aby zmniejszyć zużycie pamięci i polepszyć wydajność dobrze jest nie przekraczać 2000 watchów. Liczbę można kontrolować za pomocą modułu npm ng-stats.  
+https://github.com/kentcdodds/ng-stats 
+
+* Jak można przekazywać dane pomiędzy kontrolerami?
+Stworzyć service przechowujący dane i wstrzykujący je do kontrolerów. Wykorzystanie service’ów jest najczystsze, najszybsze i najłatwiejsze do testowania. Można jednak wykorzystac do tego również eventy, użyć $parent, nextSibling, controllerAs itp. do bezpośredniego dostania się do kontrolerów oraz zapisać dane na $rootScope (nie jest to dobra praktyka).  
+https://daveceddia.com/sharing-data-between-controllers-best-practice-use-a-service/  
+http://stackoverflow.com/a/21920241  
+* Gdzie można implementowac manipulacje DOM w Angularze?
+Teoretycznie tylko w dyrektywach, nigdy w kontrolerach i serwisach. Obecnie jednak dobrą praktyka jest stosowanie komponentów (które mogą być w formie dyrektyw), gdzie praktycznie cała logika znajduje się w kontrolerze. W takim wypadku uważam że można manipulować DOM wewnątrz template dyrektywy (komponentu) z kontrolera dyrektywy (komponentu).  
+http://ng-learn.org/2014/01/Dom-Manipulations/  
+http://stackoverflow.com/questions/37480150/manipulating-dom-in-angularjs-best-practice  
+
+* Gdybyś musiał przerobić kod Angulara 1.4 na 1.5, co byłoby główną zmianą?
+Wprowadzenie/wymiana istniejącego kodu na komponenty.  
+https://www.sitepoint.com/upgrade-to-angular-components/  
+
+*Jaka jest różnica między użyciem  ng-show/ng-hide a ng-if?
+Ng-if usuwa lub tworzy fragment drzewa DOM w zależności od przypisanego wyrażenia. Kiedy fragment jest usuwany, niszczone jest jego scope (nowe scope powstaje podczas dodawania elementu).  
+Ng-show chowa lub pokazuje elementy html w zależności od przypisanego wyrażenia. Element jest chowany lub pokazywany za pomocą klas CSS predefiniowanych w AngularJS (ustawiany jest display: none z flagą !important).  
+http://stackoverflow.com/a/19177773  
+
+* Jaka jest różnica między one-way binding a two-way binding?  
+W two-way binding jeśli zmienię dane w parent scope lub w child scope, obie wartości zostaną zaktualizowane. W one-way binding mamy możliwość zmiany danych w child scope bez wpływu na parent scope, ale jeśli zmienimy coś w parent scope zmiana ta zostanie odzwierciedlona w child scope.   
+https://toddmotto.com/one-way-data-binding-in-angular-1-5/  
+
+* Wyjaśnij działanie $scope.$apply()  
+$scope.$apply() przyjmuje funkcję lub wyrażenie angularowe, wykonuje je i wywołuje $scope.$digest() aby zaktualizować wszystkie wiązania. Kiedy potrzebujemy tej funkcjonalności? Bardzo rzadko. Angular zazwyczaj wywołuje ją automatycznie, jedynie kiedy chcemy wykonać jakiś kod w nowym cyklu i nie jest to kod stworzony za pomocą bibliotek Angulara. Np. jeśli używamy setTimeout, kod wykona się w nowym cyklu i angular nie będzie wiedział, że zaszła jakas zmiana danych, jeśli nie wywołamy ręcznie $scope.$apply().  
+http://jimhoskins.com/2012/12/17/angularjs-and-apply.html  
 
 ### React
 
@@ -1459,7 +1821,7 @@ Twitter.propTypes = {
 };
 ```
 
-Functions as children![Functions as children](https://facebook.github.io/react/docs/jsx-in-depth.html#functions-as-children)
+[Functions as children](https://facebook.github.io/react/docs/jsx-in-depth.html#functions-as-children)
 
 * Jaka jest różnica między kontrolowanym a niekontrolowanym komponentem?
 
@@ -1467,53 +1829,53 @@ Komponent kontrolowany jest to komponent w którym React kontroluje wszystko i j
 
 W komponentach niekontrolowanych dane pochodzą bezpośrednio z drzewa DOM. Aby dostać się do tych danych używa się event handlerów lub ref (polecane).
 
-Controlled components![Controlled components](https://facebook.github.io/react/docs/forms.html#controlled-components)
-Uncontrolled components![Uncontrolled components](https://facebook.github.io/react/docs/uncontrolled-components.html)
+[Controlled components](https://facebook.github.io/react/docs/forms.html#controlled-components)
+[Uncontrolled components](https://facebook.github.io/react/docs/uncontrolled-components.html)
 
 * W którym zdarzeniu cyklu życia elementu wykonuje się rządania AJAX i dlaczego?
 
 Rządania ajax powinny być wykonywane w zdarzeniu componentDidMount. Dzieje się tak ponieważ, gdy rządanie zwróci dane, zazwyczaj chcemy je przypisać do stanu komponentu, a to może zostać wykonane tylko na komponentach już zamontowanych.
 
-State and lifecycle![State and lifecycle](https://facebook.github.io/react/docs/state-and-lifecycle.html)
+[State and lifecycle](https://facebook.github.io/react/docs/state-and-lifecycle.html)
 
 * Co robi shouldComponentUpdate i dlaczego jest takie ważne?
 
 shouldComponentUpdate jest ważne z powodów wydajnościowych.
 Jeżeli wiemy, że pewna cześć naszego UI się nie zmieni, nie ma powodu żeby React dokonywał sprawdzania, czy powinien uaktualniać tę część. Zwracając false z metody shouldComponentUpdate, dajemy znać Reactowi że obecny komponent i wszystkie jego dzieci pozostaną niezmienione.
 
-Optimizing performance![Optimizing performance](https://facebook.github.io/react/docs/optimizing-performance.html)
+[Optimizing performance](https://facebook.github.io/react/docs/optimizing-performance.html)
 
 * Jak dać znać Reactowi, żeby zbudował w Production mode i co to dokładnie spowoduje?
 
 Przeważnie powinno się użyć DefinePlugin dla Webpacka aby ustawić wartość zmiennej środowiskowej NODE_ENV na "production". Spowoduje to usunięcie dodatkowych ostrzeżeń oraz m.in. walidacji propTypes.
 
-Development and production![Development and production](https://facebook.github.io/react/docs/installation.html#development-and-production-versions)
+[Development and production](https://facebook.github.io/react/docs/installation.html#development-and-production-versions)
 
 * Dlaczego użyłbyś React.Children.map(props.children, () => ) zamiast props.children.map(() => )
 
 Ponieważ props.children może być zarówno tablicą komponentów, ale także pojedynczym komponentem. Jeśli przekażemy pojedynczy komponent do natywnej funkcji map, funkcja zwróci bład. React.Children.map potrafi obsłużyć dwa przypadki, gdy children są tablicą oraz elementem.
 
-React.Children.map![React.Children.map](https://facebook.github.io/react/docs/react-api.html#react.children.map)
+[React.Children.map](https://facebook.github.io/react/docs/react-api.html#react.children.map)
 
 * Opisz eventy w React.
 
 W React natywne eventy opakowane są w instancje SyntheticEvent, które rozwiązują problem różnić w działaniu eventów między przeglądarkami. SyntheticEvent używa się tak samo jak natywnych eventów, mają ten sam interfejs.
 React w rzeczywistośći nie przypisuje eventów do samych child nodes. Nasłuchuje on wszystkich eventów na najwyższym komponencie i używa pojedynczego event listenera.
 
-Handling events![Handling events](https://facebook.github.io/react/docs/handling-events.html)
+[Handling events](https://facebook.github.io/react/docs/handling-events.html)
 
 * Jaka jest różnica między createElement i cloneElement?
 
 createElement jest funkcją, która przekształca JSX na obiekt zrozumiały dla React, który jest używany do tworzenia elementów (obiektowej reprezentacji interfejsu użytkownika). cloneElement służy do klonowaina elementów i przekazywania im nowych props.
 
-Create Element![Create Element](https://facebook.github.io/react/docs/react-api.html#createelement)
-Clone Element![Clone Element](https://facebook.github.io/react/docs/react-api.html#cloneelement)
+[Create Element](https://facebook.github.io/react/docs/react-api.html#createelement)
+[Clone Element](https://facebook.github.io/react/docs/react-api.html#cloneelement)
  
 * Czym jest drugi argument, który możemy przekazać do funkcji setState i do czego służy?
 
 Funkcja setState jest asynchroniczna dlatego przyjmuje callback jako drugi argument. Funkcja ta jest wykonywana, gdy setState skończył swoje wykonanie i komponent jest ponownie renderowany.
 
-setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
+[setState](https://facebook.github.io/react/docs/react-component.html#setstate)
 
 * Jak zaimplementujesz globalną obsługę wyjątków w całej aplikacji w angularze?
 Angular ma wbudowany error handler $exceptionHandler, który można nadpisac w następujący sposób:
@@ -1528,6 +1890,88 @@ angular.
     };
   }]);
 ```
+
+Nic. setState może także przyjmować funkcję jako pierwszy argument. Funkcja ta pozwala na ustawienie obecnego stanu na podstawie stanu poprzedniego.
+
+setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
+
+* Jak stworzyć serwis Angulara, który zwróci Promise? Napisz przykładowy kod
+Należy wstrzyknąć $q do promisów i użyć go w ten sposób:
+
+```
+angular.factory('testService', function($q){
+ return {
+  getName: function(){
+   var deferred = $q.defer();
+
+   //API call here that returns data
+   testAPI.getName().then(function(name){
+    deferred.resolve(name)
+   })
+
+   return deferred.promise;
+  }
+ }
+})
+```
+
+https://docs.angularjs.org/api/ng/service/$q  
+
+* Gdy tworzysz dyrektywę można ją zastosować na kilka sposobów w widokach. Jakie sposoby znasz? Jak definiujesz sposoby, w jakie dyrektywa będzie użyta?
+Dyrektywy mogą być wykorzystane jako elementy, atrybuty lub klasy, ewentualnie komentarze. Aby zdefiniować sposób ich użycia, należy użyć opcji restrict:
+‘A’ – dyrektywa używana jako atrybut  
+‘E’ – dyrektywa używana jako element  
+‘C’ – dyrektywa używana jako klasa  
+'M' - dyrektywa używana jako komentarz  
+Opcje mogą być łączone, np. dyrektywa z restrict: ‘AEC’ może być użyta jako atrybut, klasa lub element.  
+
+* Co stanowi o mocy metody angular.copy()?
+Tworzy ona głęboką kopię zmiennej, tzn wskazującą na nowy fragment pamięci. Zwykła kopia sprawia, że dwie zmienne wskazują na ten sam fragment pamięci (odwołują się do niego), zatem zmiana jednej z nich spowoduje również zmianę kopii.  
+https://docs.angularjs.org/api/ng/function/angular.copy  
+
+* Kiedy używać dyrektyw jako elementów a kiedy jako atrybutów?  
+Należy używać elementów kiedy tworzony komponent kontroluje cały szablon, a atrybutów gdy tylko dodajemy jakąś funkcjonalność do istniejącego elementu.  
+https://docs.angularjs.org/guide/directive  
+* Jak zresetować $timeout, $interval(), i jak wyłączyć $watch()?
+Aby zresetować $timeout/$interval() należy przypisać ich wynik do zmiennej i potem wywołac na niej .cancel(). Aby wyłączyć $watch wystarczy go wywołać.  
+
+```
+var customTimeout = $timeout(function () {
+// arbitrary code 
+}, 55);
+$timeout.cancel(customTimeout);
+var deregisterWatchFn = $rootScope.$watch(‘someGloballyAvailableProperty’, function (newVal) {
+if (newVal) {
+// we invoke that deregistration function, to disable the watch
+deregisterWatchFn();
+...
+}
+});
+```
+
+* Wyjaśnij czym jest scope w AngularJS
+$scope w AngularJS jest zasięgiem widoczności danego kontrolera. Każdy kontroler posiada swój unikalny $scope do którego przypięte są funkcje oraz zmienne widoczne w warstwie widoku $scope jest jedynym elementem, który jest w stanie wystawić dane dla widoku i komunikować się z widokiem.  
+http://www.p-programowanie.pl/kurs-angular/scope-i-wyrazenia/  
+https://docs.angularjs.org/guide/scope  
+
+* Czym są dyrektywy?
+Dyrektywy to znaczniki na elementach DOM (atrybuty, nazwy elementów, komentarze lub klasy css), które mówią kompilatorowi html Angulara aby przywiązać specyficzne zachowanie do danego elementu przez event listenery lub nawet aby przekształcić cały element DOM i jego dzieci.  
+https://docs.angularjs.org/guide/directive  
+
+* Czym jest singleton i gdzie jest używany w angularJS?
+Jest to kreacyjny wzorzec projektowy, którego celem jest ograniczenie możliwości tworzenia obiektów danej klasy do jednej instancji oraz zapewnienie globalnego dostępu do stworzonego obiektu. W angularze pattern ten jest wykorzystywany w mechanizmie dependency injection i w serwisach.  
+http://joelhooks.com/blog/2013/05/01/when-is-a-singleton-not-a-singleton/  
+https://pl.wikipedia.org/wiki/Singleton_(wzorzec_projektowy)  
+
+* Czym jest interceptor? Jakie są ich popularne zastosowania?
+Jest to funkcja pośrednicząca, przez którą przechodzą requesty $http. Są to serwisy rejestrowane przez $httpProvider przez dopisywanie ich do tablicy $http.Provider.interceptors. Są dwa typy requestów przechodzących przez interceptor, request i response http (oraz odpowiednie błędy). Tego rodzaju kod jest przydatny do obsługi błędów, potwierdzania tożsamości i ogólnie do przekształcania requestów i responsów http.  
+https://docs.angularjs.org/api/ng/service/$http  
+
+* Jak schowasz element html przez kliknięcie guzikiem w angularJs?  
+Użyje dyrektywy ng-hide uzależnionej od zmiennej typu boolean, którą będę togglował za pomocą ng-click na buttonie.  
+
+* Jak wyłączysz (ustawisz na disabled) button przez zmianę stanu checkboxa?  
+Użyję dyrektywy ng-disabled, której stan przypiszę do stanu checkboxa.  
 
 Jest to użyteczne do wysyłania błędów np. na serwer przechowujący wyjątki aplikacji. Błędy wewnątrz callbacków w eventach nie trafią do tego serwisu, ale możemy je tam wysłać ręcznie posługując się blokiem try catch i wywołując  $exceptionHandler(err).   
 https://docs.angularjs.org/api/ng/service/$exceptionHandler  
