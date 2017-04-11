@@ -508,6 +508,9 @@ No, but I'm familiar with Jade, EJS, HandlebarsJs, Underscore Templates, Mustach
 
   https://www.sitepoint.com/css-techniques-for-retina-displays/
 * Is there any reason you'd want to use `translate()` instead of *absolute positioning*, or vice-versa? And why?
+  Yes, translate do not cause the browser to repaint when it is used, which if you're looking for the best performance is undoubtly better.
+
+  https://www.paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/
 
 #### JS Questions:
 
