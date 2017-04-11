@@ -1383,6 +1383,14 @@ console.log('three');
   http://www.tutorialsteacher.com/angularjs/what-is-angularjs
 * Wyjaśnij dyrektywę ng-controller.
   Dyrektywa ng-controller dołącza klasę kontrolera do widoku. Jest to kluczowy aspekt tego, jak Angular wspiera MVC. Ng-controller tworzy również nowy zakres.
+
+* Jaka jest różnica między serwisami, a fabrykami?
+  - serwis jest funkcją konstruktora, fabryka nie
+  - fabryka zwraca obiekt
+  - serwisy pozwalają na użycie klas z ES6
+
+  https://blog.thoughtram.io/angular/2015/07/07/service-vs-factory-once-and-for-all.html
+
 * Czym jest hierarchia zakresów w AngularJS?
   Obiekt $scope używany przez widok w AngularJS jest zorganizowany w hierarchię. Jest to 'root scope', $rootScope może mieć jedno lub więcej dzieci-zakresów. Każdy kontroler posiada swój własny zakres ($scope) (który jest dzieckiem $rootScope), więc utworzone zmiennie, gdziekolwiek w jednym zakresie kontrolera będą dostępne przez widok bazujący na tym kontrolerze.
 
