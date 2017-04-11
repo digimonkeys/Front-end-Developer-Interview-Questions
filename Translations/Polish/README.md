@@ -224,7 +224,8 @@ https://www.w3.org/International/questions/qa-html-language-declarations
   - Co się dzieje gdy wywołujesz metodę call setState?
   - Jaka jest rożnica pomiędzy Elementem a Komponentem w React?
 * Kiedy powinieneś użyć komponentu klasy a kiedy komponentu funkcyjnego?
-    Komponentu klasy powinienem użyć gdy wiem, że klasa będzie posiadała swoj własny stan.
+    Komponentu klasy powinienem użyć gdy wiem, że klasa będzie posiadała swoj własny stan
+    oraz gdy będę chciał skorzystać z lifecycle metod.
     komponentu funkcyjego mogę użyć gdy komponent nie ma stanu, mogę do tego użyć
     np. const, arrow function lub innych cech składni ES6.
 
