@@ -1413,5 +1413,6 @@ This document started in 2009 as a collaboration of [@paul_irish](https://twitte
 It has since received contributions from over [100 developers](https://github.com/h5bp/Front-end-Developer-Interview-Questions/graphs/contributors).
 
 * What is DDO (Directive Definition Object)?  
-The directive definition object provides instructions to the compiler.  
+The directive definition object provides instructions to the compiler. Instructions provide a lot of informations about directive behaviour, eg. template to use (or template url to load), restric which restricts the directive to a specific directive declaration style, controller constructor function, controllerAs identifier name for a reference to the controller in the directive's scope and many more.  
+
 https://docs.angularjs.org/api/ng/service/$compile#directive-definition-object  
