@@ -1470,5 +1470,5 @@ Nic. setState może także przyjmować funkcję jako pierwszy argument. Funkcja 
 setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
 
 * Czym jest DDO (Directive Definition Object)?
-DDO to obiekt definiujący dyrektywę, zawiera on instrukcje tworzenia dyrektywy dla kompilatora.  
+DDO to obiekt definiujący dyrektywę, zawiera on instrukcje tworzenia dyrektywy dla kompilatora.  Instrukcje te dostarczają wielu informacji o pożądanym zachowaniu dyrektywy, np. jej szablon htmlowy lub url do jego załadowania, restric - ograniczenie stylu deklarowania dyrektywy, funkcję kontrolera, controllerAs - nazwę identyfikującą kontroler wewnątrz scope dyrektywy i wiele innych.  
 https://docs.angularjs.org/api/ng/service/$compile#directive-definition-object  
