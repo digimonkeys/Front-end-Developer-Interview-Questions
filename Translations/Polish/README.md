@@ -926,7 +926,8 @@ console.log('three');
   - Serwisy, dyrektywy, filtry, animacje
   - Kontrolery
   - Metoda 'run'
-  - Metoda 'config'
+  - Dostawcy (providers)
+  - Fabryki
 
 ### Pytania dodatkowe (zabawne):
 
