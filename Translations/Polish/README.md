@@ -934,6 +934,10 @@ console.log('three');
 * Czy masz jakiś swój własny projekt na boku? Jaki?
 * Jaka jest Twoja ulubiona funkcja w Internet Explorer?
 
-* Czy jest dobra czy złą praktyką łączenie jQuery z Angularem?
-Złą, ponieważ 19 na 20 razy dany problem da się lepiej rozwiązać angularem bez jQuery, więc zwłaszcza początkujący deweloperzy powinni unikac tego połączenia.  
+Its rather bad. JQuery directly manipulates the DOM, and in Angular it is the model that drives the view and most of the times direct DOM manipulation is not required. Usually things that we want to accomplish using jQuery plugins can be done with Angular directives. One of the most important parts in Angular development is: you shouldn't manipulate the DOM from your controllers, ever. This is fine in jQuery, but in Angular, you should modify your model and let Angular render it. If you need to create HTML dynamically, you should do so in a directive. Everything else violates the "separation of concerns" principle.  
 http://ng-learn.org/2014/01/Dom-Manipulations/  
+http://stackoverflow.com/a/29505812  
+* Czy jest dobra czy złą praktyką łączenie jQuery z Angularem?
+Raczej złą. JQuery bezpośrednio manipuluje DOM, a w Angularze to model wpływa na widok i w większości wypadków bezpośrednie zmiany DOM są niepotrzebne. Zazwyczaj rzeczy, które chcielibyśmy osiągnąć używając pluginów jQuery można łatwo wykonać dzięki dyrektywom Angulara. Jedną z najważniejszych rzeczy w developingu z Angularem jest zasada, by nie używać kontrolerów do manipulacji DOM. Powinniśmy zmieniać model, na podstawie którego Angular renderuje html. Jeśli potrzebujemy dynamicznego renderowania html, powinniśmy użyć dyrektyw. Każde inne zachowanie narusza zasadę "separacji zadań".  
+http://ng-learn.org/2014/01/Dom-Manipulations/  
+http://stackoverflow.com/a/29505812  
