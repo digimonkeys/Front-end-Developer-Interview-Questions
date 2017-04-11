@@ -221,9 +221,11 @@ https://www.w3.org/International/questions/qa-html-language-declarations
   }
 
   ```
-* Co się dzieje gdy wywołujesz metodę call setState?
+* Co się dzieje gdy wywołujesz metodę setState?
     Zmieniam wartosć w stanie komponentu co jest wychwytywane przez React
-    i prowadzi do ponownego renderowania tylko tego elementu, ktory uległ zmianie.
+    i prowadzi do ponownego renderowania całego komponentu z dziećmi w virtual DOM.
+
+    http://lucybain.com/blog/2017/react-js-when-to-rerender/
 
   - Jaka jest rożnica pomiędzy Elementem a Komponentem w React?
   - Kiedy powinieneś użyć komponentu klasy a kiedy komponentu funkcyjnego?
