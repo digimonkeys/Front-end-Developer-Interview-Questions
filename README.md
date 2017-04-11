@@ -862,7 +862,8 @@ console.log('three');
   - Services, directives, filters, animations
   - Controllers
   - Run method
-  - Config method
+  - Providers
+  - Factories
 
 #### Fun Questions:
 
