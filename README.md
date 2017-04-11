@@ -1413,5 +1413,5 @@ This document started in 2009 as a collaboration of [@paul_irish](https://twitte
 It has since received contributions from over [100 developers](https://github.com/h5bp/Front-end-Developer-Interview-Questions/graphs/contributors).
 
 * How would you validate a text input field for a twitter username, including the @ symbol?  
-You would use the ngPattern directive to perform a regex match that matches Twitter usernames.
+I would use the ngPattern directive to perform a regex match that matches Twitter usernames.
 https://docs.angularjs.org/api/ng/directive/ngPattern  
