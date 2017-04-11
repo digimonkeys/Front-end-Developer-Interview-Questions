@@ -882,7 +882,7 @@ This document started in 2009 as a collaboration of [@paul_irish](https://twitte
 It has since received contributions from over [100 developers](https://github.com/h5bp/Front-end-Developer-Interview-Questions/graphs/contributors).
 
 * On which types of component can we create a custom directive?  
-AngularJS provides support to create custom directives for following type of elements :  
+AngularJS provides support to create custom directives for following type of elements (one or many):  
 Element directives − Directive activates when a matching element is encountered.  
 Attribute − Directive activates when a matching attribute is encountered.  
 CSS − Directive activates when a matching css style is encountered.  
