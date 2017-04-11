@@ -1413,5 +1413,5 @@ This document started in 2009 as a collaboration of [@paul_irish](https://twitte
 It has since received contributions from over [100 developers](https://github.com/h5bp/Front-end-Developer-Interview-Questions/graphs/contributors).
 
 * How would you programatically change or adapt the template of a directive before it is executed and transformed?  
-You would use the compile function. The compile function gives you access to the directive’s template before transclusion occurs and templates are transformed, so changes can safely be made to DOM elements. This is very useful for cases where the DOM needs to be constructed based on runtime directive parameters.  
+I would use the compile function. The compile function gives us access to the directive’s template before transclusion occurs and templates are transformed, so changes can safely be made to DOM elements. This is very useful for cases where the DOM needs to be constructed based on runtime directive parameters.  
 https://docs.angularjs.org/api/ng/service/$compile  
