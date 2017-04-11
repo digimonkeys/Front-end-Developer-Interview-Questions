@@ -970,10 +970,11 @@ $(".foo div#bar:eq(0)")
   https://css-tricks.com/css-sprites/
 * Jakie znasz techniki kasowania (clearing) i kiedy wskazane jest ich stosowanie?
 * Jakie są Twoje ulubione techniki zastępowania obrazów i kiedy je stosujesz?
-  Zastępowanie obrazów CSS jest techniką zastępowania tekstowego elementu (zazwyczaj tagu nagłówkowego) obrazem. Można użyć do tego <h1> i tekstu dla benefitów płynących z dostępności oraz SEO.
+  Zastępowanie obrazów CSS jest techniką zastępowania tekstowego elementu (zazwyczaj tagu nagłówkowego) obrazem. Można użyć do tego ``<h1>`` i tekstu dla benefitów płynących z dostępności oraz SEO.
   Używam zastępowania obrazów (w zależności od potrzeby), kiedy chcę by moja strona była bardziej dostępna dla urządzeń takich jak czytniki itp. Zazwyczaj używam do tego celu ukrywania tagu span poprzed 'display: none'.
 
   #1: Ukrywanie tagu span poprzez 'display: none'
+  ```
   <h1 id="logo">
     <span>CSS-Tricks</span>
   </h1>
@@ -986,8 +987,10 @@ $(".foo div#bar:eq(0)")
   h1#logo span {
     display: none;
   }
+  ```
 
   #2: Text-indent poza zasięgiem wzroku(ekranu)
+  ```
   <h1 id="logo">
     CSS-Tricks
   </h1>
@@ -998,8 +1001,10 @@ $(".foo div#bar:eq(0)")
     background: url(test.png);
     text-indent: -9999px;
   }
+  ```
 
   #3: Niewidzialny tekst
+  ```
   <h3 class="leon">
     <span>CSS-Tricks</span>
   </h3>
@@ -1015,6 +1020,7 @@ $(".foo div#bar:eq(0)")
     height: 0;
     overflow: hidden;
   }
+  ```
 
   https://css-tricks.com/css-image-replacement/
 * Haczyki właściwości CSS, warunkowe dołączanie plików .css lub... coś innego?
@@ -1099,21 +1105,22 @@ $(".foo div#bar:eq(0)")
   - inline-table - liniową tabelę
   - run-in - blok lub liniowy element, w zależności od kontekstu
   Pozwala elementowi zachowywać się jak...
-  - list-item - <li>
-  - table - <table>
-  - table-caption - <caption>
-  - table-column-group - <colgroup>
-  - table-header-group - <thead>
-  - table-footer-group - <tfoot>
-  - table-row-group - <tbody>
-  - table-cell - <td>
-  - table-column - <col>
-  - table-row - <tr>
+  - list-item - ``<li>``
+  - table - ``<table>``
+  - table-caption - ``<caption>``
+  - table-column-group - ``<colgroup>``
+  - table-header-group - ``<thead>``
+  - table-footer-group - ``<tfoot>``
+  - table-row-group - ``<tbody>``
+  - table-cell - ``<td>``
+  - table-column - ``<col>``
+  - table-row - ``<tr>``
   - none - element nie zostanie wyświetlony
   - initial - ustawia wartość tej właściwości do jej domyślnej wartości
   - inherit - odziedzicza wartość po elemencie nadrzędnym (rodzicu)
 
   https://www.w3schools.com/cssref/pr_class_display.asp
+
 * Jaka jest różnica między display: 'inline' i 'inline-block'
   Elementy z 'display: inline-block' są jak elementy z 'display: inline', lecz mogą mieć szerokość oraz wysokość. To znaczy, że można używać elementów 'inline-block' jako bloków wewnątrz tekstu lub innych elementów.
   
@@ -1466,7 +1473,7 @@ console.log('three');
 
   http://stackoverflow.com/questions/21094569/how-to-unit-test-a-filter-in-angularjs-1-x
 
-  * Czym jest wiązanie danych (data binding) w AngularJS?
+* Czym jest wiązanie danych (data binding) w AngularJS?
   Data-binding w aplikacjach w AngularJS jest automatyczną synchronizacją danych między warstwą modelu oraz warstwą widoku komponentów. Sposób w jaki AngularJS implementuje data-binding pozwala traktować warstwę modelu jako jedno-źródło-prawdy w aplikacji. Warstwa widoku jest projekcją warstwy modelu przez cały czas. Kiedy zachodzą zmiany w warstwie modelu, warstwa widoku również się zmienia i vice versa.
 
   https://docs.angularjs.org/guide/databinding
