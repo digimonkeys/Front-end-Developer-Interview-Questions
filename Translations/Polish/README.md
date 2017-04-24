@@ -1396,6 +1396,12 @@ console.log('three');
   http://www.tutorialsteacher.com/angularjs/what-is-angularjs
 * Wyjaśnij dyrektywę ng-controller.
   Dyrektywa ng-controller dołącza klasę kontrolera do widoku. Jest to kluczowy aspekt tego, jak Angular wspiera MVC. Ng-controller tworzy również nowy zakres.
+* Które komponenty mogą być wstrzyknięte jako zależności w AngularJS?
+  - Serwisy, dyrektywy, filtry, animacje
+  - Kontrolery
+  - Metoda 'run'
+  - Dostawcy (providers)
+  - Fabryki
 
 * Jaka jest różnica między serwisami, a fabrykami?
   - serwis jest funkcją konstruktora, fabryka nie
