@@ -440,16 +440,16 @@ No, but I'm familiar with Jade, EJS, HandlebarsJs, Underscore Templates, Mustach
   - inline-table - an inline-level table
   - run-in - either block or inline, depending on context
   Let the element behave like...
-  - list-item - <li>
-  - table - <table>
-  - table-caption - <caption>
-  - table-column-group - <colgroup>
-  - table-header-group - <thead>
-  - table-footer-group - <tfoot>
-  - table-row-group - <tbody>
-  - table-cell - <td>
-  - table-column - <col>
-  - table-row - <tr>
+  - list-item - ``<li>``
+  - table - ``<table>``
+  - table-caption - ``<caption>``
+  - table-column-group - ``<colgroup>``
+  - table-header-group - ``<thead>``
+  - table-footer-group - ``<tfoot>``
+  - table-row-group - ``<tbody>``
+  - table-cell - ``<td>``
+  - table-column - ``<col>``
+  - table-row - ``<tr>``
   - none - the element will not be displayed
   - initial - sets this property to its default value
   - inherit - inherits this property from its parent
@@ -1406,7 +1406,7 @@ console.log('three');
   
   http://stackoverflow.com/questions/21094569/how-to-unit-test-a-filter-in-angularjs-1-x
 
-  * What is data binding in AngularJS?
+* What is data binding in AngularJS?
   
   Data-binding in AngularJS apps is the automatic synchronization of data between the model and view components. The way that AngularJS implements data-binding lets you treat the model as the single-source-of-truth in your application. The view is a projection of the model at all times. When the model changes, the view reflects the change, and vice versa.
 
