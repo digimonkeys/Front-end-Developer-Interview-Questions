@@ -462,6 +462,15 @@ https://www.w3.org/International/questions/qa-html-language-declarations
   }
 
   ```
+  After mounting the `MyComponent` component in the DOM tree, a `clickHandler()`
+  event is assigned to the` myComponentDiv`. This feature increases one click
+  count by updating component state. The default/initial number of clicks is stored
+  in the component state, and is 0. In render() via JSX, we display html elements,
+  page content, values ​​from the component state or other properties assigned
+  to that component by framing them in parentheses {}.
+  When a component is unmounted in the `componentWillUnmount ()` function,
+  it is removed an event that listens for clicks.
+
   - What happens when you call setState?
 *  What’s the difference between an Element and a Component in React?
     Element:

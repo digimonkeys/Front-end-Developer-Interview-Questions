@@ -272,6 +272,17 @@ https://www.w3.org/International/questions/qa-html-language-declarations
   }
 
   ```
+  Po zamontowaniu komponentu `MyComponent` w drzewie DOM, poprzez referencję do
+  `myComponentDiv` przypisany jest event reagujący na 'click' i wywołujący funkcję
+  `clickHandler()`. Funkcja ta zwiększa o jeden liczbę kliknięć aktualizując stan komponentu.
+  Domyślna/początkowa liczba kliknięć zapisana jest w stanie komponentu i jest to 0.
+  W funkcji render poprzez JSX wyświetlamy zarowno elementy html, treść strony
+  jak i wartości ze stanu komponentu czy inne zmienne przypiasane do tego komponentu
+  poprzez obramowanie ich w nawiasy {}.
+  Gdy komponent jest odmontowywany w  funkcji `componentWillUnmount()` usuwany
+  event nasłuchujący kolejnych kliknięć.
+
+
   - Co się dzieje gdy wywołujesz metodę call setState?
 * Jaka jest rożnica pomiędzy Elementem a Komponentem w React?
     Element:
