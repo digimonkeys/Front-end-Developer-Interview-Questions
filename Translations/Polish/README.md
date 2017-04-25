@@ -315,7 +315,14 @@ https://www.w3.org/International/questions/qa-html-language-declarations
     manipulacją drzewem DOM i do dodawania metod do komponentow. Poleca się ich
     używanie w ostateczności.
 
-  - Czym są klucze w React i czemu są ważne?
+* Czym są klucze w React i czemu są ważne?
+    Gdy renderujemy powtarzające się elementy np. listę za pomocą .map każdy kolejny
+    element <li> musi posiadać swoj uniklany klucz w drzewie DOM. Dlatego podajemy
+    takiemu elementowi właściwość <li key={key}>.
+    Jest to ważne ponieważ w React nie wszystko posiada swoje odwzorowanie w virtual DOM,
+    niektore zmiany, bez przypisania unikalnych kluczy mogą pozostać niezauważone.
+
+    https://coderwall.com/p/jdybeq/the-importance-of-component-keys-in-react-js
 
 ### Pytania JS:
 

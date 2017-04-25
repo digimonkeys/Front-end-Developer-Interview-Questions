@@ -502,7 +502,14 @@ https://www.w3.org/International/questions/qa-html-language-declarations
     Used to return a reference to an element. They are useful to manipulating
     the DOM tree and adding methods to components. They are  recommend as a last resort.
 
-  - What are keys in React and why are they important?
+ * What are keys in React and why are they important?
+    When we render repetitive elements eg. a list with .map each <li> element
+    must have its own unique key in the DOM tree. So we give such an element
+    property <li key = {key}>.
+    This is important because in React not everything has its mapping in the virtual DOM,
+    Some changes, without assigning unique keys, may remain unnoticed.
+
+    https://coderwall.com/p/jdybeq/the-importance-of-component-keys-in-react-js
 
 
 #### JS Questions:
