@@ -283,7 +283,12 @@ https://www.w3.org/International/questions/qa-html-language-declarations
   event nasłuchujący kolejnych kliknięć.
 
 
-  - Co się dzieje gdy wywołujesz metodę call setState?
+ * Co się dzieje gdy wywołujesz metodę setState?
+    Zmieniam wartosć w stanie komponentu co jest wychwytywane przez React
+    i prowadzi do ponownego renderowania całego komponentu z dziećmi w virtual DOM.
+
+    http://lucybain.com/blog/2017/react-js-when-to-rerender/
+    
 * Jaka jest rożnica pomiędzy Elementem a Komponentem w React?
     Element:
     - Opisują drzewo DOM
