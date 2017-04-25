@@ -492,11 +492,16 @@ https://www.w3.org/International/questions/qa-html-language-declarations
     - The render () function returns the DOM element tree
     - Has access to life cycle methods
 
-  - When would you use a Class Component over a Functional Component?
+* When would you use a Class Component over a Functional Component?
+    The class component should be used when I know that the class will have its own state.
+    And when I want to use lifecycle methods.
+    The function component can be used when the component has no state,
+    I can use eg. const, arrow function or other ES6 syntax features.
+    
 * What are refs in React and why are they important?
     Used to return a reference to an element. They are useful to manipulating
     the DOM tree and adding methods to components. They are  recommend as a last resort.
-    
+
   - What are keys in React and why are they important?
 
 

@@ -304,7 +304,12 @@ https://www.w3.org/International/questions/qa-html-language-declarations
     - funkcja render() zwraca drzewo DOM elementow
     - ma dostęp do metod cykli życia
 
-  - Kiedy powinieneś użyć komponentu klasy a kiedy komponentu funkcyjnego?
+* Kiedy powinieneś użyć komponentu klasy a kiedy komponentu funkcyjnego?
+    Komponentu klasy powinienem użyć gdy wiem, że klasa będzie posiadała swoj własny stan
+    oraz gdy będę chciał skorzystać z lifecycle metod.
+    komponentu funkcyjego mogę użyć gdy komponent nie ma stanu, mogę do tego użyć
+    np. const, arrow function lub innych cech składni ES6.
+    
 * Czym są referencje/refs w React i czemu są ważne?
     Używane są aby zwrocić referencję do danego elementu. Przydają się do
     manipulacją drzewem DOM i do dodawania metod do komponentow. Poleca się ich
