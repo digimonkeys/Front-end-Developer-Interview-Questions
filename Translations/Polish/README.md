@@ -171,10 +171,61 @@ https://www.w3.org/International/questions/qa-html-language-declarations
 #### Pytania REACT:
 
 * Czym jest React? Oraz czym się rożni od innych frameworkow?
+  React jest biblioteką, pozwalają na tworzenie komponowalnych interfejsow użytkownika.
+  Posiada wirtualne drzewo DOM, a podczas zmiany jakichś danych renderowane są tylko te elementy,
+  ktore uległy zmianie. Porownywany do warstwy V (Widok) w MVC. Głownym założeniem jest
+  tworzenie reużywalnych komponentow.
+
+  Rożnice:
+    - Wirtualne drzewo DOM
+    - Ponowne renderowanie tylko tych elementow, ktore uległy zmianie
+    - Wykorzystuje JSX - połączenie javascriptu i html
+    - Potrzebuje bibliotek takich jak Flux lub Redux do implementowania pełnych architektur
+
 * Co się dzieje w trakcie cykli zycia komponentow React?
+  React.Component posiada trzy głowne cykle swojego życia, pozwalają one na zarzązdanie
+  komponentem zarowno przed dodaniem go do drzewa dom, w trakcie jego życia
+  oraz w momencie jego usunięcia. Są to:
+  1. montowanie - metody tworzone podczas dodawania do drzewa DOM:
+    - constructor()
+    - componentWillMount()
+    - render()
+    - componentDidMount()
+  2. Odświeżanie - metody wywoływane w przypadku zmiany stanu komponentu lub zmiennych w obiekcie this.props:
+    - componentWillReceiveProps()
+    - shouldComponentUpdate()
+    - componentWillUpdate()
+    - render()
+    - componentDidUpdate()
+  3. Demontowanie - metoda wywoływana kiedy komponent jest usuwany z drzewa DOM:
+    - componentWillUnmount()
+
 * Co możesz powiedzieć o JSX?
+  Jest to tzw. Lukier składniowy/syntax sugar dla funkcji
+  React.createElement(component, props, ...children). Pozwala ona pisanie kodu
+  ktory jest połączeniem javascriptu i html wewnątrz funkcji render danego komponentu.
+  Składnia JSX może być wykorzystywana do renderowania zarowno zwyklych elementow HTML
+  jak i innych komponentow React, przy czym te muszą zaczynać się od wielkiej
+  litery.
+
 * Czy jesteś obeznany z Flux?
-* Czym są bezstanowe elementy?
+  Z Flux nie. Natomiast posiadam doświadczenie z Redux, ktory wywodzi się z Flux'a.
+  Najprościej mowiąc Redux jest to funkcja, która wywoływana jest pomiędzy rozgłoszeniem akcji
+  a momentem, w którym akcja ta zostaje obsłużona przez „reducer”.
+  Redux posiada trzy głowne zasady:
+  - Pojedyncze źródło prawdy – stan całej aplikacji przetrzymywany jest
+    w drzewie obiektów wewnątrz pojedynczego obiektu store
+  - Stan jest tylko do odczytu – jedynym sposobem na zmianę stanu jest wywołanie
+    akcji, która zwraca obiekt opisujący co powinno się stać
+  - Zmiany wykonywane są w ramach czystych funkcji – aby określić jak drzewo
+    stanu transformowane jest przez akcje musisz tworzyć „czyste reducery”
+
+* Czym są bezstanowe komponenty?
+  Komponenty bezstanowe są to komponenty, ktore nie mają w swoim wnętrzu `this.state`.
+  Inne spotykane nazwy to czyste lub głupie komponenty. Można je zadeklarować za pomocą
+  const i arrow function podobnie jak i wszystkie jego wewnętrze funkcje.
+  Dzięki czemu nie musimy się przejmować `this` wewnątrz komponentu.
+
 * Wyjaśnij ten kod:
 
   ```
@@ -221,15 +272,44 @@ https://www.w3.org/International/questions/qa-html-language-declarations
   }
 
   ```
-* Co się dzieje gdy wywołujesz metodę setState?
+  Po zamontowaniu komponentu `MyComponent` w drzewie DOM, poprzez referencję do
+  `myComponentDiv` przypisany jest event reagujący na 'click' i wywołujący funkcję
+  `clickHandler()`. Funkcja ta zwiększa o jeden liczbę kliknięć aktualizując stan komponentu.
+  Domyślna/początkowa liczba kliknięć zapisana jest w stanie komponentu i jest to 0.
+  W funkcji render poprzez JSX wyświetlamy zarowno elementy html, treść strony
+  jak i wartości ze stanu komponentu czy inne zmienne przypiasane do tego komponentu
+  poprzez obramowanie ich w nawiasy {}.
+  Gdy komponent jest odmontowywany w  funkcji `componentWillUnmount()` usuwany
+  event nasłuchujący kolejnych kliknięć.
+
+
+ * Co się dzieje gdy wywołujesz metodę setState?
     Zmieniam wartosć w stanie komponentu co jest wychwytywane przez React
     i prowadzi do ponownego renderowania całego komponentu z dziećmi w virtual DOM.
 
     http://lucybain.com/blog/2017/react-js-when-to-rerender/
+    
+* Jaka jest rożnica pomiędzy Elementem a Komponentem w React?
+    Element:
+    - Opisują drzewo DOM
+    - Nie posiadają własnych metod
+    - Jest to Lukier składniowy dla React.createElement(element)
+    - Element może być stworzony bez wcześniejszego definiowania
+    - Wewnątrz komponentu można tworzyć wiele elementow i opakować je w inny element
+    - Nie są instancją komponentu a opisem jak instancja komponentu powinna wyglądać
 
-  - Jaka jest rożnica pomiędzy Elementem a Komponentem w React?
+    Komponent:
+    - Może posiadać swoj stan
+    - Komponent musi zostać zdefiniowany np. przez React.Component
+    - funkcja render() zwraca drzewo DOM elementow
+    - ma dostęp do metod cykli życia
+
   - Kiedy powinieneś użyć komponentu klasy a kiedy komponentu funkcyjnego?
-  - Czym są referencje/refs w React i czemu są ważne?
+* Czym są referencje/refs w React i czemu są ważne?
+    Używane są aby zwrocić referencję do danego elementu. Przydają się do
+    manipulacją drzewem DOM i do dodawania metod do komponentow. Poleca się ich
+    używanie w ostateczności.
+
   - Czym są klucze w React i czemu są ważne?
 
 ### Pytania JS:
