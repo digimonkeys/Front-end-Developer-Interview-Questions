@@ -60,6 +60,7 @@ I start with gathering client requirements. Ten I create environment - bundling 
 
 
 * If you have 5 different stylesheets, how would you best integrate them into the site?
+
 * Can you describe the difference between progressive enhancement and graceful degradation? Bonus points for describing feature detection.  
 progressive enhancement considers creating site for old browsers and then enhancing application with fetures for newer browsers  
 
@@ -141,7 +142,7 @@ The steps to follow to make your Web apps accessible are as follows:
 
 Use native HTML tags wherever possible
 Make interactive elements keyboard accessible
-Provide extra markup for AT (accessibility technology) 
+Provide extra markup for AT (accessibility technology)
 https://www.w3.org/WAI/intro/aria
 http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-applications-accessible/
 
@@ -384,7 +385,7 @@ No, but I'm familiar with Jade, EJS, HandlebarsJs, Underscore Templates, Mustach
   - know which portions of the page do not have any print value (give him class .no-print with display:none)
   - use page breaks in places where page should break (.page-break { page-break-before: always; display: none; })
   - size page for print (width in inches or centimeters(both recommended))
-  
+
   https://davidwalsh.name/optimizing-structure-print-css
 * What are some of the "gotchas" for writing efficient CSS?
   - avoid key selectors that match large numbers of elements (tag and universal selectors)
@@ -512,6 +513,160 @@ No, but I'm familiar with Jade, EJS, HandlebarsJs, Underscore Templates, Mustach
 
   https://www.paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/
 
+#### REACT Questions:
+
+* What is React? How is it different from other JS frameworks?
+    React is a library that allows you to create composite user interfaces.
+    It has a virtual DOM tree, and when you change some data, only those elements are rendered,
+    those that have changed. Compared by layer V (View) in MVC. The main assumption is
+    creating reusable components.
+
+    Difference:
+      - Virtual DOM tree
+      - Re-render only those elements that have changed
+      - Uses JSX - javascript and html combination
+      - It needs libraries like Flux or Redux to implement full architectures
+
+* What happens during the lifecycle of a React component?
+    React.Component has three main life cycles, allowing them to manage
+    Component before adding it to the DOM tree, during its life
+    and when it was removed. These are:
+    1. mount - Methods created when adding to a DOM tree:
+      - constructor()
+      - componentWillMount()
+      - render()
+      - componentDidMount()
+    2. update - Methods invoked when changing the state of a component or variable in this.props object:
+      - componentWillReceiveProps()
+      - shouldComponentUpdate()
+      - componentWillUpdate()
+      - render()
+      - componentDidUpdate()
+    3. unmount - Method invoked when a component is removed from a DOM tree:
+      - componentWillUnmount()
+
+* What can you tell me about JSX?
+    This is the so-called. Syntax sugar for function
+    React.createElement (component, props, ... children).
+    It allows you to write code that is a combination of javascript and html
+    within the render function of the component. JSX syntax can be used to
+    render both regular HTML elements as well as other React components,
+    these must start with a capital letter.
+
+* Are you familiar with Flux?
+    With Flux no. On the other hand, I have experience with Redux, which comes from Flux.
+    The simplest saying Redux middleware provides a third-party extension point
+    between dispatching an action, and the moment it reaches the reducer.
+    Redux can be described in three fundamental principles:
+    - Single source of truth - The state of your whole application is stored
+      in an object tree within a single store.
+    - State is read-only - The only way to change the state is to emit an action,
+      an object describing what happened.
+    - Changes are made with pure functions - To specify how the state tree
+      is transformed by actions, you write pure reducers.
+      
+* What are stateless components?
+  Stateless components are components that do not have `this.state` inside them.
+  Other names are pure or dumb. You can declare them using the const and
+  arrow functions as well as all its internal functions. So we do not have to worry
+  about `this` inside the component.
+  
+* Explain this Code:
+
+  ```
+
+  class MyComponent extends React.Component {
+      constructor(props) {
+          // set the default internal state
+          this.state = {
+              clicks: 0
+          };
+      }
+
+      componentDidMount() {
+          this.refs.myComponentDiv.addEventListener(
+              ‘click’,
+              this.clickHandler
+          );
+      }
+
+      componentWillUnmount() {
+          this.refs.myComponentDiv.removeEventListener(
+              ‘click’,
+              this.clickHandler
+          );
+      }
+
+      clickHandler() {
+          this.setState({
+              clicks: this.clicks + 1
+          });
+      }
+
+      render() {
+          let children = this.props.children;
+
+          return (
+              <div className=”my-component” ref=”myComponentDiv”>
+                  <h2>My Component ({this.state.clicks} clicks})</h2>
+                  <h3>{this.props.headerText}</h3>
+                  {children}
+              </div>
+          );
+      }
+  }
+
+  ```
+  After mounting the `MyComponent` component in the DOM tree, a `clickHandler()`
+  event is assigned to the` myComponentDiv`. This feature increases one click
+  count by updating component state. The default/initial number of clicks is stored
+  in the component state, and is 0. In render() via JSX, we display html elements,
+  page content, values from the component state or other properties assigned
+  to that component by framing them in parentheses {}.
+  When a component is unmounted in the `componentWillUnmount ()` function,
+  it is removed an event that listens for clicks.
+
+  * What happens when you call setState?
+    I change the value in the component state what is captured by React
+    And it leads to re-rendering of the component with child elements in the virtual DOM.
+
+    http://lucybain.com/blog/2017/react-js-when-to-rerender/
+    
+*  What’s the difference between an Element and a Component in React?
+    Element:
+    - Describes the DOM tree
+    - They do not have their own methods
+    - This is a syntax sugar for React.createElement (element)
+    - Element can be created without defined
+    - Within the component, you can create multiple elements and package them into another element
+    - They are not an instance of a component and describe how a component instance should look
+
+    Component:
+    - May have his state
+    - The component must be defined eg by React.Component
+    - The render () function returns the DOM element tree
+    - Has access to life cycle methods
+
+* When would you use a Class Component over a Functional Component?
+    The class component should be used when I know that the class will have its own state.
+    And when I want to use lifecycle methods.
+    The function component can be used when the component has no state,
+    I can use eg. const, arrow function or other ES6 syntax features.
+    
+* What are refs in React and why are they important?
+    Used to return a reference to an element. They are useful to manipulating
+    the DOM tree and adding methods to components. They are  recommend as a last resort.
+
+ * What are keys in React and why are they important?
+    When we render repetitive elements eg. a list with .map each <li> element
+    must have its own unique key in the DOM tree. So we give such an element
+    property <li key = {key}>.
+    This is important because in React not everything has its mapping in the virtual DOM,
+    Some changes, without assigning unique keys, may remain unnoticed.
+
+    https://coderwall.com/p/jdybeq/the-importance-of-component-keys-in-react-js
+
+
 #### JS Questions:
 
 * Explain event delegation
@@ -590,7 +745,7 @@ No, but I'm familiar with Jade, EJS, HandlebarsJs, Underscore Templates, Mustach
     Native objects are the ones described and fully defined in the ECMAScript specification, examples:
     - Date, Math, parseInt.
     http://stackoverflow.com/questions/7614317/what-is-the-difference-between-native-objects-and-host-objects
-    
+
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
   - A Function Declaration defines a named function variable without requiring variable assignment.
   - Assigns to the person variable the value returned by the person function, in this case undefined
@@ -612,7 +767,7 @@ Object.create builds an object that inherits directly from the one passed as its
 
 - With the class keyword
 
-ECMAScript 2015 introduced a new set of keywords implementing classes. Although these constructs look like those familiar to developers of class-based languages, they are not the same. JavaScript remains prototype-based. Classes are just a syntactic sugar for creating object using constructor. 
+ECMAScript 2015 introduced a new set of keywords implementing classes. Although these constructs look like those familiar to developers of class-based languages, they are not the same. JavaScript remains prototype-based. Classes are just a syntactic sugar for creating object using constructor.
 
 Difference new vs Object.create![Difference new vs Object.create](http://stackoverflow.com/questions/4166616/understanding-the-difference-between-object-create-and-new-somefunction)
 
@@ -755,9 +910,8 @@ Private members![Crockford on private members](http://javascript.crockford.com/p
     The DOMContentLoaded event is fired when the document has been completely loaded and parsed the DOM tree,
     the load event will do it when all the images and sub-frames have finished loading.
     http://stackoverflow.com/questions/2414750/difference-between-domcontentloaded-and-load-events
-    
-* What is the difference between `==` and `===`?
 
+* What is the difference between `==` and `===`?
 `==` Compares values by making coerces if the types of variables are not the same
 `===` Compares the values and types of variables without making coercion
 

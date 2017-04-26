@@ -52,11 +52,11 @@ Utrzymanie kodu - stosuję ogólne dobre praktyki, takie jak proste i czytelne n
 
 Technologie - ostatnio preferuję React i redux w połączeniu z webpackiem, ale używałem również angulara 1 z gulpem itd itp
 
-* Jakie jest Twoje preferowane środowisko programistyczne? (system operacyjny, edytor, przeglądarki, narzędzia itd.)  
-Używam sublime 3 z jego dodatkowymi pluginami i świetnymi funcjonalnościami pomagającymi w edycji tekstu. Preferuję pracę na chromie i jego dev toolsach, ale używam też firebuga. Mam pewną wiedzę na temat linuksa, ale obecnie pracuję na win10. Korzystam też z gulpa, webpacka, managerów okien linterów itp.  
+* Jakie jest Twoje preferowane środowisko programistyczne? (system operacyjny, edytor, przeglądarki, narzędzia itd.)
+Używam sublime 3 z jego dodatkowymi pluginami i świetnymi funcjonalnościami pomagającymi w edycji tekstu. Preferuję pracę na chromie i jego dev toolsach, ale używam też firebuga. Mam pewną wiedzę na temat linuksa, ale obecnie pracuję na win10. Korzystam też z gulpa, webpacka, managerów okien linterów itp.
 
-* Z jakimi systemami kontroli wersji pracowałeś / jesteś zapoznany?  
-Z gitem, pracowałem na githubie i gitlabie. Próbowałem używać interfejsów graficznych gita, ale jednak wolę pracować w command line.  
+* Z jakimi systemami kontroli wersji pracowałeś / jesteś zapoznany?
+Z gitem, pracowałem na githubie i gitlabie. Próbowałem używać interfejsów graficznych gita, ale jednak wolę pracować w command line.
 
 * Opisz kolejne zadania podczas tworzenia strony internetowej? 
 Najpierw zbieranie wymagań klienta, funkcjonalnych i niefunkcjonalnych.
@@ -74,8 +74,11 @@ Graceful degradation - oprogramowanie / strona jest tworzona dla użytkowników 
 * Wyjaśnij, co kryje się za terminem "semantyczny HTML".  
 Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich przeznaczeniem i znaczeniem semantycznym, a nie tylko do prezentowania danych. Znaczniki nadają sens i w różnym kontekście mogną oznaczać do innego. Np <i> i <em> <b> i <strong>, section, aside, nav. Jest to ważne dla robotów indeksujących google, dla czytników przeznaczonych dla osób niepełnosprawnych etc.  
 
-* Jak optymalizowałbyś zasoby strony internetowej?  
-Optymalizacja obrazków, łączenie plików, Zmniejszenie rozmiaru plików przy użyciu uglifyjs, stosowanie minifikacji, używanie SVG i css sprites (jeden obrazek, używany wiele razy), Zasoby CDN - mogą być serwowane w zależności od odległości od użytkoniwka, response time etc, cachowanie, nie ładować dużych bibliotek jeśli potrzebujemy z nich tylko jednej funkcji  
+* Wyjaśnij, co kryje się za terminem "semantyczny HTML".
+Semantyczny HTML - jest to używanie znaczników / tagów HTML zgodnie z ich przeznaczeniem i znaczeniem semantycznym, a nie tylko do prezentowania danych. Znaczniki nadają sens i w różnym kontekście mogną oznaczać do innego. Np <i> i <em> <b> i <strong>, section, aside, nav. Jest to ważne dla robotów indeksujących google, dla czytników przeznaczonych dla osób niepełnosprawnych etc.
+
+* Jak optymalizowałbyś zasoby strony internetowej?
+Optymalizacja obrazków, łączenie plików, Zmniejszenie rozmiaru plików przy użyciu uglifyjs, stosowanie minifikacji, używanie SVG i css sprites (jeden obrazek, używany wiele razy), Zasoby CDN - mogą być serwowane w zależności od odległości od użytkoniwka, response time etc, cachowanie, nie ładować dużych bibliotek jeśli potrzebujemy z nich tylko jednej funkcji
 
 * Dlaczego serwowanie zasobów strony przez wiele domen jest lepsze?  
 Ponieważ pozwala na użycie lżejszego serwera, który nie będzie musiał ładować modułów wymaganych do serwowania dynamicznych treści przy każdym requeście o zasoby statyczne. Dodanie domeny oznacza, że zwięszymy liczbę możliwych równoległych pobrań dla przeglądarki. Można równiez wykorzystać brak potrzeby wysyłania plikow cookie przy przesyłaniu statycznych treści (css, obrazków, plików js) co zmniejszy obciażenie sieci.
@@ -118,13 +121,13 @@ Można to zrobić za pomocą CSS3 wykorzystując unordered list i input type = r
 Pełny tutorial: http://joshnh.com/weblog/making-a-pure-css-featured-image-slider/
 
 * Jakich narzędzi używasz do sprawdzenia wydajności swojego kodu?
-  * Profiler, JSPerf, Dromaeo  
-Chrome Timeline - dostępne w devTools, nagrywa i pozwala na analizę wszystkich aktywności aplikacji podczas jej działania 
+  * Profiler, JSPerf, Dromaeo
+Chrome Timeline - dostępne w devTools, nagrywa i pozwala na analizę wszystkich aktywności aplikacji podczas jej działania
 JSPerf - jsPerf umożliwia łatwe tworzenie i udostepnianie testów wydajności, porównując wydajność snippetów JS przez testy benchmarkowe
- Dromaeo - zetaw testów wydajności dla JS od Mozilli, obecnie nadal w fazie rozwoju  
-https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool  
-https://jsperf.com/  
-https://wiki.mozilla.org/Dromaeo  
+ Dromaeo - zetaw testów wydajności dla JS od Mozilli, obecnie nadal w fazie rozwoju
+https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool
+https://jsperf.com/
+https://wiki.mozilla.org/Dromaeo
 
 * Gdybyś mógł opanować jedną technologię w tym roku, jaka byłaby to technologia?
 Technologia budowy bomb wodorowych. Ew. można odpowiedzieć czymś co jest aktualnie w modzie, np React Native, React Redux, ES7.  
@@ -134,18 +137,17 @@ Technologia budowy bomb wodorowych. Ew. można odpowiedzieć czymś co jest aktu
 Standardy są bardzo istotne ponieważ aplikacje pisane w danym języku są kompilowane przez różne przeglądarki. Pozwala to uniknąć sytuacji, w której kod działa w połowie przeglądarek, lub działa tylko w tej ulubionej kodera. Gdy opracowany jest standard przeglądarki wiedzą czego się spodziewać i każdy piszący w zgodzie ze standardem może zakładać, że wszystko będzie działać. Twórcami standardów są w3c, iso, ansi, unicode consortium, ietf oraz ecma.  
 
 * Czym jest FOUC? Jak unikasz FOUC?  
-
 Flash of unstyled content jest to wyświetlenie użytkownikowi nieostylowanej strony (jej zawartości) podczas ładowania strony. Pojawia się gdy CSS jest wolno ładowany lub gdy JS powoduje wielokrotne renderowanie strony.
 Aby uniknąć FOUC należy serwować użytkownikowi jak najbardziej zoptymalizowany CSS (zminifikowany, w jednym pliku), oraz używać jak najmniej javascriptu powodującego fazę render przeglądarki. Używanie Critical CSS (czyli wrzucanie najważniejszych reguł css inline w znaczniku head).
-Używanie media queries i serwowanie CSS zoptymalizowanego dla urządzeń o mniejszej rozdzielczości. Można też ukryć całą stronę do czasu załadowania wszystkich styli.  
-https://en.wikipedia.org/wiki/Flash_of_unstyled_content  
-http://www.techrepublic.com/blog/web-designer/how-to-prevent-flash-of-unstyled-content-on-your-websites/  
+Używanie media queries i serwowanie CSS zoptymalizowanego dla urządzeń o mniejszej rozdzielczości. Można też ukryć całą stronę do czasu załadowania wszystkich styli.
+https://en.wikipedia.org/wiki/Flash_of_unstyled_content
+http://www.techrepublic.com/blog/web-designer/how-to-prevent-flash-of-unstyled-content-on-your-websites/
 * Co to jest ARIA, screenreader i jak stworzyć stronę z ułatwieniami dostępu?
 ARIA to zestaw wytycznych opracowanych przez WAI(Web Accessibility Initiative) aby umożliwić korzystanie z aplikacji ludziom z dysfunkcjami(np. niewidomi), którzy posługują się technologiami wspierającymi.
 
 Screenreadery to programy służące do odczytywania treści i dostępnych akcji, które podejmuje się na komputerze.
 
-3 kroki tworzenia aplikacji z ułatwieniami dostępu: używaj natywnych tagów HTML kiedy tylko się da; elementy interaktywne twórz z możliwością obsługi przez klawiaturę; zapewnij dodatkowe znaczniki specjalnie dla AT (accessibility technology). 
+3 kroki tworzenia aplikacji z ułatwieniami dostępu: używaj natywnych tagów HTML kiedy tylko się da; elementy interaktywne twórz z możliwością obsługi przez klawiaturę; zapewnij dodatkowe znaczniki specjalnie dla AT (accessibility technology).
 https://www.w3.org/WAI/intro/aria
 http://gingertech.net/2012/02/14/a-systematic-approach-to-making-web-applications-accessible/
 
@@ -167,8 +169,8 @@ https://css-tricks.com/myth-busting-css-animations-vs-javascript/
 
 ### Pytania HTML:
 
-* Co robi `doctype` i jakie znasz przykłady?  
-służy do deklaracji typu dokumentu, i powinien być umieszczony jako pierwszy element w dokumencie HTML, w szczególności przed znacznikiem <html>. Ten znacznik informuje przeglądarkę której wersji HTML lub XHTML używa wczytywana właśnie strona. Przykłady:  
+* Co robi `doctype` i jakie znasz przykłady?
+służy do deklaracji typu dokumentu, i powinien być umieszczony jako pierwszy element w dokumencie HTML, w szczególności przed znacznikiem <html>. Ten znacznik informuje przeglądarkę której wersji HTML lub XHTML używa wczytywana właśnie strona. Przykłady:
 
 ```
 html 5: <!DOCTYPE html>
@@ -176,25 +178,25 @@ HTML 4.01 Strict <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w
 XHTML 1.0 Strict <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 ```
 
-* Jaka jest różnica między trybem full standards, almost standards a trybem dziwactw (quirks mode)?  
-Quirks mode to renderowanie strony przez przeglądarkę w wersji dla navigatora 4 i IE 5, zaś full standards mode to renderowanie zgodne ze współczesnymi standardami html i css. Tryb almost standards posiada zaimplementowaną pewną niewielką ilość dziwactw navigatora i IE.  
-https://developer.mozilla.org/pl/docs/Quirks_Mode_and_Standards_Mode  
+* Jaka jest różnica między trybem full standards, almost standards a trybem dziwactw (quirks mode)?
+Quirks mode to renderowanie strony przez przeglądarkę w wersji dla navigatora 4 i IE 5, zaś full standards mode to renderowanie zgodne ze współczesnymi standardami html i css. Tryb almost standards posiada zaimplementowaną pewną niewielką ilość dziwactw navigatora i IE.
+https://developer.mozilla.org/pl/docs/Quirks_Mode_and_Standards_Mode
 
-* Jaka jest różnica między html a xhtml?  
-XHTML to HTML napisany jako XML. Są niemal identyczne. Główne różnice to to, że xhtml jest bardziej restrykcyjny i dzięki temu obsługiwany przez wszystkie główne przeglądarki. Doctype jest obowiązkowy, podobnie atrybut xmlns w znaczniku html oraz znaczniki <html>, <head>, <title> i <body>. Elementy xhtmla musza być poprawnie zagnieżdżone, zawsze zamknięte, napisane małymi literami; zawsze muszą mieć jeden root element.  
-https://www.w3schools.com/html/html_xhtml.asp  
+* Jaka jest różnica między html a xhtml?
+XHTML to HTML napisany jako XML. Są niemal identyczne. Główne różnice to to, że xhtml jest bardziej restrykcyjny i dzięki temu obsługiwany przez wszystkie główne przeglądarki. Doctype jest obowiązkowy, podobnie atrybut xmlns w znaczniku html oraz znaczniki <html>, <head>, <title> i <body>. Elementy xhtmla musza być poprawnie zagnieżdżone, zawsze zamknięte, napisane małymi literami; zawsze muszą mieć jeden root element.
+https://www.w3schools.com/html/html_xhtml.asp
 
-* Jakie są ograniczenia w serwowaniu stron XHTML?  
-Wbrew pozorom i założeniom największym problemem jest wsparcie przeglądarek. Większość z nich przekształca xhtml na zwykły html. Kod xhtml też niekoniecznie jest 'czystszy' od kodu html. Do tego trzeba pamiętać o następujących ograniczeniach:  
-- wszystkie elementy muszą mieć początkowy znacznik  
-- elementy non-void ze znacznikiem początkowym muszą mieć też znacznik końcowy  
-- każdy element może sam się zamknąć przez '/>'  
-- tagi i atrybuty są case sensitive  
-- atrybuty musza być w cudzysłowiu  
-- puste atrybuty są zabronione, więc checked zmienia się w checked="true"  
-- znaki specjalne muszą być escapowane  
+* Jakie są ograniczenia w serwowaniu stron XHTML?
+Wbrew pozorom i założeniom największym problemem jest wsparcie przeglądarek. Większość z nich przekształca xhtml na zwykły html. Kod xhtml też niekoniecznie jest 'czystszy' od kodu html. Do tego trzeba pamiętać o następujących ograniczeniach:
+- wszystkie elementy muszą mieć początkowy znacznik
+- elementy non-void ze znacznikiem początkowym muszą mieć też znacznik końcowy
+- każdy element może sam się zamknąć przez '/>'
+- tagi i atrybuty są case sensitive
+- atrybuty musza być w cudzysłowiu
+- puste atrybuty są zabronione, więc checked zmienia się w checked="true"
+- znaki specjalne muszą być escapowane
 
-http://www.webdevout.net/articles/beware-of-xhtml#myths  
+http://www.webdevout.net/articles/beware-of-xhtml#myths
 
 * Czy istnieją problemy z serwowaniem stron jako `application/xhtml+xml`?  
 Kiedy browser dostaje xml, używa xml parsera. Niestety przeglądarki do IE8 włącznie nie obługują tego typu plików. Wiele plików xhtml jest więc serwowanych jako text/html. Wymusza to na deweloperach rozważanie pewnych różnic między tymi formatami podczas pisania kodu.
@@ -242,6 +244,162 @@ http://stackoverflow.com/a/33651444
 
 * Czy używałeś różnych HTML templating languages?  
 Nie, ale jestem zaznajomiony z: Jade, EJS, HandlebarsJs, Underscore Templates, Mustache  
+
+#### Pytania REACT:
+
+* Czym jest React? Oraz czym się rożni od innych frameworkow?
+  React jest biblioteką, pozwalają na tworzenie komponowalnych interfejsow użytkownika.
+  Posiada wirtualne drzewo DOM, a podczas zmiany jakichś danych renderowane są tylko te elementy,
+  ktore uległy zmianie. Porownywany do warstwy V (Widok) w MVC. Głownym założeniem jest
+  tworzenie reużywalnych komponentow.
+
+  Rożnice:
+    - Wirtualne drzewo DOM
+    - Ponowne renderowanie tylko tych elementow, ktore uległy zmianie
+    - Wykorzystuje JSX - połączenie javascriptu i html
+    - Potrzebuje bibliotek takich jak Flux lub Redux do implementowania pełnych architektur
+
+* Co się dzieje w trakcie cykli zycia komponentow React?
+  React.Component posiada trzy głowne cykle swojego życia, pozwalają one na zarzązdanie
+  komponentem zarowno przed dodaniem go do drzewa dom, w trakcie jego życia
+  oraz w momencie jego usunięcia. Są to:
+  1. montowanie - metody tworzone podczas dodawania do drzewa DOM:
+    - constructor()
+    - componentWillMount()
+    - render()
+    - componentDidMount()
+  2. Odświeżanie - metody wywoływane w przypadku zmiany stanu komponentu lub zmiennych w obiekcie this.props:
+    - componentWillReceiveProps()
+    - shouldComponentUpdate()
+    - componentWillUpdate()
+    - render()
+    - componentDidUpdate()
+  3. Demontowanie - metoda wywoływana kiedy komponent jest usuwany z drzewa DOM:
+    - componentWillUnmount()
+
+* Co możesz powiedzieć o JSX?
+  Jest to tzw. Lukier składniowy/syntax sugar dla funkcji
+  React.createElement(component, props, ...children). Pozwala ona pisanie kodu
+  ktory jest połączeniem javascriptu i html wewnątrz funkcji render danego komponentu.
+  Składnia JSX może być wykorzystywana do renderowania zarowno zwyklych elementow HTML
+  jak i innych komponentow React, przy czym te muszą zaczynać się od wielkiej
+  litery.
+
+* Czy jesteś obeznany z Flux?
+  Z Flux nie. Natomiast posiadam doświadczenie z Redux, ktory wywodzi się z Flux'a.
+  Najprościej mowiąc Redux jest to funkcja, która wywoływana jest pomiędzy rozgłoszeniem akcji
+  a momentem, w którym akcja ta zostaje obsłużona przez „reducer”.
+  Redux posiada trzy głowne zasady:
+  - Pojedyncze źródło prawdy – stan całej aplikacji przetrzymywany jest
+    w drzewie obiektów wewnątrz pojedynczego obiektu store
+  - Stan jest tylko do odczytu – jedynym sposobem na zmianę stanu jest wywołanie
+    akcji, która zwraca obiekt opisujący co powinno się stać
+  - Zmiany wykonywane są w ramach czystych funkcji – aby określić jak drzewo
+    stanu transformowane jest przez akcje musisz tworzyć „czyste reducery”
+
+* Czym są bezstanowe komponenty?
+  Komponenty bezstanowe są to komponenty, ktore nie mają w swoim wnętrzu `this.state`.
+  Inne spotykane nazwy to czyste lub głupie komponenty. Można je zadeklarować za pomocą
+  const i arrow function podobnie jak i wszystkie jego wewnętrze funkcje.
+  Dzięki czemu nie musimy się przejmować `this` wewnątrz komponentu.
+
+* Wyjaśnij ten kod:
+
+  ```
+
+  class MyComponent extends React.Component {
+      constructor(props) {
+          // set the default internal state
+          this.state = {
+              clicks: 0
+          };
+      }
+
+      componentDidMount() {
+          this.refs.myComponentDiv.addEventListener(
+              ‘click’,
+              this.clickHandler
+          );
+      }
+
+      componentWillUnmount() {
+          this.refs.myComponentDiv.removeEventListener(
+              ‘click’,
+              this.clickHandler
+          );
+      }
+
+      clickHandler() {
+          this.setState({
+              clicks: this.clicks + 1
+          });
+      }
+
+      render() {
+          let children = this.props.children;
+
+          return (
+              <div className=”my-component” ref=”myComponentDiv”>
+                  <h2>My Component ({this.state.clicks} clicks})</h2>
+                  <h3>{this.props.headerText}</h3>
+                  {children}
+              </div>
+          );
+      }
+  }
+
+  ```
+  Po zamontowaniu komponentu `MyComponent` w drzewie DOM, poprzez referencję do
+  `myComponentDiv` przypisany jest event reagujący na 'click' i wywołujący funkcję
+  `clickHandler()`. Funkcja ta zwiększa o jeden liczbę kliknięć aktualizując stan komponentu.
+  Domyślna/początkowa liczba kliknięć zapisana jest w stanie komponentu i jest to 0.
+  W funkcji render poprzez JSX wyświetlamy zarowno elementy html, treść strony
+  jak i wartości ze stanu komponentu czy inne zmienne przypiasane do tego komponentu
+  poprzez obramowanie ich w nawiasy {}.
+  Gdy komponent jest odmontowywany w  funkcji `componentWillUnmount()` usuwany
+  event nasłuchujący kolejnych kliknięć.
+
+
+ * Co się dzieje gdy wywołujesz metodę setState?
+    Zmieniam wartosć w stanie komponentu co jest wychwytywane przez React
+    i prowadzi do ponownego renderowania całego komponentu z dziećmi w virtual DOM.
+
+    http://lucybain.com/blog/2017/react-js-when-to-rerender/
+    
+* Jaka jest rożnica pomiędzy Elementem a Komponentem w React?
+    Element:
+    - Opisują drzewo DOM
+    - Nie posiadają własnych metod
+    - Jest to Lukier składniowy dla React.createElement(element)
+    - Element może być stworzony bez wcześniejszego definiowania
+    - Wewnątrz komponentu można tworzyć wiele elementow i opakować je w inny element
+    - Nie są instancją komponentu a opisem jak instancja komponentu powinna wyglądać
+
+    Komponent:
+    - Może posiadać swoj stan
+    - Komponent musi zostać zdefiniowany np. przez React.Component
+    - funkcja render() zwraca drzewo DOM elementow
+    - ma dostęp do metod cykli życia
+
+* Kiedy powinieneś użyć komponentu klasy a kiedy komponentu funkcyjnego?
+    Komponentu klasy powinienem użyć gdy wiem, że klasa będzie posiadała swoj własny stan
+    oraz gdy będę chciał skorzystać z lifecycle metod.
+    komponentu funkcyjego mogę użyć gdy komponent nie ma stanu, mogę do tego użyć
+    np. const, arrow function lub innych cech składni ES6.
+    
+* Czym są referencje/refs w React i czemu są ważne?
+    Używane są aby zwrocić referencję do danego elementu. Przydają się do
+    manipulacją drzewem DOM i do dodawania metod do komponentow. Poleca się ich
+    używanie w ostateczności.
+
+* Czym są klucze w React i czemu są ważne?
+    Gdy renderujemy powtarzające się elementy np. listę za pomocą .map każdy kolejny
+    element <li> musi posiadać swoj uniklany klucz w drzewie DOM. Dlatego podajemy
+    takiemu elementowi właściwość <li key={key}>.
+    Jest to ważne ponieważ w React nie wszystko posiada swoje odwzorowanie w virtual DOM,
+    niektore zmiany, bez przypisania unikalnych kluczy mogą pozostać niezauważone.
+
+    https://coderwall.com/p/jdybeq/the-importance-of-component-keys-in-react-js
 
 ### Pytania JS:
 
@@ -486,7 +644,7 @@ Falsy values są to wartości, które podczas konwersji na boolean dają wartoś
     http://stackoverflow.com/questions/2067472/what-is-jsonp-all-about
 
 * Typy zmiennych w jsie?
- 
+
 W JS rozróżniamy dwa typy danych: typy proste i typy złożone.
 
 Do typów prostych należą:
@@ -507,6 +665,7 @@ Typem złożonym jest Object jak np:
 Typy proste przekazywane są przez wartość, natomiast typy złożone przez referencję.
  
 [Javascript Data Types](https://developer.mozilla.org/pl/docs/Web/JavaScript/Data_structures)
+
 
 * Czy kiedykolwiek używałeś szablonów w JavaScript?
   * Jeśli tak, jakie to były biblioteki? (Mustache.js, Handlebars itd.)
@@ -587,7 +746,7 @@ W ECMAScript 2015 przedstawiono nowe słowa kluczowe implementujące klasy. Mog�
       return Array.prototype.reverse.apply(this.split('')).join('');
     };
     https://code.tutsplus.com/tutorials/quick-tip-how-to-extend-built-in-objects-in-javascript--net-9168
-    
+
 * Jak jest różnicą między zdarzeniami `document load` i `DOMContentLoaded` dla strony internetowej?
     Event DOMContentLoaded jest uruchamiany, gdy HTML został załadowany i drzewo DOM zbudowane
     natomiast event load, gdy cała strona, włącznie z css, grafiką zostały załadowane.
@@ -1028,10 +1187,10 @@ $(".foo div#bar:eq(0)")
   - oddzielne style CSS, które ładują się gdy dana przeglądarka jest używana
   - oddzielny layout
   - polyfills (Pollyfil jest kodem, który wykrywa czy są braki w oczekiwanym API i manualnie implementuje je)
-  
+
   * Jakie techniki stosujesz?
       - Graceful Degradation
-      
+
   https://www.sitepoint.com/progressive-enhancement-graceful-degradation-basics/
 * Jakie istnieją sposoby wizualnego ukrycia treści (uczynienia ich dostępnymi tylko dla czytników ekranu)?
   - visibility: hidden
@@ -1057,7 +1216,7 @@ $(".foo div#bar:eq(0)")
   - staram się określić, które partie strony nie mają wartości dla druku (np. poprzez dawanie im klas .no-print z display: none)
   - używam łamania stron (page breaks) w miejscach, gdzie powinny się łamać (.page-break { page-break-before: always; display: none; })
   - ustalam rozmiar strony do druku (szerokość najlepiej podać w calach lub centrymetrach(oba rekomendowane))
-  
+
   https://davidwalsh.name/optimizing-structure-print-css
 * Jakie są zalety/wady używania preprocessorów CSS? (SASS, Compass, Stylus, LESS)
   Zalety
@@ -1123,7 +1282,7 @@ $(".foo div#bar:eq(0)")
 
 * Jaka jest różnica między display: 'inline' i 'inline-block'
   Elementy z 'display: inline-block' są jak elementy z 'display: inline', lecz mogą mieć szerokość oraz wysokość. To znaczy, że można używać elementów 'inline-block' jako bloków wewnątrz tekstu lub innych elementów.
-  
+
   Różnica w wspieranych stylach:
     inline: tylko margin-left, margin-right, padding-left, padding-right
     inline-block: margin, padding, height, width
