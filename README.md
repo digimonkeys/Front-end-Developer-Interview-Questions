@@ -2146,3 +2146,7 @@ https://docs.angularjs.org/api/ng/service/$compile#directive-definition-object
 * How would you programatically change or adapt the template of a directive before it is executed and transformed?  
 I would use the compile function. The compile function gives us access to the directive’s template before transclusion occurs and templates are transformed, so changes can safely be made to DOM elements. This is very useful for cases where the DOM needs to be constructed based on runtime directive parameters.  
 https://docs.angularjs.org/api/ng/service/$compile
+
+* How would you validate a text input field for a twitter username, including the @ symbol?  
+I would use the ngPattern directive to perform a regex match that matches Twitter usernames.
+https://docs.angularjs.org/api/ng/directive/ngPattern  
