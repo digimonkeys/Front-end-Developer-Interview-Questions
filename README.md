@@ -2132,3 +2132,8 @@ Attribute − Directive activates when a matching attribute is encountered.
 CSS − Directive activates when a matching css style is encountered.  
 Comment − Directive activates when a matching comment is encountered.  
 https://docs.angularjs.org/guide/directive  
+
+* Is it a good or bad practice to use AngularJS together with jQuery?
+Its rather bad. JQuery directly manipulates the DOM, and in Angular it is the model that drives the view and most of the times direct DOM manipulation is not required. Usually things that we want to accomplish using jQuery plugins can be done with Angular directives. One of the most important parts in Angular development is: you shouldn't manipulate the DOM from your controllers, ever. This is fine in jQuery, but in Angular, you should modify your model and let Angular render it. Angular has a templating mechanism built in which you should use to load HTML fragments. If you need to create HTML dynamically, you should do so in a directive. Everything else violates the "separation of concerns" principle.  
+http://ng-learn.org/2014/01/Dom-Manipulations/  
+http://stackoverflow.com/a/29505812  

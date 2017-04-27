@@ -2169,3 +2169,8 @@ Attribute − dyrektywa aktywująca się gdy dany atrybut jest napotykany
 CSS − dyrektywa aktywująca się gdy dany styl css jest napotykany    
 Comment − dyrektywa aktywująca się gdy dany komentarz jest napotykany  
 https://docs.angularjs.org/guide/directive  
+
+* Czy jest dobra czy złą praktyką łączenie jQuery z Angularem?
+Raczej złą. JQuery bezpośrednio manipuluje DOM, a w Angularze to model wpływa na widok i w większości wypadków bezpośrednie zmiany DOM są niepotrzebne. Zazwyczaj rzeczy, które chcielibyśmy osiągnąć używając pluginów jQuery można łatwo wykonać dzięki dyrektywom Angulara. Jedną z najważniejszych rzeczy w developingu z Angularem jest zasada, by nie używać kontrolerów do manipulacji DOM. Powinniśmy zmieniać model, na podstawie którego Angular renderuje html. Jeśli potrzebujemy dynamicznego renderowania html, powinniśmy użyć dyrektyw. Każde inne zachowanie narusza zasadę "separacji zadań".  
+http://ng-learn.org/2014/01/Dom-Manipulations/  
+http://stackoverflow.com/a/29505812 
