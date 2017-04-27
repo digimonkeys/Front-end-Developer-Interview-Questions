@@ -2178,3 +2178,7 @@ http://stackoverflow.com/a/29505812
 * Czym jest DDO (Directive Definition Object)?
 DDO to obiekt definiujący dyrektywę, zawiera on instrukcje tworzenia dyrektywy dla kompilatora.  Instrukcje te dostarczają wielu informacji o pożądanym zachowaniu dyrektywy, np. jej szablon htmlowy lub url do jego załadowania, restric - ograniczenie stylu deklarowania dyrektywy, funkcję kontrolera, controllerAs - nazwę identyfikującą kontroler wewnątrz scope dyrektywy i wiele innych.  
 https://docs.angularjs.org/api/ng/service/$compile#directive-definition-object  
+
+* Jak zmieniłbyś szablon dyrektywy zanim zostałby wykonany i przetransformowany?
+Użyłbym funkcji $compile, która pozwala na dostęp do szablonu dyrektywy zanim dojdzie do jego transformacji, więc zmiany elementów DOM mogą być bezpiecznie zaaplikowane. Funkcja ta jest bardzo użyteczna w przypadkach, w których DOM musi być skonstruowany bazując na bieżących parametrach dyrektywy.  
+https://docs.angularjs.org/api/ng/service/$compile  

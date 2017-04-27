@@ -2142,3 +2142,7 @@ http://stackoverflow.com/a/29505812
 The directive definition object provides instructions to the compiler. Instructions provide a lot of informations about directive behaviour, eg. template to use (or template url to load), restric which restricts the directive to a specific directive declaration style, controller constructor function, controllerAs identifier name for a reference to the controller in the directive's scope and many more.  
 
 https://docs.angularjs.org/api/ng/service/$compile#directive-definition-object 
+
+* How would you programatically change or adapt the template of a directive before it is executed and transformed?  
+I would use the compile function. The compile function gives us access to the directive’s template before transclusion occurs and templates are transformed, so changes can safely be made to DOM elements. This is very useful for cases where the DOM needs to be constructed based on runtime directive parameters.  
+https://docs.angularjs.org/api/ng/service/$compile
