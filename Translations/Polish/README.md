@@ -1931,42 +1931,6 @@ console.log("third");
 * Czy masz jakiś swój własny projekt na boku? Jaki?
 * Jaka jest Twoja ulubiona funkcja w Internet Explorer?
 
-### Angular
-
-* Is AngularJS extensible?  
-Yes, in Angular we can create custom directive to extend AngularJS existing functionalities.  
-https://docs.angularjs.org/guide/directive 
-
-* Jaka powinna być maksymalna liczba zarejestrowanych „watchów”? Bonus: jak kontrolowałbyś ich ilość?
-Aby zmniejszyć zużycie pamięci i polepszyć wydajność dobrze jest nie przekraczać 2000 watchów. Liczbę można kontrolować za pomocą modułu npm ng-stats.  
-https://github.com/kentcdodds/ng-stats 
-
-* Jak można przekazywać dane pomiędzy kontrolerami?
-Stworzyć service przechowujący dane i wstrzykujący je do kontrolerów. Wykorzystanie service’ów jest najczystsze, najszybsze i najłatwiejsze do testowania. Można jednak wykorzystac do tego również eventy, użyć $parent, nextSibling, controllerAs itp. do bezpośredniego dostania się do kontrolerów oraz zapisać dane na $rootScope (nie jest to dobra praktyka).  
-https://daveceddia.com/sharing-data-between-controllers-best-practice-use-a-service/  
-http://stackoverflow.com/a/21920241  
-* Gdzie można implementowac manipulacje DOM w Angularze?
-Teoretycznie tylko w dyrektywach, nigdy w kontrolerach i serwisach. Obecnie jednak dobrą praktyka jest stosowanie komponentów (które mogą być w formie dyrektyw), gdzie praktycznie cała logika znajduje się w kontrolerze. W takim wypadku uważam że można manipulować DOM wewnątrz template dyrektywy (komponentu) z kontrolera dyrektywy (komponentu).  
-http://ng-learn.org/2014/01/Dom-Manipulations/  
-http://stackoverflow.com/questions/37480150/manipulating-dom-in-angularjs-best-practice  
-
-* Gdybyś musiał przerobić kod Angulara 1.4 na 1.5, co byłoby główną zmianą?
-Wprowadzenie/wymiana istniejącego kodu na komponenty.  
-https://www.sitepoint.com/upgrade-to-angular-components/  
-
-*Jaka jest różnica między użyciem  ng-show/ng-hide a ng-if?
-Ng-if usuwa lub tworzy fragment drzewa DOM w zależności od przypisanego wyrażenia. Kiedy fragment jest usuwany, niszczone jest jego scope (nowe scope powstaje podczas dodawania elementu).  
-Ng-show chowa lub pokazuje elementy html w zależności od przypisanego wyrażenia. Element jest chowany lub pokazywany za pomocą klas CSS predefiniowanych w AngularJS (ustawiany jest display: none z flagą !important).  
-http://stackoverflow.com/a/19177773  
-
-* Jaka jest różnica między one-way binding a two-way binding?  
-W two-way binding jeśli zmienię dane w parent scope lub w child scope, obie wartości zostaną zaktualizowane. W one-way binding mamy możliwość zmiany danych w child scope bez wpływu na parent scope, ale jeśli zmienimy coś w parent scope zmiana ta zostanie odzwierciedlona w child scope.   
-https://toddmotto.com/one-way-data-binding-in-angular-1-5/  
-
-* Wyjaśnij działanie $scope.$apply()  
-$scope.$apply() przyjmuje funkcję lub wyrażenie angularowe, wykonuje je i wywołuje $scope.$digest() aby zaktualizować wszystkie wiązania. Kiedy potrzebujemy tej funkcjonalności? Bardzo rzadko. Angular zazwyczaj wywołuje ją automatycznie, jedynie kiedy chcemy wykonać jakiś kod w nowym cyklu i nie jest to kod stworzony za pomocą bibliotek Angulara. Np. jeśli używamy setTimeout, kod wykona się w nowym cyklu i angular nie będzie wiedział, że zaszła jakas zmiana danych, jeśli nie wywołamy ręcznie $scope.$apply().  
-http://jimhoskins.com/2012/12/17/angularjs-and-apply.html  
-
 ### React
 
 * Jeśli stworzyłbyś element taki jak Twitter poniżej, jak wyglądała by definicja tego componentu?
@@ -2063,6 +2027,44 @@ Funkcja setState jest asynchroniczna dlatego przyjmuje callback jako drugi argum
 
 [setState](https://facebook.github.io/react/docs/react-component.html#setstate)
 
+
+### Angular
+
+* Czy Angular JS jest rozszerzalny?  
+Tak, w angularze możemy stworzyć własne dyrektywy, które rozszerzą istniejące funkcjonalności Angulara.  
+https://docs.angularjs.org/guide/directive  
+
+* Jaka powinna być maksymalna liczba zarejestrowanych „watchów”? Bonus: jak kontrolowałbyś ich ilość?
+Aby zmniejszyć zużycie pamięci i polepszyć wydajność dobrze jest nie przekraczać 2000 watchów. Liczbę można kontrolować za pomocą modułu npm ng-stats.  
+https://github.com/kentcdodds/ng-stats 
+
+* Jak można przekazywać dane pomiędzy kontrolerami?
+Stworzyć service przechowujący dane i wstrzykujący je do kontrolerów. Wykorzystanie service’ów jest najczystsze, najszybsze i najłatwiejsze do testowania. Można jednak wykorzystac do tego również eventy, użyć $parent, nextSibling, controllerAs itp. do bezpośredniego dostania się do kontrolerów oraz zapisać dane na $rootScope (nie jest to dobra praktyka).  
+https://daveceddia.com/sharing-data-between-controllers-best-practice-use-a-service/  
+http://stackoverflow.com/a/21920241  
+
+* Gdzie można implementowac manipulacje DOM w Angularze?
+Teoretycznie tylko w dyrektywach, nigdy w kontrolerach i serwisach. Obecnie jednak dobrą praktyka jest stosowanie komponentów (które mogą być w formie dyrektyw), gdzie praktycznie cała logika znajduje się w kontrolerze. W takim wypadku uważam że można manipulować DOM wewnątrz template dyrektywy (komponentu) z kontrolera dyrektywy (komponentu).  
+http://ng-learn.org/2014/01/Dom-Manipulations/  
+http://stackoverflow.com/questions/37480150/manipulating-dom-in-angularjs-best-practice  
+
+* Gdybyś musiał przerobić kod Angulara 1.4 na 1.5, co byłoby główną zmianą?
+Wprowadzenie/wymiana istniejącego kodu na komponenty.  
+https://www.sitepoint.com/upgrade-to-angular-components/  
+
+* Jaka jest różnica między użyciem  ng-show/ng-hide a ng-if?
+Ng-if usuwa lub tworzy fragment drzewa DOM w zależności od przypisanego wyrażenia. Kiedy fragment jest usuwany, niszczone jest jego scope (nowe scope powstaje podczas dodawania elementu).  
+Ng-show chowa lub pokazuje elementy html w zależności od przypisanego wyrażenia. Element jest chowany lub pokazywany za pomocą klas CSS predefiniowanych w AngularJS (ustawiany jest display: none z flagą !important).  
+http://stackoverflow.com/a/19177773  
+
+* Jaka jest różnica między one-way binding a two-way binding?  
+W two-way binding jeśli zmienię dane w parent scope lub w child scope, obie wartości zostaną zaktualizowane. W one-way binding mamy możliwość zmiany danych w child scope bez wpływu na parent scope, ale jeśli zmienimy coś w parent scope zmiana ta zostanie odzwierciedlona w child scope.   
+https://toddmotto.com/one-way-data-binding-in-angular-1-5/  
+
+* Wyjaśnij działanie $scope.$apply()  
+$scope.$apply() przyjmuje funkcję lub wyrażenie angularowe, wykonuje je i wywołuje $scope.$digest() aby zaktualizować wszystkie wiązania. Kiedy potrzebujemy tej funkcjonalności? Bardzo rzadko. Angular zazwyczaj wywołuje ją automatycznie, jedynie kiedy chcemy wykonać jakiś kod w nowym cyklu i nie jest to kod stworzony za pomocą bibliotek Angulara. Np. jeśli używamy setTimeout, kod wykona się w nowym cyklu i angular nie będzie wiedział, że zaszła jakas zmiana danych, jeśli nie wywołamy ręcznie $scope.$apply().  
+http://jimhoskins.com/2012/12/17/angularjs-and-apply.html  
+
 * Jak zaimplementujesz globalną obsługę wyjątków w całej aplikacji w angularze?
 Angular ma wbudowany error handler $exceptionHandler, który można nadpisac w następujący sposób:
 
@@ -2077,9 +2079,8 @@ angular.
   }]);
 ```
 
-Nic. setState może także przyjmować funkcję jako pierwszy argument. Funkcja ta pozwala na ustawienie obecnego stanu na podstawie stanu poprzedniego.
-
-setState![setState](https://facebook.github.io/react/docs/react-component.html#setstate)
+Jest to użyteczne do wysyłania błędów np. na serwer przechowujący wyjątki aplikacji. Błędy wewnątrz callbacków w eventach nie trafią do tego serwisu, ale możemy je tam wysłać ręcznie posługując się blokiem try catch i wywołując  $exceptionHandler(err).   
+https://docs.angularjs.org/api/ng/service/$exceptionHandler  
 
 * Jak stworzyć serwis Angulara, który zwróci Promise? Napisz przykładowy kod
 Należy wstrzyknąć $q do promisów i użyć go w ten sposób:
@@ -2118,6 +2119,7 @@ https://docs.angularjs.org/api/ng/function/angular.copy
 * Kiedy używać dyrektyw jako elementów a kiedy jako atrybutów?  
 Należy używać elementów kiedy tworzony komponent kontroluje cały szablon, a atrybutów gdy tylko dodajemy jakąś funkcjonalność do istniejącego elementu.  
 https://docs.angularjs.org/guide/directive  
+
 * Jak zresetować $timeout, $interval(), i jak wyłączyć $watch()?
 Aby zresetować $timeout/$interval() należy przypisać ich wynik do zmiennej i potem wywołac na niej .cancel(). Aby wyłączyć $watch wystarczy go wywołać.  
 
@@ -2159,9 +2161,6 @@ Użyje dyrektywy ng-hide uzależnionej od zmiennej typu boolean, którą będę 
 * Jak wyłączysz (ustawisz na disabled) button przez zmianę stanu checkboxa?  
 Użyję dyrektywy ng-disabled, której stan przypiszę do stanu checkboxa.  
 
-Jest to użyteczne do wysyłania błędów np. na serwer przechowujący wyjątki aplikacji. Błędy wewnątrz callbacków w eventach nie trafią do tego serwisu, ale możemy je tam wysłać ręcznie posługując się blokiem try catch i wywołując  $exceptionHandler(err).   
-https://docs.angularjs.org/api/ng/service/$exceptionHandler  
-
 * Na jakich komponentach możemy stworzyć dyrektywę?
 Angular pozwala tworzyc dyrektywy dla następujących typów elementów (jeden lub wiele typów naraz):  
 Element directives − dyrektywa aktywująca się gdy dany znacznik html jest napotykany    
@@ -2186,3 +2185,8 @@ https://docs.angularjs.org/api/ng/service/$compile
 * Jak sprawdziłbyś input tekstowy, który ma być nickiem z twittera zawierającym znak @?
 Użyłbym dyrektywy ngPattern do przeprowadzenia testu odpowiedniego regex.
 https://docs.angularjs.org/api/ng/directive/ngPattern  
+
+* Czym jest cykl digest w angularze?
+Cykl $digest to pętla przechodząca po wszystkich utworzonych wiązaniach sprawdzająca, czy doszło do zmiany danych i ponownie renderująca zmienione wartości. Cykl $digest jest rozpoczynany zawsze, gdy jako część kontekstu Angulara wydarzy się DOM event, zapytanie ajax z powiązanych callbackiem, timer z callbackiem, użycie $apply, $digest, itp. Normalne eventy DOM, ajaxy itd. nie uruchamiają cyklu, tylko te bezpośrednio związane z angularem (np. ng-click).  
+https://www.ng-book.com/p/The-Digest-Loop-and-apply/  
+http://stackoverflow.com/a/29372797  

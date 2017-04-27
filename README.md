@@ -2150,3 +2150,7 @@ https://docs.angularjs.org/api/ng/service/$compile
 * How would you validate a text input field for a twitter username, including the @ symbol?  
 I would use the ngPattern directive to perform a regex match that matches Twitter usernames.
 https://docs.angularjs.org/api/ng/directive/ngPattern  
+
+* What is a digest cycle in AngularJS?  
+The $digest cycle is a loop through all registered bindings chceking if some of them changed and rerendering any value changes. The digest process is kicked-in when any of the following occur as part of angular context: DOM Events (like ng-click etc.), Ajax with callbacks ($http etc.), Timers with callbacks ($timeout etc.), calling $apply, $digest, etc. It is important to note that the normal browser related DOM events (onclick etc.) and setTimeout would not trigger a digest process as they work out of "Angular Context".  
+https://www.ng-book.com/p/The-Digest-Loop-and-apply/  
