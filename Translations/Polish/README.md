@@ -2174,3 +2174,7 @@ https://docs.angularjs.org/guide/directive
 Raczej złą. JQuery bezpośrednio manipuluje DOM, a w Angularze to model wpływa na widok i w większości wypadków bezpośrednie zmiany DOM są niepotrzebne. Zazwyczaj rzeczy, które chcielibyśmy osiągnąć używając pluginów jQuery można łatwo wykonać dzięki dyrektywom Angulara. Jedną z najważniejszych rzeczy w developingu z Angularem jest zasada, by nie używać kontrolerów do manipulacji DOM. Powinniśmy zmieniać model, na podstawie którego Angular renderuje html. Jeśli potrzebujemy dynamicznego renderowania html, powinniśmy użyć dyrektyw. Każde inne zachowanie narusza zasadę "separacji zadań".  
 http://ng-learn.org/2014/01/Dom-Manipulations/  
 http://stackoverflow.com/a/29505812 
+
+* Czym jest DDO (Directive Definition Object)?
+DDO to obiekt definiujący dyrektywę, zawiera on instrukcje tworzenia dyrektywy dla kompilatora.  Instrukcje te dostarczają wielu informacji o pożądanym zachowaniu dyrektywy, np. jej szablon htmlowy lub url do jego załadowania, restric - ograniczenie stylu deklarowania dyrektywy, funkcję kontrolera, controllerAs - nazwę identyfikującą kontroler wewnątrz scope dyrektywy i wiele innych.  
+https://docs.angularjs.org/api/ng/service/$compile#directive-definition-object  
