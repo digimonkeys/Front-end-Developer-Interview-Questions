@@ -2161,3 +2161,11 @@ Użyję dyrektywy ng-disabled, której stan przypiszę do stanu checkboxa.
 
 Jest to użyteczne do wysyłania błędów np. na serwer przechowujący wyjątki aplikacji. Błędy wewnątrz callbacków w eventach nie trafią do tego serwisu, ale możemy je tam wysłać ręcznie posługując się blokiem try catch i wywołując  $exceptionHandler(err).   
 https://docs.angularjs.org/api/ng/service/$exceptionHandler  
+
+* Na jakich komponentach możemy stworzyć dyrektywę?
+Angular pozwala tworzyc dyrektywy dla następujących typów elementów (jeden lub wiele typów naraz):  
+Element directives − dyrektywa aktywująca się gdy dany znacznik html jest napotykany    
+Attribute − dyrektywa aktywująca się gdy dany atrybut jest napotykany    
+CSS − dyrektywa aktywująca się gdy dany styl css jest napotykany    
+Comment − dyrektywa aktywująca się gdy dany komentarz jest napotykany  
+https://docs.angularjs.org/guide/directive  

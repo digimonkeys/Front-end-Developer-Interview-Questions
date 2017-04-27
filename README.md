@@ -2124,3 +2124,11 @@ angular.
 
 This is very useful for sending errors to third party error logging services or helpdesk applications. Errors trapped inside of event callbacks are not propagated to this handler, but can manually be relayed to this handler by calling $exceptionHandler(e) from within a try catch block.  
 https://docs.angularjs.org/api/ng/service/$exceptionHandler  
+
+* On which types of component can we create a custom directive?  
+AngularJS provides support to create custom directives for following type of elements (one or many):  
+Element directives − Directive activates when a matching element is encountered.  
+Attribute − Directive activates when a matching attribute is encountered.  
+CSS − Directive activates when a matching css style is encountered.  
+Comment − Directive activates when a matching comment is encountered.  
+https://docs.angularjs.org/guide/directive  
